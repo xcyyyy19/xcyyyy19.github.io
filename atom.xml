@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-03-09T06:23:09.225Z</updated>
+  <updated>2023-03-11T05:08:24.627Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2023/03/11/python%E7%BD%91%E7%AB%99--%E7%9B%98%E4%B8%AD%E9%A4%90/"/>
-    <id>http://example.com/2023/03/11/python%E7%BD%91%E7%AB%99--%E7%9B%98%E4%B8%AD%E9%A4%90/</id>
-    <published>2023-03-11T07:29:10.652Z</published>
-    <updated>2023-03-09T06:23:09.225Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;论文题目：基于Django-的“盘中餐”健康饮食网站的设计与实现&quot;&gt;&lt;a href=&quot;#论文题目：基于Django-的“盘中餐”健康饮食网站的设计与实现&quot; class=&quot;headerlink&quot; title=&quot;论文题目：基于Django</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>Python大数据分析（企业竞赛项目）</title>
@@ -102,6 +81,29 @@
     <published>2023-03-11T03:43:00.000Z</published>
     <updated>2023-03-11T03:45:10.268Z</updated>
     
+    
+    
+    
+    
+    <category term="code" scheme="http://example.com/tags/code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python网站--盘中餐</title>
+    <link href="http://example.com/2023/03/11/python%E7%BD%91%E7%AB%99--%E7%9B%98%E4%B8%AD%E9%A4%90/"/>
+    <id>http://example.com/2023/03/11/python%E7%BD%91%E7%AB%99--%E7%9B%98%E4%B8%AD%E9%A4%90/</id>
+    <published>2023-03-11T03:43:00.000Z</published>
+    <updated>2023-03-13T08:47:33.697Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;基于Django-的“盘中餐”健康饮食网站的设计与实现&quot;&gt;&lt;a href=&quot;#基于Django-的“盘中餐”健康饮食网站的设计与实现&quot; class=&quot;headerlink&quot; title=&quot;基于Django</summary>
+        
+      
     
     
     
