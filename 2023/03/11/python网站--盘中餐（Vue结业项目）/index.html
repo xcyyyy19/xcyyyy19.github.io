@@ -57,7 +57,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-python网站--盘中餐"
+  id="post-python网站--盘中餐（Vue结业项目）"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -76,7 +76,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/03/11/python%E7%BD%91%E7%AB%99--%E7%9B%98%E4%B8%AD%E9%A4%90/" class="article-date">
+      <a href="/2023/03/11/python%E7%BD%91%E7%AB%99--%E7%9B%98%E4%B8%AD%E9%A4%90%EF%BC%88Vue%E7%BB%93%E4%B8%9A%E9%A1%B9%E7%9B%AE%EF%BC%89/" class="article-date">
   <time datetime="2023-03-11T03:43:00.000Z" itemprop="datePublished">2023-03-11</time>
 </a>   
 <div class="word_count">
@@ -84,7 +84,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">9.7k</span>
+            <span class="post-count">7.4k</span>
         </span>
     </span>
 
@@ -93,7 +93,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">34 分钟</span>
+            <span class="post-count">26 分钟</span>
         </span>
     </span>
 </div>
@@ -108,96 +108,15 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="基于Django-的“盘中餐”健康饮食网站的设计与实现"><a href="#基于Django-的“盘中餐”健康饮食网站的设计与实现" class="headerlink" title="基于Django 的“盘中餐”健康饮食网站的设计与实现"></a>基于Django 的“盘中餐”健康饮食网站的设计与实现</h2><p>党的十八大以来，党中央高度重视节粮减损工作，强调要采取综合措施降低粮食损耗浪费，坚决刹住浪费粮食的不良风气。近年来，各地区各部门认真贯彻落实党中央有关决策部署，不断加大厉行节约、反对食物浪费工作力度[1]。“舌尖上的浪费”现象有所改观，但仍然存在，特别是年轻一代人中，其中高校食堂的食物浪费较为严重。为让“光盘行动”走近每个人，设计了一个基于 Django 的“盘中餐”健康饮食网站，通过交互的“光盘打卡”和直观的“光盘打卡排名”激励用户真正将“光盘行动”进行到底。</p>
+  <h2 id="ToDoList"><a href="#ToDoList" class="headerlink" title="ToDoList"></a>ToDoList</h2><ul>
+<li><input disabled="" type="checkbox"> 旧电脑的代码找出来，转移到新电脑</li>
+<li><input disabled="" type="checkbox"> 代码上传</li>
+<li><input disabled="" type="checkbox"> 论文图片上传</li>
+</ul>
+<h2 id="基于Django-的“盘中餐”健康饮食网站的设计与实现"><a href="#基于Django-的“盘中餐”健康饮食网站的设计与实现" class="headerlink" title="基于Django 的“盘中餐”健康饮食网站的设计与实现"></a>基于Django 的“盘中餐”健康饮食网站的设计与实现</h2><p>党的十八大以来，党中央高度重视节粮减损工作，强调要采取综合措施降低粮食损耗浪费，坚决刹住浪费粮食的不良风气。近年来，各地区各部门认真贯彻落实党中央有关决策部署，不断加大厉行节约、反对食物浪费工作力度[1]。“舌尖上的浪费”现象有所改观，但仍然存在，特别是年轻一代人中，其中高校食堂的食物浪费较为严重。为让“光盘行动”走近每个人，设计了一个基于 Django 的“盘中餐”健康饮食网站，通过交互的“光盘打卡”和直观的“光盘打卡排名”激励用户真正将“光盘行动”进行到底。</p>
 <p>基于 Django 的“盘中餐”健康饮食网站分为两大模块，用户模块和管理员模块。用户模块处理用户基本操作，注册，登录。用户通过登录后，管理个人信息，发布每日“光盘打卡”，发表文章和评论，查看打卡排名、食物热量信息和新闻资讯。管理员模块主要分为用户管理和网站后台管理。管理员对用户信息、文章分享、食物类型和食物信息等进行数据增加和删除操作的维护和管理。管理员也对用户的每日打卡进行次数排名，发布打卡次数榜单。最后，管理员对网站后台进行系统管理，主要管理网站的轮播图和发布、删除新闻资讯。</p>
 <p>基于 Django 的“盘中餐”健康饮食网站采用 Python 语言和前后端分离方式开发， 前端使用 HTML、CSS 和 Vue.js 框架，后端使用 Django 框架。数据库采用 MySQL。经过测试，网站系统运行稳定，页面设计简洁，功能合理易用，并实现了宣传节约粮食与“光盘行动”共同激励用户的效果。</p>
-<h1 id="目-录"><a href="#目-录" class="headerlink" title="目 录"></a>目 录</h1><p>第 1 章 绪 论 1</p>
-<ol>
-<li><p><a href="#%E8%AF%BE%E9%A2%98%E8%83%8C%E6%99%AF">课题背景 1</a></p>
-<ol>
-<li><p><a href="#%E7%9B%AE%E7%9A%84%E4%B8%8E%E6%84%8F%E4%B9%89">目的与意义 1</a></p>
-</li>
-<li><p><a href="#%E8%AE%BA%E6%96%87%E7%A0%94%E7%A9%B6%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9">论文研究主要内容 1</a></p>
-<p><a href="#%E7%AC%AC-2-%E7%AB%A0-%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF%E4%BB%8B%E7%BB%8D">第 2 章 关键技术介绍 3</a></p>
-</li>
-<li><p>PYTHON 语言 3</p>
-</li>
-<li><p>DJANGO 框架 3</p>
-</li>
-<li><p>ORM 框架 3</p>
-</li>
-<li><p>VUE.JS 框架 3</p>
-</li>
-<li><p><a href="#layui-%E6%A1%86%E6%9E%B6">LAYUI 框架 4</a></p>
-<p><a href="#%E7%AC%AC-3-%E7%AB%A0-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90">第 3 章 需求分析 5</a></p>
-</li>
-<li><p><a href="#%E5%8A%9F%E8%83%BD%E6%80%A7%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90">功能性需求分析 5</a></p>
-<ol>
-<li><a href="#%E8%AF%84%E8%AE%BA%E6%96%87%E7%AB%A0%E5%8A%9F%E8%83%BD%E7%94%A8%E4%BE%8B%E6%8F%8F%E8%BF%B0">评论文章功能用例描述 6</a></li>
-<li>新增每日打卡功能用例描述 7</li>
-<li>查看食物信息功能用例描述 7</li>
-<li>修改新闻资讯功能用例描述 8</li>
-</ol>
-</li>
-<li><p>系统原型 8</p>
-</li>
-<li><p>系统开发环境 10</p>
-</li>
-<li><p>系统可行性分析 11</p>
-<ol>
-<li><p>技术可行性分析 11</p>
-</li>
-<li><p>安全可行性分析 11</p>
-<p><a href="#%E7%AC%AC-4-%E7%AB%A0-%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1">第 4 章 系统设计 12</a></p>
-</li>
-</ol>
-</li>
-<li><p><a href="#%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1">体系结构设计 12</a></p>
-</li>
-<li><p><a href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1">数据库设计 12</a></p>
-<p><a href="#_TOC_250017">4.2.1 E-R 图 12</a></p>
-<p><a href="#%E8%A1%A8%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1">4.2.2 表结构设计 13</a></p>
-</li>
-<li><p><a href="#43-json-%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1">JSON 接口设计 15</a></p>
-<p><a href="#%E7%AC%AC-5-%E7%AB%A0-%E7%B3%BB%E7%BB%9F%E5%AE%9E%E7%8E%B0">第 5 章 系统实现 18</a></p>
-</li>
-<li><p><a href="#%E5%90%8E%E5%8F%B0%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97%E5%AE%9E%E7%8E%B0">后台功能模块实现 18</a></p>
-<ol>
-<li><a href="#%E6%96%B0%E5%A2%9E%E9%A3%9F%E7%89%A9%E7%B1%BB%E5%9E%8B%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97%E5%AE%9E%E7%8E%B0">新增食物类型功能模块实现 18</a></li>
-<li><a href="#%E5%88%A0%E9%99%A4%E6%96%87%E7%AB%A0%E5%88%86%E4%BA%AB%E7%9A%84%E5%B8%96%E5%AD%90%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97%E5%AE%9E%E7%8E%B0">删除文章分享的帖子功能模块实现 19</a></li>
-<li><a href="#%E4%BF%AE%E6%94%B9%E6%AF%8F%E6%97%A5%E6%89%93%E5%8D%A1%E4%BF%A1%E6%81%AF%E6%A8%A1%E5%9D%97%E5%AE%9E%E7%8E%B0">修改每日打卡信息模块实现 20</a></li>
-</ol>
-</li>
-<li><p><a href="#%E5%89%8D%E5%8F%B0%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97%E5%AE%9E%E7%8E%B0">前台功能模块实现 22</a></p>
-<ol>
-<li><p>用户查看每日打卡详情功能模块实现 22</p>
-<p><a href="#%E7%AC%AC-6-%E7%AB%A0-%E7%B3%BB%E7%BB%9F%E6%B5%8B%E8%AF%95">第 6 章 系统测试 24</a></p>
-</li>
-</ol>
-</li>
-<li><p><a href="#%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95">功能测试 24</a></p>
-<ol>
-<li><a href="#%E9%A3%9F%E7%89%A9%E7%B1%BB%E5%9E%8B%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97%E6%B5%8B%E8%AF%95">食物类型管理模块测试 24</a></li>
-<li><a href="#%E7%AE%A1%E7%90%86%E5%91%98%E6%96%B0%E5%A2%9E%E6%96%B0%E9%97%BB%E8%B5%84%E8%AE%AF%E6%A8%A1%E5%9D%97%E6%B5%8B%E8%AF%95">管理员新增新闻资讯模块测试 24</a></li>
-<li><a href="#%E7%94%A8%E6%88%B7%E6%A6%9C%E5%8D%95%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97%E6%B5%8B%E8%AF%95">用户榜单管理模块测试 24</a></li>
-<li><a href="#%E7%94%A8%E6%88%B7%E6%AF%8F%E6%97%A5%E6%89%93%E5%8D%A1%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97%E6%B5%8B%E8%AF%95">用户每日打卡管理模块测试 25</a></li>
-</ol>
-</li>
-<li><p><a href="#%E6%B5%8B%E8%AF%95%E7%BB%93%E8%AE%BA">测试结论 25</a></p>
-</li>
-</ol>
-</li>
-</ol>
-<p>第 <strong>1</strong> 章 绪 论</p>
-<h2 id="课题背景"><a href="#课题背景" class="headerlink" title="课题背景"></a>课题背景</h2><p>随着国家科技与经济的快速发展，我国人民从解决温饱问题过度到探寻“舌尖上的美食”，达到营养摄入均衡。但随之而来的“舌尖上的浪费”却也成为社会各界关注的问题。虽然在杜绝食物浪费方面政府部门制定相关政策和行动，社会各界也通过宣传等方式做出过相应的努力，食物浪费现象有所改善，但依旧存在，特别是在年轻一代中最为明显。但这一群体是互联网的主要用户群体，伴随互联网技术发展日新月异，万物互联的氛围给健康饮食，杜绝食物浪费理念带来了新的宣传发展契机。推行新的以互联网为载体的宣传方式，针对互联网用户倡导健康文明的饮食观点，让用户身临其境参与到健康文明的饮食文化中，从而使“光盘行动”有效进行。</p>
-<h2 id="目的与意义"><a href="#目的与意义" class="headerlink" title="目的与意义"></a>目的与意义</h2><p>中国作为人口大国仓廪实，才能天下安。在粮食增收的同时，粮食使用方面，浪费粮食的问题十分突出。据中国科学院地理科学与资源研究所课题组此前的一份研究报告显示，我国餐饮食物浪费量约为每年 1700 万至 1800 万吨[2]。为了加强建立正确健康的饮食观，2022 年中央一号文件就有提到“坚持节约优先，落实粮食节约行动方案，深入推进产运储加消全链条节粮减损，强化粮食安全教育，反对食物浪费。”食物浪费不仅威胁粮食安全、破坏社会风气，还会消耗资源环境。食品行业带来的碳排放约占全球碳排放总量的 25%，远远领先于建筑行业的 10%和时尚行业的 5%。与此形成鲜明对比的是，据联合国环境规划署估计，全球有 17%的食品被浪费，也就是说有 4%的全球碳排放是由消费者食物浪费造成的。“盘中餐”健康饮食网站的开发，可以带动互联网用户设身处地加入杜绝食物浪费的队伍中，为粮食安全，为“双碳”做出贡献。</p>
-<h2 id="论文研究主要内容"><a href="#论文研究主要内容" class="headerlink" title="论文研究主要内容"></a>论文研究主要内容</h2><p>本论文主要论述了基于 Django 的“盘中餐”健康饮食网站的设计与实现。从关键技术介绍、整体系统需求分析、各不同模块的详细设计与实现、系统部署与系统测试方面详细描述网站的设计与实现。具体内容如下：</p>
-<p>首先介绍论文所研究课题的背景及目的和意义，并分析国内外的研究概况。又介绍了包括 Django 框架、Vue.js 框架、Element-UI 可视化库和 LayUI 框架在内的关键技术。</p>
-<p>再者基于软件工程开发的思想对“盘中餐”健康饮食网站进行了详细的需求分析和系统原型分析。对用户与管理员两大模块下的个人信息、每日“光盘打卡”、打卡排名、</p>
-<p>用户管理等子模块根据系统的需求分析进行体系结构设计、数据库设计和接口设计。最后为系统的实现与测试，根据需求分析与设计给出关键性函数代码，并运用图文</p>
-<p>阐述实现过程。系统测试网站设计功能的可行性与完整性。</p>
-<h2 id="国内外研究现状"><a href="#国内外研究现状" class="headerlink" title="国内外研究现状"></a>国内外研究现状</h2><p>为保护资源环境、保障粮食安全、减少粮食损耗，多个国家和地区从战略、立法、技术等方面进行反对食物浪费。互联网技术领域，美国西雅图有一款名为：Lefoverswap APP，这款 APP 以相同的食物回收理念，回收处于过期前的安全食物的方式，减少食物浪费。但 Lefoverswap APP 的受众是群体与群体之间，缺少一定的市场活力。根据国内现状，食物浪费的原因除了临近过期食物的浪费外，主要原因为消费者在餐桌的过度浪费。深圳市科拜斯物联网科技有限公司发明了基于物联网的 AI 识别食物消费监控装置， 但其使用具有区域局限性，也很难让消费者主动参与“光盘行动”。以此基于 Django 的“盘中餐”健康饮食网站，采用当下较为流行的开放源代码的 Web 应用框架 Django 来实现以打卡光盘次数为主要功能的开放讨论网站，从以消费者为源头杜绝食物浪费。</p>
-<h1 id="第-2-章-关键技术介绍"><a href="#第-2-章-关键技术介绍" class="headerlink" title="第 2 章 关键技术介绍"></a>第 <strong>2</strong> 章 关键技术介绍</h1><ol>
+<h1 id="第-1-章-关键技术介绍"><a href="#第-1-章-关键技术介绍" class="headerlink" title="第 1 章 关键技术介绍"></a>第 <strong>1</strong> 章 关键技术介绍</h1><ol>
 <li><p><strong>Python</strong> 语言</p>
 <p>Python 是一款免费开源、跨平台、易学易用的面向对象的高级编程语言。还是一个多用途的高级编程语言，其涉足的领域很广泛如：Web 和 Internet 开发、大数据分析、爬虫开发、自动化运维和游戏开发等，将不同背景的人结合在一起沟通方便。Python 有一组功能完备的标准库，可以自动管理内存，使用脚本语言处理系统管理任务，并且由于 Python 代码量小，维护成本低、编程效率高等优点已经使其成为当前运用最广的编程语言之一[3]。</p>
 <ol>
@@ -217,7 +136,7 @@
 </ol>
 <p>当访问定义在 data 对象中的单个属性时系统调用 getter 方法，当修改定义在 data 对象中的单个属性时系统调用 setter 方法[8]。Vue.js 框架的目的是通过尽可能简单的 API 实现响应数据绑定和组合的视图组件，从而减少代码编写量，高效开发应用。本项目中使用 Vue.js 实现管理员个人中心，菜单等前端页面功能。</p>
 <h2 id="LayUI-框架"><a href="#LayUI-框架" class="headerlink" title="LayUI 框架"></a>LayUI 框架</h2><p>LayUI 是一款免费，开源，轻量级的前端 CMS 框架，也是采用自身模块规范编写的前端 UI 框架，遵循原生 HTML、CSS 和 JS 的书写与组织形式，体积轻盈，适用于企业后端，进行界面的快速开发[9]。LayUI 与 Vue.js 的区别在于数据和视图是不是关联。Vue.js 将数据和视图绑定，而 LayUI 不提供此功能，如果数据和视图改变需要开发人员刷新。LayUI 基于 DOM 驱动，在实现前端页面的增、删、改、查都需要查询 DOM 元素，所以在不需要交互时，LayUI 使用更方便。在本项目中使用 LayUI 框架实现对用户模块和管理员模块打卡次数、日期、上传文件类型等控制。</p>
-<h1 id="第-3-章-需求分析"><a href="#第-3-章-需求分析" class="headerlink" title="第 3 章 需求分析"></a>第 <strong>3</strong> 章 需求分析</h1><h2 id="功能性需求分析"><a href="#功能性需求分析" class="headerlink" title="功能性需求分析"></a>功能性需求分析</h2><p>根据调研分析，盘中餐健康饮食网站分为用户和管理员。前台用户功能设计包括登录注册、发布文章帖子、评论文章、查看新闻资讯、查看食物信息、查看每日打卡等功能。后台管理分为用户管理与管理员管理两种。用户后台管理的主要功能设计包括修改个人信息和密码，新增每日打卡，修改打卡内容，查看打卡榜单。管理员后台的主要功能设计包括新增用户、删除用户、文章分享管理、新增食物类型、删除食物类型、对用户的每日打卡添加榜单、管理榜单、系统管理等功能。</p>
+<h1 id="第-2-章-需求分析"><a href="#第-2-章-需求分析" class="headerlink" title="第 2 章 需求分析"></a>第 <strong>2</strong> 章 需求分析</h1><h2 id="功能性需求分析"><a href="#功能性需求分析" class="headerlink" title="功能性需求分析"></a>功能性需求分析</h2><p>根据调研分析，盘中餐健康饮食网站分为用户和管理员。前台用户功能设计包括登录注册、发布文章帖子、评论文章、查看新闻资讯、查看食物信息、查看每日打卡等功能。后台管理分为用户管理与管理员管理两种。用户后台管理的主要功能设计包括修改个人信息和密码，新增每日打卡，修改打卡内容，查看打卡榜单。管理员后台的主要功能设计包括新增用户、删除用户、文章分享管理、新增食物类型、删除食物类型、对用户的每日打卡添加榜单、管理榜单、系统管理等功能。</p>
 <p>前台用例图如图 3.1 所示，后台用例图如图 3.2 所示。</p>
 <p><img src="/media/f152757863288dcbacc11ed915646012.jpeg"></p>
 <p>图 3.1 前台用例图</p>
@@ -1486,12 +1405,6 @@
 <td>正确</td>
 </tr>
 </tbody></table>
-<h2 id="测试结论"><a href="#测试结论" class="headerlink" title="测试结论"></a>测试结论</h2><p>对网站各个模块进行了功能测试后得出，网站每个模块都实现了需求分析描述的功能。测试过程中，每个用例功能都具备完整性，大部分功能都能正常实现。有个别接口出现的断言错误和参数传递错误也已修复成功。网站也满足用户多样化，支持 Firefox、IE，Google Chrome 等主流浏览器，功能实现均不受影响。</p>
-<p>盘中餐健康饮食网站使用Python 语言进行开发，基于 Django 框架设计与实现。从萌生想法到根据研究调研进行需求分析，再到网站的具体功能需求分析与系统设计，最后完成代码开发与测试，整个过程都严格按照软件工程开发的思想进行。目前网站实现了用户每日空盘打卡、分享文章、查看光盘次数榜单、查看食物类型与热量信息等功能。管理员管理用户每日空盘打卡、管理榜单、管理新闻资讯与食物类型信息等功能。</p>
-<p>网站开发时，使用前后端分离方式开发。前端使用 Vue.js 框架与 Element-UI 等多种 UI 组件，后端开发用开源的 Django 框架和 MTV 设计模型，使用 Django 的内置管理与 ORM 框架等 Django 自带组件实现网站的可扩展性与安全性。其中在后端使用 Django 的 ORM 框架（对象关系映射）与 MySQL 结合，不仅简洁化对数据库的操作，更是一个用于保护SQL 注入之类的攻击的强大工具；</p>
-<p>在前端用 Django 的内部工具 CSRF 令牌（跨站点）对付跨站点请求伪造对 HTML 模板的攻击[17]。在实现需求分析与系统设计的基本功能以后，对网站进行了一系列的测试， 找到网站开发过程中出现的代码开发错误，并修复。</p>
-<p>已开发的功能仍有待完善之处。首先，用户是否可以在前端页面的每日打卡详情页， 分别查看自己的每日打卡情况与他人打卡情况，因此下一步会将每日打卡页面设计为“我的每日打卡”和“每日打卡的世界”两个板块展示用户的空盘打卡信息。其次，管理员在管理用户打卡次数榜单时需要管理员手打排名，加大了管理员的工作量与工作效率。考虑研究自动加入榜单与排名算法进行优化。</p>
-<p>整体来说，基于 Django 的盘中餐健康饮食网站正能量地推动政策落实，在众多功能类型的网站与应用中具有很大的市场优势。其次在功能上可根据需求改变，具有很强的可扩展性。如果网站出现问题，因前后端分离开发也便于维护。</p>
  
       <!-- reward -->
       
@@ -1556,12 +1469,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/03/11/python%E7%BD%91%E7%AB%99--%E7%9B%98%E4%B8%AD%E9%A4%90/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/03/11/python%E7%BD%91%E7%AB%99--%E7%9B%98%E4%B8%AD%E9%A4%90%EF%BC%88Vue%E7%BB%93%E4%B8%9A%E9%A1%B9%E7%9B%AE%EF%BC%89/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code/" rel="tag">code</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code/" rel="tag">code</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/project/" rel="tag">project</a></li></ul>
 
     </footer>
   </div>
@@ -1569,17 +1482,17 @@
    
   <nav class="article-nav">
     
-      <a href="/2023/03/11/Python%E7%BD%91%E7%AB%99%E4%BB%A3%E7%A0%812/" class="article-nav-link">
+      <a href="/2023/03/11/Java%E7%BD%91%E7%AB%99%E4%BB%A3%E7%A0%81%EF%BC%88Java%E7%BB%93%E4%B8%9A%E9%A1%B9%E7%9B%AE%EF%BC%89/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            Python网站代码2
+            Java网站代码（结业项目）
           
         </div>
       </a>
     
     
-      <a href="/2023/03/11/Python%E7%BD%91%E7%AB%99%E4%BB%A3%E7%A0%811/" class="article-nav-link">
+      <a href="/2023/03/11/Python%E7%BD%91%E7%AB%99--%E5%BA%9F%E5%93%81%E5%9B%9E%E6%94%B6%EF%BC%88%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BB%93%E4%B8%9A%E9%A1%B9%E7%9B%AE%EF%BC%89/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
         <div class="article-nav-title">Python网站代码1</div>
       </a>
