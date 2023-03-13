@@ -31,7 +31,7 @@
 <li><input checked="" disabled="" type="checkbox"> 新电脑里想上传的的文件，全部搞成markdown格式，并进行精修</li>
 <li><input checked="" disabled="" type="checkbox"> 上传、调试</li>
 <li><input checked="" disabled="" type="checkbox"> 写个专门用来做计划的md</li>
-<li><input disabled="" type="checkbox"> 把确定要发布的所有文章进行分类和贴标签</li>
+<li><input checked="" disabled="" type="checkbox"> 把确定要发布的所有文章进行分类和贴标签</li>
 <li><input disabled="" type="checkbox"> 把“关于我”做成网站阅读指南</li>
 <li><input disabled="" type="checkbox"> 搞清楚最近的上传幽灵事件，是浏览器缓存问题还是github部署延迟问题</li>
 <li><input disabled="" type="checkbox"> 为什么hexo s本地结束后，网站部署才能更新？幽灵事件就是因为这个？翻翻逻辑</li>
@@ -72,6 +72,33 @@
 <li><input disabled="" type="checkbox"> Vscode</li>
 <li><input disabled="" type="checkbox"> 看看主力机Vscode自定义的两个配置是哪个更好使来着？</li>
 <li><input disabled="" type="checkbox"> </li>
+</ul>
+<h2 id="其它-捋顺思路"><a href="#其它-捋顺思路" class="headerlink" title="其它(捋顺思路)"></a>其它(捋顺思路)</h2><ul>
+<li>当前阅读与思考体系<ul>
+<li>A8M5随身（每日时间轴）<ul>
+<li><input disabled="" type="checkbox"> 看看怎么和A6贯通</li>
+<li><input disabled="" type="checkbox"> 抽空打个圆角，看看能不能无损塞A6里</li>
+</ul>
+</li>
+<li>A6per手账本（记一记灵感、mind、疑问）<ul>
+<li><input disabled="" type="checkbox"> 把月、周计划体系再度完善一下，要不要为了三善巴川买针式打印机？还是买印章搭配？还是干脆把巴川当演算纸用及时止损？</li>
+</ul>
+</li>
+<li>notion（卡，但功能强大，非常凑合）<ul>
+<li><input disabled="" type="checkbox"> 测试一下保持翻墙状态能不能不卡</li>
+</ul>
+</li>
+<li>可话（方便，能找到同道中人，但无法分类、打标签）<ul>
+<li><input disabled="" type="checkbox"> 应该怎么给它定位？如何通过别的渠道找到同道中人？（旅游期间多逛逛图书馆享受一下~）</li>
+<li><input checked="" disabled="" type="checkbox"> 为什么要找同道中人？——因为只有分享才能带来思维碰撞，从而更好的提升自己。但不要执著。做到了？做到了。</li>
+</ul>
+</li>
+<li>个人网站<ul>
+<li><input disabled="" type="checkbox"> 如果需要通过个人网站展示自己的时候，该不该把读的书、思考的东西也展现出来？</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 ]]></content>
       <categories>
