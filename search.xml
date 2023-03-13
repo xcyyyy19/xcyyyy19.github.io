@@ -1,22 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
+    <title>网站完善与专业学习ToDoList</title>
     <url>/2023/03/08/hello-world/</url>
-    <content><![CDATA[<p>Welcome to My Home! </p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <content><![CDATA[<h1 id="Welcome-to-My-Home"><a href="#Welcome-to-My-Home" class="headerlink" title="Welcome to My Home!"></a>Welcome to My Home!</h1><h2 id="网页完善计划"><a href="#网页完善计划" class="headerlink" title="网页完善计划"></a>网页完善计划</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> 搞清楚hexo框架文件体系</li>
+<li><input checked="" disabled="" type="checkbox"> 学markdown</li>
+<li><input checked="" disabled="" type="checkbox"> 看看hexo框架和自己写的项目有什么区别</li>
+<li><input checked="" disabled="" type="checkbox"> 试错，随便上传点东西</li>
+<li>[] 搞清楚最近的上传幽灵事件，是浏览器缓存问题还是github部署延迟问题</li>
+<li>[] 为什么hexo s本地结束后，网站部署才能更新？幽灵事件就是因为这个？翻翻逻辑</li>
+<li>[] 侧边栏用不上的区域彻底删除</li>
+<li>[] 底下的浙江改成自己家这边</li>
+<li>[] 有空的话弄一个置顶栏</li>
+<li>[] 看看代码是上传到hexo内嵌里好，还是直接上传部署好，还是搞个预览再加个下载链接好。</li>
+<li>[] 看看图片是hexo内嵌上传好，还是单独列个文件夹直接部署然后导入好</li>
+</ul>
+<h2 id="代码翻出来"><a href="#代码翻出来" class="headerlink" title="代码翻出来"></a>代码翻出来</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> 高级网页设计（HtmlCssVue）</li>
+<li><input checked="" disabled="" type="checkbox"> 数据库（Mysql）</li>
+<li><input checked="" disabled="" type="checkbox"> 大一竞赛代码（- [] 待上传）</li>
+<li><input checked="" disabled="" type="checkbox"> 大二竞赛代码（- [] 待上传）</li>
+<li>[] JavaWeb（翻翻主力机，把便携机的环境配好）</li>
+<li>[] 毕设</li>
+<li>[]</li>
+</ul>
+<h2 id="读读代码，看看它还认不认主了，一群逆子"><a href="#读读代码，看看它还认不认主了，一群逆子" class="headerlink" title="读读代码，看看它还认不认主了，一群逆子"></a>读读代码，看看它还认不认主了，一群逆子</h2><ul>
+<li>[] 高级网页设计</li>
+<li>[] 数据库</li>
+<li>[] JavaWeb</li>
+<li>[] 毕设</li>
+<li>[]</li>
+</ul>
+<h2 id="便携用电脑环境配置"><a href="#便携用电脑环境配置" class="headerlink" title="便携用电脑环境配置"></a>便携用电脑环境配置</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> annaconda系列</li>
+<li><input checked="" disabled="" type="checkbox"> JetBrains系列</li>
+<li><input checked="" disabled="" type="checkbox"> 找找JetBrains破解激活</li>
+<li>[] Vscode</li>
+<li>[] 看看主力机Vscode自定义的两个配置是哪个更好使来着？</li>
+<li>[] </li>
+<li>[]</li>
+</ul>
 ]]></content>
+      <categories>
+        <category>我是谁，我在干什么</category>
+      </categories>
+      <tags>
+        <tag>必看</tag>
+      </tags>
   </entry>
   <entry>
     <title>Java网站代码（Java结业项目）</title>
@@ -1728,9 +1759,15 @@
   <entry>
     <title>快速了解我在大学期间学了什么</title>
     <url>/2023/03/11/%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E6%88%91%E5%9C%A8%E5%A4%A7%E5%AD%A6%E6%9C%9F%E9%97%B4%E5%AD%A6%E4%BA%86%E4%BB%80%E4%B9%88/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<ul>
+<li><input checked="" disabled="" type="checkbox"> 怎么导出部分收藏夹（edge用户配置功能）</li>
+<li>[] 导出专业相关收藏夹</li>
+<li>[] 发布</li>
+<li>[] 怎么把浏览器收藏夹内嵌进这里？内嵌后易读性怎么样？还是说站外链接更好一点？</li>
+</ul>
+]]></content>
       <categories>
-        <category>我是谁</category>
+        <category>我是谁，我在干什么</category>
       </categories>
       <tags>
         <tag>必看</tag>
