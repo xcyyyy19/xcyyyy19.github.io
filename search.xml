@@ -12,16 +12,13 @@
 <h2 id="今日ToDo（每日更新）3-14"><a href="#今日ToDo（每日更新）3-14" class="headerlink" title="今日ToDo（每日更新）3.14"></a>今日ToDo（每日更新）3.14</h2><ul>
 <li><input disabled="" type="checkbox"> 深入搞清楚hexo框架文件体系，花一个点专门看整个代码构架，找找想自定义的其它地方都有啥（day1）<ul>
 <li><input disabled="" type="checkbox"> 侧边栏相关的几个文件3.14</li>
-<li><input disabled="" type="checkbox"> 告示板</li>
+<li><input checked="" disabled="" type="checkbox"> 告示板3.14</li>
 <li><input disabled="" type="checkbox"> 侧边栏用不上的区域彻底删除</li>
-<li><input disabled="" type="checkbox"> 底下的浙江改成自己家这边3.14</li>
+<li><input checked="" disabled="" type="checkbox"> 底下的浙江改成自己家这边3.14</li>
 <li><input disabled="" type="checkbox"> 有空的话弄一个置顶栏</li>
 </ul>
 </li>
-<li><input disabled="" type="checkbox"> 搞清楚最近的上传幽灵事件，是浏览器缓存问题还是github部署延迟问题</li>
-<li><input disabled="" type="checkbox"> 为什么hexo s本地结束后，网站部署才能更新？幽灵事件就是因为这个？翻翻逻辑</li>
 <li><input disabled="" type="checkbox"> 把大一竞赛代码的目录结构优化一下</li>
-<li><input disabled="" type="checkbox"> </li>
 </ul>
 <h2 id="网页完善计划"><a href="#网页完善计划" class="headerlink" title="网页完善计划"></a>网页完善计划</h2><ul>
 <li><input checked="" disabled="" type="checkbox"> 初步搞清楚hexo框架文件体系</li>
@@ -33,8 +30,8 @@
 <li><input checked="" disabled="" type="checkbox"> 写个专门用来做计划的md</li>
 <li><input checked="" disabled="" type="checkbox"> 把确定要发布的所有文章进行分类和贴标签</li>
 <li><input disabled="" type="checkbox"> 把“关于我”做成网站阅读指南</li>
-<li><input disabled="" type="checkbox"> 搞清楚最近的上传幽灵事件，是浏览器缓存问题还是github部署延迟问题</li>
-<li><input disabled="" type="checkbox"> 为什么hexo s本地结束后，网站部署才能更新？幽灵事件就是因为这个？翻翻逻辑</li>
+<li><input checked="" disabled="" type="checkbox"> 搞清楚最近的上传幽灵事件，是浏览器缓存问题还是github部署延迟问题</li>
+<li><input checked="" disabled="" type="checkbox"> 为什么hexo s本地结束后，网站部署才能更新？幽灵事件就是因为这个？翻翻逻辑</li>
 <li><input disabled="" type="checkbox"> 深入搞清楚hexo框架文件体系，花一个点专门看整个代码构架，找找想自定义的其它地方都有啥<ul>
 <li><input disabled="" type="checkbox"> 侧边栏相关的几个文件</li>
 <li><input disabled="" type="checkbox"> 告示板</li>
