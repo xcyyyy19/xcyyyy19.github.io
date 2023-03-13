@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-03-11T03:46:43.034Z</updated>
+  <updated>2023-03-11T05:08:24.627Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,194 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python大数据分析（企业竞赛项目）</title>
+    <link href="http://example.com/2023/03/11/Python%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%EF%BC%88%E4%BC%81%E4%B8%9A%E7%AB%9E%E8%B5%9B%E9%A1%B9%E7%9B%AE%EF%BC%89/"/>
+    <id>http://example.com/2023/03/11/Python%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%EF%BC%88%E4%BC%81%E4%B8%9A%E7%AB%9E%E8%B5%9B%E9%A1%B9%E7%9B%AE%EF%BC%89/</id>
+    <published>2023-03-11T05:08:24.000Z</published>
+    <updated>2023-03-11T05:08:24.627Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Vue代码（结业项目）</title>
+    <link href="http://example.com/2023/03/11/Vue%E4%BB%A3%E7%A0%81%EF%BC%88%E7%BB%93%E4%B8%9A%E9%A1%B9%E7%9B%AE%EF%BC%89/"/>
+    <id>http://example.com/2023/03/11/Vue%E4%BB%A3%E7%A0%81%EF%BC%88%E7%BB%93%E4%B8%9A%E9%A1%B9%E7%9B%AE%EF%BC%89/</id>
+    <published>2023-03-11T03:43:50.000Z</published>
+    <updated>2023-03-11T03:45:05.721Z</updated>
+    
+    
+    
+    
+    
+    <category term="code" scheme="http://example.com/tags/code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java网站代码（Java结业项目）</title>
+    <link href="http://example.com/2023/03/11/Java%E7%BD%91%E7%AB%99%E4%BB%A3%E7%A0%81%EF%BC%88Java%E7%BB%93%E4%B8%9A%E9%A1%B9%E7%9B%AE%EF%BC%89/"/>
+    <id>http://example.com/2023/03/11/Java%E7%BD%91%E7%AB%99%E4%BB%A3%E7%A0%81%EF%BC%88Java%E7%BB%93%E4%B8%9A%E9%A1%B9%E7%9B%AE%EF%BC%89/</id>
+    <published>2023-03-11T03:43:25.000Z</published>
+    <updated>2023-03-13T09:45:26.340Z</updated>
+    
+    
+    
+    
+    
+    <category term="code" scheme="http://example.com/tags/code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python网站--盘中餐（Vue结业项目）</title>
+    <link href="http://example.com/2023/03/11/python%E7%BD%91%E7%AB%99--%E7%9B%98%E4%B8%AD%E9%A4%90%EF%BC%88Vue%E7%BB%93%E4%B8%9A%E9%A1%B9%E7%9B%AE%EF%BC%89/"/>
+    <id>http://example.com/2023/03/11/python%E7%BD%91%E7%AB%99--%E7%9B%98%E4%B8%AD%E9%A4%90%EF%BC%88Vue%E7%BB%93%E4%B8%9A%E9%A1%B9%E7%9B%AE%EF%BC%89/</id>
+    <published>2023-03-11T03:43:00.000Z</published>
+    <updated>2023-03-13T09:50:17.349Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;ToDoList&quot;&gt;&lt;a href=&quot;#ToDoList&quot; class=&quot;headerlink&quot; title=&quot;ToDoList&quot;&gt;&lt;/a&gt;ToDoList&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="code" scheme="http://example.com/tags/code/"/>
+    
+    <category term="project" scheme="http://example.com/tags/project/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python网站--废品回收（数据库结业项目）</title>
+    <link href="http://example.com/2023/03/11/Python%E7%BD%91%E7%AB%99--%E5%BA%9F%E5%93%81%E5%9B%9E%E6%94%B6%EF%BC%88%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BB%93%E4%B8%9A%E9%A1%B9%E7%9B%AE%EF%BC%89/"/>
+    <id>http://example.com/2023/03/11/Python%E7%BD%91%E7%AB%99--%E5%BA%9F%E5%93%81%E5%9B%9E%E6%94%B6%EF%BC%88%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BB%93%E4%B8%9A%E9%A1%B9%E7%9B%AE%EF%BC%89/</id>
+    <published>2023-03-11T03:42:56.000Z</published>
+    <updated>2023-03-13T09:47:21.334Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;ToDoList&quot;&gt;&lt;a href=&quot;#ToDoList&quot; class=&quot;headerlink&quot; title=&quot;ToDoList&quot;&gt;&lt;/a&gt;ToDoList&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="code" scheme="http://example.com/tags/code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python爬虫&amp;数据分析&amp;前后端代码（毕设）</title>
+    <link href="http://example.com/2023/03/11/Python%E7%88%AC%E8%99%AB-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BB%A3%E7%A0%81%EF%BC%88%E6%AF%95%E8%AE%BE%EF%BC%89/"/>
+    <id>http://example.com/2023/03/11/Python%E7%88%AC%E8%99%AB-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BB%A3%E7%A0%81%EF%BC%88%E6%AF%95%E8%AE%BE%EF%BC%89/</id>
+    <published>2023-03-11T03:42:35.000Z</published>
+    <updated>2023-03-11T03:45:19.406Z</updated>
+    
+    
+    
+    
+    
+    <category term="code" scheme="http://example.com/tags/code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python爬虫练习代码与笔记（社工）</title>
+    <link href="http://example.com/2023/03/11/Python%E7%88%AC%E8%99%AB%E7%BB%83%E4%B9%A0%E4%BB%A3%E7%A0%81%E4%B8%8E%E7%AC%94%E8%AE%B0%EF%BC%88%E7%A4%BE%E5%B7%A5%EF%BC%89/"/>
+    <id>http://example.com/2023/03/11/Python%E7%88%AC%E8%99%AB%E7%BB%83%E4%B9%A0%E4%BB%A3%E7%A0%81%E4%B8%8E%E7%AC%94%E8%AE%B0%EF%BC%88%E7%A4%BE%E5%B7%A5%EF%BC%89/</id>
+    <published>2023-03-11T03:41:57.000Z</published>
+    <updated>2023-03-13T09:45:41.372Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;声明：仅供学习使用&lt;/p&gt;
+&lt;p&gt;以下黑色代码块包含入门时的学习链接以及中文标题&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 
+待上传html链接版本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;input</summary>
+        
+      
+    
+    
+    
+    
+    <category term="code" scheme="http://example.com/tags/code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>大二社团竞赛与练习代码</title>
+    <link href="http://example.com/2023/03/11/%E5%A4%A7%E4%BA%8C%E7%A4%BE%E5%9B%A2%E7%AB%9E%E8%B5%9B%E4%B8%8E%E7%BB%83%E4%B9%A0%E4%BB%A3%E7%A0%81/"/>
+    <id>http://example.com/2023/03/11/%E5%A4%A7%E4%BA%8C%E7%A4%BE%E5%9B%A2%E7%AB%9E%E8%B5%9B%E4%B8%8E%E7%BB%83%E4%B9%A0%E4%BB%A3%E7%A0%81/</id>
+    <published>2023-03-11T03:41:05.000Z</published>
+    <updated>2023-03-13T08:21:57.591Z</updated>
+    
+    
+    
+    
+    <category term="algorithm" scheme="http://example.com/categories/algorithm/"/>
+    
+    
+    <category term="code" scheme="http://example.com/tags/code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>大一社团练习与竞赛代码</title>
+    <link href="http://example.com/2023/03/11/%E5%A4%A7%E4%B8%80%E7%A4%BE%E5%9B%A2%E7%BB%83%E4%B9%A0%E4%B8%8E%E7%AB%9E%E8%B5%9B%E4%BB%A3%E7%A0%81/"/>
+    <id>http://example.com/2023/03/11/%E5%A4%A7%E4%B8%80%E7%A4%BE%E5%9B%A2%E7%BB%83%E4%B9%A0%E4%B8%8E%E7%AB%9E%E8%B5%9B%E4%BB%A3%E7%A0%81/</id>
+    <published>2023-03-11T03:40:47.000Z</published>
+    <updated>2023-03-13T08:21:47.961Z</updated>
+    
+    
+    
+    
+    <category term="algorithm" scheme="http://example.com/categories/algorithm/"/>
+    
+    
+    <category term="code" scheme="http://example.com/tags/code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>快速了解我在大学期间学了什么</title>
+    <link href="http://example.com/2023/03/11/%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E6%88%91%E5%9C%A8%E5%A4%A7%E5%AD%A6%E6%9C%9F%E9%97%B4%E5%AD%A6%E4%BA%86%E4%BB%80%E4%B9%88/"/>
+    <id>http://example.com/2023/03/11/%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E6%88%91%E5%9C%A8%E5%A4%A7%E5%AD%A6%E6%9C%9F%E9%97%B4%E5%AD%A6%E4%BA%86%E4%BB%80%E4%B9%88/</id>
+    <published>2023-03-11T03:39:45.000Z</published>
+    <updated>2023-03-13T08:22:41.859Z</updated>
+    
+    
+    
+    
+    <category term="我是谁" scheme="http://example.com/categories/%E6%88%91%E6%98%AF%E8%B0%81/"/>
+    
+    
+    <category term="必看" scheme="http://example.com/tags/%E5%BF%85%E7%9C%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
