@@ -195,9 +195,9 @@
 <li><input checked="" disabled="" type="checkbox"> 文章转markdown并上传</li>
 <li><input checked="" disabled="" type="checkbox"> 文章图片上传</li>
 <li><input checked="" disabled="" type="checkbox"> 旧电脑的代码找出来，转移到新电脑</li>
-<li><input disabled="" type="checkbox"> 代码上传</li>
+<li><input checked="" disabled="" type="checkbox"> 代码上传</li>
 </ul>
-<h2 id="基于Django-的“盘中餐”健康饮食网站的设计与实现"><a href="#基于Django-的“盘中餐”健康饮食网站的设计与实现" class="headerlink" title="基于Django 的“盘中餐”健康饮食网站的设计与实现"></a>基于Django 的“盘中餐”健康饮食网站的设计与实现</h2><h2 id="系统原型"><a href="#系统原型" class="headerlink" title="系统原型"></a>系统原型</h2><p>用户在想要评论的文章详情页面点击评论，系统弹出添加评论窗口，含有两个按钮， 分别对应评论发表成功和重置评论。用户评论文章原型图如下图所示。</p>
+<h2 id="基于Django-的“盘中餐”健康饮食网站的设计与实现"><a href="#基于Django-的“盘中餐”健康饮食网站的设计与实现" class="headerlink" title="基于Django 的“盘中餐”健康饮食网站的设计与实现"></a>基于Django 的“盘中餐”健康饮食网站的设计与实现</h2><h1 id="代码链接"><a href="#代码链接" class="headerlink" title="代码链接"></a><a href="%5Ccode%5CP4-pzc%5C%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81%5Cdjango.zip">代码链接</a></h1><h1 id="数据库链接"><a href="#数据库链接" class="headerlink" title="数据库链接"></a><a href="%5Ccode%5CP4-pzc%5C%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%87%E4%BB%B6django.sql">数据库链接</a></h1><h2 id="系统原型"><a href="#系统原型" class="headerlink" title="系统原型"></a>系统原型</h2><p>用户在想要评论的文章详情页面点击评论，系统弹出添加评论窗口，含有两个按钮， 分别对应评论发表成功和重置评论。用户评论文章原型图如下图所示。</p>
 <p><img src="/pic/media-pzc/67be40de8257f28f7e6bd8bf78c6e5e5.jpeg"></p>
 <p>用户评论文章原型图</p>
 <p>用户进入后台管理页面，在新增每日打卡详情页输入打卡名称、照片、空盘次数、打卡时间等信息进行每日打卡。用户新增每日打卡原型图如下图所示。</p>
@@ -992,8 +992,6 @@
 <p>修改每日打卡信息模块功能代码如下所示：</p>
 <h2 id="前台功能模块实现"><a href="#前台功能模块实现" class="headerlink" title="前台功能模块实现"></a>前台功能模块实现</h2><h3 id="用户查看每日打卡详情功能模块实现"><a href="#用户查看每日打卡详情功能模块实现" class="headerlink" title="用户查看每日打卡详情功能模块实现"></a>用户查看每日打卡详情功能模块实现</h3><p>用户查看每日打卡详情功能的实现，前端发送请求后，通过 URL 调用 meiridaka 的list 和 detail 接口操作后台对 meiridaka 数据库表进行查找查看操作，最后将数据逐级返回到前端。用户查看每日打卡详情功能实现如下图所示。</p>
 <p><img src="/pic/media-pzc/78806c6edc2e45dfe333a6c8f5e71681.jpeg"></p>
-<p>用户查看每日打卡详情功能实现</p>
-<p>用户查看每日打卡详情功能代码如下所示：</p>
 ]]></content>
       <tags>
         <tag>code</tag>
@@ -1728,19 +1726,11 @@
   <entry>
     <title>网站完善与专业学习ToDoList</title>
     <url>/2023/03/08/Z1-hello-world/</url>
-    <content><![CDATA[<h2 id="昨日ToDo（每日更新）3-14"><a href="#昨日ToDo（每日更新）3-14" class="headerlink" title="昨日ToDo（每日更新）3.14"></a>昨日ToDo（每日更新）3.14</h2><ul>
-<li><input checked="" disabled="" type="checkbox"> 查查怎么插入图片更简单，把四篇文章的图片目录结构搞好然后上传</li>
-<li><input checked="" disabled="" type="checkbox"> 深入搞清楚hexo框架文件体系，花一个点专门看整个代码构架，找找想自定义的其它地方都有啥<ul>
-<li><input checked="" disabled="" type="checkbox"> 告示板</li>
-<li><input checked="" disabled="" type="checkbox"> 底下的浙改成自己家这边</li>
-<li><input checked="" disabled="" type="checkbox"> 侧边栏更改</li>
-<li><input checked="" disabled="" type="checkbox"> 有空的话弄一个置顶栏</li>
+    <content><![CDATA[<h2 id="ToDo（每日更新）3-15"><a href="#ToDo（每日更新）3-15" class="headerlink" title="ToDo（每日更新）3.15"></a>ToDo（每日更新）3.15</h2><ul>
+<li><input disabled="" type="checkbox"> 把“关于我”做成网站说明书</li>
+<li><input checked="" disabled="" type="checkbox"> 上传部分代码</li>
 </ul>
-</li>
-<li><input checked="" disabled="" type="checkbox"> 把大一竞赛代码的目录结构优化一下</li>
-<li><input checked="" disabled="" type="checkbox"> 看看图片是hexo方法内嵌上传好，还是单独列个文件夹直接部署然后导入好（最终选择法二，还是老方法更方便）</li>
-</ul>
-<h2 id="今日ToDo（每日更新）3-15"><a href="#今日ToDo（每日更新）3-15" class="headerlink" title="今日ToDo（每日更新）3.15"></a>今日ToDo（每日更新）3.15</h2><ul>
+<h2 id="ToDo-（每日更新）3-16"><a href="#ToDo-（每日更新）3-16" class="headerlink" title="ToDo （每日更新）3.16"></a>ToDo （每日更新）3.16</h2><ul>
 <li><input disabled="" type="checkbox"> 把《我是谁，我在干什么》搞好【非常重要！！！！】<ul>
 <li><input disabled="" type="checkbox"> 想想写什么<ul>
 <li><input disabled="" type="checkbox"> 获奖证明和比赛合影放上去（翻手机，传电脑，post）</li>
@@ -1755,7 +1745,6 @@
 </li>
 </ul>
 </li>
-<li><input disabled="" type="checkbox"> 把“关于我”做成网站说明书</li>
 </ul>
 <h2 id="网页完善计划"><a href="#网页完善计划" class="headerlink" title="网页完善计划"></a>网页完善计划</h2><ul>
 <li><input checked="" disabled="" type="checkbox"> 初步搞清楚hexo框架文件体系</li>
