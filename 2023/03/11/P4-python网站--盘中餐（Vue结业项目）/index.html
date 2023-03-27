@@ -109,26 +109,26 @@
     <div class="article-entry" itemprop="articleBody">
        
   <h2 id="基于Django-的“盘中餐”健康饮食网站的设计与实现（附件见文末）"><a href="#基于Django-的“盘中餐”健康饮食网站的设计与实现（附件见文末）" class="headerlink" title="基于Django 的“盘中餐”健康饮食网站的设计与实现（附件见文末）"></a>基于Django 的“盘中餐”健康饮食网站的设计与实现（附件见文末）</h2><h2 id="系统原型"><a href="#系统原型" class="headerlink" title="系统原型"></a>系统原型</h2><p>用户在想要评论的文章详情页面点击评论，系统弹出添加评论窗口，含有两个按钮， 分别对应评论发表成功和重置评论。用户评论文章原型图如下图所示。</p>
-<p><img src="/pic/media-pzc/67be40de8257f28f7e6bd8bf78c6e5e5.jpeg"></p>
+<p><img src="/../pic/media-pzc/67be40de8257f28f7e6bd8bf78c6e5e5.jpeg"></p>
 <p>用户评论文章原型图</p>
 <p>用户进入后台管理页面，在新增每日打卡详情页输入打卡名称、照片、空盘次数、打卡时间等信息进行每日打卡。用户新增每日打卡原型图如下图所示。</p>
-<p><img src="/pic/media-pzc/e1476e996ddfd3bc7ac1934cf1003d94.jpeg"></p>
+<p><img src="/../pic/media-pzc/e1476e996ddfd3bc7ac1934cf1003d94.jpeg"></p>
 <p>用户新增每日打卡原型图</p>
 <p>管理员在后台管理的食物信息页面，点击对应食物的详情按钮，查看对应食物信息的详情页。管理员查看食物信息原型图如下图所示。</p>
-<p><img src="/pic/media-pzc/313282be30af592bd821fe765042c477.jpeg"></p>
+<p><img src="/../pic/media-pzc/313282be30af592bd821fe765042c477.jpeg"></p>
 <p>管理员查看食物信息原型图</p>
 <p>管理员在后台管理的榜单页面，在修改榜单的详情，修改榜单信息。管理员修改榜单原型图如下图所示。</p>
-<p><img src="/pic/media-pzc/cb54c343d764453b60e94571a48d192b.jpeg"></p>
+<p><img src="/../pic/media-pzc/cb54c343d764453b60e94571a48d192b.jpeg"></p>
 <p>管理员修改榜单原型图</p>
 <h1 id="系统设计"><a href="#系统设计" class="headerlink" title="系统设计"></a>系统设计</h1><h2 id="体系结构设计"><a href="#体系结构设计" class="headerlink" title="体系结构设计"></a>体系结构设计</h2><p>盘中餐健康饮食网站分为前台、用户后台和管理员后台三个部分。前台主要功能包括用户登录注册、查看食物 、查看新闻资讯、查看每日打卡、文章分享等。用户后台负责用户个人中心管理、每日打卡管理和榜单管理。管理员后台负责用户管理、食物类别管理、食物信息管理、每日打卡管理、系统管理等。系统体系结构图aaaaa。</p>
-<p><img src="/pic/media-pzc/2629b3477b3dc434c069857ded0bbc97.jpeg"></p>
+<p><img src="/../pic/media-pzc/2629b3477b3dc434c069857ded0bbc97.jpeg"></p>
 <p>体系结构图</p>
 <h2 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h2><ol>
 <li><p><strong>E-R</strong> 图</p>
 <p>系统的 E-R 图主要核心从用户角色出发，展示包括用户、每日打卡信息、榜单信息、新闻资讯信息、食物类型信息、食物信息和文章分享信息实体间的联系。数据库设计的E-R 图如下图所示。</p>
 </li>
 </ol>
-<p><img src="/pic/media-pzc/f1919788f4ccac7886104007acca1d91.jpeg"></p>
+<p><img src="/../pic/media-pzc/f1919788f4ccac7886104007acca1d91.jpeg"></p>
 <h3 id="表结构设计"><a href="#表结构设计" class="headerlink" title="表结构设计"></a>表结构设计</h3><p>数据库 E-R 图</p>
 <p>用户表的字段为创建时间、用户名、姓名、头像、密码等。id 为主键。该表存储用户基本信息用于用户注册，登录等。用户表结构如表所示。</p>
 <p>表用户表</p>
@@ -888,21 +888,21 @@
 </tr>
 </tbody></table>
 <h1 id="系统实现"><a href="#系统实现" class="headerlink" title="系统实现"></a>系统实现</h1><h2 id="后台功能模块实现"><a href="#后台功能模块实现" class="headerlink" title="后台功能模块实现"></a>后台功能模块实现</h2><h3 id="新增食物类型功能模块实现"><a href="#新增食物类型功能模块实现" class="headerlink" title="新增食物类型功能模块实现"></a>新增食物类型功能模块实现</h3><p>新增食物类型功能的实现，前端发送请求后，通过 URL 调用 shiwuleixing 的 list、add 和 save 接口操作后台对 shiwuleixing 数据库表进行增、删、改、查操作，最后将数据逐级返回到前端。查看食物类型列表如下图所示，新增食物类型功能实现如下图所示。</p>
-<p><img src="/pic/media-pzc/49f1599942f4c7756c8f80f9e57a9f7d.jpeg"></p>
+<p><img src="/../pic/media-pzc/49f1599942f4c7756c8f80f9e57a9f7d.jpeg"></p>
 <p>查看食物类型列表</p>
-<p><img src="/pic/media-pzc/93d9948d56fbef1c4c62fd9d5c6c6075.jpeg"></p>
+<p><img src="/../pic/media-pzc/93d9948d56fbef1c4c62fd9d5c6c6075.jpeg"></p>
 <p>新增食物类型功能实现</p>
 <p>后台新增食物类型功能代码如下所示：</p>
 <h3 id="删除文章分享的帖子功能模块实现"><a href="#删除文章分享的帖子功能模块实现" class="headerlink" title="删除文章分享的帖子功能模块实现"></a>删除文章分享的帖子功能模块实现</h3><p>删除文章分享的帖子功能的实现，前端发送请求后，通过 URL 先调用 forum_page 接口权限为管理员查看 forum 记录，再调用 forum_delete 接口操作后台对 forum 数据库表的信息进行删除操作，最后将数据逐级返回到前端。删除文章分享的帖子功能模块实现如下图所示。</p>
-<p><img src="/pic/media-pzc/1bdfc65ae82daf224f15abdc827dfbe1.jpeg"></p>
+<p><img src="/../pic/media-pzc/1bdfc65ae82daf224f15abdc827dfbe1.jpeg"></p>
 <p>删除文章分享的帖子模块实现</p>
 <p>删除文章分享的帖子模块功能代码如下所示：</p>
 <h3 id="修改每日打卡信息模块实现"><a href="#修改每日打卡信息模块实现" class="headerlink" title="修改每日打卡信息模块实现"></a>修改每日打卡信息模块实现</h3><p>修改每日打卡信息模块的实现，前端发送请求后，通过 URL 调用 meiridaka_update 接口，对从 meiridaka 数据库表中通过 meiridaka_info 接口选定数据的修改，最后将数据逐级返回到前端。修改每日打卡信息功能模块实现如下图所示</p>
-<p><img src="/pic/media-pzc/c465a20dbab11799620e8963a6c38f96.jpeg"></p>
+<p><img src="/../pic/media-pzc/c465a20dbab11799620e8963a6c38f96.jpeg"></p>
 <p>修改每日打卡信息功能实现</p>
 <p>修改每日打卡信息模块功能代码如下所示：</p>
 <h2 id="前台功能模块实现"><a href="#前台功能模块实现" class="headerlink" title="前台功能模块实现"></a>前台功能模块实现</h2><h3 id="用户查看每日打卡详情功能模块实现"><a href="#用户查看每日打卡详情功能模块实现" class="headerlink" title="用户查看每日打卡详情功能模块实现"></a>用户查看每日打卡详情功能模块实现</h3><p>用户查看每日打卡详情功能的实现，前端发送请求后，通过 URL 调用 meiridaka 的list 和 detail 接口操作后台对 meiridaka 数据库表进行查找查看操作，最后将数据逐级返回到前端。用户查看每日打卡详情功能实现如下图所示。</p>
-<p><img src="/pic/media-pzc/78806c6edc2e45dfe333a6c8f5e71681.jpeg"></p>
+<p><img src="/../pic/media-pzc/78806c6edc2e45dfe333a6c8f5e71681.jpeg"></p>
 <h2 id="附件"><a href="#附件" class="headerlink" title="附件"></a>附件</h2><p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/code/P4-pzc/%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/django.zip">代码下载链接</a><br><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/code/P4-pzc/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%87%E4%BB%B6django.sql">数据库下载链接</a></p>
  
       <!-- reward -->
