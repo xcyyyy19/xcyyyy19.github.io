@@ -190,7 +190,7 @@
     <link href="http://example.com/2023/03/11/C2-%E5%A4%A7%E4%BA%8C%E7%A4%BE%E5%9B%A2%E7%BB%83%E4%B9%A0%E4%B8%8E%E7%AB%9E%E8%B5%9B%E4%BB%A3%E7%A0%81%E7%AC%94%E8%AE%B0/"/>
     <id>http://example.com/2023/03/11/C2-%E5%A4%A7%E4%BA%8C%E7%A4%BE%E5%9B%A2%E7%BB%83%E4%B9%A0%E4%B8%8E%E7%AB%9E%E8%B5%9B%E4%BB%A3%E7%A0%81%E7%AC%94%E8%AE%B0/</id>
     <published>2023-03-11T03:41:05.000Z</published>
-    <updated>2023-03-27T22:34:07.299Z</updated>
+    <updated>2023-03-27T22:45:55.878Z</updated>
     
     
       
@@ -203,7 +203,9 @@
     
     
     
-    <category term="algorithm" scheme="http://example.com/categories/algorithm/"/>
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
     
     
     <category term="C/C++" scheme="http://example.com/tags/C-C/"/>
@@ -356,7 +358,7 @@
     <link href="http://example.com/2023/03/11/C1-%E5%A4%A7%E4%B8%80%E7%A4%BE%E5%9B%A2%E7%BB%83%E4%B9%A0%E4%B8%8E%E7%AB%9E%E8%B5%9B%E4%BB%A3%E7%A0%81%E7%AC%94%E8%AE%B0/"/>
     <id>http://example.com/2023/03/11/C1-%E5%A4%A7%E4%B8%80%E7%A4%BE%E5%9B%A2%E7%BB%83%E4%B9%A0%E4%B8%8E%E7%AB%9E%E8%B5%9B%E4%BB%A3%E7%A0%81%E7%AC%94%E8%AE%B0/</id>
     <published>2023-03-11T03:40:47.000Z</published>
-    <updated>2023-03-27T22:34:44.655Z</updated>
+    <updated>2023-03-27T22:45:14.909Z</updated>
     
     
       
@@ -369,7 +371,9 @@
     
     
     
-    <category term="algorithm" scheme="http://example.com/categories/algorithm/"/>
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
     
     
     <category term="C/C++" scheme="http://example.com/tags/C-C/"/>
