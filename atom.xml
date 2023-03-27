@@ -218,6 +218,35 @@
   </entry>
   
   <entry>
+    <title>HTML学习</title>
+    <link href="http://example.com/2023/03/11/Q1HTML/"/>
+    <id>http://example.com/2023/03/11/Q1HTML/</id>
+    <published>2023-03-11T03:40:47.000Z</published>
+    <updated>2023-03-27T13:12:34.705Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;  
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;  
+&amp;lt;head&amp;gt;  
+  &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;  
+ </summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    
+    <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>快速了解我在大学期间学了什么</title>
     <link href="http://example.com/2023/03/11/Z2-%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E6%88%91%E5%9C%A8%E5%A4%A7%E5%AD%A6%E6%9C%9F%E9%97%B4%E5%AD%A6%E4%BA%86%E4%BB%80%E4%B9%88/"/>
     <id>http://example.com/2023/03/11/Z2-%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E6%88%91%E5%9C%A8%E5%A4%A7%E5%AD%A6%E6%9C%9F%E9%97%B4%E5%AD%A6%E4%BA%86%E4%BB%80%E4%B9%88/</id>

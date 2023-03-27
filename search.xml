@@ -1785,4 +1785,82 @@
         <tag>必看</tag>
       </tags>
   </entry>
+  <entry>
+    <title>HTML学习</title>
+    <url>/2023/03/11/Q1HTML/</url>
+    <content><![CDATA[<pre><code>&lt;!DOCTYPE html&gt;  
+&lt;html lang=&quot;en&quot;&gt;  
+&lt;head&gt;  
+  &lt;meta charset=&quot;UTF-8&quot;&gt;  
+  &lt;title&gt;CatPhotoApp&lt;/title&gt;  
+&lt;/head&gt;  
+&lt;body&gt;  
+  
+&lt;main&gt;  
+  &lt;section&gt;&lt;!--[[[[[[[[[]]]]]]]]]]--&gt;  
+    &lt;h1&gt;CatPhotoApp&lt;/h1&gt;  
+    &lt;h2&gt;Cat Photos&lt;/h2&gt;  
+    &lt;p&gt;      See more &lt;a href=&quot;../img/cat1.jpg&quot;&gt;cat photos&lt;/a&gt; in our gallery&lt;br&gt;  
+      &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg&quot; alt=&quot;A text.&quot;&gt;  
+      &lt;!--[[[[[[[[[[[[alt是备注]]]]]]]]]]]--&gt;  
+    &lt;/p&gt;  
+  &lt;/section&gt;  
+  &lt;section&gt;    &lt;h2&gt;Cat Lists&lt;/h2&gt;  
+    &lt;h3&gt;Things cats love:&lt;/h3&gt;  
+    &lt;ul&gt;      &lt;li&gt;cat nip&lt;/li&gt;  
+      &lt;li&gt;laser pointers&lt;/li&gt;  
+      &lt;li&gt;lasagna&lt;/li&gt;  
+    &lt;/ul&gt;    &lt;figure&gt;&lt;!--[[[[[[[[[图像标题]]]]]]]]]]]]]]--&gt;  
+      &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg&quot; alt=&quot;A slice of lasagna on a plate.&quot;&gt;  
+      &lt;figcaption&gt;&lt;!--[[[[[[[[[]]]]]]]]]]]]]--&gt;  
+        Cats  
+        &lt;em&gt;love&lt;/em&gt;  
+        lasagna.  
+      &lt;/figcaption&gt;  
+    &lt;/figure&gt;  &lt;/section&gt;  
+  &lt;section&gt;    &lt;h2&gt;Top 3 things cats hate:&lt;/h2&gt;  
+    &lt;ol&gt;      &lt;li&gt;flea treatment&lt;/li&gt;  
+      &lt;li&gt;thunder&lt;/li&gt;  
+      &lt;li&gt;other cats&lt;/li&gt;  
+    &lt;/ol&gt;    &lt;figure&gt;      &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg&quot; alt=&quot;Five cats looking around a field.&quot;&gt;  
+      &lt;figcaption&gt;        Cats &lt;strong&gt;hate&lt;/strong&gt; other cats.  
+      &lt;/figcaption&gt;  
+    &lt;/figure&gt;  &lt;/section&gt;  
+  &lt;section&gt;    &lt;h2&gt;Cat form&lt;/h2&gt;  
+    &lt;fieldset&gt;&lt;!--给form增加实线框--&gt;  
+      &lt;legend&gt;Is your cat an indoor or outdoor cat?&lt;/legend&gt;&lt;!--给块增加标题--&gt;  
+      &lt;form&gt;  
+        &lt;label&gt;          &lt;!--[[[[[[[[[[label用于将 input 元素与其近邻的文本进行绑定]]]]]]]]]--&gt;  
+          &lt;input name=&quot;door&quot; id=&quot;indoor&quot; value=&quot;indoor&quot; type=&quot;radio&quot; checked&gt;indoor  
+          &lt;!--用checked给本块（legend）设置默认选项--&gt;  
+        &lt;/label&gt;  
+        &lt;label&gt;          &lt;input name=&quot;door&quot; id=&quot;outdoor&quot; value=&quot;outdoor&quot; type=&quot;radio&quot;&gt;out door  
+        &lt;/label&gt;  
+      &lt;/form&gt;    &lt;/fieldset&gt;    &lt;fieldset&gt;      &lt;legend&gt;What&#39;s your cat&#39;s personality?&lt;/legend&gt;  
+      &lt;!--id应与选项相同，是具有唯一性的，不能当成name用--&gt;  
+      &lt;!--label是必须加的,for 对应的是input的id，label和input直接看成元组就行--&gt;  
+      &lt;label for=&quot;loving&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;personality&quot; id=&quot;loving&quot; checked&gt; Loving  
+      &lt;label for=&quot;lazy&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;personality&quot; id=&quot;lazy&quot;&gt; lazy  
+      &lt;label for=&quot;energetic&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;personality&quot; id=&quot;energetic&quot;&gt; energetic  
+    &lt;/fieldset&gt;  
+    &lt;input type=&quot;text&quot;  placeholder=&quot;cat photo URL&quot;&gt;  
+    &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;  
+  &lt;/section&gt;  
+
+&lt;/main&gt;  
+&lt;footer&gt;  
+  No Copyright - &lt;a href=&quot;https://www.freecodecamp.org&quot;&gt;freeCodeCamp.org&lt;/a&gt;  
+&lt;/footer&gt;  
+  
+&lt;/body&gt;  
+&lt;/html&gt;
+</code></pre>
+]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
 </search>
