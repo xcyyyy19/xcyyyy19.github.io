@@ -151,61 +151,6 @@
     
     
     <article
-  id="post-Q1-HTML-Note4"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/03/11/Q1-HTML-Note4/"
-    >HTML学习笔记-4head</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/03/11/Q1-HTML-Note4/" class="article-date">
-  <time datetime="2023-03-11T03:40:47.000Z" itemprop="datePublished">2023-03-11</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="HTML学习笔记-4head"><a href="#HTML学习笔记-4head" class="headerlink" title="HTML学习笔记-4head"></a>HTML学习笔记-4head</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;!--</span><br><span class="line"></span><br><span class="line">&lt;meta &gt;:</span><br><span class="line">    name 指定了 meta 元素的类型；说明该元素包含了什么类型的信息。</span><br><span class="line">    content 指定了实际的元数据内容【就是搜索网页时，标题下面的一连串简述】。</span><br><span class="line"></span><br><span class="line">    &lt; meta name=&quot;author&quot; content=&quot;Chris Mills&quot; /&gt;</span><br><span class="line">    &lt;meta name=&quot;description&quot; content=&quot;The MDN Web &quot; /&gt;</span><br><span class="line"></span><br><span class="line">     比如搜索MDN Web Docs会显示</span><br><span class="line">     标题：MDN Web Docs</span><br><span class="line">     链接：https://developer.mozilla.org/zh</span><br><span class="line">     简述：The MDN Web</span><br><span class="line"></span><br><span class="line">&lt;link&gt;:</span><br><span class="line">    &lt;link&gt; 用来添加CSS。link元素经常位于文档的头部，它有 2 个属性，rel=&quot;stylesheet&quot; 表明这是文档的样式表， href 包含了样式表文件的路径：&lt;link rel=&quot;stylesheet&quot; href=&quot;my-css-file.css&quot; /&gt;</span><br><span class="line"></span><br><span class="line">    图标类型</span><br><span class="line">     含有高分辨率 Retina 显示屏的第三代 iPad：</span><br><span class="line">       &lt;link</span><br><span class="line">        rel=&quot;apple-touch-icon-precomposed&quot;</span><br><span class="line">        sizes=&quot;144x144&quot;</span><br><span class="line">        href=&quot;https://developer.mozilla.org/static/img/favicon144.png&quot; /&gt;</span><br><span class="line">这些注释解释了每个图标的用途——这些元素涵盖的东西提供一个高分辨率图标，这些高分辨率图标当网站保存到 iPad 的主屏幕时使用。</span><br><span class="line"></span><br><span class="line">不用担心现在实现所有这些类型的图标——这是一个相当先进的功能，不要求你有这方面的知识来通过课程的进展。</span><br><span class="line">这里的主要目的是让你提前了解有这一样东西，以防当你浏览其他网站的源代码时不理解源代码的含义。</span><br><span class="line"></span><br><span class="line">&lt;script&gt; ：</span><br><span class="line">&lt;script&gt; 用来添加JavaScript来让王爷具有交互功能。</span><br><span class="line">script元素也应当放在文档的头部，并包含 src 属性来指向需要加载的 JavaScript 文件路径，</span><br><span class="line">同时最好加上 defer 以告诉浏览器在解析完成 HTML 后再加载 JavaScript。</span><br><span class="line">这样可以确保在加载脚本之前浏览器已经解析了所有的 HTML 内容。</span><br><span class="line">这样你就不会因为 JavaScript 试图访问页面上不存在的 HTML 元素而产生错误。</span><br><span class="line">实际上有很多方法来处理在你的页面上加载 JavaScript，但对于现代浏览器来说，这是最可靠的方法（对于其他方法，请阅读脚本加载策略）。</span><br><span class="line">&lt;script src=&quot;my-js-file.js&quot; defer&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">--&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;html lang=&quot;zh-CN&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
   id="post-Q1-HTML-Note3"
   class="article article-type-post"
   itemscope
@@ -307,6 +252,61 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-C1-大一社团练习与竞赛代码笔记"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/11/C1-%E5%A4%A7%E4%B8%80%E7%A4%BE%E5%9B%A2%E7%BB%83%E4%B9%A0%E4%B8%8E%E7%AB%9E%E8%B5%9B%E4%BB%A3%E7%A0%81%E7%AC%94%E8%AE%B0/"
+    >大一社团练习与竞赛代码笔记</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/11/C1-%E5%A4%A7%E4%B8%80%E7%A4%BE%E5%9B%A2%E7%BB%83%E4%B9%A0%E4%B8%8E%E7%AB%9E%E8%B5%9B%E4%BB%A3%E7%A0%81%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2023-03-11T03:40:47.000Z" itemprop="datePublished">2023-03-11</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/algorithm/">algorithm</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="附件见文末"><a href="#附件见文末" class="headerlink" title="附件见文末"></a>附件见文末</h2><p><img src="/../pic/C1/1.png"><br><img src="/../pic/C1/2.png"><br><img src="/../pic/C1/3.png"><br><img src="/../pic/C1/4.png"></p>
+<h2 id="附件"><a href="#附件" class="headerlink" title="附件"></a>附件</h2><p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/code/C1/lxhcode.zip">代码下载链接</a></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C-C/" rel="tag">C&#x2F;C++</a></li></ul>
 
     </footer>
   </div>
