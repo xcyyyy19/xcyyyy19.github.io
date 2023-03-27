@@ -8,9 +8,12 @@
 <p>1.代码设计想法展现，数据切入点展现</p>
 <p>2.获奖证书及答辩现场</p>
 ]]></content>
+      <categories>
+        <category>code</category>
+        <category>project</category>
+      </categories>
       <tags>
-        <tag>code</tag>
-        <tag>project</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -177,19 +180,24 @@
 </li>
 </ul>
 ]]></content>
+      <categories>
+        <category>code</category>
+      </categories>
       <tags>
-        <tag>code</tag>
-        <tag>project</tag>
         <tag>note</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
     <title>Python爬虫&amp;数据分析&amp;前后端代码（毕设）【待上传】</title>
     <url>/2023/03/11/P3-Python%E7%88%AC%E8%99%AB-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BB%A3%E7%A0%81%EF%BC%88%E6%AF%95%E8%AE%BE%EF%BC%89/</url>
     <content><![CDATA[]]></content>
+      <categories>
+        <category>code</category>
+        <category>project</category>
+      </categories>
       <tags>
-        <tag>code</tag>
-        <tag>project</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -992,9 +1000,14 @@
 <p><img src="/../pic/media-pzc/78806c6edc2e45dfe333a6c8f5e71681.jpeg"></p>
 <h2 id="附件"><a href="#附件" class="headerlink" title="附件"></a>附件</h2><p><a href="https://xcyyyy19.github.io/code/P4-pzc/%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/django.zip">代码下载链接</a><br><a href="https://xcyyyy19.github.io/code/P4-pzc/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%87%E4%BB%B6django.sql">数据库下载链接</a></p>
 ]]></content>
+      <categories>
+        <category>code</category>
+        <category>project</category>
+      </categories>
       <tags>
-        <tag>code</tag>
-        <tag>project</tag>
+        <tag>Python</tag>
+        <tag>Vue</tag>
+        <tag>Django</tag>
       </tags>
   </entry>
   <entry>
@@ -1659,9 +1672,14 @@
 <p>图 5.5 用户查看订单信息并评价页面</p>
 <h2 id="附件"><a href="#附件" class="headerlink" title="附件"></a>附件</h2><p><a href="https://xcyyyy19.github.io/code/P5-fp/%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/program.zip">代码下载链接</a><br><a href="https://xcyyyy19.github.io/code/P5-fp/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%87%E4%BB%B6/fp.sql">数据库下载链接</a></p>
 ]]></content>
+      <categories>
+        <category>code</category>
+        <category>project</category>
+      </categories>
       <tags>
-        <tag>code</tag>
-        <tag>project</tag>
+        <tag>Python</tag>
+        <tag>Vue</tag>
+        <tag>Django</tag>
       </tags>
   </entry>
   <entry>
@@ -1671,9 +1689,12 @@
 <li><input disabled="" type="checkbox"> 当时老师要求模仿的网站是啥相关的来着？主力机上的Java代码放哪个云上了？</li>
 </ul>
 ]]></content>
+      <categories>
+        <category>code</category>
+        <category>project</category>
+      </categories>
       <tags>
-        <tag>code</tag>
-        <tag>project</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -1686,7 +1707,7 @@
         <category>algorithm</category>
       </categories>
       <tags>
-        <tag>code</tag>
+        <tag>C/C++</tag>
       </tags>
   </entry>
   <entry>
@@ -1699,7 +1720,7 @@
         <category>algorithm</category>
       </categories>
       <tags>
-        <tag>code</tag>
+        <tag>C/C++</tag>
       </tags>
   </entry>
   <entry>
@@ -1788,81 +1809,14 @@
       </tags>
   </entry>
   <entry>
-    <title>HTML学习</title>
-    <url>/2023/03/11/Q1HTML/</url>
-    <content><![CDATA[<pre><code>&lt;!DOCTYPE html&gt;  
-&lt;html lang=&quot;en&quot;&gt;  
-&lt;head&gt;  
-  &lt;meta charset=&quot;UTF-8&quot;&gt;  
-  &lt;title&gt;CatPhotoApp&lt;/title&gt;  
-&lt;/head&gt;  
-&lt;body&gt;  
-  
-&lt;main&gt;  
-  &lt;section&gt;&lt;!--[[[[[[[[[]]]]]]]]]]--&gt;  
-    &lt;h1&gt;CatPhotoApp&lt;/h1&gt;  
-    &lt;h2&gt;Cat Photos&lt;/h2&gt;  
-    &lt;p&gt;      See more &lt;a href=&quot;../img/cat1.jpg&quot;&gt;cat photos&lt;/a&gt; in our gallery&lt;br&gt;  
-      &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg&quot; alt=&quot;A text.&quot;&gt;  
-      &lt;!--[[[[[[[[[[[[alt是备注]]]]]]]]]]]--&gt;  
-    &lt;/p&gt;  
-  &lt;/section&gt;  
-  &lt;section&gt;    &lt;h2&gt;Cat Lists&lt;/h2&gt;  
-    &lt;h3&gt;Things cats love:&lt;/h3&gt;  
-    &lt;ul&gt;      &lt;li&gt;cat nip&lt;/li&gt;  
-      &lt;li&gt;laser pointers&lt;/li&gt;  
-      &lt;li&gt;lasagna&lt;/li&gt;  
-    &lt;/ul&gt;    &lt;figure&gt;&lt;!--[[[[[[[[[图像标题]]]]]]]]]]]]]]--&gt;  
-      &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg&quot; alt=&quot;A slice of lasagna on a plate.&quot;&gt;  
-      &lt;figcaption&gt;&lt;!--[[[[[[[[[]]]]]]]]]]]]]--&gt;  
-        Cats  
-        &lt;em&gt;love&lt;/em&gt;  
-        lasagna.  
-      &lt;/figcaption&gt;  
-    &lt;/figure&gt;  &lt;/section&gt;  
-  &lt;section&gt;    &lt;h2&gt;Top 3 things cats hate:&lt;/h2&gt;  
-    &lt;ol&gt;      &lt;li&gt;flea treatment&lt;/li&gt;  
-      &lt;li&gt;thunder&lt;/li&gt;  
-      &lt;li&gt;other cats&lt;/li&gt;  
-    &lt;/ol&gt;    &lt;figure&gt;      &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg&quot; alt=&quot;Five cats looking around a field.&quot;&gt;  
-      &lt;figcaption&gt;        Cats &lt;strong&gt;hate&lt;/strong&gt; other cats.  
-      &lt;/figcaption&gt;  
-    &lt;/figure&gt;  &lt;/section&gt;  
-  &lt;section&gt;    &lt;h2&gt;Cat form&lt;/h2&gt;  
-    &lt;fieldset&gt;&lt;!--给form增加实线框--&gt;  
-      &lt;legend&gt;Is your cat an indoor or outdoor cat?&lt;/legend&gt;&lt;!--给块增加标题--&gt;  
-      &lt;form&gt;  
-        &lt;label&gt;          &lt;!--[[[[[[[[[[label用于将 input 元素与其近邻的文本进行绑定]]]]]]]]]--&gt;  
-          &lt;input name=&quot;door&quot; id=&quot;indoor&quot; value=&quot;indoor&quot; type=&quot;radio&quot; checked&gt;indoor  
-          &lt;!--用checked给本块（legend）设置默认选项--&gt;  
-        &lt;/label&gt;  
-        &lt;label&gt;          &lt;input name=&quot;door&quot; id=&quot;outdoor&quot; value=&quot;outdoor&quot; type=&quot;radio&quot;&gt;out door  
-        &lt;/label&gt;  
-      &lt;/form&gt;    &lt;/fieldset&gt;    &lt;fieldset&gt;      &lt;legend&gt;What&#39;s your cat&#39;s personality?&lt;/legend&gt;  
-      &lt;!--id应与选项相同，是具有唯一性的，不能当成name用--&gt;  
-      &lt;!--label是必须加的,for 对应的是input的id，label和input直接看成元组就行--&gt;  
-      &lt;label for=&quot;loving&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;personality&quot; id=&quot;loving&quot; checked&gt; Loving  
-      &lt;label for=&quot;lazy&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;personality&quot; id=&quot;lazy&quot;&gt; lazy  
-      &lt;label for=&quot;energetic&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;personality&quot; id=&quot;energetic&quot;&gt; energetic  
-    &lt;/fieldset&gt;  
-    &lt;input type=&quot;text&quot;  placeholder=&quot;cat photo URL&quot;&gt;  
-    &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;  
-  &lt;/section&gt;  
+    <title></title>
+    <url>/2023/03/27/Q1-HTML/</url>
+    <content><![CDATA[<hr>
+<p>title: HTML学习<br>date: 2023-03-11 11:40:47</p>
+<p>categories: [code,note]</p>
+<p>tags: HTML</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;title&gt;CatPhotoApp&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;main&gt;</span><br><span class="line">  &lt;section&gt;&lt;!--[[[[[[[[[]]]]]]]]]]--&gt;</span><br><span class="line">    &lt;h1&gt;CatPhotoApp&lt;/h1&gt;</span><br><span class="line">    &lt;h2&gt;Cat Photos&lt;/h2&gt;</span><br><span class="line">    &lt;p&gt;</span><br><span class="line">      See more &lt;a href=&quot;../img/cat1.jpg&quot;&gt;cat photos&lt;/a&gt; in our gallery&lt;br&gt;</span><br><span class="line">      &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg&quot; alt=&quot;A text.&quot;&gt;</span><br><span class="line">      &lt;!--[[[[[[[[[[[[alt是备注]]]]]]]]]]]--&gt;</span><br><span class="line">    &lt;/p&gt;</span><br><span class="line">  &lt;/section&gt;</span><br><span class="line"></span><br><span class="line">  &lt;section&gt;</span><br><span class="line">    &lt;h2&gt;Cat Lists&lt;/h2&gt;</span><br><span class="line">    &lt;h3&gt;Things cats love:&lt;/h3&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">      &lt;li&gt;cat nip&lt;/li&gt;</span><br><span class="line">      &lt;li&gt;laser pointers&lt;/li&gt;</span><br><span class="line">      &lt;li&gt;lasagna&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;figure&gt;&lt;!--[[[[[[[[[图像标题]]]]]]]]]]]]]]--&gt;</span><br><span class="line">      &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg&quot; alt=&quot;A slice of lasagna on a plate.&quot;&gt;</span><br><span class="line">      &lt;figcaption&gt;&lt;!--[[[[[[[[[]]]]]]]]]]]]]--&gt;</span><br><span class="line">        Cats</span><br><span class="line">        &lt;em&gt;love&lt;/em&gt;</span><br><span class="line">        lasagna.</span><br><span class="line">      &lt;/figcaption&gt;</span><br><span class="line">    &lt;/figure&gt;</span><br><span class="line">  &lt;/section&gt;</span><br><span class="line"></span><br><span class="line">  &lt;section&gt;</span><br><span class="line">    &lt;h2&gt;Top 3 things cats hate:&lt;/h2&gt;</span><br><span class="line">    &lt;ol&gt;</span><br><span class="line">      &lt;li&gt;flea treatment&lt;/li&gt;</span><br><span class="line">      &lt;li&gt;thunder&lt;/li&gt;</span><br><span class="line">      &lt;li&gt;other cats&lt;/li&gt;</span><br><span class="line">    &lt;/ol&gt;</span><br><span class="line">    &lt;figure&gt;</span><br><span class="line">      &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg&quot; alt=&quot;Five cats looking around a field.&quot;&gt;</span><br><span class="line">      &lt;figcaption&gt;</span><br><span class="line">        Cats &lt;strong&gt;hate&lt;/strong&gt; other cats.</span><br><span class="line">      &lt;/figcaption&gt;</span><br><span class="line">    &lt;/figure&gt;</span><br><span class="line">  &lt;/section&gt;</span><br><span class="line"></span><br><span class="line">  &lt;section&gt;</span><br><span class="line">    &lt;h2&gt;Cat form&lt;/h2&gt;</span><br><span class="line">    &lt;fieldset&gt;&lt;!--给form增加实线框--&gt;</span><br><span class="line">      &lt;legend&gt;Is your cat an indoor or outdoor cat?&lt;/legend&gt;&lt;!--给块增加标题--&gt;</span><br><span class="line">      &lt;form&gt;</span><br><span class="line">        &lt;label&gt;</span><br><span class="line">          &lt;!--[[[[[[[[[[label用于将 input 元素与其近邻的文本进行绑定]]]]]]]]]--&gt;</span><br><span class="line">          &lt;input name=&quot;door&quot; id=&quot;indoor&quot; value=&quot;indoor&quot; type=&quot;radio&quot; checked&gt;indoor</span><br><span class="line">          &lt;!--用checked给本块（legend）设置默认选项--&gt;</span><br><span class="line">        &lt;/label&gt;</span><br><span class="line">        &lt;label&gt;</span><br><span class="line">          &lt;input name=&quot;door&quot; id=&quot;outdoor&quot; value=&quot;outdoor&quot; type=&quot;radio&quot;&gt;out door</span><br><span class="line">        &lt;/label&gt;</span><br><span class="line">      &lt;/form&gt;</span><br><span class="line">    &lt;/fieldset&gt;</span><br><span class="line">    &lt;fieldset&gt;</span><br><span class="line">      &lt;legend&gt;What&#x27;s your cat&#x27;s personality?&lt;/legend&gt;</span><br><span class="line">      &lt;!--id应与选项相同，是具有唯一性的，不能当成name用--&gt;</span><br><span class="line">      &lt;!--label是必须加的,for 对应的是input的id，label和input直接看成元组就行--&gt;</span><br><span class="line">      &lt;label for=&quot;loving&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;personality&quot; id=&quot;loving&quot; checked&gt; Loving</span><br><span class="line">      &lt;label for=&quot;lazy&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;personality&quot; id=&quot;lazy&quot;&gt; lazy</span><br><span class="line">      &lt;label for=&quot;energetic&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;personality&quot; id=&quot;energetic&quot;&gt; energetic</span><br><span class="line">    &lt;/fieldset&gt;</span><br><span class="line">    &lt;input type=&quot;text&quot;  placeholder=&quot;cat photo URL&quot;&gt;</span><br><span class="line">    &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;</span><br><span class="line">  &lt;/section&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;/main&gt;</span><br><span class="line">&lt;footer&gt;</span><br><span class="line">  No Copyright - &lt;a href=&quot;https://www.freecodecamp.org&quot;&gt;freeCodeCamp.org&lt;/a&gt;</span><br><span class="line">&lt;/footer&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
-&lt;/main&gt;  
-&lt;footer&gt;  
-  No Copyright - &lt;a href=&quot;https://www.freecodecamp.org&quot;&gt;freeCodeCamp.org&lt;/a&gt;  
-&lt;/footer&gt;  
-  
-&lt;/body&gt;  
-&lt;/html&gt;
-</code></pre>
 ]]></content>
-      <categories>
-        <category>code</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
   </entry>
 </search>
