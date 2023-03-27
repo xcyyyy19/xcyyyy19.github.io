@@ -236,18 +236,130 @@
   </entry>
   
   <entry>
-    <title>HTML学习</title>
-    <link href="http://example.com/2023/03/11/Q1-HTML/"/>
-    <id>http://example.com/2023/03/11/Q1-HTML/</id>
+    <title>HTML学习笔记-1基础</title>
+    <link href="http://example.com/2023/03/11/Q1-HTML-Note1/"/>
+    <id>http://example.com/2023/03/11/Q1-HTML-Note1/</id>
     <published>2023-03-11T03:40:47.000Z</published>
-    <updated>2023-03-27T22:12:22.621Z</updated>
+    <updated>2023-03-27T22:22:24.033Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1&gt;HTML学习&lt;/h1&gt;
+    <summary type="html">&lt;h1&gt;HTML学习笔记-1基础&lt;/h1&gt;
+
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML学习笔记-2基础标签</title>
+    <link href="http://example.com/2023/03/11/Q1-HTML-Note2/"/>
+    <id>http://example.com/2023/03/11/Q1-HTML-Note2/</id>
+    <published>2023-03-11T03:40:47.000Z</published>
+    <updated>2023-03-27T22:23:53.795Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;HTML学习笔记-2基础标签&lt;/h1&gt;
+
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML学习笔记-4head</title>
+    <link href="http://example.com/2023/03/11/Q1-HTML-Note4/"/>
+    <id>http://example.com/2023/03/11/Q1-HTML-Note4/</id>
+    <published>2023-03-11T03:40:47.000Z</published>
+    <updated>2023-03-27T22:30:02.417Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;HTML学习笔记-4head&quot;&gt;&lt;a href=&quot;#HTML学习笔记-4head&quot; class=&quot;headerlink&quot; title=&quot;HTML学习笔记-4head&quot;&gt;&lt;/a&gt;HTML学习笔记-4head&lt;/h1&gt;&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML学习笔记-3进阶标签与属性</title>
+    <link href="http://example.com/2023/03/11/Q1-HTML-Note3/"/>
+    <id>http://example.com/2023/03/11/Q1-HTML-Note3/</id>
+    <published>2023-03-11T03:40:47.000Z</published>
+    <updated>2023-03-27T22:28:51.185Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;HTML学习笔记-3进阶标签与属性&quot;&gt;&lt;a href=&quot;#HTML学习笔记-3进阶标签与属性&quot; class=&quot;headerlink&quot; title=&quot;HTML学习笔记-3进阶标签与属性&quot;&gt;&lt;/a&gt;HTML学习笔记-3进阶标签与属性&lt;/h1&gt;&lt;figure</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML学习笔记-5实践</title>
+    <link href="http://example.com/2023/03/11/Q1-HTML-Note5/"/>
+    <id>http://example.com/2023/03/11/Q1-HTML-Note5/</id>
+    <published>2023-03-11T03:40:47.000Z</published>
+    <updated>2023-03-27T22:31:06.442Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;HTML学习笔记-5实践&lt;/h1&gt;
 
 &lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
         
