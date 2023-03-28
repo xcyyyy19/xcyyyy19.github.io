@@ -1922,25 +1922,68 @@
   <entry>
     <title>CSS学习笔记-1基础</title>
     <url>/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-Note1/</url>
-    <content><![CDATA[<h1 id="CSS学习笔记-1基础"><a href="#CSS学习笔记-1基础" class="headerlink" title="CSS学习笔记-1基础"></a>CSS学习笔记-1基础</h1><p>注释：</p>
-<p>HTML：<!----></p>
-<p>CSS：&#x2F;**&#x2F;</p>
+    <content><![CDATA[<h1 id="CSS学习笔记-1基础"><a href="#CSS学习笔记-1基础" class="headerlink" title="CSS学习笔记-1基础"></a>CSS学习笔记-1基础</h1><p>注释:</p>
+<p>​	HTML:<!----></p>
+<p>​	CSS:&#x2F;**&#x2F;</p>
 <p>0.CSS基本样式<br>选择器（Selector）<br>HTML 元素的名称位于规则集开始。它选择了一个或多个需要添加样式的元素）。要给不同元素添加样式只需要更改选择器就行了。可以用固定标签名，或.+自定义名称来进行选择。如用.menu来选择class属性为menu的盒子。</p>
 <p>声明（Declaration）<br>一个单独的规则，如 color: red; 用来指定添加样式元素的属性。</p>
 <p>属性（Properties）<br>改变 HTML 元素样式的途径。（本例中 color 就是 <p> 元素的属性。）CSS 中，由编写人员决定修改哪个属性以改变规则。</p>
 <p>属性的值（Property value）<br>在属性的右边，冒号后面即属性的值，它从指定属性的众多外观中选择一个值（我们除了 red 之外还有很多属性值可以用于 color ）。</p>
-<p>1.常见基础样式<br>     通用：</p>
-<p>​		宽度:   width: 300px;（百分制也行），div默认居左，所以背景颜色随着宽度的改变也居左。</p>
-<p>​	文字相关：</p>
-<p>​		居中：text-align: center;</p>
-<p>​		居左： text-align: left；</p>
-<p>​	背景相关：</p>
-<p>​		背景颜色：background-color:</p>
-<p>​		背景图：background-image: url(<a href="https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg">https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg</a>);</p>
-<p>​	盒子相关：</p>
-<p>​		水平居中： margin-left: auto; &amp;&amp; margin-right: auto;</p>
-<p>​	对块级元素应用一些样式，使它们更像内联元素处于同一行：【【【为什么不能直接用内联元素？】】】】】</p>
-<p>​		设置成内联元素的样式：display: inline-block;</p>
+<ul>
+<li><p>常见基础样式</p>
+<ul>
+<li><p>通用:</p>
+<p>宽度:   width: 300px;（百分制也行），div默认居左，所以背景颜色随着宽度的改变也居左。</p>
+<p>最大宽度: max-width: 500px;</p>
+<p>​				（背景是不动的，主页面随着浏览器大小变化，有最大宽度的约束，内容看起来就不会过宽）</p>
+<p>内边距:padding-left&#x2F;right&#x2F;top&#x2F;bottom:20px;  </p>
+<p>​				padding:10px;（上下左右都是10）</p>
+<p>​				<a href="https://www.w3school.com.cn/cssref/pr_padding.asp">CSS padding 属性更多用法</a></p>
+</li>
+<li><p>文字相关:</p>
+<p>居中:text-align: center;</p>
+<p>居左: text-align: left;</p>
+<p>字体: font-family: Impact,serif;（两种字体一个主要，一个备用）【【【【什么时候用到备用？】】】】</p>
+<p>斜体： font-style:italic;</p>
+</li>
+<li><p>背景相关:</p>
+<p>背景颜色:background-color:</p>
+<p>背景图:background-image: url(<a href="https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg">https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg</a>);</p>
+</li>
+<li><p>盒子相关:</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>​				水平居中:margin-left: auto; &amp;&amp; margin-right: auto;</p>
+<p>​				对块级元素进行强制内联状:display: inline-block;</p>
+<p>​				去除元素前端可能存在的空白符:<style>   div{font-size:0;}    </style></p>
+<p>​					</p>
+<blockquote>
+<p>​	【【【【【【【【Q1为什么不能直接用内联元素？】】】】】】</p>
+<p>​	【inline-block是元素具备了块级和内联元素的功能，inline最重要的一点就是:</p>
+<p>​	元素能够在一行展示，而inline元素所缺失的设置宽高，是block 元素的功能】</p>
+</blockquote>
+<blockquote>
+<p>​	【【【【Q2为什么用了i-b会导致，设置宽度时，总和必须小于100%？（否则会另起一行）】】】】】</p>
+<p>​	【因为HTML 中的换行符、空格符、制表符等合并为空白符，字体大小不为 0 的情况下，</p>
+<pre><code> 空白符自然占据定的宽度，使用inline-block 会产生了元素间的空隙。】
+</code></pre>
+</blockquote>
+<blockquote>
+<p>​	【【【【【Q3不想自己调试合适的宽度怎么办？】】】】】】】</p>
+<p>​	【在写用了强制内联化的块级元素时，全部写在同一行，一个空格都不要加。比如<p>1</p><p>2</p>】</p>
+</blockquote>
+<blockquote>
+<p>​	【【【【【Q4最佳解决办法是什么？】】】】】</p>
+<p>​	【父元素设置font-size:0,子元素有需要可以另外设置font-size，</p>
+<p>​	 这样空白符因为font-size:0就不会占据宽度了】</p>
+</blockquote>
+<blockquote>
+<p>实例:</p>
+<p><a href="https://www.zhangxinxu.com/study/201011/img-blank-space.html">display:inline-block元素间换行符的空格间隙 </a></p>
+<p><a href="https://www.zhangxinxu.com/study/201011/img-font-size-clear-blank.html">font-size:0清除display:inline-block元素换行符间隙</a></p>
+</blockquote>
 <p>2.style元素</p>
 <ul>
 <li><p>单独写在css文件夹里，并在head里通过link来链接。 </p>
@@ -1961,5 +2004,10 @@
       <tags>
         <tag>HTML</tag>
       </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/03/28/Untitled/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
