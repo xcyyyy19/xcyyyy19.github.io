@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>HTML学习笔记-4head |  Pravite Home</title>
+      <title>CSS学习笔记-1基础 |  Pravite Home</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -57,7 +57,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-Q1-HTML-Note4"
+  id="post-前端学习笔记/Q2-Note1"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -68,7 +68,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  HTML学习笔记-4head
+  CSS学习笔记-1基础
 </h1>
  
 
@@ -76,8 +76,8 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/03/28/Q1-HTML-Note4/" class="article-date">
-  <time datetime="2023-03-28T03:33:47.000Z" itemprop="datePublished">2023-03-28</time>
+      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-Note1/" class="article-date">
+  <time datetime="2023-03-28T03:34:47.000Z" itemprop="datePublished">2023-03-28</time>
 </a> 
   <div class="article-category">
     <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
@@ -88,7 +88,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">617</span>
+            <span class="post-count">430</span>
         </span>
     </span>
 
@@ -97,7 +97,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">2 分钟</span>
+            <span class="post-count">1 分钟</span>
         </span>
     </span>
 </div>
@@ -112,8 +112,37 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="HTML学习笔记-4head"><a href="#HTML学习笔记-4head" class="headerlink" title="HTML学习笔记-4head"></a>HTML学习笔记-4head</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;!--</span><br><span class="line"></span><br><span class="line">&lt;meta &gt;:</span><br><span class="line">    name 指定了 meta 元素的类型；说明该元素包含了什么类型的信息。</span><br><span class="line">    content 指定了实际的元数据内容【就是搜索网页时，标题下面的一连串简述】。</span><br><span class="line"></span><br><span class="line">    &lt; meta name=&quot;author&quot; content=&quot;Chris Mills&quot; /&gt;</span><br><span class="line">    &lt;meta name=&quot;description&quot; content=&quot;The MDN Web &quot; /&gt;</span><br><span class="line"></span><br><span class="line">     比如搜索MDN Web Docs会显示</span><br><span class="line">     标题：MDN Web Docs</span><br><span class="line">     链接：https://developer.mozilla.org/zh</span><br><span class="line">     简述：The MDN Web</span><br><span class="line"></span><br><span class="line">&lt;link&gt;:</span><br><span class="line">    &lt;link&gt; 用来添加CSS。link元素经常位于文档的头部，它有 2 个属性，rel=&quot;stylesheet&quot; 表明这是文档的样式表， href 包含了样式表文件的路径：&lt;link rel=&quot;stylesheet&quot; href=&quot;my-css-file.css&quot; /&gt;</span><br><span class="line"></span><br><span class="line">    图标类型</span><br><span class="line">     含有高分辨率 Retina 显示屏的第三代 iPad：</span><br><span class="line">       &lt;link</span><br><span class="line">        rel=&quot;apple-touch-icon-precomposed&quot;</span><br><span class="line">        sizes=&quot;144x144&quot;</span><br><span class="line">        href=&quot;https://developer.mozilla.org/static/img/favicon144.png&quot; /&gt;</span><br><span class="line">这些注释解释了每个图标的用途——这些元素涵盖的东西提供一个高分辨率图标，这些高分辨率图标当网站保存到 iPad 的主屏幕时使用。</span><br><span class="line"></span><br><span class="line">不用担心现在实现所有这些类型的图标——这是一个相当先进的功能，不要求你有这方面的知识来通过课程的进展。</span><br><span class="line">这里的主要目的是让你提前了解有这一样东西，以防当你浏览其他网站的源代码时不理解源代码的含义。</span><br><span class="line"></span><br><span class="line">&lt;script&gt; ：</span><br><span class="line">&lt;script&gt; 用来添加JavaScript来让王爷具有交互功能。</span><br><span class="line">script元素也应当放在文档的头部，并包含 src 属性来指向需要加载的 JavaScript 文件路径，</span><br><span class="line">同时最好加上 defer 以告诉浏览器在解析完成 HTML 后再加载 JavaScript。</span><br><span class="line">这样可以确保在加载脚本之前浏览器已经解析了所有的 HTML 内容。</span><br><span class="line">这样你就不会因为 JavaScript 试图访问页面上不存在的 HTML 元素而产生错误。</span><br><span class="line">实际上有很多方法来处理在你的页面上加载 JavaScript，但对于现代浏览器来说，这是最可靠的方法（对于其他方法，请阅读脚本加载策略）。</span><br><span class="line">&lt;script src=&quot;my-js-file.js&quot; defer&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">--&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;html lang=&quot;zh-CN&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-
+  <h1 id="CSS学习笔记-1基础"><a href="#CSS学习笔记-1基础" class="headerlink" title="CSS学习笔记-1基础"></a>CSS学习笔记-1基础</h1><p>注释：</p>
+<p>HTML：<!----></p>
+<p>CSS：&#x2F;**&#x2F;</p>
+<p>0.CSS基本样式<br>选择器（Selector）<br>HTML 元素的名称位于规则集开始。它选择了一个或多个需要添加样式的元素）。要给不同元素添加样式只需要更改选择器就行了。可以用固定标签名，或.+自定义名称来进行选择。如用.menu来选择class属性为menu的盒子。</p>
+<p>声明（Declaration）<br>一个单独的规则，如 color: red; 用来指定添加样式元素的属性。</p>
+<p>属性（Properties）<br>改变 HTML 元素样式的途径。（本例中 color 就是 <p> 元素的属性。）CSS 中，由编写人员决定修改哪个属性以改变规则。</p>
+<p>属性的值（Property value）<br>在属性的右边，冒号后面即属性的值，它从指定属性的众多外观中选择一个值（我们除了 red 之外还有很多属性值可以用于 color ）。</p>
+<p>1.常见基础样式<br>     通用：</p>
+<p>​		宽度:   width: 300px;（百分制也行），div默认居左，所以背景颜色随着宽度的改变也居左。</p>
+<p>​	文字相关：</p>
+<p>​		居中：text-align: center;</p>
+<p>​		居左： text-align: left；</p>
+<p>​	背景相关：</p>
+<p>​		背景颜色：background-color:</p>
+<p>​		背景图：background-image: url(<a target="_blank" rel="noopener" href="https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg">https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg</a>);</p>
+<p>​	盒子相关：</p>
+<p>​		水平居中： margin-left: auto; &amp;&amp; margin-right: auto;</p>
+<p>​	对块级元素应用一些样式，使它们更像内联元素处于同一行：【【【为什么不能直接用内联元素？】】】】】</p>
+<p>​		设置成内联元素的样式：display: inline-block;</p>
+<p>2.style元素</p>
+<ul>
+<li><p>单独写在css文件夹里，并在head里通过link来链接。 </p>
+<link rel="stylesheet" href="styles.css">
+</li>
+<li><p>用于给body里的某一种&#x2F;多种元素指定样式。</p>
+</li>
+</ul>
+<p>3.多端样式归一化必加代码<br>    <meta name="viewport" content="width=device-width, initial-scale=1.0" /></p>
+<ol start="4">
+<li></li>
+</ol>
  
       <!-- reward -->
       
@@ -178,7 +207,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/03/28/Q1-HTML-Note4/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-Note1/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -191,19 +220,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2023/03/28/Q1-HTML-Note5/" class="article-nav-link">
+      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note6/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            HTML学习笔记-5实践
+            HTML学习笔记-6体系补充
           
         </div>
       </a>
     
     
-      <a href="/2023/03/28/Q1-HTML-Note3/" class="article-nav-link">
+      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note4/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">HTML学习笔记-3进阶标签与属性</div>
+        <div class="article-nav-title">HTML学习笔记-4head</div>
       </a>
     
   </nav>
