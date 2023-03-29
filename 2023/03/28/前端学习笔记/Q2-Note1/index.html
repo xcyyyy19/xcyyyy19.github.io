@@ -88,7 +88,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">797</span>
+            <span class="post-count">960</span>
         </span>
     </span>
 
@@ -115,6 +115,8 @@
   <h1 id="CSS学习笔记-1基础"><a href="#CSS学习笔记-1基础" class="headerlink" title="CSS学习笔记-1基础"></a>CSS学习笔记-1基础</h1><p>注释:</p>
 <p>​	HTML:<!----></p>
 <p>​	CSS:&#x2F;**&#x2F;</p>
+<p>技巧：</p>
+<p>​	先写css再写对应的html</p>
 <p>0.CSS基本样式<br>选择器（Selector）<br>HTML 元素的名称位于规则集开始。它选择了一个或多个需要添加样式的元素）。要给不同元素添加样式只需要更改选择器就行了。可以用固定标签名，或.+自定义名称来进行选择。如用.menu来选择class属性为menu的盒子。</p>
 <p>声明（Declaration）<br>一个单独的规则，如 color: red; 用来指定添加样式元素的属性。</p>
 <p>属性（Properties）<br>改变 HTML 元素样式的途径。（本例中 color 就是 <p> 元素的属性。）CSS 中，由编写人员决定修改哪个属性以改变规则。</p>
@@ -129,12 +131,25 @@
 <p>内边距:padding-left&#x2F;right&#x2F;top&#x2F;bottom:20px;  </p>
 <p>​				padding:10px;（上下左右都是10）</p>
 <p>​				<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/cssref/pr_padding.asp">CSS padding 属性更多用法</a></p>
+<p>水平居中:margin-left: auto; &amp;&amp; margin-right: auto;</p>
+<p>​				可用于块级标签，p、div等。【【【【【为什么不弄成auto后，p标签的行距会缩小？】】】】</p>
+<p>去除默认边框宽度：margin：0；（font-size：0是为了解决多余空白符的问题）</p>
+<p>缩小上方过大的宽度： margin-top:-25px;（需要来回调试）</p>
 </li>
 <li><p>文字相关:</p>
 <p>居中:text-align: center;</p>
 <p>居左: text-align: left;</p>
-<p>字体: font-family: Impact,serif;（两种字体一个主要，一个备用）【【【【什么时候用到备用？】】】】</p>
+<p>字体: font-family: Impact,serif;</p>
+<p>​		（两种字体一个主要，一个备用）【【【【什么时候用到备用？】】】】</p>
+<p>字体大小：font-size：18px；</p>
 <p>斜体： font-style:italic;</p>
+<p>分割线：html的hr标签</p>
+<p>​				样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）</p>
+<p>​			（看起来会有凹陷效果）</p>
+<p>链接文字的颜色：a{color：black；}</p>
+<p>链接访问后：a:visited {  }</p>
+<p>链接上有鼠标悬停时：a:hover{}</p>
+<p>链接被点击时：a:active{}</p>
 </li>
 <li><p>背景相关:</p>
 <p>背景颜色:background-color:</p>
@@ -145,7 +160,6 @@
 </ul>
 </li>
 </ul>
-<p>​				水平居中:margin-left: auto; &amp;&amp; margin-right: auto;</p>
 <p>​				对块级元素进行强制内联状:display: inline-block;</p>
 <p>​				去除元素前端可能存在的空白符:<style>   div{font-size:0;}    </style></p>
 <p>​					</p>
@@ -186,6 +200,9 @@
 <ol start="4">
 <li></li>
 </ol>
+<p>其它疑问：</p>
+<p>Q1：</p>
+<p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329084054391.png" alt="image-20230329084054391"></p>
  
       <!-- reward -->
       
