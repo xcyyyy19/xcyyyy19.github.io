@@ -151,6 +151,71 @@
     
     
     <article
+  id="post-前端学习笔记/Q0-ToDo"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q0-ToDo/"
+    >前端ToDo阻塞池</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q0-ToDo/" class="article-date">
+  <time datetime="2023-03-29T04:30:47.000Z" itemprop="datePublished">2023-03-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h4 id="学习相关"><a href="#学习相关" class="headerlink" title="学习相关"></a>学习相关</h4><ul>
+<li><p><input disabled="" type="checkbox"> 
+把不认识的英文全部查一下，做成表</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+写fCC（挨个来，别怕多）</p>
+</li>
+</ul>
+<h4 id="网站优化"><a href="#网站优化" class="headerlink" title="网站优化"></a>网站优化</h4><ul>
+<li><input disabled="" type="checkbox"> 把网站的排序规则改成首字母排序</li>
+<li><input disabled="" type="checkbox"> 学github</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-前端学习笔记/Q2-CSS-Note2"
   class="article article-type-post"
   itemscope
@@ -335,8 +400,22 @@
 </ul>
 <h3 id="3-多端样式归一化必加代码"><a href="#3-多端样式归一化必加代码" class="headerlink" title="3.多端样式归一化必加代码"></a><strong>3.多端样式归一化必加代码</strong></h3><p>​    <meta name="viewport" content="width=device-width, initial-scale=1.0" /></p>
 <h3 id="4-三种布局"><a href="#4-三种布局" class="headerlink" title="4.三种布局"></a>4.三种布局</h3><ol>
-<li><p>灵活布局flex</p>
+<li><p>灵活&#x2F;弹性&#x2F;伸缩布局flex</p>
 <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Lp4y1S7XM/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">五分钟掌握 css3 flex弹性布局</a></p>
+<p>1.布局原理<br>采用 Flex 布局的元素，称为容器。它的所有子元素自动成为容器成员，称为项目。</p>
+<p>2.易错点：父盒子设为 flex 后，子元素的float、clear和 vertical-align属性将失效。</p>
+<p>3.flex布局父项常见属性<br>flex-direction：设置主轴的方向</p>
+<p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190849686.png" alt="image-20230329190849686"></p>
+<p>justify-content：设置主轴上的子元素排列方式</p>
+<p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190910922.png" alt="image-20230329190910922"></p>
+<p>flex-wrap：设置子元素是否换行</p>
+<p>​						nowrap 不换行	(装不下会缩小子元素的宽度)<br>​						wrap 换行<br>align-items：设置侧轴上的子元素排列方式（单行）</p>
+<p>​						该属性是控制子项在侧轴上的排列方式 在子项为单行的时候使用<br>​						flex-start 从头部开始<br>​						flex-end 从尾部开始<br>​						center 居中显示<br>​						stretch 拉伸(不给宽度&#x2F;高度)</p>
+<p>align-content： 设置侧轴上的子元素的排列方式（多行）</p>
+<p>​				align-content 设置侧轴上的子元素的排列方式（多行）</p>
+<p>align-content 和align-items区别<br>            align-items 适用于单行情况下， 只有上对齐、下对齐、居中和 拉伸<br>            align-content适用多行换行的情况（单行无效），可设置上&#x2F;下对齐、居中、拉伸、均分剩余空间<br>总结：就是单行找align-items 多行找 align-content</p>
+<p>flex-flow：复合属性，相当于同时设置了 flex-direction 和 flex-wrap</p>
+<p>3.flex布局子项常见属性【【【【【【【【【【【没见过，不知道怎么用】】】】】】】】<br>        flex子项目占的份数<br>        align-self控制子项自己在侧轴的排列方式<br>        order属性定义子项的排列顺序（前后顺序）<br>4.flex属性【【【【【【【【【【【没见过，不知道怎么用】】】】】】】】<br>        flex 属性定义子项目分配剩余空间，用flex来表示占多少份数。<br>5.align-self控制子项自己在侧轴上的排列方式【【【【【【没见过，不知道怎么用】】】】】】】】<br>        align-self 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖 align-items 属性。<br>        默认值为 auto，表示继承父元素的 align-items 属性，如果没有父元素，则等同于 stretch。</p>
 </li>
 <li><p>网格布局Grid</p>
 <p><a target="_blank" rel="noopener" href="https://www.runoob.com/css3/css-grid.html">CSS 网格布局 | 菜鸟教程 (runoob.com)</a></p>
@@ -348,10 +427,9 @@
 <p>​		比如报纸首字母脱离文档。图片格式选择为”环绕“。</p>
 <p>其它布局：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout#%E6%8C%87%E5%8D%97">CSS 布局 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
 <p>其它疑问：</p>
-<p>Q1：</p>
 <h2 id="框架相关层次"><a href="#框架相关层次" class="headerlink" title="框架相关层次"></a>框架相关层次</h2><p>margin：外边距</p>
 <p>border：框架</p>
-<p>padding：内边距</p>
+<p>padding：<code>内边距	~</code></p>
 <p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329124305228.png" alt="image-20230329124305228"></p>
  
       <!-- reward -->
@@ -760,70 +838,13 @@
 </article>
 
     
-    <article
-  id="post-前端学习笔记/Q1-HTML-Note1"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note1/"
-    >HTML学习笔记-1基础</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note1/" class="article-date">
-  <time datetime="2023-03-28T03:30:47.000Z" itemprop="datePublished">2023-03-28</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1>HTML学习笔记-1基础</h1>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">1.&lt;标签名 属性1=“值1” 属性2=“值2”&gt;</span><br><span class="line">2.元素==标签+内容</span><br><span class="line">3.Dom树：文档对象模型，以树形的方式直观的表示标签嵌套结构</span><br><span class="line">4.html不区分大小写</span><br><span class="line">5.文档基础</span><br><span class="line">&lt;!DOCTYPE html&gt;:</span><br><span class="line">声明文档类型。需要包含它才能使其他东西正常工作。</span><br><span class="line"></span><br><span class="line">&lt;html&gt;&lt;/html&gt;:</span><br><span class="line">这个元素包裹了页面中所有的内容，有时被称为根元素。</span><br><span class="line"></span><br><span class="line">&lt;head&gt;&lt;/head&gt;:</span><br><span class="line">这个元素是一个容器，它包含了所有你想包含在 HTML 页面中但不在 HTML 页面中显示的内容。</span><br><span class="line">这些内容包括你想在搜索结果中出现的关键字和页面描述、CSS 样式、字符集声明等等。以后的章节中会学到更多相关的内容。</span><br><span class="line"></span><br><span class="line">&lt;meta charset=&quot;utf-8&quot;&gt;:</span><br><span class="line">    这个元素代表了不能由其他 HTML 元相关元素表示的元数据【描述html页面的数据】，比如 &lt;base&gt;、&lt;link&gt;、&lt;script&gt;、&lt;style&gt; 或 &lt;title&gt;。</span><br><span class="line"></span><br><span class="line">&lt;title&gt;&lt;/title&gt;:</span><br><span class="line">这设置了页面的标题，也就是出现在该页面加载的浏览器标签中的内容。当页面被加入书签时，页面标题也被用来描述该页面。</span><br><span class="line"></span><br><span class="line">&lt;body&gt;&lt;/body&gt;:</span><br><span class="line">包含了你访问页面时所有显示在页面上的内容，包含文本、图片、视频、游戏、可播放音频轨道等等。</span><br><span class="line"></span><br><span class="line">&lt;!--  ctrl+alt+L 格式化代码--&gt;</span><br></pre></td></tr></table></figure>
-
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
   </article>
   
 
   
   <nav class="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
   </nav>
   
 </section>
