@@ -1957,40 +1957,46 @@
 <p>​	先写css再写对应的html</p>
 <p>学完后形成体系：</p>
 <p><img src="C:$RECYCLE.BIN\S-1-5-21-3551453893-2823794770-815658977-1001$R4HZJ7D.png" alt="$R4HZJ7D"></p>
-<p><strong>0.CSS基本样式</strong><br>选择器（Selector）<br>HTML 元素的名称位于规则集开始。它选择了一个或多个需要添加样式的元素）。要给不同元素添加样式只需要更改选择器就行了。可以用固定标签名，或.+自定义名称来进行选择。如用.menu来选择class属性为menu的盒子。</p>
+<h3 id="0-CSS基本样式"><a href="#0-CSS基本样式" class="headerlink" title="0.CSS基本样式"></a>0.CSS基本样式</h3><p>选择器（Selector）<br>HTML 元素的名称位于规则集开始。它选择了一个或多个需要添加样式的元素）。要给不同元素添加样式只需要更改选择器就行了。可以用固定标签名，或.+自定义名称来进行选择。如用.menu来选择class属性为menu的盒子。</p>
+<p>通配符选择器作用：给当前界面上所有的标签设置属性。（*的意思是选中所有的标签）</p>
 <p>声明（Declaration）<br>一个单独的规则，如 color: red; 用来指定添加样式元素的属性。</p>
 <p>属性（Properties）<br>改变 HTML 元素样式的途径。（本例中 color 就是 <p> 元素的属性。）CSS 中，由编写人员决定修改哪个属性以改变规则。</p>
 <p>属性的值（Property value）<br>在属性的右边，冒号后面即属性的值，它从指定属性的众多外观中选择一个值（我们除了 red 之外还有很多属性值可以用于 color ）。</p>
-<ul>
-<li><p>常见选择器</p>
-<p><strong>什么是通配符选择器？</strong></p>
-<p>作用：给当前界面上所有的标签设置属性。（*的意思是选中所有的标签）</p>
+<h3 id="1-常见基础样式"><a href="#1-常见基础样式" class="headerlink" title="1.常见基础样式"></a>1.常见基础样式</h3><ul>
+<li><p>基础：</p>
+<p>声明该边框的类型：display ：可选项如下</p>
+<p>​								flex-灵活布局</p>
+<p>​								grid网格布局</p>
+<p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329162830851.png" alt="image-20230329162830851"></p>
+<p>​							</p>
 </li>
-</ul>
-<ol>
-<li>常见基础样式</li>
-</ol>
-<ul>
 <li><p>通用:</p>
 <p>宽度:   width: 300px;（百分制也行），div默认居左，所以背景颜色随着宽度的改变也居左。</p>
 <p>最大宽度: max-width: 500px;</p>
 <p>​				（背景是不动的，主页面随着浏览器大小变化，有最大宽度的约束，内容看起来就不会过宽）</p>
-<p>内边距:</p>
+<p>内边距:   <strong>padding</strong></p>
 <p>​                padding-left&#x2F;right&#x2F;top&#x2F;bottom:20px;  </p>
 <p>​				padding:10px;（上下左右都是10）</p>
 <p>​				<a href="https://www.w3school.com.cn/cssref/pr_padding.asp">CSS padding 属性更多用法</a></p>
-<p>外边距：                </p>
+<p>框架：<strong>border</strong></p>
+<p>​				框架为宽度50px的实心黑色，border: 50px <strong>solid</strong> black;</p>
+<p>外边距：   <strong>margin</strong>             </p>
 <p>​                水平居中:margin-left: auto; &amp;&amp; margin-right: auto;</p>
 <p>​				可用于块级标签，p、div等。【【【【【为什么不弄成auto后，p标签的行距会缩小？】】】】</p>
 <p>​                去除默认边框宽度：margin：0；（font-size：0是为了解决多余空白符的问题）</p>
 <p>​                缩小上方过大的宽度： margin-top:-25px;（需要来回调试）</p>
 </li>
 <li><p>文字相关:</p>
-<p>居中:text-align: center;</p>
-<p>居左: text-align: left;</p>
-<p>字体: font-family: Impact,serif;</p>
-<p>​		（两种字体一个主要，一个备用）【【【【什么时候用到备用？】】】】</p>
-<p>字体大小：font-size：18px；</p>
+<p>文本水平对齐：<strong>text-align</strong></p>
+<p>​	居中: text-align: <strong>center;</strong></p>
+<p>​	居左: text-align: <strong>left;</strong></p>
+<p>文本修饰符：【【【【【【【【【【【【】】】】】】】】】】】】</p>
+<p>文本对齐方式：【【【【【【【【【【【】】】】】】】】】】】</p>
+<p>字体: <strong>font-family:</strong> Impact,serif;</p>
+<p>​			（两种字体一个主要，一个备用）【【【【什么时候用到备用？】】】】</p>
+<p>字体大小：<strong>font-size：</strong>18px；</p>
+<p>字重：<strong>font-weight</strong>【【【【【【【【【【【【】】】】】】】】】】</p>
+<p>行高：line-height</p>
 <p>斜体： font-style:italic;</p>
 <p>分割线：html的hr标签</p>
 <p>​				样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）</p>
@@ -2035,16 +2041,27 @@
 <p><a href="https://www.zhangxinxu.com/study/201011/img-blank-space.html">display:inline-block元素间换行符的空格间隙 </a></p>
 <p><a href="https://www.zhangxinxu.com/study/201011/img-font-size-clear-blank.html">font-size:0清除display:inline-block元素换行符间隙</a></p>
 </blockquote>
-<p><strong>2.style元素</strong></p>
-<ul>
+<h3 id="2-style元素"><a href="#2-style元素" class="headerlink" title="2.style元素"></a><strong>2.style元素</strong></h3><ul>
 <li><p>单独写在css文件夹里，并在head里通过link来链接。 </p>
 <link rel="stylesheet" href="styles.css">
 </li>
 <li><p>用于给body里的某一种&#x2F;多种元素指定样式。</p>
 </li>
 </ul>
-<p><strong>3.多端样式归一化必加代码</strong><br>    <meta name="viewport" content="width=device-width, initial-scale=1.0" /></p>
-<p><strong>4.</strong></p>
+<h3 id="3-多端样式归一化必加代码"><a href="#3-多端样式归一化必加代码" class="headerlink" title="3.多端样式归一化必加代码"></a><strong>3.多端样式归一化必加代码</strong></h3><p>​    <meta name="viewport" content="width=device-width, initial-scale=1.0" /></p>
+<h3 id="4-三种布局"><a href="#4-三种布局" class="headerlink" title="4.三种布局"></a>4.三种布局</h3><ol>
+<li><p>灵活布局flex</p>
+<p><a href="https://www.bilibili.com/video/BV1Lp4y1S7XM/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">五分钟掌握 css3 flex弹性布局</a></p>
+</li>
+<li><p>网格布局Grid</p>
+<p><a href="https://www.runoob.com/css3/css-grid.html">CSS 网格布局 | 菜鸟教程 (runoob.com)</a></p>
+</li>
+<li><p>浮动布局</p>
+</li>
+</ol>
+<p>​		<a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Floats">浮动 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
+<p>​		比如报纸首字母脱离文档。图片格式选择为”环绕“。</p>
+<p>其它布局：<a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout#%E6%8C%87%E5%8D%97">CSS 布局 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
 <p>其它疑问：</p>
 <p>Q1：</p>
 <h2 id="框架相关层次"><a href="#框架相关层次" class="headerlink" title="框架相关层次"></a>框架相关层次</h2><p>margin：外边距</p>
