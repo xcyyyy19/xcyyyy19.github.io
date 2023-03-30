@@ -2001,18 +2001,19 @@
 <li><code>border-box</code> 告诉浏览器：你想要设置的边框和内边距的值是包含在 width 内的。也就是说，如果你将一个元素的 width 设为 100px，那么这 100px 会包含它的 border 和 padding，内容区的实际宽度是 width 减去 (border + padding) 的值。大多数情况下，这使得我们更容易地设定一个元素的宽高。</li>
 </ul>
 </li>
-</ul>
-</li>
 <li><p>文字相关:</p>
 <p>文本水平对齐：<strong>text-align</strong></p>
 <p>​	居中: text-align: <strong>center;</strong></p>
 <p>​	居左: text-align: <strong>left;</strong></p>
-<p>文本修饰符：【【【【【【【【【【【【】】】】】】】】】】】】</p>
-<p>文本对齐方式：【【【【【【【【【【【】】】】】】】】】】】</p>
+<p>文本修饰符：<code>text-decoration</code> </p>
+<p>​    这个 CSS 属性是用于设置文本的修饰线外观的（下划线、上划线、贯穿线&#x2F;删除线 或 闪烁）</p>
+<p>​     它是 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-line"><code>text-decoration-line</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-color"><code>text-decoration-color</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-style"><code>text-decoration-style</code></a>, 和新出现的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-thickness"><code>text-decoration-thickness</code></a> 属性的缩写。</p>
+<p>文本对齐方式：<strong>text-align: center;</strong></p>
+<p>[CSS 布局 – 水平 &amp; 垂直对齐 | 菜鸟教程 (runoob.com)](<a href="https://www.runoob.com/css/css-align.html#:~:text=CSS">https://www.runoob.com/css/css-align.html#:~:text=CSS</a> 布局 - 水平 %26 垂直对齐 1 元素居中对齐,8 垂直居中 - 使用 position 和 transform 更多项目)</p>
 <p>字体: <strong>font-family:</strong> Impact,serif;</p>
 <p>​			主要&#x2F;备用两种字体【什么时候用到备用？防止浏览器里没有第一个字体，都没有就按默认字体渲染】</p>
 <p>字体大小：<strong>font-size：</strong>18px；</p>
-<p>字重：<strong>font-weight</strong>【【【【【【【【【【【【】】】】】】】】】】</p>
+<p>字重：<strong>font-weight</strong>（字体粗细）</p>
 <p>行高：line-height</p>
 <p>斜体： font-style:italic;</p>
 <p>分割线：html的hr标签</p>
@@ -2022,6 +2023,8 @@
 <p>链接访问后：a:visited {  }</p>
 <p>链接上有鼠标悬停时：a:hover{}</p>
 <p>链接被点击时：a:active{}</p>
+</li>
+</ul>
 </li>
 <li><p>背景相关:</p>
 <p>背景颜色:background-color:</p>
