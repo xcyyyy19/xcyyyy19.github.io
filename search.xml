@@ -35,7 +35,7 @@
   <entry>
     <title>HTML学习笔记-3进阶标签与属性</title>
     <url>/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note3/</url>
-    <content><![CDATA[<h1 id="HTML学习笔记-3进阶标签与属性"><a href="#HTML学习笔记-3进阶标签与属性" class="headerlink" title="HTML学习笔记-3进阶标签与属性"></a>HTML学习笔记-3进阶标签与属性</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.超链接     	&lt;a href=&quot;网址&quot; target=&quot;_blank&quot; &gt; 文字或图片 &lt;/a&gt;</span><br><span class="line"> 注：href就是属性的一种</span><br><span class="line"></span><br><span class="line">2.内联元素与块级元素</span><br><span class="line"> 内联：不会自动换行，比如em、strong、input、button。也就是说。如果不特意指定button的作用的话，如果input、button相邻，button就会被默认关联在input上。</span><br><span class="line"> 块级：会自动换行，比如p、fieldset。注：section跟他们有点像,不管什么东西，都要记得用section包裹。</span><br><span class="line">【【【【【【【&lt;article&gt;是干什么用的？？】】】】】</span><br><span class="line">&lt;article&gt; 标签规定独立的自包含内容。</span><br><span class="line">一篇文章应有其自身的意义，应该有可能独立于站点的其余部分对其进行分发。【【【分发是什么意思】】】</span><br><span class="line">&lt;article&gt; 元素的潜在来源：</span><br><span class="line">论坛帖子</span><br><span class="line">报纸文章</span><br><span class="line">博客条目</span><br><span class="line">用户评论】</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">11.内容分块元素      &lt;section&gt;&lt;/section&gt;</span><br><span class="line">section 元素的使用禁忌如下：</span><br><span class="line">.不要将section元素用作设置样式的页面容器，那是div的工作；</span><br><span class="line">.如果article元素或者aside元素或者nav元素更符合使用条件，不要使用section元素；</span><br><span class="line">.不要为没有标题的内容区块使用section元素；</span><br><span class="line"></span><br><span class="line">3.空元素/自闭合元素</span><br><span class="line">  比如&lt;img&gt; &lt;input&gt;</span><br><span class="line">4.属性与布尔属性</span><br><span class="line">  属性：元素的附加限定。用于控制这个元素的行为。</span><br><span class="line">  布尔属性：用布尔值来代表“是否”允许元素做什么事</span><br><span class="line"> eg.输入框   使用 disabled 属性来禁止在输入框里输入</span><br><span class="line">          	&lt;input type=&quot;text&quot; disabled /&gt;</span><br><span class="line">          	下面这个输入框不包含 disabled 属性，所以用户可以向其中输入</span><br><span class="line">        	&lt;input type=&quot;text&quot; /&gt;</span><br><span class="line"></span><br><span class="line">6.特殊字符的引用     https://zh.wikipedia.org/wiki/XML%E4%B8%8EHTML%E5%AD%97%E7%AC%A6%E5%AE%9E%E4%BD%93%E5%BC%95%E7%94%A8%E5%88%97%E8%A1%A8</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">12.无/有序列表        &lt;ul&gt;   &lt;li&gt;&lt;/li&gt; &lt;li&gt;&lt;/li&gt;   &lt;/ul&gt;</span><br><span class="line">                    &lt;ol&gt;   &lt;li&gt;&lt;/li&gt; &lt;li&gt;&lt;/li&gt;   &lt;/ol&gt;</span><br><span class="line"></span><br><span class="line">13.全局属性</span><br><span class="line">13.1id</span><br><span class="line">        id 属性用于标识特定的 HTML 元素。 每个 id 属性的值必须不同于整个页面的所有其他 id 值。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">表单相关</span><br><span class="line">14.表单（接下来的东西都与表单有关）             &lt;form action=&quot;/页面地址&quot; required&gt;&lt;/form&gt;</span><br><span class="line">   # form表单元素，用来收集来自用户的信息</span><br><span class="line">   # action属性，就是我需要把这表单信息提交到后台，action相当于指明哪个接口。例如，&lt;form action=&quot;http://localhost:30/form-submit&quot;&gt;&lt;/form&gt; 告诉浏览器应该将表单数据发送到路径/submit-url</span><br><span class="line">   # required属性，用于防止用户不输入信息也能提交。</span><br><span class="line">    不过现在form的action用的比较少了，了解一下action属性的用途就行</span><br><span class="line">    一般我们实际开发很少用action去发送请求，而是收集表单数据，用fetch之类去发送给后端（js）</span><br><span class="line"></span><br><span class="line">15.可点击的按钮      &lt;button&gt;&lt;/button&gt;</span><br><span class="line">单击没有任何属性的表单按钮的默认行为，会将表单提交到表单的 action 属性中指定的位置。</span><br><span class="line">【一般来说是一个form里面有一个type为submit的按钮。这个按钮的作用就是把form表单的数据进行提交。</span><br><span class="line">即使你在文本输入下方添加了按钮，它们也会在页面上彼此相邻。 这是因为 input 和 button 元素都是内联元素，它们不会出现在新的行上。</span><br><span class="line">你添加的按钮将默认提交表单。 然而，依赖默认行为可能造成混乱。 type=“submit” 添加到 button 以明确它是一个提交按钮。】</span><br><span class="line"></span><br><span class="line">16.单选按钮值  radio</span><br><span class="line">radio是input标签中，type属性的一种值。比如&lt;input type=&quot;radio&quot;&gt;</span><br><span class="line">重点：想要实现几个单选按钮互斥（如男女），就要把两个单选按钮所在的index加上相同的name属性.</span><br><span class="line">          &lt;label&gt;&lt;input id=&quot;indoor&quot; type=&quot;radio&quot; name=&quot;indoor-outdoor&quot;&gt; Indoor&lt;/label&gt;</span><br><span class="line">          &lt;label&gt;&lt;input id=&quot;outdoor&quot; type=&quot;radio&quot; name=&quot;indoor-outdoor&quot;&gt; Outdoor&lt;/label&gt;</span><br><span class="line"></span><br><span class="line">17.给某一块增加实线框用的块级标签     &lt;fieldset&gt;&lt;/fieldset&gt;</span><br><span class="line">      相当于表单分块，会形成一个实线框框。不分块就会默认分出超级多的块，乱的要死。 fieldset 元素是块级元素，这意味着它们出现在新的一行上。</span><br><span class="line">17.1 fieldset 元素中内容的标题      &lt;legend&gt;文字提示&lt;/legend&gt;</span><br><span class="line">      会在fieldset形成的实现框之上，显示文字。一般用于提示用户应该输入什么样的数据。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">图片相关：img figure figcaption</span><br><span class="line">8.图片标签                     &lt;img src=&quot;地址&quot; alt=&quot;代替地址所显示的文本&quot;&gt;</span><br><span class="line">    所有的 img 元素都应该有一个 alt 属性。 alt 属性的文本（值）有两个作用，</span><br><span class="line">    第一个作用是让屏幕阅读器可以知晓图片的内容，这会对网页的可访问性有很大提升；另一个作用是当图片无法加载时，页面需要显示的替代文本。</span><br><span class="line">9.独立的内容                 &lt;figure&gt;&lt;/figure&gt;</span><br><span class="line">图像，并允许你将图像与标题相关联。</span><br><span class="line">10.图像标题                  &lt;figcaption&gt;&lt;/&gt;figcaption&gt;</span><br><span class="line">用于描述 figure 元素中包含的图像,比如某张图的标题叫“图1”。</span><br><span class="line"> &lt;figure&gt;</span><br><span class="line">          &lt;img src=&quot;链接&quot; alt=&quot;文字&quot;&gt;</span><br><span class="line">          &lt;figcaption&gt;Cats love lasagna.&lt;/figcaption&gt;</span><br><span class="line"> &lt;/figure&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">输入相关</span><br><span class="line">5.输入框     &lt;input&gt;</span><br><span class="line">    最复杂的标签，以下为常用属性</span><br><span class="line">    #type=“text”                  待输入数据类型为text文字</span><br><span class="line">    #type=“radio”               单选项</span><br><span class="line">            使文本与radio绑定的方法</span><br><span class="line">            &lt;label&gt;&lt;input type=&quot;radio&quot;&gt;Indoor&lt;/label&gt;表示有一个单选项Indoor</span><br><span class="line">    #type=&quot;checkbox&quot;       复选框</span><br><span class="line">            使文本与checkbox绑定的方法</span><br><span class="line">            1.id与for            &lt;input id=&quot;loving&quot; type=&quot;checkbox&quot;&gt;  &lt;label for=&quot;loving&quot;&gt;Loving&lt;/label&gt;</span><br><span class="line">    #&lt;label&gt;&lt;/label&gt;     包裹含有radio/checkbox属性的input元素。</span><br><span class="line">                         【一句input一对儿label。】</span><br><span class="line">                         用于将 input 元素与其近邻的文本进行绑定，达到点击文本也能单选的效果。</span><br><span class="line">    #checked属性         使复选框或单选按钮默认被选中</span><br><span class="line"></span><br><span class="line">    #name               name是给后端人员搜索用的，id是给前端人员写代码用的。</span><br><span class="line">                        【input这一类属于原生的控件，</span><br><span class="line">                        name属性的主要作用就是用来在发送的时候作为url拼接，</span><br><span class="line">                        拼接成查询条件，可以理解成：后端需要什么查询条件，前端的传对应的name】</span><br><span class="line">                        主要是用于用户提交时，将自动拼接给程序员看</span><br><span class="line">                        （注：多个input有同一个name会使他们互斥）</span><br><span class="line">    #placeholder         占位符（提示用户该输入什么）</span><br><span class="line">    #value               默认值（如果用户不输入，就提交默认值）</span><br><span class="line"></span><br><span class="line">    注：&lt;input type=&quot;radio&quot;&gt;Indoor表示有一个单选项Indoor</span><br><span class="line">    注：&lt;input type=&quot;checkbox&quot;&gt; Loving请确保元素和文本之间有一个空格。</span><br><span class="line">    教程：https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input#attr-disabled</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">6.文字相关</span><br><span class="line">	分割线：&lt;hr&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h1 id="HTML学习笔记-3进阶标签与属性"><a href="#HTML学习笔记-3进阶标签与属性" class="headerlink" title="HTML学习笔记-3进阶标签与属性"></a>HTML学习笔记-3进阶标签与属性</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.超链接     	&lt;a href=&quot;网址&quot; target=&quot;_blank&quot; &gt; 文字或图片 &lt;/a&gt;</span><br><span class="line"> 注：href就是属性的一种</span><br><span class="line"></span><br><span class="line">2.内联元素与块级元素</span><br><span class="line"> 内联：不会自动换行，比如em、strong、input、button。也就是说。如果不特意指定button的作用的话，如果input、button相邻，button就会被默认关联在input上。</span><br><span class="line"> 块级：会自动换行，比如p、fieldset。注：section跟他们有点像,不管什么东西，都要记得用section包裹。</span><br><span class="line">【【【【【【【&lt;article&gt;是干什么用的？？】】】】】</span><br><span class="line">&lt;article&gt; 标签规定独立的自包含内容。</span><br><span class="line">一篇文章应有其自身的意义，应该有可能独立于站点的其余部分对其进行分发。【【【分发是什么意思】】】</span><br><span class="line">&lt;article&gt; 元素的潜在来源：</span><br><span class="line">论坛帖子</span><br><span class="line">报纸文章</span><br><span class="line">博客条目</span><br><span class="line">用户评论】</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">11.内容分块元素      &lt;section&gt;&lt;/section&gt;</span><br><span class="line">section 元素的使用禁忌如下：</span><br><span class="line">.不要将section元素用作设置样式的页面容器，那是div的工作；</span><br><span class="line">.如果article元素或者aside元素或者nav元素更符合使用条件，不要使用section元素；</span><br><span class="line">.不要为没有标题的内容区块使用section元素；</span><br><span class="line"></span><br><span class="line">3.空元素/自闭合元素</span><br><span class="line">  比如&lt;img&gt; &lt;input&gt;</span><br><span class="line">4.属性与布尔属性</span><br><span class="line">  属性：元素的附加限定。用于控制这个元素的行为。</span><br><span class="line">  布尔属性：用布尔值来代表“是否”允许元素做什么事</span><br><span class="line"> eg.输入框   使用 disabled 属性来禁止在输入框里输入</span><br><span class="line">          	&lt;input type=&quot;text&quot; disabled /&gt;</span><br><span class="line">          	下面这个输入框不包含 disabled 属性，所以用户可以向其中输入</span><br><span class="line">        	&lt;input type=&quot;text&quot; /&gt;</span><br><span class="line"></span><br><span class="line">6.特殊字符的引用     https://zh.wikipedia.org/wiki/XML%E4%B8%8EHTML%E5%AD%97%E7%AC%A6%E5%AE%9E%E4%BD%93%E5%BC%95%E7%94%A8%E5%88%97%E8%A1%A8</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">12.无/有序列表        &lt;ul&gt;   &lt;li&gt;&lt;/li&gt; &lt;li&gt;&lt;/li&gt;   &lt;/ul&gt;</span><br><span class="line">                    &lt;ol&gt;   &lt;li&gt;&lt;/li&gt; &lt;li&gt;&lt;/li&gt;   &lt;/ol&gt;</span><br><span class="line"></span><br><span class="line">13.全局属性</span><br><span class="line">13.1id</span><br><span class="line">        id 属性用于标识特定的 HTML 元素。 每个 id 属性的值必须不同于整个页面的所有其他 id 值。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">表单相关</span><br><span class="line">14.表单（接下来的东西都与表单有关）             &lt;form action=&quot;/页面地址&quot; required&gt;&lt;/form&gt;</span><br><span class="line">   # form表单元素，用来收集来自用户的信息</span><br><span class="line">   # action属性，就是我需要把这表单信息提交到后台，action相当于指明哪个接口。例如，&lt;form action=&quot;http://localhost:30/form-submit&quot;&gt;&lt;/form&gt; 告诉浏览器应该将表单数据发送到路径/submit-url</span><br><span class="line">   # required属性，用于防止用户不输入信息也能提交。</span><br><span class="line">    不过现在form的action用的比较少了，了解一下action属性的用途就行</span><br><span class="line">    一般我们实际开发很少用action去发送请求，而是收集表单数据，用fetch之类去发送给后端（js）</span><br><span class="line"></span><br><span class="line">15.可点击的按钮      &lt;button&gt;&lt;/button&gt;</span><br><span class="line">单击没有任何属性的表单按钮的默认行为，会将表单提交到表单的 action 属性中指定的位置。</span><br><span class="line">【一般来说是一个form里面有一个type为submit的按钮。这个按钮的作用就是把form表单的数据进行提交。</span><br><span class="line">即使你在文本输入下方添加了按钮，它们也会在页面上彼此相邻。 这是因为 input 和 button 元素都是内联元素，它们不会出现在新的行上。</span><br><span class="line">你添加的按钮将默认提交表单。 然而，依赖默认行为可能造成混乱。 type=“submit” 添加到 button 以明确它是一个提交按钮。】</span><br><span class="line"></span><br><span class="line">16.单选按钮值  radio</span><br><span class="line">radio是input标签中，type属性的一种值。比如&lt;input type=&quot;radio&quot;&gt;</span><br><span class="line">重点：想要实现几个单选按钮互斥（如男女），就要把两个单选按钮所在的index加上相同的name属性.</span><br><span class="line">          &lt;label&gt;&lt;input id=&quot;indoor&quot; type=&quot;radio&quot; name=&quot;indoor-outdoor&quot;&gt; Indoor&lt;/label&gt;</span><br><span class="line">          &lt;label&gt;&lt;input id=&quot;outdoor&quot; type=&quot;radio&quot; name=&quot;indoor-outdoor&quot;&gt; Outdoor&lt;/label&gt;</span><br><span class="line"></span><br><span class="line">17.给某一块增加实线框用的块级标签     &lt;fieldset&gt;&lt;/fieldset&gt;</span><br><span class="line">      相当于表单分块，会形成一个实线框框。不分块就会默认分出超级多的块，乱的要死。 fieldset 元素是块级元素，这意味着它们出现在新的一行上。</span><br><span class="line">17.1 fieldset 元素中内容的标题      &lt;legend&gt;文字提示&lt;/legend&gt;</span><br><span class="line">      会在fieldset形成的实现框之上，显示文字。一般用于提示用户应该输入什么样的数据。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">图片相关：img figure figcaption</span><br><span class="line">8.图片标签                     &lt;img src=&quot;地址&quot; alt=&quot;代替地址所显示的文本&quot;&gt;</span><br><span class="line">    所有的 img 元素都应该有一个 alt 属性。 alt 属性的文本（值）有两个作用，</span><br><span class="line">    第一个作用是让屏幕阅读器可以知晓图片的内容，这会对网页的可访问性有很大提升；另一个作用是当图片无法加载时，页面需要显示的替代文本。</span><br><span class="line">9.独立的内容                 &lt;figure&gt;&lt;/figure&gt;</span><br><span class="line">图像，并允许你将图像与标题相关联。</span><br><span class="line">10.图像标题                  &lt;figcaption&gt;&lt;/&gt;figcaption&gt;</span><br><span class="line">用于描述 figure 元素中包含的图像,比如某张图的标题叫“图1”。</span><br><span class="line"> &lt;figure&gt;</span><br><span class="line">          &lt;img src=&quot;链接&quot; alt=&quot;文字&quot;&gt;</span><br><span class="line">          &lt;figcaption&gt;Cats love lasagna.&lt;/figcaption&gt;</span><br><span class="line"> &lt;/figure&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">输入相关</span><br><span class="line">5.输入框     &lt;input&gt;</span><br><span class="line">    最复杂的标签，以下为常用属性</span><br><span class="line">    #type=“text”                  待输入数据类型为text文字</span><br><span class="line">    </span><br><span class="line">    #type=“radio”                 单选项</span><br><span class="line">            1.使文本与radio绑定的方法</span><br><span class="line">            &lt;label&gt;&lt;input type=&quot;radio&quot;&gt;Indoor&lt;/label&gt;表示有一个单选项Indoor</span><br><span class="line">            </span><br><span class="line">    #type=&quot;checkbox&quot;       复选框</span><br><span class="line">            使文本与checkbox绑定的方法</span><br><span class="line">            1.id与for      &lt;input id=&quot;loving&quot; type=&quot;checkbox&quot;&gt;  </span><br><span class="line">            			   &lt;label for=&quot;loving&quot;&gt;Loving&lt;/label&gt;</span><br><span class="line">            			   </span><br><span class="line">    #&lt;label&gt;&lt;/label&gt;     包裹含有radio/checkbox属性的input元素。</span><br><span class="line">                         【一句input一对儿label。】</span><br><span class="line">                         用于将 input 元素与其近邻的文本进行绑定，达到点击文本也能单选的效果。</span><br><span class="line">                         </span><br><span class="line">    #checked属性         使复选框或单选按钮默认被选中</span><br><span class="line"></span><br><span class="line">    #name               name是给后端人员搜索用的，id是给前端人员写代码用的。</span><br><span class="line">                        【input这一类属于原生的控件，</span><br><span class="line">                        name属性的主要作用就是用来在发送的时候作为url拼接，</span><br><span class="line">                        拼接成查询条件，可以理解成：后端需要什么查询条件，前端的传对应的name】</span><br><span class="line">                        主要是用于用户提交时，将自动拼接给程序员看</span><br><span class="line">                        （注：多个input有同一个name会使他们互斥）</span><br><span class="line">                        </span><br><span class="line">    #placeholder         占位符（提示用户该输入什么）</span><br><span class="line">    </span><br><span class="line">    #value               默认值（如果用户不输入，就提交默认值）</span><br><span class="line"></span><br><span class="line">    注：&lt;input type=&quot;radio&quot;&gt;Indoor表示有一个单选项Indoor</span><br><span class="line">    注：&lt;input type=&quot;checkbox&quot;&gt; Loving请确保元素和文本之间有一个空格。</span><br><span class="line">    教程：https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input#attr-disabled</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">6.文字相关</span><br><span class="line">	分割线：&lt;hr&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -95,7 +95,12 @@
 <p>（2）link引用CSS时，在页面载入时同时加载；@import需要页面完全载入以后再加载。</p>
 <p>（3）link是XHTML标签，无兼容问题；@import则是在CSS2.1提出的，低版本的浏览器不支持。</p>
 <p>（4）link支持使用Javascript控制DOM改变样式；而@import不支持。</p>
-</li>
+<h5 id="3-为什么js用script标签的src引入，而css用link标签的href引入"><a href="#3-为什么js用script标签的src引入，而css用link标签的href引入" class="headerlink" title="3.为什么js用script标签的src引入，而css用link标签的href引入"></a>3.为什么js用script标签的src引入，而css用link标签的href引入</h5><p>外部共享的JavaScript文件，通过 <code>&lt;script src=&quot;...&quot;&gt;&lt;/script&gt;</code>来引入，共享的样式文件不是通过 <code>&lt;style src=&quot;&quot;&gt;&lt;/style&gt;</code> 的形式引入，而是通过 <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;...&quot;&gt;</code>形式引入。</p>
+<p>w3c最初的设计中<script>标签也没有src属性，使用 <code>&lt;link rel=&quot;...&quot; href=&quot;...&quot;&gt;</code> 来引入当前文档外部的资源，如：父文档，翻译，或者层叠样式表等。<code>&lt;link rel=&quot;&quot; href=&quot;&quot; meidia=&quot;&quot;&gt;</code> 元素规定了当前文档和外部资源之间的关系，它常用来引入外部的样式表，我们可以通过rel属性设置为stylesheet来使用。后来为<code>&lt;script&gt;</code>添加了src属性。</p>
+<p><strong><code>href</code>是引用和页面关联，是在当前元素和引用资源之间建立联系，<code>src</code>表示引用资源，表示替换当前元素，用在img，script，iframe上，src是页面内容不可缺少的一部分。</strong></p>
+<script src="js.js"></script>当浏览器解析到这一句的时候会暂停其他资源的下载和处理，直至将该资源加载，编译，执行完毕，图片和框架等元素也是如此，类似于该元素所指向的资源嵌套如当前标签内，这也是为什么要把放在底部而不是头部。
+
+<link href="common.css" rel="stylesheet"/>当浏览器解析到这一句的时候会识别该文档为css文件，会下载并且不会停止对当前文档的处理，这也是为什么建议使用link方式来加载css而不是使用@import。</li>
 </ol>
 </li>
 </ul>
@@ -1950,7 +1955,6 @@
     <title>CSS学习笔记-1基础</title>
     <url>/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-Note1/</url>
     <content><![CDATA[<h1 id="CSS学习笔记-1-1基础"><a href="#CSS学习笔记-1-1基础" class="headerlink" title="CSS学习笔记-1.1基础"></a>CSS学习笔记-1.1基础</h1><p>注释:</p>
-<p>​	HTML:<!----></p>
 <p>​	CSS:&#x2F;**&#x2F;</p>
 <p>技巧：</p>
 <p>​	先写css再写对应的html</p>
@@ -2048,35 +2052,6 @@
 </li>
 </ul>
 <h3 id="3-多端样式归一化必加代码"><a href="#3-多端样式归一化必加代码" class="headerlink" title="3.多端样式归一化必加代码"></a><strong>3.多端样式归一化必加代码</strong></h3><p>​    <meta name="viewport" content="width=device-width, initial-scale=1.0" /></p>
-<h3 id="4-三种布局"><a href="#4-三种布局" class="headerlink" title="4.三种布局"></a>4.三种布局</h3><ol>
-<li><p>灵活&#x2F;弹性&#x2F;伸缩布局flex</p>
-<p><a href="https://www.bilibili.com/video/BV1Lp4y1S7XM/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">五分钟掌握 css3 flex弹性布局</a></p>
-<p>1.布局原理<br>采用 Flex 布局的元素，称为容器。它的所有子元素自动成为容器成员，称为项目。</p>
-<p>2.易错点：父盒子设为 flex 后，子元素的float、clear和 vertical-align属性将失效。</p>
-<p>3.flex布局父项常见属性<br>flex-direction：设置主轴的方向</p>
-<p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190849686.png" alt="image-20230329190849686"></p>
-<p>justify-content：设置主轴上的子元素排列方式【【【【【不分单行多行吗？】】】】】】</p>
-<p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190910922.png" alt="image-20230329190910922"></p>
-<p>flex-wrap：设置子元素是否换行</p>
-<p>​						nowrap 不换行	(装不下会缩小子元素的宽度)<br>​						wrap 换行<br>align-items：设置侧轴上的子元素排列方式（单行）</p>
-<p>​						该属性是控制子项在侧轴上的排列方式 在子项为单行的时候使用<br>​						flex-start 从头部开始<br>​						flex-end 从尾部开始<br>​						center 居中显示<br>​						stretch 拉伸(不给宽度&#x2F;高度)</p>
-<p>align-content： 设置侧轴上的子元素的排列方式（多行）</p>
-<p>​				<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190910922.png" alt="image-20230329190910922"></p>
-<p>align-content 和align-items区别<br>            align-items 适用于单行情况下， 只有上对齐、下对齐、居中和 拉伸<br>            align-content适用多行换行的情况（单行无效），可设置上&#x2F;下对齐、居中、拉伸、均分剩余空间<br>总结：就是单行找align-items 多行找 align-content</p>
-<p>flex-flow：复合属性，相当于同时设置了 flex-direction 和 flex-wrap</p>
-<p>3.flex布局子项常见属性【少用】<br>        flex子项目占的份数<br>        align-self控制子项自己在侧轴的排列方式<br>        order属性定义子项的排列顺序（前后顺序）<br>4.flex属性<br>        flex 属性定义子项目分配剩余空间，用flex来表示占多少份数。<br>​			<strong>【重点：flex：1；表示flex-grow1；&amp;&amp;  flex-shrink：1；</strong></p>
-<p>​			<strong>意味着如果盒子剩余的布局大就自适应缩小，反之就自适应增大】</strong></p>
-<p>5.align-self控制子项自己在侧轴上的排列方式【少用】<br>        align-self 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖 align-items 属性。<br>        默认值为 auto，表示继承父元素的 align-items 属性，如果没有父元素，则等同于 stretch。</p>
-</li>
-<li><p>网格布局Grid</p>
-<p><a href="https://www.runoob.com/css3/css-grid.html">CSS 网格布局 | 菜鸟教程 (runoob.com)</a></p>
-</li>
-<li><p>浮动布局</p>
-</li>
-</ol>
-<p>​		<a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Floats">浮动 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
-<p>​		比如报纸首字母脱离文档。图片格式选择为”环绕“。</p>
-<p>其它布局：<a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout#%E6%8C%87%E5%8D%97">CSS 布局 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
 <h2 id="框架相关层次"><a href="#框架相关层次" class="headerlink" title="框架相关层次"></a>框架相关层次</h2><p>margin：外边距</p>
 <p>border：框架</p>
 <p>padding：内边距</p>
@@ -2093,12 +2068,73 @@
   <entry>
     <title></title>
     <url>/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note1/</url>
-    <content><![CDATA[<h1 id="2-1基础"><a href="#2-1基础" class="headerlink" title="2.1基础"></a>2.1基础</h1>]]></content>
+    <content><![CDATA[<h1 id="2-1基础"><a href="#2-1基础" class="headerlink" title="2.1基础"></a>2.1基础</h1><h2 id="1-三种布局"><a href="#1-三种布局" class="headerlink" title="1.三种布局"></a>1.三种布局</h2><ol>
+<li><h3 id="灵活-x2F-弹性-x2F-伸缩布局flex"><a href="#灵活-x2F-弹性-x2F-伸缩布局flex" class="headerlink" title="灵活&#x2F;弹性&#x2F;伸缩布局flex"></a>灵活&#x2F;弹性&#x2F;伸缩布局flex</h3><p><a href="https://www.bilibili.com/video/BV1Lp4y1S7XM/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">五分钟掌握 css3 flex弹性布局</a></p>
+<p>Flex 布局教程：语法篇</p>
+<p><a href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
+<p>Flex 布局教程：实例篇</p>
+<p><a href="https://www.ruanyifeng.com/blog/2015/07/flex-examples.html">https://www.ruanyifeng.com/blog/2015/07/flex-examples.html</a></p>
+<p>小青蛙游戏学flex</p>
+<p><a href="http://flexboxfroggy.com/">Flexbox Froggy - A game for learning CSS flexbox</a></p>
+<h4 id="易错点："><a href="#易错点：" class="headerlink" title="易错点："></a>易错点：</h4><ol>
+<li><p>display：flex；</p>
+<p>常用于有高度的类（body也能用）。且不能用于有其它display需求的类。（如inline-block）。</p>
+</li>
+<li><p>主轴侧轴的改变</p>
+<p>当flex-derection的值改变时，两个轴也会跟着变，也就是说justify-content和align-items也要变。</p>
+</li>
+<li><p>flex的作用域</p>
+<p>只有所在的类，所在类的子类都不算。比如body里写了的flex，justify只能控制body的布局，想控制内部元素的布局就只能嵌套，在.div里也写flex。</p>
+</li>
+<li><p>什么时候改点，什么时候改div？</p>
+</li>
+<li><p>1</p>
+</li>
+</ol>
+<h4 id="知识点："><a href="#知识点：" class="headerlink" title="知识点："></a>知识点：</h4><p>1.布局原理：采用 Flex 布局的元素，称为容器。它的所有子元素自动成为容器成员，称为项目。</p>
+<p>2.易错点：父盒子设为 flex 后，子元素的float、clear和 vertical-align属性将失效。</p>
+<p>3.flex布局父项常见属性<br>            <strong>flex-direction：</strong>设置主轴的方	</p>
+<blockquote>
+<p>​	   row：行    column：柱子</p>
+</blockquote>
+<p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190849686.png" alt="image-20230329190849686"></p>
+<p>​			<strong>flex-wrap：</strong>设置子元素是否换行</p>
+<p>​						nowrap 不换行	(装不下会缩小子元素的宽度)<br>​						wrap 换行</p>
+<p>​			<strong>justify-content：</strong>设置主轴上的子元素排列方式【【【【【不分单行多行吗？】】】】】】</p>
+<p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190910922.png" alt="image-20230329190910922"></p>
+<p>​			<strong>align-items：</strong>设置侧轴上的子元素排列方式（单行）</p>
+<p>​						该属性是控制子项在侧轴上的排列方式 在子项为单行的时候使用<br>​						flex-start 从头部开始<br>​						flex-end 从尾部开始<br>​						center 居中显示<br>​						stretch 拉伸(不给宽度&#x2F;高度)</p>
+<p>​			<strong>align-content：</strong> 设置侧轴上的子元素的排列方式（多行）</p>
+<p>​				<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190910922.png" alt="image-20230329190910922"></p>
+<p>​			align-content 和align-items区别<br>​						align-items 适用于单行情况下， 只有上对齐、下对齐、居中和 拉伸<br>​						align-content适用多行换行的情况（单行无效）</p>
+<p>​			<strong>flex-flow：</strong>复合属性，相当于同时设置了 flex-direction 和 flex-wrap</p>
+<p>3.flex布局子项常见属性【少用】<br>            flex子项目占的份数<br>            align-self控制子项自己在侧轴的排列方式<br>            order属性定义子项的排列顺序（前后顺序）<br>4.flex属性<br>            flex 属性定义子项目分配剩余空间，用flex来表示占多少份数。</p>
+<p>​			<strong>【重点：flex：1；表示flex-grow1；&amp;&amp;  flex-shrink：1；</strong></p>
+<p>​			<strong>意味着如果盒子剩余的布局大就自适应缩小，反之就自适应增大】</strong></p>
+<p>5.align-self控制子项自己在侧轴上的排列方式【少用】<br>            align-self 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖 align-items 属性。<br>            默认值为 auto，表示继承父元素的 align-items 属性，如果没有父元素，则等同于 stretch。</p>
+</li>
+<li><h3 id="网格布局Grid"><a href="#网格布局Grid" class="headerlink" title="网格布局Grid"></a>网格布局Grid</h3><p><a href="https://www.runoob.com/css3/css-grid.html">CSS 网格布局 | 菜鸟教程 (runoob.com)</a></p>
+</li>
+<li><h3 id="浮动布局"><a href="#浮动布局" class="headerlink" title="浮动布局"></a>浮动布局</h3></li>
+</ol>
+<p>​		<a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Floats">浮动 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
+<p>​		比如报纸首字母脱离文档。图片格式选择为”环绕“。与flex互斥。</p>
+<p>其它布局：<a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout#%E6%8C%87%E5%8D%97">CSS 布局 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
+]]></content>
   </entry>
   <entry>
     <title></title>
     <url>/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note2/</url>
-    <content><![CDATA[<h1 id="2-2实践"><a href="#2-2实践" class="headerlink" title="2.2实践"></a>2.2实践</h1>]]></content>
+    <content><![CDATA[<h1 id="2-2实践"><a href="#2-2实践" class="headerlink" title="2.2实践"></a>2.2实践</h1><p><a href="https://www.bilibili.com/video/BV1Lp4y1S7XM/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">五分钟掌握 css3 flex弹性布局</a></p>
+<p>Flex 布局教程：语法篇</p>
+<p><a href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
+<p>Flex 布局教程：实例篇</p>
+<p><a href="https://www.ruanyifeng.com/blog/2015/07/flex-examples.html">https://www.ruanyifeng.com/blog/2015/07/flex-examples.html</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">  &lt;link  rel=&quot;stylesheet&quot; href=&quot;../CSS/实践二参考答案.css&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;!--</span><br><span class="line">/*1水平垂直居中*/</span><br><span class="line">/*2第一个点不动，第二个点用水平垂直flex-end*/</span><br><span class="line">/*3第一个点不动，第二个点水平垂直居中，第三个点用水平垂直flex-end*/</span><br><span class="line">/*4第一个第二个点用between分开，第三四个用垂直end且between*/</span><br><span class="line">/*5上一个的基础上加上一个水平垂直居中的*/</span><br><span class="line">/*6三个between / 自动换行且between / 挨个设置横纵轴位置*/</span><br><span class="line"></span><br><span class="line">/*1水平垂直居中*/</span><br><span class="line">/*2水平垂直flex-end*/</span><br><span class="line">/*3between*/</span><br><span class="line">/*4水平垂直且between*/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">以上内容，不用self无法实现</span><br><span class="line">--&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div class=&quot;first-face&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  &lt;div class=&quot;second-face&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;third-face&quot;&gt;</span><br><span class="line">  &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;fourth-face&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;fifth-face&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;sixth-face&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br><span class="line">&lt;!--【为什么写div的话，再写flex就没有用了？因为是块级元素，flex只能作用于内联样式得元素，所以要display：inline-block】--&gt;</span><br><span class="line">&lt;!--【【【【【【【为什么把dotdiv改成span后，除了只有一个点的，其它得一个点都没有？】】】】】--&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.first-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    align-items: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.second-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line">/*nth-child(n) 选择器：选择其父元素的第n个子元素*/</span><br><span class="line">.second-face .pip:nth-of-type(2) &#123;</span><br><span class="line">    align-self: flex-end;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.third-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.third-face .pip:nth-of-type(2) &#123;</span><br><span class="line">    align-self: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.third-face .pip:nth-of-type(3) &#123;</span><br><span class="line">    align-self: flex-end;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fourth-face, .sixth-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fourth-face .column, .sixth-face .column &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    flex-direction: column;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fifth-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fifth-face .column &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    flex-direction: column;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fifth-face .column:nth-of-type(2) &#123;</span><br><span class="line">    justify-content: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* OTHER STYLES */</span><br><span class="line"></span><br><span class="line">* &#123;</span><br><span class="line">    box-sizing: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">html, body &#123;</span><br><span class="line">    height: 100%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">body &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    align-items: center;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    vertical-align: center;</span><br><span class="line">    flex-wrap: wrap;</span><br><span class="line">    align-content: center;</span><br><span class="line">    font-family: &#x27;Open Sans&#x27;, sans-serif;</span><br><span class="line"></span><br><span class="line">    background: linear-gradient(top, #222, #333);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*这是什么选择器*/</span><br><span class="line">[class$=&quot;face&quot;] &#123;</span><br><span class="line">    margin: 16px;</span><br><span class="line">    padding: 4px;</span><br><span class="line"></span><br><span class="line">    background-color: #e7e7e7;</span><br><span class="line">    width: 104px;</span><br><span class="line">    height: 104px;</span><br><span class="line">    object-fit: contain;</span><br><span class="line"></span><br><span class="line">    /*insert 不会用*/</span><br><span class="line">    box-shadow:</span><br><span class="line">            inset 0 5px white,</span><br><span class="line">            inset 0 -5px #bbb,</span><br><span class="line">            inset 5px 0 #d7d7d7,</span><br><span class="line">            inset -5px 0 #d7d7d7;</span><br><span class="line"></span><br><span class="line">    border-radius: 10%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.pip &#123;</span><br><span class="line">    display: block;</span><br><span class="line">    width: 24px;</span><br><span class="line">    height: 24px;</span><br><span class="line">    border-radius: 50%;</span><br><span class="line">    margin: 4px;</span><br><span class="line"></span><br><span class="line">    background-color: #333;</span><br><span class="line">    box-shadow: inset 0 3px #111, inset 0 -3px #555;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
   </entry>
   <entry>
     <title>前端ToDo阻塞池</title>
@@ -2130,50 +2166,786 @@ CSS第一个mini project自主实现</p>
   <entry>
     <title>前端英文列表</title>
     <url>/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q0-Word/</url>
-    <content><![CDATA[<ul>
-<li><p>margin：外边距</p>
-</li>
-<li><p>border：框架</p>
-</li>
-<li><p>padding：内边距</p>
-</li>
-<li><p>br：Barter rabbet  </p>
+    <content><![CDATA[<p>margin：外边距</p>
+<p>border：框架</p>
+<p>padding：内边距</p>
+<p>br：Barter rabbet  </p>
 <p>en： &#x2F;ˈbär-tər    ræbɪt&#x2F;  换行</p>
-</li>
-<li><p>span：行内组合【【【查】】】</p>
+<p>span：行内组合, 被用来组合文档中的行内元素, 没有固定的格式表现。 </p>
 <p>跨越</p>
-</li>
-<li><p>pre: 预定义格式文本,空白符照常显示，不格式化。</p>
+<p>pre: 预定义格式文本,空白符照常显示，不格式化。</p>
 <p>先前的</p>
-</li>
-<li><p>fieldset：给某一块增加实线框</p>
+<p>fieldset：给某一块增加实线框</p>
 <p>领域设置</p>
-</li>
-<li><p>legend：fieldset中的标题</p>
+<p>legend：fieldset中的标题</p>
 <p>传奇</p>
-</li>
-<li><p>section：</p>
+<p>section：</p>
 <p>章节</p>
-</li>
-<li><p>article：语义化</p>
+<p>article：语义化</p>
 <p>条款、文章</p>
-</li>
-<li><p>disabled：放input里表示禁止输入</p>
-</li>
-<li><p>radio：单选框</p>
+<p>disabled：放input里表示禁止输入</p>
+<p>radio：单选框</p>
 <p>老式收音机按钮，按下一个其它弹起。</p>
-</li>
-<li><p>figure：可以和图像关联起来的独立内容</p>
+<p>figure：可以和图像关联起来的独立内容</p>
 <p>图</p>
+<p>placeholder</p>
+<p>flex布局</p>
+<p>row：行    </p>
+<p>column：柱子</p>
+<h1 id="html"><a href="#html" class="headerlink" title="html"></a>html</h1><ol>
+<li><p>HTML - 超文本标记语言</p>
 </li>
-<li><p>&#x2F;&#x2F;查到note3 10号</p>
+<li><p>Head - 文档头部</p>
 </li>
-<li></li>
-<li></li>
-<li><p>1</p>
+<li><p>Body - 文档主体</p>
 </li>
-<li></li>
-</ul>
+<li><p>H1-H6 - 标题（从大到小）</p>
+</li>
+<li><p>Div - 无语义块级元素</p>
+</li>
+<li><h4 id="Span-无语义行内元素"><a href="#Span-无语义行内元素" class="headerlink" title="Span - 无语义行内元素"></a>Span - 无语义行内元素</h4></li>
+<li><p>Img - 图片</p>
+</li>
+<li><p>Src - 图片链接地址</p>
+</li>
+<li><h5 id="Alt-替代文本"><a href="#Alt-替代文本" class="headerlink" title="Alt - 替代文本"></a>Alt - 替代文本</h5></li>
+<li><p>A - 链接</p>
+</li>
+<li><p>Href - 链接地址</p>
+</li>
+<li><h5 id="Target-打开方式"><a href="#Target-打开方式" class="headerlink" title="Target - 打开方式"></a>Target - 打开方式</h5></li>
+<li><p>Title - 标题</p>
+</li>
+<li><p>Style - 样式</p>
+</li>
+<li><p>Class - 类名</p>
+</li>
+<li><p>ID - 元素 ID</p>
+</li>
+<li><p>Table - 表格</p>
+</li>
+<li><p>Tr - 行</p>
+</li>
+<li><p>Th - 表头单元格</p>
+</li>
+<li><p>Td - 数据单元格</p>
+</li>
+<li><p>Colspan - 列合并</p>
+</li>
+<li><p>Rowspan - 行合并</p>
+</li>
+<li><p>Form - 表单</p>
+</li>
+<li><p>Input - 输入框</p>
+</li>
+<li><p>Type - 输入类型</p>
+</li>
+<li><p>Name - 名称</p>
+</li>
+<li><p>Value - 值</p>
+</li>
+<li><p>Checked - 是否勾选</p>
+</li>
+<li><h5 id="Radio-单选框"><a href="#Radio-单选框" class="headerlink" title="Radio - 单选框"></a>Radio - 单选框</h5></li>
+<li><h5 id="Checkbox-多选框"><a href="#Checkbox-多选框" class="headerlink" title="Checkbox - 多选框"></a>Checkbox - 多选框</h5></li>
+<li><p>Select - 下拉框</p>
+</li>
+<li><p>Option - 选项</p>
+</li>
+<li><h5 id="Disabled-禁用"><a href="#Disabled-禁用" class="headerlink" title="Disabled - 禁用"></a>Disabled - 禁用</h5></li>
+<li><p>Readonly - 只读</p>
+</li>
+<li><p>Button - 按钮</p>
+</li>
+<li><p>Submit - 提交按钮</p>
+</li>
+<li><p>Reset - 重置按钮</p>
+</li>
+<li><h5 id="Label-文本标签"><a href="#Label-文本标签" class="headerlink" title="Label - 文本标签"></a>Label - 文本标签</h5></li>
+<li><p>Textarea - 文本域</p>
+</li>
+<li><h5 id="Rows-行数"><a href="#Rows-行数" class="headerlink" title="Rows - 行数"></a>Rows - 行数</h5></li>
+<li><h5 id="Cols-列数"><a href="#Cols-列数" class="headerlink" title="Cols - 列数"></a>Cols - 列数</h5></li>
+<li><p>Placeholder - 提示语</p>
+</li>
+<li><p>Required - 是否必填</p>
+</li>
+<li><p>Maxlength - 最大长度</p>
+</li>
+<li><p>Minlength - 最小长度</p>
+</li>
+<li><p>Pattern - 格式匹配</p>
+</li>
+<li><p>Email - 邮箱类型</p>
+</li>
+<li><p>Tel - 电话类型</p>
+</li>
+<li><p>Password - 密码类型</p>
+</li>
+<li><p>Number - 数字类型</p>
+</li>
+<li><p>Date - 日期类型</p>
+</li>
+<li><p>Time - 时间类型</p>
+</li>
+<li><p>Range - 范围类型</p>
+</li>
+<li><p>Color - 颜色类型</p>
+</li>
+<li><p>Search - 搜索类型</p>
+</li>
+<li><p>Datetime - 日期时间类型</p>
+</li>
+<li><p>Datetime-local - 本地日期时间类型</p>
+</li>
+<li><p>Week - 星期类型</p>
+</li>
+<li><p>Month - 月份类型</p>
+</li>
+<li><h5 id="Fieldset-表单元素组"><a href="#Fieldset-表单元素组" class="headerlink" title="Fieldset - 表单元素组"></a>Fieldset - 表单元素组</h5></li>
+<li><h5 id="Legend-表单元素组标题"><a href="#Legend-表单元素组标题" class="headerlink" title="Legend - 表单元素组标题"></a>Legend - 表单元素组标题</h5></li>
+<li><h5 id="Label-表单控件标签"><a href="#Label-表单控件标签" class="headerlink" title="Label - 表单控件标签"></a>Label - 表单控件标签</h5></li>
+<li><p>Optgroup - 选项组</p>
+</li>
+<li><p>Command - 命令</p>
+</li>
+<li><p>Menu - 上下文菜单</p>
+</li>
+<li><p>Footer - 底部</p>
+</li>
+<li><p>Header - 页眉</p>
+</li>
+<li><p>Video - 视频</p>
+</li>
+<li><p>Audio - 音频</p>
+</li>
+<li><p>Source - 媒体资源</p>
+</li>
+<li><p>Track - 字幕轨道</p>
+</li>
+<li><p>Canvas - 画布</p>
+</li>
+<li><p>SVG - 矢量图</p>
+</li>
+<li><p>Path - 路径</p>
+</li>
+<li><p>Rect - 矩形</p>
+</li>
+<li><p>Circle - 圆形</p>
+</li>
+<li><p>Ellipse - 椭圆</p>
+</li>
+<li><p>Line - 直线</p>
+</li>
+<li><p>Polygon - 多边形</p>
+</li>
+<li><p>Polyline - 折线</p>
+</li>
+<li><p>Text - 文本</p>
+</li>
+<li><p>Tspan - 文本段落</p>
+</li>
+<li><p>Gradient - 渐变</p>
+</li>
+<li><p>Stop - 渐变停止点</p>
+</li>
+<li><p>Clippath - 剪裁路径</p>
+</li>
+<li><p>Mask - 遮罩</p>
+</li>
+<li><p>Filter - 滤镜</p>
+</li>
+<li><p>FeGaussianBlur - 高斯模糊滤镜</p>
+</li>
+<li><p>FeBlend - 混合滤镜</p>
+</li>
+<li><p>FeColorMatrix - 颜色矩阵滤镜</p>
+</li>
+<li><p>FeOffset - 偏移滤镜</p>
+</li>
+<li><p>FeMerge - 合并滤镜</p>
+</li>
+<li><p>FeComponentTransfer - 分量转换滤镜</p>
+</li>
+<li><p>FeTurbulence - 纹理滤镜</p>
+</li>
+<li><p>FeDisplacementMap - 位移映射滤镜</p>
+</li>
+<li><p>FeConvolveMatrix - 卷积矩阵滤镜</p>
+</li>
+<li><p>FeSpecularLighting - 镜面反射滤镜</p>
+</li>
+<li><p>FeDiffuseLighting - 漫反射滤镜</p>
+</li>
+<li><p>ForeignObject - 外部对象</p>
+</li>
+<li><p>Embed - 多媒体（已弃用）</p>
+</li>
+<li><p>Iframe - 内嵌框架</p>
+</li>
+<li><p>Source - 多媒体资源</p>
+</li>
+<li><p>Object - 对象</p>
+</li>
+<li><h5 id="Param-参数"><a href="#Param-参数" class="headerlink" title="Param - 参数"></a>Param - 参数</h5></li>
+<li><p>Style - 样式</p>
+</li>
+<li><p>Script - 脚本</p>
+</li>
+<li><h5 id="Src-脚本链接地址"><a href="#Src-脚本链接地址" class="headerlink" title="Src - 脚本链接地址"></a>Src - 脚本链接地址</h5></li>
+<li><h5 id="Type-脚本类型"><a href="#Type-脚本类型" class="headerlink" title="Type - 脚本类型"></a>Type - 脚本类型</h5></li>
+<li><h5 id="Async-异步加载"><a href="#Async-异步加载" class="headerlink" title="Async - 异步加载"></a>Async - 异步加载</h5></li>
+<li><p>Defer - 延迟加载</p>
+</li>
+<li><p>Charset - 字符集</p>
+</li>
+<li><p>Comment - 注释</p>
+</li>
+<li><p>Doctype - 文档类型</p>
+</li>
+<li><p>Html - 页面根元素</p>
+</li>
+<li><p>Lang - 语言</p>
+</li>
+<li><p>Meta - 页面元数据</p>
+</li>
+<li><p>Charset - 字符集</p>
+</li>
+<li><p>Viewport - 视口</p>
+</li>
+<li><p>Content - 属性值</p>
+</li>
+<li><p>Http-equiv - HTTP 头部</p>
+</li>
+<li><p>Refresh - 定时刷新</p>
+</li>
+<li><p>Link - 文档关联</p>
+</li>
+<li><p>Rel - 关联类型</p>
+</li>
+<li><p>Hreflang - 关联语言</p>
+</li>
+<li><p>Sizes - 图标尺寸</p>
+</li>
+<li><p>Media - 媒体查询条件</p>
+</li>
+<li><p>Icon - 页面图标</p>
+</li>
+<li><p>Base - 基础 URL</p>
+</li>
+<li><p>Target - 目标窗口</p>
+</li>
+<li><p>Download - 下载链接</p>
+</li>
+<li><p>Charset - 字符集</p>
+</li>
+<li><p>Manifest - 应用程序清单</p>
+</li>
+<li><p>Contenteditable - 可编辑性</p>
+</li>
+<li><p>Spellcheck - 拼写检查</p>
+</li>
+<li><p>Translate - 翻译</p>
+</li>
+<li><p>Accesskey - 快捷键</p>
+</li>
+<li><p>AutoFocus - 自动聚焦</p>
+</li>
+<li><p>Enterkeyhint - 回车键提示</p>
+</li>
+<li><p>Formaction - 自定义提交地址</p>
+</li>
+<li><p>Formenctype - 自定义编码类型</p>
+</li>
+<li><p>Formmethod - 自定义提交方法</p>
+</li>
+<li><p>Formnovalidate - 自定义表单验证</p>
+</li>
+<li><p>Formtarget - 自定义打开方式</p>
+</li>
+<li><p>Hidden - 隐藏元素</p>
+</li>
+<li><p>Ismap - 图像地图</p>
+</li>
+<li><p>Longdesc - 图像说明文本</p>
+</li>
+<li><p>Usemap - 链接到图像地图</p>
+</li>
+<li><p>Noresize - 禁止调整窗口大小</p>
+</li>
+<li><p>Noshade - 禁止阴影</p>
+</li>
+<li><p>Wrap - 文本换行方式</p>
+<h1 id="css"><a href="#css" class="headerlink" title="css"></a>css</h1></li>
+<li><p>selector - 选择器</p>
+</li>
+<li><p>property - 属性</p>
+</li>
+<li><p>value - 值</p>
+</li>
+<li><p>class - 类</p>
+</li>
+<li><p>id - ID</p>
+</li>
+<li><p>element - 元素</p>
+</li>
+<li><p>width - 宽度</p>
+</li>
+<li><p>height - 高度</p>
+</li>
+<li><h5 id="margin-边距"><a href="#margin-边距" class="headerlink" title="margin - 边距"></a>margin - 边距</h5></li>
+<li><h5 id="padding-内边距"><a href="#padding-内边距" class="headerlink" title="padding - 内边距"></a>padding - 内边距</h5></li>
+<li><h5 id="border-边框"><a href="#border-边框" class="headerlink" title="border - 边框"></a>border - 边框</h5></li>
+<li><p>background - 背景</p>
+</li>
+<li><p>color - 颜色</p>
+</li>
+<li><p>font - 字体</p>
+</li>
+<li><p>text - 文本</p>
+</li>
+<li><h5 id="display-显示"><a href="#display-显示" class="headerlink" title="display - 显示"></a>display - 显示</h5></li>
+<li><p>position - 定位</p>
+</li>
+<li><p>float - 浮动</p>
+</li>
+<li><h5 id="clear-清除浮动"><a href="#clear-清除浮动" class="headerlink" title="clear - 清除浮动"></a>clear - 清除浮动</h5></li>
+<li><p>overflow - 溢出</p>
+</li>
+<li><p>z-index - 层级</p>
+</li>
+<li><p>cursor - 鼠标指针</p>
+</li>
+<li><p>transition - 过渡</p>
+</li>
+<li><p>animation - 动画</p>
+</li>
+<li><h5 id="flexbox-弹性盒子布局"><a href="#flexbox-弹性盒子布局" class="headerlink" title="flexbox - 弹性盒子布局"></a>flexbox - 弹性盒子布局</h5></li>
+<li><h5 id="grid-网格布局"><a href="#grid-网格布局" class="headerlink" title="grid - 网格布局"></a>grid - 网格布局</h5></li>
+<li><p>box-shadow - 盒子阴影</p>
+</li>
+<li><p>text-shadow - 文本阴影</p>
+</li>
+<li><p>opacity - 不透明度</p>
+</li>
+<li><p>transform - 变换</p>
+</li>
+<li><h5 id="filter-滤镜"><a href="#filter-滤镜" class="headerlink" title="filter - 滤镜"></a>filter - 滤镜</h5></li>
+<li><p>gradient - 渐变</p>
+</li>
+<li><p>media query - 媒体查询</p>
+</li>
+<li><p>box model - 盒子模型</p>
+</li>
+<li><p>inline - 行内</p>
+</li>
+<li><p>block - 块级</p>
+</li>
+<li><p>inline-block - 行内块级</p>
+</li>
+<li><p>font-size - 字体大小</p>
+</li>
+<li><p>line-height - 行高</p>
+</li>
+<li><h5 id="text-align-文本对齐"><a href="#text-align-文本对齐" class="headerlink" title="text-align - 文本对齐"></a>text-align - 文本对齐</h5></li>
+<li><h5 id="vertical-align-垂直对齐"><a href="#vertical-align-垂直对齐" class="headerlink" title="vertical-align - 垂直对齐"></a>vertical-align - 垂直对齐</h5></li>
+<li><p>list-style - 列表样式</p>
+</li>
+<li><h5 id="border-radius-边框圆角"><a href="#border-radius-边框圆角" class="headerlink" title="border-radius - 边框圆角"></a>border-radius - 边框圆角</h5></li>
+<li><p>outline - 外边框</p>
+</li>
+<li><p>word-wrap - 换行</p>
+</li>
+<li><p>text-overflow - 文本溢出</p>
+</li>
+<li><h5 id="white-space-空格处理"><a href="#white-space-空格处理" class="headerlink" title="white-space - 空格处理"></a>white-space - 空格处理</h5></li>
+<li><p>letter-spacing - 字符间距</p>
+</li>
+<li><p>word-spacing - 单词间距</p>
+</li>
+<li><p>box-sizing - 盒子尺寸</p>
+</li>
+<li><p>top - 上方距离</p>
+</li>
+<li><p>right - 右侧距离</p>
+</li>
+<li><p>bottom - 下方距离</p>
+</li>
+<li><p>left - 左侧距离</p>
+</li>
+<li><p>visibility - 显示状态</p>
+</li>
+<li><p>table - 表格</p>
+</li>
+<li><p>table-cell - 单元格</p>
+</li>
+<li><p>table-row - 表格行</p>
+</li>
+<li><p>text-decoration - 文本装饰</p>
+</li>
+<li><p>user-select - 用户选择</p>
+</li>
+<li><p>pointer-events - 指针事件</p>
+</li>
+<li><p>font-weight - 字体粗细</p>
+</li>
+<li><p>font-style - 字体样式</p>
+</li>
+<li><p>text-transform - 文本转换</p>
+</li>
+<li><p>background-size - 背景尺寸</p>
+</li>
+<li><p>background-position - 背景位置</p>
+</li>
+<li><p>background-repeat - 背景重复</p>
+</li>
+<li><h5 id="line-break-自动换行"><a href="#line-break-自动换行" class="headerlink" title="line-break - 自动换行"></a>line-break - 自动换行</h5></li>
+<li><h5 id="justify-content-主轴对齐方式"><a href="#justify-content-主轴对齐方式" class="headerlink" title="justify-content - 主轴对齐方式"></a>justify-content - 主轴对齐方式</h5></li>
+<li><h5 id="align-items-侧轴对齐方式"><a href="#align-items-侧轴对齐方式" class="headerlink" title="align-items - 侧轴对齐方式"></a>align-items - 侧轴对齐方式</h5></li>
+<li><h5 id="align-self-元素自身在侧轴方向上的对齐方式"><a href="#align-self-元素自身在侧轴方向上的对齐方式" class="headerlink" title="align-self - 元素自身在侧轴方向上的对齐方式"></a>align-self - 元素自身在侧轴方向上的对齐方式</h5></li>
+<li><h5 id="flex-direction-主轴方向"><a href="#flex-direction-主轴方向" class="headerlink" title="flex-direction - 主轴方向"></a>flex-direction - 主轴方向</h5></li>
+<li><h5 id="flex-wrap-换行方式"><a href="#flex-wrap-换行方式" class="headerlink" title="flex-wrap - 换行方式"></a>flex-wrap - 换行方式</h5></li>
+<li><h5 id="flex-grow-扩张比例"><a href="#flex-grow-扩张比例" class="headerlink" title="flex-grow - 扩张比例"></a>flex-grow - 扩张比例</h5></li>
+<li><h5 id="flex-shrink-缩小比例"><a href="#flex-shrink-缩小比例" class="headerlink" title="flex-shrink - 缩小比例"></a>flex-shrink - 缩小比例</h5></li>
+<li><p>flex-basis - 基准大小</p>
+</li>
+<li><h5 id="grid-template-columns-网格列定义"><a href="#grid-template-columns-网格列定义" class="headerlink" title="grid-template-columns - 网格列定义"></a>grid-template-columns - 网格列定义</h5></li>
+<li><h5 id="grid-template-rows-网格行定义"><a href="#grid-template-rows-网格行定义" class="headerlink" title="grid-template-rows - 网格行定义"></a>grid-template-rows - 网格行定义</h5></li>
+<li><h5 id="grid-gap-网格间距"><a href="#grid-gap-网格间距" class="headerlink" title="grid-gap - 网格间距"></a>grid-gap - 网格间距</h5></li>
+<li><h5 id="grid-column-start-开始列"><a href="#grid-column-start-开始列" class="headerlink" title="grid-column-start - 开始列"></a>grid-column-start - 开始列</h5></li>
+<li><h5 id="grid-column-end-结束列"><a href="#grid-column-end-结束列" class="headerlink" title="grid-column-end - 结束列"></a>grid-column-end - 结束列</h5></li>
+<li><h5 id="grid-row-start-开始行"><a href="#grid-row-start-开始行" class="headerlink" title="grid-row-start - 开始行"></a>grid-row-start - 开始行</h5></li>
+<li><h5 id="grid-row-end-结束行"><a href="#grid-row-end-结束行" class="headerlink" title="grid-row-end - 结束行"></a>grid-row-end - 结束行</h5></li>
+<li><h5 id="justify-items-项目在网格交叉区域内对齐方式"><a href="#justify-items-项目在网格交叉区域内对齐方式" class="headerlink" title="justify-items - 项目在网格交叉区域内对齐方式"></a>justify-items - 项目在网格交叉区域内对齐方式</h5></li>
+<li><h5 id="grid-template-areas-网格区域定义"><a href="#grid-template-areas-网格区域定义" class="headerlink" title="grid-template-areas - 网格区域定义"></a>grid-template-areas - 网格区域定义</h5></li>
+<li><p>gap - 网格间距</p>
+</li>
+<li><p>counter-reset - 计数器重置</p>
+</li>
+<li><p>counter-increment - 计数器递增</p>
+</li>
+<li><p>content - 内容</p>
+</li>
+<li><p>attr() - 获取元素属性值</p>
+</li>
+<li><p>calc() - 计算值</p>
+</li>
+<li><h5 id="hover-鼠标悬停伪类"><a href="#hover-鼠标悬停伪类" class="headerlink" title=":hover - 鼠标悬停伪类"></a>:hover - 鼠标悬停伪类</h5></li>
+<li><h5 id="active-鼠标点击伪类"><a href="#active-鼠标点击伪类" class="headerlink" title=":active - 鼠标点击伪类"></a>:active - 鼠标点击伪类</h5></li>
+<li><p>:focus - 获取焦点伪类</p>
+</li>
+<li><h5 id="nth-child-n-选择特定位置的元素"><a href="#nth-child-n-选择特定位置的元素" class="headerlink" title=":nth-child(n) - 选择特定位置的元素"></a>:nth-child(n) - 选择特定位置的元素</h5></li>
+<li><p>::before - 在元素前插入内容</p>
+</li>
+<li><p>::after - 在元素后插入内容</p>
+</li>
+<li><p>::first-letter - 对文本的第一个字母进行特殊处理</p>
+</li>
+<li><p>::first-line - 对文本的第一行进行特殊处理</p>
+</li>
+<li><p>@media - 媒体查询</p>
+<h1 id="Javascript"><a href="#Javascript" class="headerlink" title="Javascript"></a>Javascript</h1></li>
+<li><p>alert - 弹出警告框</p>
+</li>
+<li><p>anchor - 创建锚元素</p>
+</li>
+<li><p>append - 添加元素</p>
+</li>
+<li><p>apply - 调用函数</p>
+</li>
+<li><p>argument - 参数</p>
+</li>
+<li><p>array - 数组</p>
+</li>
+<li><p>assign - 对象赋值</p>
+</li>
+<li><p>async - 异步</p>
+</li>
+<li><p>await - 等待异步执行结束</p>
+</li>
+<li><p>bind - 绑定函数到对象上</p>
+</li>
+<li><p>boolean - 布尔数据类型</p>
+</li>
+<li><p>break - 跳出循环</p>
+</li>
+<li><p>buffer - 缓冲区</p>
+</li>
+<li><p>callback - 回调函数</p>
+</li>
+<li><p>catch - 捕获异常</p>
+</li>
+<li><p>charAt - 字符串方法，返回指定位置字符</p>
+</li>
+<li><p>chartCode - 字符串方法，返回指定字符编码</p>
+</li>
+<li><p>class - 类</p>
+</li>
+<li><p>clear - 清除控制台</p>
+</li>
+<li><p>clone - 克隆对象</p>
+</li>
+<li><p>close - 关闭窗口</p>
+</li>
+<li><p>console - 控制台对象</p>
+</li>
+<li><p>const - 常量</p>
+</li>
+<li><p>constructor - 构造函数</p>
+</li>
+<li><p>continue - 跳过本轮循环</p>
+</li>
+<li><p>cookie - cookie</p>
+</li>
+<li><p>createElement - 创建元素</p>
+</li>
+<li><p>createTextNode - 创建文本节点</p>
+</li>
+<li><p>crypto - 加密相关</p>
+</li>
+<li><p>CSS - 层叠样式表</p>
+</li>
+<li><p>date - 日期对象</p>
+</li>
+<li><p>debugger - 断点调试</p>
+</li>
+<li><p>decodeURI - 解码 URI</p>
+</li>
+<li><p>decodeURIComponent - 解码 URI 组件</p>
+</li>
+<li><p>default - 默认值</p>
+</li>
+<li><p>delete - 删除属性</p>
+</li>
+<li><p>do - 循环结构</p>
+</li>
+<li><p>document - 文档对象模型</p>
+</li>
+<li><p>DOM - 文档对象模型</p>
+</li>
+<li><p>double - 双精度浮点数数据类型</p>
+</li>
+<li><p>else - if 语句中的分支</p>
+</li>
+<li><p>empty - 空值</p>
+</li>
+<li><p>encodeURI - 编码 URI</p>
+</li>
+<li><p>encodeURIComponent - 编码 URI 组件</p>
+</li>
+<li><p>error - 错误信息</p>
+</li>
+<li><p>escape - 转义字符串</p>
+</li>
+<li><p>eval - 计算字符串表达式</p>
+</li>
+<li><p>event - 事件</p>
+</li>
+<li><p>false - 布尔值，表示假</p>
+</li>
+<li><p>fetch - 发送网络请求</p>
+</li>
+<li><p>filter - 数组过滤器</p>
+</li>
+<li><p>find - 查找数组元素</p>
+</li>
+<li><p>flat - 扁平化数组</p>
+</li>
+<li><p>float - 单精度浮点数数据类型</p>
+</li>
+<li><p>floor - 取整函数</p>
+</li>
+<li><p>forEach - 数组迭代器</p>
+</li>
+<li><p>for…in - 对象属性遍历</p>
+</li>
+<li><p>for…of - 遍历可迭代对象</p>
+</li>
+<li><p>function - 函数</p>
+</li>
+<li><p>get - 获取对象属性</p>
+</li>
+<li><p>global - 全局对象</p>
+</li>
+<li><p>hash - URL 哈希值</p>
+</li>
+<li><p>history - 浏览器访问历史记录</p>
+</li>
+<li><p>HTML - 超文本标记语言</p>
+</li>
+<li><p>http - 超文本传输协议</p>
+</li>
+<li><p>https - 安全超文本传输协议</p>
+</li>
+<li><p>if - 条件语句</p>
+</li>
+<li><p>import - 导入其他模块</p>
+</li>
+<li><p>in - 属性是否存在</p>
+</li>
+<li><p>includes - 判断元素是否在数组中</p>
+</li>
+<li><p>index - 在字符串中的位置</p>
+</li>
+<li><p>indexOf - 在数组中的位置</p>
+</li>
+<li><p>Infinity - 无穷大</p>
+</li>
+<li><p>innerHTML - 获取或设置元素的 HTML 内容</p>
+</li>
+<li><p>instanceOf - 判断对象类型</p>
+</li>
+<li><p>isFinite - 判断是否为有限数</p>
+</li>
+<li><p>isNaN - 判断是否为 NaN</p>
+</li>
+<li><p>join - 连接数组元素</p>
+</li>
+<li><p>JSON - JavaScript 对象表示法</p>
+</li>
+<li><p>key - 对象键名</p>
+</li>
+<li><p>label - 表单标签</p>
+</li>
+<li><p>length - 字符串或数组长度</p>
+</li>
+<li><p>let - 块级作用域变量</p>
+</li>
+<li><p>link - 创建链接元素</p>
+</li>
+<li><p>load - 页面加载事件</p>
+</li>
+<li><p>location - URL 相关信息</p>
+</li>
+<li><p>log - 控制台输出</p>
+</li>
+<li><p>map - 数组映射</p>
+</li>
+<li><p>match - 字符串匹配</p>
+</li>
+<li><p>Math - 数学计算对象</p>
+</li>
+<li><p>max - 最大值</p>
+</li>
+<li><p>message - 消息传递</p>
+</li>
+<li><p>min - 最小值</p>
+</li>
+<li><p>module - 模块化</p>
+</li>
+<li><p>moveBy - 移动窗口</p>
+</li>
+<li><p>navigator - 浏览器信息</p>
+</li>
+<li><p>new - 创建实例对象</p>
+</li>
+<li><p>null - 空对象</p>
+</li>
+<li><p>number - 数字数据类型</p>
+</li>
+<li><p>object - 对象数据类型</p>
+</li>
+<li><p>of - 创建数组</p>
+</li>
+<li><p>on - 绑定事件</p>
+</li>
+<li><p>open - 打开新窗口</p>
+</li>
+<li><p>operator - 运算符</p>
+</li>
+<li><p>optional - 可选链</p>
+</li>
+<li><p>or - 或运算</p>
+</li>
+<li><p>outerHTML - 获取或设置元素的 HTML 包含外部标签</p>
+</li>
+<li><p>output - 输出</p>
+</li>
+<li><p>package - 包</p>
+</li>
+<li><p>parseFloat - 字符串转换为浮点数</p>
+</li>
+<li><p>parseInt - 字符串转换为整数</p>
+</li>
+<li><p>parent - 父节点</p>
+</li>
+<li><p>parse - 解析 JSON</p>
+</li>
+<li><p>pass - 传递参数</p>
+</li>
+<li><p>pop - 删除数组末尾元素</p>
+</li>
+<li><p>preventDefault - 阻止默认事件</p>
+</li>
+<li><p>print - 打印内容</p>
+</li>
+<li><p>prompt - 提示用户输入</p>
+</li>
+<li><p>prototype - 实例原型对象</p>
+</li>
+<li><p>push - 向数组末尾添加元素</p>
+</li>
+<li><p>querySelector - 返回第一个匹配的元素</p>
+</li>
+<li><p>random - 随机数</p>
+</li>
+<li><p>range - 数值范围</p>
+</li>
+<li><p>reduce - 数组归并操作</p>
+</li>
+<li><p>RegExp - 正则表达式</p>
+</li>
+<li><p>reload - 重新加载页面</p>
+</li>
+<li><p>replace - 替换文本</p>
+</li>
+<li><p>return - 返回函数值</p>
+</li>
+<li><p>reverse - 反转数组</p>
+</li>
+<li><p>screen - 屏幕信息</p>
+</li>
+<li><p>script - JavaScript 脚本</p>
+</li>
+<li><p>scroll - 滚动</p>
+</li>
+<li><p>scrollBy - 滚动指定像素</p>
+</li>
+<li><p>scrollTo - 滚动到指定位置</p>
+</li>
+<li><p>search - URL 查询参数</p>
+</li>
+<li><p>select - 选择表单元素</p>
+</li>
+<li><p>set - 设置对象属性</p>
+</li>
+<li><p>setInterval - 定时操作，按指定间隔重复执行</p>
+</li>
+<li><p>setTimeout - 定时操作，延迟执行一次</p>
+</li>
+<li><p>shift - 删除数组首个元素</p>
+</li>
+<li><p>slice - 截取数组片段</p>
+</li>
+<li><p>sort - 数组排序</p>
+</li>
+<li><p>source - 源代码</p>
+</li>
+<li><p>splice - 插入或删除元素</p>
+</li>
+<li><p>split - 字符串分割成数组</p>
+</li>
+<li><p>static - 静态属性与方法</p>
+</li>
+<li><p>strict - 严格模式</p>
+</li>
+<li><p>string - 字符串数据类型</p>
+</li>
+<li><p>style - 行内样式</p>
+</li>
+<li><p>switch - 多分支语句</p>
+</li>
+</ol>
 ]]></content>
       <categories>
         <category>code</category>

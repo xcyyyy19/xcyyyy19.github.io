@@ -88,7 +88,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">386</span>
+            <span class="post-count">802</span>
         </span>
     </span>
 
@@ -97,7 +97,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1 分钟</span>
+            <span class="post-count">3 分钟</span>
         </span>
     </span>
 </div>
@@ -144,7 +144,12 @@
 <p>（2）link引用CSS时，在页面载入时同时加载；@import需要页面完全载入以后再加载。</p>
 <p>（3）link是XHTML标签，无兼容问题；@import则是在CSS2.1提出的，低版本的浏览器不支持。</p>
 <p>（4）link支持使用Javascript控制DOM改变样式；而@import不支持。</p>
-</li>
+<h5 id="3-为什么js用script标签的src引入，而css用link标签的href引入"><a href="#3-为什么js用script标签的src引入，而css用link标签的href引入" class="headerlink" title="3.为什么js用script标签的src引入，而css用link标签的href引入"></a>3.为什么js用script标签的src引入，而css用link标签的href引入</h5><p>外部共享的JavaScript文件，通过 <code>&lt;script src=&quot;...&quot;&gt;&lt;/script&gt;</code>来引入，共享的样式文件不是通过 <code>&lt;style src=&quot;&quot;&gt;&lt;/style&gt;</code> 的形式引入，而是通过 <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;...&quot;&gt;</code>形式引入。</p>
+<p>w3c最初的设计中<script>标签也没有src属性，使用 <code>&lt;link rel=&quot;...&quot; href=&quot;...&quot;&gt;</code> 来引入当前文档外部的资源，如：父文档，翻译，或者层叠样式表等。<code>&lt;link rel=&quot;&quot; href=&quot;&quot; meidia=&quot;&quot;&gt;</code> 元素规定了当前文档和外部资源之间的关系，它常用来引入外部的样式表，我们可以通过rel属性设置为stylesheet来使用。后来为<code>&lt;script&gt;</code>添加了src属性。</p>
+<p><strong><code>href</code>是引用和页面关联，是在当前元素和引用资源之间建立联系，<code>src</code>表示引用资源，表示替换当前元素，用在img，script，iframe上，src是页面内容不可缺少的一部分。</strong></p>
+<script src="js.js"></script>当浏览器解析到这一句的时候会暂停其他资源的下载和处理，直至将该资源加载，编译，执行完毕，图片和框架等元素也是如此，类似于该元素所指向的资源嵌套如当前标签内，这也是为什么要把放在底部而不是头部。
+
+<link href="common.css" rel="stylesheet"/>当浏览器解析到这一句的时候会识别该文档为css文件，会下载并且不会停止对当前文档的处理，这也是为什么建议使用link方式来加载css而不是使用@import。</li>
 </ol>
 </li>
 </ul>
