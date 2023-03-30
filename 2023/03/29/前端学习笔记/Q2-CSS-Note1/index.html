@@ -88,7 +88,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">1.1k</span>
+            <span class="post-count">1.3k</span>
         </span>
     </span>
 
@@ -130,7 +130,7 @@
 <p>​								grid网格布局</p>
 <p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329162830851.png" alt="image-20230329162830851"></p>
 <p>​							</p>
-</li>
+<ul>
 <li><p>通用:</p>
 <p>宽度:   width: 300px;（百分制也行），div默认居左，所以背景颜色随着宽度的改变也居左。</p>
 <p>最大宽度: max-width: 500px;</p>
@@ -146,6 +146,14 @@
 <p>​				可用于块级标签，p、div等。【【【【【为什么不弄成auto后，p标签的行距会缩小？】】】】</p>
 <p>​                去除默认边框宽度：margin：0；（font-size：0是为了解决多余空白符的问题）</p>
 <p>​                缩小上方过大的宽度： margin-top:-25px;（需要来回调试）</p>
+<p>盒子大小：box-sizing</p>
+<p>​		定义了user agent应该如何计算一个元素的总宽度和总高度</p>
+<ul>
+<li><code>content-box</code> 是默认值。如果你设置一个元素的宽为 100px，那么这个元素的内容区会有 100px 宽，并且任何边框和内边距的宽度都会被增加到最后绘制出来的元素宽度中。</li>
+<li><code>border-box</code> 告诉浏览器：你想要设置的边框和内边距的值是包含在 width 内的。也就是说，如果你将一个元素的 width 设为 100px，那么这 100px 会包含它的 border 和 padding，内容区的实际宽度是 width 减去 (border + padding) 的值。大多数情况下，这使得我们更容易地设定一个元素的宽高。</li>
+</ul>
+</li>
+</ul>
 </li>
 <li><p>文字相关:</p>
 <p>文本水平对齐：<strong>text-align</strong></p>
