@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-03-29T13:58:02.988Z</updated>
+  <updated>2023-04-04T11:24:24.493Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSS学习笔记-2.1布局</title>
+    <link href="http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note1/"/>
+    <id>http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note1/</id>
+    <published>2023-04-01T03:34:47.000Z</published>
+    <updated>2023-04-04T11:24:24.493Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;2-1布局&quot;&gt;&lt;a href=&quot;#2-1布局&quot; class=&quot;headerlink&quot; title=&quot;2.1布局&quot;&gt;&lt;/a&gt;2.1布局&lt;/h1&gt;&lt;h2 id=&quot;1-三种布局&quot;&gt;&lt;a href=&quot;#1-三种布局&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="CSS" scheme="http://example.com/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS学习笔记-2.2flex布局实现</title>
+    <link href="http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note2/"/>
+    <id>http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note2/</id>
+    <published>2023-04-01T03:34:47.000Z</published>
+    <updated>2023-04-04T11:24:43.648Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;2-2实践&quot;&gt;&lt;a href=&quot;#2-2实践&quot; class=&quot;headerlink&quot; title=&quot;2.2实践&quot;&gt;&lt;/a&gt;2.2实践&lt;/h1&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="CSS" scheme="http://example.com/tags/CSS/"/>
+    
+  </entry>
   
   <entry>
     <title>前端ToDo阻塞池</title>
@@ -105,11 +159,11 @@ CSS第一个mini</summary>
   </entry>
   
   <entry>
-    <title>CSS学习笔记-3实践</title>
+    <title>CSS学习笔记-1.3实践</title>
     <link href="http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-Note3/"/>
     <id>http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-Note3/</id>
     <published>2023-03-29T03:34:47.000Z</published>
-    <updated>2023-04-04T08:49:44.644Z</updated>
+    <updated>2023-04-04T11:24:51.764Z</updated>
     
     
       
@@ -127,16 +181,16 @@ CSS第一个mini</summary>
     <category term="note" scheme="http://example.com/categories/code/note/"/>
     
     
-    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
+    <category term="CSS" scheme="http://example.com/tags/CSS/"/>
     
   </entry>
   
   <entry>
-    <title>CSS学习笔记-1基础</title>
+    <title>CSS学习笔记-1.1基础</title>
     <link href="http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-Note1/"/>
     <id>http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-Note1/</id>
     <published>2023-03-29T03:00:47.000Z</published>
-    <updated>2023-04-04T08:48:45.246Z</updated>
+    <updated>2023-04-04T11:24:58.693Z</updated>
     
     
       
@@ -154,49 +208,7 @@ CSS第一个mini</summary>
     <category term="note" scheme="http://example.com/categories/code/note/"/>
     
     
-    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note1/"/>
-    <id>http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note1/</id>
-    <published>2023-03-29T00:51:09.737Z</published>
-    <updated>2023-04-04T05:10:29.324Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2-1基础&quot;&gt;&lt;a href=&quot;#2-1基础&quot; class=&quot;headerlink&quot; title=&quot;2.1基础&quot;&gt;&lt;/a&gt;2.1基础&lt;/h1&gt;&lt;h2 id=&quot;1-三种布局&quot;&gt;&lt;a href=&quot;#1-三种布局&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note2/"/>
-    <id>http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note2/</id>
-    <published>2023-03-29T00:51:09.737Z</published>
-    <updated>2023-03-30T10:43:29.508Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2-2实践&quot;&gt;&lt;a href=&quot;#2-2实践&quot; class=&quot;headerlink&quot; title=&quot;2.2实践&quot;&gt;&lt;/a&gt;2.2实践&lt;/h1&gt;&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
+    <category term="CSS" scheme="http://example.com/tags/CSS/"/>
     
   </entry>
   
@@ -257,18 +269,18 @@ CSS第一个mini</summary>
   </entry>
   
   <entry>
-    <title>CSS学习笔记-2选择器</title>
+    <title>CSS学习笔记-1.2选择器</title>
     <link href="http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-Note2/"/>
     <id>http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-Note2/</id>
     <published>2023-03-28T03:34:47.000Z</published>
-    <updated>2023-04-04T08:50:36.796Z</updated>
+    <updated>2023-04-04T11:23:27.100Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;选择器&quot;&gt;&lt;a href=&quot;#选择器&quot; class=&quot;headerlink&quot; title=&quot;选择器&quot;&gt;&lt;/a&gt;选择器&lt;/h1&gt;&lt;h4 id=&quot;选择器字典&quot;&gt;&lt;a href=&quot;#选择器字典&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;1-2选择器&quot;&gt;&lt;a href=&quot;#1-2选择器&quot; class=&quot;headerlink&quot; title=&quot;1.2选择器&quot;&gt;&lt;/a&gt;1.2选择器&lt;/h1&gt;&lt;h4 id=&quot;选择器字典&quot;&gt;&lt;a href=&quot;#选择器字典&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -279,7 +291,7 @@ CSS第一个mini</summary>
     <category term="note" scheme="http://example.com/categories/code/note/"/>
     
     
-    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
+    <category term="CSS" scheme="http://example.com/tags/CSS/"/>
     
   </entry>
   

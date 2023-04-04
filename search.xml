@@ -1940,9 +1940,9 @@
       </tags>
   </entry>
   <entry>
-    <title>CSS学习笔记-2选择器</title>
+    <title>CSS学习笔记-1.2选择器</title>
     <url>/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-Note2/</url>
-    <content><![CDATA[<h1 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h1><h4 id="选择器字典"><a href="#选择器字典" class="headerlink" title="选择器字典"></a>选择器字典</h4><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Attribute_selectors">属性选择器 - CSS：层叠样式表 | MDN (mozilla.org)</a></p>
+    <content><![CDATA[<h1 id="1-2选择器"><a href="#1-2选择器" class="headerlink" title="1.2选择器"></a>1.2选择器</h1><h4 id="选择器字典"><a href="#选择器字典" class="headerlink" title="选择器字典"></a>选择器字典</h4><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Attribute_selectors">属性选择器 - CSS：层叠样式表 | MDN (mozilla.org)</a></p>
 <p><a href="https://www.ruanyifeng.com/blog/2009/03/css_selectors.html">CSS选择器笔记 - 阮一峰的网络日志 (ruanyifeng.com)</a></p>
 <p><a href="https://frontend30.com/css-selectors-cheatsheet/">CSS Selectors Cheatsheet - FrontEnd30</a></p>
 <h4 id="选择器的优先级"><a href="#选择器的优先级" class="headerlink" title="选择器的优先级"></a>选择器的优先级</h4><p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230401185155310.png" alt="image-20230401185155310"></p>
@@ -2043,11 +2043,11 @@
         <category>note</category>
       </categories>
       <tags>
-        <tag>HTML</tag>
+        <tag>CSS</tag>
       </tags>
   </entry>
   <entry>
-    <title>CSS学习笔记-1基础</title>
+    <title>CSS学习笔记-1.1基础</title>
     <url>/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-Note1/</url>
     <content><![CDATA[<h1 id="CSS学习笔记-1-1基础"><a href="#CSS学习笔记-1-1基础" class="headerlink" title="CSS学习笔记-1.1基础"></a>CSS学习笔记-1.1基础</h1><p>注释:</p>
 <p>​	CSS:&#x2F;**&#x2F;</p>
@@ -2129,22 +2129,22 @@
 <p>​				去除元素前端可能存在的空白符:<style>   div{font-size:0;}    </style></p>
 <p>​					</p>
 <blockquote>
-<p>​	【【【【【【【【Q1为什么不能直接用内联元素？】】】】】】</p>
+<p>​	【【Q1为什么不能直接用内联元素？】】</p>
 <p>​	【inline-block是元素具备了块级和内联元素的功能，inline最重要的一点就是:</p>
 <p>​	元素能够在一行展示，而inline元素所缺失的设置宽高，是block 元素的功能】</p>
 </blockquote>
 <blockquote>
-<p>​	【【【【Q2为什么用了i-b会导致，设置宽度时，总和必须小于100%？（否则会另起一行）】】】】】</p>
+<p>​	【【Q2为什么用了i-b会导致，设置宽度时，总和必须小于100%？（否则会另起一行）】】</p>
 <p>​	【因为HTML 中的换行符、空格符、制表符等合并为空白符，字体大小不为 0 的情况下，</p>
 <pre><code> 空白符自然占据定的宽度，使用inline-block 会产生了元素间的空隙。】
 </code></pre>
 </blockquote>
 <blockquote>
-<p>​	【【【【【Q3不想自己调试合适的宽度怎么办？】】】】】】】</p>
+<p>​	【【Q3不想自己调试合适的宽度怎么办？】】</p>
 <p>​	【在写用了强制内联化的块级元素时，全部写在同一行，一个空格都不要加。比如<p>1</p><p>2</p>】</p>
 </blockquote>
 <blockquote>
-<p>​	【【【【【Q4最佳解决办法是什么？】】】】】</p>
+<p>​	【【Q4最佳解决办法是什么？】】</p>
 <p>​	【父元素设置font-size:0,子元素有需要可以另外设置font-size，</p>
 <p>​	 这样空白符因为font-size:0就不会占据宽度了】</p>
 </blockquote>
@@ -2160,7 +2160,7 @@
 <li><p>用于给body里的某一种&#x2F;多种元素指定样式。</p>
 </li>
 </ul>
-<h3 id="3-多端样式归一化必加代码"><a href="#3-多端样式归一化必加代码" class="headerlink" title="3.多端样式归一化必加代码"></a><strong>3.多端样式归一化必加代码</strong></h3><p>​    <meta name="viewport" content="width=device-width, initial-scale=1.0" /></p>
+<h3 id="3-多端样式归一化必加代码【【【【】】】】"><a href="#3-多端样式归一化必加代码【【【【】】】】" class="headerlink" title="3.多端样式归一化必加代码【【【【】】】】"></a><strong>3.多端样式归一化必加代码</strong>【【【【】】】】</h3><p>​    <meta name="viewport" content="width=device-width, initial-scale=1.0" /></p>
 <h2 id="框架相关层次"><a href="#框架相关层次" class="headerlink" title="框架相关层次"></a>框架相关层次</h2><p>margin：外边距</p>
 <p>border：框架</p>
 <p>outline：框架</p>
@@ -2175,13 +2175,13 @@
         <category>note</category>
       </categories>
       <tags>
-        <tag>HTML</tag>
+        <tag>CSS</tag>
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note1/</url>
-    <content><![CDATA[<h1 id="2-1基础"><a href="#2-1基础" class="headerlink" title="2.1基础"></a>2.1基础</h1><h2 id="1-三种布局"><a href="#1-三种布局" class="headerlink" title="1.三种布局"></a>1.三种布局</h2><ol>
+    <title>CSS学习笔记-2.1布局</title>
+    <url>/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note1/</url>
+    <content><![CDATA[<h1 id="2-1布局"><a href="#2-1布局" class="headerlink" title="2.1布局"></a>2.1布局</h1><h2 id="1-三种布局"><a href="#1-三种布局" class="headerlink" title="1.三种布局"></a>1.三种布局</h2><ol>
 <li><h3 id="灵活-x2F-弹性-x2F-伸缩布局flex"><a href="#灵活-x2F-弹性-x2F-伸缩布局flex" class="headerlink" title="灵活&#x2F;弹性&#x2F;伸缩布局flex"></a>灵活&#x2F;弹性&#x2F;伸缩布局flex</h3><p><a href="https://www.bilibili.com/video/BV1Lp4y1S7XM/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">五分钟掌握 css3 flex弹性布局</a></p>
 <p>Flex 布局教程：语法篇</p>
 <p><a href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
@@ -2232,10 +2232,17 @@
 <p>​		比如报纸首字母脱离文档。图片格式选择为”环绕“。与flex互斥。</p>
 <p>其它布局：<a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout#%E6%8C%87%E5%8D%97">CSS 布局 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
 ]]></content>
+      <categories>
+        <category>code</category>
+        <category>note</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note2/</url>
+    <title>CSS学习笔记-2.2flex布局实现</title>
+    <url>/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note2/</url>
     <content><![CDATA[<h1 id="2-2实践"><a href="#2-2实践" class="headerlink" title="2.2实践"></a>2.2实践</h1><p><a href="https://www.bilibili.com/video/BV1Lp4y1S7XM/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">五分钟掌握 css3 flex弹性布局</a></p>
 <p>Flex 布局教程：语法篇</p>
 <p><a href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
@@ -2246,6 +2253,13 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.first-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    align-items: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.second-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line">/*nth-child(n) 选择器：选择其父元素的第n个子元素*/</span><br><span class="line">.second-face .pip:nth-of-type(2) &#123;</span><br><span class="line">    align-self: flex-end;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.third-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.third-face .pip:nth-of-type(2) &#123;</span><br><span class="line">    align-self: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.third-face .pip:nth-of-type(3) &#123;</span><br><span class="line">    align-self: flex-end;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fourth-face, .sixth-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fourth-face .column, .sixth-face .column &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    flex-direction: column;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fifth-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fifth-face .column &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    flex-direction: column;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fifth-face .column:nth-of-type(2) &#123;</span><br><span class="line">    justify-content: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* OTHER STYLES */</span><br><span class="line"></span><br><span class="line">* &#123;</span><br><span class="line">    box-sizing: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">html, body &#123;</span><br><span class="line">    height: 100%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">body &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    align-items: center;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    vertical-align: center;</span><br><span class="line">    flex-wrap: wrap;</span><br><span class="line">    align-content: center;</span><br><span class="line">    font-family: &#x27;Open Sans&#x27;, sans-serif;</span><br><span class="line"></span><br><span class="line">    background: linear-gradient(top, #222, #333);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*这是什么选择器*/</span><br><span class="line">[class$=&quot;face&quot;] &#123;</span><br><span class="line">    margin: 16px;</span><br><span class="line">    padding: 4px;</span><br><span class="line"></span><br><span class="line">    background-color: #e7e7e7;</span><br><span class="line">    width: 104px;</span><br><span class="line">    height: 104px;</span><br><span class="line">    object-fit: contain;</span><br><span class="line"></span><br><span class="line">    /*insert 不会用*/</span><br><span class="line">    box-shadow:</span><br><span class="line">            inset 0 5px white,</span><br><span class="line">            inset 0 -5px #bbb,</span><br><span class="line">            inset 5px 0 #d7d7d7,</span><br><span class="line">            inset -5px 0 #d7d7d7;</span><br><span class="line"></span><br><span class="line">    border-radius: 10%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.pip &#123;</span><br><span class="line">    display: block;</span><br><span class="line">    width: 24px;</span><br><span class="line">    height: 24px;</span><br><span class="line">    border-radius: 50%;</span><br><span class="line">    margin: 4px;</span><br><span class="line"></span><br><span class="line">    background-color: #333;</span><br><span class="line">    box-shadow: inset 0 3px #111, inset 0 -3px #555;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+      <categories>
+        <category>code</category>
+        <category>note</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
   </entry>
   <entry>
     <title>前端ToDo阻塞池</title>
@@ -3089,7 +3103,7 @@ CSS第一个mini project自主实现</p>
       </tags>
   </entry>
   <entry>
-    <title>CSS学习笔记-3实践</title>
+    <title>CSS学习笔记-1.3实践</title>
     <url>/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-Note3/</url>
     <content><![CDATA[<h1 id="1-3实践"><a href="#1-3实践" class="headerlink" title="1.3实践"></a>1.3实践</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">  	&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  	&lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">    &lt;title&gt;Cafe Menu&lt;/title&gt;</span><br><span class="line">    &lt;link href=&quot;../CSS/咖啡.css&quot; rel=&quot;stylesheet&quot;&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;menu&quot;&gt;</span><br><span class="line">      &lt;main&gt;</span><br><span class="line">        &lt;h1&gt;CAMPER CAFE&lt;/h1&gt;</span><br><span class="line">        &lt;p class=&quot;established&quot;&gt;Est. 2020&lt;/p&gt;</span><br><span class="line">        &lt;hr&gt;</span><br><span class="line">        &lt;section&gt;</span><br><span class="line">          &lt;h2&gt;Coffee&lt;/h2&gt;</span><br><span class="line">          &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg&quot; alt=&quot;coffee icon&quot;/&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;French Vanilla&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.00&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;Caramel Macchiato&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.75&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;Pumpkin Spice&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.50&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;Hazelnut&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;4.00&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;Mocha&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;4.50&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">        &lt;/section&gt;</span><br><span class="line">        &lt;section&gt;</span><br><span class="line">          &lt;h2&gt;Desserts&lt;/h2&gt;</span><br><span class="line">          &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg&quot; alt=&quot;pie icon&quot;/&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;dessert&quot;&gt;Donut&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;1.50&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;dessert&quot;&gt;Cherry Pie&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;2.75&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;dessert&quot;&gt;Cheesecake&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.00&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;dessert&quot;&gt;Cinnamon Roll&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;2.50&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">        &lt;/section&gt;</span><br><span class="line">      &lt;/main&gt;</span><br><span class="line">      &lt;hr class=&quot;bottom-line&quot;&gt;</span><br><span class="line">      &lt;footer&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">          &lt;a href=&quot;https://www.freecodecamp.org&quot; target=&quot;_blank&quot;&gt;Visit our website&lt;/a&gt;</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">        &lt;p class=&quot;address&quot;&gt;123 Free Code Camp Drive&lt;/p&gt;</span><br><span class="line">      &lt;/footer&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
@@ -3103,7 +3117,7 @@ CSS第一个mini project自主实现</p>
         <category>note</category>
       </categories>
       <tags>
-        <tag>HTML</tag>
+        <tag>CSS</tag>
       </tags>
   </entry>
 </search>

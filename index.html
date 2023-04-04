@@ -151,6 +151,171 @@
     
     
     <article
+  id="post-前端学习笔记/Q3-CSS-Note1"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note1/"
+    >CSS学习笔记-2.1布局</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note1/" class="article-date">
+  <time datetime="2023-04-01T03:34:47.000Z" itemprop="datePublished">2023-04-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="2-1布局"><a href="#2-1布局" class="headerlink" title="2.1布局"></a>2.1布局</h1><h2 id="1-三种布局"><a href="#1-三种布局" class="headerlink" title="1.三种布局"></a>1.三种布局</h2><ol>
+<li><h3 id="灵活-x2F-弹性-x2F-伸缩布局flex"><a href="#灵活-x2F-弹性-x2F-伸缩布局flex" class="headerlink" title="灵活&#x2F;弹性&#x2F;伸缩布局flex"></a>灵活&#x2F;弹性&#x2F;伸缩布局flex</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Lp4y1S7XM/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">五分钟掌握 css3 flex弹性布局</a></p>
+<p>Flex 布局教程：语法篇</p>
+<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
+<p>Flex 布局教程：实例篇</p>
+<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2015/07/flex-examples.html">https://www.ruanyifeng.com/blog/2015/07/flex-examples.html</a></p>
+<p>小青蛙游戏学flex</p>
+<p><a target="_blank" rel="noopener" href="http://flexboxfroggy.com/">Flexbox Froggy - A game for learning CSS flexbox</a></p>
+<h4 id="易错点："><a href="#易错点：" class="headerlink" title="易错点："></a>易错点：</h4><ol>
+<li><p>display：flex；</p>
+<p>常用于有高度的类（body也能用）。且不能用于有其它display需求的类。（如inline-block）。</p>
+</li>
+<li><p>主轴侧轴的改变</p>
+<p>当flex-derection的值改变时，两个轴也会跟着变，也就是说justify-content和align-items也要变。</p>
+</li>
+<li><p>flex的作用域</p>
+<p>只有所在的类，所在类的子类都不算。比如body里写了的flex，justify只能控制body的布局，想控制内部元素的布局就只能嵌套，在.div里也写flex。</p>
+</li>
+<li><p>什么时候改点，什么时候改div？</p>
+</li>
+</ol>
+<h4 id="知识点："><a href="#知识点：" class="headerlink" title="知识点："></a>知识点：</h4><p>1.布局原理：采用 Flex 布局的元素，称为容器。它的所有子元素自动成为容器成员，称为项目。</p>
+<p>2.易错点：父盒子设为 flex 后，子元素的float、clear和 vertical-align属性将失效。</p>
+<p>3.flex布局父项常见属性<br>            <strong>flex-direction：</strong>设置主轴的方	</p>
+<blockquote>
+<p>​	   row：行    column：柱子</p>
+</blockquote>
+<p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190849686.png" alt="image-20230329190849686"></p>
+<p>​			<strong>flex-wrap：</strong>设置子元素是否换行</p>
+<p>​						nowrap 不换行	(装不下会缩小子元素的宽度)<br>​						wrap 换行</p>
+<p>​			<strong>justify-content：</strong>设置主轴上的子元素排列方式【【【【【不分单行多行吗？】】】】】】</p>
+<p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190910922.png" alt="image-20230329190910922"></p>
+<p>​			<strong>align-items：</strong>设置侧轴上的子元素排列方式（单行）</p>
+<p>​						该属性是控制子项在侧轴上的排列方式 在子项为单行的时候使用<br>​						flex-start 从头部开始<br>​						flex-end 从尾部开始<br>​						center 居中显示<br>​						stretch 拉伸(不给宽度&#x2F;高度)</p>
+<p>​			<strong>align-content：</strong> 设置侧轴上的子元素的排列方式（多行）</p>
+<p>​				<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190910922.png" alt="image-20230329190910922"></p>
+<p>​			align-content 和align-items区别<br>​						align-items 适用于单行情况下， 只有上对齐、下对齐、居中和 拉伸<br>​						align-content适用多行换行的情况（单行无效）</p>
+<p>​			<strong>flex-flow：</strong>复合属性，相当于同时设置了 flex-direction 和 flex-wrap</p>
+<p>3.flex布局子项常见属性【少用】<br>            flex子项目占的份数<br>            align-self控制子项自己在侧轴的排列方式<br>            order属性定义子项的排列顺序（前后顺序）<br>4.flex属性<br>            flex 属性定义子项目分配剩余空间，用flex来表示占多少份数。</p>
+<p>​			<strong>【重点：flex：1；表示flex-grow1；&amp;&amp;  flex-shrink：1；</strong></p>
+<p>​			<strong>意味着如果盒子剩余的布局大就自适应缩小，反之就自适应增大】</strong></p>
+<p>5.align-self控制子项自己在侧轴上的排列方式【少用】<br>            align-self 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖 align-items 属性。<br>            默认值为 auto，表示继承父元素的 align-items 属性，如果没有父元素，则等同于 stretch。</p>
+</li>
+<li><h3 id="网格布局Grid"><a href="#网格布局Grid" class="headerlink" title="网格布局Grid"></a>网格布局Grid</h3><p><a target="_blank" rel="noopener" href="https://www.runoob.com/css3/css-grid.html">CSS 网格布局 | 菜鸟教程 (runoob.com)</a></p>
+</li>
+<li><h3 id="浮动布局"><a href="#浮动布局" class="headerlink" title="浮动布局"></a>浮动布局</h3></li>
+</ol>
+<p>​		<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Floats">浮动 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
+<p>​		比如报纸首字母脱离文档。图片格式选择为”环绕“。与flex互斥。</p>
+<p>其它布局：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout#%E6%8C%87%E5%8D%97">CSS 布局 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-前端学习笔记/Q3-CSS-Note2"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note2/"
+    >CSS学习笔记-2.2flex布局实现</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note2/" class="article-date">
+  <time datetime="2023-04-01T03:34:47.000Z" itemprop="datePublished">2023-04-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="2-2实践"><a href="#2-2实践" class="headerlink" title="2.2实践"></a>2.2实践</h1><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Lp4y1S7XM/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">五分钟掌握 css3 flex弹性布局</a></p>
+<p>Flex 布局教程：语法篇</p>
+<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
+<p>Flex 布局教程：实例篇</p>
+<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2015/07/flex-examples.html">https://www.ruanyifeng.com/blog/2015/07/flex-examples.html</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">  &lt;link  rel=&quot;stylesheet&quot; href=&quot;../CSS/实践二参考答案.css&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;!--</span><br><span class="line">/*1水平垂直居中*/</span><br><span class="line">/*2第一个点不动，第二个点用水平垂直flex-end*/</span><br><span class="line">/*3第一个点不动，第二个点水平垂直居中，第三个点用水平垂直flex-end*/</span><br><span class="line">/*4第一个第二个点用between分开，第三四个用垂直end且between*/</span><br><span class="line">/*5上一个的基础上加上一个水平垂直居中的*/</span><br><span class="line">/*6三个between / 自动换行且between / 挨个设置横纵轴位置*/</span><br><span class="line"></span><br><span class="line">/*1水平垂直居中*/</span><br><span class="line">/*2水平垂直flex-end*/</span><br><span class="line">/*3between*/</span><br><span class="line">/*4水平垂直且between*/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">以上内容，不用self无法实现</span><br><span class="line">--&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div class=&quot;first-face&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  &lt;div class=&quot;second-face&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;third-face&quot;&gt;</span><br><span class="line">  &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;fourth-face&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;fifth-face&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;sixth-face&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br><span class="line">&lt;!--【为什么写div的话，再写flex就没有用了？因为是块级元素，flex只能作用于内联样式得元素，所以要display：inline-block】--&gt;</span><br><span class="line">&lt;!--【【【【【【【为什么把dotdiv改成span后，除了只有一个点的，其它得一个点都没有？】】】】】--&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><span class="line">.first-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    align-items: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.second-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line">/*nth-child(n) 选择器：选择其父元素的第n个子元素*/</span><br><span class="line">.second-face .pip:nth-of-type(2) &#123;</span><br><span class="line">    align-self: flex-end;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.third-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.third-face .pip:nth-of-type(2) &#123;</span><br><span class="line">    align-self: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.third-face .pip:nth-of-type(3) &#123;</span><br><span class="line">    align-self: flex-end;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fourth-face, .sixth-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fourth-face .column, .sixth-face .column &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    flex-direction: column;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fifth-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fifth-face .column &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    flex-direction: column;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fifth-face .column:nth-of-type(2) &#123;</span><br><span class="line">    justify-content: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* OTHER STYLES */</span><br><span class="line"></span><br><span class="line">* &#123;</span><br><span class="line">    box-sizing: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">html, body &#123;</span><br><span class="line">    height: 100%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">body &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    align-items: center;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    vertical-align: center;</span><br><span class="line">    flex-wrap: wrap;</span><br><span class="line">    align-content: center;</span><br><span class="line">    font-family: &#x27;Open Sans&#x27;, sans-serif;</span><br><span class="line"></span><br><span class="line">    background: linear-gradient(top, #222, #333);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*这是什么选择器*/</span><br><span class="line">[class$=&quot;face&quot;] &#123;</span><br><span class="line">    margin: 16px;</span><br><span class="line">    padding: 4px;</span><br><span class="line"></span><br><span class="line">    background-color: #e7e7e7;</span><br><span class="line">    width: 104px;</span><br><span class="line">    height: 104px;</span><br><span class="line">    object-fit: contain;</span><br><span class="line"></span><br><span class="line">    /*insert 不会用*/</span><br><span class="line">    box-shadow:</span><br><span class="line">            inset 0 5px white,</span><br><span class="line">            inset 0 -5px #bbb,</span><br><span class="line">            inset 5px 0 #d7d7d7,</span><br><span class="line">            inset -5px 0 #d7d7d7;</span><br><span class="line"></span><br><span class="line">    border-radius: 10%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.pip &#123;</span><br><span class="line">    display: block;</span><br><span class="line">    width: 24px;</span><br><span class="line">    height: 24px;</span><br><span class="line">    border-radius: 50%;</span><br><span class="line">    margin: 4px;</span><br><span class="line"></span><br><span class="line">    background-color: #333;</span><br><span class="line">    box-shadow: inset 0 3px #111, inset 0 -3px #555;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-前端学习笔记/Q0-ToDo"
   class="article article-type-post"
   itemscope
@@ -1127,7 +1292,7 @@ CSS第一个mini project自主实现</p>
        
 <h2 itemprop="name">
   <a class="article-title" href="/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-Note3/"
-    >CSS学习笔记-3实践</a> 
+    >CSS学习笔记-1.3实践</a> 
 </h2>
  
 
@@ -1162,7 +1327,7 @@ CSS第一个mini project自主实现</p>
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
 
     </footer>
   </div>
@@ -1186,7 +1351,7 @@ CSS第一个mini project自主实现</p>
        
 <h2 itemprop="name">
   <a class="article-title" href="/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-Note1/"
-    >CSS学习笔记-1基础</a> 
+    >CSS学习笔记-1.1基础</a> 
 </h2>
  
 
@@ -1285,22 +1450,22 @@ CSS第一个mini project自主实现</p>
 <p>​				去除元素前端可能存在的空白符:<style>   div{font-size:0;}    </style></p>
 <p>​					</p>
 <blockquote>
-<p>​	【【【【【【【【Q1为什么不能直接用内联元素？】】】】】】</p>
+<p>​	【【Q1为什么不能直接用内联元素？】】</p>
 <p>​	【inline-block是元素具备了块级和内联元素的功能，inline最重要的一点就是:</p>
 <p>​	元素能够在一行展示，而inline元素所缺失的设置宽高，是block 元素的功能】</p>
 </blockquote>
 <blockquote>
-<p>​	【【【【Q2为什么用了i-b会导致，设置宽度时，总和必须小于100%？（否则会另起一行）】】】】】</p>
+<p>​	【【Q2为什么用了i-b会导致，设置宽度时，总和必须小于100%？（否则会另起一行）】】</p>
 <p>​	【因为HTML 中的换行符、空格符、制表符等合并为空白符，字体大小不为 0 的情况下，</p>
 <pre><code> 空白符自然占据定的宽度，使用inline-block 会产生了元素间的空隙。】
 </code></pre>
 </blockquote>
 <blockquote>
-<p>​	【【【【【Q3不想自己调试合适的宽度怎么办？】】】】】】】</p>
+<p>​	【【Q3不想自己调试合适的宽度怎么办？】】</p>
 <p>​	【在写用了强制内联化的块级元素时，全部写在同一行，一个空格都不要加。比如<p>1</p><p>2</p>】</p>
 </blockquote>
 <blockquote>
-<p>​	【【【【【Q4最佳解决办法是什么？】】】】】</p>
+<p>​	【【Q4最佳解决办法是什么？】】</p>
 <p>​	【父元素设置font-size:0,子元素有需要可以另外设置font-size，</p>
 <p>​	 这样空白符因为font-size:0就不会占据宽度了】</p>
 </blockquote>
@@ -1316,7 +1481,7 @@ CSS第一个mini project自主实现</p>
 <li><p>用于给body里的某一种&#x2F;多种元素指定样式。</p>
 </li>
 </ul>
-<h3 id="3-多端样式归一化必加代码"><a href="#3-多端样式归一化必加代码" class="headerlink" title="3.多端样式归一化必加代码"></a><strong>3.多端样式归一化必加代码</strong></h3><p>​    <meta name="viewport" content="width=device-width, initial-scale=1.0" /></p>
+<h3 id="3-多端样式归一化必加代码【【【【】】】】"><a href="#3-多端样式归一化必加代码【【【【】】】】" class="headerlink" title="3.多端样式归一化必加代码【【【【】】】】"></a><strong>3.多端样式归一化必加代码</strong>【【【【】】】】</h3><p>​    <meta name="viewport" content="width=device-width, initial-scale=1.0" /></p>
 <h2 id="框架相关层次"><a href="#框架相关层次" class="headerlink" title="框架相关层次"></a>框架相关层次</h2><p>margin：外边距</p>
 <p>border：框架</p>
 <p>outline：框架</p>
@@ -1335,139 +1500,8 @@ CSS第一个mini project自主实现</p>
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
 
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-前端学习笔记/Q3-CSS-Note1"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-     
-    <div class="article-meta">
-      <a href="/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note1/" class="article-date">
-  <time datetime="2023-03-29T00:51:09.737Z" itemprop="datePublished">2023-03-29</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="2-1基础"><a href="#2-1基础" class="headerlink" title="2.1基础"></a>2.1基础</h1><h2 id="1-三种布局"><a href="#1-三种布局" class="headerlink" title="1.三种布局"></a>1.三种布局</h2><ol>
-<li><h3 id="灵活-x2F-弹性-x2F-伸缩布局flex"><a href="#灵活-x2F-弹性-x2F-伸缩布局flex" class="headerlink" title="灵活&#x2F;弹性&#x2F;伸缩布局flex"></a>灵活&#x2F;弹性&#x2F;伸缩布局flex</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Lp4y1S7XM/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">五分钟掌握 css3 flex弹性布局</a></p>
-<p>Flex 布局教程：语法篇</p>
-<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
-<p>Flex 布局教程：实例篇</p>
-<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2015/07/flex-examples.html">https://www.ruanyifeng.com/blog/2015/07/flex-examples.html</a></p>
-<p>小青蛙游戏学flex</p>
-<p><a target="_blank" rel="noopener" href="http://flexboxfroggy.com/">Flexbox Froggy - A game for learning CSS flexbox</a></p>
-<h4 id="易错点："><a href="#易错点：" class="headerlink" title="易错点："></a>易错点：</h4><ol>
-<li><p>display：flex；</p>
-<p>常用于有高度的类（body也能用）。且不能用于有其它display需求的类。（如inline-block）。</p>
-</li>
-<li><p>主轴侧轴的改变</p>
-<p>当flex-derection的值改变时，两个轴也会跟着变，也就是说justify-content和align-items也要变。</p>
-</li>
-<li><p>flex的作用域</p>
-<p>只有所在的类，所在类的子类都不算。比如body里写了的flex，justify只能控制body的布局，想控制内部元素的布局就只能嵌套，在.div里也写flex。</p>
-</li>
-<li><p>什么时候改点，什么时候改div？</p>
-</li>
-</ol>
-<h4 id="知识点："><a href="#知识点：" class="headerlink" title="知识点："></a>知识点：</h4><p>1.布局原理：采用 Flex 布局的元素，称为容器。它的所有子元素自动成为容器成员，称为项目。</p>
-<p>2.易错点：父盒子设为 flex 后，子元素的float、clear和 vertical-align属性将失效。</p>
-<p>3.flex布局父项常见属性<br>            <strong>flex-direction：</strong>设置主轴的方	</p>
-<blockquote>
-<p>​	   row：行    column：柱子</p>
-</blockquote>
-<p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190849686.png" alt="image-20230329190849686"></p>
-<p>​			<strong>flex-wrap：</strong>设置子元素是否换行</p>
-<p>​						nowrap 不换行	(装不下会缩小子元素的宽度)<br>​						wrap 换行</p>
-<p>​			<strong>justify-content：</strong>设置主轴上的子元素排列方式【【【【【不分单行多行吗？】】】】】】</p>
-<p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190910922.png" alt="image-20230329190910922"></p>
-<p>​			<strong>align-items：</strong>设置侧轴上的子元素排列方式（单行）</p>
-<p>​						该属性是控制子项在侧轴上的排列方式 在子项为单行的时候使用<br>​						flex-start 从头部开始<br>​						flex-end 从尾部开始<br>​						center 居中显示<br>​						stretch 拉伸(不给宽度&#x2F;高度)</p>
-<p>​			<strong>align-content：</strong> 设置侧轴上的子元素的排列方式（多行）</p>
-<p>​				<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190910922.png" alt="image-20230329190910922"></p>
-<p>​			align-content 和align-items区别<br>​						align-items 适用于单行情况下， 只有上对齐、下对齐、居中和 拉伸<br>​						align-content适用多行换行的情况（单行无效）</p>
-<p>​			<strong>flex-flow：</strong>复合属性，相当于同时设置了 flex-direction 和 flex-wrap</p>
-<p>3.flex布局子项常见属性【少用】<br>            flex子项目占的份数<br>            align-self控制子项自己在侧轴的排列方式<br>            order属性定义子项的排列顺序（前后顺序）<br>4.flex属性<br>            flex 属性定义子项目分配剩余空间，用flex来表示占多少份数。</p>
-<p>​			<strong>【重点：flex：1；表示flex-grow1；&amp;&amp;  flex-shrink：1；</strong></p>
-<p>​			<strong>意味着如果盒子剩余的布局大就自适应缩小，反之就自适应增大】</strong></p>
-<p>5.align-self控制子项自己在侧轴上的排列方式【少用】<br>            align-self 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖 align-items 属性。<br>            默认值为 auto，表示继承父元素的 align-items 属性，如果没有父元素，则等同于 stretch。</p>
-</li>
-<li><h3 id="网格布局Grid"><a href="#网格布局Grid" class="headerlink" title="网格布局Grid"></a>网格布局Grid</h3><p><a target="_blank" rel="noopener" href="https://www.runoob.com/css3/css-grid.html">CSS 网格布局 | 菜鸟教程 (runoob.com)</a></p>
-</li>
-<li><h3 id="浮动布局"><a href="#浮动布局" class="headerlink" title="浮动布局"></a>浮动布局</h3></li>
-</ol>
-<p>​		<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Floats">浮动 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
-<p>​		比如报纸首字母脱离文档。图片格式选择为”环绕“。与flex互斥。</p>
-<p>其它布局：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout#%E6%8C%87%E5%8D%97">CSS 布局 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-前端学习笔记/Q3-CSS-Note2"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-     
-    <div class="article-meta">
-      <a href="/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note2/" class="article-date">
-  <time datetime="2023-03-29T00:51:09.737Z" itemprop="datePublished">2023-03-29</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="2-2实践"><a href="#2-2实践" class="headerlink" title="2.2实践"></a>2.2实践</h1><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Lp4y1S7XM/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">五分钟掌握 css3 flex弹性布局</a></p>
-<p>Flex 布局教程：语法篇</p>
-<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
-<p>Flex 布局教程：实例篇</p>
-<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2015/07/flex-examples.html">https://www.ruanyifeng.com/blog/2015/07/flex-examples.html</a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">  &lt;link  rel=&quot;stylesheet&quot; href=&quot;../CSS/实践二参考答案.css&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;!--</span><br><span class="line">/*1水平垂直居中*/</span><br><span class="line">/*2第一个点不动，第二个点用水平垂直flex-end*/</span><br><span class="line">/*3第一个点不动，第二个点水平垂直居中，第三个点用水平垂直flex-end*/</span><br><span class="line">/*4第一个第二个点用between分开，第三四个用垂直end且between*/</span><br><span class="line">/*5上一个的基础上加上一个水平垂直居中的*/</span><br><span class="line">/*6三个between / 自动换行且between / 挨个设置横纵轴位置*/</span><br><span class="line"></span><br><span class="line">/*1水平垂直居中*/</span><br><span class="line">/*2水平垂直flex-end*/</span><br><span class="line">/*3between*/</span><br><span class="line">/*4水平垂直且between*/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">以上内容，不用self无法实现</span><br><span class="line">--&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div class=&quot;first-face&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  &lt;div class=&quot;second-face&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;third-face&quot;&gt;</span><br><span class="line">  &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;fourth-face&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;fifth-face&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;sixth-face&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br><span class="line">&lt;!--【为什么写div的话，再写flex就没有用了？因为是块级元素，flex只能作用于内联样式得元素，所以要display：inline-block】--&gt;</span><br><span class="line">&lt;!--【【【【【【【为什么把dotdiv改成span后，除了只有一个点的，其它得一个点都没有？】】】】】--&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><span class="line">.first-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    align-items: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.second-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line">/*nth-child(n) 选择器：选择其父元素的第n个子元素*/</span><br><span class="line">.second-face .pip:nth-of-type(2) &#123;</span><br><span class="line">    align-self: flex-end;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.third-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.third-face .pip:nth-of-type(2) &#123;</span><br><span class="line">    align-self: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.third-face .pip:nth-of-type(3) &#123;</span><br><span class="line">    align-self: flex-end;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fourth-face, .sixth-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fourth-face .column, .sixth-face .column &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    flex-direction: column;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fifth-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fifth-face .column &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    flex-direction: column;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fifth-face .column:nth-of-type(2) &#123;</span><br><span class="line">    justify-content: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* OTHER STYLES */</span><br><span class="line"></span><br><span class="line">* &#123;</span><br><span class="line">    box-sizing: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">html, body &#123;</span><br><span class="line">    height: 100%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">body &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    align-items: center;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    vertical-align: center;</span><br><span class="line">    flex-wrap: wrap;</span><br><span class="line">    align-content: center;</span><br><span class="line">    font-family: &#x27;Open Sans&#x27;, sans-serif;</span><br><span class="line"></span><br><span class="line">    background: linear-gradient(top, #222, #333);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*这是什么选择器*/</span><br><span class="line">[class$=&quot;face&quot;] &#123;</span><br><span class="line">    margin: 16px;</span><br><span class="line">    padding: 4px;</span><br><span class="line"></span><br><span class="line">    background-color: #e7e7e7;</span><br><span class="line">    width: 104px;</span><br><span class="line">    height: 104px;</span><br><span class="line">    object-fit: contain;</span><br><span class="line"></span><br><span class="line">    /*insert 不会用*/</span><br><span class="line">    box-shadow:</span><br><span class="line">            inset 0 5px white,</span><br><span class="line">            inset 0 -5px #bbb,</span><br><span class="line">            inset 5px 0 #d7d7d7,</span><br><span class="line">            inset -5px 0 #d7d7d7;</span><br><span class="line"></span><br><span class="line">    border-radius: 10%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.pip &#123;</span><br><span class="line">    display: block;</span><br><span class="line">    width: 24px;</span><br><span class="line">    height: 24px;</span><br><span class="line">    border-radius: 50%;</span><br><span class="line">    margin: 4px;</span><br><span class="line"></span><br><span class="line">    background-color: #333;</span><br><span class="line">    box-shadow: inset 0 3px #111, inset 0 -3px #555;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
     </footer>
   </div>
 
@@ -1641,7 +1675,7 @@ CSS第一个mini project自主实现</p>
        
 <h2 itemprop="name">
   <a class="article-title" href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-Note2/"
-    >CSS学习笔记-2选择器</a> 
+    >CSS学习笔记-1.2选择器</a> 
 </h2>
  
 
@@ -1660,7 +1694,7 @@ CSS第一个mini project自主实现</p>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h1><h4 id="选择器字典"><a href="#选择器字典" class="headerlink" title="选择器字典"></a>选择器字典</h4><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Attribute_selectors">属性选择器 - CSS：层叠样式表 | MDN (mozilla.org)</a></p>
+  <h1 id="1-2选择器"><a href="#1-2选择器" class="headerlink" title="1.2选择器"></a>1.2选择器</h1><h4 id="选择器字典"><a href="#选择器字典" class="headerlink" title="选择器字典"></a>选择器字典</h4><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Attribute_selectors">属性选择器 - CSS：层叠样式表 | MDN (mozilla.org)</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2009/03/css_selectors.html">CSS选择器笔记 - 阮一峰的网络日志 (ruanyifeng.com)</a></p>
 <p><a target="_blank" rel="noopener" href="https://frontend30.com/css-selectors-cheatsheet/">CSS Selectors Cheatsheet - FrontEnd30</a></p>
 <h4 id="选择器的优先级"><a href="#选择器的优先级" class="headerlink" title="选择器的优先级"></a>选择器的优先级</h4><p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230401185155310.png" alt="image-20230401185155310"></p>
@@ -1765,7 +1799,7 @@ CSS第一个mini project自主实现</p>
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
 
     </footer>
   </div>
