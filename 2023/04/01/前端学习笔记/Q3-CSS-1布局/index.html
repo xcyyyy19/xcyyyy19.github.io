@@ -57,7 +57,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-前端学习笔记/Q3-CSS-Note1"
+  id="post-前端学习笔记/Q3-CSS-1布局"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -76,7 +76,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note1/" class="article-date">
+      <a href="/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-1%E5%B8%83%E5%B1%80/" class="article-date">
   <time datetime="2023-04-01T03:34:47.000Z" itemprop="datePublished">2023-04-01</time>
 </a> 
   <div class="article-category">
@@ -88,7 +88,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">778</span>
+            <span class="post-count">1.4k</span>
         </span>
     </span>
 
@@ -97,7 +97,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">3 分钟</span>
+            <span class="post-count">5 分钟</span>
         </span>
     </span>
 </div>
@@ -112,7 +112,10 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="2-1布局"><a href="#2-1布局" class="headerlink" title="2.1布局"></a>2.1布局</h1><h2 id="1-三种布局"><a href="#1-三种布局" class="headerlink" title="1.三种布局"></a>1.三种布局</h2><ol>
+  <h1 id="CSS学习笔记-2-1布局-三种重要布局及其它布局"><a href="#CSS学习笔记-2-1布局-三种重要布局及其它布局" class="headerlink" title="CSS学习笔记-2.1布局-三种重要布局及其它布局"></a>CSS学习笔记-2.1布局-三种重要布局及其它布局</h1><p><a target="_blank" rel="noopener" href="https://www.icourse163.org/learn/BFU-1003382003?tid=1469987444#/learn/content?type=detail&id=1253020763&sm=1">Web前端开发_中国大学MOOC(慕课) (icourse163.org)</a></p>
+<img src="C:\Users\11096\Documents\WeChat Files\wxid_xfl56vvd0cvm22\FileStorage\Temp\1680613753098.png" alt="1680613753098" style="zoom: 50%;" />
+
+<h2 id="1-元素布局"><a href="#1-元素布局" class="headerlink" title="1.元素布局"></a>1.元素布局</h2><ol>
 <li><h3 id="灵活-x2F-弹性-x2F-伸缩布局flex"><a href="#灵活-x2F-弹性-x2F-伸缩布局flex" class="headerlink" title="灵活&#x2F;弹性&#x2F;伸缩布局flex"></a>灵活&#x2F;弹性&#x2F;伸缩布局flex</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Lp4y1S7XM/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">五分钟掌握 css3 flex弹性布局</a></p>
 <p>Flex 布局教程：语法篇</p>
 <p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
@@ -162,6 +165,38 @@
 <p>​		<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Floats">浮动 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
 <p>​		比如报纸首字母脱离文档。图片格式选择为”环绕“。与flex互斥。</p>
 <p>其它布局：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout#%E6%8C%87%E5%8D%97">CSS 布局 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
+<h1 id="2-定位"><a href="#2-定位" class="headerlink" title="2.定位"></a>2.定位</h1><h4 id="1-position属性"><a href="#1-position属性" class="headerlink" title="1.position属性"></a>1.position属性</h4><p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/css/css_positioning.asp">CSS 布局 - position 属性 (w3school.com.cn)</a></p>
+<p>​	概念：</p>
+<p>​		<code>position</code> 属性规定应用于元素的定位方法的类型。</p>
+<p>​	五个不同的位置值：</p>
+<p>​		static：正常（默认）。</p>
+<p>​		relative（相对定位）：改变relation所在的元素，在该元素的父元素中的相对位置。</p>
+<p>​												易错点：如果附近有块级元素，它的相对定位会被影响。</p>
+<p>​		absolute（绝对定位）：	</p>
+<p>​		fixed（固定定位）：</p>
+<p>​		sticky（粘性定位）：根据用户的滚动位置进行定位。</p>
+<p>​											粘性元素根据滚动位置在相对（<code>relative</code>）和固定（<code>fixed</code>）之间切换。</p>
+<p>​											起先它会被相对定位，直到在视口中遇到给定的偏移位置为止 </p>
+<p>​											然后将其“粘贴”在适当的位置（比如 position:fixed）。</p>
+<p>​	index属性</p>
+<p>​			指定元素的堆栈顺序（哪个元素应放置在其他元素的前面或后面，正负都可）。</p>
+<h1 id="3-盒子模型"><a href="#3-盒子模型" class="headerlink" title="3.盒子模型"></a>3.盒子模型</h1><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model">盒模型 - 学习 Web 开发 | MDN</a></p>
+<h5 id="盒子种类"><a href="#盒子种类" class="headerlink" title="盒子种类:"></a>盒子种类:</h5><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404195037016.png" alt="image-20230404195037016" style="zoom:50%;" />
+
+<h5 id="两种盒模型的区别："><a href="#两种盒模型的区别：" class="headerlink" title="两种盒模型的区别："></a>两种盒模型的区别：</h5><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404195008921.png" alt="image-20230404195008921" style="zoom:50%;" />
+
+<h5 id="盒子相关的问题："><a href="#盒子相关的问题：" class="headerlink" title="盒子相关的问题："></a>盒子相关的问题：</h5><p>​		<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/110617108">CSS 的两种盒模型 - 及边距异常合并问题</a></p>
+<h4 id="outline和border的区别"><a href="#outline和border的区别" class="headerlink" title="outline和border的区别"></a>outline和border的区别</h4><p>​	主要区别在于: </p>
+<p>​		1.应用场景:一般border能适用于任何元素的样式，outline一般用于表单组件(比如input&#x2F;textarea) </p>
+<p>​		2.特性不一样：border一般会被计算在元素的宽高大小里面，outline不会</p>
+<h3 id="相关层次图"><a href="#相关层次图" class="headerlink" title="相关层次图"></a>相关层次图</h3><p>margin：外边距</p>
+<p>border：边框</p>
+<p>outline：边框</p>
+<p>padding：内边距</p>
+<h5 id="border和outline的区别："><a href="#border和outline的区别：" class="headerlink" title="border和outline的区别："></a>border和outline的区别：</h5><p>1.border占用空间，outline不占用空间，不会影响元素的尺寸和位置。</p>
+<p>2.border 可应用于几乎所有有形的html元素，而 <strong>outline 是针对链接、表单控件和ImageMap等元素设计</strong>。从而另一个区别也可以推理出，那就是： outline 的效果将随元素的 focus 而自动出现，相应的由 blur 而自动消失。这些都是浏览器的默认行为，无需JavaScript配合CSS来控制。</p>
+<p>利用这些特性，我们常用outline来设置悬停的动态效果。之前一直困扰我的问题：hover加边框会导致元素定位和大小的改变，同时也会影响其他元素位置的改变，现在终于解决了。</p>
+<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329124305228.png" alt="image-20230329124305228" style="zoom: 33%;" />
  
       <!-- reward -->
       
@@ -226,7 +261,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note1/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-1%E5%B8%83%E5%B1%80/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -240,7 +275,7 @@
   <nav class="article-nav">
     
     
-      <a href="/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note2/" class="article-nav-link">
+      <a href="/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-3%E5%AE%9E%E8%B7%B5%EF%BC%88flex%E5%B8%83%E5%B1%80%EF%BC%89/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
         <div class="article-nav-title">CSS学习笔记-2.2flex布局实现</div>
       </a>

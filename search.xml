@@ -1940,333 +1940,10 @@
       </tags>
   </entry>
   <entry>
-    <title>CSS学习笔记-1.2选择器</title>
-    <url>/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-Note2/</url>
-    <content><![CDATA[<h1 id="1-2选择器"><a href="#1-2选择器" class="headerlink" title="1.2选择器"></a>1.2选择器</h1><h4 id="选择器字典"><a href="#选择器字典" class="headerlink" title="选择器字典"></a>选择器字典</h4><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Attribute_selectors">属性选择器 - CSS：层叠样式表 | MDN (mozilla.org)</a></p>
-<p><a href="https://www.ruanyifeng.com/blog/2009/03/css_selectors.html">CSS选择器笔记 - 阮一峰的网络日志 (ruanyifeng.com)</a></p>
-<p><a href="https://frontend30.com/css-selectors-cheatsheet/">CSS Selectors Cheatsheet - FrontEnd30</a></p>
-<h4 id="选择器的优先级"><a href="#选择器的优先级" class="headerlink" title="选择器的优先级"></a>选择器的优先级</h4><p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230401185155310.png" alt="image-20230401185155310"></p>
-<h4 id="选择器的构成"><a href="#选择器的构成" class="headerlink" title="选择器的构成"></a>选择器的构成</h4><p>选择器分为符号和框架</p>
-<p>符号：＄ ~ # ^等（可组合到框架中）</p>
-<p>框架：[ ] , nth-of-child等 </p>
-<h2 id="一-基本选择器"><a href="#一-基本选择器" class="headerlink" title="一.基本选择器"></a>一.基本选择器</h2><h3 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h3><ol>
-<li><h6 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h6><ul>
-<li>#id</li>
-</ul>
-</li>
-<li><h6 id="易错点"><a href="#易错点" class="headerlink" title="易错点"></a>易错点</h6><ul>
-<li>id不能有任何数字</li>
-</ul>
-</li>
-</ol>
-<h3 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h3><p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404152420883.png" alt="image-20230404152420883" style="zoom: 50%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404152441816.png" alt="image-20230404152441816" style="zoom:50%;" /></p>
-<h6 id=""><a href="#" class="headerlink" title=""></a><img src="C:\Users\11096\Documents\WeChat Files\wxid_xfl56vvd0cvm22\FileStorage\Temp\1680587935181.png" alt="1680587935181" style="zoom:50%;" /></h6><p>元素[属性1] [属性2]</p>
-<ul>
-<li>同时有两个选择的元素</li>
-</ul>
-<p>元素[属性&#x3D;值] 	</p>
-<ul>
-<li>属性的值&#x3D;值的元素</li>
-<li>a[href&#x3D;”<a href="https://example.org"]">https://example.org&quot;]</a></li>
-</ul>
-<p>元素[属性^&#x3D;开头值]</p>
-<ul>
-<li>[attr^&#x3D;value]：表示带有以 <em>attr</em> 命名的属性，且属性值是以 <em>value</em> 开头的元素。</li>
-</ul>
-<p>元素[属性$&#x3D;结尾值]</p>
-<ul>
-<li><p>属性的值的结尾是”结尾值“的元素。</p>
-</li>
-<li><p>a[href$&#x3D;”.org”]：存在 href 属性并且属性值结尾是”.org”的 <a> 元素</p>
-</li>
-</ul>
-<p>元素[属性*&#x3D;”值“]</p>
-<ul>
-<li>属性的值包含”值“的元素</li>
-</ul>
-<p>元素[属性~&#x3D;值]</p>
-<ul>
-<li><p>属性的值包含”值“的元素，该属性是一个以空格作为分隔的值列表</p>
-</li>
-<li><p>a[class~&#x3D;”logo”]：存在 class 属性并且属性值包含单词”logo”的<a>元素</p>
-</li>
-</ul>
-<p>元素[       i]</p>
-<ul>
-<li>在属性选择器的右方括号前添加一个用空格隔开的字母 <code>i</code>（或 <code>I</code>），可以在匹配属性值时忽略大小写（支持 ASCII 字符范围之内的字母）。</li>
-</ul>
-<p>元素[		s]</p>
-<ul>
-<li>在属性选择器的右方括号前添加一个用空格隔开的字母 <code>s</code>（或 <code>S</code>），可以在匹配属性值时区分大小写（支持 ASCII 字符范围之内的字母）。</li>
-</ul>
-<h3 id="3-元素选择器"><a href="#3-元素选择器" class="headerlink" title="3.元素选择器"></a>3.元素选择器</h3><h4 id="通用元素选择器"><a href="#通用元素选择器" class="headerlink" title="通用元素选择器"></a>通用元素选择器</h4><ul>
-<li></li>
-</ul>
-<p>**【【【【【【没有找到】】】】】】】</p>
-<h4 id="同级元素通用选择器"><a href="#同级元素通用选择器" class="headerlink" title="同级元素通用选择器"></a>同级元素通用选择器</h4><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404151520256.png" alt="image-20230404151520256" style="zoom:50%;" />
-
-<h4 id="多元素的组合选择器"><a href="#多元素的组合选择器" class="headerlink" title="多元素的组合选择器"></a>多元素的组合选择器</h4><img src="C:\Users\11096\Documents\WeChat Files\wxid_xfl56vvd0cvm22\FileStorage\Temp\1680592298848.png" alt="1680592298848" style="zoom: 50%;" />
-
-<h2 id="二-关系型选择器"><a href="#二-关系型选择器" class="headerlink" title="二.关系型选择器"></a>二.关系型选择器</h2><p>子选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404132255364.png" alt="image-20230404132255364" style="zoom:50%;" /></p>
-<p>后代选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404132326607.png" alt="image-20230404132326607" style="zoom: 50%;" /></p>
-<p>相邻兄弟选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404133357624.png" alt="image-20230404133357624" style="zoom:50%;" /></p>
-<p>通用兄弟选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404133450743.png" alt="image-20230404133450743" style="zoom:50%;" /></p>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Column_combinator">列组合器</a> </p>
-<p><code>||</code> 组合器选择属于某个表格行的节点。</p>
-<p><strong>语法：</strong><code>A || B</code></p>
-<p><strong>例子：</strong><code>col || td</code> 会匹配所有 作用域内的 &#96;](<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/td">https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/td</a>) 元素。</p>
-<p>独子选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404133754657.png" alt="image-20230404133754657" style="zoom:50%;" />		a 表示选择a元素的独子，b表示如果b是独子则被选择</p>
-<p>第 N 个最后一个子选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404134515253.png" alt="image-20230404134515253" style="zoom:50%;" /></p>
-<p>首项选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404134548820.png" alt="image-20230404134548820" style="zoom:50%;" />可以根据元素、属性进行选择</p>
-<p>尾项选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404134901176.png" alt="image-20230404134901176" style="zoom:50%;" />尾属性的class不等于x则不选任何东西</p>
-<h2 id="三-伪类选择器"><a href="#三-伪类选择器" class="headerlink" title="三.伪类选择器"></a>三.伪类选择器</h2><p>用户界面伪类选择器</p>
-<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404150313528.png" alt="image-20230404150313528" style="zoom: 50%;" />
-
-<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404150546942.png" alt="image-20230404150546942" style="zoom:50%;" />
-
-<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404152535460.png" alt="image-20230404152535460" style="zoom:50%;" />
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">两个写法相同的选择器，意思为子元素的父元素的第n个子元素</span><br><span class="line">父元素 子元素：nth-child(1)</span><br><span class="line">父元素 子元素：first-child</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/*意思是.dot的父元素的第二个孩子*/</span><br><span class="line">.bg2 .dot:nth-child(2)&#123;</span><br><span class="line">    align-self: flex-end;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>反选伪类选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404135618254.png" alt="image-20230404135618254" style="zoom:50%;" /></p>
-<p>看不懂</p>
-<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404152643373.png" alt="image-20230404152643373" style="zoom: 50%;" />
-
-<h2 id="四-伪元素选择器"><a href="#四-伪元素选择器" class="headerlink" title="四.伪元素选择器"></a>四.伪元素选择器</h2><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404150514659.png" alt="image-20230404150514659" style="zoom:50%;" />
-
-
-
-<h2 id="五-易错点"><a href="#五-易错点" class="headerlink" title="五.易错点"></a>五.易错点</h2><p>1.~：写在[ ]里表示字符串匹配，匹配到就选择。写在[ ]外表示通用兄弟选择器。</p>
-]]></content>
-      <categories>
-        <category>code</category>
-        <category>note</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CSS学习笔记-1.1基础</title>
-    <url>/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-Note1/</url>
-    <content><![CDATA[<h1 id="CSS学习笔记-1-1基础"><a href="#CSS学习笔记-1-1基础" class="headerlink" title="CSS学习笔记-1.1基础"></a>CSS学习笔记-1.1基础</h1><p>注释:</p>
-<p>​	CSS:&#x2F;**&#x2F;</p>
-<p>技巧：</p>
-<p>​	先写css再写对应的html</p>
-<p>CSS游戏：</p>
-<p>​	<a href="https://frontend30.com/css-selectors-cheatsheet/">CSS Selectors Cheatsheet - FrontEnd30</a></p>
-<p>学完后形成体系：</p>
-<img src="C:\$RECYCLE.BIN\S-1-5-21-3551453893-2823794770-815658977-1001\$R4HZJ7D.png" alt="$R4HZJ7D" style="zoom: 33%;" />
-
-<h3 id="0-CSS基本样式"><a href="#0-CSS基本样式" class="headerlink" title="0.CSS基本样式"></a>0.CSS基本样式</h3><p>选择器（Selector）<br>HTML 元素的名称位于规则集开始。它选择了一个或多个需要添加样式的元素）。要给不同元素添加样式只需要更改选择器就行了。可以用固定标签名，或.+自定义名称来进行选择。如用.menu来选择class属性为menu的盒子。</p>
-<p>通配符选择器作用：给当前界面上所有的标签设置属性。（*的意思是选中所有的标签）</p>
-<p>声明（Declaration）<br>一个单独的规则，如 color: red; 用来指定添加样式元素的属性。</p>
-<p>属性（Properties）<br>改变 HTML 元素样式的途径。（本例中 color 就是 <p> 元素的属性。）CSS 中，由编写人员决定修改哪个属性以改变规则。</p>
-<p>属性的值（Property value）<br>在属性的右边，冒号后面即属性的值，它从指定属性的众多外观中选择一个值（我们除了 red 之外还有很多属性值可以用于 color ）。</p>
-<h3 id="1-常见基础样式"><a href="#1-常见基础样式" class="headerlink" title="1.常见基础样式"></a>1.常见基础样式</h3><ul>
-<li><p>基础：</p>
-<p>声明该边框的类型：display ：可选项如下</p>
-<p>​								flex灵活布局</p>
-<p>​								grid网格布局</p>
-<p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329162830851.png" alt="image-20230329162830851"></p>
-<p>​							</p>
-<ul>
-<li><p>通用:</p>
-<p>宽度:   width: 300px;（百分制也行），div默认居左，所以背景颜色随着宽度的改变也居左。</p>
-<p>最大宽度: max-width: 500px;</p>
-<p>​				（背景是不动的，主页面随着浏览器大小变化，有最大宽度的约束，内容看起来就不会过宽）</p>
-<p>内边距:   <strong>padding</strong></p>
-<p>​                padding-left&#x2F;right&#x2F;top&#x2F;bottom:20px;  </p>
-<p>​				padding:10px;（上下左右都是10）</p>
-<p>​				<a href="https://www.w3school.com.cn/cssref/pr_padding.asp">CSS padding 属性更多用法</a></p>
-<p>框架：<strong>border</strong></p>
-<p>​				框架为宽度50px的实心黑色，border: 50px <strong>solid</strong> black;</p>
-<p>外边距：   <strong>margin</strong>             </p>
-<p>​                水平居中:margin-left: auto; &amp;&amp; margin-right: auto;</p>
-<p>​				可用于块级标签，p、div等。【【【【【为什么不弄成auto后，p标签的行距会缩小？】】】】</p>
-<p>​                去除默认边框宽度：margin：0；（font-size：0是为了解决多余空白符的问题）</p>
-<p>​                缩小上方过大的宽度： margin-top:-25px;（需要来回调试）</p>
-<p>盒子大小：box-sizing</p>
-<p>​		定义了user agent应该如何计算一个元素的总宽度和总高度</p>
-<ul>
-<li><code>content-box</code> 是默认值。如果你设置一个元素的宽为 100px，那么这个元素的内容区会有 100px 宽，并且任何边框和内边距的宽度都会被增加到最后绘制出来的元素宽度中。</li>
-<li><code>border-box</code> 告诉浏览器：你想要设置的边框和内边距的值是包含在 width 内的。也就是说，如果你将一个元素的 width 设为 100px，那么这 100px 会包含它的 border 和 padding，内容区的实际宽度是 width 减去 (border + padding) 的值。大多数情况下，这使得我们更容易地设定一个元素的宽高。</li>
-</ul>
-</li>
-<li><p>文字相关:</p>
-<p>文本水平对齐：<strong>text-align</strong></p>
-<p>​	居中: text-align: <strong>center;</strong></p>
-<p>​	居左: text-align: <strong>left;</strong></p>
-<p>文本修饰符：<code>text-decoration</code> </p>
-<p>​    这个 CSS 属性是用于设置文本的修饰线外观的（下划线、上划线、贯穿线&#x2F;删除线 或 闪烁）</p>
-<p>​     它是 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-line"><code>text-decoration-line</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-color"><code>text-decoration-color</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-style"><code>text-decoration-style</code></a>, 和新出现的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-thickness"><code>text-decoration-thickness</code></a> 属性的缩写。</p>
-<p>文本对齐方式：<strong>text-align: center;</strong></p>
-<p>[CSS 布局 – 水平 &amp; 垂直对齐 | 菜鸟教程 (runoob.com)](<a href="https://www.runoob.com/css/css-align.html#:~:text=CSS">https://www.runoob.com/css/css-align.html#:~:text=CSS</a> 布局 - 水平 %26 垂直对齐 1 元素居中对齐,8 垂直居中 - 使用 position 和 transform 更多项目)</p>
-<p>字体: <strong>font-family:</strong> Impact,serif;</p>
-<p>​			主要&#x2F;备用两种字体【什么时候用到备用？防止浏览器里没有第一个字体，都没有就按默认字体渲染】</p>
-<p>字体大小：<strong>font-size：</strong>18px；</p>
-<p>字重：<strong>font-weight</strong>（字体粗细）</p>
-<p>行高：line-height</p>
-<p>斜体： font-style:italic;</p>
-<p>分割线：html的hr标签</p>
-<p>​				样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）</p>
-<p>​			（看起来会有凹陷效果）</p>
-<p>链接文字的颜色：a{color：black；}</p>
-<p>链接访问后：a:visited {  }</p>
-<p>链接上有鼠标悬停时：a:hover{}</p>
-<p>链接被点击时：a:active{}</p>
-</li>
-</ul>
-</li>
-<li><p>背景相关:</p>
-<p>背景颜色:background-color:</p>
-<p>背景图:background-image: url(<a href="https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg">https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg</a>);</p>
-</li>
-<li><p>盒子相关:</p>
-</li>
-</ul>
-<p>​				对块级元素进行强制内联状:display: inline-block;</p>
-<p>​				去除元素前端可能存在的空白符:<style>   div{font-size:0;}    </style></p>
-<p>​					</p>
-<blockquote>
-<p>​	【【Q1为什么不能直接用内联元素？】】</p>
-<p>​	【inline-block是元素具备了块级和内联元素的功能，inline最重要的一点就是:</p>
-<p>​	元素能够在一行展示，而inline元素所缺失的设置宽高，是block 元素的功能】</p>
-</blockquote>
-<blockquote>
-<p>​	【【Q2为什么用了i-b会导致，设置宽度时，总和必须小于100%？（否则会另起一行）】】</p>
-<p>​	【因为HTML 中的换行符、空格符、制表符等合并为空白符，字体大小不为 0 的情况下，</p>
-<pre><code> 空白符自然占据定的宽度，使用inline-block 会产生了元素间的空隙。】
-</code></pre>
-</blockquote>
-<blockquote>
-<p>​	【【Q3不想自己调试合适的宽度怎么办？】】</p>
-<p>​	【在写用了强制内联化的块级元素时，全部写在同一行，一个空格都不要加。比如<p>1</p><p>2</p>】</p>
-</blockquote>
-<blockquote>
-<p>​	【【Q4最佳解决办法是什么？】】</p>
-<p>​	【父元素设置font-size:0,子元素有需要可以另外设置font-size，</p>
-<p>​	 这样空白符因为font-size:0就不会占据宽度了】</p>
-</blockquote>
-<blockquote>
-<p>实例:</p>
-<p><a href="https://www.zhangxinxu.com/study/201011/img-blank-space.html">display:inline-block元素间换行符的空格间隙 </a></p>
-<p><a href="https://www.zhangxinxu.com/study/201011/img-font-size-clear-blank.html">font-size:0清除display:inline-block元素换行符间隙</a></p>
-</blockquote>
-<h3 id="2-style元素"><a href="#2-style元素" class="headerlink" title="2.style元素"></a><strong>2.style元素</strong></h3><ul>
-<li><p>单独写在css文件夹里，并在head里通过link来链接。 </p>
-<link rel="stylesheet" href="styles.css">
-</li>
-<li><p>用于给body里的某一种&#x2F;多种元素指定样式。</p>
-</li>
-</ul>
-<h3 id="3-多端样式归一化必加代码【【【【】】】】"><a href="#3-多端样式归一化必加代码【【【【】】】】" class="headerlink" title="3.多端样式归一化必加代码【【【【】】】】"></a><strong>3.多端样式归一化必加代码</strong>【【【【】】】】</h3><p>​    <meta name="viewport" content="width=device-width, initial-scale=1.0" /></p>
-<h2 id="框架相关层次"><a href="#框架相关层次" class="headerlink" title="框架相关层次"></a>框架相关层次</h2><p>margin：外边距</p>
-<p>border：框架</p>
-<p>outline：框架</p>
-<p>padding：内边距</p>
-<h5 id="border和outline的区别："><a href="#border和outline的区别：" class="headerlink" title="border和outline的区别："></a>border和outline的区别：</h5><p>1.border占用空间，outline不占用空间，不会影响元素的尺寸和位置。</p>
-<p>2.border 可应用于几乎所有有形的html元素，而 <strong>outline 是针对链接、表单控件和ImageMap等元素设计</strong>。从而另一个区别也可以推理出，那就是： outline 的效果将随元素的 focus 而自动出现，相应的由 blur 而自动消失。这些都是浏览器的默认行为，无需JavaScript配合CSS来控制。</p>
-<p>利用这些特性，我们常用outline来设置悬停的动态效果。之前一直困扰我的问题：hover加边框会导致元素定位和大小的改变，同时也会影响其他元素位置的改变，现在终于解决了</p>
-<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329124305228.png" alt="image-20230329124305228" style="zoom: 33%;" />
-]]></content>
-      <categories>
-        <category>code</category>
-        <category>note</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CSS学习笔记-2.1布局</title>
-    <url>/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note1/</url>
-    <content><![CDATA[<h1 id="2-1布局"><a href="#2-1布局" class="headerlink" title="2.1布局"></a>2.1布局</h1><h2 id="1-三种布局"><a href="#1-三种布局" class="headerlink" title="1.三种布局"></a>1.三种布局</h2><ol>
-<li><h3 id="灵活-x2F-弹性-x2F-伸缩布局flex"><a href="#灵活-x2F-弹性-x2F-伸缩布局flex" class="headerlink" title="灵活&#x2F;弹性&#x2F;伸缩布局flex"></a>灵活&#x2F;弹性&#x2F;伸缩布局flex</h3><p><a href="https://www.bilibili.com/video/BV1Lp4y1S7XM/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">五分钟掌握 css3 flex弹性布局</a></p>
-<p>Flex 布局教程：语法篇</p>
-<p><a href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
-<p>Flex 布局教程：实例篇</p>
-<p><a href="https://www.ruanyifeng.com/blog/2015/07/flex-examples.html">https://www.ruanyifeng.com/blog/2015/07/flex-examples.html</a></p>
-<p>小青蛙游戏学flex</p>
-<p><a href="http://flexboxfroggy.com/">Flexbox Froggy - A game for learning CSS flexbox</a></p>
-<h4 id="易错点："><a href="#易错点：" class="headerlink" title="易错点："></a>易错点：</h4><ol>
-<li><p>display：flex；</p>
-<p>常用于有高度的类（body也能用）。且不能用于有其它display需求的类。（如inline-block）。</p>
-</li>
-<li><p>主轴侧轴的改变</p>
-<p>当flex-derection的值改变时，两个轴也会跟着变，也就是说justify-content和align-items也要变。</p>
-</li>
-<li><p>flex的作用域</p>
-<p>只有所在的类，所在类的子类都不算。比如body里写了的flex，justify只能控制body的布局，想控制内部元素的布局就只能嵌套，在.div里也写flex。</p>
-</li>
-<li><p>什么时候改点，什么时候改div？</p>
-</li>
-</ol>
-<h4 id="知识点："><a href="#知识点：" class="headerlink" title="知识点："></a>知识点：</h4><p>1.布局原理：采用 Flex 布局的元素，称为容器。它的所有子元素自动成为容器成员，称为项目。</p>
-<p>2.易错点：父盒子设为 flex 后，子元素的float、clear和 vertical-align属性将失效。</p>
-<p>3.flex布局父项常见属性<br>            <strong>flex-direction：</strong>设置主轴的方	</p>
-<blockquote>
-<p>​	   row：行    column：柱子</p>
-</blockquote>
-<p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190849686.png" alt="image-20230329190849686"></p>
-<p>​			<strong>flex-wrap：</strong>设置子元素是否换行</p>
-<p>​						nowrap 不换行	(装不下会缩小子元素的宽度)<br>​						wrap 换行</p>
-<p>​			<strong>justify-content：</strong>设置主轴上的子元素排列方式【【【【【不分单行多行吗？】】】】】】</p>
-<p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190910922.png" alt="image-20230329190910922"></p>
-<p>​			<strong>align-items：</strong>设置侧轴上的子元素排列方式（单行）</p>
-<p>​						该属性是控制子项在侧轴上的排列方式 在子项为单行的时候使用<br>​						flex-start 从头部开始<br>​						flex-end 从尾部开始<br>​						center 居中显示<br>​						stretch 拉伸(不给宽度&#x2F;高度)</p>
-<p>​			<strong>align-content：</strong> 设置侧轴上的子元素的排列方式（多行）</p>
-<p>​				<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190910922.png" alt="image-20230329190910922"></p>
-<p>​			align-content 和align-items区别<br>​						align-items 适用于单行情况下， 只有上对齐、下对齐、居中和 拉伸<br>​						align-content适用多行换行的情况（单行无效）</p>
-<p>​			<strong>flex-flow：</strong>复合属性，相当于同时设置了 flex-direction 和 flex-wrap</p>
-<p>3.flex布局子项常见属性【少用】<br>            flex子项目占的份数<br>            align-self控制子项自己在侧轴的排列方式<br>            order属性定义子项的排列顺序（前后顺序）<br>4.flex属性<br>            flex 属性定义子项目分配剩余空间，用flex来表示占多少份数。</p>
-<p>​			<strong>【重点：flex：1；表示flex-grow1；&amp;&amp;  flex-shrink：1；</strong></p>
-<p>​			<strong>意味着如果盒子剩余的布局大就自适应缩小，反之就自适应增大】</strong></p>
-<p>5.align-self控制子项自己在侧轴上的排列方式【少用】<br>            align-self 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖 align-items 属性。<br>            默认值为 auto，表示继承父元素的 align-items 属性，如果没有父元素，则等同于 stretch。</p>
-</li>
-<li><h3 id="网格布局Grid"><a href="#网格布局Grid" class="headerlink" title="网格布局Grid"></a>网格布局Grid</h3><p><a href="https://www.runoob.com/css3/css-grid.html">CSS 网格布局 | 菜鸟教程 (runoob.com)</a></p>
-</li>
-<li><h3 id="浮动布局"><a href="#浮动布局" class="headerlink" title="浮动布局"></a>浮动布局</h3></li>
-</ol>
-<p>​		<a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Floats">浮动 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
-<p>​		比如报纸首字母脱离文档。图片格式选择为”环绕“。与flex互斥。</p>
-<p>其它布局：<a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout#%E6%8C%87%E5%8D%97">CSS 布局 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
-]]></content>
-      <categories>
-        <category>code</category>
-        <category>note</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CSS学习笔记-2.2flex布局实现</title>
-    <url>/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-Note2/</url>
-    <content><![CDATA[<h1 id="2-2实践"><a href="#2-2实践" class="headerlink" title="2.2实践"></a>2.2实践</h1><p><a href="https://www.bilibili.com/video/BV1Lp4y1S7XM/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">五分钟掌握 css3 flex弹性布局</a></p>
-<p>Flex 布局教程：语法篇</p>
-<p><a href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
-<p>Flex 布局教程：实例篇</p>
-<p><a href="https://www.ruanyifeng.com/blog/2015/07/flex-examples.html">https://www.ruanyifeng.com/blog/2015/07/flex-examples.html</a></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">  &lt;link  rel=&quot;stylesheet&quot; href=&quot;../CSS/实践二参考答案.css&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;!--</span><br><span class="line">/*1水平垂直居中*/</span><br><span class="line">/*2第一个点不动，第二个点用水平垂直flex-end*/</span><br><span class="line">/*3第一个点不动，第二个点水平垂直居中，第三个点用水平垂直flex-end*/</span><br><span class="line">/*4第一个第二个点用between分开，第三四个用垂直end且between*/</span><br><span class="line">/*5上一个的基础上加上一个水平垂直居中的*/</span><br><span class="line">/*6三个between / 自动换行且between / 挨个设置横纵轴位置*/</span><br><span class="line"></span><br><span class="line">/*1水平垂直居中*/</span><br><span class="line">/*2水平垂直flex-end*/</span><br><span class="line">/*3between*/</span><br><span class="line">/*4水平垂直且between*/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">以上内容，不用self无法实现</span><br><span class="line">--&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div class=&quot;first-face&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  &lt;div class=&quot;second-face&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;third-face&quot;&gt;</span><br><span class="line">  &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;fourth-face&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;fifth-face&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;sixth-face&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br><span class="line">&lt;!--【为什么写div的话，再写flex就没有用了？因为是块级元素，flex只能作用于内联样式得元素，所以要display：inline-block】--&gt;</span><br><span class="line">&lt;!--【【【【【【【为什么把dotdiv改成span后，除了只有一个点的，其它得一个点都没有？】】】】】--&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.first-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    align-items: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.second-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line">/*nth-child(n) 选择器：选择其父元素的第n个子元素*/</span><br><span class="line">.second-face .pip:nth-of-type(2) &#123;</span><br><span class="line">    align-self: flex-end;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.third-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.third-face .pip:nth-of-type(2) &#123;</span><br><span class="line">    align-self: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.third-face .pip:nth-of-type(3) &#123;</span><br><span class="line">    align-self: flex-end;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fourth-face, .sixth-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fourth-face .column, .sixth-face .column &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    flex-direction: column;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fifth-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fifth-face .column &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    flex-direction: column;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fifth-face .column:nth-of-type(2) &#123;</span><br><span class="line">    justify-content: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* OTHER STYLES */</span><br><span class="line"></span><br><span class="line">* &#123;</span><br><span class="line">    box-sizing: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">html, body &#123;</span><br><span class="line">    height: 100%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">body &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    align-items: center;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    vertical-align: center;</span><br><span class="line">    flex-wrap: wrap;</span><br><span class="line">    align-content: center;</span><br><span class="line">    font-family: &#x27;Open Sans&#x27;, sans-serif;</span><br><span class="line"></span><br><span class="line">    background: linear-gradient(top, #222, #333);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*这是什么选择器*/</span><br><span class="line">[class$=&quot;face&quot;] &#123;</span><br><span class="line">    margin: 16px;</span><br><span class="line">    padding: 4px;</span><br><span class="line"></span><br><span class="line">    background-color: #e7e7e7;</span><br><span class="line">    width: 104px;</span><br><span class="line">    height: 104px;</span><br><span class="line">    object-fit: contain;</span><br><span class="line"></span><br><span class="line">    /*insert 不会用*/</span><br><span class="line">    box-shadow:</span><br><span class="line">            inset 0 5px white,</span><br><span class="line">            inset 0 -5px #bbb,</span><br><span class="line">            inset 5px 0 #d7d7d7,</span><br><span class="line">            inset -5px 0 #d7d7d7;</span><br><span class="line"></span><br><span class="line">    border-radius: 10%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.pip &#123;</span><br><span class="line">    display: block;</span><br><span class="line">    width: 24px;</span><br><span class="line">    height: 24px;</span><br><span class="line">    border-radius: 50%;</span><br><span class="line">    margin: 4px;</span><br><span class="line"></span><br><span class="line">    background-color: #333;</span><br><span class="line">    box-shadow: inset 0 3px #111, inset 0 -3px #555;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>code</category>
-        <category>note</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title></title>
     <url>/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q0-ToDo/</url>
     <content><![CDATA[<hr>
-<hr>
-]]></content>
+<h2 id="今日疑问"><a href="#今日疑问" class="headerlink" title="今日疑问"></a>今日疑问</h2><h4 id="1-边距异常合并问题看不懂，重要？CSS-的两种盒模型-及边距异常合并问题"><a href="#1-边距异常合并问题看不懂，重要？CSS-的两种盒模型-及边距异常合并问题" class="headerlink" title="1.边距异常合并问题看不懂，重要？CSS 的两种盒模型 - 及边距异常合并问题"></a>1.边距异常合并问题看不懂，重要？<a href="https://zhuanlan.zhihu.com/p/110617108">CSS 的两种盒模型 - 及边距异常合并问题</a></h4><h4 id="2-盒子的知识点包括边框边距？好像不包括。"><a href="#2-盒子的知识点包括边框边距？好像不包括。" class="headerlink" title="2.盒子的知识点包括边框边距？好像不包括。"></a>2.盒子的知识点包括边框边距？好像不包括。</h4><h4 id="3-边框是盒子的边框，为什么平时不写盒子也能用边框和边距？有默认设置？"><a href="#3-边框是盒子的边框，为什么平时不写盒子也能用边框和边距？有默认设置？" class="headerlink" title="3.边框是盒子的边框，为什么平时不写盒子也能用边框和边距？有默认设置？"></a>3.边框是盒子的边框，为什么平时不写盒子也能用边框和边距？有默认设置？</h4><h4 id="4-position属性用于指定一个元素在文档中的定位方式，文档指什么？好像是父元素。"><a href="#4-position属性用于指定一个元素在文档中的定位方式，文档指什么？好像是父元素。" class="headerlink" title="4.position属性用于指定一个元素在文档中的定位方式，文档指什么？好像是父元素。"></a>4.position属性用于指定一个元素在文档中的定位方式，文档指什么？好像是父元素。</h4><h4 id="5-元素其实是使用-top、bottom、left-和-right-属性定位的。但是，除非首先设置了-position-属性，否则这些属性将不起作用。"><a href="#5-元素其实是使用-top、bottom、left-和-right-属性定位的。但是，除非首先设置了-position-属性，否则这些属性将不起作用。" class="headerlink" title="5.元素其实是使用 top、bottom、left 和 right 属性定位的。但是，除非首先设置了 position 属性，否则这些属性将不起作用。"></a>5.元素其实是使用 top、bottom、left 和 right 属性定位的。但是，除非首先设置了 position 属性，否则这些属性将不起作用。</h4><h4 id="由于有默认的station，所以可以直接使用top等方式调整。"><a href="#由于有默认的station，所以可以直接使用top等方式调整。" class="headerlink" title="由于有默认的station，所以可以直接使用top等方式调整。"></a>由于有默认的station，所以可以直接使用top等方式调整。</h4><h4 id="那height、wide等，为什么也能直接使用-top、bottom、left-和-right-属性是用来控制什么东西的？"><a href="#那height、wide等，为什么也能直接使用-top、bottom、left-和-right-属性是用来控制什么东西的？" class="headerlink" title="那height、wide等，为什么也能直接使用? top、bottom、left 和 right 属性是用来控制什么东西的？"></a>那height、wide等，为什么也能直接使用? top、bottom、left 和 right 属性是用来控制什么东西的？</h4><h4 id="衍生ToDo：确定一下各种控制定位的属性，主语都是什么。"><a href="#衍生ToDo：确定一下各种控制定位的属性，主语都是什么。" class="headerlink" title="衍生ToDo：确定一下各种控制定位的属性，主语都是什么。"></a>衍生ToDo：确定一下各种控制定位的属性，主语都是什么。</h4><h4 id="6-静态定位的元素不受-top、bottom、left-和-right-属性的影响。position-static-的元素不会以任何特殊方式定位；它始终根据页面的正常流进行定位（什么叫特殊方式。什么叫正常流程）"><a href="#6-静态定位的元素不受-top、bottom、left-和-right-属性的影响。position-static-的元素不会以任何特殊方式定位；它始终根据页面的正常流进行定位（什么叫特殊方式。什么叫正常流程）" class="headerlink" title="6.静态定位的元素不受 top、bottom、left 和 right 属性的影响。position: static; 的元素不会以任何特殊方式定位；它始终根据页面的正常流进行定位（什么叫特殊方式。什么叫正常流程）"></a>6.静态定位的元素不受 top、bottom、left 和 right 属性的影响。position: static; 的元素不会以任何特殊方式定位；它始终根据页面的正常流进行定位（什么叫特殊方式。什么叫正常流程）</h4><h4 id="7-粘性定位的机制、流程（网站广告的原理）"><a href="#7-粘性定位的机制、流程（网站广告的原理）" class="headerlink" title="7.粘性定位的机制、流程（网站广告的原理）"></a>7.粘性定位的机制、流程（网站广告的原理）</h4><h4 id="8-如果relative属性所在的元素附近有？？元素，它的相对定位会被（怎样？）影响。"><a href="#8-如果relative属性所在的元素附近有？？元素，它的相对定位会被（怎样？）影响。" class="headerlink" title="8.如果relative属性所在的元素附近有？？元素，它的相对定位会被（怎样？）影响。"></a>8.如果relative属性所在的元素附近有？？元素，它的相对定位会被（怎样？）影响。</h4><h4 id="9-053CSS之position属性介绍-哔哩哔哩-bilibili太快了，从相对定位就跟不上了"><a href="#9-053CSS之position属性介绍-哔哩哔哩-bilibili太快了，从相对定位就跟不上了" class="headerlink" title="9.053CSS之position属性介绍_哔哩哔哩_bilibili太快了，从相对定位就跟不上了"></a>9.<a href="https://www.bilibili.com/video/BV1Fz411b7bm/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">053CSS之position属性介绍_哔哩哔哩_bilibili</a>太快了，从相对定位就跟不上了</h4>]]></content>
   </entry>
   <entry>
     <title>前端英文列表</title>
@@ -3083,13 +2760,362 @@
       </tags>
   </entry>
   <entry>
+    <title>CSS学习笔记-1.1基础</title>
+    <url>/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/</url>
+    <content><![CDATA[<h1 id="CSS学习笔记-1-1基础（基本样式与盒子模型）"><a href="#CSS学习笔记-1-1基础（基本样式与盒子模型）" class="headerlink" title="CSS学习笔记-1.1基础（基本样式与盒子模型）"></a>CSS学习笔记-1.1基础（基本样式与盒子模型）</h1><p>注释:</p>
+<p>​	CSS:&#x2F;**&#x2F;</p>
+<p>技巧：</p>
+<p>​	先写html框架，再考虑CSS</p>
+<p>CSS游戏：</p>
+<p>​	<a href="https://frontend30.com/css-selectors-cheatsheet/">CSS Selectors Cheatsheet - FrontEnd30</a></p>
+<p>学完后形成体系：</p>
+<img src="C:\$RECYCLE.BIN\S-1-5-21-3551453893-2823794770-815658977-1001\$R4HZJ7D.png" alt="$R4HZJ7D" style="zoom: 33%;" />
+
+<h3 id="0-CSS基本样式"><a href="#0-CSS基本样式" class="headerlink" title="0.CSS基本样式"></a>0.CSS基本样式</h3><p>选择器（Selector）<br>HTML 元素的名称位于规则集开始。它选择了一个或多个需要添加样式的元素）。要给不同元素添加样式只需要更改选择器就行了。可以用固定标签名，或.+自定义名称来进行选择。如用.menu来选择class属性为menu的盒子。</p>
+<p>通配符选择器作用：给当前界面上所有的标签设置属性。（*的意思是选中所有的标签）</p>
+<p>声明（Declaration）<br>一个单独的规则，如 color: red; 用来指定添加样式元素的属性。</p>
+<p>属性（Properties）<br>改变 HTML 元素样式的途径。（本例中 color 就是 <p> 元素的属性。）CSS 中，由编写人员决定修改哪个属性以改变规则。</p>
+<p>属性的值（Property value）<br>在属性的右边，冒号后面即属性的值，它从指定属性的众多外观中选择一个值（我们除了 red 之外还有很多属性值可以用于 color ）。</p>
+<h3 id="1-常见基础样式"><a href="#1-常见基础样式" class="headerlink" title="1.常见基础样式"></a>1.常见基础样式</h3><ul>
+<li><p>基础：</p>
+<p>声明该边框的类型：display ：可选项如下</p>
+<p>​								flex灵活布局</p>
+<p>​								grid网格布局</p>
+<p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329162830851.png" alt="image-20230329162830851"></p>
+<p>​							</p>
+<ul>
+<li><p>通用（框架相关）:</p>
+<p>宽度:   width: 300px;（百分制也行），div默认居左，所以背景颜色随着宽度的改变也居左。</p>
+<p>最大宽度: max-width: 500px;</p>
+<p>​				（背景是不动的，主页面随着浏览器大小变化，有最大宽度的约束，内容看起来就不会过宽）</p>
+<p>内边距:   <strong>padding</strong></p>
+<p>​                padding-left&#x2F;right&#x2F;top&#x2F;bottom:20px;  </p>
+<p>​				padding:10px;（上下左右都是10）</p>
+<p>​				<a href="https://www.w3school.com.cn/cssref/pr_padding.asp">CSS padding 属性更多用法</a></p>
+<p>框架：<strong>border</strong></p>
+<p>​				框架为宽度50px的实心黑色，border: 50px <strong>solid</strong> black;</p>
+<p>外边距：   <strong>margin</strong></p>
+<p>​                水平居中:margin-left: auto; &amp;&amp; margin-right: auto;</p>
+<p>​				可用于块级标签，p、div等。</p>
+<p>​                去除默认边框宽度：margin：0；（font-size：0是为了解决多余空白符的问题）</p>
+<p>​                缩小上方过大的宽度： margin-top:-25px;（需要来回调试）</p>
+<p>盒子大小：box-sizing</p>
+<p>​		定义了user agent应该如何计算一个元素的总宽度和总高度</p>
+<ul>
+<li><code>content-box</code> 是默认值。如果你设置一个元素的宽为 100px，那么这个元素的内容区会有 100px 宽，并且任何边框和内边距的宽度都会被增加到最后绘制出来的元素宽度中。</li>
+<li><code>border-box</code> 告诉浏览器：你想要设置的边框和内边距的值是包含在 width 内的。也就是说，如果你将一个元素的 width 设为 100px，那么这 100px 会包含它的 border 和 padding，内容区的实际宽度是 width 减去 (border + padding) 的值。大多数情况下，这使得我们更容易地设定一个元素的宽高。</li>
+</ul>
+</li>
+<li><p>文字相关:</p>
+<p>文本水平对齐：<strong>text-align</strong></p>
+<p>​	居中: text-align: <strong>center;</strong></p>
+<p>​	居左: text-align: <strong>left;</strong></p>
+<p>文本修饰符：<code>text-decoration</code> </p>
+<p>​    这个 CSS 属性是用于设置文本的修饰线外观的（下划线、上划线、贯穿线&#x2F;删除线 或 闪烁）</p>
+<p>​     它是 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-line"><code>text-decoration-line</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-color"><code>text-decoration-color</code></a>, <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-style"><code>text-decoration-style</code></a>, 和新出现的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-thickness"><code>text-decoration-thickness</code></a> 属性的缩写。</p>
+<p>文本对齐方式：<strong>text-align: center;</strong></p>
+<p>[CSS 布局 – 水平 &amp; 垂直对齐 | 菜鸟教程 (runoob.com)](<a href="https://www.runoob.com/css/css-align.html#:~:text=CSS">https://www.runoob.com/css/css-align.html#:~:text=CSS</a> 布局 - 水平 %26 垂直对齐 1 元素居中对齐,8 垂直居中 - 使用 position 和 transform 更多项目)</p>
+<p>字体: <strong>font-family:</strong> Impact,serif;</p>
+<p>​			主要&#x2F;备用两种字体【什么时候用到备用？防止浏览器里没有第一个字体，都没有就按默认字体渲染】</p>
+<p>字体大小：<strong>font-size：</strong>18px；</p>
+<p>字重：<strong>font-weight</strong>（字体粗细）</p>
+<p>行高：line-height</p>
+<p>斜体： font-style:italic;</p>
+<p>分割线：html的hr标签</p>
+<p>​				样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）</p>
+<p>​			（看起来会有凹陷效果）</p>
+<p>链接文字的颜色：a{color：black；}</p>
+<p>链接访问后：a:visited {  }</p>
+<p>链接上有鼠标悬停时：a:hover{}</p>
+<p>链接被点击时：a:active{}</p>
+</li>
+</ul>
+</li>
+<li><p>背景相关:</p>
+<p>背景颜色:background-color:</p>
+<p>背景图:background-image: url(<a href="https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg">https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg</a>);</p>
+</li>
+<li><p>盒子相关:</p>
+</li>
+</ul>
+<p>​				对块级元素进行强制内联状:display: inline-block;</p>
+<p>​				去除元素前端可能存在的空白符:<style>   div{font-size:0;}    </style></p>
+<p>​					</p>
+<blockquote>
+<p>​	【【Q1为什么不能直接用内联元素？】】</p>
+<p>​	【inline-block是元素具备了块级和内联元素的功能，inline最重要的一点就是:</p>
+<p>​	元素能够在一行展示，而inline元素所缺失的设置宽高，是block 元素的功能】</p>
+</blockquote>
+<blockquote>
+<p>​	【【Q2为什么用了i-b会导致，设置宽度时，总和必须小于100%？（否则会另起一行）】】</p>
+<p>​	【因为HTML 中的换行符、空格符、制表符等合并为空白符，字体大小不为 0 的情况下，</p>
+<pre><code> 空白符自然占据定的宽度，使用inline-block 会产生了元素间的空隙。】
+</code></pre>
+</blockquote>
+<blockquote>
+<p>​	【【Q3不想自己调试合适的宽度怎么办？】】</p>
+<p>​	【在写用了强制内联化的块级元素时，全部写在同一行，一个空格都不要加。比如<p>1</p><p>2</p>】</p>
+</blockquote>
+<blockquote>
+<p>​	【【Q4最佳解决办法是什么？】】</p>
+<p>​	【父元素设置font-size:0,子元素有需要可以另外设置font-size，</p>
+<p>​	 这样空白符因为font-size:0就不会占据宽度了】</p>
+</blockquote>
+<blockquote>
+<p>实例:</p>
+<p><a href="https://www.zhangxinxu.com/study/201011/img-blank-space.html">display:inline-block元素间换行符的空格间隙 </a></p>
+<p><a href="https://www.zhangxinxu.com/study/201011/img-font-size-clear-blank.html">font-size:0清除display:inline-block元素换行符间隙</a></p>
+</blockquote>
+<h3 id="2-style元素"><a href="#2-style元素" class="headerlink" title="2.style元素"></a><strong>2.style元素</strong></h3><ul>
+<li><p>单独写在css文件夹里，并在head里通过link来链接。 </p>
+<link rel="stylesheet" href="styles.css">
+</li>
+<li><p>用于给body里的某一种&#x2F;多种元素指定样式。</p>
+</li>
+</ul>
+<h3 id="3-多端样式归一化必加代码【【【【】】】】"><a href="#3-多端样式归一化必加代码【【【【】】】】" class="headerlink" title="3.多端样式归一化必加代码【【【【】】】】"></a><strong>3.多端样式归一化必加代码</strong>【【【【】】】】</h3><p>​    <meta name="viewport" content="width=device-width, initial-scale=1.0" /></p>
+]]></content>
+      <categories>
+        <category>code</category>
+        <category>note</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CSS学习笔记-1.3实践</title>
-    <url>/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-Note3/</url>
-    <content><![CDATA[<h1 id="1-3实践"><a href="#1-3实践" class="headerlink" title="1.3实践"></a>1.3实践</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">  	&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  	&lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">    &lt;title&gt;Cafe Menu&lt;/title&gt;</span><br><span class="line">    &lt;link href=&quot;../CSS/咖啡.css&quot; rel=&quot;stylesheet&quot;&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;menu&quot;&gt;</span><br><span class="line">      &lt;main&gt;</span><br><span class="line">        &lt;h1&gt;CAMPER CAFE&lt;/h1&gt;</span><br><span class="line">        &lt;p class=&quot;established&quot;&gt;Est. 2020&lt;/p&gt;</span><br><span class="line">        &lt;hr&gt;</span><br><span class="line">        &lt;section&gt;</span><br><span class="line">          &lt;h2&gt;Coffee&lt;/h2&gt;</span><br><span class="line">          &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg&quot; alt=&quot;coffee icon&quot;/&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;French Vanilla&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.00&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;Caramel Macchiato&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.75&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;Pumpkin Spice&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.50&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;Hazelnut&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;4.00&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;Mocha&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;4.50&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">        &lt;/section&gt;</span><br><span class="line">        &lt;section&gt;</span><br><span class="line">          &lt;h2&gt;Desserts&lt;/h2&gt;</span><br><span class="line">          &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg&quot; alt=&quot;pie icon&quot;/&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;dessert&quot;&gt;Donut&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;1.50&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;dessert&quot;&gt;Cherry Pie&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;2.75&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;dessert&quot;&gt;Cheesecake&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.00&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;dessert&quot;&gt;Cinnamon Roll&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;2.50&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">        &lt;/section&gt;</span><br><span class="line">      &lt;/main&gt;</span><br><span class="line">      &lt;hr class=&quot;bottom-line&quot;&gt;</span><br><span class="line">      &lt;footer&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">          &lt;a href=&quot;https://www.freecodecamp.org&quot; target=&quot;_blank&quot;&gt;Visit our website&lt;/a&gt;</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">        &lt;p class=&quot;address&quot;&gt;123 Free Code Camp Drive&lt;/p&gt;</span><br><span class="line">      &lt;/footer&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+    <url>/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-2%E5%AE%9E%E8%B7%B5%EF%BC%88%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F%EF%BC%89/</url>
+    <content><![CDATA[<h1 id="CSS学习笔记-1-3实践"><a href="#CSS学习笔记-1-3实践" class="headerlink" title="CSS学习笔记-1.3实践"></a>CSS学习笔记-1.3实践</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">  	&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  	&lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">    &lt;title&gt;Cafe Menu&lt;/title&gt;</span><br><span class="line">    &lt;link href=&quot;../CSS/咖啡.css&quot; rel=&quot;stylesheet&quot;&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;menu&quot;&gt;</span><br><span class="line">      &lt;main&gt;</span><br><span class="line">        &lt;h1&gt;CAMPER CAFE&lt;/h1&gt;</span><br><span class="line">        &lt;p class=&quot;established&quot;&gt;Est. 2020&lt;/p&gt;</span><br><span class="line">        &lt;hr&gt;</span><br><span class="line">        &lt;section&gt;</span><br><span class="line">          &lt;h2&gt;Coffee&lt;/h2&gt;</span><br><span class="line">          &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg&quot; alt=&quot;coffee icon&quot;/&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;French Vanilla&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.00&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;Caramel Macchiato&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.75&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;Pumpkin Spice&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.50&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;Hazelnut&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;4.00&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;Mocha&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;4.50&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">        &lt;/section&gt;</span><br><span class="line">        &lt;section&gt;</span><br><span class="line">          &lt;h2&gt;Desserts&lt;/h2&gt;</span><br><span class="line">          &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg&quot; alt=&quot;pie icon&quot;/&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;dessert&quot;&gt;Donut&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;1.50&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;dessert&quot;&gt;Cherry Pie&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;2.75&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;dessert&quot;&gt;Cheesecake&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.00&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;dessert&quot;&gt;Cinnamon Roll&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;2.50&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">        &lt;/section&gt;</span><br><span class="line">      &lt;/main&gt;</span><br><span class="line">      &lt;hr class=&quot;bottom-line&quot;&gt;</span><br><span class="line">      &lt;footer&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">          &lt;a href=&quot;https://www.freecodecamp.org&quot; target=&quot;_blank&quot;&gt;Visit our website&lt;/a&gt;</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">        &lt;p class=&quot;address&quot;&gt;123 Free Code Camp Drive&lt;/p&gt;</span><br><span class="line">      &lt;/footer&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
 
 
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);</span><br><span class="line">  font-family: sans-serif;</span><br><span class="line">  padding: 20px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">h1 &#123;</span><br><span class="line">  font-size: 40px;</span><br><span class="line">  margin-top: 0;</span><br><span class="line">  margin-bottom: 15px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">h2 &#123;</span><br><span class="line">  font-size: 30px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.established &#123;</span><br><span class="line">  font-style: italic;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">h1, h2, p &#123;</span><br><span class="line">  text-align: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.menu &#123;</span><br><span class="line">  width: 80%;</span><br><span class="line">  background-color: burlywood;</span><br><span class="line">  margin-left: auto;</span><br><span class="line">  margin-right: auto;</span><br><span class="line">  padding: 20px;</span><br><span class="line">  max-width: 500px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">img &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  margin-left: auto;</span><br><span class="line">  margin-right: auto;</span><br><span class="line">  margin-top: -25;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">hr &#123;</span><br><span class="line">  height: 2px;</span><br><span class="line">  background-color: brown;</span><br><span class="line">  border-color: brown;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.bottom-line &#123;</span><br><span class="line">  margin-top: 25px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">h1, h2 &#123;</span><br><span class="line">  font-family: Impact, serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.item p &#123;</span><br><span class="line">  display: inline-block;</span><br><span class="line">  margin-top: 5px;</span><br><span class="line">  margin-bottom: 5px;</span><br><span class="line">  font-size: 18px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.flavor, .dessert &#123;</span><br><span class="line">  text-align: left;</span><br><span class="line">  width: 75%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.price &#123;</span><br><span class="line">  text-align: right;</span><br><span class="line">  width: 25%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* FOOTER */</span><br><span class="line"></span><br><span class="line">footer &#123;</span><br><span class="line">  font-size: 14px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.address &#123;</span><br><span class="line">  margin-bottom: 5px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a &#123;</span><br><span class="line">  color: black;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a:visited &#123;</span><br><span class="line">  color: black;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a:hover &#123;</span><br><span class="line">  color: brown;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a:active &#123;</span><br><span class="line">  color: brown;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>code</category>
+        <category>note</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSS学习笔记-1.2选择器</title>
+    <url>/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-2%E9%80%89%E6%8B%A9%E5%99%A8/</url>
+    <content><![CDATA[<h1 id="CSS学习笔记-2-2选择器"><a href="#CSS学习笔记-2-2选择器" class="headerlink" title="CSS学习笔记-2.2选择器"></a>CSS学习笔记-2.2选择器</h1><h4 id="选择器字典"><a href="#选择器字典" class="headerlink" title="选择器字典"></a>选择器字典</h4><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Attribute_selectors">属性选择器 - CSS：层叠样式表 | MDN (mozilla.org)</a></p>
+<p><a href="https://www.ruanyifeng.com/blog/2009/03/css_selectors.html">CSS选择器笔记 - 阮一峰的网络日志 (ruanyifeng.com)</a></p>
+<p><a href="https://frontend30.com/css-selectors-cheatsheet/">CSS Selectors Cheatsheet - FrontEnd30</a></p>
+<h4 id="选择器的优先级"><a href="#选择器的优先级" class="headerlink" title="选择器的优先级"></a>选择器的优先级</h4><p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230401185155310.png" alt="image-20230401185155310"></p>
+<h4 id="选择器的构成"><a href="#选择器的构成" class="headerlink" title="选择器的构成"></a>选择器的构成</h4><p>选择器分为符号和框架</p>
+<p>符号：＄ ~ # ^等（可组合到框架中）</p>
+<p>框架：[ ] , nth-of-child等 </p>
+<h2 id="一-基本选择器"><a href="#一-基本选择器" class="headerlink" title="一.基本选择器"></a>一.基本选择器</h2><h3 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h3><ol>
+<li><h6 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h6><ul>
+<li>#id</li>
+</ul>
+</li>
+<li><h6 id="易错点"><a href="#易错点" class="headerlink" title="易错点"></a>易错点</h6><ul>
+<li>id不能有任何数字</li>
+</ul>
+</li>
+</ol>
+<h3 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h3><p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404152420883.png" alt="image-20230404152420883" style="zoom: 50%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404152441816.png" alt="image-20230404152441816" style="zoom:50%;" /></p>
+<h6 id=""><a href="#" class="headerlink" title=""></a><img src="C:\Users\11096\Documents\WeChat Files\wxid_xfl56vvd0cvm22\FileStorage\Temp\1680587935181.png" alt="1680587935181" style="zoom:50%;" /></h6><p>元素[属性1] [属性2]</p>
+<ul>
+<li>同时有两个选择的元素</li>
+</ul>
+<p>元素[属性&#x3D;值] 	</p>
+<ul>
+<li>属性的值&#x3D;值的元素</li>
+<li>a[href&#x3D;”<a href="https://example.org"]">https://example.org&quot;]</a></li>
+</ul>
+<p>元素[属性^&#x3D;开头值]</p>
+<ul>
+<li>[attr^&#x3D;value]：表示带有以 <em>attr</em> 命名的属性，且属性值是以 <em>value</em> 开头的元素。</li>
+</ul>
+<p>元素[属性$&#x3D;结尾值]</p>
+<ul>
+<li><p>属性的值的结尾是”结尾值“的元素。</p>
+</li>
+<li><p>a[href$&#x3D;”.org”]：存在 href 属性并且属性值结尾是”.org”的 <a> 元素</p>
+</li>
+</ul>
+<p>元素[属性*&#x3D;”值“]</p>
+<ul>
+<li>属性的值包含”值“的元素</li>
+</ul>
+<p>元素[属性~&#x3D;值]</p>
+<ul>
+<li><p>属性的值包含”值“的元素，该属性是一个以空格作为分隔的值列表</p>
+</li>
+<li><p>a[class~&#x3D;”logo”]：存在 class 属性并且属性值包含单词”logo”的<a>元素</p>
+</li>
+</ul>
+<p>元素[       i]</p>
+<ul>
+<li>在属性选择器的右方括号前添加一个用空格隔开的字母 <code>i</code>（或 <code>I</code>），可以在匹配属性值时忽略大小写（支持 ASCII 字符范围之内的字母）。</li>
+</ul>
+<p>元素[		s]</p>
+<ul>
+<li>在属性选择器的右方括号前添加一个用空格隔开的字母 <code>s</code>（或 <code>S</code>），可以在匹配属性值时区分大小写（支持 ASCII 字符范围之内的字母）。</li>
+</ul>
+<h3 id="3-元素选择器"><a href="#3-元素选择器" class="headerlink" title="3.元素选择器"></a>3.元素选择器</h3><h4 id="通用元素选择器"><a href="#通用元素选择器" class="headerlink" title="通用元素选择器"></a>通用元素选择器</h4><ul>
+<li></li>
+</ul>
+<p>**【【【【【【没有找到】】】】】】】</p>
+<h4 id="同级元素通用选择器"><a href="#同级元素通用选择器" class="headerlink" title="同级元素通用选择器"></a>同级元素通用选择器</h4><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404151520256.png" alt="image-20230404151520256" style="zoom:50%;" />
+
+<h4 id="多元素的组合选择器"><a href="#多元素的组合选择器" class="headerlink" title="多元素的组合选择器"></a>多元素的组合选择器</h4><img src="C:\Users\11096\Documents\WeChat Files\wxid_xfl56vvd0cvm22\FileStorage\Temp\1680592298848.png" alt="1680592298848" style="zoom: 50%;" />
+
+<h2 id="二-关系型选择器"><a href="#二-关系型选择器" class="headerlink" title="二.关系型选择器"></a>二.关系型选择器</h2><p>子选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404132255364.png" alt="image-20230404132255364" style="zoom:50%;" /></p>
+<p>后代选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404132326607.png" alt="image-20230404132326607" style="zoom: 50%;" /></p>
+<p>相邻兄弟选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404133357624.png" alt="image-20230404133357624" style="zoom:50%;" /></p>
+<p>通用兄弟选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404133450743.png" alt="image-20230404133450743" style="zoom:50%;" /></p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Column_combinator">列组合器</a> </p>
+<p><code>||</code> 组合器选择属于某个表格行的节点。</p>
+<p><strong>语法：</strong><code>A || B</code></p>
+<p><strong>例子：</strong><code>col || td</code> 会匹配所有 作用域内的 &#96;](<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/td">https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/td</a>) 元素。</p>
+<p>独子选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404133754657.png" alt="image-20230404133754657" style="zoom:50%;" />		a 表示选择a元素的独子，b表示如果b是独子则被选择</p>
+<p>第 N 个最后一个子选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404134515253.png" alt="image-20230404134515253" style="zoom:50%;" /></p>
+<p>首项选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404134548820.png" alt="image-20230404134548820" style="zoom:50%;" />可以根据元素、属性进行选择</p>
+<p>尾项选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404134901176.png" alt="image-20230404134901176" style="zoom:50%;" />尾属性的class不等于x则不选任何东西</p>
+<h2 id="三-伪类选择器"><a href="#三-伪类选择器" class="headerlink" title="三.伪类选择器"></a>三.伪类选择器</h2><p>用户界面伪类选择器</p>
+<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404150313528.png" alt="image-20230404150313528" style="zoom: 50%;" />
+
+<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404150546942.png" alt="image-20230404150546942" style="zoom:50%;" />
+
+<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404152535460.png" alt="image-20230404152535460" style="zoom:50%;" />
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">两个写法相同的选择器，意思为子元素的父元素的第n个子元素</span><br><span class="line">父元素 子元素：nth-child(1)</span><br><span class="line">父元素 子元素：first-child</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/*意思是.dot的父元素的第二个孩子*/</span><br><span class="line">.bg2 .dot:nth-child(2)&#123;</span><br><span class="line">    align-self: flex-end;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>反选伪类选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404135618254.png" alt="image-20230404135618254" style="zoom:50%;" /></p>
+<p>看不懂</p>
+<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404152643373.png" alt="image-20230404152643373" style="zoom: 50%;" />
+
+<h2 id="四-伪元素选择器"><a href="#四-伪元素选择器" class="headerlink" title="四.伪元素选择器"></a>四.伪元素选择器</h2><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404150514659.png" alt="image-20230404150514659" style="zoom:50%;" />
+
+
+
+<h2 id="五-易错点"><a href="#五-易错点" class="headerlink" title="五.易错点"></a>五.易错点</h2><p>1.~：写在[ ]里表示字符串匹配，匹配到就选择。写在[ ]外表示通用兄弟选择器。</p>
+]]></content>
+      <categories>
+        <category>code</category>
+        <category>note</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSS学习笔记-2.1布局</title>
+    <url>/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-1%E5%B8%83%E5%B1%80/</url>
+    <content><![CDATA[<h1 id="CSS学习笔记-2-1布局-三种重要布局及其它布局"><a href="#CSS学习笔记-2-1布局-三种重要布局及其它布局" class="headerlink" title="CSS学习笔记-2.1布局-三种重要布局及其它布局"></a>CSS学习笔记-2.1布局-三种重要布局及其它布局</h1><p><a href="https://www.icourse163.org/learn/BFU-1003382003?tid=1469987444#/learn/content?type=detail&id=1253020763&sm=1">Web前端开发_中国大学MOOC(慕课) (icourse163.org)</a></p>
+<img src="C:\Users\11096\Documents\WeChat Files\wxid_xfl56vvd0cvm22\FileStorage\Temp\1680613753098.png" alt="1680613753098" style="zoom: 50%;" />
+
+<h2 id="1-元素布局"><a href="#1-元素布局" class="headerlink" title="1.元素布局"></a>1.元素布局</h2><ol>
+<li><h3 id="灵活-x2F-弹性-x2F-伸缩布局flex"><a href="#灵活-x2F-弹性-x2F-伸缩布局flex" class="headerlink" title="灵活&#x2F;弹性&#x2F;伸缩布局flex"></a>灵活&#x2F;弹性&#x2F;伸缩布局flex</h3><p><a href="https://www.bilibili.com/video/BV1Lp4y1S7XM/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">五分钟掌握 css3 flex弹性布局</a></p>
+<p>Flex 布局教程：语法篇</p>
+<p><a href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
+<p>Flex 布局教程：实例篇</p>
+<p><a href="https://www.ruanyifeng.com/blog/2015/07/flex-examples.html">https://www.ruanyifeng.com/blog/2015/07/flex-examples.html</a></p>
+<p>小青蛙游戏学flex</p>
+<p><a href="http://flexboxfroggy.com/">Flexbox Froggy - A game for learning CSS flexbox</a></p>
+<h4 id="易错点："><a href="#易错点：" class="headerlink" title="易错点："></a>易错点：</h4><ol>
+<li><p>display：flex；</p>
+<p>常用于有高度的类（body也能用）。且不能用于有其它display需求的类。（如inline-block）。</p>
+</li>
+<li><p>主轴侧轴的改变</p>
+<p>当flex-derection的值改变时，两个轴也会跟着变，也就是说justify-content和align-items也要变。</p>
+</li>
+<li><p>flex的作用域</p>
+<p>只有所在的类，所在类的子类都不算。比如body里写了的flex，justify只能控制body的布局，想控制内部元素的布局就只能嵌套，在.div里也写flex。</p>
+</li>
+<li><p>什么时候改点，什么时候改div？</p>
+</li>
+</ol>
+<h4 id="知识点："><a href="#知识点：" class="headerlink" title="知识点："></a>知识点：</h4><p>1.布局原理：采用 Flex 布局的元素，称为容器。它的所有子元素自动成为容器成员，称为项目。</p>
+<p>2.易错点：父盒子设为 flex 后，子元素的float、clear和 vertical-align属性将失效。</p>
+<p>3.flex布局父项常见属性<br>            <strong>flex-direction：</strong>设置主轴的方	</p>
+<blockquote>
+<p>​	   row：行    column：柱子</p>
+</blockquote>
+<p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190849686.png" alt="image-20230329190849686"></p>
+<p>​			<strong>flex-wrap：</strong>设置子元素是否换行</p>
+<p>​						nowrap 不换行	(装不下会缩小子元素的宽度)<br>​						wrap 换行</p>
+<p>​			<strong>justify-content：</strong>设置主轴上的子元素排列方式【【【【【不分单行多行吗？】】】】】】</p>
+<p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190910922.png" alt="image-20230329190910922"></p>
+<p>​			<strong>align-items：</strong>设置侧轴上的子元素排列方式（单行）</p>
+<p>​						该属性是控制子项在侧轴上的排列方式 在子项为单行的时候使用<br>​						flex-start 从头部开始<br>​						flex-end 从尾部开始<br>​						center 居中显示<br>​						stretch 拉伸(不给宽度&#x2F;高度)</p>
+<p>​			<strong>align-content：</strong> 设置侧轴上的子元素的排列方式（多行）</p>
+<p>​				<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190910922.png" alt="image-20230329190910922"></p>
+<p>​			align-content 和align-items区别<br>​						align-items 适用于单行情况下， 只有上对齐、下对齐、居中和 拉伸<br>​						align-content适用多行换行的情况（单行无效）</p>
+<p>​			<strong>flex-flow：</strong>复合属性，相当于同时设置了 flex-direction 和 flex-wrap</p>
+<p>3.flex布局子项常见属性【少用】<br>            flex子项目占的份数<br>            align-self控制子项自己在侧轴的排列方式<br>            order属性定义子项的排列顺序（前后顺序）<br>4.flex属性<br>            flex 属性定义子项目分配剩余空间，用flex来表示占多少份数。</p>
+<p>​			<strong>【重点：flex：1；表示flex-grow1；&amp;&amp;  flex-shrink：1；</strong></p>
+<p>​			<strong>意味着如果盒子剩余的布局大就自适应缩小，反之就自适应增大】</strong></p>
+<p>5.align-self控制子项自己在侧轴上的排列方式【少用】<br>            align-self 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖 align-items 属性。<br>            默认值为 auto，表示继承父元素的 align-items 属性，如果没有父元素，则等同于 stretch。</p>
+</li>
+<li><h3 id="网格布局Grid"><a href="#网格布局Grid" class="headerlink" title="网格布局Grid"></a>网格布局Grid</h3><p><a href="https://www.runoob.com/css3/css-grid.html">CSS 网格布局 | 菜鸟教程 (runoob.com)</a></p>
+</li>
+<li><h3 id="浮动布局"><a href="#浮动布局" class="headerlink" title="浮动布局"></a>浮动布局</h3></li>
+</ol>
+<p>​		<a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Floats">浮动 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
+<p>​		比如报纸首字母脱离文档。图片格式选择为”环绕“。与flex互斥。</p>
+<p>其它布局：<a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout#%E6%8C%87%E5%8D%97">CSS 布局 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
+<h1 id="2-定位"><a href="#2-定位" class="headerlink" title="2.定位"></a>2.定位</h1><h4 id="1-position属性"><a href="#1-position属性" class="headerlink" title="1.position属性"></a>1.position属性</h4><p><a href="https://www.w3school.com.cn/css/css_positioning.asp">CSS 布局 - position 属性 (w3school.com.cn)</a></p>
+<p>​	概念：</p>
+<p>​		<code>position</code> 属性规定应用于元素的定位方法的类型。</p>
+<p>​	五个不同的位置值：</p>
+<p>​		static：正常（默认）。</p>
+<p>​		relative（相对定位）：改变relation所在的元素，在该元素的父元素中的相对位置。</p>
+<p>​												易错点：如果附近有块级元素，它的相对定位会被影响。</p>
+<p>​		absolute（绝对定位）：	</p>
+<p>​		fixed（固定定位）：</p>
+<p>​		sticky（粘性定位）：根据用户的滚动位置进行定位。</p>
+<p>​											粘性元素根据滚动位置在相对（<code>relative</code>）和固定（<code>fixed</code>）之间切换。</p>
+<p>​											起先它会被相对定位，直到在视口中遇到给定的偏移位置为止 </p>
+<p>​											然后将其“粘贴”在适当的位置（比如 position:fixed）。</p>
+<p>​	index属性</p>
+<p>​			指定元素的堆栈顺序（哪个元素应放置在其他元素的前面或后面，正负都可）。</p>
+<h1 id="3-盒子模型"><a href="#3-盒子模型" class="headerlink" title="3.盒子模型"></a>3.盒子模型</h1><p><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model">盒模型 - 学习 Web 开发 | MDN</a></p>
+<h5 id="盒子种类"><a href="#盒子种类" class="headerlink" title="盒子种类:"></a>盒子种类:</h5><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404195037016.png" alt="image-20230404195037016" style="zoom:50%;" />
+
+<h5 id="两种盒模型的区别："><a href="#两种盒模型的区别：" class="headerlink" title="两种盒模型的区别："></a>两种盒模型的区别：</h5><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404195008921.png" alt="image-20230404195008921" style="zoom:50%;" />
+
+<h5 id="盒子相关的问题："><a href="#盒子相关的问题：" class="headerlink" title="盒子相关的问题："></a>盒子相关的问题：</h5><p>​		<a href="https://zhuanlan.zhihu.com/p/110617108">CSS 的两种盒模型 - 及边距异常合并问题</a></p>
+<h4 id="outline和border的区别"><a href="#outline和border的区别" class="headerlink" title="outline和border的区别"></a>outline和border的区别</h4><p>​	主要区别在于: </p>
+<p>​		1.应用场景:一般border能适用于任何元素的样式，outline一般用于表单组件(比如input&#x2F;textarea) </p>
+<p>​		2.特性不一样：border一般会被计算在元素的宽高大小里面，outline不会</p>
+<h3 id="相关层次图"><a href="#相关层次图" class="headerlink" title="相关层次图"></a>相关层次图</h3><p>margin：外边距</p>
+<p>border：边框</p>
+<p>outline：边框</p>
+<p>padding：内边距</p>
+<h5 id="border和outline的区别："><a href="#border和outline的区别：" class="headerlink" title="border和outline的区别："></a>border和outline的区别：</h5><p>1.border占用空间，outline不占用空间，不会影响元素的尺寸和位置。</p>
+<p>2.border 可应用于几乎所有有形的html元素，而 <strong>outline 是针对链接、表单控件和ImageMap等元素设计</strong>。从而另一个区别也可以推理出，那就是： outline 的效果将随元素的 focus 而自动出现，相应的由 blur 而自动消失。这些都是浏览器的默认行为，无需JavaScript配合CSS来控制。</p>
+<p>利用这些特性，我们常用outline来设置悬停的动态效果。之前一直困扰我的问题：hover加边框会导致元素定位和大小的改变，同时也会影响其他元素位置的改变，现在终于解决了。</p>
+<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329124305228.png" alt="image-20230329124305228" style="zoom: 33%;" />
+]]></content>
+      <categories>
+        <category>code</category>
+        <category>note</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSS学习笔记-2.2flex布局实现</title>
+    <url>/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-3%E5%AE%9E%E8%B7%B5%EF%BC%88flex%E5%B8%83%E5%B1%80%EF%BC%89/</url>
+    <content><![CDATA[<h1 id="CSS学习笔记-2-3实践"><a href="#CSS学习笔记-2-3实践" class="headerlink" title="CSS学习笔记-2.3实践"></a>CSS学习笔记-2.3实践</h1><p><a href="https://www.bilibili.com/video/BV1Lp4y1S7XM/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">五分钟掌握 css3 flex弹性布局</a></p>
+<p>Flex 布局教程：语法篇</p>
+<p><a href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
+<p>Flex 布局教程：实例篇</p>
+<p><a href="https://www.ruanyifeng.com/blog/2015/07/flex-examples.html">https://www.ruanyifeng.com/blog/2015/07/flex-examples.html</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">  &lt;link  rel=&quot;stylesheet&quot; href=&quot;../CSS/实践二参考答案.css&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;!--</span><br><span class="line">/*1水平垂直居中*/</span><br><span class="line">/*2第一个点不动，第二个点用水平垂直flex-end*/</span><br><span class="line">/*3第一个点不动，第二个点水平垂直居中，第三个点用水平垂直flex-end*/</span><br><span class="line">/*4第一个第二个点用between分开，第三四个用垂直end且between*/</span><br><span class="line">/*5上一个的基础上加上一个水平垂直居中的*/</span><br><span class="line">/*6三个between / 自动换行且between / 挨个设置横纵轴位置*/</span><br><span class="line"></span><br><span class="line">/*1水平垂直居中*/</span><br><span class="line">/*2水平垂直flex-end*/</span><br><span class="line">/*3between*/</span><br><span class="line">/*4水平垂直且between*/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">以上内容，不用self无法实现</span><br><span class="line">--&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div class=&quot;first-face&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  &lt;div class=&quot;second-face&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;third-face&quot;&gt;</span><br><span class="line">  &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;fourth-face&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;fifth-face&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;sixth-face&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div class=&quot;column&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">    &lt;span class=&quot;pip&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line"></span><br><span class="line">&lt;!--【为什么写div的话，再写flex就没有用了？因为是块级元素，flex只能作用于内联样式得元素，所以要display：inline-block】--&gt;</span><br><span class="line">&lt;!--【【【【【【【为什么把dotdiv改成span后，除了只有一个点的，其它得一个点都没有？】】】】】--&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.first-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    align-items: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.second-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line">/*nth-child(n) 选择器：选择其父元素的第n个子元素*/</span><br><span class="line">.second-face .pip:nth-of-type(2) &#123;</span><br><span class="line">    align-self: flex-end;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.third-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.third-face .pip:nth-of-type(2) &#123;</span><br><span class="line">    align-self: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.third-face .pip:nth-of-type(3) &#123;</span><br><span class="line">    align-self: flex-end;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fourth-face, .sixth-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fourth-face .column, .sixth-face .column &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    flex-direction: column;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fifth-face &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fifth-face .column &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    flex-direction: column;</span><br><span class="line">    justify-content: space-between;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.fifth-face .column:nth-of-type(2) &#123;</span><br><span class="line">    justify-content: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* OTHER STYLES */</span><br><span class="line"></span><br><span class="line">* &#123;</span><br><span class="line">    box-sizing: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">html, body &#123;</span><br><span class="line">    height: 100%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">body &#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    align-items: center;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    vertical-align: center;</span><br><span class="line">    flex-wrap: wrap;</span><br><span class="line">    align-content: center;</span><br><span class="line">    font-family: &#x27;Open Sans&#x27;, sans-serif;</span><br><span class="line"></span><br><span class="line">    background: linear-gradient(top, #222, #333);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*这是什么选择器*/</span><br><span class="line">[class$=&quot;face&quot;] &#123;</span><br><span class="line">    margin: 16px;</span><br><span class="line">    padding: 4px;</span><br><span class="line"></span><br><span class="line">    background-color: #e7e7e7;</span><br><span class="line">    width: 104px;</span><br><span class="line">    height: 104px;</span><br><span class="line">    object-fit: contain;</span><br><span class="line"></span><br><span class="line">    /*insert 不会用*/</span><br><span class="line">    box-shadow:</span><br><span class="line">            inset 0 5px white,</span><br><span class="line">            inset 0 -5px #bbb,</span><br><span class="line">            inset 5px 0 #d7d7d7,</span><br><span class="line">            inset -5px 0 #d7d7d7;</span><br><span class="line"></span><br><span class="line">    border-radius: 10%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.pip &#123;</span><br><span class="line">    display: block;</span><br><span class="line">    width: 24px;</span><br><span class="line">    height: 24px;</span><br><span class="line">    border-radius: 50%;</span><br><span class="line">    margin: 4px;</span><br><span class="line"></span><br><span class="line">    background-color: #333;</span><br><span class="line">    box-shadow: inset 0 3px #111, inset 0 -3px #555;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>

@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>CSS学习笔记-1.3实践 |  Pravite Home</title>
+      <title>CSS学习笔记-1.1基础 |  Pravite Home</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -57,7 +57,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-前端学习笔记/Q2-CSS-Note3"
+  id="post-前端学习笔记/Q2-CSS-1基本样式+盒子模型"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -68,7 +68,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  CSS学习笔记-1.3实践
+  CSS学习笔记-1.1基础
 </h1>
  
 
@@ -76,8 +76,8 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-Note3/" class="article-date">
-  <time datetime="2023-03-29T03:34:47.000Z" itemprop="datePublished">2023-03-29</time>
+      <a href="/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/" class="article-date">
+  <time datetime="2023-03-29T03:00:47.000Z" itemprop="datePublished">2023-03-29</time>
 </a> 
   <div class="article-category">
     <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
@@ -88,7 +88,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">710</span>
+            <span class="post-count">1.4k</span>
         </span>
     </span>
 
@@ -97,7 +97,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">4 分钟</span>
+            <span class="post-count">5 分钟</span>
         </span>
     </span>
 </div>
@@ -112,12 +112,118 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="1-3实践"><a href="#1-3实践" class="headerlink" title="1.3实践"></a>1.3实践</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">  	&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  	&lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">    &lt;title&gt;Cafe Menu&lt;/title&gt;</span><br><span class="line">    &lt;link href=&quot;../CSS/咖啡.css&quot; rel=&quot;stylesheet&quot;&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;menu&quot;&gt;</span><br><span class="line">      &lt;main&gt;</span><br><span class="line">        &lt;h1&gt;CAMPER CAFE&lt;/h1&gt;</span><br><span class="line">        &lt;p class=&quot;established&quot;&gt;Est. 2020&lt;/p&gt;</span><br><span class="line">        &lt;hr&gt;</span><br><span class="line">        &lt;section&gt;</span><br><span class="line">          &lt;h2&gt;Coffee&lt;/h2&gt;</span><br><span class="line">          &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg&quot; alt=&quot;coffee icon&quot;/&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;French Vanilla&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.00&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;Caramel Macchiato&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.75&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;Pumpkin Spice&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.50&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;Hazelnut&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;4.00&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;Mocha&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;4.50&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">        &lt;/section&gt;</span><br><span class="line">        &lt;section&gt;</span><br><span class="line">          &lt;h2&gt;Desserts&lt;/h2&gt;</span><br><span class="line">          &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg&quot; alt=&quot;pie icon&quot;/&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;dessert&quot;&gt;Donut&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;1.50&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;dessert&quot;&gt;Cherry Pie&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;2.75&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;dessert&quot;&gt;Cheesecake&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.00&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;dessert&quot;&gt;Cinnamon Roll&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;2.50&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">        &lt;/section&gt;</span><br><span class="line">      &lt;/main&gt;</span><br><span class="line">      &lt;hr class=&quot;bottom-line&quot;&gt;</span><br><span class="line">      &lt;footer&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">          &lt;a href=&quot;https://www.freecodecamp.org&quot; target=&quot;_blank&quot;&gt;Visit our website&lt;/a&gt;</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">        &lt;p class=&quot;address&quot;&gt;123 Free Code Camp Drive&lt;/p&gt;</span><br><span class="line">      &lt;/footer&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+  <h1 id="CSS学习笔记-1-1基础（基本样式与盒子模型）"><a href="#CSS学习笔记-1-1基础（基本样式与盒子模型）" class="headerlink" title="CSS学习笔记-1.1基础（基本样式与盒子模型）"></a>CSS学习笔记-1.1基础（基本样式与盒子模型）</h1><p>注释:</p>
+<p>​	CSS:&#x2F;**&#x2F;</p>
+<p>技巧：</p>
+<p>​	先写html框架，再考虑CSS</p>
+<p>CSS游戏：</p>
+<p>​	<a target="_blank" rel="noopener" href="https://frontend30.com/css-selectors-cheatsheet/">CSS Selectors Cheatsheet - FrontEnd30</a></p>
+<p>学完后形成体系：</p>
+<img src="C:\$RECYCLE.BIN\S-1-5-21-3551453893-2823794770-815658977-1001\$R4HZJ7D.png" alt="$R4HZJ7D" style="zoom: 33%;" />
 
-
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);</span><br><span class="line">  font-family: sans-serif;</span><br><span class="line">  padding: 20px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">h1 &#123;</span><br><span class="line">  font-size: 40px;</span><br><span class="line">  margin-top: 0;</span><br><span class="line">  margin-bottom: 15px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">h2 &#123;</span><br><span class="line">  font-size: 30px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.established &#123;</span><br><span class="line">  font-style: italic;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">h1, h2, p &#123;</span><br><span class="line">  text-align: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.menu &#123;</span><br><span class="line">  width: 80%;</span><br><span class="line">  background-color: burlywood;</span><br><span class="line">  margin-left: auto;</span><br><span class="line">  margin-right: auto;</span><br><span class="line">  padding: 20px;</span><br><span class="line">  max-width: 500px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">img &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  margin-left: auto;</span><br><span class="line">  margin-right: auto;</span><br><span class="line">  margin-top: -25;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">hr &#123;</span><br><span class="line">  height: 2px;</span><br><span class="line">  background-color: brown;</span><br><span class="line">  border-color: brown;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.bottom-line &#123;</span><br><span class="line">  margin-top: 25px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">h1, h2 &#123;</span><br><span class="line">  font-family: Impact, serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.item p &#123;</span><br><span class="line">  display: inline-block;</span><br><span class="line">  margin-top: 5px;</span><br><span class="line">  margin-bottom: 5px;</span><br><span class="line">  font-size: 18px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.flavor, .dessert &#123;</span><br><span class="line">  text-align: left;</span><br><span class="line">  width: 75%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.price &#123;</span><br><span class="line">  text-align: right;</span><br><span class="line">  width: 25%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* FOOTER */</span><br><span class="line"></span><br><span class="line">footer &#123;</span><br><span class="line">  font-size: 14px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.address &#123;</span><br><span class="line">  margin-bottom: 5px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a &#123;</span><br><span class="line">  color: black;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a:visited &#123;</span><br><span class="line">  color: black;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a:hover &#123;</span><br><span class="line">  color: brown;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a:active &#123;</span><br><span class="line">  color: brown;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<h3 id="0-CSS基本样式"><a href="#0-CSS基本样式" class="headerlink" title="0.CSS基本样式"></a>0.CSS基本样式</h3><p>选择器（Selector）<br>HTML 元素的名称位于规则集开始。它选择了一个或多个需要添加样式的元素）。要给不同元素添加样式只需要更改选择器就行了。可以用固定标签名，或.+自定义名称来进行选择。如用.menu来选择class属性为menu的盒子。</p>
+<p>通配符选择器作用：给当前界面上所有的标签设置属性。（*的意思是选中所有的标签）</p>
+<p>声明（Declaration）<br>一个单独的规则，如 color: red; 用来指定添加样式元素的属性。</p>
+<p>属性（Properties）<br>改变 HTML 元素样式的途径。（本例中 color 就是 <p> 元素的属性。）CSS 中，由编写人员决定修改哪个属性以改变规则。</p>
+<p>属性的值（Property value）<br>在属性的右边，冒号后面即属性的值，它从指定属性的众多外观中选择一个值（我们除了 red 之外还有很多属性值可以用于 color ）。</p>
+<h3 id="1-常见基础样式"><a href="#1-常见基础样式" class="headerlink" title="1.常见基础样式"></a>1.常见基础样式</h3><ul>
+<li><p>基础：</p>
+<p>声明该边框的类型：display ：可选项如下</p>
+<p>​								flex灵活布局</p>
+<p>​								grid网格布局</p>
+<p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329162830851.png" alt="image-20230329162830851"></p>
+<p>​							</p>
+<ul>
+<li><p>通用（框架相关）:</p>
+<p>宽度:   width: 300px;（百分制也行），div默认居左，所以背景颜色随着宽度的改变也居左。</p>
+<p>最大宽度: max-width: 500px;</p>
+<p>​				（背景是不动的，主页面随着浏览器大小变化，有最大宽度的约束，内容看起来就不会过宽）</p>
+<p>内边距:   <strong>padding</strong></p>
+<p>​                padding-left&#x2F;right&#x2F;top&#x2F;bottom:20px;  </p>
+<p>​				padding:10px;（上下左右都是10）</p>
+<p>​				<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/cssref/pr_padding.asp">CSS padding 属性更多用法</a></p>
+<p>框架：<strong>border</strong></p>
+<p>​				框架为宽度50px的实心黑色，border: 50px <strong>solid</strong> black;</p>
+<p>外边距：   <strong>margin</strong></p>
+<p>​                水平居中:margin-left: auto; &amp;&amp; margin-right: auto;</p>
+<p>​				可用于块级标签，p、div等。</p>
+<p>​                去除默认边框宽度：margin：0；（font-size：0是为了解决多余空白符的问题）</p>
+<p>​                缩小上方过大的宽度： margin-top:-25px;（需要来回调试）</p>
+<p>盒子大小：box-sizing</p>
+<p>​		定义了user agent应该如何计算一个元素的总宽度和总高度</p>
+<ul>
+<li><code>content-box</code> 是默认值。如果你设置一个元素的宽为 100px，那么这个元素的内容区会有 100px 宽，并且任何边框和内边距的宽度都会被增加到最后绘制出来的元素宽度中。</li>
+<li><code>border-box</code> 告诉浏览器：你想要设置的边框和内边距的值是包含在 width 内的。也就是说，如果你将一个元素的 width 设为 100px，那么这 100px 会包含它的 border 和 padding，内容区的实际宽度是 width 减去 (border + padding) 的值。大多数情况下，这使得我们更容易地设定一个元素的宽高。</li>
+</ul>
+</li>
+<li><p>文字相关:</p>
+<p>文本水平对齐：<strong>text-align</strong></p>
+<p>​	居中: text-align: <strong>center;</strong></p>
+<p>​	居左: text-align: <strong>left;</strong></p>
+<p>文本修饰符：<code>text-decoration</code> </p>
+<p>​    这个 CSS 属性是用于设置文本的修饰线外观的（下划线、上划线、贯穿线&#x2F;删除线 或 闪烁）</p>
+<p>​     它是 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-line"><code>text-decoration-line</code></a>, <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-color"><code>text-decoration-color</code></a>, <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-style"><code>text-decoration-style</code></a>, 和新出现的 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-thickness"><code>text-decoration-thickness</code></a> 属性的缩写。</p>
+<p>文本对齐方式：<strong>text-align: center;</strong></p>
+<p>[CSS 布局 – 水平 &amp; 垂直对齐 | 菜鸟教程 (runoob.com)](<a target="_blank" rel="noopener" href="https://www.runoob.com/css/css-align.html#:~:text=CSS">https://www.runoob.com/css/css-align.html#:~:text=CSS</a> 布局 - 水平 %26 垂直对齐 1 元素居中对齐,8 垂直居中 - 使用 position 和 transform 更多项目)</p>
+<p>字体: <strong>font-family:</strong> Impact,serif;</p>
+<p>​			主要&#x2F;备用两种字体【什么时候用到备用？防止浏览器里没有第一个字体，都没有就按默认字体渲染】</p>
+<p>字体大小：<strong>font-size：</strong>18px；</p>
+<p>字重：<strong>font-weight</strong>（字体粗细）</p>
+<p>行高：line-height</p>
+<p>斜体： font-style:italic;</p>
+<p>分割线：html的hr标签</p>
+<p>​				样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）</p>
+<p>​			（看起来会有凹陷效果）</p>
+<p>链接文字的颜色：a{color：black；}</p>
+<p>链接访问后：a:visited {  }</p>
+<p>链接上有鼠标悬停时：a:hover{}</p>
+<p>链接被点击时：a:active{}</p>
+</li>
+</ul>
+</li>
+<li><p>背景相关:</p>
+<p>背景颜色:background-color:</p>
+<p>背景图:background-image: url(<a target="_blank" rel="noopener" href="https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg">https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg</a>);</p>
+</li>
+<li><p>盒子相关:</p>
+</li>
+</ul>
+<p>​				对块级元素进行强制内联状:display: inline-block;</p>
+<p>​				去除元素前端可能存在的空白符:<style>   div{font-size:0;}    </style></p>
+<p>​					</p>
+<blockquote>
+<p>​	【【Q1为什么不能直接用内联元素？】】</p>
+<p>​	【inline-block是元素具备了块级和内联元素的功能，inline最重要的一点就是:</p>
+<p>​	元素能够在一行展示，而inline元素所缺失的设置宽高，是block 元素的功能】</p>
+</blockquote>
+<blockquote>
+<p>​	【【Q2为什么用了i-b会导致，设置宽度时，总和必须小于100%？（否则会另起一行）】】</p>
+<p>​	【因为HTML 中的换行符、空格符、制表符等合并为空白符，字体大小不为 0 的情况下，</p>
+<pre><code> 空白符自然占据定的宽度，使用inline-block 会产生了元素间的空隙。】
+</code></pre>
+</blockquote>
+<blockquote>
+<p>​	【【Q3不想自己调试合适的宽度怎么办？】】</p>
+<p>​	【在写用了强制内联化的块级元素时，全部写在同一行，一个空格都不要加。比如<p>1</p><p>2</p>】</p>
+</blockquote>
+<blockquote>
+<p>​	【【Q4最佳解决办法是什么？】】</p>
+<p>​	【父元素设置font-size:0,子元素有需要可以另外设置font-size，</p>
+<p>​	 这样空白符因为font-size:0就不会占据宽度了】</p>
+</blockquote>
+<blockquote>
+<p>实例:</p>
+<p><a target="_blank" rel="noopener" href="https://www.zhangxinxu.com/study/201011/img-blank-space.html">display:inline-block元素间换行符的空格间隙 </a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zhangxinxu.com/study/201011/img-font-size-clear-blank.html">font-size:0清除display:inline-block元素换行符间隙</a></p>
+</blockquote>
+<h3 id="2-style元素"><a href="#2-style元素" class="headerlink" title="2.style元素"></a><strong>2.style元素</strong></h3><ul>
+<li><p>单独写在css文件夹里，并在head里通过link来链接。 </p>
+<link rel="stylesheet" href="styles.css">
+</li>
+<li><p>用于给body里的某一种&#x2F;多种元素指定样式。</p>
+</li>
+</ul>
+<h3 id="3-多端样式归一化必加代码【【【【】】】】"><a href="#3-多端样式归一化必加代码【【【【】】】】" class="headerlink" title="3.多端样式归一化必加代码【【【【】】】】"></a><strong>3.多端样式归一化必加代码</strong>【【【【】】】】</h3><p>​    <meta name="viewport" content="width=device-width, initial-scale=1.0" /></p>
  
       <!-- reward -->
       
@@ -182,7 +288,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-Note3/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -195,19 +301,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%96%91%E9%97%AE%E5%A4%8D%E7%9B%98/Q0-Review/" class="article-nav-link">
+      <a href="/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-2%E5%AE%9E%E8%B7%B5%EF%BC%88%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F%EF%BC%89/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            前端ToDo复盘
+            CSS学习笔记-1.3实践
           
         </div>
       </a>
     
     
-      <a href="/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-Note1/" class="article-nav-link">
+      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note5/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">CSS学习笔记-1.1基础</div>
+        <div class="article-nav-title">HTML学习笔记-5体系补充</div>
       </a>
     
   </nav>
