@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>HTML学习笔记-7选择器 |  Pravite Home</title>
+      <title>CSS学习笔记-3实践 |  Pravite Home</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -57,7 +57,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-前端学习笔记/Q1-HTML-Note7"
+  id="post-前端学习笔记/Q2-CSS-Note3"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -68,7 +68,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  HTML学习笔记-7选择器
+  CSS学习笔记-3实践
 </h1>
  
 
@@ -76,8 +76,8 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note7/" class="article-date">
-  <time datetime="2023-03-28T03:34:47.000Z" itemprop="datePublished">2023-03-28</time>
+      <a href="/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-Note3/" class="article-date">
+  <time datetime="2023-03-29T03:34:47.000Z" itemprop="datePublished">2023-03-29</time>
 </a> 
   <div class="article-category">
     <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
@@ -88,7 +88,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">156</span>
+            <span class="post-count">710</span>
         </span>
     </span>
 
@@ -97,7 +97,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1 分钟</span>
+            <span class="post-count">4 分钟</span>
         </span>
     </span>
 </div>
@@ -112,80 +112,12 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h1><h4 id="选择器字典"><a href="#选择器字典" class="headerlink" title="选择器字典"></a>选择器字典</h4><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Attribute_selectors">属性选择器 - CSS：层叠样式表 | MDN (mozilla.org)</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2009/03/css_selectors.html">CSS选择器笔记 - 阮一峰的网络日志 (ruanyifeng.com)</a></p>
-<p><a target="_blank" rel="noopener" href="https://frontend30.com/css-selectors-cheatsheet/">CSS Selectors Cheatsheet - FrontEnd30</a></p>
-<h4 id="选择器的优先级"><a href="#选择器的优先级" class="headerlink" title="选择器的优先级"></a>选择器的优先级</h4><p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230401185155310.png" alt="image-20230401185155310"></p>
-<h4 id="选择器的构成"><a href="#选择器的构成" class="headerlink" title="选择器的构成"></a>选择器的构成</h4><p>选择器分为符号和框架</p>
-<p>符号：＄ ~ # ^等（可组合到框架中）</p>
-<p>框架：[ ] , nth-of-child等 </p>
-<h2 id="一-基本选择器"><a href="#一-基本选择器" class="headerlink" title="一.基本选择器"></a>一.基本选择器</h2><h5 id="通用选择器"><a href="#通用选择器" class="headerlink" title="通用选择器"></a>通用选择器</h5><ul>
-<li></li>
-</ul>
-<p>**【【【【【【没有找到】】】】】】】</p>
-<h5 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h5><ol>
-<li><h6 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h6><ul>
-<li>#id</li>
-</ul>
-</li>
-<li><h6 id="易错点"><a href="#易错点" class="headerlink" title="易错点"></a>易错点</h6><ul>
-<li>id不能有任何数字</li>
-</ul>
-</li>
-</ol>
-<h5 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h5><h6 id=""><a href="#" class="headerlink" title=""></a><img src="C:\Users\11096\Documents\WeChat Files\wxid_xfl56vvd0cvm22\FileStorage\Temp\1680587935181.png" alt="1680587935181" style="zoom:50%;" /></h6><p>元素[属性1] [属性2]</p>
-<ul>
-<li>同时有两个选择的元素</li>
-</ul>
-<p>元素[属性&#x3D;值] 	</p>
-<ul>
-<li>属性的值&#x3D;值的元素</li>
-<li>a[href&#x3D;”<a target="_blank" rel="noopener" href="https://example.org"]">https://example.org&quot;]</a></li>
-</ul>
-<p>元素[属性^&#x3D;开头值]</p>
-<ul>
-<li>[attr^&#x3D;value]：表示带有以 <em>attr</em> 命名的属性，且属性值是以 <em>value</em> 开头的元素。</li>
-</ul>
-<p>元素[属性$&#x3D;结尾值]</p>
-<ul>
-<li><p>属性的值的结尾是”结尾值“的元素。</p>
-</li>
-<li><p>a[href$&#x3D;”.org”]：存在 href 属性并且属性值结尾是”.org”的 <a> 元素</p>
-</li>
-</ul>
-<p>元素[属性*&#x3D;”值“]</p>
-<ul>
-<li>属性的值包含”值“的元素</li>
-</ul>
-<p>元素[属性~&#x3D;值]</p>
-<ul>
-<li><p>属性的值包含”值“的元素，该属性是一个以空格作为分隔的值列表</p>
-</li>
-<li><p>a[class~&#x3D;”logo”]：存在 class 属性并且属性值包含单词”logo”的<a>元素</p>
-</li>
-</ul>
-<p>元素[       i]</p>
-<ul>
-<li>在属性选择器的右方括号前添加一个用空格隔开的字母 <code>i</code>（或 <code>I</code>），可以在匹配属性值时忽略大小写（支持 ASCII 字符范围之内的字母）。</li>
-</ul>
-<p>元素[		s]</p>
-<ul>
-<li>在属性选择器的右方括号前添加一个用空格隔开的字母 <code>s</code>（或 <code>S</code>），可以在匹配属性值时区分大小写（支持 ASCII 字符范围之内的字母）。</li>
-</ul>
-<h2 id="二-关系型选择器"><a href="#二-关系型选择器" class="headerlink" title="二.关系型选择器"></a>二.关系型选择器</h2><p>子选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404132255364.png" alt="image-20230404132255364" style="zoom:50%;" /></p>
-<p>后代选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404132326607.png" alt="image-20230404132326607" style="zoom: 50%;" /></p>
-<p>相邻兄弟选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404133357624.png" alt="image-20230404133357624" style="zoom:50%;" /></p>
-<p>通用兄弟选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404133450743.png" alt="image-20230404133450743" style="zoom:50%;" /></p>
-<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Column_combinator">列组合器</a> </p>
-<p><code>||</code> 组合器选择属于某个表格行的节点。</p>
-<p><strong>语法：</strong><code>A || B</code></p>
-<p><strong>例子：</strong><code>col || td</code> 会匹配所有 作用域内的 &#96;](<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/td">https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/td</a>) 元素。</p>
-<p>独子选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404133754657.png" alt="image-20230404133754657" style="zoom:50%;" />		a 表示选择a元素的独子，b表示如果b是独子则被选择</p>
-<p>第 N 个最后一个子选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404134515253.png" alt="image-20230404134515253" style="zoom:50%;" /></p>
-<p>首项选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404134548820.png" alt="image-20230404134548820" style="zoom:50%;" />可以根据元素、属性进行选择</p>
-<p>尾项选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404134901176.png" alt="image-20230404134901176" style="zoom:50%;" />尾属性的class不等于x则不选任何东西</p>
-<h2 id="三-伪类选择器"><a href="#三-伪类选择器" class="headerlink" title="三.伪类选择器"></a>三.伪类选择器</h2><p>否定伪类选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404135618254.png" alt="image-20230404135618254" style="zoom:50%;" /></p>
-<h2 id="四-其它"><a href="#四-其它" class="headerlink" title="四.其它"></a>四.其它</h2><h2 id="五-易错点"><a href="#五-易错点" class="headerlink" title="五.易错点"></a>五.易错点</h2><p>1.~：写在[ ]里表示字符串匹配，匹配到就选择。写在[ ]外表示通用兄弟选择器。</p>
+  <h1 id="1-3实践"><a href="#1-3实践" class="headerlink" title="1.3实践"></a>1.3实践</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">  	&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  	&lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">    &lt;title&gt;Cafe Menu&lt;/title&gt;</span><br><span class="line">    &lt;link href=&quot;../CSS/咖啡.css&quot; rel=&quot;stylesheet&quot;&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;menu&quot;&gt;</span><br><span class="line">      &lt;main&gt;</span><br><span class="line">        &lt;h1&gt;CAMPER CAFE&lt;/h1&gt;</span><br><span class="line">        &lt;p class=&quot;established&quot;&gt;Est. 2020&lt;/p&gt;</span><br><span class="line">        &lt;hr&gt;</span><br><span class="line">        &lt;section&gt;</span><br><span class="line">          &lt;h2&gt;Coffee&lt;/h2&gt;</span><br><span class="line">          &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg&quot; alt=&quot;coffee icon&quot;/&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;French Vanilla&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.00&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;Caramel Macchiato&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.75&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;Pumpkin Spice&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.50&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;Hazelnut&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;4.00&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;Mocha&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;4.50&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">        &lt;/section&gt;</span><br><span class="line">        &lt;section&gt;</span><br><span class="line">          &lt;h2&gt;Desserts&lt;/h2&gt;</span><br><span class="line">          &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg&quot; alt=&quot;pie icon&quot;/&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;dessert&quot;&gt;Donut&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;1.50&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;dessert&quot;&gt;Cherry Pie&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;2.75&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;dessert&quot;&gt;Cheesecake&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.00&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;dessert&quot;&gt;Cinnamon Roll&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;2.50&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">        &lt;/section&gt;</span><br><span class="line">      &lt;/main&gt;</span><br><span class="line">      &lt;hr class=&quot;bottom-line&quot;&gt;</span><br><span class="line">      &lt;footer&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">          &lt;a href=&quot;https://www.freecodecamp.org&quot; target=&quot;_blank&quot;&gt;Visit our website&lt;/a&gt;</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">        &lt;p class=&quot;address&quot;&gt;123 Free Code Camp Drive&lt;/p&gt;</span><br><span class="line">      &lt;/footer&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);</span><br><span class="line">  font-family: sans-serif;</span><br><span class="line">  padding: 20px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">h1 &#123;</span><br><span class="line">  font-size: 40px;</span><br><span class="line">  margin-top: 0;</span><br><span class="line">  margin-bottom: 15px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">h2 &#123;</span><br><span class="line">  font-size: 30px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.established &#123;</span><br><span class="line">  font-style: italic;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">h1, h2, p &#123;</span><br><span class="line">  text-align: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.menu &#123;</span><br><span class="line">  width: 80%;</span><br><span class="line">  background-color: burlywood;</span><br><span class="line">  margin-left: auto;</span><br><span class="line">  margin-right: auto;</span><br><span class="line">  padding: 20px;</span><br><span class="line">  max-width: 500px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">img &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  margin-left: auto;</span><br><span class="line">  margin-right: auto;</span><br><span class="line">  margin-top: -25;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">hr &#123;</span><br><span class="line">  height: 2px;</span><br><span class="line">  background-color: brown;</span><br><span class="line">  border-color: brown;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.bottom-line &#123;</span><br><span class="line">  margin-top: 25px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">h1, h2 &#123;</span><br><span class="line">  font-family: Impact, serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.item p &#123;</span><br><span class="line">  display: inline-block;</span><br><span class="line">  margin-top: 5px;</span><br><span class="line">  margin-bottom: 5px;</span><br><span class="line">  font-size: 18px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.flavor, .dessert &#123;</span><br><span class="line">  text-align: left;</span><br><span class="line">  width: 75%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.price &#123;</span><br><span class="line">  text-align: right;</span><br><span class="line">  width: 25%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* FOOTER */</span><br><span class="line"></span><br><span class="line">footer &#123;</span><br><span class="line">  font-size: 14px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.address &#123;</span><br><span class="line">  margin-bottom: 5px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a &#123;</span><br><span class="line">  color: black;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a:visited &#123;</span><br><span class="line">  color: black;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a:hover &#123;</span><br><span class="line">  color: brown;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a:active &#123;</span><br><span class="line">  color: brown;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
  
       <!-- reward -->
       
@@ -250,7 +182,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note7/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-Note3/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -263,19 +195,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note6/" class="article-nav-link">
+      <a href="/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%96%91%E9%97%AE%E5%A4%8D%E7%9B%98/Q0-Review/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            HTML学习笔记-6实践
+            前端ToDo复盘
           
         </div>
       </a>
     
     
-      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note4/" class="article-nav-link">
+      <a href="/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-Note1/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">HTML学习笔记-4head</div>
+        <div class="article-nav-title">CSS学习笔记-1基础</div>
       </a>
     
   </nav>
