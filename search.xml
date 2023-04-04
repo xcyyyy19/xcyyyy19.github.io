@@ -1964,6 +1964,8 @@
 <p>​	CSS:&#x2F;**&#x2F;</p>
 <p>技巧：</p>
 <p>​	先写css再写对应的html</p>
+<p>CSS游戏：</p>
+<p>​	<a href="https://frontend30.com/css-selectors-cheatsheet/">CSS Selectors Cheatsheet - FrontEnd30</a></p>
 <p>学完后形成体系：</p>
 <p><img src="C:$RECYCLE.BIN\S-1-5-21-3551453893-2823794770-815658977-1001$R4HZJ7D.png" alt="$R4HZJ7D"></p>
 <h3 id="0-CSS基本样式"><a href="#0-CSS基本样式" class="headerlink" title="0.CSS基本样式"></a>0.CSS基本样式</h3><p>选择器（Selector）<br>HTML 元素的名称位于规则集开始。它选择了一个或多个需要添加样式的元素）。要给不同元素添加样式只需要更改选择器就行了。可以用固定标签名，或.+自定义名称来进行选择。如用.menu来选择class属性为menu的盒子。</p>
@@ -2104,8 +2106,6 @@
 <p>只有所在的类，所在类的子类都不算。比如body里写了的flex，justify只能控制body的布局，想控制内部元素的布局就只能嵌套，在.div里也写flex。</p>
 </li>
 <li><p>什么时候改点，什么时候改div？</p>
-</li>
-<li><p>1</p>
 </li>
 </ol>
 <h4 id="知识点："><a href="#知识点：" class="headerlink" title="知识点："></a>知识点：</h4><p>1.布局原理：采用 Flex 布局的元素，称为容器。它的所有子元素自动成为容器成员，称为项目。</p>
@@ -2963,6 +2963,114 @@ CSS第一个mini project自主实现</p>
 <li><p>switch - 多分支语句</p>
 </li>
 </ol>
+]]></content>
+      <categories>
+        <category>code</category>
+        <category>note</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端ToDo复盘</title>
+    <url>/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%96%91%E9%97%AE%E5%A4%8D%E7%9B%98/Q0-Review/</url>
+    <content><![CDATA[<h1 id="3-31主题：FLEX骰子案例推进-amp-相关新知识"><a href="#3-31主题：FLEX骰子案例推进-amp-相关新知识" class="headerlink" title="3.31主题：FLEX骰子案例推进&amp;相关新知识"></a>3.31主题：FLEX骰子案例推进&amp;相关新知识</h1><h2 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h2><ul>
+<li><p><input disabled="" type="checkbox"> 
+案例的四种实现方式，明确哪种能实现，哪个方法又是最好的（此处想默背有哪几种方式，想不起来很痛苦）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/*查一下去掉注释的快捷键*/</span><br><span class="line"></span><br><span class="line">/*法一：用flex直接控制每个点（无法实现）*/</span><br><span class="line">/*1水平垂直居中*/</span><br><span class="line">/*2第一个点不动，第二个点用水平垂直flex-end*/</span><br><span class="line">/*3第一个点不动，第二个点水平垂直居中，第三个点用水平垂直flex-end*/</span><br><span class="line">/*4第一个第二个点用between分开，第三四个用垂直end且between*/</span><br><span class="line">/*5上一个的基础上加上一个水平垂直居中的*/</span><br><span class="line">/*6三个between / 自动换行且between / 挨个设置横纵轴位置*/</span><br><span class="line"></span><br><span class="line">/*法二：用id控制每个点（太麻烦）*/</span><br><span class="line"></span><br><span class="line">/*法三：用class分类控制点（好像可行，但忘记为什么没实现了）</span><br><span class="line">                class + justify-content + align-items</span><br><span class="line">                可行？*/</span><br><span class="line"></span><br><span class="line">/*法四：用align-self控制bg中的子类dot</span><br><span class="line">               align-self + justify-content + align-items</span><br><span class="line">                可行，答案就是这个方法*/</span><br><span class="line"></span><br><span class="line">/*仔细看到底用父级的好，还是子类的好</span><br><span class="line">https://www.bilibili.com/video/BV1Lp4y1S7XM/?spm_id_from=333.337.search-card.all.click&amp;vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92*/</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="复盘"><a href="#复盘" class="headerlink" title="复盘"></a>复盘</h2><ol>
+<li>Flex中，align-self:flix-end;试用（但不起作用，查到的资料都显示没写错，应该是其它问题）。</li>
+<li>Flex中，控制整个类和子类的属性加以区分，明确作用域。</li>
+<li>HTML中，了解子类选择器、id选择器等没用过的选择器。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>code</category>
+        <category>note</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTML学习笔记-7选择器</title>
+    <url>/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note7/</url>
+    <content><![CDATA[<h1 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h1><h4 id="选择器字典"><a href="#选择器字典" class="headerlink" title="选择器字典"></a>选择器字典</h4><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Attribute_selectors">属性选择器 - CSS：层叠样式表 | MDN (mozilla.org)</a></p>
+<p><a href="https://www.ruanyifeng.com/blog/2009/03/css_selectors.html">CSS选择器笔记 - 阮一峰的网络日志 (ruanyifeng.com)</a></p>
+<p><a href="https://frontend30.com/css-selectors-cheatsheet/">CSS Selectors Cheatsheet - FrontEnd30</a></p>
+<h4 id="选择器的优先级"><a href="#选择器的优先级" class="headerlink" title="选择器的优先级"></a>选择器的优先级</h4><p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230401185155310.png" alt="image-20230401185155310"></p>
+<h4 id="选择器的构成"><a href="#选择器的构成" class="headerlink" title="选择器的构成"></a>选择器的构成</h4><p>选择器分为符号和框架</p>
+<p>符号：＄ ~ # ^等（可组合到框架中）</p>
+<p>框架：[ ] , nth-of-child等 </p>
+<h2 id="一-基本选择器"><a href="#一-基本选择器" class="headerlink" title="一.基本选择器"></a>一.基本选择器</h2><h5 id="通用选择器"><a href="#通用选择器" class="headerlink" title="通用选择器"></a>通用选择器</h5><ul>
+<li></li>
+</ul>
+<p>**【【【【【【没有找到】】】】】】】</p>
+<h5 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h5><ol>
+<li><h6 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h6><ul>
+<li>#id</li>
+</ul>
+</li>
+<li><h6 id="易错点"><a href="#易错点" class="headerlink" title="易错点"></a>易错点</h6><ul>
+<li>id不能有任何数字</li>
+</ul>
+</li>
+</ol>
+<h5 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h5><h6 id=""><a href="#" class="headerlink" title=""></a><img src="C:\Users\11096\Documents\WeChat Files\wxid_xfl56vvd0cvm22\FileStorage\Temp\1680587935181.png" alt="1680587935181" style="zoom:50%;" /></h6><p>元素[属性1] [属性2]</p>
+<ul>
+<li>同时有两个选择的元素</li>
+</ul>
+<p>元素[属性&#x3D;值] 	</p>
+<ul>
+<li>属性的值&#x3D;值的元素</li>
+<li>a[href&#x3D;”<a href="https://example.org"]">https://example.org&quot;]</a></li>
+</ul>
+<p>元素[属性^&#x3D;开头值]</p>
+<ul>
+<li>[attr^&#x3D;value]：表示带有以 <em>attr</em> 命名的属性，且属性值是以 <em>value</em> 开头的元素。</li>
+</ul>
+<p>元素[属性$&#x3D;结尾值]</p>
+<ul>
+<li><p>属性的值的结尾是”结尾值“的元素。</p>
+</li>
+<li><p>a[href$&#x3D;”.org”]：存在 href 属性并且属性值结尾是”.org”的 <a> 元素</p>
+</li>
+</ul>
+<p>元素[属性*&#x3D;”值“]</p>
+<ul>
+<li>属性的值包含”值“的元素</li>
+</ul>
+<p>元素[属性~&#x3D;值]</p>
+<ul>
+<li><p>属性的值包含”值“的元素，该属性是一个以空格作为分隔的值列表</p>
+</li>
+<li><p>a[class~&#x3D;”logo”]：存在 class 属性并且属性值包含单词”logo”的<a>元素</p>
+</li>
+</ul>
+<p>元素[       i]</p>
+<ul>
+<li>在属性选择器的右方括号前添加一个用空格隔开的字母 <code>i</code>（或 <code>I</code>），可以在匹配属性值时忽略大小写（支持 ASCII 字符范围之内的字母）。</li>
+</ul>
+<p>元素[		s]</p>
+<ul>
+<li>在属性选择器的右方括号前添加一个用空格隔开的字母 <code>s</code>（或 <code>S</code>），可以在匹配属性值时区分大小写（支持 ASCII 字符范围之内的字母）。</li>
+</ul>
+<h2 id="二-关系型选择器"><a href="#二-关系型选择器" class="headerlink" title="二.关系型选择器"></a>二.关系型选择器</h2><p>子选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404132255364.png" alt="image-20230404132255364" style="zoom:50%;" /></p>
+<p>后代选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404132326607.png" alt="image-20230404132326607" style="zoom: 50%;" /></p>
+<p>相邻兄弟选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404133357624.png" alt="image-20230404133357624" style="zoom:50%;" /></p>
+<p>通用兄弟选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404133450743.png" alt="image-20230404133450743" style="zoom:50%;" /></p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Column_combinator">列组合器</a> </p>
+<p><code>||</code> 组合器选择属于某个表格行的节点。</p>
+<p><strong>语法：</strong><code>A || B</code></p>
+<p><strong>例子：</strong><code>col || td</code> 会匹配所有 作用域内的 &#96;](<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/td">https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/td</a>) 元素。</p>
+<p>独子选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404133754657.png" alt="image-20230404133754657" style="zoom:50%;" />		a 表示选择a元素的独子，b表示如果b是独子则被选择</p>
+<p>第 N 个最后一个子选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404134515253.png" alt="image-20230404134515253" style="zoom:50%;" /></p>
+<p>首项选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404134548820.png" alt="image-20230404134548820" style="zoom:50%;" />可以根据元素、属性进行选择</p>
+<p>尾项选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404134901176.png" alt="image-20230404134901176" style="zoom:50%;" />尾属性的class不等于x则不选任何东西</p>
+<h2 id="三-伪类选择器"><a href="#三-伪类选择器" class="headerlink" title="三.伪类选择器"></a>三.伪类选择器</h2><p>否定伪类选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404135618254.png" alt="image-20230404135618254" style="zoom:50%;" /></p>
+<h2 id="四-其它"><a href="#四-其它" class="headerlink" title="四.其它"></a>四.其它</h2><h2 id="五-易错点"><a href="#五-易错点" class="headerlink" title="五.易错点"></a>五.易错点</h2><p>1.~：写在[ ]里表示字符串匹配，匹配到就选择。写在[ ]外表示通用兄弟选择器。</p>
 ]]></content>
       <categories>
         <category>code</category>
