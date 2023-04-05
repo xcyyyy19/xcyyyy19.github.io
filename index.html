@@ -183,9 +183,10 @@
     <div class="article-entry" itemprop="articleBody">
        
   <h1 id="CSS学习笔记-2-1布局-三种重要布局及其它布局"><a href="#CSS学习笔记-2-1布局-三种重要布局及其它布局" class="headerlink" title="CSS学习笔记-2.1布局-三种重要布局及其它布局"></a>CSS学习笔记-2.1布局-三种重要布局及其它布局</h1><p><a target="_blank" rel="noopener" href="https://www.icourse163.org/learn/BFU-1003382003?tid=1469987444#/learn/content?type=detail&id=1253020763&sm=1">Web前端开发_中国大学MOOC(慕课) (icourse163.org)</a></p>
+<h2 id="布局三种定位机制："><a href="#布局三种定位机制：" class="headerlink" title="布局三种定位机制："></a>布局三种定位机制：</h2><p>文档流（元素分类inlineblock.元素类型转换display）→浮动（float属性）→层（position属性）</p>
 <img src="C:\Users\11096\Documents\WeChat Files\wxid_xfl56vvd0cvm22\FileStorage\Temp\1680613753098.png" alt="1680613753098" style="zoom: 50%;" />
 
-<h2 id="1-元素布局"><a href="#1-元素布局" class="headerlink" title="1.元素布局"></a>1.元素布局</h2><ol>
+<h2 id="1-元素布局（终极布局，最好用）"><a href="#1-元素布局（终极布局，最好用）" class="headerlink" title="1.元素布局（终极布局，最好用）"></a>1.元素布局（终极布局，最好用）</h2><ol>
 <li><h3 id="灵活-x2F-弹性-x2F-伸缩布局flex"><a href="#灵活-x2F-弹性-x2F-伸缩布局flex" class="headerlink" title="灵活&#x2F;弹性&#x2F;伸缩布局flex"></a>灵活&#x2F;弹性&#x2F;伸缩布局flex</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Lp4y1S7XM/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">五分钟掌握 css3 flex弹性布局</a></p>
 <p>Flex 布局教程：语法篇</p>
 <p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
@@ -212,15 +213,18 @@
 <blockquote>
 <p>​	   row：行    column：柱子</p>
 </blockquote>
-<p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190849686.png" alt="image-20230329190849686"></p>
+<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190849686.png" alt="image-20230329190849686" style="zoom:50%;" />
+
 <p>​			<strong>flex-wrap：</strong>设置子元素是否换行</p>
 <p>​						nowrap 不换行	(装不下会缩小子元素的宽度)<br>​						wrap 换行</p>
 <p>​			<strong>justify-content：</strong>设置主轴上的子元素排列方式【【【【【不分单行多行吗？】】】】】】</p>
-<p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190910922.png" alt="image-20230329190910922"></p>
+<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190910922.png" alt="image-20230329190910922" style="zoom:50%;" />
+
+
 <p>​			<strong>align-items：</strong>设置侧轴上的子元素排列方式（单行）</p>
 <p>​						该属性是控制子项在侧轴上的排列方式 在子项为单行的时候使用<br>​						flex-start 从头部开始<br>​						flex-end 从尾部开始<br>​						center 居中显示<br>​						stretch 拉伸(不给宽度&#x2F;高度)</p>
 <p>​			<strong>align-content：</strong> 设置侧轴上的子元素的排列方式（多行）</p>
-<p>​				<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190910922.png" alt="image-20230329190910922"></p>
+<p>​				<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190910922.png" alt="image-20230329190910922" style="zoom: 50%;" /></p>
 <p>​			align-content 和align-items区别<br>​						align-items 适用于单行情况下， 只有上对齐、下对齐、居中和 拉伸<br>​						align-content适用多行换行的情况（单行无效）</p>
 <p>​			<strong>flex-flow：</strong>复合属性，相当于同时设置了 flex-direction 和 flex-wrap</p>
 <p>3.flex布局子项常见属性【少用】<br>            flex子项目占的份数<br>            align-self控制子项自己在侧轴的排列方式<br>            order属性定义子项的排列顺序（前后顺序）<br>4.flex属性<br>            flex 属性定义子项目分配剩余空间，用flex来表示占多少份数。</p>
@@ -235,7 +239,19 @@
 <p>​		<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Floats">浮动 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
 <p>​		比如报纸首字母脱离文档。图片格式选择为”环绕“。与flex互斥。</p>
 <p>其它布局：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout#%E6%8C%87%E5%8D%97">CSS 布局 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
-<h1 id="2-定位"><a href="#2-定位" class="headerlink" title="2.定位"></a>2.定位</h1><h4 id="1-position属性"><a href="#1-position属性" class="headerlink" title="1.position属性"></a>1.position属性</h4><p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/css/css_positioning.asp">CSS 布局 - position 属性 (w3school.com.cn)</a></p>
+<h1 id="2-文档流定位（默认布局）"><a href="#2-文档流定位（默认布局）" class="headerlink" title="2.文档流定位（默认布局）"></a>2.文档流定位（默认布局）</h1><h1 id="（元素分类inlineblock-元素类型转换display）"><a href="#（元素分类inlineblock-元素类型转换display）" class="headerlink" title="（元素分类inlineblock.元素类型转换display）"></a>（元素分类inlineblock.元素类型转换display）</h1><p>元素分类：</p>
+<p>​			inline：两个inline元素之间会有一个间隙，需要去除。</p>
+<p>​			block：</p>
+<p>​			inline-block：</p>
+<p>元素转换：</p>
+<h1 id="3-浮动定位"><a href="#3-浮动定位" class="headerlink" title="3.浮动定位"></a>3.浮动定位</h1><h4 id="float属性值："><a href="#float属性值：" class="headerlink" title="float属性值："></a>float属性值：</h4><p>​			1.left</p>
+<p>​			2.right</p>
+<p>​			3.</p>
+<p>​			4.</p>
+<h4 id="应用："><a href="#应用：" class="headerlink" title="应用："></a>应用：</h4><h4 id=""><a href="#" class="headerlink" title=""></a><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161130046.png" alt="image-20230405161130046" style="zoom: 33%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161204082.png" alt="image-20230405161204082" style="zoom:33%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161227150.png" alt="image-20230405161227150" style="zoom: 25%;" /></h4><h4 id="易错点：注意浮动时，宽度是否够用的情况"><a href="#易错点：注意浮动时，宽度是否够用的情况" class="headerlink" title="易错点：注意浮动时，宽度是否够用的情况"></a>易错点：注意浮动时，宽度是否够用的情况</h4><p>​					<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161350930.png" alt="image-20230405161350930" style="zoom: 25%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161312570.png" alt="image-20230405161312570" style="zoom: 25%;" /></p>
+<h4 id="clear清除浮动："><a href="#clear清除浮动：" class="headerlink" title="clear清除浮动："></a>clear清除浮动：</h4><p>​				易错点：清除某一方向的浮动不是把某方向上的浮动元素删除，</p>
+<p>​								而是该元素的某一方向不能有浮动元素。也就是说，该元素会另起一行。</p>
+<h1 id="4-层定位"><a href="#4-层定位" class="headerlink" title="4.层定位"></a>4.层定位</h1><h4 id="1-position属性"><a href="#1-position属性" class="headerlink" title="1.position属性"></a>1.position属性</h4><p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/css/css_positioning.asp">CSS 布局 - position 属性 (w3school.com.cn)</a></p>
 <p>​	概念：</p>
 <p>​		<code>position</code> 属性规定应用于元素的定位方法的类型。</p>
 <p>​	五个不同的位置值：</p>
@@ -368,7 +384,61 @@
     <div class="article-entry" itemprop="articleBody">
        
   <hr>
-<h2 id="今日疑问"><a href="#今日疑问" class="headerlink" title="今日疑问"></a>今日疑问</h2><h4 id="1-边距异常合并问题看不懂，重要？CSS-的两种盒模型-及边距异常合并问题"><a href="#1-边距异常合并问题看不懂，重要？CSS-的两种盒模型-及边距异常合并问题" class="headerlink" title="1.边距异常合并问题看不懂，重要？CSS 的两种盒模型 - 及边距异常合并问题"></a>1.边距异常合并问题看不懂，重要？<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/110617108">CSS 的两种盒模型 - 及边距异常合并问题</a></h4><h4 id="2-盒子的知识点包括边框边距？好像不包括。"><a href="#2-盒子的知识点包括边框边距？好像不包括。" class="headerlink" title="2.盒子的知识点包括边框边距？好像不包括。"></a>2.盒子的知识点包括边框边距？好像不包括。</h4><h4 id="3-边框是盒子的边框，为什么平时不写盒子也能用边框和边距？有默认设置？"><a href="#3-边框是盒子的边框，为什么平时不写盒子也能用边框和边距？有默认设置？" class="headerlink" title="3.边框是盒子的边框，为什么平时不写盒子也能用边框和边距？有默认设置？"></a>3.边框是盒子的边框，为什么平时不写盒子也能用边框和边距？有默认设置？</h4><h4 id="4-position属性用于指定一个元素在文档中的定位方式，文档指什么？好像是父元素。"><a href="#4-position属性用于指定一个元素在文档中的定位方式，文档指什么？好像是父元素。" class="headerlink" title="4.position属性用于指定一个元素在文档中的定位方式，文档指什么？好像是父元素。"></a>4.position属性用于指定一个元素在文档中的定位方式，文档指什么？好像是父元素。</h4><h4 id="5-元素其实是使用-top、bottom、left-和-right-属性定位的。但是，除非首先设置了-position-属性，否则这些属性将不起作用。"><a href="#5-元素其实是使用-top、bottom、left-和-right-属性定位的。但是，除非首先设置了-position-属性，否则这些属性将不起作用。" class="headerlink" title="5.元素其实是使用 top、bottom、left 和 right 属性定位的。但是，除非首先设置了 position 属性，否则这些属性将不起作用。"></a>5.元素其实是使用 top、bottom、left 和 right 属性定位的。但是，除非首先设置了 position 属性，否则这些属性将不起作用。</h4><h4 id="由于有默认的station，所以可以直接使用top等方式调整。"><a href="#由于有默认的station，所以可以直接使用top等方式调整。" class="headerlink" title="由于有默认的station，所以可以直接使用top等方式调整。"></a>由于有默认的station，所以可以直接使用top等方式调整。</h4><h4 id="那height、wide等，为什么也能直接使用-top、bottom、left-和-right-属性是用来控制什么东西的？"><a href="#那height、wide等，为什么也能直接使用-top、bottom、left-和-right-属性是用来控制什么东西的？" class="headerlink" title="那height、wide等，为什么也能直接使用? top、bottom、left 和 right 属性是用来控制什么东西的？"></a>那height、wide等，为什么也能直接使用? top、bottom、left 和 right 属性是用来控制什么东西的？</h4><h4 id="衍生ToDo：确定一下各种控制定位的属性，主语都是什么。"><a href="#衍生ToDo：确定一下各种控制定位的属性，主语都是什么。" class="headerlink" title="衍生ToDo：确定一下各种控制定位的属性，主语都是什么。"></a>衍生ToDo：确定一下各种控制定位的属性，主语都是什么。</h4><h4 id="6-静态定位的元素不受-top、bottom、left-和-right-属性的影响。position-static-的元素不会以任何特殊方式定位；它始终根据页面的正常流进行定位（什么叫特殊方式。什么叫正常流程）"><a href="#6-静态定位的元素不受-top、bottom、left-和-right-属性的影响。position-static-的元素不会以任何特殊方式定位；它始终根据页面的正常流进行定位（什么叫特殊方式。什么叫正常流程）" class="headerlink" title="6.静态定位的元素不受 top、bottom、left 和 right 属性的影响。position: static; 的元素不会以任何特殊方式定位；它始终根据页面的正常流进行定位（什么叫特殊方式。什么叫正常流程）"></a>6.静态定位的元素不受 top、bottom、left 和 right 属性的影响。position: static; 的元素不会以任何特殊方式定位；它始终根据页面的正常流进行定位（什么叫特殊方式。什么叫正常流程）</h4><h4 id="7-粘性定位的机制、流程（网站广告的原理）"><a href="#7-粘性定位的机制、流程（网站广告的原理）" class="headerlink" title="7.粘性定位的机制、流程（网站广告的原理）"></a>7.粘性定位的机制、流程（网站广告的原理）</h4><h4 id="8-如果relative属性所在的元素附近有？？元素，它的相对定位会被（怎样？）影响。"><a href="#8-如果relative属性所在的元素附近有？？元素，它的相对定位会被（怎样？）影响。" class="headerlink" title="8.如果relative属性所在的元素附近有？？元素，它的相对定位会被（怎样？）影响。"></a>8.如果relative属性所在的元素附近有？？元素，它的相对定位会被（怎样？）影响。</h4><h4 id="9-053CSS之position属性介绍-哔哩哔哩-bilibili太快了，从相对定位就跟不上了"><a href="#9-053CSS之position属性介绍-哔哩哔哩-bilibili太快了，从相对定位就跟不上了" class="headerlink" title="9.053CSS之position属性介绍_哔哩哔哩_bilibili太快了，从相对定位就跟不上了"></a>9.<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Fz411b7bm/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">053CSS之position属性介绍_哔哩哔哩_bilibili</a>太快了，从相对定位就跟不上了</h4> 
+<h2 id="今日疑问"><a href="#今日疑问" class="headerlink" title="今日疑问"></a>今日疑问</h2><h4 id="1-边距异常合并问题看不懂，重要？CSS-的两种盒模型-及边距异常合并问题"><a href="#1-边距异常合并问题看不懂，重要？CSS-的两种盒模型-及边距异常合并问题" class="headerlink" title="1.边距异常合并问题看不懂，重要？CSS 的两种盒模型 - 及边距异常合并问题"></a>1.边距异常合并问题看不懂，重要？<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/110617108">CSS 的两种盒模型 - 及边距异常合并问题</a></h4><h4 id="2-盒子的知识点包括边框边距？好像不包括。"><a href="#2-盒子的知识点包括边框边距？好像不包括。" class="headerlink" title="2.盒子的知识点包括边框边距？好像不包括。"></a>2.盒子的知识点包括边框边距？好像不包括。</h4><h4 id="3-边框是盒子的边框，为什么平时不写盒子也能用边框和边距？有默认设置？"><a href="#3-边框是盒子的边框，为什么平时不写盒子也能用边框和边距？有默认设置？" class="headerlink" title="3.边框是盒子的边框，为什么平时不写盒子也能用边框和边距？有默认设置？"></a>3.边框是盒子的边框，为什么平时不写盒子也能用边框和边距？有默认设置？</h4><h4 id="4-position属性用于指定一个元素在文档中的定位方式，文档指什么？好像是父元素。"><a href="#4-position属性用于指定一个元素在文档中的定位方式，文档指什么？好像是父元素。" class="headerlink" title="4.position属性用于指定一个元素在文档中的定位方式，文档指什么？好像是父元素。"></a>4.position属性用于指定一个元素在文档中的定位方式，文档指什么？好像是父元素。</h4><h4 id="5-元素其实是使用-top、bottom、left-和-right-属性定位的。但是，除非首先设置了-position-属性，否则这些属性将不起作用。"><a href="#5-元素其实是使用-top、bottom、left-和-right-属性定位的。但是，除非首先设置了-position-属性，否则这些属性将不起作用。" class="headerlink" title="5.元素其实是使用 top、bottom、left 和 right 属性定位的。但是，除非首先设置了 position 属性，否则这些属性将不起作用。"></a>5.元素其实是使用 top、bottom、left 和 right 属性定位的。但是，除非首先设置了 position 属性，否则这些属性将不起作用。</h4><h4 id="由于有默认的station，所以可以直接使用top等方式调整。"><a href="#由于有默认的station，所以可以直接使用top等方式调整。" class="headerlink" title="由于有默认的station，所以可以直接使用top等方式调整。"></a>由于有默认的station，所以可以直接使用top等方式调整。</h4><h4 id="那height、wide等，为什么也能直接使用-top、bottom、left-和-right-属性是用来控制什么东西的？"><a href="#那height、wide等，为什么也能直接使用-top、bottom、left-和-right-属性是用来控制什么东西的？" class="headerlink" title="那height、wide等，为什么也能直接使用? top、bottom、left 和 right 属性是用来控制什么东西的？"></a>那height、wide等，为什么也能直接使用? top、bottom、left 和 right 属性是用来控制什么东西的？</h4><h4 id="衍生ToDo：确定一下各种控制定位的属性，主语都是什么。"><a href="#衍生ToDo：确定一下各种控制定位的属性，主语都是什么。" class="headerlink" title="衍生ToDo：确定一下各种控制定位的属性，主语都是什么。"></a>衍生ToDo：确定一下各种控制定位的属性，主语都是什么。</h4><h4 id="6-静态定位的元素不受-top、bottom、left-和-right-属性的影响。position-static-的元素不会以任何特殊方式定位；它始终根据页面的正常流进行定位（什么叫特殊方式。什么叫正常流程）"><a href="#6-静态定位的元素不受-top、bottom、left-和-right-属性的影响。position-static-的元素不会以任何特殊方式定位；它始终根据页面的正常流进行定位（什么叫特殊方式。什么叫正常流程）" class="headerlink" title="6.静态定位的元素不受 top、bottom、left 和 right 属性的影响。position: static; 的元素不会以任何特殊方式定位；它始终根据页面的正常流进行定位（什么叫特殊方式。什么叫正常流程）"></a>6.静态定位的元素不受 top、bottom、left 和 right 属性的影响。position: static; 的元素不会以任何特殊方式定位；它始终根据页面的正常流进行定位（什么叫特殊方式。什么叫正常流程）</h4><h4 id="7-粘性定位的机制、流程（网站广告的原理）"><a href="#7-粘性定位的机制、流程（网站广告的原理）" class="headerlink" title="7.粘性定位的机制、流程（网站广告的原理）"></a>7.粘性定位的机制、流程（网站广告的原理）</h4><h4 id="8-如果relative属性所在的元素附近有？？元素，它的相对定位会被（怎样？）影响。"><a href="#8-如果relative属性所在的元素附近有？？元素，它的相对定位会被（怎样？）影响。" class="headerlink" title="8.如果relative属性所在的元素附近有？？元素，它的相对定位会被（怎样？）影响。"></a>8.如果relative属性所在的元素附近有？？元素，它的相对定位会被（怎样？）影响。</h4><h4 id="9-053CSS之position属性介绍-哔哩哔哩-bilibili太快了，从相对定位就跟不上了"><a href="#9-053CSS之position属性介绍-哔哩哔哩-bilibili太快了，从相对定位就跟不上了" class="headerlink" title="9.053CSS之position属性介绍_哔哩哔哩_bilibili太快了，从相对定位就跟不上了"></a>9.<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Fz411b7bm/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">053CSS之position属性介绍_哔哩哔哩_bilibili</a>太快了，从相对定位就跟不上了</h4><h4 id="10-想要各种东西显示到同一行的同时，元素之间没有间隙，怎么设置？"><a href="#10-想要各种东西显示到同一行的同时，元素之间没有间隙，怎么设置？" class="headerlink" title="10.想要各种东西显示到同一行的同时，元素之间没有间隙，怎么设置？"></a>10.想要各种东西显示到同一行的同时，元素之间没有间隙，怎么设置？</h4><p>萧从颜 — 今天13:20<br>下午todo：<br>1.看这个<a target="_blank" rel="noopener" href="https://frontend30.com/css-selectors-cheatsheet/">CSS Selectors Cheatsheet - FrontEnd30</a><br>FrontEnd30<br>CSS Selectors Cheatsheet - FrontEnd30<br>2.写骰子<br>  3.把剩下的布局弄完。看position(relative&#x2F;absolute&#x2F;fixed)<br>4.尝试组合各种选择器<br>5.选择器分类+阮一峰的笔记<br>6.border以及outline的区别<br>晚上todo：<br>1.搞明白盒子模型（初步）<br>2.先看布局position（大概看一眼）<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/css/css_positioning.asp">https://www.w3school.com.cn/css/css_positioning.asp</a><br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Fz411b7bm/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">https://www.bilibili.com/video/BV1Fz411b7bm/?spm_id_from=333.337.search-card.all.click&amp;vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92</a><br> 3.再把四点骰子写了，对比一下思路和样式。<br> 4.再把选择器写一写 (已编辑)<br>FrontEnd30<br>CSS Selectors Cheatsheet - FrontEnd30<br>053CSS之position属性介绍_哔哩哔哩_bilibili</p>
+<p>1</p>
+<p>Wongchisum — 今天13:30<br>3.布局，布局方面可以看一下 position，常见的几个 position(relative&#x2F;absolute&#x2F;fixed) 可以掌握一下，我们预计周末找时间开始写静态页面</p>
+<p>萧从颜 — 今天13:42<br>疑问1：a b:first-child是不是意味着如果a元素的第一个孩子是b，则被选择</p>
+<p>萧从颜 — 今天14:00<br>疑问2：*~＄等通用符号的术语叫什么？</p>
+<p>Wongchisum — 今天14:01<br>*:星号，一般是通配符<br>[14:02]<br>用法:</p>
+<ul>
+<li>{} &#x2F;&#x2F; 所有元素沿用这个样式<br>div * { &#x2F;&#x2F; div 元素的后代元素沿用这个样式</li>
+</ul>
+<p>}<br>[14:02]<br>~： 波浪号,用于选择兄弟元素<br>[14:03]<br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Selectors">https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Selectors</a> CSS选择器可以看这部分<br>CSS 选择器 - CSS：层叠样式表 | MDN<br>CSS 选择器规定了 CSS 规则会被应用到哪些元素上。</p>
+<p>萧从颜 — 今天14:39<br>1已完成</p>
+<p>1</p>
+<p>@萧从颜<br>疑问1：a b:first-child是不是意味着如果a元素的第一个孩子是b，则被选择</p>
+<p>Wongchisum — 今天14:42<br>:fist-child 的写法等同于 :nth-child(1)</p>
+<p>指的是父元素的第一个子元素<br>[14:43]</p>
+<p>child-selector-demo.zip<br>494 bytes<br>[14:43]<br>写了一个demo，可以点击试一下<br>[14:43]</p>
+<p>萧从颜 — 今天15:28<br>5完成</p>
+<p>1</p>
+<p>萧从颜 — 今天16:04<br>疑问3：换行代码和强制块级哪个方法更好？关于多个点如何在规定的数量后换行的方法<br>1.给点设置适当的边距（很麻烦）<br>2.选择父类的第n个子类，增加换行代码或强制块级<br>3.给想换行的点加上class（一般麻烦）</p>
+<p>萧从颜 — 今天16:19<br>尝试1.增加换行代码需要js，此方法加入阻塞池</p>
+<p>[16:21]<br>尝试2.将某个点强制块级，也失败了</p>
+<p>[16:22]</p>
+<p>@萧从颜<br>疑问3：换行代码和强制块级哪个方法更好？关于多个点如何在规定的数量后换行的方法 1.给点设置适当的边距（很麻烦） 2.选择父类的第n个子类，增加换行代码或强制块级 3.给想换行的点加上class（一般麻烦）</p>
+<p>Wongchisum — 今天16:25<br>这个问题我先mark一下，回去结合实际情况再给你解答</p>
+<p>Wongchisum — 今天16:35<br>先根据图分析需要的html结构<br>[16:35]</p>
+<p>[16:36]<br>水平方向：两个两端对齐，垂直方向，也是两端对齐</p>
+<div class="box">
+        <div class="box-content">
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <div class="box-content">
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+<p>所以我用了这样的结构，box这一层沿着纵轴排列，两端对齐<br>box-content这层沿着水平排列，两端对齐</p>
+<p>1<br>[16:37]<br>demo</p>
+<p>demo.zip<br>765 bytes</p>
+<p>萧从颜 — 今天17:06<br>6已完成</p>
+<p>1<br>[17:07]<br>4完成三分之一<br>[17:12]<br>晚上todo：先看position，再把四点骰子写了，对比一下思路和样式。</p>
+<p>Wongchisum — 今天17:19<br>后续节奏可以调整一下：每个任务完成可以先简单总结一下</p>
+<p>1<br>[17:20]<br>不然好几个任务做完一次性总结会有点费时</p>
+<p>萧从颜 — 今天19:14<br>中期总结：<br>1.CSS选择器的分类及简单使用的易错点。<br>2.margin、border、outline、padding概念的区分（待实践）<br>3.代码思路：html是每一个div都可以重新设计的，很多东西看起来相似但实际上不能重复使用代码 (已编辑)</p>
+<p>@萧从颜<br>中期总结： 1.CSS选择器的分类及简单使用的易错点。 2.margin、border、outline、padding概念的区分（待实践） 3.代码思路：html是每一个div都可以重新设计的，很多东西看起来相似但实际上不能重复使用代码 (已编辑)</p>
+<p>Wongchisum — 今天19:27<br>1.margin，padding，border概念的区分： 这一块可以看一下盒子模型，画个图理解一下</p>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model">https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model</a></p>
+<p>主要涉及的样式其实就是: box-sizing:content-box 以及 box-sizing:border-box</p>
+<p>2.outline和border的区别，这一部分实际可以等理解完盒子模型，就能更好理解</p>
+<p>主要区别在于:<br>1.应用场景:一般border能适用于任何元素的样式，outline一般用于表单组件(比如input&#x2F;textarea)<br>2.特性不一样：border一般会被计算在元素的宽高大小里面，outline不会<br>盒模型 - 学习 Web 开发 | MDN<br>在 CSS 中，所有的元素都被一个个的“盒子（box）”包围着，理解这些“盒子”的基本原理，是我们使用 CSS 实现准确布局、处理元素排列的关键。</p>
+<p>萧从颜<br>下午todo： 1.看这个<a target="_blank" rel="noopener" href="https://frontend30.com/css-selectors-cheatsheet/">CSS Selectors Cheatsheet - FrontEnd30</a> FrontEnd30 CSS Selectors Cheatsheet - FrontEnd30 2.写骰子  3.把剩下的布局弄完。看position(relative&#x2F;absolute&#x2F;fixed) 4.尝试组合各种选择器 5.选择器分类+阮一峰的笔记 6.border以及outline的区别 晚上todo： 1.搞明白盒子模型（初步） 2.先看布局position（大概看一眼）<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/css/css_positioning.asp">https://www.w3school.com.cn/css/css_positioning.asp</a> <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Fz411b7bm/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">https://www.bilibili.com/video/BV1Fz411b7bm/?spm_id_from=333.337.search-card.all.click&amp;vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92</a>  3.再把四点骰子写了，对比一下思路和样式。  4.再把选择器写一写 (已编辑)</p>
+<p>萧从颜 — 今天20:19<br>晚1完成</p>
+<p>萧从颜 — 今天21:54<br>4.4晚间疑问</p>
+<h4 id="1-边距异常合并问题看不懂，重要？CSS-的两种盒模型-及边距异常合并问题-1"><a href="#1-边距异常合并问题看不懂，重要？CSS-的两种盒模型-及边距异常合并问题-1" class="headerlink" title="1.边距异常合并问题看不懂，重要？CSS 的两种盒模型 - 及边距异常合并问题"></a>1.边距异常合并问题看不懂，重要？<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/110617108">CSS 的两种盒模型 - 及边距异常合并问题</a></h4><h4 id="2-盒子的知识点包括边框边距？好像不包括。-1"><a href="#2-盒子的知识点包括边框边距？好像不包括。-1" class="headerlink" title="2.盒子的知识点包括边框边距？好像不包括。"></a>2.盒子的知识点包括边框边距？好像不包括。</h4><h4 id="3-边框是盒子的边框，为什么平时不写盒子也能用边框和边距？有默认设置？-1"><a href="#3-边框是盒子的边框，为什么平时不写盒子也能用边框和边距？有默认设置？-1" class="headerlink" title="3.边框是盒子的边框，为什么平时不写盒子也能用边框和边距？有默认设置？"></a>3.边框是盒子的边框，为什么平时不写盒子也能用边框和边距？有默认设置？</h4><h4 id="4-position属性用于指定一个元素在文档中的定位方式，文档指什么？好像是父元素。-1"><a href="#4-position属性用于指定一个元素在文档中的定位方式，文档指什么？好像是父元素。-1" class="headerlink" title="4.position属性用于指定一个元素在文档中的定位方式，文档指什么？好像是父元素。"></a>4.position属性用于指定一个元素在文档中的定位方式，文档指什么？好像是父元素。</h4><h4 id="5-元素其实是使用-top、bottom、left-和-right-属性定位的。但是，除非首先设置了-position-属性，否则这些属性将不起作用。-1"><a href="#5-元素其实是使用-top、bottom、left-和-right-属性定位的。但是，除非首先设置了-position-属性，否则这些属性将不起作用。-1" class="headerlink" title="5.元素其实是使用 top、bottom、left 和 right 属性定位的。但是，除非首先设置了 position 属性，否则这些属性将不起作用。"></a>5.元素其实是使用 top、bottom、left 和 right 属性定位的。但是，除非首先设置了 position 属性，否则这些属性将不起作用。</h4><h4 id="由于有默认的station，所以可以直接使用top等方式调整。-1"><a href="#由于有默认的station，所以可以直接使用top等方式调整。-1" class="headerlink" title="由于有默认的station，所以可以直接使用top等方式调整。"></a>由于有默认的station，所以可以直接使用top等方式调整。</h4><h4 id="那height、wide等，为什么也能直接使用-top、bottom、left-和-right-属性是用来控制什么东西的？-1"><a href="#那height、wide等，为什么也能直接使用-top、bottom、left-和-right-属性是用来控制什么东西的？-1" class="headerlink" title="那height、wide等，为什么也能直接使用? top、bottom、left 和 right 属性是用来控制什么东西的？"></a>那height、wide等，为什么也能直接使用? top、bottom、left 和 right 属性是用来控制什么东西的？</h4><h4 id="衍生ToDo：确定一下各种控制定位的属性，主语都是什么。-1"><a href="#衍生ToDo：确定一下各种控制定位的属性，主语都是什么。-1" class="headerlink" title="衍生ToDo：确定一下各种控制定位的属性，主语都是什么。"></a>衍生ToDo：确定一下各种控制定位的属性，主语都是什么。</h4><h4 id="6-静态定位的元素不受-top、bottom、left-和-right-属性的影响。position-static-的元素不会以任何特殊方式定位；它始终根据页面的正常流进行定位（什么叫特殊方式。什么叫正常流程）-1"><a href="#6-静态定位的元素不受-top、bottom、left-和-right-属性的影响。position-static-的元素不会以任何特殊方式定位；它始终根据页面的正常流进行定位（什么叫特殊方式。什么叫正常流程）-1" class="headerlink" title="6.静态定位的元素不受 top、bottom、left 和 right 属性的影响。position: static; 的元素不会以任何特殊方式定位；它始终根据页面的正常流进行定位（什么叫特殊方式。什么叫正常流程）"></a>6.静态定位的元素不受 top、bottom、left 和 right 属性的影响。position: static; 的元素不会以任何特殊方式定位；它始终根据页面的正常流进行定位（什么叫特殊方式。什么叫正常流程）</h4><h4 id="7-粘性定位的机制、流程（网站广告的原理）-1"><a href="#7-粘性定位的机制、流程（网站广告的原理）-1" class="headerlink" title="7.粘性定位的机制、流程（网站广告的原理）"></a>7.粘性定位的机制、流程（网站广告的原理）</h4><h4 id="8-如果relative属性所在的元素附近有？？元素，它的相对定位会被（怎样？）影响。-1"><a href="#8-如果relative属性所在的元素附近有？？元素，它的相对定位会被（怎样？）影响。-1" class="headerlink" title="8.如果relative属性所在的元素附近有？？元素，它的相对定位会被（怎样？）影响。"></a>8.如果relative属性所在的元素附近有？？元素，它的相对定位会被（怎样？）影响。</h4><h4 id="9-053CSS之position属性介绍-哔哩哔哩-bilibili太快了，从相对定位就跟不上了-1"><a href="#9-053CSS之position属性介绍-哔哩哔哩-bilibili太快了，从相对定位就跟不上了-1" class="headerlink" title="9.053CSS之position属性介绍_哔哩哔哩_bilibili太快了，从相对定位就跟不上了"></a>9.<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Fz411b7bm/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">053CSS之position属性介绍_哔哩哔哩_bilibili</a>太快了，从相对定位就跟不上了</h4> 
       <!-- reward -->
       
     </div>
