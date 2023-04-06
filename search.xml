@@ -2788,7 +2788,7 @@
 <p>声明该边框的类型：display ：可选项如下</p>
 <p>​								flex灵活布局</p>
 <p>​								grid网格布局</p>
-<p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329162830851.png" alt="image-20230329162830851"></p>
+<p><img src="C:\Users\11096\blog\source\pic\Q2\image-20230329162830851.png" alt="image-20230329162830851"></p>
 <p>​							</p>
 <ul>
 <li><p>通用（框架相关）:</p>
@@ -2825,12 +2825,12 @@
 <p>字重：<strong>font-weight</strong>（字体粗细）</p>
 <p>行高：line-height</p>
 <p>斜体： font-style:italic;</p>
-<p>圆角：<img src="C:\Users\11096\Documents\WeChat Files\wxid_xfl56vvd0cvm22\FileStorage\Temp\1680769113691.png" alt="1680769113691" style="zoom:30%;" />值为px</p>
+<p>圆角：<img src="C:\Users\11096\blog\source\pic\Q2\1680769113691.png" alt="1680769113691" style="zoom:30%;" />值为px</p>
 <p>​			border-radius：25px；圆角边框。</p>
 <p>阴影：属性box-shadow</p>
 <p>​			选项为inside&#x2F;outside（默认值为外部阴影），值为水平偏移px 垂直偏移px 模糊强度px 颜色。</p>
-<p>​			举例：<img src="C:\Users\11096\Documents\WeChat Files\wxid_xfl56vvd0cvm22\FileStorage\Temp\1680769413222.png" alt="1680769413222" style="zoom:38%;" />就是阴影是盒子往右下角偏移10px的效果。</p>
-<p>​			举例2：<img src="C:\Users\11096\Documents\WeChat Files\wxid_xfl56vvd0cvm22\FileStorage\Temp\1680769550505.png" alt="1680769550505" style="zoom:38%;" /></p>
+<p>​			举例：<img src="C:\Users\11096\blog\source\pic\Q2\1680769413222.png" alt="1680769413222" style="zoom:38%;" />就是阴影是盒子往右下角偏移10px的效果。</p>
+<p>​			举例2：<img src="C:\Users\11096\blog\source\pic\Q2\1680769550505.png" alt="1680769550505" style="zoom:38%;" /></p>
 <p>分割线：html的hr标签</p>
 <p>​				样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）</p>
 <p>​			（看起来会有凹陷效果）</p>
@@ -2885,7 +2885,7 @@
 </ul>
 <h3 id="3-多端样式归一化必加代码【【【【】】】】"><a href="#3-多端样式归一化必加代码【【【【】】】】" class="headerlink" title="3.多端样式归一化必加代码【【【【】】】】"></a><strong>3.多端样式归一化必加代码</strong>【【【【】】】】</h3><p>​    <meta name="viewport" content="width=device-width, initial-scale=1.0" /></p>
 <h3 id="4-过度与动画"><a href="#4-过度与动画" class="headerlink" title="4.过度与动画"></a>4.过度与动画</h3><p>过渡：<strong>transition</strong>属性</p>
-<p>​				知识：  transition：属性    时间    速度；<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230406211511826.png" alt="image-20230406211511826" style="zoom:25%;" /></p>
+<p>​				知识：  transition：属性    时间    速度；<img src="C:\Users\11096\blog\source\pic\Q2\image-20230406211511826.png" alt="image-20230406211511826" style="zoom:25%;" /></p>
 <p>​							transition：a，p   1s    linear；          </p>
 <p>​							transition：     all   1s    linear；</p>
 <p>​				作用：在规定时间内，暂时改变选定元素属性的值（和选择器一起使用）</p>
@@ -2925,7 +2925,7 @@
     <content><![CDATA[<h1 id="CSS学习笔记-2-2选择器"><a href="#CSS学习笔记-2-2选择器" class="headerlink" title="CSS学习笔记-2.2选择器"></a>CSS学习笔记-2.2选择器</h1><h4 id="选择器字典"><a href="#选择器字典" class="headerlink" title="选择器字典"></a>选择器字典</h4><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Attribute_selectors">属性选择器 - CSS：层叠样式表 | MDN (mozilla.org)</a></p>
 <p><a href="https://www.ruanyifeng.com/blog/2009/03/css_selectors.html">CSS选择器笔记 - 阮一峰的网络日志 (ruanyifeng.com)</a></p>
 <p><a href="https://frontend30.com/css-selectors-cheatsheet/">CSS Selectors Cheatsheet - FrontEnd30</a></p>
-<h4 id="选择器的优先级"><a href="#选择器的优先级" class="headerlink" title="选择器的优先级"></a>选择器的优先级</h4><p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230401185155310.png" alt="image-20230401185155310"></p>
+<h4 id="选择器的优先级"><a href="#选择器的优先级" class="headerlink" title="选择器的优先级"></a>选择器的优先级</h4><p><img src="C:\Users\11096\blog\source\pic\Q3\image-20230401185155310.png" alt="image-20230401185155310"></p>
 <h4 id="选择器的构成"><a href="#选择器的构成" class="headerlink" title="选择器的构成"></a>选择器的构成</h4><p>选择器分为符号和框架</p>
 <p>符号：＄ ~ # ^等（可组合到框架中）</p>
 <p>框架：[ ] , nth-of-child等 </p>
@@ -2939,8 +2939,8 @@
 </ul>
 </li>
 </ol>
-<h3 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h3><p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404152420883.png" alt="image-20230404152420883" style="zoom: 50%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404152441816.png" alt="image-20230404152441816" style="zoom:50%;" /></p>
-<h6 id=""><a href="#" class="headerlink" title=""></a><img src="C:\Users\11096\Documents\WeChat Files\wxid_xfl56vvd0cvm22\FileStorage\Temp\1680587935181.png" alt="1680587935181" style="zoom:50%;" /></h6><p>元素[属性1] [属性2]</p>
+<h3 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h3><p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404152420883.png" alt="image-20230404152420883" style="zoom: 50%;" /><img src="C:\Users\11096\blog\source\pic\Q3\image-20230404152441816.png" alt="image-20230404152441816" style="zoom:50%;" /></p>
+<h6 id=""><a href="#" class="headerlink" title=""></a><img src="C:\Users\11096\blog\source\pic\Q3\1680587935181.png" alt="1680587935181" style="zoom:50%;" /></h6><p>元素[属性1] [属性2]</p>
 <ul>
 <li>同时有两个选择的元素</li>
 </ul>
@@ -2983,36 +2983,36 @@
 <li></li>
 </ul>
 <p>**【【【【【【没有找到】】】】】】】</p>
-<h4 id="同级元素通用选择器"><a href="#同级元素通用选择器" class="headerlink" title="同级元素通用选择器"></a>同级元素通用选择器</h4><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404151520256.png" alt="image-20230404151520256" style="zoom:50%;" />
+<h4 id="同级元素通用选择器"><a href="#同级元素通用选择器" class="headerlink" title="同级元素通用选择器"></a>同级元素通用选择器</h4><img src="C:\Users\11096\blog\source\pic\Q3\image-20230404151520256.png" alt="image-20230404151520256" style="zoom:50%;" />
 
-<h4 id="多元素的组合选择器"><a href="#多元素的组合选择器" class="headerlink" title="多元素的组合选择器"></a>多元素的组合选择器</h4><img src="C:\Users\11096\Documents\WeChat Files\wxid_xfl56vvd0cvm22\FileStorage\Temp\1680592298848.png" alt="1680592298848" style="zoom: 50%;" />
+<h4 id="多元素的组合选择器"><a href="#多元素的组合选择器" class="headerlink" title="多元素的组合选择器"></a>多元素的组合选择器</h4><img src="C:\Users\11096\blog\source\pic\Q3\1680592298848.png" alt="1680592298848" style="zoom: 50%;" />
 
-<h2 id="二-关系型选择器"><a href="#二-关系型选择器" class="headerlink" title="二.关系型选择器"></a>二.关系型选择器</h2><p>子选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404132255364.png" alt="image-20230404132255364" style="zoom:50%;" /></p>
-<p>后代选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404132326607.png" alt="image-20230404132326607" style="zoom: 50%;" /></p>
-<p>相邻兄弟选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404133357624.png" alt="image-20230404133357624" style="zoom:50%;" /></p>
-<p>通用兄弟选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404133450743.png" alt="image-20230404133450743" style="zoom:50%;" /></p>
+<h2 id="二-关系型选择器"><a href="#二-关系型选择器" class="headerlink" title="二.关系型选择器"></a>二.关系型选择器</h2><p>子选择器<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404132255364.png" alt="image-20230404132255364" style="zoom:50%;" /></p>
+<p>后代选择器<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404132326607.png" alt="image-20230404132326607" style="zoom: 50%;" /></p>
+<p>相邻兄弟选择器<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404133357624.png" alt="image-20230404133357624" style="zoom:50%;" /></p>
+<p>通用兄弟选择器<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404133450743.png" alt="image-20230404133450743" style="zoom:50%;" /></p>
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Column_combinator">列组合器</a> </p>
 <p><code>||</code> 组合器选择属于某个表格行的节点。</p>
 <p><strong>语法：</strong><code>A || B</code></p>
 <p><strong>例子：</strong><code>col || td</code> 会匹配所有 作用域内的 &#96;](<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/td">https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/td</a>) 元素。</p>
-<p>独子选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404133754657.png" alt="image-20230404133754657" style="zoom:50%;" />		a 表示选择a元素的独子，b表示如果b是独子则被选择</p>
-<p>第 N 个最后一个子选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404134515253.png" alt="image-20230404134515253" style="zoom:50%;" /></p>
-<p>首项选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404134548820.png" alt="image-20230404134548820" style="zoom:50%;" />可以根据元素、属性进行选择</p>
-<p>尾项选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404134901176.png" alt="image-20230404134901176" style="zoom:50%;" />尾属性的class不等于x则不选任何东西</p>
+<p>独子选择器<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404133754657.png" alt="image-20230404133754657" style="zoom:50%;" />		a 表示选择a元素的独子，b表示如果b是独子则被选择</p>
+<p>第 N 个最后一个子选择器<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404134515253.png" alt="image-20230404134515253" style="zoom:50%;" /></p>
+<p>首项选择器<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404134548820.png" alt="image-20230404134548820" style="zoom:50%;" />可以根据元素、属性进行选择</p>
+<p>尾项选择器<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404134901176.png" alt="image-20230404134901176" style="zoom:50%;" />尾属性的class不等于x则不选任何东西</p>
 <h2 id="三-伪类选择器"><a href="#三-伪类选择器" class="headerlink" title="三.伪类选择器"></a>三.伪类选择器</h2><p>用户界面伪类选择器</p>
-<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404150313528.png" alt="image-20230404150313528" style="zoom: 50%;" />
+<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404150313528.png" alt="image-20230404150313528" style="zoom: 50%;" />
 
-<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404150546942.png" alt="image-20230404150546942" style="zoom:50%;" />
+<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404150546942.png" alt="image-20230404150546942" style="zoom:50%;" />
 
-<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404152535460.png" alt="image-20230404152535460" style="zoom:50%;" />
+<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404152535460.png" alt="image-20230404152535460" style="zoom:50%;" />
 
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">两个写法相同的选择器，意思为子元素的父元素的第n个子元素</span><br><span class="line">父元素 子元素：nth-child(1)</span><br><span class="line">父元素 子元素：first-child</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/*意思是.dot的父元素的第二个孩子*/</span><br><span class="line">.bg2 .dot:nth-child(2)&#123;</span><br><span class="line">    align-self: flex-end;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>反选伪类选择器<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404135618254.png" alt="image-20230404135618254" style="zoom:50%;" /></p>
+<p>反选伪类选择器<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404135618254.png" alt="image-20230404135618254" style="zoom:50%;" /></p>
 <p>看不懂</p>
-<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404152643373.png" alt="image-20230404152643373" style="zoom: 50%;" />
+<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404152643373.png" alt="image-20230404152643373" style="zoom: 50%;" />
 
-<h2 id="四-伪元素选择器"><a href="#四-伪元素选择器" class="headerlink" title="四.伪元素选择器"></a>四.伪元素选择器</h2><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404150514659.png" alt="image-20230404150514659" style="zoom:50%;" />
+<h2 id="四-伪元素选择器"><a href="#四-伪元素选择器" class="headerlink" title="四.伪元素选择器"></a>四.伪元素选择器</h2><img src="C:\Users\11096\blog\source\pic\Q3\image-20230404150514659.png" alt="image-20230404150514659" style="zoom:50%;" />
 
 
 
@@ -3052,7 +3052,7 @@
     <url>/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-1%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%B8%83%E5%B1%80/</url>
     <content><![CDATA[<h1 id="CSS学习笔记-2-1盒子、定位与布局-三种重要布局及其它布局"><a href="#CSS学习笔记-2-1盒子、定位与布局-三种重要布局及其它布局" class="headerlink" title="CSS学习笔记-2.1盒子、定位与布局-三种重要布局及其它布局"></a>CSS学习笔记-2.1盒子、定位与布局-三种重要布局及其它布局</h1><p><a href="https://www.icourse163.org/learn/BFU-1003382003?tid=1469987444#/learn/content?type=detail&id=1253020763&sm=1">Web前端开发_中国大学MOOC(慕课) (icourse163.org)</a></p>
 <h2 id="布局三种定位机制："><a href="#布局三种定位机制：" class="headerlink" title="布局三种定位机制："></a>布局三种定位机制：</h2><p>文档流（元素分类inlineblock.元素类型转换display）→浮动（float属性）→层（position属性）</p>
-<img src="C:\Users\11096\Documents\WeChat Files\wxid_xfl56vvd0cvm22\FileStorage\Temp\1680613753098.png" alt="1680613753098" style="zoom: 50%;" />
+<img src="C:\Users\11096\blog\source\pic\Q3\1680613753098.png" alt="1680613753098" style="zoom: 50%;" />
 
 <h2 id="1-元素布局（终极布局，最好用）"><a href="#1-元素布局（终极布局，最好用）" class="headerlink" title="1.元素布局（终极布局，最好用）"></a>1.元素布局（终极布局，最好用）</h2><ol>
 <li><h3 id="灵活-x2F-弹性-x2F-伸缩布局flex"><a href="#灵活-x2F-弹性-x2F-伸缩布局flex" class="headerlink" title="灵活&#x2F;弹性&#x2F;伸缩布局flex"></a>灵活&#x2F;弹性&#x2F;伸缩布局flex</h3><p><a href="https://www.bilibili.com/video/BV1Lp4y1S7XM/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">五分钟掌握 css3 flex弹性布局</a></p>
@@ -3062,7 +3062,7 @@
 <p><a href="https://www.ruanyifeng.com/blog/2015/07/flex-examples.html">https://www.ruanyifeng.com/blog/2015/07/flex-examples.html</a></p>
 <p>小青蛙游戏学flex</p>
 <p><a href="http://flexboxfroggy.com/">Flexbox Froggy - A game for learning CSS flexbox</a></p>
-<h4 id="属性作用域分类："><a href="#属性作用域分类：" class="headerlink" title="属性作用域分类："></a>属性作用域分类：</h4><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230406114818874.png" alt="image-20230406114818874" style="zoom: 25%;" />
+<h4 id="属性作用域分类："><a href="#属性作用域分类：" class="headerlink" title="属性作用域分类："></a>属性作用域分类：</h4><img src="C:\Users\11096\blog\source\pic\Q3\image-20230406114818874.png" alt="image-20230406114818874" style="zoom: 25%;" />
 
 
 
@@ -3087,18 +3087,18 @@
 <blockquote>
 <p>​	   row：行    column：柱子</p>
 </blockquote>
-<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190849686.png" alt="image-20230329190849686" style="zoom:50%;" />
+<img src="C:\Users\11096\blog\source\pic\Q3\image-20230329190849686.png" alt="image-20230329190849686" style="zoom:50%;" />
 
 <p>​			<strong>flex-wrap：</strong>设置子元素是否换行</p>
 <p>​						nowrap 不换行	(装不下会缩小子元素的宽度)<br>​						wrap 换行</p>
 <p>​			<strong>justify-content：</strong>设置<strong>主轴</strong>上的子元素排列方式【【【【【不分单行多行吗？】】】】】】</p>
-<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190910922.png" alt="image-20230329190910922" style="zoom:50%;" />
+<img src="C:\Users\11096\blog\source\pic\Q3\image-20230329190910922.png" alt="image-20230329190910922" style="zoom:50%;" />
 
 
 <p>​			<strong>align-items：</strong>设置<strong>辅轴</strong>上的子元素排列方式（单行）</p>
 <p>​						该属性是控制子项在侧轴上的排列方式 在子项为单行的时候使用<br>​						flex-start 从头部开始<br>​						flex-end 从尾部开始<br>​						center 居中显示<br>​						stretch 拉伸      拉伸高度直至完整的占据父元素的高度。</p>
 <p>​			<strong>align-content：</strong> 设置<strong>辅轴</strong>上的子元素的排列方式（多行）</p>
-<p>​				<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190910922.png" alt="image-20230329190910922" style="zoom: 50%;" /></p>
+<p>​				<img src="C:\Users\11096\blog\source\pic\Q3\image-20230329190910922.png" alt="image-20230329190910922" style="zoom: 50%;" /></p>
 <p>​			align-content 和align-items区别<br>​						align-items 适用于单行情况下， 只有上对齐、下对齐、居中和 拉伸<br>​						align-content适用多行换行的情况（单行无效）</p>
 <p>​			<strong>flex-flow：</strong>复合属性，相当于同时设置了 flex-direction 和 flex-wrap</p>
 <p>3.flex布局子项常见属性【少用】<br>            flex子项目占的份数<br>            align-self控制子项自己在侧轴的排列方式<br>            order属性定义子项的排列顺序（前后顺序）<br>4.flex属性<br>            flex 属性定义子项目分配剩余空间，用flex来表示占多少份数。</p>
@@ -3107,9 +3107,9 @@
 <p>5.align-self控制子项自己在侧轴上的排列方式【少用】<br>            align-self 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖 align-items 属性。<br>            默认值为 auto，表示继承父元素的 align-items 属性，如果没有父元素，则等同于 stretch。</p>
 </li>
 <li><h3 id="网格布局Grid"><a href="#网格布局Grid" class="headerlink" title="网格布局Grid"></a>网格布局Grid</h3><p><a href="https://www.runoob.com/css3/css-grid.html">CSS 网格布局 | 菜鸟教程 (runoob.com)</a></p>
-<h4 id="属性作用域分类：-1"><a href="#属性作用域分类：-1" class="headerlink" title="属性作用域分类："></a>属性作用域分类：</h4><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230406160133663.png" alt="image-20230406160133663" style="zoom:50%;" /></li>
+<h4 id="属性作用域分类：-1"><a href="#属性作用域分类：-1" class="headerlink" title="属性作用域分类："></a>属性作用域分类：</h4><img src="C:\Users\11096\blog\source\pic\Q3\image-20230406160133663.png" alt="image-20230406160133663" style="zoom:50%;" /></li>
 </ol>
-<h4 id="知识点：-1"><a href="#知识点：-1" class="headerlink" title="知识点："></a>知识点：</h4><p>​					<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230406160552994.png" alt="image-20230406160552994" style="zoom: 25%;" /></p>
+<h4 id="知识点：-1"><a href="#知识点：-1" class="headerlink" title="知识点："></a>知识点：</h4><p>​					<img src="C:\Users\11096\blog\source\pic\Q3\image-20230406160552994.png" alt="image-20230406160552994" style="zoom: 25%;" /></p>
 <ol start="2">
 <li><h3 id="浮动布局"><a href="#浮动布局" class="headerlink" title="浮动布局"></a>浮动布局</h3></li>
 </ol>
@@ -3125,14 +3125,14 @@
 <p>​			2.right</p>
 <p>​			3.top</p>
 <p>​			4.bottom</p>
-<h4 id="应用："><a href="#应用：" class="headerlink" title="应用："></a>应用：</h4><h4 id=""><a href="#" class="headerlink" title=""></a><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161130046.png" alt="image-20230405161130046" style="zoom: 33%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161204082.png" alt="image-20230405161204082" style="zoom:33%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161227150.png" alt="image-20230405161227150" style="zoom: 25%;" /></h4><h4 id="易错点：注意浮动时，宽度是否够用的情况"><a href="#易错点：注意浮动时，宽度是否够用的情况" class="headerlink" title="易错点：注意浮动时，宽度是否够用的情况"></a>易错点：注意浮动时，宽度是否够用的情况</h4><p>​					<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161350930.png" alt="image-20230405161350930" style="zoom: 25%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161312570.png" alt="image-20230405161312570" style="zoom: 25%;" /></p>
+<h4 id="应用："><a href="#应用：" class="headerlink" title="应用："></a>应用：</h4><h4 id=""><a href="#" class="headerlink" title=""></a><img src="C:\Users\11096\blog\source\pic\Q3\image-20230405161130046.png" alt="image-20230405161130046" style="zoom: 33%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161204082.png" alt="image-20230405161204082" style="zoom:33%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161227150.png" alt="image-20230405161227150" style="zoom: 25%;" /></h4><h4 id="易错点：注意浮动时，宽度是否够用的情况"><a href="#易错点：注意浮动时，宽度是否够用的情况" class="headerlink" title="易错点：注意浮动时，宽度是否够用的情况"></a>易错点：注意浮动时，宽度是否够用的情况</h4><p>​					<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161350930.png" alt="image-20230405161350930" style="zoom: 25%;" /><img src="C:\Users\11096\blog\source\pic\Q3\image-20230405161312570.png" alt="image-20230405161312570" style="zoom: 25%;" /></p>
 <h4 id="clear清除浮动："><a href="#clear清除浮动：" class="headerlink" title="clear清除浮动："></a>clear清除浮动：</h4><p>​	易错点：清除某一方向的浮动不是把某方向上的浮动元素删除，</p>
 <p>​								而是该元素的某一方向不能有浮动元素。也就是说，该元素会另起一行。</p>
 <p>​	属性值：both（两侧）left right</p>
 <p>​	举例：</p>
-<p>​			单向清除浮动举例<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405165442568.png" alt="image-20230405165442568" style="zoom:25%;" /></p>
+<p>​			单向清除浮动举例<img src="C:\Users\11096\blog\source\pic\Q3\image-20230405165442568.png" alt="image-20230405165442568" style="zoom:25%;" /></p>
 <p>​			both清除浮动举例</p>
-<p>​											<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405165348256.png" alt="image-20230405165348256" style="zoom:25%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405165322218.png" alt="image-20230405165322218" style="zoom: 25%;" /></p>
+<p>​											<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405165348256.png" alt="image-20230405165348256" style="zoom:25%;" /><img src="C:\Users\11096\blog\source\pic\Q3\image-20230405165322218.png" alt="image-20230405165322218" style="zoom: 25%;" /></p>
 <h4 id="float总结："><a href="#float总结：" class="headerlink" title="float总结："></a>float总结：</h4><p>​		1.浮动定位是在同一层面的，可以两个都设置成向左浮动或者一个向左一个向右，来实现同样的效果。 </p>
 <p>​		2.清除浮动不是删除元素，相当于另起一行的效果 。</p>
 <p>​		3.实现几行几列的效果，最初用的都是浮动。想要实现分行，就用清除浮动，想要实现分列，就用增加浮动。</p>
@@ -3181,7 +3181,7 @@
 <p>​				旋转：**transform:rotate(30deg);**顺时针旋转30度。transform:rotate(-30deg);逆时针旋转30度。</p>
 <p>​				缩放：<strong>transform:scale(x,y);</strong></p>
 <p>​							xy取值范围为 【0-1缩小】 【1 ~ +∞放大】</p>
-<h5 id="盒子种类"><a href="#盒子种类" class="headerlink" title="盒子种类:"></a>盒子种类:</h5><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404195037016.png" alt="image-20230404195037016" style="zoom:50%;" />
+<h5 id="盒子种类"><a href="#盒子种类" class="headerlink" title="盒子种类:"></a>盒子种类:</h5><img src="C:\Users\11096\blog\source\pic\Q3\image-20230404195037016.png" alt="image-20230404195037016" style="zoom:50%;" />
 
 <h5 id="两种盒模型的区别："><a href="#两种盒模型的区别：" class="headerlink" title="两种盒模型的区别："></a>两种盒模型的区别：</h5><p>​		分别定义了user agent应该如何计算一个元素的总宽度和总高度的方法</p>
 <ul>
@@ -3199,7 +3199,7 @@
 <h5 id="border和outline的区别："><a href="#border和outline的区别：" class="headerlink" title="border和outline的区别："></a>border和outline的区别：</h5><p>1.border占用空间，outline不占用空间，不会影响元素的尺寸和位置。</p>
 <p>2.border 可应用于几乎所有有形的html元素，而 <strong>outline 是针对链接、表单控件和ImageMap等元素设计</strong>。从而另一个区别也可以推理出，那就是： outline 的效果将随元素的 focus 而自动出现，相应的由 blur 而自动消失。这些都是浏览器的默认行为，无需JavaScript配合CSS来控制。</p>
 <p>利用这些特性，我们常用outline来设置悬停的动态效果。之前一直困扰我的问题：hover加边框会导致元素定位和大小的改变，同时也会影响其他元素位置的改变，现在终于解决了。</p>
-<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329124305228.png" alt="image-20230329124305228" style="zoom: 33%;" />
+<img src="C:\Users\11096\blog\source\pic\Q3\image-20230329124305228.png" alt="image-20230329124305228" style="zoom: 33%;" />
 ]]></content>
       <categories>
         <category>code</category>
