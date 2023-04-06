@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-04-05T08:20:06.504Z</updated>
+  <updated>2023-04-04T13:52:01.548Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,33 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>CSS学习笔记-2.1布局</title>
-    <link href="http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-1%E5%B8%83%E5%B1%80/"/>
-    <id>http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-1%E5%B8%83%E5%B1%80/</id>
-    <published>2023-04-01T03:34:47.000Z</published>
-    <updated>2023-04-05T08:20:06.504Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;CSS学习笔记-2-1布局-三种重要布局及其它布局&quot;&gt;&lt;a href=&quot;#CSS学习笔记-2-1布局-三种重要布局及其它布局&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="CSS" scheme="http://example.com/tags/CSS/"/>
-    
-  </entry>
   
   <entry>
     <title>CSS学习笔记-2.2flex布局实现</title>
@@ -71,21 +44,39 @@
   </entry>
   
   <entry>
+    <title>CSS学习笔记-2.1盒子、定位与布局</title>
+    <link href="http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-1%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%B8%83%E5%B1%80/"/>
+    <id>http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-1%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%B8%83%E5%B1%80/</id>
+    <published>2023-04-01T03:34:47.000Z</published>
+    <updated>2023-04-06T12:53:10.002Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;CSS学习笔记-2-1盒子、定位与布局-三种重要布局及其它布局&quot;&gt;&lt;a href=&quot;#CSS学习笔记-2-1盒子、定位与布局-三种重要布局及其它布局&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="CSS" scheme="http://example.com/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
     <title></title>
     <link href="http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q0-ToDo/"/>
     <id>http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q0-ToDo/</id>
     <published>2023-03-29T11:21:48.050Z</published>
-    <updated>2023-04-05T08:27:26.283Z</updated>
+    <updated>2023-04-06T03:34:43.928Z</updated>
     
-    
-      
-      
-        
-        
-    <summary type="html">&lt;hr&gt;
-&lt;h2 id=&quot;今日疑问&quot;&gt;&lt;a href=&quot;#今日疑问&quot; class=&quot;headerlink&quot; title=&quot;今日疑问&quot;&gt;&lt;/a&gt;今日疑问&lt;/h2&gt;&lt;p&gt;1.边距异常合并问题看不懂，重要？&lt;a</summary>
-        
-      
     
     
     
@@ -179,18 +170,18 @@
   </entry>
   
   <entry>
-    <title>CSS学习笔记-1.1基础</title>
+    <title>CSS学习笔记-1.1基本样式</title>
     <link href="http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/"/>
     <id>http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/</id>
     <published>2023-03-29T03:00:47.000Z</published>
-    <updated>2023-04-04T13:08:39.162Z</updated>
+    <updated>2023-04-06T13:20:13.230Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;CSS学习笔记-1-1基础（基本样式与盒子模型）&quot;&gt;&lt;a href=&quot;#CSS学习笔记-1-1基础（基本样式与盒子模型）&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;CSS学习笔记-1-1基本样式&quot;&gt;&lt;a href=&quot;#CSS学习笔记-1-1基本样式&quot; class=&quot;headerlink&quot;</summary>
         
       
     

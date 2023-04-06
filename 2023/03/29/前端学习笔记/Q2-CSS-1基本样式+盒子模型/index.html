@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>CSS学习笔记-1.1基础 |  Pravite Home</title>
+      <title>CSS学习笔记-1.1基本样式 |  Pravite Home</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -68,7 +68,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  CSS学习笔记-1.1基础
+  CSS学习笔记-1.1基本样式
 </h1>
  
 
@@ -88,7 +88,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">1.4k</span>
+            <span class="post-count">1.5k</span>
         </span>
     </span>
 
@@ -112,15 +112,15 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="CSS学习笔记-1-1基础（基本样式与盒子模型）"><a href="#CSS学习笔记-1-1基础（基本样式与盒子模型）" class="headerlink" title="CSS学习笔记-1.1基础（基本样式与盒子模型）"></a>CSS学习笔记-1.1基础（基本样式与盒子模型）</h1><p>注释:</p>
-<p>​	CSS:&#x2F;**&#x2F;</p>
+  <h1 id="CSS学习笔记-1-1基本样式"><a href="#CSS学习笔记-1-1基本样式" class="headerlink" title="CSS学习笔记-1.1基本样式"></a>CSS学习笔记-1.1基本样式</h1><p>注释:</p>
+<p>​			CSS:&#x2F;**&#x2F;</p>
 <p>技巧：</p>
-<p>​	先写html框架，再考虑CSS</p>
+<p>​			先写html框架，再考虑CSS</p>
+<p>​			定义主要容器时，要定义成宽度是由我们固定的，高度完全是由内容撑开的。</p>
 <p>CSS游戏：</p>
-<p>​	<a target="_blank" rel="noopener" href="https://frontend30.com/css-selectors-cheatsheet/">CSS Selectors Cheatsheet - FrontEnd30</a></p>
-<p>学完后形成体系：</p>
-<img src="C:\$RECYCLE.BIN\S-1-5-21-3551453893-2823794770-815658977-1001\$R4HZJ7D.png" alt="$R4HZJ7D" style="zoom: 33%;" />
-
+<p>​			<a target="_blank" rel="noopener" href="https://frontend30.com/css-selectors-cheatsheet/">CSS Selectors Cheatsheet - FrontEnd30</a></p>
+<p>思维导图：</p>
+<p>​			<a target="_blank" rel="noopener" href="https://flowus.cn/d3cec49a-35cf-46aa-a095-f5ed4406287e">CSS思维导图 (flowus.cn)</a></p>
 <h3 id="0-CSS基本样式"><a href="#0-CSS基本样式" class="headerlink" title="0.CSS基本样式"></a>0.CSS基本样式</h3><p>选择器（Selector）<br>HTML 元素的名称位于规则集开始。它选择了一个或多个需要添加样式的元素）。要给不同元素添加样式只需要更改选择器就行了。可以用固定标签名，或.+自定义名称来进行选择。如用.menu来选择class属性为menu的盒子。</p>
 <p>通配符选择器作用：给当前界面上所有的标签设置属性。（*的意思是选中所有的标签）</p>
 <p>声明（Declaration）<br>一个单独的规则，如 color: red; 用来指定添加样式元素的属性。</p>
@@ -138,23 +138,9 @@
 <p>宽度:   width: 300px;（百分制也行），div默认居左，所以背景颜色随着宽度的改变也居左。</p>
 <p>最大宽度: max-width: 500px;</p>
 <p>​				（背景是不动的，主页面随着浏览器大小变化，有最大宽度的约束，内容看起来就不会过宽）</p>
-<p>内边距:   <strong>padding</strong></p>
-<p>​                padding-left&#x2F;right&#x2F;top&#x2F;bottom:20px;  </p>
-<p>​				padding:10px;（上下左右都是10）</p>
-<p>​				<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/cssref/pr_padding.asp">CSS padding 属性更多用法</a></p>
-<p>框架：<strong>border</strong></p>
-<p>​				框架为宽度50px的实心黑色，border: 50px <strong>solid</strong> black;</p>
-<p>外边距：   <strong>margin</strong></p>
-<p>​                水平居中:margin-left: auto; &amp;&amp; margin-right: auto;</p>
-<p>​				可用于块级标签，p、div等。</p>
-<p>​                去除默认边框宽度：margin：0；（font-size：0是为了解决多余空白符的问题）</p>
-<p>​                缩小上方过大的宽度： margin-top:-25px;（需要来回调试）</p>
-<p>盒子大小：box-sizing</p>
-<p>​		定义了user agent应该如何计算一个元素的总宽度和总高度</p>
-<ul>
-<li><code>content-box</code> 是默认值。如果你设置一个元素的宽为 100px，那么这个元素的内容区会有 100px 宽，并且任何边框和内边距的宽度都会被增加到最后绘制出来的元素宽度中。</li>
-<li><code>border-box</code> 告诉浏览器：你想要设置的边框和内边距的值是包含在 width 内的。也就是说，如果你将一个元素的 width 设为 100px，那么这 100px 会包含它的 border 和 padding，内容区的实际宽度是 width 减去 (border + padding) 的值。大多数情况下，这使得我们更容易地设定一个元素的宽高。</li>
-</ul>
+<p>最小宽度：</p>
+<p>最大高度：</p>
+<p>最小高度：</p>
 </li>
 <li><p>文字相关:</p>
 <p>文本水平对齐：<strong>text-align</strong></p>
@@ -162,15 +148,32 @@
 <p>​	居左: text-align: <strong>left;</strong></p>
 <p>文本修饰符：<code>text-decoration</code> </p>
 <p>​    这个 CSS 属性是用于设置文本的修饰线外观的（下划线、上划线、贯穿线&#x2F;删除线 或 闪烁）</p>
-<p>​     它是 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-line"><code>text-decoration-line</code></a>, <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-color"><code>text-decoration-color</code></a>, <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-style"><code>text-decoration-style</code></a>, 和新出现的 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-thickness"><code>text-decoration-thickness</code></a> 属性的缩写。</p>
+<p>​     它是 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-line"><code>text-decoration-line</code></a>, <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-color"><code>text-decoration-color</code></a>, <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-style"><code>text-decoration-style</code></a>, </p>
+<p>​	和新出现的 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-thickness"><code>text-decoration-thickness</code></a> 属性的缩写。</p>
 <p>文本对齐方式：<strong>text-align: center;</strong></p>
-<p>[CSS 布局 – 水平 &amp; 垂直对齐 | 菜鸟教程 (runoob.com)](<a target="_blank" rel="noopener" href="https://www.runoob.com/css/css-align.html#:~:text=CSS">https://www.runoob.com/css/css-align.html#:~:text=CSS</a> 布局 - 水平 %26 垂直对齐 1 元素居中对齐,8 垂直居中 - 使用 position 和 transform 更多项目)</p>
+<p>​				[			CSS 布局 – 水平 &amp; 垂直对齐 | 菜鸟教程 (runoob.com)](<a target="_blank" rel="noopener" href="https://www.runoob.com/css/css-align.html#:~:text=CSS">https://www.runoob.com/css/css-align.html#:~:text=CSS</a> 布局 - 水平 %26 垂直对齐 1 元素居中对齐,8 垂直居中 - 使用 position 和 transform 更多项目)</p>
+<p>CSS3中三种文本相关属性：</p>
+<p>​				文本阴影：<strong>text-shadow</strong>：水平偏移量 垂直偏移量  阴影大小（可省略） 颜色；</p>
+<p>​									常用效果：</p>
+<p>​													文本描边：0 0 3px black；</p>
+<p>​													文字浮雕效果：color：white； text-shadow：2px 2px 4px #000；</p>
+<p>​								   类似于《CSS-1定位与布局》中的盒子阴影。</p>
+<p>​				长文本换行：<strong>word-warp</strong>：break-word；</p>
+<p>​				网络字体：**@font-face**</p>
+<p>​									需要从网络上下载字体到服务器本地，并转化成各种浏览器支持的格式</p>
+<p>​									最后通过引用本地的字体文件来给用户端进行显示。</p>
 <p>字体: <strong>font-family:</strong> Impact,serif;</p>
 <p>​			主要&#x2F;备用两种字体【什么时候用到备用？防止浏览器里没有第一个字体，都没有就按默认字体渲染】</p>
 <p>字体大小：<strong>font-size：</strong>18px；</p>
 <p>字重：<strong>font-weight</strong>（字体粗细）</p>
 <p>行高：line-height</p>
 <p>斜体： font-style:italic;</p>
+<p>圆角：<img src="C:\Users\11096\Documents\WeChat Files\wxid_xfl56vvd0cvm22\FileStorage\Temp\1680769113691.png" alt="1680769113691" style="zoom:30%;" />值为px</p>
+<p>​			border-radius：25px；圆角边框。</p>
+<p>阴影：属性box-shadow</p>
+<p>​			选项为inside&#x2F;outside（默认值为外部阴影），值为水平偏移px 垂直偏移px 模糊强度px 颜色。</p>
+<p>​			举例：<img src="C:\Users\11096\Documents\WeChat Files\wxid_xfl56vvd0cvm22\FileStorage\Temp\1680769413222.png" alt="1680769413222" style="zoom:38%;" />就是阴影是盒子往右下角偏移10px的效果。</p>
+<p>​			举例2：<img src="C:\Users\11096\Documents\WeChat Files\wxid_xfl56vvd0cvm22\FileStorage\Temp\1680769550505.png" alt="1680769550505" style="zoom:38%;" /></p>
 <p>分割线：html的hr标签</p>
 <p>​				样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）</p>
 <p>​			（看起来会有凹陷效果）</p>
@@ -224,6 +227,14 @@
 </li>
 </ul>
 <h3 id="3-多端样式归一化必加代码【【【【】】】】"><a href="#3-多端样式归一化必加代码【【【【】】】】" class="headerlink" title="3.多端样式归一化必加代码【【【【】】】】"></a><strong>3.多端样式归一化必加代码</strong>【【【【】】】】</h3><p>​    <meta name="viewport" content="width=device-width, initial-scale=1.0" /></p>
+<h3 id="4-过度与动画"><a href="#4-过度与动画" class="headerlink" title="4.过度与动画"></a>4.过度与动画</h3><p>过渡：<strong>transition</strong>属性</p>
+<p>​				知识：  transition：属性    时间    速度；<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230406211511826.png" alt="image-20230406211511826" style="zoom:25%;" /></p>
+<p>​							transition：a，p   1s    linear；          </p>
+<p>​							transition：all        1s    linear；</p>
+<p>​				作用：在规定时间内，暂时改变选定元素属性的值（和选择器一起使用）</p>
+<p>​				举例：鼠标悬停在确认按钮上的时候，按钮显示为绿色。</p>
+<p>动画：<strong>animation</strong>属性（需要连续的过渡时，改用动画）</p>
+<p>@keyframes规则（关键帧规则）</p>
  
       <!-- reward -->
       

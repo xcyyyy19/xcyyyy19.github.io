@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>CSS学习笔记-2.1布局 |  Pravite Home</title>
+      <title>CSS学习笔记-2.1盒子、定位与布局 |  Pravite Home</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -57,7 +57,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-前端学习笔记/Q3-CSS-1布局"
+  id="post-前端学习笔记/Q3-CSS-1定位与布局"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -68,7 +68,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  CSS学习笔记-2.1布局
+  CSS学习笔记-2.1盒子、定位与布局
 </h1>
  
 
@@ -76,7 +76,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-1%E5%B8%83%E5%B1%80/" class="article-date">
+      <a href="/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-1%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%B8%83%E5%B1%80/" class="article-date">
   <time datetime="2023-04-01T03:34:47.000Z" itemprop="datePublished">2023-04-01</time>
 </a> 
   <div class="article-category">
@@ -88,7 +88,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">1.5k</span>
+            <span class="post-count">2.4k</span>
         </span>
     </span>
 
@@ -97,7 +97,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">5 分钟</span>
+            <span class="post-count">8 分钟</span>
         </span>
     </span>
 </div>
@@ -112,7 +112,7 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="CSS学习笔记-2-1布局-三种重要布局及其它布局"><a href="#CSS学习笔记-2-1布局-三种重要布局及其它布局" class="headerlink" title="CSS学习笔记-2.1布局-三种重要布局及其它布局"></a>CSS学习笔记-2.1布局-三种重要布局及其它布局</h1><p><a target="_blank" rel="noopener" href="https://www.icourse163.org/learn/BFU-1003382003?tid=1469987444#/learn/content?type=detail&id=1253020763&sm=1">Web前端开发_中国大学MOOC(慕课) (icourse163.org)</a></p>
+  <h1 id="CSS学习笔记-2-1盒子、定位与布局-三种重要布局及其它布局"><a href="#CSS学习笔记-2-1盒子、定位与布局-三种重要布局及其它布局" class="headerlink" title="CSS学习笔记-2.1盒子、定位与布局-三种重要布局及其它布局"></a>CSS学习笔记-2.1盒子、定位与布局-三种重要布局及其它布局</h1><p><a target="_blank" rel="noopener" href="https://www.icourse163.org/learn/BFU-1003382003?tid=1469987444#/learn/content?type=detail&id=1253020763&sm=1">Web前端开发_中国大学MOOC(慕课) (icourse163.org)</a></p>
 <h2 id="布局三种定位机制："><a href="#布局三种定位机制：" class="headerlink" title="布局三种定位机制："></a>布局三种定位机制：</h2><p>文档流（元素分类inlineblock.元素类型转换display）→浮动（float属性）→层（position属性）</p>
 <img src="C:\Users\11096\Documents\WeChat Files\wxid_xfl56vvd0cvm22\FileStorage\Temp\1680613753098.png" alt="1680613753098" style="zoom: 50%;" />
 
@@ -124,6 +124,10 @@
 <p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2015/07/flex-examples.html">https://www.ruanyifeng.com/blog/2015/07/flex-examples.html</a></p>
 <p>小青蛙游戏学flex</p>
 <p><a target="_blank" rel="noopener" href="http://flexboxfroggy.com/">Flexbox Froggy - A game for learning CSS flexbox</a></p>
+<h4 id="属性作用域分类："><a href="#属性作用域分类：" class="headerlink" title="属性作用域分类："></a>属性作用域分类：</h4><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230406114818874.png" alt="image-20230406114818874" style="zoom: 25%;" />
+
+
+
 <h4 id="易错点："><a href="#易错点：" class="headerlink" title="易错点："></a>易错点：</h4><ol>
 <li><p>display：flex；</p>
 <p>常用于有高度的类（body也能用）。且不能用于有其它display需求的类。（如inline-block）。</p>
@@ -134,7 +138,9 @@
 <li><p>flex的作用域</p>
 <p>只有所在的类，所在类的子类都不算。比如body里写了的flex，justify只能控制body的布局，想控制内部元素的布局就只能嵌套，在.div里也写flex。</p>
 </li>
-<li><p>什么时候改点，什么时候改div？</p>
+<li><p><strong>弹性布局是一维的，网页是二维的</strong>，想要控制盒子，就需要父元素控制一个轴，子元素控制另一个轴。</p>
+</li>
+<li><p>弹性布局是可以嵌套的，祖宗元素设置display：flex，父元素也设置display：flex。</p>
 </li>
 </ol>
 <h4 id="知识点："><a href="#知识点：" class="headerlink" title="知识点："></a>知识点：</h4><p>1.布局原理：采用 Flex 布局的元素，称为容器。它的所有子元素自动成为容器成员，称为项目。</p>
@@ -147,13 +153,13 @@
 
 <p>​			<strong>flex-wrap：</strong>设置子元素是否换行</p>
 <p>​						nowrap 不换行	(装不下会缩小子元素的宽度)<br>​						wrap 换行</p>
-<p>​			<strong>justify-content：</strong>设置主轴上的子元素排列方式【【【【【不分单行多行吗？】】】】】】</p>
+<p>​			<strong>justify-content：</strong>设置<strong>主轴</strong>上的子元素排列方式【【【【【不分单行多行吗？】】】】】】</p>
 <img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190910922.png" alt="image-20230329190910922" style="zoom:50%;" />
 
 
-<p>​			<strong>align-items：</strong>设置侧轴上的子元素排列方式（单行）</p>
-<p>​						该属性是控制子项在侧轴上的排列方式 在子项为单行的时候使用<br>​						flex-start 从头部开始<br>​						flex-end 从尾部开始<br>​						center 居中显示<br>​						stretch 拉伸(不给宽度&#x2F;高度)</p>
-<p>​			<strong>align-content：</strong> 设置侧轴上的子元素的排列方式（多行）</p>
+<p>​			<strong>align-items：</strong>设置<strong>辅轴</strong>上的子元素排列方式（单行）</p>
+<p>​						该属性是控制子项在侧轴上的排列方式 在子项为单行的时候使用<br>​						flex-start 从头部开始<br>​						flex-end 从尾部开始<br>​						center 居中显示<br>​						stretch 拉伸      拉伸高度直至完整的占据父元素的高度。</p>
+<p>​			<strong>align-content：</strong> 设置<strong>辅轴</strong>上的子元素的排列方式（多行）</p>
 <p>​				<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230329190910922.png" alt="image-20230329190910922" style="zoom: 50%;" /></p>
 <p>​			align-content 和align-items区别<br>​						align-items 适用于单行情况下， 只有上对齐、下对齐、居中和 拉伸<br>​						align-content适用多行换行的情况（单行无效）</p>
 <p>​			<strong>flex-flow：</strong>复合属性，相当于同时设置了 flex-direction 和 flex-wrap</p>
@@ -163,7 +169,10 @@
 <p>5.align-self控制子项自己在侧轴上的排列方式【少用】<br>            align-self 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖 align-items 属性。<br>            默认值为 auto，表示继承父元素的 align-items 属性，如果没有父元素，则等同于 stretch。</p>
 </li>
 <li><h3 id="网格布局Grid"><a href="#网格布局Grid" class="headerlink" title="网格布局Grid"></a>网格布局Grid</h3><p><a target="_blank" rel="noopener" href="https://www.runoob.com/css3/css-grid.html">CSS 网格布局 | 菜鸟教程 (runoob.com)</a></p>
-</li>
+<h4 id="属性作用域分类：-1"><a href="#属性作用域分类：-1" class="headerlink" title="属性作用域分类："></a>属性作用域分类：</h4><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230406160133663.png" alt="image-20230406160133663" style="zoom:50%;" /></li>
+</ol>
+<h4 id="知识点：-1"><a href="#知识点：-1" class="headerlink" title="知识点："></a>知识点：</h4><p>​					<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230406160552994.png" alt="image-20230406160552994" style="zoom: 25%;" /></p>
+<ol start="2">
 <li><h3 id="浮动布局"><a href="#浮动布局" class="headerlink" title="浮动布局"></a>浮动布局</h3></li>
 </ol>
 <p>​		<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Floats">浮动 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
@@ -176,31 +185,71 @@
 <p>元素转换：</p>
 <h1 id="3-浮动定位"><a href="#3-浮动定位" class="headerlink" title="3.浮动定位"></a>3.浮动定位</h1><h4 id="float属性值："><a href="#float属性值：" class="headerlink" title="float属性值："></a>float属性值：</h4><p>​			1.left</p>
 <p>​			2.right</p>
-<p>​			3.</p>
-<p>​			4.</p>
+<p>​			3.top</p>
+<p>​			4.bottom</p>
 <h4 id="应用："><a href="#应用：" class="headerlink" title="应用："></a>应用：</h4><h4 id=""><a href="#" class="headerlink" title=""></a><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161130046.png" alt="image-20230405161130046" style="zoom: 33%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161204082.png" alt="image-20230405161204082" style="zoom:33%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161227150.png" alt="image-20230405161227150" style="zoom: 25%;" /></h4><h4 id="易错点：注意浮动时，宽度是否够用的情况"><a href="#易错点：注意浮动时，宽度是否够用的情况" class="headerlink" title="易错点：注意浮动时，宽度是否够用的情况"></a>易错点：注意浮动时，宽度是否够用的情况</h4><p>​					<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161350930.png" alt="image-20230405161350930" style="zoom: 25%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161312570.png" alt="image-20230405161312570" style="zoom: 25%;" /></p>
-<h4 id="clear清除浮动："><a href="#clear清除浮动：" class="headerlink" title="clear清除浮动："></a>clear清除浮动：</h4><p>​				易错点：清除某一方向的浮动不是把某方向上的浮动元素删除，</p>
+<h4 id="clear清除浮动："><a href="#clear清除浮动：" class="headerlink" title="clear清除浮动："></a>clear清除浮动：</h4><p>​	易错点：清除某一方向的浮动不是把某方向上的浮动元素删除，</p>
 <p>​								而是该元素的某一方向不能有浮动元素。也就是说，该元素会另起一行。</p>
+<p>​	属性值：both（两侧）left right</p>
+<p>​	举例：</p>
+<p>​			单向清除浮动举例<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405165442568.png" alt="image-20230405165442568" style="zoom:25%;" /></p>
+<p>​			both清除浮动举例</p>
+<p>​											<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405165348256.png" alt="image-20230405165348256" style="zoom:25%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405165322218.png" alt="image-20230405165322218" style="zoom: 25%;" /></p>
+<h4 id="float总结："><a href="#float总结：" class="headerlink" title="float总结："></a>float总结：</h4><p>​		1.浮动定位是在同一层面的，可以两个都设置成向左浮动或者一个向左一个向右，来实现同样的效果。 </p>
+<p>​		2.清除浮动不是删除元素，相当于另起一行的效果 。</p>
+<p>​		3.实现几行几列的效果，最初用的都是浮动。想要实现分行，就用清除浮动，想要实现分列，就用增加浮动。</p>
 <h1 id="4-层定位"><a href="#4-层定位" class="headerlink" title="4.层定位"></a>4.层定位</h1><h4 id="1-position属性"><a href="#1-position属性" class="headerlink" title="1.position属性"></a>1.position属性</h4><p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/css/css_positioning.asp">CSS 布局 - position 属性 (w3school.com.cn)</a></p>
 <p>​	概念：</p>
 <p>​		<code>position</code> 属性规定应用于元素的定位方法的类型。</p>
-<p>​	五个不同的位置值：</p>
-<p>​		static：正常（默认）。</p>
-<p>​		relative（相对定位）：改变relation所在的元素，在该元素的父元素中的相对位置。</p>
-<p>​												易错点：如果附近有块级元素，它的相对定位会被影响。</p>
-<p>​		absolute（绝对定位）：	</p>
-<p>​		fixed（固定定位）：</p>
-<p>​		sticky（粘性定位）：根据用户的滚动位置进行定位。</p>
-<p>​											粘性元素根据滚动位置在相对（<code>relative</code>）和固定（<code>fixed</code>）之间切换。</p>
-<p>​											起先它会被相对定位，直到在视口中遇到给定的偏移位置为止 </p>
-<p>​											然后将其“粘贴”在适当的位置（比如 position:fixed）。</p>
-<p>​	index属性</p>
-<p>​			指定元素的堆栈顺序（哪个元素应放置在其他元素的前面或后面，正负都可）。</p>
+<p>​	四个不同的平面定位属性：</p>
+<p>​		top bottom left right</p>
+<p>​	一个层叠定位属性：</p>
+<p>​		z-index：哪个元素应放置在其他元素的前面或后面，正负都可，取值大的在上方。</p>
+<p>​	五种不同的定位方式：</p>
+<p>​		static（无定位，还是文件流模式定位）</p>
+<p>​						易错点：top bottom left right z-index无效。</p>
+<p>​		fixed（固定定位，相对于浏览器窗口进行定位）</p>
+<p>​										<strong>用于侧边栏</strong></p>
+<p>​		relative（相对定位，相对于直接父元素进行定位，不管直接父元素是什么定位方式）</p>
+<p>​						易错点：偏移后，偏移前的位置依然被保留，所以不会有其它元素自动占据它原来的位置。</p>
+<p>​										如果附近有块级元素，它的相对定位会被影响。</p>
+<p>​		absolute（绝对定位，从直接父元素开始向外层查找，</p>
+<p>​						直到找到不是static定位的父元素。如果都是static，则相对于body进行定位）</p>
+<p>​						易错点：偏移后，偏移前的位置不再被保留，所以会有其它元素自动占据它原来的位置。</p>
+<p>​		sticky（粘性定位，根据用户的滚动位置进行定位）</p>
+<p>​										<strong>用于吸顶吸底广告</strong>。</p>
+<p>​										兼容性<a target="_blank" rel="noopener" href="https://caniuse.com/?search=position:sticky;">“position:sticky;” | Can I use… Support tables for HTML5, CSS3, etc</a></p>
+<p>​	粘性定位与固定定位的区别：</p>
+<p>​					<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_51093047/article/details/126923647"> 固定定位（fixed）和粘性定位（sticky）的比较-CSDN博客</a>						</p>
+<p>​					粘性定位算在文档流中，固定定位不算。所以固定的小广告会挡视线，粘性的不会</p>
+<p>​	总结：</p>
+<p>​					祖宗元素相对定位，子孙元素全部绝对定位。这样保证更改祖宗元素时，子孙元素都能跟它一起动。</p>
+<p>​	实例：</p>
+<p>​					<a target="_blank" rel="noopener" href="https://juejin.cn/post/7175552665974210615">CSS固定定位与粘性定位4大企业级案例 - 掘金 (juejin.cn)</a></p>
 <h1 id="3-盒子模型"><a href="#3-盒子模型" class="headerlink" title="3.盒子模型"></a>3.盒子模型</h1><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model">盒模型 - 学习 Web 开发 | MDN</a></p>
+<p>内边距:   <strong>padding</strong></p>
+<p>​                padding-left&#x2F;right&#x2F;top&#x2F;bottom:20px;  </p>
+<p>​				padding:10px;（上下左右都是10）</p>
+<p>​				<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/cssref/pr_padding.asp">CSS padding 属性更多用法</a></p>
+<p>框架：<strong>border</strong></p>
+<p>​				框架为宽度50px的实心黑色，border: 50px <strong>solid</strong> black;</p>
+<p>外边距：   <strong>margin</strong></p>
+<p>​                水平居中:margin-left: auto; &amp;&amp; margin-right: auto;</p>
+<p>​				可用于块级标签，p、div等。</p>
+<p>​                去除默认边框宽度：margin：0；（font-size：0是为了解决多余空白符的问题）</p>
+<p>​                缩小上方过大的宽度： margin-top:-25px;（需要来回调试）</p>
+<p>盒子大小：box-sizing</p>
+<p>CSS3中对盒子进行2D变换的属性：<strong>transform</strong></p>
+<p>​				旋转：**transform:rotate(30deg);**顺时针旋转30度。transform:rotate(-30deg);逆时针旋转30度。</p>
+<p>​				缩放：<strong>transform:scale(x,y);</strong></p>
+<p>​							xy取值范围为 【0-1缩小】 【1 ~ +∞放大】</p>
 <h5 id="盒子种类"><a href="#盒子种类" class="headerlink" title="盒子种类:"></a>盒子种类:</h5><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404195037016.png" alt="image-20230404195037016" style="zoom:50%;" />
 
-<h5 id="两种盒模型的区别："><a href="#两种盒模型的区别：" class="headerlink" title="两种盒模型的区别："></a>两种盒模型的区别：</h5><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404195008921.png" alt="image-20230404195008921" style="zoom:50%;" />
-
+<h5 id="两种盒模型的区别："><a href="#两种盒模型的区别：" class="headerlink" title="两种盒模型的区别："></a>两种盒模型的区别：</h5><p>​		分别定义了user agent应该如何计算一个元素的总宽度和总高度的方法</p>
+<ul>
+<li>box-sizing：<code>content-box</code> 是默认值。如果你设置一个元素的宽为 100px，那么这个元素的内容区会有 100px 宽，并且任何边框和内边距的宽度都会被增加到最后绘制出来的元素宽度中。</li>
+<li>box-sizing：<code>border-box</code> 告诉浏览器：你想要设置的边框和内边距的值是包含在 width 内的。也就是说，如果你将一个元素的 width 设为 100px，那么这 100px 会包含它的 border 和 padding，内容区的实际宽度是 width 减去 (border + padding) 的值。大多数情况下，这使得我们更容易地设定一个元素的宽高。</li>
+</ul>
 <h5 id="盒子相关的问题："><a href="#盒子相关的问题：" class="headerlink" title="盒子相关的问题："></a>盒子相关的问题：</h5><p>​		<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/110617108">CSS 的两种盒模型 - 及边距异常合并问题</a></p>
 <h4 id="outline和border的区别"><a href="#outline和border的区别" class="headerlink" title="outline和border的区别"></a>outline和border的区别</h4><p>​	主要区别在于: </p>
 <p>​		1.应用场景:一般border能适用于任何元素的样式，outline一般用于表单组件(比如input&#x2F;textarea) </p>
@@ -277,7 +326,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-1%E5%B8%83%E5%B1%80/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-1%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%B8%83%E5%B1%80/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -290,10 +339,19 @@
    
   <nav class="article-nav">
     
-    
       <a href="/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-3%E5%AE%9E%E8%B7%B5%EF%BC%88flex%E5%B8%83%E5%B1%80%EF%BC%89/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            CSS学习笔记-2.2flex布局实现
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q0-ToDo/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">CSS学习笔记-2.2flex布局实现</div>
+        <div class="article-nav-title"></div>
       </a>
     
   </nav>
