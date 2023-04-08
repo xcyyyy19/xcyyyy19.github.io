@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-04-06T13:53:12.014Z</updated>
+  <updated>2023-04-08T13:32:15.005Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS学习笔记-3.1JS基础</title>
+    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q4-JS-1%E5%9F%BA%E7%A1%80/"/>
+    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q4-JS-1%E5%9F%BA%E7%A1%80/</id>
+    <published>2023-04-07T03:34:47.000Z</published>
+    <updated>2023-04-08T13:32:15.005Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;JS基础&quot;&gt;&lt;a href=&quot;#JS基础&quot; class=&quot;headerlink&quot; title=&quot;JS基础&quot;&gt;&lt;/a&gt;JS基础&lt;/h1&gt;&lt;h2 id=&quot;1-分类&quot;&gt;&lt;a href=&quot;#1-分类&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="JS" scheme="http://example.com/tags/JS/"/>
+    
+  </entry>
   
   <entry>
     <title>CSS学习笔记-2.3flex布局实现</title>
@@ -48,7 +75,7 @@
     <link href="http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-1%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%B8%83%E5%B1%80/"/>
     <id>http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-1%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%B8%83%E5%B1%80/</id>
     <published>2023-04-01T03:34:47.000Z</published>
-    <updated>2023-04-06T14:02:06.843Z</updated>
+    <updated>2023-04-07T13:18:02.343Z</updated>
     
     
       
@@ -182,7 +209,7 @@
     <link href="http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/"/>
     <id>http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/</id>
     <published>2023-03-29T03:00:47.000Z</published>
-    <updated>2023-04-06T13:50:16.453Z</updated>
+    <updated>2023-04-07T06:06:48.203Z</updated>
     
     
       
@@ -265,7 +292,7 @@
     <link href="http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-2%E9%80%89%E6%8B%A9%E5%99%A8/"/>
     <id>http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-2%E9%80%89%E6%8B%A9%E5%99%A8/</id>
     <published>2023-03-28T03:34:47.000Z</published>
-    <updated>2023-04-06T13:52:48.622Z</updated>
+    <updated>2023-04-07T06:47:49.749Z</updated>
     
     
       
@@ -529,39 +556,6 @@
     <category term="code" scheme="http://example.com/categories/code/"/>
     
     <category term="project" scheme="http://example.com/categories/code/project/"/>
-    
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python爬虫练习代码与笔记（社工）</title>
-    <link href="http://example.com/2023/03/11/Python/P2-Python%E7%88%AC%E8%99%AB%E7%BB%83%E4%B9%A0%E4%BB%A3%E7%A0%81%E4%B8%8E%E7%AC%94%E8%AE%B0%EF%BC%88%E7%A4%BE%E5%B7%A5%EF%BC%89/"/>
-    <id>http://example.com/2023/03/11/Python/P2-Python%E7%88%AC%E8%99%AB%E7%BB%83%E4%B9%A0%E4%BB%A3%E7%A0%81%E4%B8%8E%E7%AC%94%E8%AE%B0%EF%BC%88%E7%A4%BE%E5%B7%A5%EF%BC%89/</id>
-    <published>2023-03-11T03:41:57.000Z</published>
-    <updated>2023-03-27T22:02:21.671Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;声明：仅供学习使用&lt;/p&gt;
-&lt;p&gt;以下黑色代码块包含入门时的学习链接以及中文标题&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 
-待上传html链接版本&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;input</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
     
     
     <category term="Python" scheme="http://example.com/tags/Python/"/>

@@ -88,7 +88,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">1.5k</span>
+            <span class="post-count">1.6k</span>
         </span>
     </span>
 
@@ -126,7 +126,7 @@
 <p>声明（Declaration）<br>一个单独的规则，如 color: red; 用来指定添加样式元素的属性。</p>
 <p>属性（Properties）<br>改变 HTML 元素样式的途径。（本例中 color 就是 <p> 元素的属性。）CSS 中，由编写人员决定修改哪个属性以改变规则。</p>
 <p>属性的值（Property value）<br>在属性的右边，冒号后面即属性的值，它从指定属性的众多外观中选择一个值（我们除了 red 之外还有很多属性值可以用于 color ）。</p>
-<h3 id="1-常见基础样式"><a href="#1-常见基础样式" class="headerlink" title="1.常见基础样式"></a>1.常见基础样式</h3><ul>
+<h3 id="1-常见基础样式"><a href="#1-常见基础样式" class="headerlink" title="1.常见基础样式"></a>1.常见基础样式</h3><h3 id=""><a href="#" class="headerlink" title=""></a></h3><ul>
 <li><p>基础：</p>
 <p>声明该边框的类型：display ：可选项如下</p>
 <p>​								flex灵活布局</p>
@@ -142,16 +142,39 @@
 <p>最大高度：</p>
 <p>最小高度：</p>
 </li>
-<li><p>文字相关:</p>
-<p>文本水平对齐：<strong>text-align</strong></p>
+</ul>
+<h3 id="2-文字相关"><a href="#2-文字相关" class="headerlink" title="2.文字相关"></a>2.文字相关</h3><p>单位：</p>
+<p>​		em设置成几个字符大小（根据用户使用的字体自适应）</p>
+<p>​		px像素</p>
+<p>​		%百分比</p>
+<p>颜色：</p>
+<p>​		<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q2-CSS-1基本样式+盒子模型.assets\image-20230407121714988.png" alt="image-20230407121714988" style="zoom:25%;" /></p>
+<p>文本对齐：<strong>text-align</strong></p>
 <p>​	居中: text-align: <strong>center;</strong></p>
 <p>​	居左: text-align: <strong>left;</strong></p>
-<p>文本修饰符：<code>text-decoration</code> </p>
-<p>​    这个 CSS 属性是用于设置文本的修饰线外观的（下划线、上划线、贯穿线&#x2F;删除线 或 闪烁）</p>
-<p>​     它是 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-line"><code>text-decoration-line</code></a>, <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-color"><code>text-decoration-color</code></a>, <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-style"><code>text-decoration-style</code></a>, </p>
-<p>​	和新出现的 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-thickness"><code>text-decoration-thickness</code></a> 属性的缩写。</p>
-<p>文本对齐方式：<strong>text-align: center;</strong></p>
-<p>​				[			CSS 布局 – 水平 &amp; 垂直对齐 | 菜鸟教程 (runoob.com)](<a target="_blank" rel="noopener" href="https://www.runoob.com/css/css-align.html#:~:text=CSS">https://www.runoob.com/css/css-align.html#:~:text=CSS</a> 布局 - 水平 %26 垂直对齐 1 元素居中对齐,8 垂直居中 - 使用 position 和 transform 更多项目)</p>
+<p>​	居右: text-align: <strong>right;</strong></p>
+<p>​	居左: text-align: <strong>justify;</strong></p>
+<p>​	应用：文本的垂直居中（flex也行）</p>
+<p>[CSS 布局 – 水平 &amp; 垂直对齐 | 菜鸟教程 (runoob.com)](<a target="_blank" rel="noopener" href="https://www.runoob.com/css/css-align.html#:~:text=CSS">https://www.runoob.com/css/css-align.html#:~:text=CSS</a> 布局 - 水平 %26 垂直对齐 1 元素居中对齐,8 垂直居中 - 使用 position 和 transform 更多项目)</p>
+<p>字间距：<strong>letter-spacing</strong></p>
+<p>​	取值：2px&#x2F;-2px</p>
+<p>行高：<strong>line-height</strong></p>
+<p>​	取值：14px&#x2F;1.5em几倍行高&#x2F;120%基于当前字符的百分比行高</p>
+<p>装饰线：<strong>text-decoration</strong> </p>
+<p>​	上划线：<strong>overline</strong></p>
+<p>​	删除线：<strong>line-throuth</strong></p>
+<p>​	下划线：<strong>underling</strong></p>
+<p>​	删除：<strong>none</strong>（针对a标签，去掉自带的下划线）</p>
+<p>字体：</p>
+<p>​		字体所有属性：<strong>font</strong>：很多设定 字号及行高（用斜线隔开） 字体名称；</p>
+<p>​					例子：font：bold（粗体） italic（斜体） 18px&#x2F;1.5em ‘幼圆’</p>
+<p>​		字体系列: <strong>font-family:</strong> Impact,serif;</p>
+<p>​					重点：可以写多个字体，用逗号隔开。找不到第一种字体就用第二种，都找不到就用默认字体。</p>
+<p>​					易错点：字体含有空格时，应加双引号</p>
+<p>​					例子：font-family：“Microsoft YaHei”</p>
+<p>​		字体大小：<strong>font-size：</strong>18px；</p>
+<p>​		字重：<strong>font-weight</strong>（字体粗细）</p>
+<p>​		斜体： font-style:italic;</p>
 <p>CSS3中三种文本相关属性：</p>
 <p>​				文本阴影：<strong>text-shadow</strong>：水平偏移量 垂直偏移量  阴影大小（可省略） 颜色；</p>
 <p>​									常用效果：</p>
@@ -162,27 +185,16 @@
 <p>​				网络字体：**@font-face**</p>
 <p>​									需要从网络上下载字体到服务器本地，并转化成各种浏览器支持的格式</p>
 <p>​									最后通过引用本地的字体文件来给用户端进行显示。</p>
-<p>字体: <strong>font-family:</strong> Impact,serif;</p>
-<p>​			主要&#x2F;备用两种字体【什么时候用到备用？防止浏览器里没有第一个字体，都没有就按默认字体渲染】</p>
-<p>字体大小：<strong>font-size：</strong>18px；</p>
-<p>字重：<strong>font-weight</strong>（字体粗细）</p>
-<p>行高：line-height</p>
-<p>斜体： font-style:italic;</p>
-<p>圆角：<img src="C:\Users\11096\blog\source\pic\Q2\1680769113691.png" alt="1680769113691" style="zoom:30%;" />值为px</p>
+<h3 id="3-其它"><a href="#3-其它" class="headerlink" title="3.其它"></a>3.其它</h3><p>圆角：<img src="C:\Users\11096\blog\source\pic\Q2\1680769113691.png" alt="1680769113691" style="zoom:30%;" />值为px</p>
 <p>​			border-radius：25px；圆角边框。</p>
 <p>阴影：属性box-shadow</p>
 <p>​			选项为inside&#x2F;outside（默认值为外部阴影），值为水平偏移px 垂直偏移px 模糊强度px 颜色。</p>
 <p>​			举例：<img src="C:\Users\11096\blog\source\pic\Q2\1680769413222.png" alt="1680769413222" style="zoom:38%;" />就是阴影是盒子往右下角偏移10px的效果。</p>
 <p>​			举例2：<img src="C:\Users\11096\blog\source\pic\Q2\1680769550505.png" alt="1680769550505" style="zoom:38%;" /></p>
-<p>分割线：html的hr标签</p>
-<p>​				样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）</p>
-<p>​			（看起来会有凹陷效果）</p>
-<p>链接文字的颜色：a{color：black；}</p>
+<h1 id="分割线：html的hr标签"><a href="#分割线：html的hr标签" class="headerlink" title="分割线：html的hr标签"></a>分割线：html的hr标签</h1><h1 id="样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）"><a href="#样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）" class="headerlink" title="样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）"></a>样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）</h1><h1 id="（看起来会有凹陷效果）"><a href="#（看起来会有凹陷效果）" class="headerlink" title="（看起来会有凹陷效果）"></a>（看起来会有凹陷效果）</h1><p>链接文字的颜色：a{color：black；}</p>
 <p>链接访问后：a:visited {  }</p>
 <p>链接上有鼠标悬停时：a:hover{}</p>
 <p>链接被点击时：a:active{}</p>
-</li>
-</ul>
 </li>
 <li><p>背景相关:</p>
 <p>背景颜色:background-color:</p>
@@ -219,15 +231,15 @@
 <p><a target="_blank" rel="noopener" href="https://www.zhangxinxu.com/study/201011/img-blank-space.html">display:inline-block元素间换行符的空格间隙 </a></p>
 <p><a target="_blank" rel="noopener" href="https://www.zhangxinxu.com/study/201011/img-font-size-clear-blank.html">font-size:0清除display:inline-block元素换行符间隙</a></p>
 </blockquote>
-<h3 id="2-style元素"><a href="#2-style元素" class="headerlink" title="2.style元素"></a><strong>2.style元素</strong></h3><ul>
+<h3 id="4-style元素"><a href="#4-style元素" class="headerlink" title="4.style元素"></a><strong>4.style元素</strong></h3><ul>
 <li><p>单独写在css文件夹里，并在head里通过link来链接。 </p>
 <link rel="stylesheet" href="styles.css">
 </li>
 <li><p>用于给body里的某一种&#x2F;多种元素指定样式。</p>
 </li>
 </ul>
-<h3 id="3-多端样式归一化必加代码【【【【】】】】"><a href="#3-多端样式归一化必加代码【【【【】】】】" class="headerlink" title="3.多端样式归一化必加代码【【【【】】】】"></a><strong>3.多端样式归一化必加代码</strong>【【【【】】】】</h3><p>​    <meta name="viewport" content="width=device-width, initial-scale=1.0" /></p>
-<h3 id="4-过度与动画"><a href="#4-过度与动画" class="headerlink" title="4.过度与动画"></a>4.过度与动画</h3><p>过渡：<strong>transition</strong>属性</p>
+<h3 id="5-多端样式归一化必加代码【【【【】】】】"><a href="#5-多端样式归一化必加代码【【【【】】】】" class="headerlink" title="5.多端样式归一化必加代码【【【【】】】】"></a><strong>5.多端样式归一化必加代码</strong>【【【【】】】】</h3><p>​    <meta name="viewport" content="width=device-width, initial-scale=1.0" /></p>
+<h3 id="6-过度与动画"><a href="#6-过度与动画" class="headerlink" title="6.过度与动画"></a>6.过度与动画</h3><p>过渡：<strong>transition</strong>属性</p>
 <p>​				知识：  transition：属性    时间    速度；<img src="C:\Users\11096\blog\source\pic\Q2\image-20230406211511826.png" alt="image-20230406211511826" style="zoom:25%;" /></p>
 <p>​							transition：a，p   1s    linear；          </p>
 <p>​							transition：     all   1s    linear；</p>

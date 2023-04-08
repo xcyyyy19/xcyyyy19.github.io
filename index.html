@@ -151,6 +151,190 @@
     
     
     <article
+  id="post-前端学习笔记/Q4-JS-1基础"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q4-JS-1%E5%9F%BA%E7%A1%80/"
+    >JS学习笔记-3.1JS基础</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q4-JS-1%E5%9F%BA%E7%A1%80/" class="article-date">
+  <time datetime="2023-04-07T03:34:47.000Z" itemprop="datePublished">2023-04-07</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="JS基础"><a href="#JS基础" class="headerlink" title="JS基础"></a>JS基础</h1><h2 id="1-分类"><a href="#1-分类" class="headerlink" title="1.分类"></a>1.分类</h2><p>​		1.ECMAJS：基础语法</p>
+<p>​		2.DOM：文档对象模型，可以访问某个元素</p>
+<p>​		3.BOM：浏览器对象模型，可以对浏览器操作</p>
+<h2 id="2-基础语法"><a href="#2-基础语法" class="headerlink" title="2.基础语法"></a>2.基础语法</h2><p>​	作为属性引用：console.log();    document.write();</p>
+<p>​	外部引用1：head里写<code>&lt;script src=&quot;js文件名称.js&quot;&gt;不允许出现任何js代码&lt;/script&gt;</code></p>
+<p>​	内部引用：《script》需要出现js代码《&#x2F;script》</p>
+<p>​	多文件引用:<code>&lt;script src=&quot;/js/script1.js&quot;&gt;&lt;/script&gt; </code><br>​			   		 <code>&lt;script src=&quot;/js/script2.js&quot;&gt;&lt;/script&gt;</code></p>
+<p>​	注释：&#x2F;&#x2F; 			 &#x2F;**&#x2F;</p>
+<p>​	易错点：大小写敏感</p>
+<h2 id="3-变量与作用域"><a href="#3-变量与作用域" class="headerlink" title="3.变量与作用域"></a>3.变量与作用域</h2><p>变量：</p>
+<p>​		局部变量：   var 变量名&#x3D;   ；</p>
+<p>​						  或者    var 变量名； 变量名&#x3D;   ；</p>
+<p>​		全局变量：  变量名&#x3D;   ； </p>
+<p>​		多个变量：  var 变量名1&#x3D;值1,变量名2,变量名3,变量名4&#x3D;值2；</p>
+<p>​		变量名命名规范：和c语言唯一的区别是可以以字母数字下划线及＄组成。</p>
+<p>作用域：</p>
+<p>​		JavaScript 使用大括号，将多个相关的语句组合在一起，称为“区块”（block），单并不构成单独的作用域。</p>
+<p>​		对于<code>var</code>命令来说，JavaScript 的区块不构成单独的作用域（scope）。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  var a = 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a // 1</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4-数据类型"><a href="#4-数据类型" class="headerlink" title="4.数据类型"></a>4.数据类型</h2><h4 id="1-原始类型"><a href="#1-原始类型" class="headerlink" title="1.原始类型"></a>1.原始类型</h4><h5 id="1-分类-1"><a href="#1-分类-1" class="headerlink" title="1.分类"></a>1.分类</h5><p>​				1.unmber数字类型</p>
+<p>​						整数：4字节32位</p>
+<p>​						小数（浮点数）：8字节64位</p>
+<p>​				2.string字符串</p>
+<p>​				3.boolean布尔</p>
+<p>​				4.null空</p>
+<p>​				5.undefined未定义		声明变量未赋值，访问对象不存在</p>
+<p>​					</p>
+<h5 id="2-数据转换"><a href="#2-数据转换" class="headerlink" title="2.数据转换"></a>2.数据转换</h5><p>​				取类型并赋值：typeof（）</p>
+<p>​										   作用：判断变量是否未定义的同时，避免抛出错误。</p>
+<p>​												  	<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408212824971.png" alt="image-20230408212824971" style="zoom:50%;" /></p>
+<p>​				判断是否为数字类型：isNaN</p>
+<p>​				强制转换字符串：变量.toString（）</p>
+<p>​				强制转换整数（小数点后的全部舍掉）：parseInt（数据）；</p>
+<p>​				强制转换小数：parseFloat（数据）；</p>
+<p>​										易错点：如果数据里包含非数字型数据，则会输出转换好的数据，并停止转换异常数据。</p>
+<p>​										例子：var  i &#x3D; parseFloat（13.2你好442）；将会输出13.2。</p>
+<h4 id="2-引用类型"><a href="#2-引用类型" class="headerlink" title="2.引用类型"></a>2.引用类型</h4><h2 id="5-运算符"><a href="#5-运算符" class="headerlink" title="5.运算符"></a>5.运算符</h2><h4 id="1-算数运算符"><a href="#1-算数运算符" class="headerlink" title="1.算数运算符"></a>1.算数运算符</h4><h4 id="2-关系运算符"><a href="#2-关系运算符" class="headerlink" title="2.关系运算符"></a>2.关系运算符</h4><p>​				<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408111058932.png" alt="image-20230408111058932" style="zoom: 33%;" /></p>
+<p>​					</p>
+<p>​					&#x3D;&#x3D;与&#x3D;&#x3D;&#x3D;的区别：&#x3D;&#x3D;会使两侧进行类型转换，并比较。&#x3D;&#x3D;&#x3D;会严格比较类型和数据。</p>
+<h4 id="3-逻辑运算符"><a href="#3-逻辑运算符" class="headerlink" title="3.逻辑运算符"></a>3.逻辑运算符</h4><p>​					<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408111154450.png" alt="image-20230408111154450" style="zoom: 50%;" /></p>
+<h4 id="4-条件-x2F-三目运算符"><a href="#4-条件-x2F-三目运算符" class="headerlink" title="4.条件&#x2F;三目运算符"></a>4.条件&#x2F;三目运算符</h4><p>​					普通：</p>
+<p>​					<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408111436303.png" alt="image-20230408111436303" style="zoom:33%;" /></p>
+<p>​					嵌套：</p>
+<p>​					<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408111514675.png" alt="image-20230408111514675" style="zoom:33%;" /></p>
+<h2 id="6-标签（label）"><a href="#6-标签（label）" class="headerlink" title="6.标签（label）"></a>6.标签（label）</h2><p>JavaScript 语言允许，语句的前面有标签（label），相当于定位符，用于跳转到程序的任意位置，标签的格式如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">label:</span><br><span class="line">  语句</span><br></pre></td></tr></table></figure>
+
+<p>标签可以是任意的标识符，但不能是保留字，语句部分可以是任意语句。</p>
+<p>标签通常与<code>break</code>语句和<code>continue</code>语句配合使用，跳出特定的循环。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">top:</span><br><span class="line">  for (var i = 0; i &lt; 3; i++)&#123;</span><br><span class="line">    for (var j = 0; j &lt; 3; j++)&#123;</span><br><span class="line">      if (i === 1 &amp;&amp; j === 1) break top;</span><br><span class="line">      console.log(&#x27;i=&#x27; + i + &#x27;, j=&#x27; + j);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">// i=0, j=0</span><br><span class="line">// i=0, j=1</span><br><span class="line">// i=0, j=2</span><br><span class="line">// i=1, j=0</span><br></pre></td></tr></table></figure>
+
+<p>上面代码为一个双重循环区块，<code>break</code>命令后面加上了<code>top</code>标签（注意，<code>top</code>不用加引号），满足条件时，直接跳出双层循环。如果<code>break</code>语句后面不使用标签，则只能跳出内层循环，进入下一次的外层循环。</p>
+<p>标签也可以用于跳出代码块。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">foo: &#123;</span><br><span class="line">  console.log(1);</span><br><span class="line">  break foo;</span><br><span class="line">  console.log(&#x27;本行不会输出&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">console.log(2);</span><br><span class="line">// 1</span><br><span class="line">// 2</span><br></pre></td></tr></table></figure>
+
+<p>上面代码执行到<code>break foo</code>，就会跳出区块。</p>
+<p><code>continue</code>语句也可以与标签配合使用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">top:</span><br><span class="line">  for (var i = 0; i &lt; 3; i++)&#123;</span><br><span class="line">    for (var j = 0; j &lt; 3; j++)&#123;</span><br><span class="line">      if (i === 1 &amp;&amp; j === 1) continue top;</span><br><span class="line">      console.log(&#x27;i=&#x27; + i + &#x27;, j=&#x27; + j);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">// i=0, j=0</span><br><span class="line">// i=0, j=1</span><br><span class="line">// i=0, j=2</span><br><span class="line">// i=1, j=0</span><br><span class="line">// i=2, j=0</span><br><span class="line">// i=2, j=1</span><br><span class="line">// i=2, j=2</span><br></pre></td></tr></table></figure>
+
+<p>上面代码中，<code>continue</code>命令后面有一个标签名，满足条件时，会跳过当前循环，直接进入下一轮外层循环。如果<code>continue</code>语句后面不使用标签，则只能进入下一轮的内层循环。</p>
+<h2 id="7-分支语句"><a href="#7-分支语句" class="headerlink" title="7.分支语句"></a>7.分支语句</h2><p>1.if else</p>
+<p>2.switch-case：优先用于等值判断</p>
+<p>​						  <img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408111942096.png" alt="image-20230408111942096" style="zoom:33%;" /></p>
+<p>​				1.break</p>
+<p>​				2.<strong>continue用于立即终止本轮循环，返回循环结构的头部，开始下一轮循环。</strong></p>
+<p>​						<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408205506290.png" alt="image-20230408205506290" style="zoom: 50%;" /></p>
+<p>7.循环</p>
+<p>1.while</p>
+<p>2.do while：先执行再判断</p>
+<p>​							<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408112304642.png" alt="image-20230408112304642" style="zoom:33%;" /></p>
+<p>3.for</p>
+<h2 id="8-数组——类型为object，而不是数组类型"><a href="#8-数组——类型为object，而不是数组类型" class="headerlink" title="8.数组——类型为object，而不是数组类型"></a>8.数组——类型为object，而不是数组类型</h2><h3 id="1-索引数组"><a href="#1-索引数组" class="headerlink" title="1.索引数组"></a>1.索引数组</h3><h5 id="1-动态数组"><a href="#1-动态数组" class="headerlink" title="1.动态数组"></a>1.动态数组</h5><p>​											var arr&#x3D;new Array（“add”，“okm”，“fnwk”）；</p>
+<h5 id="2-静态数组（在JS里，这也是动态数组）"><a href="#2-静态数组（在JS里，这也是动态数组）" class="headerlink" title="2.静态数组（在JS里，这也是动态数组）"></a>2.静态数组（在JS里，这也是动态数组）</h5><p>​											var arr&#x3D;【15，1，3】；</p>
+<h5 id="3-最好的方法"><a href="#3-最好的方法" class="headerlink" title="3.最好的方法"></a>3.最好的方法</h5><p>​											先声明空数组，再通过arr[index]访问并赋值。</p>
+<h5 id="4-arr-length没有括号"><a href="#4-arr-length没有括号" class="headerlink" title="4.arr.length	没有括号"></a>4.arr.length	没有括号</h5><p>​											console.log（arr.length）</p>
+<h5 id="5-访问倒数第n个数据"><a href="#5-访问倒数第n个数据" class="headerlink" title="5.访问倒数第n个数据"></a>5.访问倒数第n个数据</h5><p>​											倒数第一个：arr[length-1]</p>
+<p>​											<strong>倒数第n个：arr[length-n]</strong></p>
+<h3 id="2-关联数组-hash数组（只希望快速查找时使用）"><a href="#2-关联数组-hash数组（只希望快速查找时使用）" class="headerlink" title="2.关联数组   hash数组（只希望快速查找时使用）"></a>2.关联数组   hash数组（只希望快速查找时使用）</h3><h5 id="1-区别"><a href="#1-区别" class="headerlink" title="1.区别"></a>1.区别</h5><p>​											1.可以自定义下标名称。</p>
+<p>​											2.查找快，o（1）.</p>
+<p>​											3.查找不用遍历，也无法遍历。</p>
+<h5 id="2-创建方式"><a href="#2-创建方式" class="headerlink" title="2.创建方式"></a>2.创建方式</h5><p>​											1.创建空数组</p>
+<p>​											2.以自定义字符串为下标，给数组赋值</p>
+<p>​												<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408132738093.png" alt="image-20230408132738093" style="zoom: 25%;" /></p>
+<h5 id="3-易错点"><a href="#3-易错点" class="headerlink" title="3.易错点"></a>3.易错点</h5><p>​											不能用for循环，不能遍历，和存储位置无关</p>
+<p>​											<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408133014313.png" alt="image-20230408133014313" style="zoom: 33%;" /></p>
+<h3 id="3-数组API"><a href="#3-数组API" class="headerlink" title="3.数组API"></a>3.数组API</h3><h5 id="1-String-arr-；数组转字符串"><a href="#1-String-arr-；数组转字符串" class="headerlink" title="1.String(arr)；数组转字符串"></a>1.String(arr)；<strong>数组转字符串</strong></h5><p>​											概念：转化成字符串，并用逗号隔开。</p>
+<p>​											作用：打印出arr，判断一下数据有没有被更改过。</p>
+<h5 id="2-arr-join-“连接符”-；拼接数组元素"><a href="#2-arr-join-“连接符”-；拼接数组元素" class="headerlink" title="2.arr.join(“连接符”)；拼接数组元素"></a>2.arr.join(“连接符”)；<strong>拼接数组元素</strong></h5><p>​									概念：将array中每个部分，用”连接符“连接成字符串</p>
+<p>​												<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408135220827.png" alt="image-20230408135220827" style="zoom:25%;" /></p>
+<p>​									作用1：判断数组为空。</p>
+<p>​									作用2：字符串连接，将数组转化为html内容。<strong>（动态页面）</strong></p>
+<p>​												方法1：”&lt;开始1&gt;&lt;开始2&gt;”+arr.join(“&lt;&#x2F;结束2&gt;&lt;开始2&gt;”)+”&lt;&#x2F;结束2&gt;&lt;&#x2F;结束1&gt;“</p>
+<p>​												方法2：”&lt;开始标签1&gt;”+arr.join(“&lt;&#x2F;结束标签1&gt;&lt;开始标签1&gt;”)+”&lt;&#x2F;结束标签1&gt;“</p>
+<p>​												看不懂后面有说明。</p>
+<h5 id="3-concat-拼接"><a href="#3-concat-拼接" class="headerlink" title="3.concat()拼接"></a>3.concat()拼接</h5><p>​								1.概念：引用并拼接多个数组（不改变原数组值），返回结果值。（表面是复制数组值并拼接，本质还是引用）</p>
+<h5 id="4-arr-slice-index1，index2-查数组元素"><a href="#4-arr-slice-index1，index2-查数组元素" class="headerlink" title="4.arr.slice(index1，index2)查数组元素"></a>4.arr.slice(index1，index2)<strong>查数组元素</strong></h5><p>​								1.概念：</p>
+<p>​												1.选取一个范围的：选取arr[index1]~arr[index2]的值。</p>
+<p>​												2.选取到尾部的：arr.slice(index1)省略第二个值。</p>
+<p>​												3.复制数组：arr.slice(0,arr.length)&#x3D;&#x3D;&#x3D;arr.slice();</p>
+<p>​								2.例子：<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408151232135.png" alt="image-20230408151232135" style="zoom:33%;" /></p>
+<p>​								3.重点：下标可以用负数</p>
+<h3 id="4-arr-splice增删改数组元素"><a href="#4-arr-splice增删改数组元素" class="headerlink" title="4.arr.splice增删改数组元素"></a>4.arr.splice<strong>增删改数组元素</strong></h3><p>​								注：是改变数组本身，而不是引用。<strong>删除和插入的元素个数不必一致，数组下标会自动后移。</strong></p>
+<h5 id="1-增"><a href="#1-增" class="headerlink" title="1.增"></a>1.增</h5><p>​								1.arr.splice(start,<strong>0</strong>,var1,var2….varn);</p>
+<h5 id="2-删"><a href="#2-删" class="headerlink" title="2.删"></a>2.删</h5><p>​								1.arr.splice(start,n);</p>
+<p>​										删除从start开始的（含start）n个元素，<strong>返回值为被删除数据组成的临时数组</strong>。</p>
+<h5 id="3-改"><a href="#3-改" class="headerlink" title="3.改"></a>3.改</h5><p>​								1.arr.splice(start,n,<strong>var1,var2….varn</strong>);</p>
+<p>​										删除从start开始的（含start）n个元素，并用n种var填充。</p>
+<p>​								2.arr.splice(start,n,<strong>…arr2</strong>);</p>
+<p>​										删除从start开始的（含start）n个元素，并用数组的所有值填充。<strong>易错点：…必须有</strong></p>
+<p>​								3.例<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408155222560.png" alt="image-20230408155222560" style="zoom: 50%;" /></p>
+<h4 id="5-颠倒arr-reverse"><a href="#5-颠倒arr-reverse" class="headerlink" title="5.颠倒arr.reverse();"></a>5.颠倒arr.reverse();</h4><p>​							只颠倒，不排序。</p>
+<h4 id="6-排序arr-sort"><a href="#6-排序arr-sort" class="headerlink" title="6.排序arr.sort();"></a>6.排序arr.sort();</h4><p>​							缺点：默认将所有类型转成字符串，再从小到大排序。</p>
+<p>​							解决方法：重构比较函数。</p>
+<blockquote>
+<p>arr.join()说明</p>
+<p>​			arr.join()<code>方法取出的是数组</code>arr<code>中的每个元素，将它们用</code>&lt;&#x2F;结束标签&gt;&lt;开始标签&gt;&#96; 连接起来形成一个新的字符串。</p>
+<p>​			&lt;开始标签1&gt;<code>和</code>&lt;&#x2F;结束标签1&gt;<code>是代码里本来就有的标签，分别表示HTML元素的开始标签和结束标签；而</code>&lt;开始标签2&gt;<code>和</code>&lt;&#x2F;结束标签2&gt;&#96;是你添加进去的标签。</p>
+<p>​			<code>arr.join()</code>方法取出的是数组<code>arr</code>中的每个元素，可以是任何类型的值，例如字符串或数字。将它们用<code>&lt;/结束标签2&gt;&lt;开始标签2&gt;</code>连接起来形成一个新的字符串。这里的<code>&lt;/结束标签2&gt;&lt;开始标签2&gt;</code>是你添加的标签内容。</p>
+<p>以下是一个例子：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let arr = [&#x27;apple&#x27;, &#x27;banana&#x27;, &#x27;orange&#x27;];</span><br><span class="line">let result = &#x27;&lt;ul&gt;&lt;li&gt;&#x27; + arr.join(&#x27;&lt;/li&gt;&lt;li&gt;&#x27;) + &#x27;&lt;/li&gt;&lt;/ul&gt;&#x27;;</span><br><span class="line">console.log(result);</span><br></pre></td></tr></table></figure>
+
+<p>​			在这个例子中，<code>&lt;开始标签1&gt;</code>是<code>&lt;ul&gt;</code>，<code>&lt;/结束标签1&gt;</code>是<code>&lt;/ul&gt;</code>，<code>&lt;开始标签2&gt;</code>是<code>&lt;li&gt;</code>，<code>&lt;/结束标签2&gt;</code>是<code>&lt;/li&gt;</code>。<code>arr.join(&#39;&lt;/li&gt;&lt;li&gt;&#39;)</code>取出的数组值是<code>&#39;apple&#39;</code>、<code>&#39;banana&#39;</code>和<code>&#39;orange&#39;</code>，它们将被用<code>&lt;/li&gt;&lt;li&gt;</code>连接起来形成一个新的字符串<code>&#39;apple&lt;/li&gt;&lt;li&gt;banana&lt;/li&gt;&lt;li&gt;orange&#39;</code>，最后生成的完整HTML元素如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li&gt;apple&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;banana&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;orange&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+
+<p>​			该HTML元素包含了多个子元素，子元素的内容从数组<code>arr</code>中取出，并且用<code>&lt;li&gt;</code>和<code>&lt;/li&gt;</code>标签包裹起来，每个子元素之间用<code>&lt;/li&gt;&lt;li&gt;</code>连接，而这些子元素整体则用<code>&lt;ul&gt;</code>和<code>&lt;/ul&gt;</code>标签包裹。</p>
+</blockquote>
+<p>​							</p>
+<h2 id="9-函数"><a href="#9-函数" class="headerlink" title="9.函数"></a>9.函数</h2><p>1.输出：console.log();</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-前端学习笔记/Q3-CSS-3实践（flex布局）"
   class="article article-type-post"
   itemscope
@@ -304,12 +488,6 @@
 <h4 id="属性作用域分类：-1"><a href="#属性作用域分类：-1" class="headerlink" title="属性作用域分类："></a>属性作用域分类：</h4><img src="C:\Users\11096\blog\source\pic\Q3\image-20230406160133663.png" alt="image-20230406160133663" style="zoom:50%;" /></li>
 </ol>
 <h4 id="知识点：-1"><a href="#知识点：-1" class="headerlink" title="知识点："></a>知识点：</h4><p>​					<img src="C:\Users\11096\blog\source\pic\Q3\image-20230406160552994.png" alt="image-20230406160552994" style="zoom: 25%;" /></p>
-<ol start="2">
-<li><h3 id="浮动布局"><a href="#浮动布局" class="headerlink" title="浮动布局"></a>浮动布局</h3></li>
-</ol>
-<p>​		<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Floats">浮动 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
-<p>​		比如报纸首字母脱离文档。图片格式选择为”环绕“。与flex互斥。</p>
-<p>其它布局：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout#%E6%8C%87%E5%8D%97">CSS 布局 - 学习 Web 开发 | MDN (mozilla.org)</a></p>
 <h1 id="2-文档流定位（默认布局）"><a href="#2-文档流定位（默认布局）" class="headerlink" title="2.文档流定位（默认布局）"></a>2.文档流定位（默认布局）</h1><h1 id="（元素分类inlineblock-元素类型转换display）"><a href="#（元素分类inlineblock-元素类型转换display）" class="headerlink" title="（元素分类inlineblock.元素类型转换display）"></a>（元素分类inlineblock.元素类型转换display）</h1><p>元素分类：</p>
 <p>​			inline：两个inline元素之间会有一个间隙，需要去除。</p>
 <p>​			block：</p>
@@ -319,8 +497,8 @@
 <p>​			2.right</p>
 <p>​			3.top</p>
 <p>​			4.bottom</p>
-<h4 id="应用："><a href="#应用：" class="headerlink" title="应用："></a>应用：</h4><h4 id=""><a href="#" class="headerlink" title=""></a><img src="C:\Users\11096\blog\source\pic\Q3\image-20230405161130046.png" alt="image-20230405161130046" style="zoom: 33%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161204082.png" alt="image-20230405161204082" style="zoom:33%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161227150.png" alt="image-20230405161227150" style="zoom: 25%;" /></h4><h4 id="易错点：注意浮动时，宽度是否够用的情况"><a href="#易错点：注意浮动时，宽度是否够用的情况" class="headerlink" title="易错点：注意浮动时，宽度是否够用的情况"></a>易错点：注意浮动时，宽度是否够用的情况</h4><p>​					<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161350930.png" alt="image-20230405161350930" style="zoom: 25%;" /><img src="C:\Users\11096\blog\source\pic\Q3\image-20230405161312570.png" alt="image-20230405161312570" style="zoom: 25%;" /></p>
-<h4 id="clear清除浮动："><a href="#clear清除浮动：" class="headerlink" title="clear清除浮动："></a>clear清除浮动：</h4><p>​	易错点：清除某一方向的浮动不是把某方向上的浮动元素删除，</p>
+<h4 id="应用："><a href="#应用：" class="headerlink" title="应用："></a>应用：</h4><h4 id=""><a href="#" class="headerlink" title=""></a><img src="C:\Users\11096\blog\source\pic\Q3\image-20230405161130046.png" alt="image-20230405161130046" style="zoom: 33%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161204082.png" alt="image-20230405161204082" style="zoom:33%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161227150.png" alt="image-20230405161227150" style="zoom: 25%;" /></h4><h4 id="易错点：1注意浮动时，宽度是否够用的情况"><a href="#易错点：1注意浮动时，宽度是否够用的情况" class="headerlink" title="易错点：1注意浮动时，宽度是否够用的情况"></a>易错点：1注意浮动时，宽度是否够用的情况</h4><p>​					<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161350930.png" alt="image-20230405161350930" style="zoom: 25%;" /><img src="C:\Users\11096\blog\source\pic\Q3\image-20230405161312570.png" alt="image-20230405161312570" style="zoom: 25%;" /></p>
+<h4 id="易错点：2浮动与flex互斥"><a href="#易错点：2浮动与flex互斥" class="headerlink" title="易错点：2浮动与flex互斥"></a>易错点：2浮动与flex互斥</h4><h4 id="clear清除浮动："><a href="#clear清除浮动：" class="headerlink" title="clear清除浮动："></a>clear清除浮动：</h4><p>​	易错点：清除某一方向的浮动不是把某方向上的浮动元素删除，</p>
 <p>​								而是该元素的某一方向不能有浮动元素。也就是说，该元素会另起一行。</p>
 <p>​	属性值：both（两侧）left right</p>
 <p>​	举例：</p>
@@ -342,6 +520,7 @@
 <p>​						易错点：top bottom left right z-index无效。</p>
 <p>​		fixed（固定定位，相对于浏览器窗口进行定位）</p>
 <p>​										<strong>用于侧边栏</strong></p>
+<p>​										<strong>易错点：必须设置宽度高度，因为旧有的框架被position打破了。记得设置成100%</strong></p>
 <p>​		relative（相对定位，相对于直接父元素进行定位，不管直接父元素是什么定位方式）</p>
 <p>​						易错点：偏移后，偏移前的位置依然被保留，所以不会有其它元素自动占据它原来的位置。</p>
 <p>​										如果附近有块级元素，它的相对定位会被影响。</p>
@@ -349,6 +528,7 @@
 <p>​						直到找到不是static定位的父元素。如果都是static，则相对于body进行定位）</p>
 <p>​						易错点：偏移后，偏移前的位置不再被保留，所以会有其它元素自动占据它原来的位置。</p>
 <p>​		sticky（粘性定位，根据用户的滚动位置进行定位）</p>
+<p>​						适用于：导航栏本身并不在网页的边边上，在文章中间。直到用户下拉页面，使导航栏到了边边上，为了继续展示导航栏，导航栏就会附着在边上。不是这种情况的话，relative就行了。</p>
 <p>​										<strong>用于吸顶吸底广告</strong>。</p>
 <p>​										兼容性<a target="_blank" rel="noopener" href="https://caniuse.com/?search=position:sticky;">“position:sticky;” | Can I use… Support tables for HTML5, CSS3, etc</a></p>
 <p>​	粘性定位与固定定位的区别：</p>
@@ -384,15 +564,13 @@
 </ul>
 <h5 id="盒子相关的问题："><a href="#盒子相关的问题：" class="headerlink" title="盒子相关的问题："></a>盒子相关的问题：</h5><p>​		<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/110617108">CSS 的两种盒模型 - 及边距异常合并问题</a></p>
 <h4 id="outline和border的区别"><a href="#outline和border的区别" class="headerlink" title="outline和border的区别"></a>outline和border的区别</h4><p>​	主要区别在于: </p>
-<p>​		1.应用场景:一般border能适用于任何元素的样式，outline一般用于表单组件(比如input&#x2F;textarea) </p>
-<p>​		2.特性不一样：border一般会被计算在元素的宽高大小里面，outline不会</p>
-<h3 id="相关层次图"><a href="#相关层次图" class="headerlink" title="相关层次图"></a>相关层次图</h3><p>margin：外边距</p>
-<p>border：边框</p>
-<p>outline：边框</p>
-<p>padding：内边距</p>
-<h5 id="border和outline的区别："><a href="#border和outline的区别：" class="headerlink" title="border和outline的区别："></a>border和outline的区别：</h5><p>1.border占用空间，outline不占用空间，不会影响元素的尺寸和位置。</p>
-<p>2.border 可应用于几乎所有有形的html元素，而 <strong>outline 是针对链接、表单控件和ImageMap等元素设计</strong>。从而另一个区别也可以推理出，那就是： outline 的效果将随元素的 focus 而自动出现，相应的由 blur 而自动消失。这些都是浏览器的默认行为，无需JavaScript配合CSS来控制。</p>
-<p>利用这些特性，我们常用outline来设置悬停的动态效果。之前一直困扰我的问题：hover加边框会导致元素定位和大小的改变，同时也会影响其他元素位置的改变，现在终于解决了。</p>
+<p>​		1.应用场景:一般border能适用于任何元素的样式，outline针对链接、表单控件和ImageMap等元素设计(比如input&#x2F;textarea) </p>
+<p>​		2.特性不一样：border一般会被计算在元素的宽高大小里面，影响元素的尺寸、位置。outline不会</p>
+<p>​		3.outline 的效果将随元素的 focus 而自动出现，相应的由 blur 而自动消失，常设置悬停的动态效果。</p>
+<h3 id="相关层次图"><a href="#相关层次图" class="headerlink" title="相关层次图"></a>相关层次图</h3><p>​	margin：外边距</p>
+<p>​	border：边框</p>
+<p>​	outline：边框</p>
+<p>​	padding：内边距</p>
 <img src="C:\Users\11096\blog\source\pic\Q3\image-20230329124305228.png" alt="image-20230329124305228" style="zoom: 33%;" />
  
       <!-- reward -->
@@ -1469,7 +1647,7 @@
 <p>声明（Declaration）<br>一个单独的规则，如 color: red; 用来指定添加样式元素的属性。</p>
 <p>属性（Properties）<br>改变 HTML 元素样式的途径。（本例中 color 就是 <p> 元素的属性。）CSS 中，由编写人员决定修改哪个属性以改变规则。</p>
 <p>属性的值（Property value）<br>在属性的右边，冒号后面即属性的值，它从指定属性的众多外观中选择一个值（我们除了 red 之外还有很多属性值可以用于 color ）。</p>
-<h3 id="1-常见基础样式"><a href="#1-常见基础样式" class="headerlink" title="1.常见基础样式"></a>1.常见基础样式</h3><ul>
+<h3 id="1-常见基础样式"><a href="#1-常见基础样式" class="headerlink" title="1.常见基础样式"></a>1.常见基础样式</h3><h3 id=""><a href="#" class="headerlink" title=""></a></h3><ul>
 <li><p>基础：</p>
 <p>声明该边框的类型：display ：可选项如下</p>
 <p>​								flex灵活布局</p>
@@ -1485,16 +1663,39 @@
 <p>最大高度：</p>
 <p>最小高度：</p>
 </li>
-<li><p>文字相关:</p>
-<p>文本水平对齐：<strong>text-align</strong></p>
+</ul>
+<h3 id="2-文字相关"><a href="#2-文字相关" class="headerlink" title="2.文字相关"></a>2.文字相关</h3><p>单位：</p>
+<p>​		em设置成几个字符大小（根据用户使用的字体自适应）</p>
+<p>​		px像素</p>
+<p>​		%百分比</p>
+<p>颜色：</p>
+<p>​		<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q2-CSS-1基本样式+盒子模型.assets\image-20230407121714988.png" alt="image-20230407121714988" style="zoom:25%;" /></p>
+<p>文本对齐：<strong>text-align</strong></p>
 <p>​	居中: text-align: <strong>center;</strong></p>
 <p>​	居左: text-align: <strong>left;</strong></p>
-<p>文本修饰符：<code>text-decoration</code> </p>
-<p>​    这个 CSS 属性是用于设置文本的修饰线外观的（下划线、上划线、贯穿线&#x2F;删除线 或 闪烁）</p>
-<p>​     它是 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-line"><code>text-decoration-line</code></a>, <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-color"><code>text-decoration-color</code></a>, <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-style"><code>text-decoration-style</code></a>, </p>
-<p>​	和新出现的 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-thickness"><code>text-decoration-thickness</code></a> 属性的缩写。</p>
-<p>文本对齐方式：<strong>text-align: center;</strong></p>
-<p>​				[			CSS 布局 – 水平 &amp; 垂直对齐 | 菜鸟教程 (runoob.com)](<a target="_blank" rel="noopener" href="https://www.runoob.com/css/css-align.html#:~:text=CSS">https://www.runoob.com/css/css-align.html#:~:text=CSS</a> 布局 - 水平 %26 垂直对齐 1 元素居中对齐,8 垂直居中 - 使用 position 和 transform 更多项目)</p>
+<p>​	居右: text-align: <strong>right;</strong></p>
+<p>​	居左: text-align: <strong>justify;</strong></p>
+<p>​	应用：文本的垂直居中（flex也行）</p>
+<p>[CSS 布局 – 水平 &amp; 垂直对齐 | 菜鸟教程 (runoob.com)](<a target="_blank" rel="noopener" href="https://www.runoob.com/css/css-align.html#:~:text=CSS">https://www.runoob.com/css/css-align.html#:~:text=CSS</a> 布局 - 水平 %26 垂直对齐 1 元素居中对齐,8 垂直居中 - 使用 position 和 transform 更多项目)</p>
+<p>字间距：<strong>letter-spacing</strong></p>
+<p>​	取值：2px&#x2F;-2px</p>
+<p>行高：<strong>line-height</strong></p>
+<p>​	取值：14px&#x2F;1.5em几倍行高&#x2F;120%基于当前字符的百分比行高</p>
+<p>装饰线：<strong>text-decoration</strong> </p>
+<p>​	上划线：<strong>overline</strong></p>
+<p>​	删除线：<strong>line-throuth</strong></p>
+<p>​	下划线：<strong>underling</strong></p>
+<p>​	删除：<strong>none</strong>（针对a标签，去掉自带的下划线）</p>
+<p>字体：</p>
+<p>​		字体所有属性：<strong>font</strong>：很多设定 字号及行高（用斜线隔开） 字体名称；</p>
+<p>​					例子：font：bold（粗体） italic（斜体） 18px&#x2F;1.5em ‘幼圆’</p>
+<p>​		字体系列: <strong>font-family:</strong> Impact,serif;</p>
+<p>​					重点：可以写多个字体，用逗号隔开。找不到第一种字体就用第二种，都找不到就用默认字体。</p>
+<p>​					易错点：字体含有空格时，应加双引号</p>
+<p>​					例子：font-family：“Microsoft YaHei”</p>
+<p>​		字体大小：<strong>font-size：</strong>18px；</p>
+<p>​		字重：<strong>font-weight</strong>（字体粗细）</p>
+<p>​		斜体： font-style:italic;</p>
 <p>CSS3中三种文本相关属性：</p>
 <p>​				文本阴影：<strong>text-shadow</strong>：水平偏移量 垂直偏移量  阴影大小（可省略） 颜色；</p>
 <p>​									常用效果：</p>
@@ -1505,27 +1706,16 @@
 <p>​				网络字体：**@font-face**</p>
 <p>​									需要从网络上下载字体到服务器本地，并转化成各种浏览器支持的格式</p>
 <p>​									最后通过引用本地的字体文件来给用户端进行显示。</p>
-<p>字体: <strong>font-family:</strong> Impact,serif;</p>
-<p>​			主要&#x2F;备用两种字体【什么时候用到备用？防止浏览器里没有第一个字体，都没有就按默认字体渲染】</p>
-<p>字体大小：<strong>font-size：</strong>18px；</p>
-<p>字重：<strong>font-weight</strong>（字体粗细）</p>
-<p>行高：line-height</p>
-<p>斜体： font-style:italic;</p>
-<p>圆角：<img src="C:\Users\11096\blog\source\pic\Q2\1680769113691.png" alt="1680769113691" style="zoom:30%;" />值为px</p>
+<h3 id="3-其它"><a href="#3-其它" class="headerlink" title="3.其它"></a>3.其它</h3><p>圆角：<img src="C:\Users\11096\blog\source\pic\Q2\1680769113691.png" alt="1680769113691" style="zoom:30%;" />值为px</p>
 <p>​			border-radius：25px；圆角边框。</p>
 <p>阴影：属性box-shadow</p>
 <p>​			选项为inside&#x2F;outside（默认值为外部阴影），值为水平偏移px 垂直偏移px 模糊强度px 颜色。</p>
 <p>​			举例：<img src="C:\Users\11096\blog\source\pic\Q2\1680769413222.png" alt="1680769413222" style="zoom:38%;" />就是阴影是盒子往右下角偏移10px的效果。</p>
 <p>​			举例2：<img src="C:\Users\11096\blog\source\pic\Q2\1680769550505.png" alt="1680769550505" style="zoom:38%;" /></p>
-<p>分割线：html的hr标签</p>
-<p>​				样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）</p>
-<p>​			（看起来会有凹陷效果）</p>
-<p>链接文字的颜色：a{color：black；}</p>
+<h1 id="分割线：html的hr标签"><a href="#分割线：html的hr标签" class="headerlink" title="分割线：html的hr标签"></a>分割线：html的hr标签</h1><h1 id="样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）"><a href="#样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）" class="headerlink" title="样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）"></a>样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）</h1><h1 id="（看起来会有凹陷效果）"><a href="#（看起来会有凹陷效果）" class="headerlink" title="（看起来会有凹陷效果）"></a>（看起来会有凹陷效果）</h1><p>链接文字的颜色：a{color：black；}</p>
 <p>链接访问后：a:visited {  }</p>
 <p>链接上有鼠标悬停时：a:hover{}</p>
 <p>链接被点击时：a:active{}</p>
-</li>
-</ul>
 </li>
 <li><p>背景相关:</p>
 <p>背景颜色:background-color:</p>
@@ -1562,15 +1752,15 @@
 <p><a target="_blank" rel="noopener" href="https://www.zhangxinxu.com/study/201011/img-blank-space.html">display:inline-block元素间换行符的空格间隙 </a></p>
 <p><a target="_blank" rel="noopener" href="https://www.zhangxinxu.com/study/201011/img-font-size-clear-blank.html">font-size:0清除display:inline-block元素换行符间隙</a></p>
 </blockquote>
-<h3 id="2-style元素"><a href="#2-style元素" class="headerlink" title="2.style元素"></a><strong>2.style元素</strong></h3><ul>
+<h3 id="4-style元素"><a href="#4-style元素" class="headerlink" title="4.style元素"></a><strong>4.style元素</strong></h3><ul>
 <li><p>单独写在css文件夹里，并在head里通过link来链接。 </p>
 <link rel="stylesheet" href="styles.css">
 </li>
 <li><p>用于给body里的某一种&#x2F;多种元素指定样式。</p>
 </li>
 </ul>
-<h3 id="3-多端样式归一化必加代码【【【【】】】】"><a href="#3-多端样式归一化必加代码【【【【】】】】" class="headerlink" title="3.多端样式归一化必加代码【【【【】】】】"></a><strong>3.多端样式归一化必加代码</strong>【【【【】】】】</h3><p>​    <meta name="viewport" content="width=device-width, initial-scale=1.0" /></p>
-<h3 id="4-过度与动画"><a href="#4-过度与动画" class="headerlink" title="4.过度与动画"></a>4.过度与动画</h3><p>过渡：<strong>transition</strong>属性</p>
+<h3 id="5-多端样式归一化必加代码【【【【】】】】"><a href="#5-多端样式归一化必加代码【【【【】】】】" class="headerlink" title="5.多端样式归一化必加代码【【【【】】】】"></a><strong>5.多端样式归一化必加代码</strong>【【【【】】】】</h3><p>​    <meta name="viewport" content="width=device-width, initial-scale=1.0" /></p>
+<h3 id="6-过度与动画"><a href="#6-过度与动画" class="headerlink" title="6.过度与动画"></a>6.过度与动画</h3><p>过渡：<strong>transition</strong>属性</p>
 <p>​				知识：  transition：属性    时间    速度；<img src="C:\Users\11096\blog\source\pic\Q2\image-20230406211511826.png" alt="image-20230406211511826" style="zoom:25%;" /></p>
 <p>​							transition：a，p   1s    linear；          </p>
 <p>​							transition：     all   1s    linear；</p>
@@ -1740,154 +1930,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-前端学习笔记/Q3-CSS-2选择器"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-2%E9%80%89%E6%8B%A9%E5%99%A8/"
-    >CSS学习笔记-2.2选择器</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-2%E9%80%89%E6%8B%A9%E5%99%A8/" class="article-date">
-  <time datetime="2023-03-28T03:34:47.000Z" itemprop="datePublished">2023-03-28</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="CSS学习笔记-2-2选择器"><a href="#CSS学习笔记-2-2选择器" class="headerlink" title="CSS学习笔记-2.2选择器"></a>CSS学习笔记-2.2选择器</h1><h4 id="选择器字典"><a href="#选择器字典" class="headerlink" title="选择器字典"></a>选择器字典</h4><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Attribute_selectors">属性选择器 - CSS：层叠样式表 | MDN (mozilla.org)</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2009/03/css_selectors.html">CSS选择器笔记 - 阮一峰的网络日志 (ruanyifeng.com)</a></p>
-<p><a target="_blank" rel="noopener" href="https://frontend30.com/css-selectors-cheatsheet/">CSS Selectors Cheatsheet - FrontEnd30</a></p>
-<h4 id="选择器的优先级"><a href="#选择器的优先级" class="headerlink" title="选择器的优先级"></a>选择器的优先级</h4><p><img src="C:\Users\11096\blog\source\pic\Q3\image-20230401185155310.png" alt="image-20230401185155310"></p>
-<h4 id="选择器的构成"><a href="#选择器的构成" class="headerlink" title="选择器的构成"></a>选择器的构成</h4><p>选择器分为符号和框架</p>
-<p>符号：＄ ~ # ^等（可组合到框架中）</p>
-<p>框架：[ ] , nth-of-child等 </p>
-<h2 id="一-基本选择器"><a href="#一-基本选择器" class="headerlink" title="一.基本选择器"></a>一.基本选择器</h2><h3 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h3><ol>
-<li><h6 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h6><ul>
-<li>#id</li>
-</ul>
-</li>
-<li><h6 id="易错点"><a href="#易错点" class="headerlink" title="易错点"></a>易错点</h6><ul>
-<li>id不能有任何数字</li>
-</ul>
-</li>
-</ol>
-<h3 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h3><p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404152420883.png" alt="image-20230404152420883" style="zoom: 50%;" /><img src="C:\Users\11096\blog\source\pic\Q3\image-20230404152441816.png" alt="image-20230404152441816" style="zoom:50%;" /></p>
-<h6 id=""><a href="#" class="headerlink" title=""></a><img src="C:\Users\11096\blog\source\pic\Q3\1680587935181.png" alt="1680587935181" style="zoom:50%;" /></h6><p>元素[属性1] [属性2]</p>
-<ul>
-<li>同时有两个选择的元素</li>
-</ul>
-<p>元素[属性&#x3D;值] 	</p>
-<ul>
-<li>属性的值&#x3D;值的元素</li>
-<li>a[href&#x3D;”<a target="_blank" rel="noopener" href="https://example.org"]">https://example.org&quot;]</a></li>
-</ul>
-<p>元素[属性^&#x3D;开头值]</p>
-<ul>
-<li>[attr^&#x3D;value]：表示带有以 <em>attr</em> 命名的属性，且属性值是以 <em>value</em> 开头的元素。</li>
-</ul>
-<p>元素[属性$&#x3D;结尾值]</p>
-<ul>
-<li><p>属性的值的结尾是”结尾值“的元素。</p>
-</li>
-<li><p>a[href$&#x3D;”.org”]：存在 href 属性并且属性值结尾是”.org”的 <a> 元素</p>
-</li>
-</ul>
-<p>元素[属性*&#x3D;”值“]</p>
-<ul>
-<li>属性的值包含”值“的元素</li>
-</ul>
-<p>元素[属性~&#x3D;值]</p>
-<ul>
-<li><p>属性的值包含”值“的元素，该属性是一个以空格作为分隔的值列表</p>
-</li>
-<li><p>a[class~&#x3D;”logo”]：存在 class 属性并且属性值包含单词”logo”的<a>元素</p>
-</li>
-</ul>
-<p>元素[       i]</p>
-<ul>
-<li>在属性选择器的右方括号前添加一个用空格隔开的字母 <code>i</code>（或 <code>I</code>），可以在匹配属性值时忽略大小写（支持 ASCII 字符范围之内的字母）。</li>
-</ul>
-<p>元素[		s]</p>
-<ul>
-<li>在属性选择器的右方括号前添加一个用空格隔开的字母 <code>s</code>（或 <code>S</code>），可以在匹配属性值时区分大小写（支持 ASCII 字符范围之内的字母）。</li>
-</ul>
-<h3 id="3-元素选择器"><a href="#3-元素选择器" class="headerlink" title="3.元素选择器"></a>3.元素选择器</h3><h4 id="通用元素选择器"><a href="#通用元素选择器" class="headerlink" title="通用元素选择器"></a>通用元素选择器</h4><ul>
-<li></li>
-</ul>
-<p>**【【【【【【没有找到】】】】】】】</p>
-<h4 id="同级元素通用选择器"><a href="#同级元素通用选择器" class="headerlink" title="同级元素通用选择器"></a>同级元素通用选择器</h4><img src="C:\Users\11096\blog\source\pic\Q3\image-20230404151520256.png" alt="image-20230404151520256" style="zoom:50%;" />
-
-<h4 id="多元素的组合选择器"><a href="#多元素的组合选择器" class="headerlink" title="多元素的组合选择器"></a>多元素的组合选择器</h4><img src="C:\Users\11096\blog\source\pic\Q3\1680592298848.png" alt="1680592298848" style="zoom: 50%;" />
-
-<h2 id="二-关系型选择器"><a href="#二-关系型选择器" class="headerlink" title="二.关系型选择器"></a>二.关系型选择器</h2><p>子选择器<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404132255364.png" alt="image-20230404132255364" style="zoom:50%;" /></p>
-<p>后代选择器<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404132326607.png" alt="image-20230404132326607" style="zoom: 50%;" /></p>
-<p>相邻兄弟选择器<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404133357624.png" alt="image-20230404133357624" style="zoom:50%;" /></p>
-<p>通用兄弟选择器<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404133450743.png" alt="image-20230404133450743" style="zoom:50%;" /></p>
-<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Column_combinator">列组合器</a> </p>
-<p><code>||</code> 组合器选择属于某个表格行的节点。</p>
-<p><strong>语法：</strong><code>A || B</code></p>
-<p><strong>例子：</strong><code>col || td</code> 会匹配所有 作用域内的 &#96;](<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/td">https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/td</a>) 元素。</p>
-<p>独子选择器<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404133754657.png" alt="image-20230404133754657" style="zoom:50%;" />		a 表示选择a元素的独子，b表示如果b是独子则被选择</p>
-<p>第 N 个最后一个子选择器<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404134515253.png" alt="image-20230404134515253" style="zoom:50%;" /></p>
-<p>首项选择器<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404134548820.png" alt="image-20230404134548820" style="zoom:50%;" />可以根据元素、属性进行选择</p>
-<p>尾项选择器<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404134901176.png" alt="image-20230404134901176" style="zoom:50%;" />尾属性的class不等于x则不选任何东西</p>
-<h2 id="三-伪类选择器"><a href="#三-伪类选择器" class="headerlink" title="三.伪类选择器"></a>三.伪类选择器</h2><p>用户界面伪类选择器</p>
-<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404150313528.png" alt="image-20230404150313528" style="zoom: 50%;" />
-
-<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404150546942.png" alt="image-20230404150546942" style="zoom:50%;" />
-
-<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404152535460.png" alt="image-20230404152535460" style="zoom:50%;" />
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">两个写法相同的选择器，意思为子元素的父元素的第n个子元素</span><br><span class="line">父元素 子元素：nth-child(1)</span><br><span class="line">父元素 子元素：first-child</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/*意思是.dot的父元素的第二个孩子*/</span><br><span class="line">.bg2 .dot:nth-child(2)&#123;</span><br><span class="line">    align-self: flex-end;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>反选伪类选择器<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404135618254.png" alt="image-20230404135618254" style="zoom:50%;" /></p>
-<p>看不懂</p>
-<img src="C:\Users\11096\blog\source\pic\Q3\image-20230404152643373.png" alt="image-20230404152643373" style="zoom: 50%;" />
-
-<h2 id="四-伪元素选择器"><a href="#四-伪元素选择器" class="headerlink" title="四.伪元素选择器"></a>四.伪元素选择器</h2><img src="C:\Users\11096\blog\source\pic\Q3\image-20230404150514659.png" alt="image-20230404150514659" style="zoom:50%;" />
-
-
-
-<h2 id="五-易错点"><a href="#五-易错点" class="headerlink" title="五.易错点"></a>五.易错点</h2><p>1.~：写在[ ]里表示字符串匹配，匹配到就选择。写在[ ]外表示通用兄弟选择器。</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
 
     </footer>
   </div>
