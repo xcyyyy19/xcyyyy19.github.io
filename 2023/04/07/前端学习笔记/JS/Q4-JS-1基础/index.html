@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>JS学习笔记-4.1JS基础 |  Pravite Home</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="Pravite Home" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-前端学习笔记/JS/Q4-JS-1基础"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  JS学习笔记-4.1JS基础
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-1%E5%9F%BA%E7%A1%80/" class="article-date">
+  <time datetime="2023-04-07T03:34:47.000Z" itemprop="datePublished">2023-04-07</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">3.1k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">13 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="4-1JS基础（mooc）"><a href="#4-1JS基础（mooc）" class="headerlink" title="4.1JS基础（mooc）"></a>4.1JS基础（mooc）</h1><h2 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> 1.了解js的数据类型:</li>
+</ul>
+<p>​		基础数据类型：number string boolean undefined null<br>​		引用类型:object(对象) array(数组)</p>
+<ul>
+<li><p><input disabled="" type="checkbox"> 
+2.string（字符串）</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox"> 
+​		获取长度 (length属性)</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox"> 
+​		字符串的拼接(使用加号)</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+​		字符串的访问 (string[0],或者charAt方法)</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox"> 
+​		换行符号(\n)</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+​		转义(&quot;hello&quot;)</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+​		string的方法: <a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_string_methods.asp">https://www.w3school.com.cn/js/js_string_methods.asp</a></p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+3.object （对象）</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+​		定义一组键值对</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+​		object的构造方式 (var a &#x3D; {b:1} 或者 var a &#x3D; new Object({b:1}))</p>
+<p>​			推荐使用前者，后者了解即可</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+​		对象的赋值 (a.b &#x3D; xx)</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+​		访问对象的所有属性（Object.keys）</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+​		删除对象的键值对 (delete )</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+​		检查属性（键） 是否存在 (in)</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox"> 
+​		遍历 (for …in)</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+​		对象的访问 (object.a 访问object的a属性)</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+​		了解对象的引用</p>
+<p>​			var a &#x3D; {b:1}  var c &#x3D; a</p>
+<p>​			a.b &#x3D; 2 </p>
+<p>​			console.log(c.b) &#x2F;&#x2F; 打印c</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+​			&#x2F;&#x2F; 从引用的角度去思考，为什么对象c发生了变化</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+​		object的方法 <a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_object_methods.asp">https://www.w3school.com.cn/js/js_object_methods.asp</a></p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+​		this关键字(重要)</p>
+</li>
+</ul>
+<p>4.function 函数<br>        函数的声明<br>            function fn() {} &#x2F;&#x2F; function 声明<br>            var fn &#x3D; function() {} &#x2F;&#x2F; 变量声明<br>            var fn &#x3D; new Function() {} &#x2F;&#x2F; 使用Function构造，了解就好，很少使用<br>        函数的参数<br>            function fn(text){ &#x2F;&#x2F; 变量text是形式参数<br>                return text &#x2F;&#x2F; return  关键词将返回指定的值<br>            }<br>        函数的调用<br>            fn() &#x2F;&#x2F; 调用fn函数<br>            fn(1,2) &#x2F;&#x2F; 传入实际参数<br>            call方法 <a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_function_call.asp">https://www.w3school.com.cn/js/js_function_call.asp</a><br>            apply方法 <a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_function_apply.asp">https://www.w3school.com.cn/js/js_function_apply.asp</a></p>
+<p>​		重复声明函数，会覆盖原有的定义<br>​			function fn() {<br>​				console.log(1)<br>​			}	<br>​			function fn() {<br>​				console.log(2)<br>​			}<br>​		递归<br>​			反复调用自身<br>​			了解递归的定义和实现思路，<br>​				 计算斐波那契数列 的函数如何实现</p>
+<p>​		了解函数的作用域<br>​			函数内部可以读取到外部定义的变量<br>​			函数内部定义的变量，无法被外部读取<br>​			var a &#x3D; 5<br>​			function fn() {<br>​				var b &#x3D; 10<br>​				console.log(b)<br>​				console.log(a)<br>​			}<br>​			console.log(b)<br>​		arguments对象，可以获取参数<br>​			&#x2F;&#x2F; 可以等看过数组再回头看这个<br>​			var add &#x3D; function (a,b) {<br>​				console.log(arguments[0])<br>​			}</p>
+<p>​		闭包(后续再理解)<br>​			理解一下定义，后续再了解深入的原因<br>​			<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_function_closures.asp">https://www.w3school.com.cn/js/js_function_closures.asp</a></p>
+<p>​		5.数组(array)<br>​		数组的定义<br>​		声明数组<br>​			var arr &#x3D; [11,22,33]<br>​			var arr &#x3D; new Array([11,22,33])<br>​		数组的访问<br>​		数组的长度<br>​			arr.length (length属性)<br>​		通过索引访问，从0开始<br>​			arr[0] &#x2F;&#x2F; 第一个元素<br>​			arr[arr.length-1] &#x2F;&#x2F; 最后一个元素<br>​		循环<br>​			for<br>​			for in<br>​		数组的方法:<br>​			<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_array_methods.asp">https://www.w3school.com.cn/js/js_array_methods.asp</a><br>​			<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_array_sort.asp">https://www.w3school.com.cn/js/js_array_sort.asp</a><br>​			<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_array_iteration.asp">https://www.w3school.com.cn/js/js_array_iteration.asp</a></p>
+<h2 id="1-分类"><a href="#1-分类" class="headerlink" title="1.分类"></a>1.分类</h2><p>​		1.ECMAJS：基础语法</p>
+<p>​		2.DOM：文档对象模型，可以访问某个元素</p>
+<p>​		3.BOM：浏览器对象模型，可以对浏览器操作</p>
+<h2 id="2-基础语法"><a href="#2-基础语法" class="headerlink" title="2.基础语法"></a>2.基础语法</h2><p>​	作为属性引用：console.log();    document.write();</p>
+<p>​	外部引用1：head里写<code>&lt;script src=&quot;js文件名称.js&quot;&gt;不允许出现任何js代码&lt;/script&gt;</code></p>
+<p>​	内部引用：《script》需要出现js代码《&#x2F;script》</p>
+<p>​	多文件引用:<code>&lt;script src=&quot;/js/script1.js&quot;&gt;&lt;/script&gt; </code><br>​			   		 <code>&lt;script src=&quot;/js/script2.js&quot;&gt;&lt;/script&gt;</code></p>
+<p>​	注释：&#x2F;&#x2F; 			 &#x2F;**&#x2F;</p>
+<p>​	易错点：大小写敏感</p>
+<h2 id="3-变量与作用域"><a href="#3-变量与作用域" class="headerlink" title="3.变量与作用域"></a>3.变量与作用域</h2><p>变量：</p>
+<p>​		局部变量：   var 变量名&#x3D;   ；</p>
+<p>​						  或者    var 变量名； 变量名&#x3D;   ；</p>
+<p>​		全局变量：  变量名&#x3D;   ； </p>
+<p>​		多个变量：  var 变量名1&#x3D;值1,变量名2,变量名3,变量名4&#x3D;值2；</p>
+<p>​		变量名命名规范：和c语言唯一的区别是可以以字母数字下划线及＄组成。</p>
+<p>作用域：</p>
+<p>​		JavaScript 使用大括号，将多个相关的语句组合在一起，称为“区块”（block），单并不构成单独的作用域。</p>
+<p>​		对于<code>var</code>命令来说，JavaScript 的区块不构成单独的作用域（scope）。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  var a = 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a // 1</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="4-数据类型"><a href="#4-数据类型" class="headerlink" title="4.数据类型"></a>4.数据类型</h2><h4 id="1-原始类型"><a href="#1-原始类型" class="headerlink" title="1.原始类型"></a>1.原始类型</h4><p>​				<a target="_blank" rel="noopener" href="https://wangdoc.com/javascript/types/general#typeof-%E8%BF%90%E7%AE%97%E7%AC%A6">数据类型概述 - JavaScript 教程 - 网道 (wangdoc.com)</a>（非常详细且有用，不要只看自己的笔记）</p>
+<h5 id="1-分类-1"><a href="#1-分类-1" class="headerlink" title="1.分类"></a>1.分类</h5><p>​				1.unmber数字类型</p>
+<p>​						整数：4字节32位</p>
+<p>​						小数（浮点数）：8字节64位</p>
+<p>​				2.string字符串</p>
+<p>​				3.boolean布尔</p>
+<p>​				4.null空</p>
+<p>​				5.undefined未定义		声明变量未赋值，访问对象不存在</p>
+<p>​					</p>
+<h5 id="2-数据转换"><a href="#2-数据转换" class="headerlink" title="2.数据转换"></a>2.数据转换</h5><p>​				取类型并赋值：typeof（）</p>
+<p>​										   作用：判断变量是否未定义的同时，避免抛出错误。</p>
+<p>​												  	<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408212824971.png" alt="image-20230408212824971" style="zoom:50%;" /></p>
+<p>​				判断是否为数字类型：isNaN</p>
+<p>​				强制转换字符串：变量.toString（）</p>
+<p>​				强制转换整数（小数点后的全部舍掉）：parseInt（数据）；</p>
+<p>​				强制转换小数：parseFloat（数据）；</p>
+<p>​										易错点：如果数据里包含非数字型数据，则会输出转换好的数据，并停止转换异常数据。</p>
+<p>​										例子：var  i &#x3D; parseFloat（13.2你好442）；将会输出13.2。</p>
+<h4 id="2-引用类型"><a href="#2-引用类型" class="headerlink" title="2.引用类型"></a>2.引用类型</h4><h2 id="5-运算符"><a href="#5-运算符" class="headerlink" title="5.运算符"></a>5.运算符</h2><h4 id="1-算数运算符"><a href="#1-算数运算符" class="headerlink" title="1.算数运算符"></a>1.算数运算符</h4><h4 id="2-关系运算符"><a href="#2-关系运算符" class="headerlink" title="2.关系运算符"></a>2.关系运算符</h4><p>​				<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408111058932.png" alt="image-20230408111058932" style="zoom: 33%;" /></p>
+<p>​					</p>
+<p>​					&#x3D;&#x3D;与&#x3D;&#x3D;&#x3D;的区别：&#x3D;&#x3D;会使两侧进行类型转换，并比较。&#x3D;&#x3D;&#x3D;会严格比较类型和数据。</p>
+<h4 id="3-逻辑运算符"><a href="#3-逻辑运算符" class="headerlink" title="3.逻辑运算符"></a>3.逻辑运算符</h4><p>​					<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408111154450.png" alt="image-20230408111154450" style="zoom: 50%;" /></p>
+<h4 id="4-条件-x2F-三目运算符"><a href="#4-条件-x2F-三目运算符" class="headerlink" title="4.条件&#x2F;三目运算符"></a>4.条件&#x2F;三目运算符</h4><p>​					普通：</p>
+<p>​					<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408111436303.png" alt="image-20230408111436303" style="zoom:33%;" /></p>
+<p>​					嵌套：</p>
+<p>​					<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408111514675.png" alt="image-20230408111514675" style="zoom:33%;" /></p>
+<h2 id="6-标签（label）"><a href="#6-标签（label）" class="headerlink" title="6.标签（label）"></a>6.标签（label）</h2><p>JavaScript 语言允许，语句的前面有标签（label），相当于定位符，用于跳转到程序的任意位置，标签的格式如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">label:</span><br><span class="line">  语句</span><br></pre></td></tr></table></figure>
+
+<p>标签可以是任意的标识符，但不能是保留字，语句部分可以是任意语句。</p>
+<p>标签通常与<code>break</code>语句和<code>continue</code>语句配合使用，跳出特定的循环。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">top:</span><br><span class="line">  for (var i = 0; i &lt; 3; i++)&#123;</span><br><span class="line">    for (var j = 0; j &lt; 3; j++)&#123;</span><br><span class="line">      if (i === 1 &amp;&amp; j === 1) break top;</span><br><span class="line">      console.log(&#x27;i=&#x27; + i + &#x27;, j=&#x27; + j);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">// i=0, j=0</span><br><span class="line">// i=0, j=1</span><br><span class="line">// i=0, j=2</span><br><span class="line">// i=1, j=0</span><br></pre></td></tr></table></figure>
+
+<p>上面代码为一个双重循环区块，<code>break</code>命令后面加上了<code>top</code>标签（注意，<code>top</code>不用加引号），满足条件时，直接跳出双层循环。如果<code>break</code>语句后面不使用标签，则只能跳出内层循环，进入下一次的外层循环。</p>
+<p>标签也可以用于跳出代码块。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">foo: &#123;</span><br><span class="line">  console.log(1);</span><br><span class="line">  break foo;</span><br><span class="line">  console.log(&#x27;本行不会输出&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">console.log(2);</span><br><span class="line">// 1</span><br><span class="line">// 2</span><br></pre></td></tr></table></figure>
+
+<p>上面代码执行到<code>break foo</code>，就会跳出区块。</p>
+<p><code>continue</code>语句也可以与标签配合使用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">top:</span><br><span class="line">  for (var i = 0; i &lt; 3; i++)&#123;</span><br><span class="line">    for (var j = 0; j &lt; 3; j++)&#123;</span><br><span class="line">      if (i === 1 &amp;&amp; j === 1) continue top;</span><br><span class="line">      console.log(&#x27;i=&#x27; + i + &#x27;, j=&#x27; + j);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">// i=0, j=0</span><br><span class="line">// i=0, j=1</span><br><span class="line">// i=0, j=2</span><br><span class="line">// i=1, j=0</span><br><span class="line">// i=2, j=0</span><br><span class="line">// i=2, j=1</span><br><span class="line">// i=2, j=2</span><br></pre></td></tr></table></figure>
+
+<p>上面代码中，<code>continue</code>命令后面有一个标签名，满足条件时，会跳过当前循环，直接进入下一轮外层循环。如果<code>continue</code>语句后面不使用标签，则只能进入下一轮的内层循环。</p>
+<h2 id="7-分支语句"><a href="#7-分支语句" class="headerlink" title="7.分支语句"></a>7.分支语句</h2><p>1.if else</p>
+<p>2.switch-case：优先用于等值判断</p>
+<p>​						  <img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408111942096.png" alt="image-20230408111942096" style="zoom:33%;" /></p>
+<p>​				1.break</p>
+<p>​				2.<strong>continue用于立即终止本轮循环，返回循环结构的头部，开始下一轮循环。</strong></p>
+<p>​						<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408205506290.png" alt="image-20230408205506290" style="zoom: 50%;" /></p>
+<p>7.循环</p>
+<p>1.while</p>
+<p>2.do while：先执行再判断</p>
+<p>​							<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408112304642.png" alt="image-20230408112304642" style="zoom:33%;" /></p>
+<p>3.for</p>
+<p>for in循环会遍历对象上所有可枚举的属性，包括从原型链继承下来的属性。 例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const obj = &#123; a: 1, b: 2, c: 3 &#125;;</span><br><span class="line">for (let prop in obj) &#123;</span><br><span class="line">  console.log(prop);</span><br><span class="line">&#125;</span><br><span class="line">// 输出 a, b, c</span><br></pre></td></tr></table></figure>
+
+<p>for of是ES6中新增的遍历数据结构的循环方式，它可以遍历所有具有迭代器的数据结构（例如数组、Set、Map等）。for of循环不能直接迭代对象，因为对象不是可迭代的数据结构。 例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const arr = [1, 2, 3];</span><br><span class="line">for (let value of arr) &#123;</span><br><span class="line">  console.log(value);</span><br><span class="line">&#125;</span><br><span class="line">// 输出 1, 2, 3</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-数组——类型为object，而不是数组类型"><a href="#8-数组——类型为object，而不是数组类型" class="headerlink" title="8.数组——类型为object，而不是数组类型"></a>8.数组——类型为object，而不是数组类型</h2><h3 id="1-索引数组"><a href="#1-索引数组" class="headerlink" title="1.索引数组"></a>1.索引数组</h3><h5 id="1-动态数组"><a href="#1-动态数组" class="headerlink" title="1.动态数组"></a>1.动态数组</h5><p>​											var arr&#x3D;new Array（“add”，“okm”，“fnwk”）；</p>
+<h5 id="2-静态数组（在JS里，这也是动态数组）"><a href="#2-静态数组（在JS里，这也是动态数组）" class="headerlink" title="2.静态数组（在JS里，这也是动态数组）"></a>2.静态数组（在JS里，这也是动态数组）</h5><p>​											var arr&#x3D;【15，1，3】；</p>
+<h5 id="3-最好的方法"><a href="#3-最好的方法" class="headerlink" title="3.最好的方法"></a>3.最好的方法</h5><p>​											先声明空数组，再通过arr[index]访问并赋值。</p>
+<h5 id="4-arr-length没有括号"><a href="#4-arr-length没有括号" class="headerlink" title="4.arr.length	没有括号"></a>4.arr.length	没有括号</h5><p>​											console.log（arr.length）</p>
+<h5 id="5-访问倒数第n个数据"><a href="#5-访问倒数第n个数据" class="headerlink" title="5.访问倒数第n个数据"></a>5.访问倒数第n个数据</h5><p>​											倒数第一个：arr[length-1]</p>
+<p>​											<strong>倒数第n个：arr[length-n]</strong></p>
+<h3 id="2-关联数组-hash数组（只希望快速查找时使用）"><a href="#2-关联数组-hash数组（只希望快速查找时使用）" class="headerlink" title="2.关联数组   hash数组（只希望快速查找时使用）"></a>2.关联数组   hash数组（只希望快速查找时使用）</h3><h5 id="1-区别"><a href="#1-区别" class="headerlink" title="1.区别"></a>1.区别</h5><p>​											1.可以自定义下标名称。</p>
+<p>​											2.查找快，o（1）.</p>
+<p>​											3.查找不用遍历，也无法遍历。</p>
+<h5 id="2-创建方式"><a href="#2-创建方式" class="headerlink" title="2.创建方式"></a>2.创建方式</h5><p>​											1.创建空数组</p>
+<p>​											2.以自定义字符串为下标，给数组赋值</p>
+<p>​												<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408132738093.png" alt="image-20230408132738093" style="zoom: 25%;" /></p>
+<h5 id="3-易错点"><a href="#3-易错点" class="headerlink" title="3.易错点"></a>3.易错点</h5><p>​											不能用for循环，不能遍历，和存储位置无关</p>
+<p>​											<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408133014313.png" alt="image-20230408133014313" style="zoom: 33%;" /></p>
+<h3 id="3-数组API"><a href="#3-数组API" class="headerlink" title="3.数组API"></a>3.数组API</h3><h5 id="1-String-arr-；数组转字符串"><a href="#1-String-arr-；数组转字符串" class="headerlink" title="1.String(arr)；数组转字符串"></a>1.String(arr)；<strong>数组转字符串</strong></h5><p>​											概念：转化成字符串，并用逗号隔开。</p>
+<p>​											作用：打印出arr，判断一下数据有没有被更改过。</p>
+<h5 id="2-arr-join-“连接符”-；拼接数组元素"><a href="#2-arr-join-“连接符”-；拼接数组元素" class="headerlink" title="2.arr.join(“连接符”)；拼接数组元素"></a>2.arr.join(“连接符”)；<strong>拼接数组元素</strong></h5><p>​									概念：将array中每个部分，用”连接符“连接成字符串</p>
+<p>​												<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408135220827.png" alt="image-20230408135220827" style="zoom:25%;" /></p>
+<p>​									作用1：判断数组为空。</p>
+<p>​									作用2：字符串连接，将数组转化为html内容。<strong>（动态页面）</strong></p>
+<p>​												方法1：”&lt;开始1&gt;&lt;开始2&gt;”+arr.join(“&lt;&#x2F;结束2&gt;&lt;开始2&gt;”)+”&lt;&#x2F;结束2&gt;&lt;&#x2F;结束1&gt;“</p>
+<p>​												方法2：”&lt;开始标签1&gt;”+arr.join(“&lt;&#x2F;结束标签1&gt;&lt;开始标签1&gt;”)+”&lt;&#x2F;结束标签1&gt;“</p>
+<p>​												看不懂后面有说明。</p>
+<h5 id="3-concat-拼接"><a href="#3-concat-拼接" class="headerlink" title="3.concat()拼接"></a>3.concat()拼接</h5><p>​								1.概念：引用并拼接多个数组（不改变原数组值），返回结果值。（表面是复制数组值并拼接，本质还是引用）</p>
+<h5 id="4-arr-slice-index1，index2-查数组元素"><a href="#4-arr-slice-index1，index2-查数组元素" class="headerlink" title="4.arr.slice(index1，index2)查数组元素"></a>4.arr.slice(index1，index2)<strong>查数组元素</strong></h5><p>​								1.概念：</p>
+<p>​												1.选取一个范围的：选取arr[index1]~arr[index2]的值。</p>
+<p>​												2.选取到尾部的：arr.slice(index1)省略第二个值。</p>
+<p>​												3.复制数组：arr.slice(0,arr.length)&#x3D;&#x3D;&#x3D;arr.slice();</p>
+<p>​								2.例子：<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408151232135.png" alt="image-20230408151232135" style="zoom:33%;" /></p>
+<p>​								3.重点：下标可以用负数</p>
+<h3 id="4-arr-splice增删改数组元素"><a href="#4-arr-splice增删改数组元素" class="headerlink" title="4.arr.splice增删改数组元素"></a>4.arr.splice<strong>增删改数组元素</strong></h3><p>​								注：是改变数组本身，而不是引用。<strong>删除和插入的元素个数不必一致，数组下标会自动后移。</strong></p>
+<h5 id="1-增"><a href="#1-增" class="headerlink" title="1.增"></a>1.增</h5><p>​								1.arr.splice(start,<strong>0</strong>,var1,var2….varn);</p>
+<h5 id="2-删"><a href="#2-删" class="headerlink" title="2.删"></a>2.删</h5><p>​								1.arr.splice(start,n);</p>
+<p>​										删除从start开始的（含start）n个元素，<strong>返回值为被删除数据组成的临时数组</strong>。</p>
+<h5 id="3-改"><a href="#3-改" class="headerlink" title="3.改"></a>3.改</h5><p>​								1.arr.splice(start,n,<strong>var1,var2….varn</strong>);</p>
+<p>​										删除从start开始的（含start）n个元素，并用n种var填充。</p>
+<p>​								2.arr.splice(start,n,<strong>…arr2</strong>);</p>
+<p>​										删除从start开始的（含start）n个元素，并用数组的所有值填充。<strong>易错点：…必须有</strong></p>
+<p>​								3.例<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408155222560.png" alt="image-20230408155222560" style="zoom: 50%;" /></p>
+<h4 id="5-颠倒arr-reverse"><a href="#5-颠倒arr-reverse" class="headerlink" title="5.颠倒arr.reverse();"></a>5.颠倒arr.reverse();</h4><p>​							只颠倒，不排序。</p>
+<h4 id="6-排序arr-sort"><a href="#6-排序arr-sort" class="headerlink" title="6.排序arr.sort();"></a>6.排序arr.sort();</h4><p>​							缺点：默认将所有类型转成字符串，再从小到大排序。</p>
+<p>​							解决方法：重构比较函数。</p>
+<blockquote>
+<p>arr.join()说明</p>
+<p>​			arr.join()<code>方法取出的是数组</code>arr<code>中的每个元素，将它们用</code>&lt;&#x2F;结束标签&gt;&lt;开始标签&gt;&#96; 连接起来形成一个新的字符串。</p>
+<p>​			&lt;开始标签1&gt;<code>和</code>&lt;&#x2F;结束标签1&gt;<code>是代码里本来就有的标签，分别表示HTML元素的开始标签和结束标签；而</code>&lt;开始标签2&gt;<code>和</code>&lt;&#x2F;结束标签2&gt;&#96;是你添加进去的标签。</p>
+<p>​			<code>arr.join()</code>方法取出的是数组<code>arr</code>中的每个元素，可以是任何类型的值，例如字符串或数字。将它们用<code>&lt;/结束标签2&gt;&lt;开始标签2&gt;</code>连接起来形成一个新的字符串。这里的<code>&lt;/结束标签2&gt;&lt;开始标签2&gt;</code>是你添加的标签内容。</p>
+<p>以下是一个例子：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let arr = [&#x27;apple&#x27;, &#x27;banana&#x27;, &#x27;orange&#x27;];</span><br><span class="line">let result = &#x27;&lt;ul&gt;&lt;li&gt;&#x27; + arr.join(&#x27;&lt;/li&gt;&lt;li&gt;&#x27;) + &#x27;&lt;/li&gt;&lt;/ul&gt;&#x27;;</span><br><span class="line">console.log(result);</span><br></pre></td></tr></table></figure>
+
+<p>​			在这个例子中，<code>&lt;开始标签1&gt;</code>是<code>&lt;ul&gt;</code>，<code>&lt;/结束标签1&gt;</code>是<code>&lt;/ul&gt;</code>，<code>&lt;开始标签2&gt;</code>是<code>&lt;li&gt;</code>，<code>&lt;/结束标签2&gt;</code>是<code>&lt;/li&gt;</code>。<code>arr.join(&#39;&lt;/li&gt;&lt;li&gt;&#39;)</code>取出的数组值是<code>&#39;apple&#39;</code>、<code>&#39;banana&#39;</code>和<code>&#39;orange&#39;</code>，它们将被用<code>&lt;/li&gt;&lt;li&gt;</code>连接起来形成一个新的字符串<code>&#39;apple&lt;/li&gt;&lt;li&gt;banana&lt;/li&gt;&lt;li&gt;orange&#39;</code>，最后生成的完整HTML元素如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li&gt;apple&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;banana&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;orange&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+
+<p>​			该HTML元素包含了多个子元素，子元素的内容从数组<code>arr</code>中取出，并且用<code>&lt;li&gt;</code>和<code>&lt;/li&gt;</code>标签包裹起来，每个子元素之间用<code>&lt;/li&gt;&lt;li&gt;</code>连接，而这些子元素整体则用<code>&lt;ul&gt;</code>和<code>&lt;/ul&gt;</code>标签包裹。</p>
+</blockquote>
+<p>​							</p>
+<h2 id="9-函数"><a href="#9-函数" class="headerlink" title="9.函数"></a>9.函数</h2><p>1.输出：console.log();</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-1%E5%9F%BA%E7%A1%80/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-2%E6%A0%87%E5%87%86%E5%BA%93/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">JS学习笔记-4.2JS标准库</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "",
+    app_key: "",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2023
+        <i class="ri-heart-fill heart_icon"></i> LIXiaohan
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+      <li>
+          <img src="/images/beian.png"></img>
+          <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=01234567890123" target="_black" rel="nofollow">黑公网安备0123456789号</a>
+      </li>
+        
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src=''></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Pravite Home"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+ 
+<script src="/js/clickBoom2.js"></script>
+ 
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=22707008&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+    
+<script>
+  const password = "11";
+  const lock_password = window.sessionStorage.getItem("lock_password");
+  console.log(password, lock_password);
+  if (lock_password !== password) {
+    Swal.fire({
+      title: "请输入访问密码",
+      input: "text",
+      inputAttributes: {
+        autocapitalize: "off",
+      },
+      showCancelButton: false,
+      showLoaderOnConfirm: true,
+      allowOutsideClick: false,
+      confirmButtonText: "确定",
+    }).then((result) => {
+      console.log(result);
+      if (result.isConfirmed) {
+        console.log(password);
+        if (result.value === password) {
+          window.sessionStorage.setItem("lock_password", result.value);
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "密码错误，请重试",
+            confirmButtonText: "确定",
+            allowOutsideClick: false,
+          }).then(() => {
+            window.location.reload();
+          });
+        }
+      }
+    });
+  }
+</script>
+
+
+  </div>
+</body>
+
+</html>

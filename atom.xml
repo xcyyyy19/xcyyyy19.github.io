@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-04-08T13:32:15.005Z</updated>
+  <updated>2023-04-10T08:05:49.994Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,18 +17,18 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>JS学习笔记-3.1JS基础</title>
-    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q4-JS-1%E5%9F%BA%E7%A1%80/"/>
-    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q4-JS-1%E5%9F%BA%E7%A1%80/</id>
+    <title>JS学习笔记-4.1JS基础</title>
+    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-1%E5%9F%BA%E7%A1%80/"/>
+    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-1%E5%9F%BA%E7%A1%80/</id>
     <published>2023-04-07T03:34:47.000Z</published>
-    <updated>2023-04-08T13:32:15.005Z</updated>
+    <updated>2023-04-10T08:05:49.994Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;JS基础&quot;&gt;&lt;a href=&quot;#JS基础&quot; class=&quot;headerlink&quot; title=&quot;JS基础&quot;&gt;&lt;/a&gt;JS基础&lt;/h1&gt;&lt;h2 id=&quot;1-分类&quot;&gt;&lt;a href=&quot;#1-分类&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;4-1JS基础（mooc）&quot;&gt;&lt;a href=&quot;#4-1JS基础（mooc）&quot; class=&quot;headerlink&quot; title=&quot;4.1JS基础（mooc）&quot;&gt;&lt;/a&gt;4.1JS基础（mooc）&lt;/h1&gt;&lt;h2 id=&quot;大纲&quot;&gt;&lt;a href=&quot;#大纲&quot;</summary>
         
       
     
@@ -44,18 +44,18 @@
   </entry>
   
   <entry>
-    <title>CSS学习笔记-2.3flex布局实现</title>
-    <link href="http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-3%E5%AE%9E%E8%B7%B5%EF%BC%88flex%E5%B8%83%E5%B1%80%EF%BC%89/"/>
-    <id>http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-3%E5%AE%9E%E8%B7%B5%EF%BC%88flex%E5%B8%83%E5%B1%80%EF%BC%89/</id>
-    <published>2023-04-01T03:34:47.000Z</published>
-    <updated>2023-04-06T13:53:12.014Z</updated>
+    <title>JS学习笔记-4.2JS标准库</title>
+    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-2%E6%A0%87%E5%87%86%E5%BA%93/"/>
+    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-2%E6%A0%87%E5%87%86%E5%BA%93/</id>
+    <published>2023-04-07T03:34:47.000Z</published>
+    <updated>2023-04-10T08:07:34.149Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;CSS学习笔记-2-3实践&quot;&gt;&lt;a href=&quot;#CSS学习笔记-2-3实践&quot; class=&quot;headerlink&quot; title=&quot;CSS学习笔记-2.3实践&quot;&gt;&lt;/a&gt;CSS学习笔记-2.3实践&lt;/h1&gt;&lt;p&gt;&lt;a</summary>
+    <summary type="html">&lt;h1 id=&quot;3-2JS标准库（mooc）&quot;&gt;&lt;a href=&quot;#3-2JS标准库（mooc）&quot; class=&quot;headerlink&quot; title=&quot;3.2JS标准库（mooc）&quot;&gt;&lt;/a&gt;3.2JS标准库（mooc）&lt;/h1&gt;&lt;h2 id=&quot;1-Object对象&quot;&gt;&lt;a</summary>
         
       
     
@@ -66,14 +66,68 @@
     <category term="note" scheme="http://example.com/categories/code/note/"/>
     
     
-    <category term="CSS" scheme="http://example.com/tags/CSS/"/>
+    <category term="JS" scheme="http://example.com/tags/JS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS学习笔记-4.3脚本加载（图灵）</title>
+    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AC%AC4%E7%89%88%EF%BC%89/Q4-JS-3%E8%84%9A%E6%9C%AC%E5%8A%A0%E8%BD%BD%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/"/>
+    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AC%AC4%E7%89%88%EF%BC%89/Q4-JS-3%E8%84%9A%E6%9C%AC%E5%8A%A0%E8%BD%BD%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/</id>
+    <published>2023-04-07T03:34:47.000Z</published>
+    <updated>2023-04-11T11:02:37.430Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;4-3脚本的加载时机&quot;&gt;&lt;a href=&quot;#4-3脚本的加载时机&quot; class=&quot;headerlink&quot; title=&quot;4.3脚本的加载时机&quot;&gt;&lt;/a&gt;4.3脚本的加载时机&lt;/h1&gt;&lt;h2 id=&quot;4-3-1script标签&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="JS" scheme="http://example.com/tags/JS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS学习笔记-4.4语言基础（图灵）</title>
+    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AC%AC4%E7%89%88%EF%BC%89/Q4-JS-4%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/"/>
+    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AC%AC4%E7%89%88%EF%BC%89/Q4-JS-4%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/</id>
+    <published>2023-04-07T03:34:47.000Z</published>
+    <updated>2023-04-11T11:23:16.706Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;4-4语言基础&quot;&gt;&lt;a href=&quot;#4-4语言基础&quot; class=&quot;headerlink&quot; title=&quot;4.4语言基础&quot;&gt;&lt;/a&gt;4.4语言基础&lt;/h1&gt;&lt;h2 id=&quot;4-4-1标识符&quot;&gt;&lt;a href=&quot;#4-4-1标识符&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="JS" scheme="http://example.com/tags/JS/"/>
     
   </entry>
   
   <entry>
     <title>CSS学习笔记-2.1盒子、定位与布局</title>
-    <link href="http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-1%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%B8%83%E5%B1%80/"/>
-    <id>http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-1%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%B8%83%E5%B1%80/</id>
+    <link href="http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q3-CSS-1%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%B8%83%E5%B1%80/"/>
+    <id>http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q3-CSS-1%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%B8%83%E5%B1%80/</id>
     <published>2023-04-01T03:34:47.000Z</published>
     <updated>2023-04-07T13:18:02.343Z</updated>
     
@@ -98,12 +152,20 @@
   </entry>
   
   <entry>
-    <title>前端临时页面</title>
-    <link href="http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q0-ToDo/"/>
-    <id>http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q0-ToDo/</id>
-    <published>2023-03-29T04:30:47.000Z</published>
-    <updated>2023-04-06T13:46:17.321Z</updated>
+    <title>CSS学习笔记-2.3flex布局实现</title>
+    <link href="http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q3-CSS-3%E5%AE%9E%E8%B7%B5%EF%BC%88flex%E5%B8%83%E5%B1%80%EF%BC%89/"/>
+    <id>http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q3-CSS-3%E5%AE%9E%E8%B7%B5%EF%BC%88flex%E5%B8%83%E5%B1%80%EF%BC%89/</id>
+    <published>2023-04-01T03:34:47.000Z</published>
+    <updated>2023-04-07T06:47:52.199Z</updated>
     
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;CSS学习笔记-2-3实践&quot;&gt;&lt;a href=&quot;#CSS学习笔记-2-3实践&quot; class=&quot;headerlink&quot; title=&quot;CSS学习笔记-2.3实践&quot;&gt;&lt;/a&gt;CSS学习笔记-2.3实践&lt;/h1&gt;&lt;p&gt;&lt;a</summary>
+        
+      
     
     
     
@@ -111,42 +173,8 @@
     
     <category term="note" scheme="http://example.com/categories/code/note/"/>
     
-    
-    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
     
     <category term="CSS" scheme="http://example.com/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端英文列表</title>
-    <link href="http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q0-Word/"/>
-    <id>http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q0-Word/</id>
-    <published>2023-03-29T04:30:47.000Z</published>
-    <updated>2023-03-30T11:03:05.321Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;margin：外边距&lt;/p&gt;
-&lt;p&gt;border：框架&lt;/p&gt;
-&lt;p&gt;padding：内边距&lt;/p&gt;
-&lt;p&gt;br：Barter rabbet  &lt;/p&gt;
-&lt;p&gt;en： &amp;#x2F;ˈbär-tər    ræbɪt&amp;#x2F;  换行&lt;/p&gt;
-&lt;p&gt;span：行内组合,</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
     
   </entry>
   
@@ -178,9 +206,62 @@
   </entry>
   
   <entry>
+    <title>前端临时页面</title>
+    <link href="http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/Q0-ToDo/"/>
+    <id>http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/Q0-ToDo/</id>
+    <published>2023-03-29T04:30:47.000Z</published>
+    <updated>2023-04-06T13:46:17.321Z</updated>
+    
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
+    
+    <category term="CSS" scheme="http://example.com/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端英文列表</title>
+    <link href="http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/Q0-Word/"/>
+    <id>http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/Q0-Word/</id>
+    <published>2023-03-29T04:30:47.000Z</published>
+    <updated>2023-03-30T11:03:05.321Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;margin：外边距&lt;/p&gt;
+&lt;p&gt;border：框架&lt;/p&gt;
+&lt;p&gt;padding：内边距&lt;/p&gt;
+&lt;p&gt;br：Barter rabbet  &lt;/p&gt;
+&lt;p&gt;en： &amp;#x2F;ˈbär-tər    ræbɪt&amp;#x2F;  换行&lt;/p&gt;
+&lt;p&gt;span：行内组合,</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CSS学习笔记-1.2实践</title>
-    <link href="http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-2%E5%AE%9E%E8%B7%B5%EF%BC%88%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F%EF%BC%89/"/>
-    <id>http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-2%E5%AE%9E%E8%B7%B5%EF%BC%88%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F%EF%BC%89/</id>
+    <link href="http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q2-CSS-2%E5%AE%9E%E8%B7%B5%EF%BC%88%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F%EF%BC%89/"/>
+    <id>http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q2-CSS-2%E5%AE%9E%E8%B7%B5%EF%BC%88%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F%EF%BC%89/</id>
     <published>2023-03-29T03:34:47.000Z</published>
     <updated>2023-04-06T13:53:00.804Z</updated>
     
@@ -206,8 +287,8 @@
   
   <entry>
     <title>CSS学习笔记-1.1基本样式</title>
-    <link href="http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/"/>
-    <id>http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/</id>
+    <link href="http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/"/>
+    <id>http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/</id>
     <published>2023-03-29T03:00:47.000Z</published>
     <updated>2023-04-07T06:06:48.203Z</updated>
     
@@ -232,65 +313,9 @@
   </entry>
   
   <entry>
-    <title>HTML学习笔记-5体系补充</title>
-    <link href="http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note5/"/>
-    <id>http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note5/</id>
-    <published>2023-03-28T03:34:47.000Z</published>
-    <updated>2023-03-30T06:15:32.723Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;HTML学习笔记-5体系补充&quot;&gt;&lt;a href=&quot;#HTML学习笔记-5体系补充&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTML学习笔记-6实践</title>
-    <link href="http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note6/"/>
-    <id>http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note6/</id>
-    <published>2023-03-28T03:34:47.000Z</published>
-    <updated>2023-03-29T00:52:27.204Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1&gt;HTML学习笔记-6实践&lt;/h1&gt;
-
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
-    
-  </entry>
-  
-  <entry>
     <title>CSS学习笔记-2.2选择器</title>
-    <link href="http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-2%E9%80%89%E6%8B%A9%E5%99%A8/"/>
-    <id>http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-2%E9%80%89%E6%8B%A9%E5%99%A8/</id>
+    <link href="http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q3-CSS-2%E9%80%89%E6%8B%A9%E5%99%A8/"/>
+    <id>http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q3-CSS-2%E9%80%89%E6%8B%A9%E5%99%A8/</id>
     <published>2023-03-28T03:34:47.000Z</published>
     <updated>2023-04-07T06:47:49.749Z</updated>
     
@@ -315,11 +340,67 @@
   </entry>
   
   <entry>
+    <title>HTML学习笔记-6实践</title>
+    <link href="http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note6/"/>
+    <id>http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note6/</id>
+    <published>2023-03-28T03:34:47.000Z</published>
+    <updated>2023-03-29T12:55:52.543Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;HTML学习笔记-6实践&lt;/h1&gt;
+
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML学习笔记-5体系补充</title>
+    <link href="http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note5/"/>
+    <id>http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note5/</id>
+    <published>2023-03-28T03:34:47.000Z</published>
+    <updated>2023-04-04T12:40:23.264Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;HTML学习笔记-5体系补充&quot;&gt;&lt;a href=&quot;#HTML学习笔记-5体系补充&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
+    
+  </entry>
+  
+  <entry>
     <title>HTML学习笔记-4head</title>
-    <link href="http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note4/"/>
-    <id>http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note4/</id>
+    <link href="http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note4/"/>
+    <id>http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note4/</id>
     <published>2023-03-28T03:33:47.000Z</published>
-    <updated>2023-03-29T05:32:03.168Z</updated>
+    <updated>2023-03-29T14:03:29.111Z</updated>
     
     
       
@@ -343,8 +424,8 @@
   
   <entry>
     <title>HTML学习笔记-3进阶标签与属性</title>
-    <link href="http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note3/"/>
-    <id>http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note3/</id>
+    <link href="http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note3/"/>
+    <id>http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note3/</id>
     <published>2023-03-28T03:32:47.000Z</published>
     <updated>2023-03-30T10:50:41.146Z</updated>
     
@@ -370,8 +451,8 @@
   
   <entry>
     <title>HTML学习笔记-2基础标签</title>
-    <link href="http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note2/"/>
-    <id>http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note2/</id>
+    <link href="http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note2/"/>
+    <id>http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note2/</id>
     <published>2023-03-28T03:31:47.000Z</published>
     <updated>2023-03-29T12:51:23.510Z</updated>
     
@@ -399,10 +480,10 @@
   
   <entry>
     <title>HTML学习笔记-1基础</title>
-    <link href="http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note1/"/>
-    <id>http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note1/</id>
+    <link href="http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note1/"/>
+    <id>http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note1/</id>
     <published>2023-03-28T03:30:47.000Z</published>
-    <updated>2023-03-29T08:57:26.021Z</updated>
+    <updated>2023-03-29T11:40:15.541Z</updated>
     
     
       
@@ -478,87 +559,6 @@
     
     
     <category term="Java" scheme="http://example.com/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python网站--盘中餐（Vue结业项目）</title>
-    <link href="http://example.com/2023/03/11/Python/P4-Python%E7%BD%91%E7%AB%99--%E7%9B%98%E4%B8%AD%E9%A4%90%EF%BC%88Vue%E7%BB%93%E4%B8%9A%E9%A1%B9%E7%9B%AE%EF%BC%89/"/>
-    <id>http://example.com/2023/03/11/Python/P4-Python%E7%BD%91%E7%AB%99--%E7%9B%98%E4%B8%AD%E9%A4%90%EF%BC%88Vue%E7%BB%93%E4%B8%9A%E9%A1%B9%E7%9B%AE%EF%BC%89/</id>
-    <published>2023-03-11T03:43:00.000Z</published>
-    <updated>2023-03-27T22:13:28.836Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;基于Django-的“盘中餐”健康饮食网站的设计与实现（附件见文末）&quot;&gt;&lt;a href=&quot;#基于Django-的“盘中餐”健康饮食网站的设计与实现（附件见文末）&quot; class=&quot;headerlink&quot; title=&quot;基于Django</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="project" scheme="http://example.com/categories/code/project/"/>
-    
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
-    
-    <category term="Django" scheme="http://example.com/tags/Django/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python网站--废品回收（数据库结业项目）</title>
-    <link href="http://example.com/2023/03/11/Python/P5-Python%E7%BD%91%E7%AB%99--%E5%BA%9F%E5%93%81%E5%9B%9E%E6%94%B6%EF%BC%88%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BB%93%E4%B8%9A%E9%A1%B9%E7%9B%AE%EF%BC%89/"/>
-    <id>http://example.com/2023/03/11/Python/P5-Python%E7%BD%91%E7%AB%99--%E5%BA%9F%E5%93%81%E5%9B%9E%E6%94%B6%EF%BC%88%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BB%93%E4%B8%9A%E9%A1%B9%E7%9B%AE%EF%BC%89/</id>
-    <published>2023-03-11T03:42:56.000Z</published>
-    <updated>2023-03-27T21:54:33.624Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;基于Django的废品回收网站设计与实现（附件见文末）&quot;&gt;&lt;a href=&quot;#基于Django的废品回收网站设计与实现（附件见文末）&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="project" scheme="http://example.com/categories/code/project/"/>
-    
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
-    
-    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
-    
-    <category term="Django" scheme="http://example.com/tags/Django/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python爬虫&amp;数据分析&amp;前后端代码（毕设）【待上传】</title>
-    <link href="http://example.com/2023/03/11/Python/P3-Python%E7%88%AC%E8%99%AB-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BB%A3%E7%A0%81%EF%BC%88%E6%AF%95%E8%AE%BE%EF%BC%89/"/>
-    <id>http://example.com/2023/03/11/Python/P3-Python%E7%88%AC%E8%99%AB-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BB%A3%E7%A0%81%EF%BC%88%E6%AF%95%E8%AE%BE%EF%BC%89/</id>
-    <published>2023-03-11T03:42:35.000Z</published>
-    <updated>2023-03-27T21:52:59.853Z</updated>
-    
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="project" scheme="http://example.com/categories/code/project/"/>
-    
-    
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
     
   </entry>
   

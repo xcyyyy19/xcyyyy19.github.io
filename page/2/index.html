@@ -151,7 +151,7 @@
     
     
     <article
-  id="post-前端学习笔记/Q3-CSS-2选择器"
+  id="post-前端学习笔记/CSS/Q2-CSS-1基本样式+盒子模型"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -162,7 +162,195 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-2%E9%80%89%E6%8B%A9%E5%99%A8/"
+  <a class="article-title" href="/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/"
+    >CSS学习笔记-1.1基本样式</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/" class="article-date">
+  <time datetime="2023-03-29T03:00:47.000Z" itemprop="datePublished">2023-03-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="CSS学习笔记-1-1基本样式"><a href="#CSS学习笔记-1-1基本样式" class="headerlink" title="CSS学习笔记-1.1基本样式"></a>CSS学习笔记-1.1基本样式</h1><p>注释:</p>
+<p>​			CSS:&#x2F;**&#x2F;</p>
+<p>技巧：</p>
+<p>​			先写html框架，再考虑CSS</p>
+<p>​			定义主要容器时，要定义成宽度是由我们固定的，高度完全是由内容撑开的。</p>
+<p>CSS游戏：</p>
+<p>​			<a target="_blank" rel="noopener" href="https://frontend30.com/css-selectors-cheatsheet/">CSS Selectors Cheatsheet - FrontEnd30</a></p>
+<p>思维导图：</p>
+<p>​			<a target="_blank" rel="noopener" href="https://flowus.cn/d3cec49a-35cf-46aa-a095-f5ed4406287e">CSS思维导图 (flowus.cn)</a></p>
+<h3 id="0-CSS基本样式"><a href="#0-CSS基本样式" class="headerlink" title="0.CSS基本样式"></a>0.CSS基本样式</h3><p>选择器（Selector）<br>HTML 元素的名称位于规则集开始。它选择了一个或多个需要添加样式的元素）。要给不同元素添加样式只需要更改选择器就行了。可以用固定标签名，或.+自定义名称来进行选择。如用.menu来选择class属性为menu的盒子。</p>
+<p>通配符选择器作用：给当前界面上所有的标签设置属性。（*的意思是选中所有的标签）</p>
+<p>声明（Declaration）<br>一个单独的规则，如 color: red; 用来指定添加样式元素的属性。</p>
+<p>属性（Properties）<br>改变 HTML 元素样式的途径。（本例中 color 就是 <p> 元素的属性。）CSS 中，由编写人员决定修改哪个属性以改变规则。</p>
+<p>属性的值（Property value）<br>在属性的右边，冒号后面即属性的值，它从指定属性的众多外观中选择一个值（我们除了 red 之外还有很多属性值可以用于 color ）。</p>
+<h3 id="1-常见基础样式"><a href="#1-常见基础样式" class="headerlink" title="1.常见基础样式"></a>1.常见基础样式</h3><h3 id=""><a href="#" class="headerlink" title=""></a></h3><ul>
+<li><p>基础：</p>
+<p>声明该边框的类型：display ：可选项如下</p>
+<p>​								flex灵活布局</p>
+<p>​								grid网格布局</p>
+<p><img src="C:\Users\11096\blog\source\pic\Q2\image-20230329162830851.png" alt="image-20230329162830851"></p>
+<p>​							</p>
+<ul>
+<li><p>通用（框架相关）:</p>
+<p>宽度:   width: 300px;（百分制也行），div默认居左，所以背景颜色随着宽度的改变也居左。</p>
+<p>最大宽度: max-width: 500px;</p>
+<p>​				（背景是不动的，主页面随着浏览器大小变化，有最大宽度的约束，内容看起来就不会过宽）</p>
+<p>最小宽度：</p>
+<p>最大高度：</p>
+<p>最小高度：</p>
+</li>
+</ul>
+<h3 id="2-文字相关"><a href="#2-文字相关" class="headerlink" title="2.文字相关"></a>2.文字相关</h3><p>单位：</p>
+<p>​		em设置成几个字符大小（根据用户使用的字体自适应）</p>
+<p>​		px像素</p>
+<p>​		%百分比</p>
+<p>颜色：</p>
+<p>​		<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q2-CSS-1基本样式+盒子模型.assets\image-20230407121714988.png" alt="image-20230407121714988" style="zoom:25%;" /></p>
+<p>文本对齐：<strong>text-align</strong></p>
+<p>​	居中: text-align: <strong>center;</strong></p>
+<p>​	居左: text-align: <strong>left;</strong></p>
+<p>​	居右: text-align: <strong>right;</strong></p>
+<p>​	居左: text-align: <strong>justify;</strong></p>
+<p>​	应用：文本的垂直居中（flex也行）</p>
+<p>[CSS 布局 – 水平 &amp; 垂直对齐 | 菜鸟教程 (runoob.com)](<a target="_blank" rel="noopener" href="https://www.runoob.com/css/css-align.html#:~:text=CSS">https://www.runoob.com/css/css-align.html#:~:text=CSS</a> 布局 - 水平 %26 垂直对齐 1 元素居中对齐,8 垂直居中 - 使用 position 和 transform 更多项目)</p>
+<p>字间距：<strong>letter-spacing</strong></p>
+<p>​	取值：2px&#x2F;-2px</p>
+<p>行高：<strong>line-height</strong></p>
+<p>​	取值：14px&#x2F;1.5em几倍行高&#x2F;120%基于当前字符的百分比行高</p>
+<p>装饰线：<strong>text-decoration</strong> </p>
+<p>​	上划线：<strong>overline</strong></p>
+<p>​	删除线：<strong>line-throuth</strong></p>
+<p>​	下划线：<strong>underling</strong></p>
+<p>​	删除：<strong>none</strong>（针对a标签，去掉自带的下划线）</p>
+<p>字体：</p>
+<p>​		字体所有属性：<strong>font</strong>：很多设定 字号及行高（用斜线隔开） 字体名称；</p>
+<p>​					例子：font：bold（粗体） italic（斜体） 18px&#x2F;1.5em ‘幼圆’</p>
+<p>​		字体系列: <strong>font-family:</strong> Impact,serif;</p>
+<p>​					重点：可以写多个字体，用逗号隔开。找不到第一种字体就用第二种，都找不到就用默认字体。</p>
+<p>​					易错点：字体含有空格时，应加双引号</p>
+<p>​					例子：font-family：“Microsoft YaHei”</p>
+<p>​		字体大小：<strong>font-size：</strong>18px；</p>
+<p>​		字重：<strong>font-weight</strong>（字体粗细）</p>
+<p>​		斜体： font-style:italic;</p>
+<p>CSS3中三种文本相关属性：</p>
+<p>​				文本阴影：<strong>text-shadow</strong>：水平偏移量 垂直偏移量  阴影大小（可省略） 颜色；</p>
+<p>​									常用效果：</p>
+<p>​													文本描边：0 0 3px black；</p>
+<p>​													文字浮雕效果：color：white； text-shadow：2px 2px 4px #000；</p>
+<p>​								   类似于《CSS-1定位与布局》中的盒子阴影。</p>
+<p>​				长文本换行：<strong>word-warp</strong>：break-word；</p>
+<p>​				网络字体：**@font-face**</p>
+<p>​									需要从网络上下载字体到服务器本地，并转化成各种浏览器支持的格式</p>
+<p>​									最后通过引用本地的字体文件来给用户端进行显示。</p>
+<h3 id="3-其它"><a href="#3-其它" class="headerlink" title="3.其它"></a>3.其它</h3><p>圆角：<img src="C:\Users\11096\blog\source\pic\Q2\1680769113691.png" alt="1680769113691" style="zoom:30%;" />值为px</p>
+<p>​			border-radius：25px；圆角边框。</p>
+<p>阴影：属性box-shadow</p>
+<p>​			选项为inside&#x2F;outside（默认值为外部阴影），值为水平偏移px 垂直偏移px 模糊强度px 颜色。</p>
+<p>​			举例：<img src="C:\Users\11096\blog\source\pic\Q2\1680769413222.png" alt="1680769413222" style="zoom:38%;" />就是阴影是盒子往右下角偏移10px的效果。</p>
+<p>​			举例2：<img src="C:\Users\11096\blog\source\pic\Q2\1680769550505.png" alt="1680769550505" style="zoom:38%;" /></p>
+<h1 id="分割线：html的hr标签"><a href="#分割线：html的hr标签" class="headerlink" title="分割线：html的hr标签"></a>分割线：html的hr标签</h1><h1 id="样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）"><a href="#样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）" class="headerlink" title="样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）"></a>样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）</h1><h1 id="（看起来会有凹陷效果）"><a href="#（看起来会有凹陷效果）" class="headerlink" title="（看起来会有凹陷效果）"></a>（看起来会有凹陷效果）</h1><p>链接文字的颜色：a{color：black；}</p>
+<p>链接访问后：a:visited {  }</p>
+<p>链接上有鼠标悬停时：a:hover{}</p>
+<p>链接被点击时：a:active{}</p>
+</li>
+<li><p>背景相关:</p>
+<p>背景颜色:background-color:</p>
+<p>背景图:background-image: url(<a target="_blank" rel="noopener" href="https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg">https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg</a>);</p>
+</li>
+<li><p>盒子相关:</p>
+</li>
+</ul>
+<p>​				对块级元素进行强制内联状:display: inline-block;</p>
+<p>​				去除元素前端可能存在的空白符:<style>   div{font-size:0;}    </style></p>
+<p>​					</p>
+<blockquote>
+<p>​	【【Q1为什么不能直接用内联元素？】】</p>
+<p>​	【inline-block是元素具备了块级和内联元素的功能，inline最重要的一点就是:</p>
+<p>​	元素能够在一行展示，而inline元素所缺失的设置宽高，是block 元素的功能】</p>
+</blockquote>
+<blockquote>
+<p>​	【【Q2为什么用了i-b会导致，设置宽度时，总和必须小于100%？（否则会另起一行）】】</p>
+<p>​	【因为HTML 中的换行符、空格符、制表符等合并为空白符，字体大小不为 0 的情况下，</p>
+<pre><code> 空白符自然占据定的宽度，使用inline-block 会产生了元素间的空隙。】
+</code></pre>
+</blockquote>
+<blockquote>
+<p>​	【【Q3不想自己调试合适的宽度怎么办？】】</p>
+<p>​	【在写用了强制内联化的块级元素时，全部写在同一行，一个空格都不要加。比如<p>1</p><p>2</p>】</p>
+</blockquote>
+<blockquote>
+<p>​	【【Q4最佳解决办法是什么？】】</p>
+<p>​	【父元素设置font-size:0,子元素有需要可以另外设置font-size，</p>
+<p>​	 这样空白符因为font-size:0就不会占据宽度了】</p>
+</blockquote>
+<blockquote>
+<p>实例:</p>
+<p><a target="_blank" rel="noopener" href="https://www.zhangxinxu.com/study/201011/img-blank-space.html">display:inline-block元素间换行符的空格间隙 </a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zhangxinxu.com/study/201011/img-font-size-clear-blank.html">font-size:0清除display:inline-block元素换行符间隙</a></p>
+</blockquote>
+<h3 id="4-style元素"><a href="#4-style元素" class="headerlink" title="4.style元素"></a><strong>4.style元素</strong></h3><ul>
+<li><p>单独写在css文件夹里，并在head里通过link来链接。 </p>
+<link rel="stylesheet" href="styles.css">
+</li>
+<li><p>用于给body里的某一种&#x2F;多种元素指定样式。</p>
+</li>
+</ul>
+<h3 id="5-多端样式归一化必加代码【【【【】】】】"><a href="#5-多端样式归一化必加代码【【【【】】】】" class="headerlink" title="5.多端样式归一化必加代码【【【【】】】】"></a><strong>5.多端样式归一化必加代码</strong>【【【【】】】】</h3><p>​    <meta name="viewport" content="width=device-width, initial-scale=1.0" /></p>
+<h3 id="6-过度与动画"><a href="#6-过度与动画" class="headerlink" title="6.过度与动画"></a>6.过度与动画</h3><p>过渡：<strong>transition</strong>属性</p>
+<p>​				知识：  transition：属性    时间    速度；<img src="C:\Users\11096\blog\source\pic\Q2\image-20230406211511826.png" alt="image-20230406211511826" style="zoom:25%;" /></p>
+<p>​							transition：a，p   1s    linear；          </p>
+<p>​							transition：     all   1s    linear；</p>
+<p>​				作用：在规定时间内，暂时改变选定元素属性的值（和选择器一起使用）</p>
+<p>​				举例：鼠标悬停在确认按钮上的时候，按钮显示为绿色。</p>
+<p>动画：<strong>animation</strong>属性（需要连续的过渡时，改用动画）</p>
+<p>@keyframes规则（关键帧规则）</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-前端学习笔记/CSS/Q3-CSS-2选择器"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q3-CSS-2%E9%80%89%E6%8B%A9%E5%99%A8/"
     >CSS学习笔记-2.2选择器</a> 
 </h2>
  
@@ -171,7 +359,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q3-CSS-2%E9%80%89%E6%8B%A9%E5%99%A8/" class="article-date">
+      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q3-CSS-2%E9%80%89%E6%8B%A9%E5%99%A8/" class="article-date">
   <time datetime="2023-03-28T03:34:47.000Z" itemprop="datePublished">2023-03-28</time>
 </a> 
   <div class="article-category">
@@ -299,7 +487,7 @@
 
     
     <article
-  id="post-前端学习笔记/Q1-HTML-Note4"
+  id="post-前端学习笔记/HTML/Q1-HTML-Note6"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -310,7 +498,158 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note4/"
+  <a class="article-title" href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note6/"
+    >HTML学习笔记-6实践</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note6/" class="article-date">
+  <time datetime="2023-03-28T03:34:47.000Z" itemprop="datePublished">2023-03-28</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1>HTML学习笔记-6实践</h1>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;title&gt;CatPhotoApp&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;main&gt;</span><br><span class="line">  &lt;section&gt;&lt;!--[[[[[[[[[]]]]]]]]]]--&gt;</span><br><span class="line">    &lt;h1&gt;CatPhotoApp&lt;/h1&gt;</span><br><span class="line">    &lt;h2&gt;Cat Photos&lt;/h2&gt;</span><br><span class="line">    &lt;p&gt;</span><br><span class="line">      See more &lt;a href=&quot;../img/cat1.jpg&quot;&gt;cat photos&lt;/a&gt; in our gallery&lt;br&gt;</span><br><span class="line">      &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg&quot; alt=&quot;A text.&quot;&gt;</span><br><span class="line">      &lt;!--[[[[[[[[[[[[alt是备注]]]]]]]]]]]--&gt;</span><br><span class="line">    &lt;/p&gt;</span><br><span class="line">  &lt;/section&gt;</span><br><span class="line"></span><br><span class="line">  &lt;section&gt;</span><br><span class="line">    &lt;h2&gt;Cat Lists&lt;/h2&gt;</span><br><span class="line">    &lt;h3&gt;Things cats love:&lt;/h3&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">      &lt;li&gt;cat nip&lt;/li&gt;</span><br><span class="line">      &lt;li&gt;laser pointers&lt;/li&gt;</span><br><span class="line">      &lt;li&gt;lasagna&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;figure&gt;&lt;!--[[[[[[[[[图像标题]]]]]]]]]]]]]]--&gt;</span><br><span class="line">      &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg&quot; alt=&quot;A slice of lasagna on a plate.&quot;&gt;</span><br><span class="line">      &lt;figcaption&gt;&lt;!--[[[[[[[[[]]]]]]]]]]]]]--&gt;</span><br><span class="line">        Cats</span><br><span class="line">        &lt;em&gt;love&lt;/em&gt;</span><br><span class="line">        lasagna.</span><br><span class="line">      &lt;/figcaption&gt;</span><br><span class="line">    &lt;/figure&gt;</span><br><span class="line">  &lt;/section&gt;</span><br><span class="line"></span><br><span class="line">  &lt;section&gt;</span><br><span class="line">    &lt;h2&gt;Top 3 things cats hate:&lt;/h2&gt;</span><br><span class="line">    &lt;ol&gt;</span><br><span class="line">      &lt;li&gt;flea treatment&lt;/li&gt;</span><br><span class="line">      &lt;li&gt;thunder&lt;/li&gt;</span><br><span class="line">      &lt;li&gt;other cats&lt;/li&gt;</span><br><span class="line">    &lt;/ol&gt;</span><br><span class="line">    &lt;figure&gt;</span><br><span class="line">      &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg&quot; alt=&quot;Five cats looking around a field.&quot;&gt;</span><br><span class="line">      &lt;figcaption&gt;</span><br><span class="line">        Cats &lt;strong&gt;hate&lt;/strong&gt; other cats.</span><br><span class="line">      &lt;/figcaption&gt;</span><br><span class="line">    &lt;/figure&gt;</span><br><span class="line">  &lt;/section&gt;</span><br><span class="line"></span><br><span class="line">  &lt;section&gt;</span><br><span class="line">    &lt;h2&gt;Cat form&lt;/h2&gt;</span><br><span class="line">    &lt;fieldset&gt;&lt;!--给form增加实线框--&gt;</span><br><span class="line">      &lt;legend&gt;Is your cat an indoor or outdoor cat?&lt;/legend&gt;&lt;!--给块增加标题--&gt;</span><br><span class="line">      &lt;form&gt;</span><br><span class="line">        &lt;label&gt;</span><br><span class="line">          &lt;!--[[[[[[[[[[label用于将 input 元素与其近邻的文本进行绑定]]]]]]]]]--&gt;</span><br><span class="line">          &lt;input name=&quot;door&quot; id=&quot;indoor&quot; value=&quot;indoor&quot; type=&quot;radio&quot; checked&gt;indoor</span><br><span class="line">          &lt;!--用checked给本块（legend）设置默认选项--&gt;</span><br><span class="line">        &lt;/label&gt;</span><br><span class="line">        &lt;label&gt;</span><br><span class="line">          &lt;input name=&quot;door&quot; id=&quot;outdoor&quot; value=&quot;outdoor&quot; type=&quot;radio&quot;&gt;out door</span><br><span class="line">        &lt;/label&gt;</span><br><span class="line">      &lt;/form&gt;</span><br><span class="line">    &lt;/fieldset&gt;</span><br><span class="line">    &lt;fieldset&gt;</span><br><span class="line">      &lt;legend&gt;What&#x27;s your cat&#x27;s personality?&lt;/legend&gt;</span><br><span class="line">      &lt;!--id应与选项相同，是具有唯一性的，不能当成name用--&gt;</span><br><span class="line">      &lt;!--label是必须加的,for 对应的是input的id，label和input直接看成元组就行--&gt;</span><br><span class="line">      &lt;label for=&quot;loving&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;personality&quot; id=&quot;loving&quot; checked&gt; Loving</span><br><span class="line">      &lt;label for=&quot;lazy&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;personality&quot; id=&quot;lazy&quot;&gt; lazy</span><br><span class="line">      &lt;label for=&quot;energetic&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;personality&quot; id=&quot;energetic&quot;&gt; energetic</span><br><span class="line">    &lt;/fieldset&gt;</span><br><span class="line">    &lt;input type=&quot;text&quot;  placeholder=&quot;cat photo URL&quot;&gt;</span><br><span class="line">    &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;</span><br><span class="line">  &lt;/section&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;/main&gt;</span><br><span class="line">&lt;footer&gt;</span><br><span class="line">  No Copyright - &lt;a href=&quot;https://www.freecodecamp.org&quot;&gt;freeCodeCamp.org&lt;/a&gt;</span><br><span class="line">&lt;/footer&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-前端学习笔记/HTML/Q1-HTML-Note5"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note5/"
+    >HTML学习笔记-5体系补充</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note5/" class="article-date">
+  <time datetime="2023-03-28T03:34:47.000Z" itemprop="datePublished">2023-03-28</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="HTML学习笔记-5体系补充"><a href="#HTML学习笔记-5体系补充" class="headerlink" title="HTML学习笔记-5体系补充"></a>HTML学习笔记-5体系补充</h1><p>前文关于内容的错误理解以本文的“整体分类”为主。</p>
+<p>整体分类：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Content_categories">url</a></p>
+<p>主要分成几类:</p>
+<p>​	内容类（比如文字&#x2F;图片&#x2F;视频&#x2F;画布）</p>
+<p>​	表单相关（比如下拉菜单，文本输入框）</p>
+<p>​	结构(比如div span)</p>
+<p>了解块级元素和行内元素</p>
+<p>块级元素就是自成一行，比如div p h1 table ul ol</p>
+<p>行内元素和块级元素不一样，不会自成一行，可以多个排列成一行, 比如:img span button input</p>
+<p>补充一些常用的HTML标签</p>
+<p>input 输入元素的几种种类 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"></a><br>textarea 文本区元素 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/textarea"></a><br>select 下拉菜单 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/select"></a><br>table 表格 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/table"></a><br>video 视频 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video"></a></p>
+<p>补充和css有关的HTML元素</p>
+<ol>
+<li><p>div元素: 主要用于设计布局</p>
+</li>
+<li><p>article元素: 方便搜索的元素,属于父级元素。</p>
+</li>
+<li></li>
+</ol>
+<ul>
+<li><h4 id="易错点归档："><a href="#易错点归档：" class="headerlink" title="易错点归档："></a>易错点归档：</h4><ol>
+<li><h5 id="链接相关：url、href、src"><a href="#链接相关：url、href、src" class="headerlink" title="链接相关：url、href、src"></a>链接相关：url、href、src</h5><p>a：href</p>
+<p>link：href</p>
+<p>script：src</p>
+<p>img：src</p>
+<h6 id="作用结果不同"><a href="#作用结果不同" class="headerlink" title="作用结果不同"></a>作用结果不同</h6><p>（1）href 用于在当前文档和引用资源之间确立联系；</p>
+<p>（2）src 用于替换当前内容；</p>
+</li>
+<li><h5 id="附加：link和-import的区别"><a href="#附加：link和-import的区别" class="headerlink" title="附加：link和@import的区别"></a>附加：link和@import的区别</h5><p>（1）link是XHTML标签，除了能够加载CSS，还可以定义RSS等其他事务；而@import属于CSS范畴，只可以加载CSS。</p>
+<p>（2）link引用CSS时，在页面载入时同时加载；@import需要页面完全载入以后再加载。</p>
+<p>（3）link是XHTML标签，无兼容问题；@import则是在CSS2.1提出的，低版本的浏览器不支持。</p>
+<p>（4）link支持使用Javascript控制DOM改变样式；而@import不支持。</p>
+<h5 id="3-为什么js用script标签的src引入，而css用link标签的href引入"><a href="#3-为什么js用script标签的src引入，而css用link标签的href引入" class="headerlink" title="3.为什么js用script标签的src引入，而css用link标签的href引入"></a>3.为什么js用script标签的src引入，而css用link标签的href引入</h5><p>外部共享的JavaScript文件，通过 <code>&lt;script src=&quot;...&quot;&gt;&lt;/script&gt;</code>来引入，共享的样式文件不是通过 <code>&lt;style src=&quot;&quot;&gt;&lt;/style&gt;</code> 的形式引入，而是通过 <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;...&quot;&gt;</code>形式引入。</p>
+<p>w3c最初的设计中<script>标签也没有src属性，使用 <code>&lt;link rel=&quot;...&quot; href=&quot;...&quot;&gt;</code> 来引入当前文档外部的资源，如：父文档，翻译，或者层叠样式表等。<code>&lt;link rel=&quot;&quot; href=&quot;&quot; meidia=&quot;&quot;&gt;</code> 元素规定了当前文档和外部资源之间的关系，它常用来引入外部的样式表，我们可以通过rel属性设置为stylesheet来使用。后来为<code>&lt;script&gt;</code>添加了src属性。</p>
+<p><strong><code>href</code>是引用和页面关联，是在当前元素和引用资源之间建立联系，<code>src</code>表示引用资源，表示替换当前元素，用在img，script，iframe上，src是页面内容不可缺少的一部分。</strong></p>
+<script src="js.js"></script>当浏览器解析到这一句的时候会暂停其他资源的下载和处理，直至将该资源加载，编译，执行完毕，图片和框架等元素也是如此，类似于该元素所指向的资源嵌套如当前标签内，这也是为什么要把放在底部而不是头部。
+
+<link href="common.css" rel="stylesheet"/>当浏览器解析到这一句的时候会识别该文档为css文件，会下载并且不会停止对当前文档的处理，这也是为什么建议使用link方式来加载css而不是使用@import。</li>
+</ol>
+</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-前端学习笔记/HTML/Q1-HTML-Note4"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note4/"
     >HTML学习笔记-4head</a> 
 </h2>
  
@@ -319,7 +658,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note4/" class="article-date">
+      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note4/" class="article-date">
   <time datetime="2023-03-28T03:33:47.000Z" itemprop="datePublished">2023-03-28</time>
 </a> 
   <div class="article-category">
@@ -354,7 +693,7 @@
 
     
     <article
-  id="post-前端学习笔记/Q1-HTML-Note3"
+  id="post-前端学习笔记/HTML/Q1-HTML-Note3"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -365,7 +704,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note3/"
+  <a class="article-title" href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note3/"
     >HTML学习笔记-3进阶标签与属性</a> 
 </h2>
  
@@ -374,7 +713,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note3/" class="article-date">
+      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note3/" class="article-date">
   <time datetime="2023-03-28T03:32:47.000Z" itemprop="datePublished">2023-03-28</time>
 </a> 
   <div class="article-category">
@@ -409,7 +748,7 @@
 
     
     <article
-  id="post-前端学习笔记/Q1-HTML-Note2"
+  id="post-前端学习笔记/HTML/Q1-HTML-Note2"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -420,7 +759,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note2/"
+  <a class="article-title" href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note2/"
     >HTML学习笔记-2基础标签</a> 
 </h2>
  
@@ -429,7 +768,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note2/" class="article-date">
+      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note2/" class="article-date">
   <time datetime="2023-03-28T03:31:47.000Z" itemprop="datePublished">2023-03-28</time>
 </a> 
   <div class="article-category">
@@ -466,7 +805,7 @@
 
     
     <article
-  id="post-前端学习笔记/Q1-HTML-Note1"
+  id="post-前端学习笔记/HTML/Q1-HTML-Note1"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -477,7 +816,7 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note1/"
+  <a class="article-title" href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note1/"
     >HTML学习笔记-1基础</a> 
 </h2>
  
@@ -486,7 +825,7 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Q1-HTML-Note1/" class="article-date">
+      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note1/" class="article-date">
   <time datetime="2023-03-28T03:30:47.000Z" itemprop="datePublished">2023-03-28</time>
 </a> 
   <div class="article-category">
@@ -625,1619 +964,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-Python/P4-Python网站--盘中餐（Vue结业项目）"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/03/11/Python/P4-Python%E7%BD%91%E7%AB%99--%E7%9B%98%E4%B8%AD%E9%A4%90%EF%BC%88Vue%E7%BB%93%E4%B8%9A%E9%A1%B9%E7%9B%AE%EF%BC%89/"
-    >Python网站--盘中餐（Vue结业项目）</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/03/11/Python/P4-Python%E7%BD%91%E7%AB%99--%E7%9B%98%E4%B8%AD%E9%A4%90%EF%BC%88Vue%E7%BB%93%E4%B8%9A%E9%A1%B9%E7%9B%AE%EF%BC%89/" class="article-date">
-  <time datetime="2023-03-11T03:43:00.000Z" itemprop="datePublished">2023-03-11</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/project/">project</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="基于Django-的“盘中餐”健康饮食网站的设计与实现（附件见文末）"><a href="#基于Django-的“盘中餐”健康饮食网站的设计与实现（附件见文末）" class="headerlink" title="基于Django 的“盘中餐”健康饮食网站的设计与实现（附件见文末）"></a>基于Django 的“盘中餐”健康饮食网站的设计与实现（附件见文末）</h2><h2 id="系统原型"><a href="#系统原型" class="headerlink" title="系统原型"></a>系统原型</h2><p>用户在想要评论的文章详情页面点击评论，系统弹出添加评论窗口，含有两个按钮， 分别对应评论发表成功和重置评论。用户评论文章原型图如下图所示。</p>
-<p><img src="/../pic/media-pzc/67be40de8257f28f7e6bd8bf78c6e5e5.jpeg"></p>
-<p>用户评论文章原型图</p>
-<p>用户进入后台管理页面，在新增每日打卡详情页输入打卡名称、照片、空盘次数、打卡时间等信息进行每日打卡。用户新增每日打卡原型图如下图所示。</p>
-<p><img src="/../pic/media-pzc/e1476e996ddfd3bc7ac1934cf1003d94.jpeg"></p>
-<p>用户新增每日打卡原型图</p>
-<p>管理员在后台管理的食物信息页面，点击对应食物的详情按钮，查看对应食物信息的详情页。管理员查看食物信息原型图如下图所示。</p>
-<p><img src="/../pic/media-pzc/313282be30af592bd821fe765042c477.jpeg"></p>
-<p>管理员查看食物信息原型图</p>
-<p>管理员在后台管理的榜单页面，在修改榜单的详情，修改榜单信息。管理员修改榜单原型图如下图所示。</p>
-<p><img src="/../pic/media-pzc/cb54c343d764453b60e94571a48d192b.jpeg"></p>
-<p>管理员修改榜单原型图</p>
-<h1 id="系统设计"><a href="#系统设计" class="headerlink" title="系统设计"></a>系统设计</h1><h2 id="体系结构设计"><a href="#体系结构设计" class="headerlink" title="体系结构设计"></a>体系结构设计</h2><p>盘中餐健康饮食网站分为前台、用户后台和管理员后台三个部分。前台主要功能包括用户登录注册、查看食物 、查看新闻资讯、查看每日打卡、文章分享等。用户后台负责用户个人中心管理、每日打卡管理和榜单管理。管理员后台负责用户管理、食物类别管理、食物信息管理、每日打卡管理、系统管理等。系统体系结构图aaaaa。</p>
-<p><img src="/../pic/media-pzc/2629b3477b3dc434c069857ded0bbc97.jpeg"></p>
-<p>体系结构图</p>
-<h2 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h2><ol>
-<li><p><strong>E-R</strong> 图</p>
-<p>系统的 E-R 图主要核心从用户角色出发，展示包括用户、每日打卡信息、榜单信息、新闻资讯信息、食物类型信息、食物信息和文章分享信息实体间的联系。数据库设计的E-R 图如下图所示。</p>
-</li>
-</ol>
-<p><img src="/../pic/media-pzc/f1919788f4ccac7886104007acca1d91.jpeg"></p>
-<h3 id="表结构设计"><a href="#表结构设计" class="headerlink" title="表结构设计"></a>表结构设计</h3><p>数据库 E-R 图</p>
-<p>用户表的字段为创建时间、用户名、姓名、头像、密码等。id 为主键。该表存储用户基本信息用于用户注册，登录等。用户表结构如表所示。</p>
-<p>表用户表</p>
-<table>
-<thead>
-<tr>
-<th>字段名</th>
-<th>名称</th>
-<th>数据类型</th>
-<th>约束</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>id</td>
-<td>用户 ID</td>
-<td>bigint(20)</td>
-<td>PK</td>
-</tr>
-<tr>
-<td>addtime</td>
-<td>创建时间</td>
-<td>timestamp</td>
-<td>NOT NULL</td>
-</tr>
-<tr>
-<td>yonghuming</td>
-<td>用户名</td>
-<td>varchar(200)</td>
-<td>NOT NULL</td>
-</tr>
-<tr>
-<td>xingming</td>
-<td>姓名</td>
-<td>varchar(200)</td>
-<td>NOT NULL</td>
-</tr>
-<tr>
-<td>touxiang</td>
-<td>头像</td>
-<td>varchar(200)</td>
-<td>无</td>
-</tr>
-<tr>
-<td>xingbie</td>
-<td>性别</td>
-<td>varchar(200)</td>
-<td>无</td>
-</tr>
-</tbody></table>
-<p>用户表</p>
-<table>
-<thead>
-<tr>
-<th>字段名</th>
-<th>名称</th>
-<th>数据类型</th>
-<th>约束</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>mima</td>
-<td>密码</td>
-<td>varchar(200)</td>
-<td>NOT NULL</td>
-</tr>
-<tr>
-<td>shouji</td>
-<td>手机</td>
-<td>varchar(200)</td>
-<td>无</td>
-</tr>
-</tbody></table>
-<p>新闻资讯表的字段为标题、简介、图片、内容等，id 为主键。该表存储新闻资讯的相关信息。新闻资讯表结构如表所示。</p>
-<p>表新闻资讯表</p>
-<table>
-<thead>
-<tr>
-<th>字段名</th>
-<th>名称</th>
-<th>数据类型</th>
-<th>约束</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>id</td>
-<td>新闻资讯 ID</td>
-<td>bigint(20)</td>
-<td>PK</td>
-</tr>
-<tr>
-<td>addtime</td>
-<td>创建时间</td>
-<td>timestamp</td>
-<td>NOT NULL</td>
-</tr>
-<tr>
-<td>title</td>
-<td>标题</td>
-<td>varchar(200)</td>
-<td>NOT NULL</td>
-</tr>
-<tr>
-<td>introduction</td>
-<td>简介</td>
-<td>longtext</td>
-<td></td>
-</tr>
-<tr>
-<td>picture</td>
-<td>图片</td>
-<td>varchar(200)</td>
-<td>NOT NULL</td>
-</tr>
-<tr>
-<td>content</td>
-<td>内容</td>
-<td>longtext</td>
-<td>NOT NULL</td>
-</tr>
-</tbody></table>
-<p>每日打卡表的字段为打卡编号、打卡名称、空盘次数、打卡时间等，id 为主键。该表用于存储用户每日打卡的相关信息。每日打卡表结构如表所示。</p>
-<p>表每日打卡表</p>
-<table>
-<thead>
-<tr>
-<th>字段名</th>
-<th>名称</th>
-<th>数据类型</th>
-<th>约束</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>id</td>
-<td>打卡 ID</td>
-<td>bigint(20)</td>
-<td>PK</td>
-</tr>
-<tr>
-<td>addtime</td>
-<td>创建时间</td>
-<td>timestamp</td>
-<td>NOT NULL</td>
-</tr>
-<tr>
-<td>Dakabianhao</td>
-<td>打卡编号</td>
-<td>varchar(200)</td>
-<td>NOT NULL</td>
-</tr>
-<tr>
-<td>Dakamingcheng</td>
-<td>打卡名称</td>
-<td>varchar(200)</td>
-<td>无</td>
-</tr>
-<tr>
-<td>tupian</td>
-<td>图片</td>
-<td>varchar(200)</td>
-<td>无</td>
-</tr>
-<tr>
-<td>Kongpancishu</td>
-<td>空盘次数</td>
-<td>int</td>
-<td>无</td>
-</tr>
-<tr>
-<td>Dakashijian</td>
-<td>打卡时间</td>
-<td>datetime</td>
-<td>无</td>
-</tr>
-<tr>
-<td>Yonghuming</td>
-<td>用户名</td>
-<td>varchar(200)</td>
-<td>无</td>
-</tr>
-<tr>
-<td>Xingming</td>
-<td>姓名</td>
-<td>varchar(200)</td>
-<td>无</td>
-</tr>
-<tr>
-<td>beizhu</td>
-<td>备注</td>
-<td>varchar(200)</td>
-<td>无</td>
-</tr>
-</tbody></table>
-<p>食物信息表的字段为食物名称、食物类型、图片、热量值等，id 为主键。该表存储每个食物的详细信息。食物信息表结构如表所示。</p>
-<p>表食物信息表</p>
-<table>
-<thead>
-<tr>
-<th>字段名</th>
-<th>名称</th>
-<th>数据类型</th>
-<th>约束</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>id</td>
-<td>食物信息 ID</td>
-<td>bigint(20)</td>
-<td>PK</td>
-</tr>
-<tr>
-<td>addtime</td>
-<td>创建时间</td>
-<td>timestamp</td>
-<td>NOT NULL</td>
-</tr>
-<tr>
-<td>shiwumingcheng</td>
-<td>食物名称</td>
-<td>varchar(200)</td>
-<td>无</td>
-</tr>
-<tr>
-<td>tupian</td>
-<td>图片</td>
-<td>varchar(200)</td>
-<td>无</td>
-</tr>
-<tr>
-<td>shiwuleixing</td>
-<td>食物类型</td>
-<td>varchar(200)</td>
-<td>无</td>
-</tr>
-<tr>
-<td>reliangzhi</td>
-<td>热量值</td>
-<td>varchar(200)</td>
-<td>无</td>
-</tr>
-</tbody></table>
-<p>榜单表的字段为打卡编号、空盘次数、图片、更新时间等，id 为主键。该表存储管理员根据用户的每日打卡信息所发布的榜单中，每个榜单的详细信息。榜单表结构如表</p>
-<p> 所示。</p>
-<p>表榜单表</p>
-<table>
-<thead>
-<tr>
-<th>字段名</th>
-<th>名称</th>
-<th>数据类型</th>
-<th>约束</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>id</td>
-<td>榜单 ID</td>
-<td>bigint(20)</td>
-<td>PK</td>
-</tr>
-<tr>
-<td>addtime</td>
-<td>创建时间</td>
-<td>timestamp</td>
-<td>NOT NULL</td>
-</tr>
-<tr>
-<td>dakabianhao</td>
-<td>打卡编号</td>
-<td>varchar(200)</td>
-<td>无</td>
-</tr>
-<tr>
-<td>tupian</td>
-<td>图片</td>
-<td>varchar(200)</td>
-<td>无</td>
-</tr>
-<tr>
-<td>kongpancishu</td>
-<td>空盘次数</td>
-<td>varchar(200)</td>
-<td>无</td>
-</tr>
-<tr>
-<td>yonghuming</td>
-<td>用户名</td>
-<td>varchar(200)</td>
-<td>无</td>
-</tr>
-<tr>
-<td>xingming</td>
-<td>姓名</td>
-<td>varchar(200)</td>
-<td>无</td>
-</tr>
-<tr>
-<td>gengxinshijian</td>
-<td>更新时间</td>
-<td>date</td>
-<td>无</td>
-</tr>
-</tbody></table>
-<p>食物类型表的字段为食物类型和创建时间，id 为主键。该表存储着每个食物类型的详细信息。食物类型表结构如表所示。</p>
-<p>表食物类型表</p>
-<table>
-<thead>
-<tr>
-<th>字段名</th>
-<th>名称</th>
-<th>数据类型</th>
-<th>约束</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>id</td>
-<td>食物类型 ID</td>
-<td>bigint(20)</td>
-<td>PK</td>
-</tr>
-<tr>
-<td>addtime</td>
-<td>创建时间</td>
-<td>timestamp</td>
-<td>NOT NULL</td>
-</tr>
-<tr>
-<td>shiwuleixing</td>
-<td>食物类型</td>
-<td>varchar(200)</td>
-<td>NOT NULL</td>
-</tr>
-</tbody></table>
-<p>文章分享表的字段为帖子标题、帖子内容、用户 id、状态等，id 为主键。该表存储着每篇文章的详细信息。文章分享表结构如表所示。</p>
-<p>表文章分享表</p>
-<table>
-<thead>
-<tr>
-<th>字段名</th>
-<th>名称</th>
-<th>数据类型</th>
-<th>约束</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>id</td>
-<td>文章 ID</td>
-<td>bigint(20)</td>
-<td>PK</td>
-</tr>
-<tr>
-<td>addtime</td>
-<td>创建时间</td>
-<td>timestamp</td>
-<td>NOT NULL</td>
-</tr>
-<tr>
-<td>title</td>
-<td>帖子标题</td>
-<td>varchar(200)</td>
-<td>无</td>
-</tr>
-<tr>
-<td>content</td>
-<td>帖子内容</td>
-<td>longtext</td>
-<td>NOT NULL</td>
-</tr>
-<tr>
-<td>parentid</td>
-<td>父节点 id</td>
-<td>bignit</td>
-<td>无</td>
-</tr>
-<tr>
-<td>userid</td>
-<td>用户 id</td>
-<td>bignit</td>
-<td>NOT NULL</td>
-</tr>
-<tr>
-<td>username</td>
-<td>用户名</td>
-<td>varchar(200)</td>
-<td>无</td>
-</tr>
-<tr>
-<td>isdone</td>
-<td>状态</td>
-<td>varchar(200)</td>
-<td>无</td>
-</tr>
-</tbody></table>
-<h2 id="JSON-接口设计"><a href="#JSON-接口设计" class="headerlink" title="JSON 接口设计"></a>JSON 接口设计</h2><p>网站获取食物类型列表接口设计。该接口用于在前端显示食物类型列表。获取食物类型列表接口设计如表所示。</p>
-<p>表获取食物类型列表接口</p>
-<table>
-<thead>
-<tr>
-<th>功能说明</th>
-<th>获取食物类型列表接口</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>URL</strong> 地址</td>
-<td><a target="_blank" rel="noopener" href="http://localhost:8080/django1q7tt/shiwuleixing/list">http://localhost:8080/django1q7tt/shiwuleixing/list</a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>参数列表</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>参数名称</td>
-<td>是否必须</td>
-<td>类型</td>
-<td>描述</td>
-</tr>
-<tr>
-<td>无参数</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>请求类型</td>
-<td>POST</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>返回参数类型</td>
-<td>JSON</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>返回参数列表</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>参数名称</td>
-<td>描述</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>code</td>
-<td>数据状态码（成功状态码是 200）</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>data</td>
-<td>具体数据</td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<p>网站获取食物信息列表接口设计。该接口用于在前端显示食物信息列表。获取食物信息列表接口设计如表所示。</p>
-<p>表获取食物信息列表接口</p>
-<table>
-<thead>
-<tr>
-<th>功能说明</th>
-<th>获取食物信息列表接口</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>URL</strong> 地址</td>
-<td><a target="_blank" rel="noopener" href="http://localhost:8080/django1q7tt/shiwuxinxi/list">http://localhost:8080/django1q7tt/shiwuxinxi/list</a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>参数列表</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>参数名称</td>
-<td>是否必须</td>
-<td>类型</td>
-<td>描述</td>
-</tr>
-<tr>
-<td>无参数</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>请求类型</td>
-<td>POST</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>返回参数类型</td>
-<td>JSON</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>返回参数列表</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>参数名称</td>
-<td>描述</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>code</td>
-<td>数据状态码（成功状态码是 200）</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>data</td>
-<td>具体数据</td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<p>网站获取每日打卡详细信息接口设计。该接口用于在前端、后端获取每日打卡的详细信息。获取每日打卡详细信息接口设计如表 0 所示。</p>
-<p>表 0 获取每日打卡详细信息接口</p>
-<table>
-<thead>
-<tr>
-<th>功能说明</th>
-<th>获取每日打卡详细信息接口</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>URL</strong> 地址</td>
-<td><a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080/</a> django1q7tt&#x2F; meiridaka&#x2F;detail</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>参数列表</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>参数名称</td>
-<td>是否必须</td>
-<td>类型</td>
-<td>描述</td>
-</tr>
-<tr>
-<td>id</td>
-<td>是</td>
-<td>Number</td>
-<td>打卡 id</td>
-</tr>
-<tr>
-<td>dakabianhao</td>
-<td>否</td>
-<td>String</td>
-<td>打卡编号</td>
-</tr>
-<tr>
-<td>tupian</td>
-<td>否</td>
-<td>String</td>
-<td>订单状态</td>
-</tr>
-<tr>
-<td>kongpancishu</td>
-<td>否</td>
-<td>Number</td>
-<td>空盘次数</td>
-</tr>
-<tr>
-<td>dakashijian</td>
-<td>否</td>
-<td>String</td>
-<td>打卡时间</td>
-</tr>
-<tr>
-<td>yonghuming</td>
-<td>否</td>
-<td>String</td>
-<td>用户名</td>
-</tr>
-<tr>
-<td>xingming</td>
-<td>否</td>
-<td>String</td>
-<td>姓名</td>
-</tr>
-<tr>
-<td>dakamingcheng</td>
-<td>否</td>
-<td>String</td>
-<td>打卡名称</td>
-</tr>
-<tr>
-<td>beizhu</td>
-<td>否</td>
-<td>String</td>
-<td>备注</td>
-</tr>
-<tr>
-<td>请求类型</td>
-<td>POST</td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<p>续表 0 获取每日打卡详细信息接口</p>
-<table>
-<thead>
-<tr>
-<th>返回参数类型</th>
-<th>JSON</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>返回参数列表</td>
-<td></td>
-</tr>
-<tr>
-<td>参数名称</td>
-<td>描述</td>
-</tr>
-<tr>
-<td>code</td>
-<td>数据状态码（成功状态码是 200）</td>
-</tr>
-<tr>
-<td>data</td>
-<td>具体数据</td>
-</tr>
-</tbody></table>
-<p>网站保存榜单信息接口设计，该接口保存创建或修改好的榜单信息。保存榜单接口设计如表 1 所示。</p>
-<p>表 1 保存榜单接口</p>
-<table>
-<thead>
-<tr>
-<th>功能说明</th>
-<th>保存榜单接口</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>URL</strong> 地址</td>
-<td><a target="_blank" rel="noopener" href="http://localhost:8080/django1q7tt/bangdan/save">http://localhost:8080/django1q7tt/bangdan/save</a></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>参数列表</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>参数名称</td>
-<td>是否必须</td>
-<td>类型</td>
-<td>描述</td>
-</tr>
-<tr>
-<td>id</td>
-<td>是</td>
-<td>Number</td>
-<td>榜单 id</td>
-</tr>
-<tr>
-<td>dakabianhao</td>
-<td>否</td>
-<td>String</td>
-<td>打卡编号</td>
-</tr>
-<tr>
-<td>tupian</td>
-<td>否</td>
-<td>String</td>
-<td>订单状态</td>
-</tr>
-<tr>
-<td>kongpancishu</td>
-<td>否</td>
-<td>Number</td>
-<td>空盘次数</td>
-</tr>
-<tr>
-<td>yonghuming</td>
-<td>否</td>
-<td>String</td>
-<td>用户名</td>
-</tr>
-<tr>
-<td>xingming</td>
-<td>否</td>
-<td>String</td>
-<td>姓名</td>
-</tr>
-<tr>
-<td>gengxingshijian</td>
-<td>否</td>
-<td>String</td>
-<td>更新时间</td>
-</tr>
-<tr>
-<td>请求类型</td>
-<td>POST</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>返回参数类型</td>
-<td>JSON</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>返回参数列表</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>参数名称</td>
-<td>描述</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>code</td>
-<td>数据状态码（成功状态码是 200）</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>data</td>
-<td>具体数据</td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="系统实现"><a href="#系统实现" class="headerlink" title="系统实现"></a>系统实现</h1><h2 id="后台功能模块实现"><a href="#后台功能模块实现" class="headerlink" title="后台功能模块实现"></a>后台功能模块实现</h2><h3 id="新增食物类型功能模块实现"><a href="#新增食物类型功能模块实现" class="headerlink" title="新增食物类型功能模块实现"></a>新增食物类型功能模块实现</h3><p>新增食物类型功能的实现，前端发送请求后，通过 URL 调用 shiwuleixing 的 list、add 和 save 接口操作后台对 shiwuleixing 数据库表进行增、删、改、查操作，最后将数据逐级返回到前端。查看食物类型列表如下图所示，新增食物类型功能实现如下图所示。</p>
-<p><img src="/../pic/media-pzc/49f1599942f4c7756c8f80f9e57a9f7d.jpeg"></p>
-<p>查看食物类型列表</p>
-<p><img src="/../pic/media-pzc/93d9948d56fbef1c4c62fd9d5c6c6075.jpeg"></p>
-<p>新增食物类型功能实现</p>
-<p>后台新增食物类型功能代码如下所示：</p>
-<h3 id="删除文章分享的帖子功能模块实现"><a href="#删除文章分享的帖子功能模块实现" class="headerlink" title="删除文章分享的帖子功能模块实现"></a>删除文章分享的帖子功能模块实现</h3><p>删除文章分享的帖子功能的实现，前端发送请求后，通过 URL 先调用 forum_page 接口权限为管理员查看 forum 记录，再调用 forum_delete 接口操作后台对 forum 数据库表的信息进行删除操作，最后将数据逐级返回到前端。删除文章分享的帖子功能模块实现如下图所示。</p>
-<p><img src="/../pic/media-pzc/1bdfc65ae82daf224f15abdc827dfbe1.jpeg"></p>
-<p>删除文章分享的帖子模块实现</p>
-<p>删除文章分享的帖子模块功能代码如下所示：</p>
-<h3 id="修改每日打卡信息模块实现"><a href="#修改每日打卡信息模块实现" class="headerlink" title="修改每日打卡信息模块实现"></a>修改每日打卡信息模块实现</h3><p>修改每日打卡信息模块的实现，前端发送请求后，通过 URL 调用 meiridaka_update 接口，对从 meiridaka 数据库表中通过 meiridaka_info 接口选定数据的修改，最后将数据逐级返回到前端。修改每日打卡信息功能模块实现如下图所示</p>
-<p><img src="/../pic/media-pzc/c465a20dbab11799620e8963a6c38f96.jpeg"></p>
-<p>修改每日打卡信息功能实现</p>
-<p>修改每日打卡信息模块功能代码如下所示：</p>
-<h2 id="前台功能模块实现"><a href="#前台功能模块实现" class="headerlink" title="前台功能模块实现"></a>前台功能模块实现</h2><h3 id="用户查看每日打卡详情功能模块实现"><a href="#用户查看每日打卡详情功能模块实现" class="headerlink" title="用户查看每日打卡详情功能模块实现"></a>用户查看每日打卡详情功能模块实现</h3><p>用户查看每日打卡详情功能的实现，前端发送请求后，通过 URL 调用 meiridaka 的list 和 detail 接口操作后台对 meiridaka 数据库表进行查找查看操作，最后将数据逐级返回到前端。用户查看每日打卡详情功能实现如下图所示。</p>
-<p><img src="/../pic/media-pzc/78806c6edc2e45dfe333a6c8f5e71681.jpeg"></p>
-<h2 id="附件"><a href="#附件" class="headerlink" title="附件"></a>附件</h2><p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/code/P4-pzc/%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/django.zip">代码下载链接</a><br><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/code/P4-pzc/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%87%E4%BB%B6django.sql">数据库下载链接</a></p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Django/" rel="tag">Django</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-Python/P5-Python网站--废品回收（数据库结业项目）"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/03/11/Python/P5-Python%E7%BD%91%E7%AB%99--%E5%BA%9F%E5%93%81%E5%9B%9E%E6%94%B6%EF%BC%88%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BB%93%E4%B8%9A%E9%A1%B9%E7%9B%AE%EF%BC%89/"
-    >Python网站--废品回收（数据库结业项目）</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/03/11/Python/P5-Python%E7%BD%91%E7%AB%99--%E5%BA%9F%E5%93%81%E5%9B%9E%E6%94%B6%EF%BC%88%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BB%93%E4%B8%9A%E9%A1%B9%E7%9B%AE%EF%BC%89/" class="article-date">
-  <time datetime="2023-03-11T03:42:56.000Z" itemprop="datePublished">2023-03-11</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/project/">project</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="基于Django的废品回收网站设计与实现（附件见文末）"><a href="#基于Django的废品回收网站设计与实现（附件见文末）" class="headerlink" title="基于Django的废品回收网站设计与实现（附件见文末）"></a>基于Django的废品回收网站设计与实现（附件见文末）</h2><h2 id="系统原型"><a href="#系统原型" class="headerlink" title="系统原型"></a>系统原型</h2><p>进入系统登录页面，在该部分向<img src="/../pic/media-fp/0a11328ae013230e51ec2122e8c73146.jpeg" alt="登录页面">用户提供登录、注册功能。</p>
-<p>图 4.3 登录原型图</p>
-<p>用户进入用户主页后，可以看到自己的昵称，以及侧边栏的功能选项，点击个人中心按钮进入个人中心页面填写个人信息，用户个人中心页原型图如图 4.4 所示。</p>
-<p><img src="/../pic/media-fp/41231ccab047ccc8732e1e56347d8482.png" alt="用户个人中心"></p>
-<p>图 4.4 用户个人中心页原型图</p>
-<p>当用户进入首页点击废品回收按钮进行废品回收下单、提交订单、查看订单，用户</p>
-<p>废品回收下单页原型图如图 4.5 所示。</p>
-<p><img src="/../pic/media-fp/7498b440d234dfb821ddb787290a14e5.png" alt="用户废品回收下单"></p>
-<p>图 4.5 用户废品回收下单页原型图</p>
-<p>当商户进入首页可以看到自己的昵称、侧边栏的功能选项、订单列表，点击个人中心按钮进入个人中心页面填写个人信息，商户进行接单并价格评估、提交后跳转到我的订单页面、查看物流信息，商户接单并价格评估页原型图如图 4.6 所示。</p>
-<p><img src="/../pic/media-fp/140bd019df0d9c9a446c30cedb55637b.png" alt="1650091871(1)"></p>
-<p>图 4.6 商户接单页原型图</p>
-<p>当取货员进入首页可以看到自己的昵称、侧边栏的功能选项、订单列表，点击个人中心按钮进入个人中心页面填写个人信息，取货员进行接单并在我的订单进行取送更新、查看物流信息，取货员在我的订单页进行取送更新原型图如图 4.7 所示。</p>
-<p><img src="/../pic/media-fp/a1da75dc091b0ea5d2f40c0d23b103ee.jpeg" alt="1650092841(1)"></p>
-<p>图 4.7 取货员更新取货信息原型图</p>
-<p>商户对取货员返回的回收单进行确认并支付，商户支付原型图如图 4.8 所示。</p>
-<p><img src="/../pic/media-fp/a4249b2ca3270865d7d1ecaf26399ede.jpeg" alt="1650093591(1)"></p>
-<p>图 4.8 商户支付页原型图</p>
-<p>用户对商户及取货员评价原型图如图 4.9 所示，取货员在我的评价页查看评价如图</p>
-<p>4.10 所示。</p>
-<p><img src="/../pic/media-fp/84105aeafa7c5bf079182f776d9ce0c2.png" alt="1650093839(1)"></p>
-<p>图 4.9 用户评价页原型图</p>
-<p><img src="/../pic/media-fp/8e86672c1fd2c26db40a57bbce1b3a68.jpeg" alt="1650094008(1)"></p>
-<p>图 4.10 取货员查看评价页原型图</p>
-<h2 id="系统结构设计"><a href="#系统结构设计" class="headerlink" title="系统结构设计"></a>系统结构设计</h2><p><strong>第 4 章 系统设计</strong></p>
-<p>系统分为 4 个角色，前端为用户、商户、取货员，后端管理员负责对信息与用户身份的审核、账户管理、订单信息管理、回收物品种类管理等功能。系统功能结构图如图</p>
-<ol>
-<li>所示。</li>
-</ol>
-<p><img src="/../pic/media-fp/864dad1dd7c74064545295cbd6797623.jpeg" alt="1650098816(1)"></p>
-<p>图 4.1 体系功能结构图</p>
-<h2 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h2><h3 id="E-R-图"><a href="#E-R-图" class="headerlink" title="E-R 图"></a>E-R 图</h3><p>数据库设计的 E-R 图如图 4.2 所示。</p>
-<p><img src="/../pic/media-fp/7c5162deeb0293f04285f66386a091af.jpeg" alt="废品回收E-R图"></p>
-<p>图 4.2 系统 E-R 图</p>
-<h3 id="表结构设计"><a href="#表结构设计" class="headerlink" title="表结构设计"></a>表结构设计</h3><p>用户登录需要账户密码，下单时需要填写姓名、联系电话及地址便于商户与取货员查看订单信息取货回收，注册时需要有 id 账号方便管理员管理。用户信息表结构如表</p>
-<p>4.1 所示。</p>
-<p>表 4.1 用户表</p>
-<table>
-<thead>
-<tr>
-<th><strong>字段名</strong></th>
-<th><strong>名称</strong></th>
-<th><strong>数据类型</strong></th>
-<th><strong>约束</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>id</td>
-<td>用户 id</td>
-<td>int(11)</td>
-<td>PK， AUTO_INCREMENT ,not null</td>
-</tr>
-<tr>
-<td>username</td>
-<td>账户</td>
-<td>varchar(32)</td>
-<td>not null</td>
-</tr>
-<tr>
-<td>password</td>
-<td>密码</td>
-<td>varchar(32)</td>
-<td>not null</td>
-</tr>
-<tr>
-<td>name</td>
-<td>姓名</td>
-<td>varchar(20)</td>
-<td></td>
-</tr>
-<tr>
-<td>phone</td>
-<td>电话</td>
-<td>varchar(11)</td>
-<td></td>
-</tr>
-<tr>
-<td>addr</td>
-<td>地址</td>
-<td>varchar(256)</td>
-<td></td>
-</tr>
-</tbody></table>
-<p>商户登录需要账户密码，接单时需要填写姓名、联系电话及地址便于取货员查看信息送货，注册时需要有 id 账号方便管理员管理。商户表结构如表 4.2 所示。</p>
-<p>表 4.2 商户表</p>
-<table>
-<thead>
-<tr>
-<th><strong>字段名</strong></th>
-<th><strong>名称</strong></th>
-<th><strong>数据类型</strong></th>
-<th><strong>约束</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>id</td>
-<td>用户 id</td>
-<td>int(11)</td>
-<td>PK， AUTO_INCREMENT ，not null</td>
-</tr>
-<tr>
-<td>username</td>
-<td>账户</td>
-<td>varchar(32)</td>
-<td>not null</td>
-</tr>
-<tr>
-<td>password</td>
-<td>密码</td>
-<td>varchar(32)</td>
-<td>not null</td>
-</tr>
-<tr>
-<td>name</td>
-<td>姓名</td>
-<td>varchar(20)</td>
-<td></td>
-</tr>
-<tr>
-<td>phone</td>
-<td>电话</td>
-<td>varchar(11)</td>
-<td></td>
-</tr>
-<tr>
-<td>addr</td>
-<td>地址</td>
-<td>varchar(256)</td>
-<td></td>
-</tr>
-</tbody></table>
-<p>取货员登录需要账户密码，接单时需要填写姓名、联系电话便于用户及商户查看信配送信息，有问题便于联系，注册时需要有 id 账号方便管理员管理。取货员表结构如表</p>
-<p>4.3 所示。</p>
-<p>表 4.3 取货员表</p>
-<table>
-<thead>
-<tr>
-<th><strong>字段名</strong></th>
-<th><strong>名称</strong></th>
-<th><strong>数据类型</strong></th>
-<th><strong>约束</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>id</td>
-<td>用户 id</td>
-<td>int(11)</td>
-<td>PK， AUTO_INCREMENT ，not null</td>
-</tr>
-<tr>
-<td>username</td>
-<td>账户</td>
-<td>varchar(32)</td>
-<td>not null</td>
-</tr>
-<tr>
-<td>password</td>
-<td>密码</td>
-<td>varchar(32)</td>
-<td>not null</td>
-</tr>
-<tr>
-<td>name</td>
-<td>姓名</td>
-<td>varchar(20)</td>
-<td></td>
-</tr>
-<tr>
-<td>phone</td>
-<td>电话</td>
-<td>varchar(11)</td>
-<td></td>
-</tr>
-</tbody></table>
-<p>废品类别便于用户选择，编号 id 便于管理员管理。废品类别表结构如表 4.4 所示。</p>
-<p>表 4.4 废品类别表</p>
-<table>
-<thead>
-<tr>
-<th><strong>字段名</strong></th>
-<th><strong>名称</strong></th>
-<th><strong>数据类型</strong></th>
-<th><strong>约束</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>id</td>
-<td>废品种类 id</td>
-<td>int(11)</td>
-<td>PK， AUTO_INCREMENT ，not null</td>
-</tr>
-<tr>
-<td>name</td>
-<td>类别名称</td>
-<td>varchar(20)</td>
-<td>not null</td>
-</tr>
-</tbody></table>
-<p>订单信息会被记录，当用户、商户、取货员对订单存在疑惑时需要查看订单信息， 便于处理。订单信息表结构如表 4.5 所示。</p>
-<p>表 4.5 订单信息表</p>
-<table>
-<thead>
-<tr>
-<th><strong>字段名</strong></th>
-<th><strong>名称</strong></th>
-<th><strong>数据类型</strong></th>
-<th><strong>约束</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>id</td>
-<td>订单 id</td>
-<td>varchar(20)</td>
-<td>PK， AUTO_INCREMENT ，not null</td>
-</tr>
-<tr>
-<td>name</td>
-<td>用户名</td>
-<td>varchar(20)</td>
-<td>not null</td>
-</tr>
-<tr>
-<td>phone</td>
-<td>电话</td>
-<td>varchar(11)</td>
-<td>not null</td>
-</tr>
-<tr>
-<td>addr</td>
-<td>地址</td>
-<td>varchar(256)</td>
-<td>not null</td>
-</tr>
-<tr>
-<td>date</td>
-<td>下单日期</td>
-<td>date(0)</td>
-<td>not null</td>
-</tr>
-<tr>
-<td>time</td>
-<td>取货时间</td>
-<td>time(6)</td>
-<td>not null</td>
-</tr>
-<tr>
-<td>type_id</td>
-<td>废品类别 id</td>
-<td>int(11)</td>
-<td>not null</td>
-</tr>
-<tr>
-<td>create</td>
-<td>订单创建时间</td>
-<td>datetime(6)</td>
-<td>not null</td>
-</tr>
-<tr>
-<td>detail</td>
-<td>备注</td>
-<td>varchar(500)</td>
-<td></td>
-</tr>
-<tr>
-<td>price</td>
-<td>价格</td>
-<td>decimal(6)</td>
-<td>not null</td>
-</tr>
-<tr>
-<td>comment_d</td>
-<td>对商户评价</td>
-<td>varchar(500)</td>
-<td></td>
-</tr>
-<tr>
-<td>comment_b</td>
-<td>对取货员评价</td>
-<td>varchar(500)</td>
-<td></td>
-</tr>
-<tr>
-<td>status</td>
-<td>状态</td>
-<td>varchar(11)</td>
-<td>not null</td>
-</tr>
-<tr>
-<td>user_id</td>
-<td>用户 id</td>
-<td>int(11)</td>
-<td>not null</td>
-</tr>
-</tbody></table>
-<p>管理员注册时有 id 编号，管理员登录需要账户、密码。管理员表结构如表 4.6 所示。</p>
-<p>表 4.6 管理员表</p>
-<table>
-<thead>
-<tr>
-<th><strong>字段名</strong></th>
-<th><strong>名称</strong></th>
-<th><strong>数据类型</strong></th>
-<th><strong>约束</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>id</td>
-<td>管理员 id</td>
-<td>int(11)</td>
-<td>PK， AUTO_INCREMENT ，not null</td>
-</tr>
-<tr>
-<td>username</td>
-<td>账户</td>
-<td>varchar(32)</td>
-<td>not null</td>
-</tr>
-<tr>
-<td>password</td>
-<td>密码</td>
-<td>varchar(32)</td>
-<td>not null</td>
-</tr>
-</tbody></table>
-<p>物流信息由商户、取货员操作更新，直接显示当前订单状态、创建日期、订单编号。</p>
-<p>物流信息表结构如表 4.7 所示。</p>
-<p>表 4.7 物流信息表</p>
-<table>
-<thead>
-<tr>
-<th><strong>字段名</strong></th>
-<th><strong>名称</strong></th>
-<th><strong>数据类型</strong></th>
-<th><strong>约束</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>id</td>
-<td>id</td>
-<td>int(11)</td>
-<td>PK， AUTO_INCREMENT ，not null</td>
-</tr>
-<tr>
-<td>name</td>
-<td>物流状态</td>
-<td>varchar(50)</td>
-<td>not null</td>
-</tr>
-<tr>
-<td>create</td>
-<td>创建日期</td>
-<td>varchar(6)</td>
-<td>not null</td>
-</tr>
-<tr>
-<td>order_id</td>
-<td>订单编号</td>
-<td>varchar(20)</td>
-<td>not null</td>
-</tr>
-</tbody></table>
-<p>管理员可对用户、商户、取货员账户及订单进行增加、删除、修改、查看功能。管理员操作记录表结构如表 4.8 所示。</p>
-<p>表 4.8 管理员操作记录表</p>
-<table>
-<thead>
-<tr>
-<th><strong>字段名</strong></th>
-<th><strong>名称</strong></th>
-<th><strong>数据类型</strong></th>
-<th><strong>约束</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>id</td>
-<td>id</td>
-<td>int(11)</td>
-<td>PK， AUTO_INCREMENT</td>
-</tr>
-<tr>
-<td>action_time</td>
-<td>开始时间</td>
-<td>datetime(6)</td>
-<td>not null</td>
-</tr>
-<tr>
-<td>object_id</td>
-<td>目标 id</td>
-<td>longtext</td>
-<td></td>
-</tr>
-<tr>
-<td>object_repr</td>
-<td>更改结果</td>
-<td>varchar(200)</td>
-<td>not null</td>
-</tr>
-<tr>
-<td>action_flag</td>
-<td>开始标记</td>
-<td>smallint(5)</td>
-<td>not null</td>
-</tr>
-<tr>
-<td>change_message</td>
-<td>更改信息</td>
-<td>longtext</td>
-<td>not null</td>
-</tr>
-<tr>
-<td>content_type_id</td>
-<td>满足类型 id</td>
-<td>int(11)</td>
-<td></td>
-</tr>
-<tr>
-<td>user_id</td>
-<td>用户 id</td>
-<td>int(11)</td>
-<td>not null</td>
-</tr>
-</tbody></table>
-<h3 id="后台功能模块设计"><a href="#后台功能模块设计" class="headerlink" title="后台功能模块设计"></a>后台功能模块设计</h3><p><img src="/../pic/media-fp/2431961e9d108c0b210377502065bc5a.png" alt=" ">管理员功能设计实现增删改查用户、商户、取货员、订单信息、回收废品分类功能， 认证和授权功能。管理员功能类图如图 4.3 所示。</p>
-<p>图 4.3 废品回收后台管理系统类图</p>
-<p>设计顺序图，管理员修改功能的顺序图如图 4.4 所示。</p>
-<p><img src="/../pic/media-fp/fc74638232853c65d510c7cb298c865a.png" alt=" "></p>
-<p>图 4.4 修改订单功能顺序图</p>
-<h2 id="前台功能模块设计"><a href="#前台功能模块设计" class="headerlink" title="前台功能模块设计"></a>前台功能模块设计</h2><p>前台功能设计实现用户用户下单、查看订单状态，商户接单、评估价格并支付确认、查看物流信息、订单信息、用户评价，取货员接单、取货、送货、更新物流信息、查看用户评价等功能。前台功能类图如图 4.5 所示。</p>
-<p><img src="/../pic/media-fp/31b594a824aca47dc78a33e2950bf5de.png" alt=" "></p>
-<p>图 4.5 前端功能系统类图</p>
-<p>设计顺序图，用户下单功能的顺序图如图 4.6 所示。</p>
-<p><img src="/../pic/media-fp/39eaecc93f36d50a1449ed4e60d34a1d.png" alt=" "></p>
-<p>图 4.6 用户下单功能顺序图</p>
-<p>设计顺序图，商户接单功能的顺序图如图 4.7 所示。</p>
-<p><img src="/../pic/media-fp/97a9c7bc9f5c0d50ea59ff01d20daf3e.png" alt=" "></p>
-<p>图 4.7 商户接单功能顺序图</p>
-<p>设计顺序图，取货员接单取货功能的顺序图如图 4.8 所示。</p>
-<p><img src="/../pic/media-fp/f7bfe83dea82121aba4e524a9fbf4432.png" alt=" "></p>
-<p>图 4.8 取货员接单取货功能顺序图</p>
-<h2 id="JSON-接口设计"><a href="#JSON-接口设计" class="headerlink" title="JSON 接口设计"></a>JSON 接口设计</h2><p>用户注册接口，用于用户的注册账户请求，具体如表 4.9 所示。</p>
-<p>表 4.9 用户注册接口</p>
-<table>
-<thead>
-<tr>
-<th><strong>URL 地址</strong></th>
-<th><a target="_blank" rel="noopener" href="http://127.0.0.1:8000/user/register/">http://127.0.0.1:8000/user/register/</a></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>请求参数列表</strong></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>参数名称</strong></td>
-<td><strong>是否必须</strong></td>
-<td><strong>类型</strong></td>
-<td><strong>描述</strong></td>
-</tr>
-<tr>
-<td>username</td>
-<td>是</td>
-<td>String</td>
-<td>用户名</td>
-</tr>
-<tr>
-<td>password</td>
-<td>是</td>
-<td>String</td>
-<td>用户设置密码</td>
-</tr>
-<tr>
-<td>cpassword</td>
-<td>是</td>
-<td>String</td>
-<td>确认密码</td>
-</tr>
-<tr>
-<td><strong>请求类型</strong></td>
-<td>POST</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>返回参数类型</strong></td>
-<td>JSON</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>返回参数列表</strong></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>参数名称</strong></td>
-<td><strong>描述</strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>code</td>
-<td>数据状态码（成功状态码是 200）</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>message</td>
-<td>返回消息</td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<p>添加订单接口设计，该接口用于废品回收用户下单。添加订单接口设计如表 4.10</p>
-<p>所示。</p>
-<p>表 4.10 用户下单接口</p>
-<table>
-<thead>
-<tr>
-<th><strong>URL 地址</strong></th>
-<th><a target="_blank" rel="noopener" href="http://127.0.0.1:8000/user/order/insert/">http://127.0.0.1:8000/user/order/insert/</a></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>参数列表</strong></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>参数名称</strong></td>
-<td><strong>是否必须</strong></td>
-<td><strong>类型</strong></td>
-<td><strong>描述</strong></td>
-</tr>
-<tr>
-<td>name</td>
-<td>是</td>
-<td>String</td>
-<td>寄件人</td>
-</tr>
-<tr>
-<td>phone</td>
-<td>是</td>
-<td>String</td>
-<td>联系电话</td>
-</tr>
-</tbody></table>
-<p>续表 4.10 用户下单接口</p>
-<table>
-<thead>
-<tr>
-<th>addr</th>
-<th>是</th>
-<th>String</th>
-<th>取件地址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>date</td>
-<td>是</td>
-<td>String</td>
-<td>取件日期</td>
-</tr>
-<tr>
-<td>time</td>
-<td>是</td>
-<td>String</td>
-<td>取件时间</td>
-</tr>
-<tr>
-<td>create</td>
-<td>是</td>
-<td>String</td>
-<td>创建日期</td>
-</tr>
-<tr>
-<td>heavy</td>
-<td>是</td>
-<td>String</td>
-<td>废品重量</td>
-</tr>
-<tr>
-<td>type_id</td>
-<td>是</td>
-<td>String</td>
-<td>废品种类</td>
-</tr>
-<tr>
-<td>datail</td>
-<td>是</td>
-<td>String</td>
-<td>用户备注</td>
-</tr>
-<tr>
-<td><strong>请求类型</strong></td>
-<td>POST</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>返回参数类型</strong></td>
-<td>JSON</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>返回参数列表</strong></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>参数名称</strong></td>
-<td><strong>描述</strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>code</td>
-<td>数据状态码（成功状态码是 200）</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>message</td>
-<td>返回消息</td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<h1 id="系统实现"><a href="#系统实现" class="headerlink" title="系统实现"></a>系统实现</h1><h2 id="后台功能模块实现"><a href="#后台功能模块实现" class="headerlink" title="后台功能模块实现"></a>后台功能模块实现</h2><p>管理员登入后台管理系统，对用户、商户、取货员、可选废品种类进行增、删、改、查，管理员可认证授权，查看用户评价、商户接单状态、取货员物流更新等功能。</p>
-<h3 id="用户账户管理功能模块实现"><a href="#用户账户管理功能模块实现" class="headerlink" title="用户账户管理功能模块实现"></a>用户账户管理功能模块实现</h3><p>管理员登入后台管理系统，对用户账户进行增加，删除，修改和查询功能，用户账户管理页面如图 5.1 所示。</p>
-<p><img src="/../pic/media-fp/74979e80b7462770ae509b7ed83eb2fb.jpeg" alt=" "></p>
-<p>图 5.1 用户账户管理页面 1</p>
-<p>其中相关代码如下所示：</p>
-<h3 id="用户订单管理功能模块实现"><a href="#用户订单管理功能模块实现" class="headerlink" title="用户订单管理功能模块实现"></a>用户订单管理功能模块实现</h3><p>管理员登入后台管理系统，对用户订单进行增加，删除，修改和查询功能，用户订单管理页面如图 5.2 所示。</p>
-<p><img src="/../pic/media-fp/344bb40423d7d3ac19237bdf18776fa7.jpeg" alt=" "></p>
-<p>图 5.2 用户订单管理页面</p>
-<p>其中相关代码如下所示：</p>
-<h2 id="前台功能模块实现"><a href="#前台功能模块实现" class="headerlink" title="前台功能模块实现"></a>前台功能模块实现</h2><h3 id="用户下单功能模块实现"><a href="#用户下单功能模块实现" class="headerlink" title="用户下单功能模块实现"></a>用户下单功能模块实现</h3><p>用户登入后，可选择回收废品种类、填写重量进行废品回收下单，查看订单状态、进行评价等功能，用户下单页面如图 5.3 所示。</p>
-<p><img src="/../pic/media-fp/00e67545776dea2bba11b85729c515dc.png" alt=" "></p>
-<p>图 5.3 用户下单页面</p>
-<p>其中相关代码如下所示：</p>
-<p>def order_insert(request):</p>
-<h3 id="商户接单功能模块实现"><a href="#商户接单功能模块实现" class="headerlink" title="商户接单功能模块实现"></a>商户接单功能模块实现</h3><p>商户登入后，进行接单并根据废品种类和重量对其价格评估，对取货员反馈的订单信息确认且支付订单，查看订单状态、查看用户评价等功能，商户接单页面如图 5.4 所示。</p>
-<p><img src="/../pic/media-fp/d8625e28bcb9c953b6e91c97c4baae12.png" alt="1650430668(1)"></p>
-<p>图 5.4 商户接单页面</p>
-<p>其中相关代码如下所示：</p>
-<h3 id="用户查看订单信息并评价功能模块实现"><a href="#用户查看订单信息并评价功能模块实现" class="headerlink" title="用户查看订单信息并评价功能模块实现"></a>用户查看订单信息并评价功能模块实现</h3><p>用户登入后，查看订单信息、物流及进行评价功能，用户查看订单信息并评价页面如图 5.5 所示。</p>
-<p><img src="/../pic/media-fp/3c0d8723422b8a36c0d43c25d9194ae1.png" alt=" "></p>
-<p>图 5.5 用户查看订单信息并评价页面</p>
-<h2 id="附件"><a href="#附件" class="headerlink" title="附件"></a>附件</h2><p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/code/P5-fp/%E7%A8%8B%E5%BA%8F%E4%BB%A3%E7%A0%81/program.zip">代码下载链接</a><br><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/code/P5-fp/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%87%E4%BB%B6/fp.sql">数据库下载链接</a></p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Django/" rel="tag">Django</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-Python/P3-Python爬虫-数据分析-前后端代码（毕设）"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/03/11/Python/P3-Python%E7%88%AC%E8%99%AB-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BB%A3%E7%A0%81%EF%BC%88%E6%AF%95%E8%AE%BE%EF%BC%89/"
-    >Python爬虫&amp;数据分析&amp;前后端代码（毕设）【待上传】</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/03/11/Python/P3-Python%E7%88%AC%E8%99%AB-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BB%A3%E7%A0%81%EF%BC%88%E6%AF%95%E8%AE%BE%EF%BC%89/" class="article-date">
-  <time datetime="2023-03-11T03:42:35.000Z" itemprop="datePublished">2023-03-11</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/project/">project</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-   
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
 
     </footer>
   </div>

@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>CSS学习笔记-2.1盒子、定位与布局 |  Pravite Home</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="Pravite Home" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-前端学习笔记/CSS/Q3-CSS-1定位与布局"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  CSS学习笔记-2.1盒子、定位与布局
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q3-CSS-1%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%B8%83%E5%B1%80/" class="article-date">
+  <time datetime="2023-04-01T03:34:47.000Z" itemprop="datePublished">2023-04-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">2.3k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">8 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="CSS学习笔记-2-1盒子、定位与布局-三种重要布局及其它布局"><a href="#CSS学习笔记-2-1盒子、定位与布局-三种重要布局及其它布局" class="headerlink" title="CSS学习笔记-2.1盒子、定位与布局-三种重要布局及其它布局"></a>CSS学习笔记-2.1盒子、定位与布局-三种重要布局及其它布局</h1><p><a target="_blank" rel="noopener" href="https://www.icourse163.org/learn/BFU-1003382003?tid=1469987444#/learn/content?type=detail&id=1253020763&sm=1">Web前端开发_中国大学MOOC(慕课) (icourse163.org)</a></p>
+<h2 id="布局三种定位机制："><a href="#布局三种定位机制：" class="headerlink" title="布局三种定位机制："></a>布局三种定位机制：</h2><p>文档流（元素分类inlineblock.元素类型转换display）→浮动（float属性）→层（position属性）</p>
+<img src="C:\Users\11096\blog\source\pic\Q3\1680613753098.png" alt="1680613753098" style="zoom:50%;" />
+
+<h2 id="1-元素布局（终极布局，最好用）"><a href="#1-元素布局（终极布局，最好用）" class="headerlink" title="1.元素布局（终极布局，最好用）"></a>1.元素布局（终极布局，最好用）</h2><ol>
+<li><h3 id="灵活-x2F-弹性-x2F-伸缩布局flex"><a href="#灵活-x2F-弹性-x2F-伸缩布局flex" class="headerlink" title="灵活&#x2F;弹性&#x2F;伸缩布局flex"></a>灵活&#x2F;弹性&#x2F;伸缩布局flex</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Lp4y1S7XM/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">五分钟掌握 css3 flex弹性布局</a></p>
+<p>Flex 布局教程：语法篇</p>
+<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
+<p>Flex 布局教程：实例篇</p>
+<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2015/07/flex-examples.html">https://www.ruanyifeng.com/blog/2015/07/flex-examples.html</a></p>
+<p>小青蛙游戏学flex</p>
+<p><a target="_blank" rel="noopener" href="http://flexboxfroggy.com/">Flexbox Froggy - A game for learning CSS flexbox</a></p>
+<h4 id="属性作用域分类："><a href="#属性作用域分类：" class="headerlink" title="属性作用域分类："></a>属性作用域分类：</h4><img src="C:\Users\11096\blog\source\pic\Q3\image-20230406114818874.png" alt="image-20230406114818874" style="zoom: 25%;" />
+
+
+
+<h4 id="易错点："><a href="#易错点：" class="headerlink" title="易错点："></a>易错点：</h4><ol>
+<li><p>display：flex；</p>
+<p>常用于有高度的类（body也能用）。且不能用于有其它display需求的类。（如inline-block）。</p>
+</li>
+<li><p>主轴侧轴的改变</p>
+<p>当flex-derection的值改变时，两个轴也会跟着变，也就是说justify-content和align-items也要变。</p>
+</li>
+<li><p>flex的作用域</p>
+<p>只有所在的类，所在类的子类都不算。比如body里写了的flex，justify只能控制body的布局，想控制内部元素的布局就只能嵌套，在.div里也写flex。</p>
+</li>
+<li><p><strong>弹性布局是一维的，网页是二维的</strong>，想要控制盒子，就需要父元素控制一个轴，子元素控制另一个轴。</p>
+</li>
+<li><p>弹性布局是可以嵌套的，祖宗元素设置display：flex，父元素也设置display：flex。</p>
+</li>
+</ol>
+<h4 id="知识点："><a href="#知识点：" class="headerlink" title="知识点："></a>知识点：</h4><p>1.布局原理：采用 Flex 布局的元素，称为容器。它的所有子元素自动成为容器成员，称为项目。</p>
+<p>2.易错点：父盒子设为 flex 后，子元素的float、clear和 vertical-align属性将失效。</p>
+<p>3.flex布局父项常见属性<br>            <strong>flex-direction：</strong>设置主轴的方	</p>
+<blockquote>
+<p>​	   row：行    column：柱子</p>
+</blockquote>
+<img src="C:\Users\11096\blog\source\pic\Q3\image-20230329190849686.png" alt="image-20230329190849686" style="zoom:50%;" />
+
+<p>​			<strong>flex-wrap：</strong>设置子元素是否换行</p>
+<p>​						nowrap 不换行	(装不下会缩小子元素的宽度)<br>​						wrap 换行</p>
+<p>​			<strong>justify-content：</strong>设置<strong>主轴</strong>上的子元素排列方式【【【【【不分单行多行吗？】】】】】】</p>
+<img src="C:\Users\11096\blog\source\pic\Q3\image-20230329190910922.png" alt="image-20230329190910922" style="zoom:50%;" />
+
+
+<p>​			<strong>align-items：</strong>设置<strong>辅轴</strong>上的子元素排列方式（单行）</p>
+<p>​						该属性是控制子项在侧轴上的排列方式 在子项为单行的时候使用<br>​						flex-start 从头部开始<br>​						flex-end 从尾部开始<br>​						center 居中显示<br>​						stretch 拉伸      拉伸高度直至完整的占据父元素的高度。</p>
+<p>​			<strong>align-content：</strong> 设置<strong>辅轴</strong>上的子元素的排列方式（多行）</p>
+<p>​				<img src="C:\Users\11096\blog\source\pic\Q3\image-20230329190910922.png" alt="image-20230329190910922" style="zoom: 50%;" /></p>
+<p>​			align-content 和align-items区别<br>​						align-items 适用于单行情况下， 只有上对齐、下对齐、居中和 拉伸<br>​						align-content适用多行换行的情况（单行无效）</p>
+<p>​			<strong>flex-flow：</strong>复合属性，相当于同时设置了 flex-direction 和 flex-wrap</p>
+<p>3.flex布局子项常见属性【少用】<br>            flex子项目占的份数<br>            align-self控制子项自己在侧轴的排列方式<br>            order属性定义子项的排列顺序（前后顺序）<br>4.flex属性<br>            flex 属性定义子项目分配剩余空间，用flex来表示占多少份数。</p>
+<p>​			<strong>【重点：flex：1；表示flex-grow1；&amp;&amp;  flex-shrink：1；</strong></p>
+<p>​			<strong>意味着如果盒子剩余的布局大就自适应缩小，反之就自适应增大】</strong></p>
+<p>5.align-self控制子项自己在侧轴上的排列方式【少用】<br>            align-self 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖 align-items 属性。<br>            默认值为 auto，表示继承父元素的 align-items 属性，如果没有父元素，则等同于 stretch。</p>
+</li>
+<li><h3 id="网格布局Grid"><a href="#网格布局Grid" class="headerlink" title="网格布局Grid"></a>网格布局Grid</h3><p><a target="_blank" rel="noopener" href="https://www.runoob.com/css3/css-grid.html">CSS 网格布局 | 菜鸟教程 (runoob.com)</a></p>
+<h4 id="属性作用域分类：-1"><a href="#属性作用域分类：-1" class="headerlink" title="属性作用域分类："></a>属性作用域分类：</h4><img src="C:\Users\11096\blog\source\pic\Q3\image-20230406160133663.png" alt="image-20230406160133663" style="zoom:50%;" /></li>
+</ol>
+<h4 id="知识点：-1"><a href="#知识点：-1" class="headerlink" title="知识点："></a>知识点：</h4><p>​					<img src="C:\Users\11096\blog\source\pic\Q3\image-20230406160552994.png" alt="image-20230406160552994" style="zoom: 25%;" /></p>
+<h1 id="2-文档流定位（默认布局）"><a href="#2-文档流定位（默认布局）" class="headerlink" title="2.文档流定位（默认布局）"></a>2.文档流定位（默认布局）</h1><h1 id="（元素分类inlineblock-元素类型转换display）"><a href="#（元素分类inlineblock-元素类型转换display）" class="headerlink" title="（元素分类inlineblock.元素类型转换display）"></a>（元素分类inlineblock.元素类型转换display）</h1><p>元素分类：</p>
+<p>​			inline：两个inline元素之间会有一个间隙，需要去除。</p>
+<p>​			block：</p>
+<p>​			inline-block：</p>
+<p>元素转换：</p>
+<h1 id="3-浮动定位"><a href="#3-浮动定位" class="headerlink" title="3.浮动定位"></a>3.浮动定位</h1><h4 id="float属性值："><a href="#float属性值：" class="headerlink" title="float属性值："></a>float属性值：</h4><p>​			1.left</p>
+<p>​			2.right</p>
+<p>​			3.top</p>
+<p>​			4.bottom</p>
+<h4 id="应用："><a href="#应用：" class="headerlink" title="应用："></a>应用：</h4><h4 id=""><a href="#" class="headerlink" title=""></a><img src="C:\Users\11096\blog\source\pic\Q3\image-20230405161130046.png" alt="image-20230405161130046" style="zoom: 33%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161204082.png" alt="image-20230405161204082" style="zoom:33%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161227150.png" alt="image-20230405161227150" style="zoom: 25%;" /></h4><h4 id="易错点：1注意浮动时，宽度是否够用的情况"><a href="#易错点：1注意浮动时，宽度是否够用的情况" class="headerlink" title="易错点：1注意浮动时，宽度是否够用的情况"></a>易错点：1注意浮动时，宽度是否够用的情况</h4><p>​					<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161350930.png" alt="image-20230405161350930" style="zoom: 25%;" /><img src="C:\Users\11096\blog\source\pic\Q3\image-20230405161312570.png" alt="image-20230405161312570" style="zoom: 25%;" /></p>
+<h4 id="易错点：2浮动与flex互斥"><a href="#易错点：2浮动与flex互斥" class="headerlink" title="易错点：2浮动与flex互斥"></a>易错点：2浮动与flex互斥</h4><h4 id="clear清除浮动："><a href="#clear清除浮动：" class="headerlink" title="clear清除浮动："></a>clear清除浮动：</h4><p>​	易错点：清除某一方向的浮动不是把某方向上的浮动元素删除，</p>
+<p>​								而是该元素的某一方向不能有浮动元素。也就是说，该元素会另起一行。</p>
+<p>​	属性值：both（两侧）left right</p>
+<p>​	举例：</p>
+<p>​			单向清除浮动举例<img src="C:\Users\11096\blog\source\pic\Q3\image-20230405165442568.png" alt="image-20230405165442568" style="zoom:25%;" /></p>
+<p>​			both清除浮动举例</p>
+<p>​											<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405165348256.png" alt="image-20230405165348256" style="zoom:25%;" /><img src="C:\Users\11096\blog\source\pic\Q3\image-20230405165322218.png" alt="image-20230405165322218" style="zoom: 25%;" /></p>
+<h4 id="float总结："><a href="#float总结：" class="headerlink" title="float总结："></a>float总结：</h4><p>​		1.浮动定位是在同一层面的，可以两个都设置成向左浮动或者一个向左一个向右，来实现同样的效果。 </p>
+<p>​		2.清除浮动不是删除元素，相当于另起一行的效果 。</p>
+<p>​		3.实现几行几列的效果，最初用的都是浮动。想要实现分行，就用清除浮动，想要实现分列，就用增加浮动。</p>
+<h1 id="4-层定位"><a href="#4-层定位" class="headerlink" title="4.层定位"></a>4.层定位</h1><h4 id="1-position属性"><a href="#1-position属性" class="headerlink" title="1.position属性"></a>1.position属性</h4><p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/css/css_positioning.asp">CSS 布局 - position 属性 (w3school.com.cn)</a></p>
+<p>​	概念：</p>
+<p>​		<code>position</code> 属性规定应用于元素的定位方法的类型。</p>
+<p>​	四个不同的平面定位属性：</p>
+<p>​		top bottom left right</p>
+<p>​	一个层叠定位属性：</p>
+<p>​		z-index：哪个元素应放置在其他元素的前面或后面，正负都可，取值大的在上方。</p>
+<p>​	五种不同的定位方式：</p>
+<p>​		static（无定位，还是文件流模式定位）</p>
+<p>​						易错点：top bottom left right z-index无效。</p>
+<p>​		fixed（固定定位，相对于浏览器窗口进行定位）</p>
+<p>​										<strong>用于侧边栏</strong></p>
+<p>​										<strong>易错点：必须设置宽度高度，因为旧有的框架被position打破了。记得设置成100%</strong></p>
+<p>​		relative（相对定位，相对于直接父元素进行定位，不管直接父元素是什么定位方式）</p>
+<p>​						易错点：偏移后，偏移前的位置依然被保留，所以不会有其它元素自动占据它原来的位置。</p>
+<p>​										如果附近有块级元素，它的相对定位会被影响。</p>
+<p>​		absolute（绝对定位，从直接父元素开始向外层查找，</p>
+<p>​						直到找到不是static定位的父元素。如果都是static，则相对于body进行定位）</p>
+<p>​						易错点：偏移后，偏移前的位置不再被保留，所以会有其它元素自动占据它原来的位置。</p>
+<p>​		sticky（粘性定位，根据用户的滚动位置进行定位）</p>
+<p>​						适用于：导航栏本身并不在网页的边边上，在文章中间。直到用户下拉页面，使导航栏到了边边上，为了继续展示导航栏，导航栏就会附着在边上。不是这种情况的话，relative就行了。</p>
+<p>​										<strong>用于吸顶吸底广告</strong>。</p>
+<p>​										兼容性<a target="_blank" rel="noopener" href="https://caniuse.com/?search=position:sticky;">“position:sticky;” | Can I use… Support tables for HTML5, CSS3, etc</a></p>
+<p>​	粘性定位与固定定位的区别：</p>
+<p>​					<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_51093047/article/details/126923647"> 固定定位（fixed）和粘性定位（sticky）的比较-CSDN博客</a>						</p>
+<p>​					粘性定位算在文档流中，固定定位不算。所以固定的小广告会挡视线，粘性的不会</p>
+<p>​	总结：</p>
+<p>​					祖宗元素相对定位，子孙元素全部绝对定位。这样保证更改祖宗元素时，子孙元素都能跟它一起动。</p>
+<p>​	实例：</p>
+<p>​					<a target="_blank" rel="noopener" href="https://juejin.cn/post/7175552665974210615">CSS固定定位与粘性定位4大企业级案例 - 掘金 (juejin.cn)</a></p>
+<h1 id="3-盒子模型"><a href="#3-盒子模型" class="headerlink" title="3.盒子模型"></a>3.盒子模型</h1><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model">盒模型 - 学习 Web 开发 | MDN</a></p>
+<p>内边距:   <strong>padding</strong></p>
+<p>​                padding-left&#x2F;right&#x2F;top&#x2F;bottom:20px;  </p>
+<p>​				padding:10px;（上下左右都是10）</p>
+<p>​				<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/cssref/pr_padding.asp">CSS padding 属性更多用法</a></p>
+<p>框架：<strong>border</strong></p>
+<p>​				框架为宽度50px的实心黑色，border: 50px <strong>solid</strong> black;</p>
+<p>外边距：   <strong>margin</strong></p>
+<p>​                水平居中:margin-left: auto; &amp;&amp; margin-right: auto;</p>
+<p>​				可用于块级标签，p、div等。</p>
+<p>​                去除默认边框宽度：margin：0；（font-size：0是为了解决多余空白符的问题）</p>
+<p>​                缩小上方过大的宽度： margin-top:-25px;（需要来回调试）</p>
+<p>盒子大小：box-sizing</p>
+<p>CSS3中对盒子进行2D变换的属性：<strong>transform</strong></p>
+<p>​				旋转：**transform:rotate(30deg);**顺时针旋转30度。transform:rotate(-30deg);逆时针旋转30度。</p>
+<p>​				缩放：<strong>transform:scale(x,y);</strong></p>
+<p>​							xy取值范围为 【0-1缩小】 【1 ~ +∞放大】</p>
+<h5 id="盒子种类"><a href="#盒子种类" class="headerlink" title="盒子种类:"></a>盒子种类:</h5><img src="C:\Users\11096\blog\source\pic\Q3\image-20230404195037016.png" alt="image-20230404195037016" style="zoom:50%;" />
+
+<h5 id="两种盒模型的区别："><a href="#两种盒模型的区别：" class="headerlink" title="两种盒模型的区别："></a>两种盒模型的区别：</h5><p>​		分别定义了user agent应该如何计算一个元素的总宽度和总高度的方法</p>
+<ul>
+<li>box-sizing：<code>content-box</code> 是默认值。如果你设置一个元素的宽为 100px，那么这个元素的内容区会有 100px 宽，并且任何边框和内边距的宽度都会被增加到最后绘制出来的元素宽度中。</li>
+<li>box-sizing：<code>border-box</code> 告诉浏览器：你想要设置的边框和内边距的值是包含在 width 内的。也就是说，如果你将一个元素的 width 设为 100px，那么这 100px 会包含它的 border 和 padding，内容区的实际宽度是 width 减去 (border + padding) 的值。大多数情况下，这使得我们更容易地设定一个元素的宽高。</li>
+</ul>
+<h5 id="盒子相关的问题："><a href="#盒子相关的问题：" class="headerlink" title="盒子相关的问题："></a>盒子相关的问题：</h5><p>​		<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/110617108">CSS 的两种盒模型 - 及边距异常合并问题</a></p>
+<h4 id="outline和border的区别"><a href="#outline和border的区别" class="headerlink" title="outline和border的区别"></a>outline和border的区别</h4><p>​	主要区别在于: </p>
+<p>​		1.应用场景:一般border能适用于任何元素的样式，outline针对链接、表单控件和ImageMap等元素设计(比如input&#x2F;textarea) </p>
+<p>​		2.特性不一样：border一般会被计算在元素的宽高大小里面，影响元素的尺寸、位置。outline不会</p>
+<p>​		3.outline 的效果将随元素的 focus 而自动出现，相应的由 blur 而自动消失，常设置悬停的动态效果。</p>
+<h3 id="相关层次图"><a href="#相关层次图" class="headerlink" title="相关层次图"></a>相关层次图</h3><p>​	margin：外边距</p>
+<p>​	border：边框</p>
+<p>​	outline：边框</p>
+<p>​	padding：内边距</p>
+<img src="C:\Users\11096\blog\source\pic\Q3\image-20230329124305228.png" alt="image-20230329124305228" style="zoom: 33%;" />
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q3-CSS-1%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%B8%83%E5%B1%80/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AC%AC4%E7%89%88%EF%BC%89/Q4-JS-4%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            JS学习笔记-4.4语言基础（图灵）
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q3-CSS-3%E5%AE%9E%E8%B7%B5%EF%BC%88flex%E5%B8%83%E5%B1%80%EF%BC%89/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">CSS学习笔记-2.3flex布局实现</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "",
+    app_key: "",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2023
+        <i class="ri-heart-fill heart_icon"></i> LIXiaohan
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+      <li>
+          <img src="/images/beian.png"></img>
+          <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=01234567890123" target="_black" rel="nofollow">黑公网安备0123456789号</a>
+      </li>
+        
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src=''></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Pravite Home"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+ 
+<script src="/js/clickBoom2.js"></script>
+ 
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=22707008&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+    
+<script>
+  const password = "11";
+  const lock_password = window.sessionStorage.getItem("lock_password");
+  console.log(password, lock_password);
+  if (lock_password !== password) {
+    Swal.fire({
+      title: "请输入访问密码",
+      input: "text",
+      inputAttributes: {
+        autocapitalize: "off",
+      },
+      showCancelButton: false,
+      showLoaderOnConfirm: true,
+      allowOutsideClick: false,
+      confirmButtonText: "确定",
+    }).then((result) => {
+      console.log(result);
+      if (result.isConfirmed) {
+        console.log(password);
+        if (result.value === password) {
+          window.sessionStorage.setItem("lock_password", result.value);
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "密码错误，请重试",
+            confirmButtonText: "确定",
+            allowOutsideClick: false,
+          }).then(() => {
+            window.location.reload();
+          });
+        }
+      }
+    });
+  }
+</script>
+
+
+  </div>
+</body>
+
+</html>

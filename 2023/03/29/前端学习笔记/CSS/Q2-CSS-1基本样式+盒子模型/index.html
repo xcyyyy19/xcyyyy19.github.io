@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>CSS学习笔记-1.1基本样式 |  Pravite Home</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="Pravite Home" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-前端学习笔记/CSS/Q2-CSS-1基本样式+盒子模型"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  CSS学习笔记-1.1基本样式
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/" class="article-date">
+  <time datetime="2023-03-29T03:00:47.000Z" itemprop="datePublished">2023-03-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">1.6k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">5 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="CSS学习笔记-1-1基本样式"><a href="#CSS学习笔记-1-1基本样式" class="headerlink" title="CSS学习笔记-1.1基本样式"></a>CSS学习笔记-1.1基本样式</h1><p>注释:</p>
+<p>​			CSS:&#x2F;**&#x2F;</p>
+<p>技巧：</p>
+<p>​			先写html框架，再考虑CSS</p>
+<p>​			定义主要容器时，要定义成宽度是由我们固定的，高度完全是由内容撑开的。</p>
+<p>CSS游戏：</p>
+<p>​			<a target="_blank" rel="noopener" href="https://frontend30.com/css-selectors-cheatsheet/">CSS Selectors Cheatsheet - FrontEnd30</a></p>
+<p>思维导图：</p>
+<p>​			<a target="_blank" rel="noopener" href="https://flowus.cn/d3cec49a-35cf-46aa-a095-f5ed4406287e">CSS思维导图 (flowus.cn)</a></p>
+<h3 id="0-CSS基本样式"><a href="#0-CSS基本样式" class="headerlink" title="0.CSS基本样式"></a>0.CSS基本样式</h3><p>选择器（Selector）<br>HTML 元素的名称位于规则集开始。它选择了一个或多个需要添加样式的元素）。要给不同元素添加样式只需要更改选择器就行了。可以用固定标签名，或.+自定义名称来进行选择。如用.menu来选择class属性为menu的盒子。</p>
+<p>通配符选择器作用：给当前界面上所有的标签设置属性。（*的意思是选中所有的标签）</p>
+<p>声明（Declaration）<br>一个单独的规则，如 color: red; 用来指定添加样式元素的属性。</p>
+<p>属性（Properties）<br>改变 HTML 元素样式的途径。（本例中 color 就是 <p> 元素的属性。）CSS 中，由编写人员决定修改哪个属性以改变规则。</p>
+<p>属性的值（Property value）<br>在属性的右边，冒号后面即属性的值，它从指定属性的众多外观中选择一个值（我们除了 red 之外还有很多属性值可以用于 color ）。</p>
+<h3 id="1-常见基础样式"><a href="#1-常见基础样式" class="headerlink" title="1.常见基础样式"></a>1.常见基础样式</h3><h3 id=""><a href="#" class="headerlink" title=""></a></h3><ul>
+<li><p>基础：</p>
+<p>声明该边框的类型：display ：可选项如下</p>
+<p>​								flex灵活布局</p>
+<p>​								grid网格布局</p>
+<p><img src="C:\Users\11096\blog\source\pic\Q2\image-20230329162830851.png" alt="image-20230329162830851"></p>
+<p>​							</p>
+<ul>
+<li><p>通用（框架相关）:</p>
+<p>宽度:   width: 300px;（百分制也行），div默认居左，所以背景颜色随着宽度的改变也居左。</p>
+<p>最大宽度: max-width: 500px;</p>
+<p>​				（背景是不动的，主页面随着浏览器大小变化，有最大宽度的约束，内容看起来就不会过宽）</p>
+<p>最小宽度：</p>
+<p>最大高度：</p>
+<p>最小高度：</p>
+</li>
+</ul>
+<h3 id="2-文字相关"><a href="#2-文字相关" class="headerlink" title="2.文字相关"></a>2.文字相关</h3><p>单位：</p>
+<p>​		em设置成几个字符大小（根据用户使用的字体自适应）</p>
+<p>​		px像素</p>
+<p>​		%百分比</p>
+<p>颜色：</p>
+<p>​		<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q2-CSS-1基本样式+盒子模型.assets\image-20230407121714988.png" alt="image-20230407121714988" style="zoom:25%;" /></p>
+<p>文本对齐：<strong>text-align</strong></p>
+<p>​	居中: text-align: <strong>center;</strong></p>
+<p>​	居左: text-align: <strong>left;</strong></p>
+<p>​	居右: text-align: <strong>right;</strong></p>
+<p>​	居左: text-align: <strong>justify;</strong></p>
+<p>​	应用：文本的垂直居中（flex也行）</p>
+<p>[CSS 布局 – 水平 &amp; 垂直对齐 | 菜鸟教程 (runoob.com)](<a target="_blank" rel="noopener" href="https://www.runoob.com/css/css-align.html#:~:text=CSS">https://www.runoob.com/css/css-align.html#:~:text=CSS</a> 布局 - 水平 %26 垂直对齐 1 元素居中对齐,8 垂直居中 - 使用 position 和 transform 更多项目)</p>
+<p>字间距：<strong>letter-spacing</strong></p>
+<p>​	取值：2px&#x2F;-2px</p>
+<p>行高：<strong>line-height</strong></p>
+<p>​	取值：14px&#x2F;1.5em几倍行高&#x2F;120%基于当前字符的百分比行高</p>
+<p>装饰线：<strong>text-decoration</strong> </p>
+<p>​	上划线：<strong>overline</strong></p>
+<p>​	删除线：<strong>line-throuth</strong></p>
+<p>​	下划线：<strong>underling</strong></p>
+<p>​	删除：<strong>none</strong>（针对a标签，去掉自带的下划线）</p>
+<p>字体：</p>
+<p>​		字体所有属性：<strong>font</strong>：很多设定 字号及行高（用斜线隔开） 字体名称；</p>
+<p>​					例子：font：bold（粗体） italic（斜体） 18px&#x2F;1.5em ‘幼圆’</p>
+<p>​		字体系列: <strong>font-family:</strong> Impact,serif;</p>
+<p>​					重点：可以写多个字体，用逗号隔开。找不到第一种字体就用第二种，都找不到就用默认字体。</p>
+<p>​					易错点：字体含有空格时，应加双引号</p>
+<p>​					例子：font-family：“Microsoft YaHei”</p>
+<p>​		字体大小：<strong>font-size：</strong>18px；</p>
+<p>​		字重：<strong>font-weight</strong>（字体粗细）</p>
+<p>​		斜体： font-style:italic;</p>
+<p>CSS3中三种文本相关属性：</p>
+<p>​				文本阴影：<strong>text-shadow</strong>：水平偏移量 垂直偏移量  阴影大小（可省略） 颜色；</p>
+<p>​									常用效果：</p>
+<p>​													文本描边：0 0 3px black；</p>
+<p>​													文字浮雕效果：color：white； text-shadow：2px 2px 4px #000；</p>
+<p>​								   类似于《CSS-1定位与布局》中的盒子阴影。</p>
+<p>​				长文本换行：<strong>word-warp</strong>：break-word；</p>
+<p>​				网络字体：**@font-face**</p>
+<p>​									需要从网络上下载字体到服务器本地，并转化成各种浏览器支持的格式</p>
+<p>​									最后通过引用本地的字体文件来给用户端进行显示。</p>
+<h3 id="3-其它"><a href="#3-其它" class="headerlink" title="3.其它"></a>3.其它</h3><p>圆角：<img src="C:\Users\11096\blog\source\pic\Q2\1680769113691.png" alt="1680769113691" style="zoom:30%;" />值为px</p>
+<p>​			border-radius：25px；圆角边框。</p>
+<p>阴影：属性box-shadow</p>
+<p>​			选项为inside&#x2F;outside（默认值为外部阴影），值为水平偏移px 垂直偏移px 模糊强度px 颜色。</p>
+<p>​			举例：<img src="C:\Users\11096\blog\source\pic\Q2\1680769413222.png" alt="1680769413222" style="zoom:38%;" />就是阴影是盒子往右下角偏移10px的效果。</p>
+<p>​			举例2：<img src="C:\Users\11096\blog\source\pic\Q2\1680769550505.png" alt="1680769550505" style="zoom:38%;" /></p>
+<h1 id="分割线：html的hr标签"><a href="#分割线：html的hr标签" class="headerlink" title="分割线：html的hr标签"></a>分割线：html的hr标签</h1><h1 id="样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）"><a href="#样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）" class="headerlink" title="样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）"></a>样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）</h1><h1 id="（看起来会有凹陷效果）"><a href="#（看起来会有凹陷效果）" class="headerlink" title="（看起来会有凹陷效果）"></a>（看起来会有凹陷效果）</h1><p>链接文字的颜色：a{color：black；}</p>
+<p>链接访问后：a:visited {  }</p>
+<p>链接上有鼠标悬停时：a:hover{}</p>
+<p>链接被点击时：a:active{}</p>
+</li>
+<li><p>背景相关:</p>
+<p>背景颜色:background-color:</p>
+<p>背景图:background-image: url(<a target="_blank" rel="noopener" href="https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg">https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg</a>);</p>
+</li>
+<li><p>盒子相关:</p>
+</li>
+</ul>
+<p>​				对块级元素进行强制内联状:display: inline-block;</p>
+<p>​				去除元素前端可能存在的空白符:<style>   div{font-size:0;}    </style></p>
+<p>​					</p>
+<blockquote>
+<p>​	【【Q1为什么不能直接用内联元素？】】</p>
+<p>​	【inline-block是元素具备了块级和内联元素的功能，inline最重要的一点就是:</p>
+<p>​	元素能够在一行展示，而inline元素所缺失的设置宽高，是block 元素的功能】</p>
+</blockquote>
+<blockquote>
+<p>​	【【Q2为什么用了i-b会导致，设置宽度时，总和必须小于100%？（否则会另起一行）】】</p>
+<p>​	【因为HTML 中的换行符、空格符、制表符等合并为空白符，字体大小不为 0 的情况下，</p>
+<pre><code> 空白符自然占据定的宽度，使用inline-block 会产生了元素间的空隙。】
+</code></pre>
+</blockquote>
+<blockquote>
+<p>​	【【Q3不想自己调试合适的宽度怎么办？】】</p>
+<p>​	【在写用了强制内联化的块级元素时，全部写在同一行，一个空格都不要加。比如<p>1</p><p>2</p>】</p>
+</blockquote>
+<blockquote>
+<p>​	【【Q4最佳解决办法是什么？】】</p>
+<p>​	【父元素设置font-size:0,子元素有需要可以另外设置font-size，</p>
+<p>​	 这样空白符因为font-size:0就不会占据宽度了】</p>
+</blockquote>
+<blockquote>
+<p>实例:</p>
+<p><a target="_blank" rel="noopener" href="https://www.zhangxinxu.com/study/201011/img-blank-space.html">display:inline-block元素间换行符的空格间隙 </a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zhangxinxu.com/study/201011/img-font-size-clear-blank.html">font-size:0清除display:inline-block元素换行符间隙</a></p>
+</blockquote>
+<h3 id="4-style元素"><a href="#4-style元素" class="headerlink" title="4.style元素"></a><strong>4.style元素</strong></h3><ul>
+<li><p>单独写在css文件夹里，并在head里通过link来链接。 </p>
+<link rel="stylesheet" href="styles.css">
+</li>
+<li><p>用于给body里的某一种&#x2F;多种元素指定样式。</p>
+</li>
+</ul>
+<h3 id="5-多端样式归一化必加代码【【【【】】】】"><a href="#5-多端样式归一化必加代码【【【【】】】】" class="headerlink" title="5.多端样式归一化必加代码【【【【】】】】"></a><strong>5.多端样式归一化必加代码</strong>【【【【】】】】</h3><p>​    <meta name="viewport" content="width=device-width, initial-scale=1.0" /></p>
+<h3 id="6-过度与动画"><a href="#6-过度与动画" class="headerlink" title="6.过度与动画"></a>6.过度与动画</h3><p>过渡：<strong>transition</strong>属性</p>
+<p>​				知识：  transition：属性    时间    速度；<img src="C:\Users\11096\blog\source\pic\Q2\image-20230406211511826.png" alt="image-20230406211511826" style="zoom:25%;" /></p>
+<p>​							transition：a，p   1s    linear；          </p>
+<p>​							transition：     all   1s    linear；</p>
+<p>​				作用：在规定时间内，暂时改变选定元素属性的值（和选择器一起使用）</p>
+<p>​				举例：鼠标悬停在确认按钮上的时候，按钮显示为绿色。</p>
+<p>动画：<strong>animation</strong>属性（需要连续的过渡时，改用动画）</p>
+<p>@keyframes规则（关键帧规则）</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q2-CSS-2%E5%AE%9E%E8%B7%B5%EF%BC%88%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F%EF%BC%89/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            CSS学习笔记-1.2实践
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q3-CSS-2%E9%80%89%E6%8B%A9%E5%99%A8/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">CSS学习笔记-2.2选择器</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "",
+    app_key: "",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2023
+        <i class="ri-heart-fill heart_icon"></i> LIXiaohan
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+      <li>
+          <img src="/images/beian.png"></img>
+          <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=01234567890123" target="_black" rel="nofollow">黑公网安备0123456789号</a>
+      </li>
+        
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src=''></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Pravite Home"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+ 
+<script src="/js/clickBoom2.js"></script>
+ 
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=22707008&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+    
+<script>
+  const password = "11";
+  const lock_password = window.sessionStorage.getItem("lock_password");
+  console.log(password, lock_password);
+  if (lock_password !== password) {
+    Swal.fire({
+      title: "请输入访问密码",
+      input: "text",
+      inputAttributes: {
+        autocapitalize: "off",
+      },
+      showCancelButton: false,
+      showLoaderOnConfirm: true,
+      allowOutsideClick: false,
+      confirmButtonText: "确定",
+    }).then((result) => {
+      console.log(result);
+      if (result.isConfirmed) {
+        console.log(password);
+        if (result.value === password) {
+          window.sessionStorage.setItem("lock_password", result.value);
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "密码错误，请重试",
+            confirmButtonText: "确定",
+            allowOutsideClick: false,
+          }).then(() => {
+            window.location.reload();
+          });
+        }
+      }
+    });
+  }
+</script>
+
+
+  </div>
+</body>
+
+</html>
