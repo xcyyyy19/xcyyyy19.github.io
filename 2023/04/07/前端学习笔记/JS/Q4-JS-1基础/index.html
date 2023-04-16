@@ -141,29 +141,29 @@
 <li><p><input disabled="" type="checkbox"> 
 3.object （对象）</p>
 </li>
-<li><p><input disabled="" type="checkbox"> 
+<li><p><input checked="" disabled="" type="checkbox"> 
 ​		定义一组键值对</p>
 </li>
-<li><p><input disabled="" type="checkbox"> 
+<li><p><input checked="" disabled="" type="checkbox"> 
 ​		object的构造方式 (var a &#x3D; {b:1} 或者 var a &#x3D; new Object({b:1}))</p>
 <p>​			推荐使用前者，后者了解即可</p>
 </li>
-<li><p><input disabled="" type="checkbox"> 
+<li><p><input checked="" disabled="" type="checkbox"> 
 ​		对象的赋值 (a.b &#x3D; xx)</p>
 </li>
-<li><p><input disabled="" type="checkbox"> 
+<li><p><input checked="" disabled="" type="checkbox"> 
 ​		访问对象的所有属性（Object.keys）</p>
 </li>
-<li><p><input disabled="" type="checkbox"> 
+<li><p><input checked="" disabled="" type="checkbox"> 
 ​		删除对象的键值对 (delete )</p>
 </li>
-<li><p><input disabled="" type="checkbox"> 
+<li><p><input checked="" disabled="" type="checkbox"> 
 ​		检查属性（键） 是否存在 (in)</p>
 </li>
 <li><p><input checked="" disabled="" type="checkbox"> 
 ​		遍历 (for …in)</p>
 </li>
-<li><p><input disabled="" type="checkbox"> 
+<li><p><input checked="" disabled="" type="checkbox"> 
 ​		对象的访问 (object.a 访问object的a属性)</p>
 </li>
 <li><p><input disabled="" type="checkbox"> 
@@ -178,15 +178,76 @@
 <li><p><input disabled="" type="checkbox"> 
 ​		object的方法 <a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_object_methods.asp">https://www.w3school.com.cn/js/js_object_methods.asp</a></p>
 </li>
-<li><p><input disabled="" type="checkbox"> 
+<li><p><input checked="" disabled="" type="checkbox"> 
 ​		this关键字(重要)</p>
 </li>
 </ul>
 <p>4.function 函数<br>        函数的声明<br>            function fn() {} &#x2F;&#x2F; function 声明<br>            var fn &#x3D; function() {} &#x2F;&#x2F; 变量声明<br>            var fn &#x3D; new Function() {} &#x2F;&#x2F; 使用Function构造，了解就好，很少使用<br>        函数的参数<br>            function fn(text){ &#x2F;&#x2F; 变量text是形式参数<br>                return text &#x2F;&#x2F; return  关键词将返回指定的值<br>            }<br>        函数的调用<br>            fn() &#x2F;&#x2F; 调用fn函数<br>            fn(1,2) &#x2F;&#x2F; 传入实际参数<br>            call方法 <a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_function_call.asp">https://www.w3school.com.cn/js/js_function_call.asp</a><br>            apply方法 <a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_function_apply.asp">https://www.w3school.com.cn/js/js_function_apply.asp</a></p>
 <p>​		重复声明函数，会覆盖原有的定义<br>​			function fn() {<br>​				console.log(1)<br>​			}	<br>​			function fn() {<br>​				console.log(2)<br>​			}<br>​		递归<br>​			反复调用自身<br>​			了解递归的定义和实现思路，<br>​				 计算斐波那契数列 的函数如何实现</p>
-<p>​		了解函数的作用域<br>​			函数内部可以读取到外部定义的变量<br>​			函数内部定义的变量，无法被外部读取<br>​			var a &#x3D; 5<br>​			function fn() {<br>​				var b &#x3D; 10<br>​				console.log(b)<br>​				console.log(a)<br>​			}<br>​			console.log(b)<br>​		arguments对象，可以获取参数<br>​			&#x2F;&#x2F; 可以等看过数组再回头看这个<br>​			var add &#x3D; function (a,b) {<br>​				console.log(arguments[0])<br>​			}</p>
-<p>​		闭包(后续再理解)<br>​			理解一下定义，后续再了解深入的原因<br>​			<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_function_closures.asp">https://www.w3school.com.cn/js/js_function_closures.asp</a></p>
-<p>​		5.数组(array)<br>​		数组的定义<br>​		声明数组<br>​			var arr &#x3D; [11,22,33]<br>​			var arr &#x3D; new Array([11,22,33])<br>​		数组的访问<br>​		数组的长度<br>​			arr.length (length属性)<br>​		通过索引访问，从0开始<br>​			arr[0] &#x2F;&#x2F; 第一个元素<br>​			arr[arr.length-1] &#x2F;&#x2F; 最后一个元素<br>​		循环<br>​			for<br>​			for in<br>​		数组的方法:<br>​			<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_array_methods.asp">https://www.w3school.com.cn/js/js_array_methods.asp</a><br>​			<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_array_sort.asp">https://www.w3school.com.cn/js/js_array_sort.asp</a><br>​			<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_array_iteration.asp">https://www.w3school.com.cn/js/js_array_iteration.asp</a></p>
+<ul>
+<li><p><input disabled="" type="checkbox"> 
+​		了解函数的作用域</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+​			函数内部可以读取到外部定义的变量</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+​			函数内部定义的变量，无法被外部读取</p>
+<p>​			var a &#x3D; 5</p>
+<p>​			function fn() {</p>
+<p>​				var b &#x3D; 10</p>
+<p>​				console.log(b)</p>
+<p>​				console.log(a)</p>
+<p>​			}</p>
+<p>​			console.log(b)</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+​		arguments对象，可以获取参数</p>
+<p>​			&#x2F;&#x2F; 可以等看过数组再回头看这个</p>
+<p>​			var add &#x3D; function (a,b) {</p>
+<p>​				console.log(arguments[0]) </p>
+<p>​			}</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+​		闭包(后续再理解)</p>
+<p>​			理解一下定义，后续再了解深入的原因</p>
+<p>​			<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_function_closures.asp">https://www.w3school.com.cn/js/js_function_closures.asp</a></p>
+</li>
+</ul>
+<p>​		5.数组(array)</p>
+<ul>
+<li><p><input checked="" disabled="" type="checkbox"> 
+​		数组的定义</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+​		声明数组</p>
+<p>​			var arr &#x3D; [11,22,33]</p>
+<p>​			var arr &#x3D; new Array([11,22,33])</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox"> 
+​		数组的访问</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox"> 
+​		数组的长度</p>
+<p>​			arr.length (length属性)</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox"> 
+​		通过索引访问，从0开始</p>
+<p>​			arr[0] &#x2F;&#x2F; 第一个元素</p>
+<p>​			arr[arr.length-1] &#x2F;&#x2F; 最后一个元素</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox"> 
+​		循环</p>
+<p>​			for</p>
+<p>​			for in </p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+​		数组的方法:</p>
+<p>​			<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_array_methods.asp">https://www.w3school.com.cn/js/js_array_methods.asp</a></p>
+<p>​			<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_array_sort.asp">https://www.w3school.com.cn/js/js_array_sort.asp</a></p>
+<p>​			<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_array_iteration.asp">https://www.w3school.com.cn/js/js_array_iteration.asp</a></p>
+</li>
+</ul>
 <h2 id="1-分类"><a href="#1-分类" class="headerlink" title="1.分类"></a>1.分类</h2><p>​		1.ECMAJS：基础语法</p>
 <p>​		2.DOM：文档对象模型，可以访问某个元素</p>
 <p>​		3.BOM：浏览器对象模型，可以对浏览器操作</p>
@@ -401,6 +462,15 @@
 
    
   <nav class="article-nav">
+    
+      <a href="/2023/04/14/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/%E8%AE%BF%E9%97%AE%E5%87%BD%E6%95%B0%E5%86%85%E5%B5%8C%E5%A5%97%E7%9A%84%E5%AF%B9%E8%B1%A1/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            (no title)
+          
+        </div>
+      </a>
     
     
       <a href="/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-2%E6%A0%87%E5%87%86%E5%BA%93/" class="article-nav-link">

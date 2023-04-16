@@ -233,7 +233,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123; <span class="attr">name</span>: <span class="string">&#x27;Tom&#x27;</span>, <span class="attr">age</span>: <span class="number">20</span> &#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">isFrozen</span>(obj)) <span class="comment">// 输出: false</span></span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">freeze</span>(obj)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">isFrozen</span>(obj)) <span class="comment">// 输出: true</span></span><br></pre></td></tr></table></figure>
 
 <p>需要注意的是，Object.freeze()不仅会把属性的writable特性设置为false，还会把configurable特性设置为false，因此不能再通过Object.defineProperty()方法修改或删除现有属性。</p>
-<h2 id="3-Array对象"><a href="#3-Array对象" class="headerlink" title="3.Array对象"></a>3.Array对象</h2><ol>
+<h2 id="3-Array数组对象"><a href="#3-Array数组对象" class="headerlink" title="3.Array数组对象"></a>3.Array数组对象</h2><ol>
 <li><p>构造函数 通过构造函数创建对象实例，由于 JS 中函数也是对象，因此也可以</p>
 <p>为函数添加属性或方法。</p>
 </li>
@@ -293,6 +293,8 @@
 </li>
 <li><p>链式使用 将以上方法进行链式调用，可简化代码且易于阅读；</p>
 <p>通常用于多个数组操作进行合并，提高代码的可读性。</p>
+</li>
+<li><p>.length返回数组的长度</p>
 </li>
 </ol>
 <p>在前端和 Node.js 开发中，数组的使用频率非常高。例如在 Vue.js 中，通过数组的相关方法来动态修改组件的值，从而实现数据的响应式更新。这些方法使用方便灵活，但需要注意不同方法的使用场景和不同方法之间的区别，以避免出现错误或代码可读性较差的情况。</p>

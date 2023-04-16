@@ -88,7 +88,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">869</span>
+            <span class="post-count">2k</span>
         </span>
     </span>
 
@@ -97,7 +97,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">3 分钟</span>
+            <span class="post-count">8 分钟</span>
         </span>
     </span>
 </div>
@@ -150,6 +150,135 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for (let i = 0; i &lt; 5; ++i) &#123;</span><br><span class="line">    setTimeout(() =&gt; console.log(i), 0)</span><br><span class="line">&#125;</span><br><span class="line">// 会输出0、1、2、3、4</span><br></pre></td></tr></table></figure>
 
 <p>这种每次迭代声明一个独立变量实例的行为适用于所有风格的<code>for</code>循环，包括<code>for-in</code>和<code>for-of</code>循环。4.3.2标识符.</p>
+<h2 id="易错点："><a href="#易错点：" class="headerlink" title="易错点："></a>易错点：</h2><p>null：空指针</p>
+<p>NULL未声明的变量</p>
+<h2 id="4-4-4各种符号"><a href="#4-4-4各种符号" class="headerlink" title="4.4.4各种符号"></a>4.4.4各种符号</h2><h3 id="4-4-4-1字符串连接的两种方法"><a href="#4-4-4-1字符串连接的两种方法" class="headerlink" title="4.4.4.1字符串连接的两种方法"></a>4.4.4.1字符串连接的两种方法</h3><h5 id="1"><a href="#1" class="headerlink" title="1.+"></a>1.+</h5><p>​		“adf”+“asd”</p>
+<h5 id="2-x3D"><a href="#2-x3D" class="headerlink" title="2.+&#x3D;"></a>2.+&#x3D;</h5><p>​		let a&#x3D;“dfe”</p>
+<p>​		let b&#x3D;“jin”</p>
+<p>​		b+&#x3D;a</p>
+<h3 id="4-4-4-2字符串长度"><a href="#4-4-4-2字符串长度" class="headerlink" title="4.4.4.2字符串长度"></a>4.4.4.2字符串长度</h3><h5 id="1-String-length（只能用于字符串）"><a href="#1-String-length（只能用于字符串）" class="headerlink" title="1.String.length（只能用于字符串）"></a>1.String.length（只能用于字符串）</h5><p>​		(123).length不成立</p>
+<p>​		“123”.length</p>
+<h3 id="4-4-4-3字符串也能当成数组用"><a href="#4-4-4-3字符串也能当成数组用" class="headerlink" title="4.4.4.3字符串也能当成数组用"></a>4.4.4.3字符串也能当成数组用</h3><h5 id="1-string-0"><a href="#1-string-0" class="headerlink" title="1.string[0]"></a>1.string[0]</h5><p>​				let string&#x3D;“asd”</p>
+<p>​				string[0]</p>
+<p>​				》’a’</p>
+<h5 id="2-string-1"><a href="#2-string-1" class="headerlink" title="2.string[-1]"></a>2.string[-1]</h5><h5 id="3-string-n"><a href="#3-string-n" class="headerlink" title="3.string[-n]"></a>3.string[-n]</h5><h2 id="4-4-4小结"><a href="#4-4-4小结" class="headerlink" title="4.4.4小结"></a>4.4.4小结</h2><p>-*&#x2F;号，会使原始类型隐式转换成number类型</p>
+<p>也就是说加减乘除里只有加号需要注意两端变量的类型（只有加号重载了）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 - &#x27;2&#x27; // -1</span><br><span class="line">1 * &#x27;2&#x27; // 2</span><br><span class="line">1 / &#x27;2&#x27; // 0.5</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-4-5数组"><a href="#4-4-5数组" class="headerlink" title="4.4.5数组"></a>4.4.5数组</h2><h5 id="1-多维数组"><a href="#1-多维数组" class="headerlink" title="1.多维数组"></a>1.多维数组</h5><p>​		1.声明</p>
+<p>​				const arr &#x3D; [</p>
+<p>​				  [1, 2, 3],<br>​				  [4, 5, 6],<br>​				  [7, 8, 9],<br>​				  [[10, 11, 12], 13, 14]<br>​				];</p>
+<p>​				const ourPets &#x3D; [  &#x2F;&#x2F;数组嵌套object嵌套数组</p>
+<p>​			  {<br>​			    animalType: “cat”,<br>​			    names: [<br>​			      “Meowzer”,<br>​			      “Fluffy”,<br>​			      “Kit-Cat”<br>​			    ]<br>​			  },<br>​			  {<br>                animalType: “dog”,<br>                names: [<br>​     			 “Spot”,<br>                  “Bowser”,<br>                  “Frankie”<br>​			    ]<br>​			  }<br>​			];</p>
+<p>​		2.访问</p>
+<p>​				<strong>const subarray &#x3D; arr[3];</strong><br>​				<strong>const nestedSubarray &#x3D; arr【3]【0];</strong><br>​				<strong>const element &#x3D; arr【3]【0]【1];</strong></p>
+<p>​				<strong>ourPets[0].names[1];</strong><br>​				<strong>ourPets[1].names[0];</strong></p>
+<p>​		3.操作</p>
+<p>​					3.1push尾插</p>
+<p>​								arr.push([“a”,”b”]);</p>
+<p>​					3.2pop尾删（作返回值）</p>
+<p>​								arr.pop();</p>
+<p>​					3.3shift头删（作返回值）</p>
+<p>​								arr.shift();</p>
+<p>​					3.4unshift头插</p>
+<p>​								arr.unshift();</p>
+<h2 id="4-4-5小结"><a href="#4-4-5小结" class="headerlink" title="4.4.5小结"></a>4.4.5小结</h2><p>无</p>
+<h2 id="4-4-6函数"><a href="#4-4-6函数" class="headerlink" title="4.4.6函数"></a>4.4.6函数</h2><h1 id="1-函数也可返回undefined（说明了什么？什么时候会返回这种？用于写错代码了的时候不会报错所以不用写异常处理了是么？）"><a href="#1-函数也可返回undefined（说明了什么？什么时候会返回这种？用于写错代码了的时候不会报错所以不用写异常处理了是么？）" class="headerlink" title="1.函数也可返回undefined（说明了什么？什么时候会返回这种？用于写错代码了的时候不会报错所以不用写异常处理了是么？）"></a>1.函数也可返回undefined（说明了什么？什么时候会返回这种？用于写错代码了的时候不会报错所以不用写异常处理了是么？）</h1><h2 id="4-4-7运算符"><a href="#4-4-7运算符" class="headerlink" title="4.4.7运算符"></a>4.4.7运算符</h2><p>1.等于</p>
+<p>​		&#x3D;&#x3D;</p>
+<p>​		&#x3D;&#x3D;&#x3D;</p>
+<p>2.不等于</p>
+<p>​		!&#x3D;</p>
+<p>​		!&#x3D;&#x3D;</p>
+<p>3.与或非</p>
+<p>​		&amp;&amp;   ||  ！</p>
+<p>4.大于小于</p>
+<p>​		&gt;&lt;</p>
+<p>​		注：如果是原始类型比较，那就会隐式转换成number类型</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">5 &gt; &#x27;4&#x27; // true</span><br><span class="line">// 等同于 5 &gt; Number(&#x27;4&#x27;)</span><br><span class="line">// 即 5 &gt; 4</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-4-7小结"><a href="#4-4-7小结" class="headerlink" title="4.4.7小结"></a>4.4.7小结</h2><p>&lt;&gt;号，会使原始类型隐式转换成number类型</p>
+<h2 id="4-4-8对象（键值对）"><a href="#4-4-8对象（键值对）" class="headerlink" title="4.4.8对象（键值对）"></a>4.4.8对象（键值对）</h2><h6 id="1-创建对象"><a href="#1-创建对象" class="headerlink" title="1.创建对象"></a>1.创建对象</h6><p>​		法一：字面量（花括号里放固定的值）</p>
+<p>​				可以使用数字作为属性。 </p>
+<p>​				可以省略单字字符串属性中的引号。</p>
+<p>​				有非字符串属性的话，JavaScript 会自动将它们转为字符串。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> cat = &#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Whiskers&quot;</span>,</span><br><span class="line">  <span class="string">&quot;legs&quot;</span>: <span class="number">4</span>,</span><br><span class="line">  <span class="string">&quot;tails&quot;</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="string">&quot;enemies&quot;</span>: [<span class="string">&quot;Water&quot;</span>, <span class="string">&quot;Dogs&quot;</span>]</span><br><span class="line">  <span class="attr">make</span>: <span class="string">&quot;Ford&quot;</span>,</span><br><span class="line">  <span class="number">5</span>: <span class="string">&quot;five&quot;</span>,</span><br><span class="line">  <span class="string">&quot;model&quot;</span>: <span class="string">&quot;focus&quot;</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>​		法二：new</p>
+<p>​					var  a&#x3D;new Object（）；</p>
+<p>​					a.age&#x3D;”15”;</p>
+<p>​					a.name&#x3D;”xcy”;</p>
+<p>​					a.sayHello&#x3D;function(){				&#x2F;&#x2F;sayHello方法，里面是个匿名函数（不传参的函数）</p>
+<p>​							return “hello!!!!!!!”;</p>
+<p>​					}</p>
+<p>​					console.log(a.age);</p>
+<p>​					</p>
+<p>​		法三：构造函数(封装函数，和new一起用，相当于用于继承）</p>
+<p>​					&#x2F;&#x2F;一定要用this，不然生成的多个子对象会被最后一个的值覆盖</p>
+<p>​					function    Father（uname,uage）{</p>
+<p>​									this.name&#x3D;uname;</p>
+<p>​									this.age&#x3D;uage;</p>
+<p>​									this.sayHello&#x3D;function(strHi){</p>
+<p>​												return strHi;</p>
+<p>​									}</p>
+<p>​					}</p>
+<p>​					&#x2F;&#x2F;实例化</p>
+<p>​					var son&#x3D;new Father(“xcy”,”15”);</p>
+<p>​					son.sayHello(“Hello!!”);</p>
+<p>​					son.sayHello(“Hi~”);</p>
+<h6 id="2-增加对象的新属性"><a href="#2-增加对象的新属性" class="headerlink" title="2.增加对象的新属性"></a>2.增加对象的新属性</h6><p>1.点</p>
+<p>​				ourDog.bark &#x3D; “bow-wow”;</p>
+<p>2.中括号</p>
+<p>​				ourDog[“bark”] &#x3D; “bow-wow”;</p>
+<h6 id="3-删除对象的属性"><a href="#3-删除对象的属性" class="headerlink" title="3.删除对象的属性"></a>3.删除对象的属性</h6><p>1.delete</p>
+<p>​				const ourDog &#x3D; {<br>                  “name”: “Camper”,<br>​				  “legs”: 4,<br>​				  “tails”: 1,<br>​				  “friends”: [“everything!”],<br>​				  “bark”: “bow-wow”<br>​				};</p>
+<p>​				delete ourDog.bark;</p>
+<h6 id="4-改属性"><a href="#4-改属性" class="headerlink" title="4.改属性"></a>4.改属性</h6><p>1.点</p>
+<p>​				ourDog.name &#x3D; “Happy Camper”; </p>
+<p>2.中括号</p>
+<p>​				 ourDog[“name”] &#x3D; “Happy Camper”;</p>
+<h6 id="5-查属性"><a href="#5-查属性" class="headerlink" title="5.查属性 . []"></a>5.查属性 . []</h6><p>​		2.1用.访问属性（属性名没有空格）</p>
+<p>​				const myObj &#x3D; {<br>​				  prop1: “val1”,<br>​				  prop2: “val2”<br>​				};</p>
+<p>​				const prop1val &#x3D; myObj.prop1;<br>​				const prop2val &#x3D; myObj.prop2;</p>
+<p>​		2.2用[]访问属性（属性名有空格）</p>
+<p>​				如果属性名中包含空格，就必须使用方括号表示法来获取它的属性值。</p>
+<p>​				如果属性名中包含空格，就必须使用引号（单引号或双引号）将它们包裹起来。</p>
+<p>​				const myObj &#x3D; {<br>                  “Space Name”: “Kirk”,<br>​				  “More Space”: “Spock”,<br>​				  “NoSpace”: “USS Enterprise”<br>​				};</p>
+<p>​				myObj[“Space Name”];<br>​				myObj[‘More Space’];<br>​				myObj[“NoSpace”];</p>
+<p>​		2.3用变量访问</p>
+<p>​				1.基础</p>
+<p>​					const dogs &#x3D; {<br>​					  Fido: “Mutt”,<br>​					  Hunter: “Doberman”,<br>​					  Snoopie: “Beagle”<br>​					};</p>
+<p>​					const myDog &#x3D; “Hunter”;<br>​					const myBreed &#x3D; dogs[myDog];<br>​					console.log(myBreed);</p>
+<p>​				2.复合</p>
+<p><img src="C:\Users\11096\blog\source\_posts\前端学习笔记\JS\JavaScript高级程序设计（第4版）\Q4-JS-4语言基础（图灵）.assets\image-20230414163952811.png" alt="image-20230414163952811" style="zoom:33%;" /><img src="C:\Users\11096\blog\source\_posts\前端学习笔记\JS\JavaScript高级程序设计（第4版）\Q4-JS-4语言基础（图灵）.assets\image-20230414174937591.png" alt="image-20230414174937591" style="zoom:50%;" /></p>
+<p><img src="C:\Users\11096\blog\source\_posts\前端学习笔记\JS\JavaScript高级程序设计（第4版）\Q4-JS-4语言基础（图灵）.assets\image-20230414164428406.png" alt="image-20230414164428406" style="zoom:50%;" /><img src="C:\Users\11096\blog\source\_posts\前端学习笔记\JS\JavaScript高级程序设计（第4版）\Q4-JS-4语言基础（图灵）.assets\image-20230414173434503.png" alt="image-20230414173434503" style="zoom:50%;" /></p>
+<p>​								</p>
+<h6 id="6-查嵌套对象的属性"><a href="#6-查嵌套对象的属性" class="headerlink" title="6.查嵌套对象的属性"></a>6.查嵌套对象的属性</h6><p>​		const ourStorage &#x3D; </p>
+<p>​		{<br>​		  “desk”: </p>
+<p>​			  {<br>​		   		 “drawer”: “stapler”<br>​		  	},<br>​		  “cabinet”: </p>
+<p>​			{<br>           	 “top drawer”:</p>
+<p>​						 {<br>                              “folder1”: “a file”,<br>                              “folder2”: <strong>“secrets”</strong><br>                        },<br>                “bottom drawer”: “soda”<br>              }<br>​		};</p>
+<p>​		<strong>ourStorage.cabinet[“top drawer”].folder2;</strong></p>
+<h6 id="7-复杂对象举例（JS的糅杂数据结构）"><a href="#7-复杂对象举例（JS的糅杂数据结构）" class="headerlink" title="7.复杂对象举例（JS的糅杂数据结构）"></a>7.复杂对象举例（JS的糅杂数据结构）</h6><p>const ourMusic &#x3D; [<br>  {<br>    “artist”: “Daft Punk”,<br>    “title”: “Homework”,<br>    “release_year”: 1997,<br>    “formats”: [<br>      “CD”,<br>      “Cassette”,<br>      “LP”<br>    ],<br>    “gold”: true<br>  }<br>];</p>
+<p><strong>提示：</strong>数组中有多个 JSON 对象的时候，对象与对象之间要用逗号隔开。</p>
+<h6 id="8-判断对象是否有指定属性"><a href="#8-判断对象是否有指定属性" class="headerlink" title="8.判断对象是否有指定属性"></a>8.判断对象是否有指定属性</h6><p>1.方法</p>
+<p>​		.hasOwnProperty(propname)</p>
+<p>2.举例</p>
+<p>​		myObj.hasOwnProperty(“top”);<br>​		myObj.hasOwnProperty(“middle”);</p>
+<h6 id="9-对象遍历for-in"><a href="#9-对象遍历for-in" class="headerlink" title="9.对象遍历for  in"></a>9.对象遍历for  in</h6><p>1.取属性名（而非整个属性）</p>
+<p>​		for(var k in son){</p>
+<p>​		console.log（k）;</p>
+<p>​		}</p>
+<p>2.取属性值(只能用【】不能用   .    )</p>
+<p>​		console.log（k.name);</p>
+<h3 id="4-4-9其它"><a href="#4-4-9其它" class="headerlink" title="4.4.9其它"></a>4.4.9其它</h3><h4 id="1-随机数"><a href="#1-随机数" class="headerlink" title="1.随机数"></a>1.随机数</h4><p>​	1.随机小数[0,1)</p>
+<p>​			let a&#x3D;Math.random();</p>
+<p>​	2.向下取整</p>
+<p>​			Math.floor(a) ；</p>
+<p>​	3.生成某范围内的随机数</p>
+<p>​			Math.floor(Math.random() * (myMax - myMin + 1) + myMin)；</p>
+<h4 id="2-递归"><a href="#2-递归" class="headerlink" title="2.递归"></a>2.递归</h4><p>​	1.</p>
+<p>​	2.</p>
+<p>​	3.</p>
  
       <!-- reward -->
       
