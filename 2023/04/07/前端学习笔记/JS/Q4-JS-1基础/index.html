@@ -88,7 +88,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">3.1k</span>
+            <span class="post-count">3.5k</span>
         </span>
     </span>
 
@@ -97,7 +97,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">13 分钟</span>
+            <span class="post-count">15 分钟</span>
         </span>
     </span>
 </div>
@@ -117,7 +117,7 @@
 </ul>
 <p>​		基础数据类型：number string boolean undefined null<br>​		引用类型:object(对象) array(数组)</p>
 <ul>
-<li><p><input disabled="" type="checkbox"> 
+<li><p><input checked="" disabled="" type="checkbox"> 
 2.string（字符串）</p>
 </li>
 <li><p><input checked="" disabled="" type="checkbox"> 
@@ -126,19 +126,19 @@
 <li><p><input checked="" disabled="" type="checkbox"> 
 ​		字符串的拼接(使用加号)</p>
 </li>
-<li><p><input disabled="" type="checkbox"> 
-​		字符串的访问 (string[0],或者charAt方法)</p>
+<li><p><input checked="" disabled="" type="checkbox"> 
+​		字符串的访问 (string[0],或者<strong>charAt方法</strong>)</p>
 </li>
 <li><p><input checked="" disabled="" type="checkbox"> 
 ​		换行符号(\n)</p>
 </li>
-<li><p><input disabled="" type="checkbox"> 
+<li><p><input checked="" disabled="" type="checkbox"> 
 ​		转义(&quot;hello&quot;)</p>
 </li>
-<li><p><input disabled="" type="checkbox"> 
+<li><p><input checked="" disabled="" type="checkbox"> 
 ​		string的方法: <a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_string_methods.asp">https://www.w3school.com.cn/js/js_string_methods.asp</a></p>
 </li>
-<li><p><input disabled="" type="checkbox"> 
+<li><p><input checked="" disabled="" type="checkbox"> 
 3.object （对象）</p>
 </li>
 <li><p><input checked="" disabled="" type="checkbox"> 
@@ -166,16 +166,14 @@
 <li><p><input checked="" disabled="" type="checkbox"> 
 ​		对象的访问 (object.a 访问object的a属性)</p>
 </li>
-<li><p><input disabled="" type="checkbox"> 
+<li><p><input checked="" disabled="" type="checkbox"> 
 ​		了解对象的引用</p>
 <p>​			var a &#x3D; {b:1}  var c &#x3D; a</p>
 <p>​			a.b &#x3D; 2 </p>
-<p>​			console.log(c.b) &#x2F;&#x2F; 打印c</p>
+<p>​			console.log(c.b) &#x2F;&#x2F; 打印c.b&#x3D;1</p>
+<p>​			&#x2F;&#x2F; 从引用的角度去思考，为什么对象c发生了变化。可以用展开运算符…来定义一个新的对象</p>
 </li>
-<li><p><input disabled="" type="checkbox"> 
-​			&#x2F;&#x2F; 从引用的角度去思考，为什么对象c发生了变化</p>
-</li>
-<li><p><input disabled="" type="checkbox"> 
+<li><p><input checked="" disabled="" type="checkbox"> 
 ​		object的方法 <a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_object_methods.asp">https://www.w3school.com.cn/js/js_object_methods.asp</a></p>
 </li>
 <li><p><input checked="" disabled="" type="checkbox"> 
@@ -274,28 +272,35 @@
 <h5 id="1-分类-1"><a href="#1-分类-1" class="headerlink" title="1.分类"></a>1.分类</h5><p>​				1.unmber数字类型</p>
 <p>​						整数：4字节32位</p>
 <p>​						小数（浮点数）：8字节64位</p>
-<p>​				2.string字符串</p>
+<p>​				2.string字符串                         </p>
+<p>​						方法: <a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_string_methods.asp">https://www.w3school.com.cn/js/js_string_methods.asp</a></p>
+<p>​						转义:斜杠(\ “hello \ “)</p>
+<p>​						方法：</p>
+<p>​								charAt() - 返回指定索引位置的字符<br>​								<strong>charCodeAt() - 返回指定索引位置字符的 Unicode 编码</strong><br>​								<strong>concat() - 连接两个字符串</strong><br>​								endsWith() - 检查字符串是否以指定的字符结束<br>​								<strong>includes() - 检查字符串是否包含指定的字符</strong><br>​								indexOf() - 检索字符首次出现的索引位置<br>​								lastIndexOf() - 从后向前检索字符最后一次出现的索引位置<br>​								<strong>localeCompare() - 根据本地排序规则比较两个字符串</strong><br>​								<strong>match() - 找到一个或多个正则表达式的匹配</strong><br>​								<strong>replace() - 替换与正则表达式匹配的子串</strong><br>​								<strong>search() - 检索与正则表达式相匹配的值</strong><br>​								<strong>slice() - 提取字符串的片断,并返回新的字符串</strong><br>​								<strong>split() - 把字符串分割为字符串数组</strong><br>​								startsWith() - 检查字符串是否以指定的字符开始<br>​								substring() - 提取字符串中两个指定的索引位置之间的字符<br>​								toLowerCase() - 转换字符串为小写<br>​								toUpperCase() - 转换字符串为大写<br>​								trim() - 移除字符串首尾空白</p>
+<p>例如:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">js</span><br><span class="line">let str = &quot;Hello World!&quot;;</span><br><span class="line"></span><br><span class="line">str.charAt(0);     // H</span><br><span class="line">str.concat(&quot;Claude&quot;); // Hello World!Claude</span><br><span class="line">str.endsWith(&quot;d!&quot;);  // true</span><br><span class="line">str.includes(&quot;o&quot;);   // true </span><br><span class="line">str.indexOf(&quot;o&quot;);    // 4</span><br><span class="line">str.lastIndexOf(&quot;o&quot;); // 7 </span><br><span class="line">str.match(/o/g);     // [&quot;o&quot;, &quot;o&quot;, &quot;o&quot;]</span><br><span class="line">str.replace(&quot;o&quot;, &quot;_&quot;); // Hell_ W_rld!</span><br><span class="line">str.slice(0, 5);     // Hello</span><br><span class="line">str.split(&quot; &quot;);      // [&quot;Hello&quot;, &quot;World!&quot;]</span><br><span class="line">str.startsWith(&quot;He&quot;); // true</span><br><span class="line">str.substring(0, 5);  // Hello </span><br><span class="line">str.toUpperCase();   // HELLO WORLD!</span><br></pre></td></tr></table></figure>
+
 <p>​				3.boolean布尔</p>
 <p>​				4.null空</p>
 <p>​				5.undefined未定义		声明变量未赋值，访问对象不存在</p>
 <p>​					</p>
 <h5 id="2-数据转换"><a href="#2-数据转换" class="headerlink" title="2.数据转换"></a>2.数据转换</h5><p>​				取类型并赋值：typeof（）</p>
 <p>​										   作用：判断变量是否未定义的同时，避免抛出错误。</p>
-<p>​												  	<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408212824971.png" alt="image-20230408212824971" style="zoom:50%;" /></p>
+<p>​												  	<img src="../其它/markdown-img\Q4-JS-1基础.assets\image-20230408212824971.png" alt="image-20230408212824971" style="zoom:50%;" /></p>
 <p>​				判断是否为数字类型：isNaN</p>
 <p>​				强制转换字符串：变量.toString（）</p>
 <p>​				强制转换整数（小数点后的全部舍掉）：parseInt（数据）；</p>
 <p>​				强制转换小数：parseFloat（数据）；</p>
 <p>​										易错点：如果数据里包含非数字型数据，则会输出转换好的数据，并停止转换异常数据。</p>
 <p>​										例子：var  i &#x3D; parseFloat（13.2你好442）；将会输出13.2。</p>
-<h4 id="2-引用类型"><a href="#2-引用类型" class="headerlink" title="2.引用类型"></a>2.引用类型</h4><h2 id="5-运算符"><a href="#5-运算符" class="headerlink" title="5.运算符"></a>5.运算符</h2><h4 id="1-算数运算符"><a href="#1-算数运算符" class="headerlink" title="1.算数运算符"></a>1.算数运算符</h4><h4 id="2-关系运算符"><a href="#2-关系运算符" class="headerlink" title="2.关系运算符"></a>2.关系运算符</h4><p>​				<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408111058932.png" alt="image-20230408111058932" style="zoom: 33%;" /></p>
+<h4 id="2-引用类型"><a href="#2-引用类型" class="headerlink" title="2.引用类型"></a>2.引用类型</h4><h2 id="5-运算符"><a href="#5-运算符" class="headerlink" title="5.运算符"></a>5.运算符</h2><h4 id="1-算数运算符"><a href="#1-算数运算符" class="headerlink" title="1.算数运算符"></a>1.算数运算符</h4><h4 id="2-关系运算符"><a href="#2-关系运算符" class="headerlink" title="2.关系运算符"></a>2.关系运算符</h4><p>​				<img src="../其它/markdown-img\Q4-JS-1基础.assets\image-20230408111058932.png" alt="image-20230408111058932" style="zoom: 33%;" /></p>
 <p>​					</p>
 <p>​					&#x3D;&#x3D;与&#x3D;&#x3D;&#x3D;的区别：&#x3D;&#x3D;会使两侧进行类型转换，并比较。&#x3D;&#x3D;&#x3D;会严格比较类型和数据。</p>
-<h4 id="3-逻辑运算符"><a href="#3-逻辑运算符" class="headerlink" title="3.逻辑运算符"></a>3.逻辑运算符</h4><p>​					<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408111154450.png" alt="image-20230408111154450" style="zoom: 50%;" /></p>
+<h4 id="3-逻辑运算符"><a href="#3-逻辑运算符" class="headerlink" title="3.逻辑运算符"></a>3.逻辑运算符</h4><p>​					<img src="../其它/markdown-img\Q4-JS-1基础.assets\image-20230408111154450.png" alt="image-20230408111154450" style="zoom: 50%;" /></p>
 <h4 id="4-条件-x2F-三目运算符"><a href="#4-条件-x2F-三目运算符" class="headerlink" title="4.条件&#x2F;三目运算符"></a>4.条件&#x2F;三目运算符</h4><p>​					普通：</p>
-<p>​					<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408111436303.png" alt="image-20230408111436303" style="zoom:33%;" /></p>
+<p>​					<img src="../其它/markdown-img\Q4-JS-1基础.assets\image-20230408111436303.png" alt="image-20230408111436303" style="zoom:33%;" /></p>
 <p>​					嵌套：</p>
-<p>​					<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408111514675.png" alt="image-20230408111514675" style="zoom:33%;" /></p>
+<p>​					<img src="../其它/markdown-img\Q4-JS-1基础.assets\image-20230408111514675.png" alt="image-20230408111514675" style="zoom:33%;" /></p>
 <h2 id="6-标签（label）"><a href="#6-标签（label）" class="headerlink" title="6.标签（label）"></a>6.标签（label）</h2><p>JavaScript 语言允许，语句的前面有标签（label），相当于定位符，用于跳转到程序的任意位置，标签的格式如下。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">label:</span><br><span class="line">  语句</span><br></pre></td></tr></table></figure>
 
@@ -314,14 +319,14 @@
 <p>上面代码中，<code>continue</code>命令后面有一个标签名，满足条件时，会跳过当前循环，直接进入下一轮外层循环。如果<code>continue</code>语句后面不使用标签，则只能进入下一轮的内层循环。</p>
 <h2 id="7-分支语句"><a href="#7-分支语句" class="headerlink" title="7.分支语句"></a>7.分支语句</h2><p>1.if else</p>
 <p>2.switch-case：优先用于等值判断</p>
-<p>​						  <img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408111942096.png" alt="image-20230408111942096" style="zoom:33%;" /></p>
+<p>​						  <img src="./markdown-img\Q4-JS-1基础.assets\image-20230408111942096.png" alt="image-20230408111942096" style="zoom:33%;" /></p>
 <p>​				1.break</p>
 <p>​				2.<strong>continue用于立即终止本轮循环，返回循环结构的头部，开始下一轮循环。</strong></p>
-<p>​						<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408205506290.png" alt="image-20230408205506290" style="zoom: 50%;" /></p>
+<p>​						<img src="../其它/markdown-img\Q4-JS-1基础.assets\image-20230408205506290.png" alt="image-20230408205506290" style="zoom: 50%;" /></p>
 <p>7.循环</p>
 <p>1.while</p>
 <p>2.do while：先执行再判断</p>
-<p>​							<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408112304642.png" alt="image-20230408112304642" style="zoom:33%;" /></p>
+<p>​							<img src="../其它/markdown-img\Q4-JS-1基础.assets\image-20230408112304642.png" alt="image-20230408112304642" style="zoom:33%;" /></p>
 <p>3.for</p>
 <p>for in循环会遍历对象上所有可枚举的属性，包括从原型链继承下来的属性。 例如：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const obj = &#123; a: 1, b: 2, c: 3 &#125;;</span><br><span class="line">for (let prop in obj) &#123;</span><br><span class="line">  console.log(prop);</span><br><span class="line">&#125;</span><br><span class="line">// 输出 a, b, c</span><br></pre></td></tr></table></figure>
@@ -340,13 +345,13 @@
 <p>​											3.查找不用遍历，也无法遍历。</p>
 <h5 id="2-创建方式"><a href="#2-创建方式" class="headerlink" title="2.创建方式"></a>2.创建方式</h5><p>​											1.创建空数组</p>
 <p>​											2.以自定义字符串为下标，给数组赋值</p>
-<p>​												<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408132738093.png" alt="image-20230408132738093" style="zoom: 25%;" /></p>
+<p>​												<img src="../其它/markdown-img\Q4-JS-1基础.assets\image-20230408132738093.png" alt="image-20230408132738093" style="zoom: 25%;" /></p>
 <h5 id="3-易错点"><a href="#3-易错点" class="headerlink" title="3.易错点"></a>3.易错点</h5><p>​											不能用for循环，不能遍历，和存储位置无关</p>
-<p>​											<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408133014313.png" alt="image-20230408133014313" style="zoom: 33%;" /></p>
+<p>​											<img src="../其它/markdown-img\Q4-JS-1基础.assets\image-20230408133014313.png" alt="image-20230408133014313" style="zoom: 33%;" /></p>
 <h3 id="3-数组API"><a href="#3-数组API" class="headerlink" title="3.数组API"></a>3.数组API</h3><h5 id="1-String-arr-；数组转字符串"><a href="#1-String-arr-；数组转字符串" class="headerlink" title="1.String(arr)；数组转字符串"></a>1.String(arr)；<strong>数组转字符串</strong></h5><p>​											概念：转化成字符串，并用逗号隔开。</p>
 <p>​											作用：打印出arr，判断一下数据有没有被更改过。</p>
 <h5 id="2-arr-join-“连接符”-；拼接数组元素"><a href="#2-arr-join-“连接符”-；拼接数组元素" class="headerlink" title="2.arr.join(“连接符”)；拼接数组元素"></a>2.arr.join(“连接符”)；<strong>拼接数组元素</strong></h5><p>​									概念：将array中每个部分，用”连接符“连接成字符串</p>
-<p>​												<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408135220827.png" alt="image-20230408135220827" style="zoom:25%;" /></p>
+<p>​												<img src="../其它/markdown-img\Q4-JS-1基础.assets\image-20230408135220827.png" alt="image-20230408135220827" style="zoom:25%;" /></p>
 <p>​									作用1：判断数组为空。</p>
 <p>​									作用2：字符串连接，将数组转化为html内容。<strong>（动态页面）</strong></p>
 <p>​												方法1：”&lt;开始1&gt;&lt;开始2&gt;”+arr.join(“&lt;&#x2F;结束2&gt;&lt;开始2&gt;”)+”&lt;&#x2F;结束2&gt;&lt;&#x2F;结束1&gt;“</p>
@@ -357,7 +362,7 @@
 <p>​												1.选取一个范围的：选取arr[index1]~arr[index2]的值。</p>
 <p>​												2.选取到尾部的：arr.slice(index1)省略第二个值。</p>
 <p>​												3.复制数组：arr.slice(0,arr.length)&#x3D;&#x3D;&#x3D;arr.slice();</p>
-<p>​								2.例子：<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408151232135.png" alt="image-20230408151232135" style="zoom:33%;" /></p>
+<p>​								2.例子：<img src="../其它/markdown-img\Q4-JS-1基础.assets\image-20230408151232135.png" alt="image-20230408151232135" style="zoom:33%;" /></p>
 <p>​								3.重点：下标可以用负数</p>
 <h3 id="4-arr-splice增删改数组元素"><a href="#4-arr-splice增删改数组元素" class="headerlink" title="4.arr.splice增删改数组元素"></a>4.arr.splice<strong>增删改数组元素</strong></h3><p>​								注：是改变数组本身，而不是引用。<strong>删除和插入的元素个数不必一致，数组下标会自动后移。</strong></p>
 <h5 id="1-增"><a href="#1-增" class="headerlink" title="1.增"></a>1.增</h5><p>​								1.arr.splice(start,<strong>0</strong>,var1,var2….varn);</p>
@@ -367,7 +372,7 @@
 <p>​										删除从start开始的（含start）n个元素，并用n种var填充。</p>
 <p>​								2.arr.splice(start,n,<strong>…arr2</strong>);</p>
 <p>​										删除从start开始的（含start）n个元素，并用数组的所有值填充。<strong>易错点：…必须有</strong></p>
-<p>​								3.例<img src="C:\Users\11096\blog\source\_posts\前端学习笔记\Q4-JS-1基础.assets\image-20230408155222560.png" alt="image-20230408155222560" style="zoom: 50%;" /></p>
+<p>​								3.例<img src="../其它/markdown-img\Q4-JS-1基础.assets\image-20230408155222560.png" alt="image-20230408155222560" style="zoom: 50%;" /></p>
 <h4 id="5-颠倒arr-reverse"><a href="#5-颠倒arr-reverse" class="headerlink" title="5.颠倒arr.reverse();"></a>5.颠倒arr.reverse();</h4><p>​							只颠倒，不排序。</p>
 <h4 id="6-排序arr-sort"><a href="#6-排序arr-sort" class="headerlink" title="6.排序arr.sort();"></a>6.排序arr.sort();</h4><p>​							缺点：默认将所有类型转成字符串，再从小到大排序。</p>
 <p>​							解决方法：重构比较函数。</p>

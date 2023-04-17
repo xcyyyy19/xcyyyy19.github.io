@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>CSS学习笔记-2.2选择器 |  Pravite Home</title>
+      <title>JS学习笔记-4.3脚本加载（图灵） |  Pravite Home</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -57,7 +57,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-前端学习笔记/CSS/Q3-CSS-2选择器"
+  id="post-前端学习笔记/JS/JavaScript高级程序设计（第4版）&amp;&amp;阮一峰JS教程/Q4-JS-3脚本加载基础（图灵）"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -68,7 +68,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  CSS学习笔记-2.2选择器
+  JS学习笔记-4.3脚本加载（图灵）
 </h1>
  
 
@@ -76,8 +76,8 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q3-CSS-2%E9%80%89%E6%8B%A9%E5%99%A8/" class="article-date">
-  <time datetime="2023-03-28T03:34:47.000Z" itemprop="datePublished">2023-03-28</time>
+      <a href="/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AC%AC4%E7%89%88%EF%BC%89&&%E9%98%AE%E4%B8%80%E5%B3%B0JS%E6%95%99%E7%A8%8B/Q4-JS-3%E8%84%9A%E6%9C%AC%E5%8A%A0%E8%BD%BD%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/" class="article-date">
+  <time datetime="2023-04-07T03:34:47.000Z" itemprop="datePublished">2023-04-07</time>
 </a> 
   <div class="article-category">
     <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
@@ -88,7 +88,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">157</span>
+            <span class="post-count">1.8k</span>
         </span>
     </span>
 
@@ -97,7 +97,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1 分钟</span>
+            <span class="post-count">6 分钟</span>
         </span>
     </span>
 </div>
@@ -112,101 +112,50 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="CSS学习笔记-2-2选择器"><a href="#CSS学习笔记-2-2选择器" class="headerlink" title="CSS学习笔记-2.2选择器"></a>CSS学习笔记-2.2选择器</h1><h4 id="选择器字典"><a href="#选择器字典" class="headerlink" title="选择器字典"></a>选择器字典</h4><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Attribute_selectors">属性选择器 - CSS：层叠样式表 | MDN (mozilla.org)</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2009/03/css_selectors.html">CSS选择器笔记 - 阮一峰的网络日志 (ruanyifeng.com)</a></p>
-<p><a target="_blank" rel="noopener" href="https://frontend30.com/css-selectors-cheatsheet/">CSS Selectors Cheatsheet - FrontEnd30</a></p>
-<h4 id="选择器的优先级"><a href="#选择器的优先级" class="headerlink" title="选择器的优先级"></a>选择器的优先级</h4><p><img src="/.%5CQ3%5Cimage-20230401185155310.png" alt="image-20230401185155310"></p>
-<h4 id="选择器的构成"><a href="#选择器的构成" class="headerlink" title="选择器的构成"></a>选择器的构成</h4><p>选择器分为符号和框架</p>
-<p>关系选择符：＄ ~ # ^等（可组合到框架中）</p>
-<p>框架：[ ] , nth-of-child等 </p>
-<h2 id="一-基本选择器"><a href="#一-基本选择器" class="headerlink" title="一.基本选择器"></a>一.基本选择器</h2><h3 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h3><ol>
-<li><h6 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h6><ul>
-<li>#id</li>
-</ul>
-</li>
-<li><h6 id="易错点"><a href="#易错点" class="headerlink" title="易错点"></a>易错点</h6><ul>
-<li>id不能有任何数字</li>
-</ul>
-</li>
-</ol>
-<h3 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h3><p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404152420883.png" alt="image-20230404152420883" style="zoom: 50%;" /><img src=".\Q3\image-20230404152441816.png" alt="image-20230404152441816" style="zoom:50%;" /></p>
-<h6 id=""><a href="#" class="headerlink" title=""></a><img src=".\Q3\1680587935181.png" alt="1680587935181" style="zoom:50%;" /></h6><p>元素[属性1] [属性2]</p>
+  <h1 id="4-3脚本的加载时机"><a href="#4-3脚本的加载时机" class="headerlink" title="4.3脚本的加载时机"></a>4.3脚本的加载时机</h1><h2 id="4-3-1script标签"><a href="#4-3-1script标签" class="headerlink" title="4.3.1script标签"></a>4.3.1script标签</h2><h3 id="1-属性"><a href="#1-属性" class="headerlink" title="1.属性"></a>1.属性</h3><p>​	1.crossorigin：可选。</p>
+<p>​		配置相关请求的CORS（跨源资源共享）设置。默认不使用CORS。	</p>
 <ul>
-<li>同时有两个选择的元素</li>
+<li>​				crossorigin&#x3D;  “anonymous”配置文件请求不必设置凭据标志。</li>
+<li>​				crossorigin&#x3D;”use-credentials”设置凭据 标志，意味着出站请求会包含凭据。</li>
 </ul>
-<p>元素[属性&#x3D;值] 	</p>
+<p>​	2.integrity：可选。</p>
+<p>​			允许比对加密签名以验证子资源完整性。用于确保中介网没有恶意篡改。</p>
+<p>​	3.async：异步执行脚本, 可选。</p>
+<p>​			表示立即开始下载脚本文件，但不会阻止其他资源的下载（如图片、CSS 等），也不会等待页面完全加载完毕</p>
+<p>​			与<code>defer</code>不同的是，标记为<code>async</code>的脚本<strong>并不保证能按照它们出现的次序执行</strong>。</p>
+<p>​			因此，该属性常用于不需要等待页面加载完毕就可以立即执行的脚本。</p>
+<p>​	4.defer：可选。</p>
+<p>​			表示<strong>外部脚本</strong>可以延迟到文档完全被解析和显示之后再执行。</p>
+<p>​			因此，该属性常用于，我们想要延迟脚本的执行的情况。</p>
+<p>5.举例</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">3.async实例</span><br><span class="line">    &lt;h1&gt;async 示例&lt;/h1&gt;</span><br><span class="line">    &lt;script src=&quot;./example.js&quot; async&gt;&lt;/script&gt;</span><br><span class="line">    &lt;p&gt;此段文字不受脚本影响，可瞬间加载。&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">由于 async 属性的作用，浏览器会立即下载该 JavaScript 文件，并在下载完成后会立即执行其中的代码。同时，页面内容也会立即显示出来，而不必等待 JavaScript 文件的下载和执行。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">4.defer实例</span><br><span class="line">    &lt;h1&gt;defer 示例&lt;/h1&gt;</span><br><span class="line">    &lt;script src=&quot;./example.js&quot; defer&gt;&lt;/script&gt;</span><br><span class="line">    &lt;p&gt;此段文字受脚本影响，需要等待脚本完成执行后才能完全加载。&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">由于 defer 属性的作用，浏览器会延迟 JavaScript 文件的执行，直到页面完全加载完毕并且 JavaScript 文件下载完成后才会执行其中的代码。在执行完脚本后，页面内容也会完全显示出来。需要注意的是，如果有多个带有 defer 属性的脚本文件，它们会按照它们在文档中出现的顺序依次执行。</span><br><span class="line"></span><br><span class="line">综上所述，async 和 defer 属性可以用来控制 JavaScript 文件的下载和执行时间，从而优化页面加载速度和用户体验。</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-3-2动态加载脚本（未细看）"><a href="#4-3-2动态加载脚本（未细看）" class="headerlink" title="4.3.2动态加载脚本（未细看）"></a>4.3.2动态加载脚本（未细看）</h2><h3 id="1-本质"><a href="#1-本质" class="headerlink" title="1.本质"></a>1.本质</h3><p>因为JavaScript可以使用DOM API，所以通过向DOM中动态添加<code>script</code>元素同样可以加载指定的脚本。只要创建一个<code>script</code>元素并将其添加到DOM即可。</p>
+<h3 id="2-实例"><a href="#2-实例" class="headerlink" title="2.实例"></a>2.实例</h3><p>JavaScript 代码可以通过创建 script 元素并将其添加到 DOM 中的方式来加载脚本。以下是一个示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码// 创建一个 script 元素</span><br><span class="line">let script = document.createElement(&#x27;script&#x27;);</span><br><span class="line">// 设置该 script 元素要加载的 JavaScript 脚本文件路径</span><br><span class="line">script.src = &#x27;gibberish.js&#x27;;</span><br><span class="line">// 将创建的 script 元素添加到 head 元素中</span><br><span class="line">document.head.appendChild(script);</span><br></pre></td></tr></table></figure>
+
+<p>这段代码首先使用 <code>document.createElement()</code> 方法创建一个 <code>script</code> 元素，然后将要加载的 JavaScript 文件路径设置为 <code>script.src</code> 属性的值，并将创建的 <code>script</code> 元素添加到了 <code>head</code> 元素中。</p>
+<p>需要注意的是，默认情况下以这种方式创建的 <code>script</code> 元素都是以异步方式加载的，相当于添加了 <code>async</code> 属性。这意味着，当执行到上述代码时，浏览器会立即开始下载指定的 JavaScript 文件，但不会阻止其他资源（如图片、CSS 等）的下载，也不会等待页面内容完全加载完毕。</p>
+<p>如果要统一动态脚本的加载行为，可以明确设置为同步加载。在上述示例代码中，只需要为创建的 <code>script</code> 元素设置 <code>async</code> 属性的值为 <code>false</code> 即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码// 创建一个 script 元素</span><br><span class="line">let script = document.createElement(&#x27;script&#x27;);</span><br><span class="line">// 设置该 script 元素要加载的 JavaScript 脚本文件路径</span><br><span class="line">script.src = &#x27;gibberish.js&#x27;;</span><br><span class="line">// 明确设置该 script 元素以同步方式加载</span><br><span class="line">script.async = false;</span><br><span class="line">// 将创建的 script 元素添加到 head 元素中</span><br><span class="line">document.head.appendChild(script);</span><br></pre></td></tr></table></figure>
+
+<p>需要注意的是，以这种方式获取的资源对浏览器预加载器是不可见的，这意味着它们在资源获取队列中的优先级比较低。如果想要让预加载器知道这些动态请求的文件存在，可以在文档头部显式声明它们：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html复制代码&lt;!-- 显式声明要预加载的 JavaScript 文件 --&gt;</span><br><span class="line">&lt;link rel=&quot;preload&quot; href=&quot;gibberish.js&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在上述示例代码中，使用 <code>rel</code> 属性值为 <code>preload</code> 来声明该文件是要预加载的，<code>href</code> 属性指定要加载的文件路径。</p>
+<p>总之，通过动态创建 <code>script</code> 标签并将其添加到 DOM 中的方式来加载 JavaScript 脚本，可以灵活地控制 JavaScript 的加载时间，提高页面性能。但需要注意的是，如果使用异步加载，可能会影响页面其他资源的下载和渲染，而如果使用同步加载，则可能会影响页面的加载速度。因此，需要根据具体情况进行权衡和选择。</p>
+<h2 id="4-3-3弱类型进行转换"><a href="#4-3-3弱类型进行转换" class="headerlink" title="4.3.3弱类型进行转换"></a>4.3.3弱类型进行转换</h2><p>​		JS是弱类型，想要类型转换不用强制类型转换</p>
+<p>​		var  a&#x3D;“asdf”；</p>
+<p>​		a&#x3D;100；&#x2F;&#x2F;a由string类型转换为number类型。</p>
+<h2 id="4-3-4小结"><a href="#4-3-4小结" class="headerlink" title="4.3.4小结"></a>4.3.4小结</h2><p>JavaScript是通过<code>&lt;script&gt;</code>元素插入到HTML页面中的。这个元素可用于把JavaScript代码嵌入到HTML页面中，跟其他标记混合在一起，也可用于引入保存在外部文件中的JavaScript。本章的重点可以总结如下。</p>
 <ul>
-<li>属性的值&#x3D;值的元素</li>
-<li>a[href&#x3D;”<a target="_blank" rel="noopener" href="https://example.org"]">https://example.org&quot;]</a></li>
+<li>要包含外部JavaScript文件，必须将<code>src</code>属性设置为要包含文件的URL。文件可以跟网页在同一台服务器上，也可以位于完全不同的域。</li>
+<li>所有<code>&lt;script&gt;</code>元素会依照它们在网页中出现的次序被解释。在不使用<code>defer</code>和<code>async</code>属性的情况下，包含在<code>&lt;script&gt;</code>元素中的代码必须严格按次序解释。</li>
+<li>对不推迟执行的脚本，浏览器必须解释完位于<code>&lt;script&gt;</code>元素中的代码，然后才能继续渲染页面的剩余部分。为此，通常应该把<code>&lt;script&gt;</code>元素放到页面末尾，介于主内容之后及<code>&lt;/body&gt;</code>标签之前。</li>
+<li>可以使用<code>defer</code>属性把脚本推迟到文档渲染完毕后再执行。推迟的脚本原则上按照它们被列出的次序执行。</li>
+<li>可以使用<code>async</code>属性表示脚本不需要等待其他脚本，同时也不阻塞文档渲染，即异步加载。异步脚本不能保证按照它们在页面中出现的次序执行。</li>
+<li>通过使用<code>&lt;noscript&gt;</code>元素，可以指定在浏览器不支持脚本时显示的内容。如果浏览器支持并启用脚本，则<code>&lt;noscript&gt;</code>元素中的任何内容都不会被渲染。</li>
 </ul>
-<p>元素[属性^&#x3D;开头值]</p>
-<ul>
-<li>[attr^&#x3D;value]：表示带有以 <em>attr</em> 命名的属性，且属性值是以 <em>value</em> 开头的元素。</li>
-</ul>
-<p>元素[属性$&#x3D;结尾值]</p>
-<ul>
-<li><p>属性的值的结尾是”结尾值“的元素。</p>
-</li>
-<li><p>a[href$&#x3D;”.org”]：存在 href 属性并且属性值结尾是”.org”的 <a> 元素</p>
-</li>
-</ul>
-<p>元素[属性*&#x3D;”值“]</p>
-<ul>
-<li>属性的值包含”值“的元素</li>
-</ul>
-<p>元素[属性~&#x3D;值]</p>
-<ul>
-<li><p>属性的值包含”值“的元素，该属性是一个以空格作为分隔的值列表</p>
-</li>
-<li><p>a[class~&#x3D;”logo”]：存在 class 属性并且属性值包含单词”logo”的<a>元素</p>
-</li>
-</ul>
-<p>元素[       i]</p>
-<ul>
-<li>在属性选择器的右方括号前添加一个用空格隔开的字母 <code>i</code>（或 <code>I</code>），可以在匹配属性值时忽略大小写（支持 ASCII 字符范围之内的字母）。</li>
-</ul>
-<p>元素[		s]</p>
-<ul>
-<li>在属性选择器的右方括号前添加一个用空格隔开的字母 <code>s</code>（或 <code>S</code>），可以在匹配属性值时区分大小写（支持 ASCII 字符范围之内的字母）。</li>
-</ul>
-<h3 id="3-元素选择器"><a href="#3-元素选择器" class="headerlink" title="3.元素选择器"></a>3.元素选择器</h3><h4 id="通用元素选择器"><a href="#通用元素选择器" class="headerlink" title="通用元素选择器"></a>通用元素选择器</h4><ul>
-<li></li>
-</ul>
-<p>**【【【【【【没有找到】】】】】】】</p>
-<h4 id="同级元素通用选择器"><a href="#同级元素通用选择器" class="headerlink" title="同级元素通用选择器"></a>同级元素通用选择器</h4><img src=".\Q3\image-20230404151520256.png" alt="image-20230404151520256" style="zoom:50%;" />
-
-<h4 id="多元素的组合选择器"><a href="#多元素的组合选择器" class="headerlink" title="多元素的组合选择器"></a>多元素的组合选择器</h4><img src=".\Q3\1680592298848.png" alt="1680592298848" style="zoom: 50%;" />
-
-<h2 id="二-关系型选择器"><a href="#二-关系型选择器" class="headerlink" title="二.关系型选择器"></a>二.关系型选择器</h2><p>子选择器<img src=".\Q3\image-20230404132255364.png" alt="image-20230404132255364" style="zoom:50%;" /></p>
-<p>后代选择器<img src=".\Q3\image-20230404132326607.png" alt="image-20230404132326607" style="zoom: 50%;" /></p>
-<p>相邻兄弟选择器<img src=".\Q3\image-20230404133357624.png" alt="image-20230404133357624" style="zoom:50%;" /></p>
-<p>通用兄弟选择<img src=".\Q3\image-20230404133450743.png" alt="image-20230404133450743" style="zoom:50%;" /></p>
-<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Column_combinator">列组合器</a> </p>
-<p><code>||</code> 组合器选择属于某个表格行的节点。</p>
-<p><strong>语法：</strong><code>A || B</code></p>
-<p><strong>例子：</strong><code>col || td</code> 会匹配所有 作用域内的td元素。</p>
-<p>独子选择器<img src=".\Q3\image-20230404133754657.png" alt="image-20230404133754657" style="zoom:50%;" />		a 表示选择a元素的独子，b表示如果b是独子则被选择</p>
-<p>第 N 个最后一个子选择器<img src=".\Q3\image-20230404134515253.png" alt="image-20230404134515253" style="zoom:50%;" /></p>
-<p>首项选择器<img src=".\Q3\image-20230404134548820.png" alt="image-20230404134548820" style="zoom:50%;" />可以根据元素、属性进行选择</p>
-<p>尾项选择器<img src=".\Q3\image-20230404134901176.png" alt="image-20230404134901176" style="zoom:50%;" />尾属性的class不等于x则不选任何东西</p>
-<h2 id="三-伪类选择器"><a href="#三-伪类选择器" class="headerlink" title="三.伪类选择器"></a>三.伪类选择器</h2><p>用户界面伪类选择器</p>
-<img src=".\Q3\image-20230404150313528.png" alt="image-20230404150313528" style="zoom: 50%;" />
-
-<img src=".\Q3\image-20230404150546942.png" alt="image-20230404150546942" style="zoom:50%;" />
-
-<img src=".\Q3\image-20230404152535460.png" alt="image-20230404152535460" style="zoom:50%;" />
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">两个写法相同的选择器，意思为子元素的父元素的第n个子元素</span><br><span class="line">父元素 子元素：nth-child(1)</span><br><span class="line">父元素 子元素：first-child</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/*意思是.dot的父元素的第二个孩子*/</span><br><span class="line">.bg2 .dot:nth-child(2)&#123;</span><br><span class="line">    align-self: flex-end;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>反选伪类选择器<img src=".\Q3\image-20230404135618254.png" alt="image-20230404135618254" style="zoom:50%;" /></p>
-<p>看不懂</p>
-<img src=".\Q3\image-20230404152643373.png" alt="image-20230404152643373" style="zoom: 50%;" />
-
-<h2 id="四-伪元素选择器"><a href="#四-伪元素选择器" class="headerlink" title="四.伪元素选择器"></a>四.伪元素选择器</h2><img src=".\Q3\image-20230404150514659.png" alt="image-20230404150514659" style="zoom:50%;" />
-
-
-
-<h2 id="五-易错点"><a href="#五-易错点" class="headerlink" title="五.易错点"></a>五.易错点</h2><p>1.~：写在[ ]里表示字符串匹配，匹配到就选择。写在[ ]外表示通用兄弟选择器。</p>
  
       <!-- reward -->
       
@@ -271,12 +220,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q3-CSS-2%E9%80%89%E6%8B%A9%E5%99%A8/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AC%AC4%E7%89%88%EF%BC%89&&%E9%98%AE%E4%B8%80%E5%B3%B0JS%E6%95%99%E7%A8%8B/Q4-JS-3%E8%84%9A%E6%9C%AC%E5%8A%A0%E8%BD%BD%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li></ul>
 
     </footer>
   </div>
@@ -284,19 +233,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/" class="article-nav-link">
+      <a href="/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AC%AC4%E7%89%88%EF%BC%89&&%E9%98%AE%E4%B8%80%E5%B3%B0JS%E6%95%99%E7%A8%8B/Q4-JS-4%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            CSS学习笔记-1.1基本样式
+            JS学习笔记-4.4语言基础（图灵）
           
         </div>
       </a>
     
     
-      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note6/" class="article-nav-link">
+      <a href="/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AC%AC4%E7%89%88%EF%BC%89&&%E9%98%AE%E4%B8%80%E5%B3%B0JS%E6%95%99%E7%A8%8B/Q4-JS-5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">HTML学习笔记-6实践</div>
+        <div class="article-nav-title">JS学习笔记-4.5语法基础（阮一峰base）</div>
       </a>
     
   </nav>

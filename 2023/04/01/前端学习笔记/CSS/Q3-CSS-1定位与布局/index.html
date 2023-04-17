@@ -114,7 +114,7 @@
        
   <h1 id="CSS学习笔记-2-1盒子、定位与布局-三种重要布局及其它布局"><a href="#CSS学习笔记-2-1盒子、定位与布局-三种重要布局及其它布局" class="headerlink" title="CSS学习笔记-2.1盒子、定位与布局-三种重要布局及其它布局"></a>CSS学习笔记-2.1盒子、定位与布局-三种重要布局及其它布局</h1><p><a target="_blank" rel="noopener" href="https://www.icourse163.org/learn/BFU-1003382003?tid=1469987444#/learn/content?type=detail&id=1253020763&sm=1">Web前端开发_中国大学MOOC(慕课) (icourse163.org)</a></p>
 <h2 id="布局三种定位机制："><a href="#布局三种定位机制：" class="headerlink" title="布局三种定位机制："></a>布局三种定位机制：</h2><p>文档流（元素分类inlineblock.元素类型转换display）→浮动（float属性）→层（position属性）</p>
-<img src="C:\Users\11096\blog\source\pic\Q3\1680613753098.png" alt="1680613753098" style="zoom:50%;" />
+<img src=".\Q3\1680613753098.png" alt="1680613753098" style="zoom:50%;" />
 
 <h2 id="1-元素布局（终极布局，最好用）"><a href="#1-元素布局（终极布局，最好用）" class="headerlink" title="1.元素布局（终极布局，最好用）"></a>1.元素布局（终极布局，最好用）</h2><ol>
 <li><h3 id="灵活-x2F-弹性-x2F-伸缩布局flex"><a href="#灵活-x2F-弹性-x2F-伸缩布局flex" class="headerlink" title="灵活&#x2F;弹性&#x2F;伸缩布局flex"></a>灵活&#x2F;弹性&#x2F;伸缩布局flex</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Lp4y1S7XM/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">五分钟掌握 css3 flex弹性布局</a></p>
@@ -124,7 +124,7 @@
 <p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2015/07/flex-examples.html">https://www.ruanyifeng.com/blog/2015/07/flex-examples.html</a></p>
 <p>小青蛙游戏学flex</p>
 <p><a target="_blank" rel="noopener" href="http://flexboxfroggy.com/">Flexbox Froggy - A game for learning CSS flexbox</a></p>
-<h4 id="属性作用域分类："><a href="#属性作用域分类：" class="headerlink" title="属性作用域分类："></a>属性作用域分类：</h4><img src="C:\Users\11096\blog\source\pic\Q3\image-20230406114818874.png" alt="image-20230406114818874" style="zoom: 25%;" />
+<h4 id="属性作用域分类："><a href="#属性作用域分类：" class="headerlink" title="属性作用域分类："></a>属性作用域分类：</h4><img src=".\Q3\image-20230406114818874.png" alt="image-20230406114818874" style="zoom: 25%;" />
 
 
 
@@ -149,18 +149,18 @@
 <blockquote>
 <p>​	   row：行    column：柱子</p>
 </blockquote>
-<img src="C:\Users\11096\blog\source\pic\Q3\image-20230329190849686.png" alt="image-20230329190849686" style="zoom:50%;" />
+<img src=".\Q3\image-20230329190849686.png" alt="image-20230329190849686" style="zoom:50%;" />
 
 <p>​			<strong>flex-wrap：</strong>设置子元素是否换行</p>
 <p>​						nowrap 不换行	(装不下会缩小子元素的宽度)<br>​						wrap 换行</p>
 <p>​			<strong>justify-content：</strong>设置<strong>主轴</strong>上的子元素排列方式【【【【【不分单行多行吗？】】】】】】</p>
-<img src="C:\Users\11096\blog\source\pic\Q3\image-20230329190910922.png" alt="image-20230329190910922" style="zoom:50%;" />
+<img src=".\Q3\image-20230329190910922.png" alt="image-20230329190910922" style="zoom:50%;" />
 
 
 <p>​			<strong>align-items：</strong>设置<strong>辅轴</strong>上的子元素排列方式（单行）</p>
 <p>​						该属性是控制子项在侧轴上的排列方式 在子项为单行的时候使用<br>​						flex-start 从头部开始<br>​						flex-end 从尾部开始<br>​						center 居中显示<br>​						stretch 拉伸      拉伸高度直至完整的占据父元素的高度。</p>
 <p>​			<strong>align-content：</strong> 设置<strong>辅轴</strong>上的子元素的排列方式（多行）</p>
-<p>​				<img src="C:\Users\11096\blog\source\pic\Q3\image-20230329190910922.png" alt="image-20230329190910922" style="zoom: 50%;" /></p>
+<p>​				<img src=".\Q3\image-20230329190910922.png" alt="image-20230329190910922" style="zoom: 50%;" /></p>
 <p>​			align-content 和align-items区别<br>​						align-items 适用于单行情况下， 只有上对齐、下对齐、居中和 拉伸<br>​						align-content适用多行换行的情况（单行无效）</p>
 <p>​			<strong>flex-flow：</strong>复合属性，相当于同时设置了 flex-direction 和 flex-wrap</p>
 <p>3.flex布局子项常见属性【少用】<br>            flex子项目占的份数<br>            align-self控制子项自己在侧轴的排列方式<br>            order属性定义子项的排列顺序（前后顺序）<br>4.flex属性<br>            flex 属性定义子项目分配剩余空间，用flex来表示占多少份数。</p>
@@ -169,9 +169,9 @@
 <p>5.align-self控制子项自己在侧轴上的排列方式【少用】<br>            align-self 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖 align-items 属性。<br>            默认值为 auto，表示继承父元素的 align-items 属性，如果没有父元素，则等同于 stretch。</p>
 </li>
 <li><h3 id="网格布局Grid"><a href="#网格布局Grid" class="headerlink" title="网格布局Grid"></a>网格布局Grid</h3><p><a target="_blank" rel="noopener" href="https://www.runoob.com/css3/css-grid.html">CSS 网格布局 | 菜鸟教程 (runoob.com)</a></p>
-<h4 id="属性作用域分类：-1"><a href="#属性作用域分类：-1" class="headerlink" title="属性作用域分类："></a>属性作用域分类：</h4><img src="C:\Users\11096\blog\source\pic\Q3\image-20230406160133663.png" alt="image-20230406160133663" style="zoom:50%;" /></li>
+<h4 id="属性作用域分类：-1"><a href="#属性作用域分类：-1" class="headerlink" title="属性作用域分类："></a>属性作用域分类：</h4><img src=".\Q3\image-20230406160133663.png" alt="image-20230406160133663" style="zoom:50%;" /></li>
 </ol>
-<h4 id="知识点：-1"><a href="#知识点：-1" class="headerlink" title="知识点："></a>知识点：</h4><p>​					<img src="C:\Users\11096\blog\source\pic\Q3\image-20230406160552994.png" alt="image-20230406160552994" style="zoom: 25%;" /></p>
+<h4 id="知识点：-1"><a href="#知识点：-1" class="headerlink" title="知识点："></a>知识点：</h4><p>​					<img src=".\Q3\image-20230406160552994.png" alt="image-20230406160552994" style="zoom: 25%;" /></p>
 <h1 id="2-文档流定位（默认布局）"><a href="#2-文档流定位（默认布局）" class="headerlink" title="2.文档流定位（默认布局）"></a>2.文档流定位（默认布局）</h1><h1 id="（元素分类inlineblock-元素类型转换display）"><a href="#（元素分类inlineblock-元素类型转换display）" class="headerlink" title="（元素分类inlineblock.元素类型转换display）"></a>（元素分类inlineblock.元素类型转换display）</h1><p>元素分类：</p>
 <p>​			inline：两个inline元素之间会有一个间隙，需要去除。</p>
 <p>​			block：</p>
@@ -181,14 +181,14 @@
 <p>​			2.right</p>
 <p>​			3.top</p>
 <p>​			4.bottom</p>
-<h4 id="应用："><a href="#应用：" class="headerlink" title="应用："></a>应用：</h4><h4 id=""><a href="#" class="headerlink" title=""></a><img src="C:\Users\11096\blog\source\pic\Q3\image-20230405161130046.png" alt="image-20230405161130046" style="zoom: 33%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161204082.png" alt="image-20230405161204082" style="zoom:33%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161227150.png" alt="image-20230405161227150" style="zoom: 25%;" /></h4><h4 id="易错点：1注意浮动时，宽度是否够用的情况"><a href="#易错点：1注意浮动时，宽度是否够用的情况" class="headerlink" title="易错点：1注意浮动时，宽度是否够用的情况"></a>易错点：1注意浮动时，宽度是否够用的情况</h4><p>​					<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161350930.png" alt="image-20230405161350930" style="zoom: 25%;" /><img src="C:\Users\11096\blog\source\pic\Q3\image-20230405161312570.png" alt="image-20230405161312570" style="zoom: 25%;" /></p>
+<h4 id="应用："><a href="#应用：" class="headerlink" title="应用："></a>应用：</h4><h4 id=""><a href="#" class="headerlink" title=""></a><img src=".\Q3\image-20230405161130046.png" alt="image-20230405161130046" style="zoom: 33%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161204082.png" alt="image-20230405161204082" style="zoom:33%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161227150.png" alt="image-20230405161227150" style="zoom: 25%;" /></h4><h4 id="易错点：1注意浮动时，宽度是否够用的情况"><a href="#易错点：1注意浮动时，宽度是否够用的情况" class="headerlink" title="易错点：1注意浮动时，宽度是否够用的情况"></a>易错点：1注意浮动时，宽度是否够用的情况</h4><p>​					<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161350930.png" alt="image-20230405161350930" style="zoom: 25%;" /><img src=".\Q3\image-20230405161312570.png" alt="image-20230405161312570" style="zoom: 25%;" /></p>
 <h4 id="易错点：2浮动与flex互斥"><a href="#易错点：2浮动与flex互斥" class="headerlink" title="易错点：2浮动与flex互斥"></a>易错点：2浮动与flex互斥</h4><h4 id="clear清除浮动："><a href="#clear清除浮动：" class="headerlink" title="clear清除浮动："></a>clear清除浮动：</h4><p>​	易错点：清除某一方向的浮动不是把某方向上的浮动元素删除，</p>
 <p>​								而是该元素的某一方向不能有浮动元素。也就是说，该元素会另起一行。</p>
 <p>​	属性值：both（两侧）left right</p>
 <p>​	举例：</p>
-<p>​			单向清除浮动举例<img src="C:\Users\11096\blog\source\pic\Q3\image-20230405165442568.png" alt="image-20230405165442568" style="zoom:25%;" /></p>
+<p>​			单向清除浮动举例<img src=".\Q3\image-20230405165442568.png" alt="image-20230405165442568" style="zoom:25%;" /></p>
 <p>​			both清除浮动举例</p>
-<p>​											<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405165348256.png" alt="image-20230405165348256" style="zoom:25%;" /><img src="C:\Users\11096\blog\source\pic\Q3\image-20230405165322218.png" alt="image-20230405165322218" style="zoom: 25%;" /></p>
+<p>​											<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405165348256.png" alt="image-20230405165348256" style="zoom:25%;" /><img src=".\Q3\image-20230405165322218.png" alt="image-20230405165322218" style="zoom: 25%;" /></p>
 <h4 id="float总结："><a href="#float总结：" class="headerlink" title="float总结："></a>float总结：</h4><p>​		1.浮动定位是在同一层面的，可以两个都设置成向左浮动或者一个向左一个向右，来实现同样的效果。 </p>
 <p>​		2.清除浮动不是删除元素，相当于另起一行的效果 。</p>
 <p>​		3.实现几行几列的效果，最初用的都是浮动。想要实现分行，就用清除浮动，想要实现分列，就用增加浮动。</p>
@@ -239,7 +239,7 @@
 <p>​				旋转：**transform:rotate(30deg);**顺时针旋转30度。transform:rotate(-30deg);逆时针旋转30度。</p>
 <p>​				缩放：<strong>transform:scale(x,y);</strong></p>
 <p>​							xy取值范围为 【0-1缩小】 【1 ~ +∞放大】</p>
-<h5 id="盒子种类"><a href="#盒子种类" class="headerlink" title="盒子种类:"></a>盒子种类:</h5><img src="C:\Users\11096\blog\source\pic\Q3\image-20230404195037016.png" alt="image-20230404195037016" style="zoom:50%;" />
+<h5 id="盒子种类"><a href="#盒子种类" class="headerlink" title="盒子种类:"></a>盒子种类:</h5><img src=".\Q3\image-20230404195037016.png" alt="image-20230404195037016" style="zoom:50%;" />
 
 <h5 id="两种盒模型的区别："><a href="#两种盒模型的区别：" class="headerlink" title="两种盒模型的区别："></a>两种盒模型的区别：</h5><p>​		分别定义了user agent应该如何计算一个元素的总宽度和总高度的方法</p>
 <ul>
@@ -255,7 +255,7 @@
 <p>​	border：边框</p>
 <p>​	outline：边框</p>
 <p>​	padding：内边距</p>
-<img src="C:\Users\11096\blog\source\pic\Q3\image-20230329124305228.png" alt="image-20230329124305228" style="zoom: 33%;" />
+<img src=".\Q3\image-20230329124305228.png" alt="image-20230329124305228" style="zoom: 33%;" />
  
       <!-- reward -->
       
@@ -333,11 +333,11 @@
    
   <nav class="article-nav">
     
-      <a href="/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AC%AC4%E7%89%88%EF%BC%89/Q4-JS-4%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/" class="article-nav-link">
+      <a href="/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AC%AC4%E7%89%88%EF%BC%89&&%E9%98%AE%E4%B8%80%E5%B3%B0JS%E6%95%99%E7%A8%8B/Q4-JS-5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            JS学习笔记-4.4语言基础（图灵）
+            JS学习笔记-4.5语法基础（阮一峰base）
           
         </div>
       </a>
