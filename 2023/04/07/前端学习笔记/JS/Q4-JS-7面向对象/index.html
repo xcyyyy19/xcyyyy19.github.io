@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>归档: 2023/3 |  Pravite Home</title>
+      <title>JS学习笔记-4.7面向对象（base阮一峰/gpt ） |  Pravite Home</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -56,78 +56,219 @@
       
     <main class="content on">
       <section class="outer">
-  
-  
-  <article class="articles">
+  <article
+  id="post-前端学习笔记/JS/Q4-JS-7面向对象"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
     
-    
-    <h1 class="page-type-title">2023/3</h1>
-    
-    
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2023" class="archive-year">2023</a>
-    </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/03/10/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/Z2-%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E6%88%91%E5%9C%A8%E5%A4%A7%E5%AD%A6%E6%9C%9F%E9%97%B4%E5%AD%A6%E4%BA%86%E4%BB%80%E4%B9%88/" class="archive-article-date">
-  <time datetime="2023-03-10T03:39:45.000Z" itemprop="datePublished">03/10</time>
-</a>
+    <header class="article-header">
        
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/03/10/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/Z2-%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E6%88%91%E5%9C%A8%E5%A4%A7%E5%AD%A6%E6%9C%9F%E9%97%B4%E5%AD%A6%E4%BA%86%E4%BB%80%E4%B9%88/"
-    >快速了解我在大学期间学了什么</a> 
-</h2>
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  JS学习笔记-4.7面向对象（base阮一峰/gpt ）
+</h1>
  
 
-    </header>
-    
-    
-  </div>
-</article>
       
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-7%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="article-date">
+  <time datetime="2023-04-07T03:34:47.000Z" itemprop="datePublished">2023-04-07</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
   
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/03/08/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/Z1-hello-world/" class="archive-article-date">
-  <time datetime="2023-03-08T06:24:17.709Z" itemprop="datePublished">03/08</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/03/08/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/Z1-hello-world/"
-    >网站完善与专业学习ToDoList</a> 
-</h2>
- 
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">389</span>
+        </span>
+    </span>
 
-    </header>
-    
-    
-  </div>
-</article>
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">1 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
       
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="4-7面向对象"><a href="#4-7面向对象" class="headerlink" title="4.7面向对象"></a>4.7面向对象</h1><h2 id="4-7-1浅薄的了解"><a href="#4-7-1浅薄的了解" class="headerlink" title="4.7.1浅薄的了解"></a>4.7.1浅薄的了解</h2><h3 id="1-构造函数"><a href="#1-构造函数" class="headerlink" title="1.构造函数"></a>1.构造函数</h3><p>用于反复创建相同的对象，和Java一样，就是父类。</p>
+<p>this.price&#x3D;price;意味着把传进来的price参数挂载到构造函数内部当作属性用了。</p>
+<h3 id="2-是否使用原型函数（prototype）"><a href="#2-是否使用原型函数（prototype）" class="headerlink" title="2.是否使用原型函数（prototype）"></a>2.是否使用原型函数（prototype）</h3><p>构造函数内的方法如果是不变的，那么每次new一个新实例的时候都会调用这个方法，从而造成资源浪费。所以要把它挂载到原型上，并写在函数外部，这样就相当于只初始化一次。这样他实例化时，就会通过实例化（子类）的声明覆盖掉父类的声明。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//Car构造函数的初始化</span><br><span class="line">Car(price)&#123;</span><br><span class="line">	this.price=price;</span><br><span class="line">&#125;</span><br><span class="line">//给Car函数增加原型函数</span><br><span class="line">Car.run=function()&#123;console.log(&quot;run as 100km/h&quot;)&#125;</span><br></pre></td></tr></table></figure>
+
+<p>构造函数内的方法如果是基于传进来的参数要进行选择性创建的，那么就不用写成原型函数，且可以写在构造函数内部。<br><img src="./Q4-JS-7%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.assets/image-20230421171703306.png" alt="image-20230421171703306" style="zoom:33%;" /></p>
+<h3 id="3-原型链"><a href="#3-原型链" class="headerlink" title="3.原型链"></a>3.原型链</h3><p>在调用某个类的子函数的时候，先去找它本身是否声明过（这会覆盖父类的声明），然后找父类内部是否声明过，再找父类的prototype（原型）函数中有没有。</p>
+<h3 id="4-覆盖"><a href="#4-覆盖" class="headerlink" title="4.覆盖"></a>4.覆盖</h3><p>子类的重复声明，会把父类的声明覆盖掉。</p>
+<h3 id="5-静态属性"><a href="#5-静态属性" class="headerlink" title="5.静态属性"></a>5.静态属性</h3><p>就是只属于自己的属性。简称属性。</p>
+<p>注：构造函数也可以有只属于自己的（无法被继承的）属性。</p>
+ 
+      <!-- reward -->
       
     </div>
-  </div>
-  
-  
-
-  
-  <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/archives/2023/03/page/2/">上一页</a><a class="page-number" href="/archives/2023/03/">1</a><a class="page-number" href="/archives/2023/03/page/2/">2</a><span class="page-number current">3</span>
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-7%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-6%E6%A0%87%E5%87%86%E5%BA%93/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            JS学习笔记-4.6标准库（base阮一峰/gpt ）
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-0%E4%B8%A4%E7%A7%8D%E5%BC%82%E6%AD%A5%E8%A7%82%E5%BF%B5/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">爬虫学习笔记-6.0两种异步观念（base大学数据结构+OS老师）</div>
+      </a>
+    
   </nav>
-  
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "",
+    app_key: "",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
 </section>
       <footer class="footer">
   <div class="outer">
@@ -269,6 +410,22 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
 
 <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link

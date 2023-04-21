@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title> Pravite Home</title>
+      <title>JS学习笔记-4.5语法基础（base阮一峰/gpt ） |  Pravite Home</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -57,24 +57,38 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-前端学习笔记/JS/VSCode代码/访问函数内嵌套的对象"
+  id="post-前端学习笔记/JS/Q4-JS-5语法基础"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
   data-scroll-reveal
 >
   <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  JS学习笔记-4.5语法基础（base阮一峰/gpt ）
+</h1>
+ 
+
+      
+    </header>
      
     <div class="article-meta">
-      <a href="/2023/04/14/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/%E8%AE%BF%E9%97%AE%E5%87%BD%E6%95%B0%E5%86%85%E5%B5%8C%E5%A5%97%E7%9A%84%E5%AF%B9%E8%B1%A1/" class="article-date">
-  <time datetime="2023-04-14T08:18:34.213Z" itemprop="datePublished">2023-04-14</time>
-</a>   
+      <a href="/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/" class="article-date">
+  <time datetime="2023-04-07T03:34:47.000Z" itemprop="datePublished">2023-04-07</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+  
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">291</span>
+            <span class="post-count">930</span>
         </span>
     </span>
 
@@ -83,88 +97,60 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1 分钟</span>
+            <span class="post-count">3 分钟</span>
         </span>
     </span>
 </div>
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>1.访问函数内嵌套的对象</title>
-  </head>
-  <body>
-    <script>
-      /*函数将会检查通讯录中是否存在一个 firstName 与传入的 name 相同的联系人。 如果存在，那么还需要检查对应的联系人中是否存在 prop 属性。
-      如果它们都存在，函数返回 prop 属性对应的值。
-      如果 name 不对应于任何联系人，然后返回字符串 No such contact。
-      如果 prop 属性在匹配 name 的联系人里不存在，返回 No such property。 */
+  <h1 id="4-5语法基础"><a href="#4-5语法基础" class="headerlink" title="4.5语法基础"></a>4.5语法基础</h1><h2 id="4-5-1数据类型转换"><a href="#4-5-1数据类型转换" class="headerlink" title="4.5.1数据类型转换"></a>4.5.1数据类型转换</h2><h2 id="4-5-2错误处理机制"><a href="#4-5-2错误处理机制" class="headerlink" title="4.5.2错误处理机制"></a>4.5.2错误处理机制</h2><h3 id="1-抛出异常"><a href="#1-抛出异常" class="headerlink" title="1.抛出异常"></a>1.抛出异常</h3><p>在 JavaScript 中,throw 语句用于抛出一个异常并停止运行。</p>
+<p>1.函数参数校验</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function divide(x, y) &#123;</span><br><span class="line">  // 如果 y 为 0,抛出异常</span><br><span class="line">  if (y === 0) &#123; </span><br><span class="line">    throw &#x27;除数不能为 0&#x27;; </span><br><span class="line">  &#125;</span><br><span class="line">  // 否则进行除法运算</span><br><span class="line">  return x / y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-      const contacts = [
-        {
-          firstName: 'Akira',
-          lastName: 'Laine',
-          number: '0543236543',
-          likes: ['Pizza', 'Coding', 'Brownie Points'],
-        },
-        {
-          firstName: 'Harry',
-          lastName: 'Potter',
-          number: '0994372684',
-          likes: ['Hogwarts', 'Magic', 'Hagrid'],
-        },
-        {
-          firstName: 'Sherlock',
-          lastName: 'Holmes',
-          number: '0487345643',
-          likes: ['Intriguing Cases', 'Violin'],
-        },
-        {
-          firstName: 'Kristian',
-          lastName: 'Vos',
-          number: 'unknown',
-          likes: ['JavaScript', 'Gaming', 'Foxes'],
-        },
-      ];
+<p>2.范围或类型校验</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function getMonthName(month) &#123;</span><br><span class="line">  // 如果 month 超出 1-12 的范围,抛出异常</span><br><span class="line">  if (month &lt; 1 || month &gt; 12) &#123;</span><br><span class="line">    throw &#x27;月份参数不在范围内&#x27;; </span><br><span class="line">  &#125;</span><br><span class="line">  // 否则返回月份名称</span><br><span class="line">  return [&#x27;January&#x27;, &#x27;February&#x27;, &#x27;March&#x27;, &#x27;April&#x27;, &#x27;May&#x27;, &#x27;June&#x27;, </span><br><span class="line">          &#x27;July&#x27;, &#x27;August&#x27;, &#x27;September&#x27;, &#x27;October&#x27;, &#x27;November&#x27;, &#x27;December&#x27;][month-1];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-      // 1.[{1}{2}{3}{4}]结构,forin的结果并不是取[]内的几个{}，而是数数。
-      // for (let sq in contacts) {
-      //   console.log(sq); //0 1 2 3
-      // }
-      // 2.for in 在js中只能用来遍历对象的属性,py里是for i in range(10);
-      //   for (let i in contacts.length) {
-      //     console.log('2222');
-      //   }
-      function lookUpProfile(name, prop) {
-        for (let i = 0; i < contacts.length; ++i) {
-          console.log(contacts[i]);
-          if (contacts[i].firstName === name) {
-            console.log('name findable');
-            for (let j in contacts[1]) {
-              if (j === prop) {
-                console.log(contacts[i][prop]);
-                return contacts[i][prop];
-              }
-            }
-            return 'No such property';
-          }
-        }
-        return 'No such contact';
-      }
-      lookUpProfile('Harry', 'likes');
-    </script>
-  </body>
-</html>
- 
+<p>3.自定义错误</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 定义自己的错误类型</span><br><span class="line">function CustomError(message) &#123;</span><br><span class="line">  this.message = message; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 之后可以抛出这个错误</span><br><span class="line">function doSomething() &#123;</span><br><span class="line">  // 如果出现错误情况,抛出自定义错误</span><br><span class="line">  if (someCondition) &#123;</span><br><span class="line">    throw new CustomError(&#x27;something went wrong!&#x27;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<p>4.终止程序执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 如果出现非常严重的错误,终止程序执行</span><br><span class="line">if (someSeriousError) &#123;</span><br><span class="line">  throw &#x27;程序遇到严重错误,终止执行&#x27;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-小结"><a href="#1-小结" class="headerlink" title="1.小结"></a>1.小结</h3><p>​	  1. 参数校验和输入验证</p>
+<ol start="2">
+<li>自定义错误和异常</li>
+<li>严重错误情况下终止程序执行它使我们的程序在出现异常情况时可以抛出错误并准确地响应,而不是默默地失败,这是编写健壮程序的关键。</li>
+</ol>
+<h3 id="2尝试执行"><a href="#2尝试执行" class="headerlink" title="2尝试执行"></a>2尝试执行</h3><p>对于前端 JS 来说,try&#x2F;catch&#x2F;finally 更常用于:</p>
+<ol>
+<li><h4 id="捕获异常和错误处理。"><a href="#捕获异常和错误处理。" class="headerlink" title="捕获异常和错误处理。"></a>捕获异常和错误处理。</h4><p>这也是最主要和常见的用法。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//异常处理</span><br><span class="line">try &#123;</span><br><span class="line">  somethingRisky();  // 可能抛出异常的代码</span><br><span class="line">&#125; catch (e) &#123;</span><br><span class="line">  handleError(e);   // 处理异常</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><h4 id="执行环境资源管理。"><a href="#执行环境资源管理。" class="headerlink" title="执行环境资源管理。"></a>执行环境资源管理。</h4><p>比如 DOM 元素创建后,无论是否使用成功,最后都remove DOM 元素。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//dom元素（资源）管理</span><br><span class="line">let elem;</span><br><span class="line">try &#123;</span><br><span class="line">  elem = createElement();// 使用 elem</span><br><span class="line">&#125; catch (e) &#123;</span><br><span class="line">  handleError(e);</span><br><span class="line">&#125; finally &#123;</span><br><span class="line">  removeElement(elem);  // 移除 DOM 元素</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//或普通资源管理</span><br><span class="line">let resource;</span><br><span class="line">try &#123;</span><br><span class="line">  resource = acquireResource();  // 获取资源</span><br><span class="line">  // 使用资源</span><br><span class="line">&#125; finally &#123;</span><br><span class="line">  releaseResource(resource);   // 释放资源</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><h4 id="定时器和监听管理。"><a href="#定时器和监听管理。" class="headerlink" title="定时器和监听管理。"></a>定时器和监听管理。</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//定时器和事件监听器管理 </span><br><span class="line">let timer;</span><br><span class="line">try &#123;</span><br><span class="line">  timer = setTimeout(() =&gt; &#123; /* ... */ &#125;, 1000);</span><br><span class="line">  // 延时1秒后执行</span><br><span class="line">&#125; finally &#123;</span><br><span class="line">  clearTimeout(timer);   // 清除定时器</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><h4 id="互斥"><a href="#互斥" class="headerlink" title="互斥"></a>互斥</h4><p>在前端 JS 中,try&#x2F;catch&#x2F;finally 用于资源互斥的情况并不太常见。这是因为:</p>
+<ol>
+<li>前端 JS 大多运行在单线程环境中,不会出现复杂的互斥资源争用情况。</li>
+<li>前端 JS 中较少打开文件、数据库连接等低级资源操作,所以较少资源管理和释放的需求。</li>
+<li>前端 JS 的执行环境大多提供了垃圾回收机制,可以自动管理和回收资源,减少了手动资源管理的需要。</li>
+</ol>
+</li>
+</ol>
+<h3 id="5-2-2小结"><a href="#5-2-2小结" class="headerlink" title="5.2.2小结"></a>5.2.2小结</h3><p><strong>捕获异常会了就行。资源处理学了dom就会了。</strong>前端用不上自己写互斥，有自动回收（todo：看看自动回收机制，有哪里需要手动回收的地方）。</p>
+<p>无论定时器是否执行成功,最后都会清除定时器,防止定时器泄露。所以总的来说,尽管 try&#x2F;catch&#x2F;finally 也可用于资源互斥,但在前端 JS 中,更主要的是用于异常捕获、资源和执行环境管理。而复杂的低级资源互斥则较少出现。<br>无论 try 块中是否发生异常,finally 块中的代码都一定会执行,主要用于资源清理。catch 块用于捕获 try 块中的异常,并进行处理。</p>
+<h2 id="4-5-3编程风格"><a href="#4-5-3编程风格" class="headerlink" title="4.5.3编程风格"></a>4.5.3编程风格</h2> 
       <!-- reward -->
       
     </div>
@@ -228,30 +214,32 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/04/14/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/%E8%AE%BF%E9%97%AE%E5%87%BD%E6%95%B0%E5%86%85%E5%B5%8C%E5%A5%97%E7%9A%84%E5%AF%B9%E8%B1%A1/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li></ul>
+
     </footer>
   </div>
 
    
   <nav class="article-nav">
     
-      <a href="/2023/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/%E5%AF%B9%E8%B1%A1%E5%B5%8C%E5%A5%97/" class="article-nav-link">
+      <a href="/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-3%E8%84%9A%E6%9C%AC%E5%8A%A0%E8%BD%BD%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            (no title)
+            JS学习笔记-4.3脚本加载（base图灵）
           
         </div>
       </a>
     
     
-      <a href="/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-1%E5%9F%BA%E7%A1%80%EF%BC%88mooc%EF%BC%89/" class="article-nav-link">
+      <a href="/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-4%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">JS学习笔记-4.1JS基础（base mooc）</div>
+        <div class="article-nav-title">JS学习笔记-4.4语言基础（base图灵）</div>
       </a>
     
   </nav>

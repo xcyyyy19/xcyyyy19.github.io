@@ -73,11 +73,11 @@
   </entry>
   
   <entry>
-    <title>JS学习笔记-4.1JS基础</title>
-    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-1%E5%9F%BA%E7%A1%80/"/>
-    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-1%E5%9F%BA%E7%A1%80/</id>
+    <title>JS学习笔记-4.1JS基础（base mooc）</title>
+    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-1%E5%9F%BA%E7%A1%80%EF%BC%88mooc%EF%BC%89/"/>
+    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-1%E5%9F%BA%E7%A1%80%EF%BC%88mooc%EF%BC%89/</id>
     <published>2023-04-07T03:34:47.000Z</published>
-    <updated>2023-04-17T06:09:59.774Z</updated>
+    <updated>2023-04-19T11:50:23.152Z</updated>
     
     
       
@@ -100,11 +100,11 @@
   </entry>
   
   <entry>
-    <title>JS学习笔记-4.2JS标准库</title>
-    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-2%E6%A0%87%E5%87%86%E5%BA%93/"/>
-    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-2%E6%A0%87%E5%87%86%E5%BA%93/</id>
+    <title>JS学习笔记-4.2JS标准库（base mooc）</title>
+    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-2%E6%A0%87%E5%87%86%E5%BA%93%EF%BC%88mooc%EF%BC%89/"/>
+    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-2%E6%A0%87%E5%87%86%E5%BA%93%EF%BC%88mooc%EF%BC%89/</id>
     <published>2023-04-07T03:34:47.000Z</published>
-    <updated>2023-04-17T05:46:04.440Z</updated>
+    <updated>2023-04-19T11:50:47.084Z</updated>
     
     
       
@@ -127,38 +127,11 @@
   </entry>
   
   <entry>
-    <title>JS学习笔记-4.4语言基础（图灵）</title>
-    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AC%AC4%E7%89%88%EF%BC%89&amp;&amp;%E9%98%AE%E4%B8%80%E5%B3%B0JS%E6%95%99%E7%A8%8B/Q4-JS-4%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/"/>
-    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AC%AC4%E7%89%88%EF%BC%89&amp;&amp;%E9%98%AE%E4%B8%80%E5%B3%B0JS%E6%95%99%E7%A8%8B/Q4-JS-4%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/</id>
+    <title>JS学习笔记-4.3脚本加载（base图灵）</title>
+    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-3%E8%84%9A%E6%9C%AC%E5%8A%A0%E8%BD%BD%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/"/>
+    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-3%E8%84%9A%E6%9C%AC%E5%8A%A0%E8%BD%BD%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/</id>
     <published>2023-04-07T03:34:47.000Z</published>
-    <updated>2023-04-17T06:07:10.693Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;4-4语言基础&quot;&gt;&lt;a href=&quot;#4-4语言基础&quot; class=&quot;headerlink&quot; title=&quot;4.4语言基础&quot;&gt;&lt;/a&gt;4.4语言基础&lt;/h1&gt;&lt;h2 id=&quot;4-4-1标识符&quot;&gt;&lt;a href=&quot;#4-4-1标识符&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="JS" scheme="http://example.com/tags/JS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS学习笔记-4.3脚本加载（图灵）</title>
-    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AC%AC4%E7%89%88%EF%BC%89&amp;&amp;%E9%98%AE%E4%B8%80%E5%B3%B0JS%E6%95%99%E7%A8%8B/Q4-JS-3%E8%84%9A%E6%9C%AC%E5%8A%A0%E8%BD%BD%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/"/>
-    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AC%AC4%E7%89%88%EF%BC%89&amp;&amp;%E9%98%AE%E4%B8%80%E5%B3%B0JS%E6%95%99%E7%A8%8B/Q4-JS-3%E8%84%9A%E6%9C%AC%E5%8A%A0%E8%BD%BD%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/</id>
-    <published>2023-04-07T03:34:47.000Z</published>
-    <updated>2023-04-11T11:02:37.430Z</updated>
+    <updated>2023-04-19T11:24:43.824Z</updated>
     
     
       
@@ -181,18 +154,18 @@
   </entry>
   
   <entry>
-    <title>JS学习笔记-4.5语法基础（阮一峰base）</title>
-    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AC%AC4%E7%89%88%EF%BC%89&amp;&amp;%E9%98%AE%E4%B8%80%E5%B3%B0JS%E6%95%99%E7%A8%8B/Q4-JS-5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/"/>
-    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%88%E7%AC%AC4%E7%89%88%EF%BC%89&amp;&amp;%E9%98%AE%E4%B8%80%E5%B3%B0JS%E6%95%99%E7%A8%8B/Q4-JS-5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</id>
+    <title>JS学习笔记-4.5语法基础（base阮一峰/gpt ）</title>
+    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/"/>
+    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</id>
     <published>2023-04-07T03:34:47.000Z</published>
-    <updated>2023-04-17T08:03:55.503Z</updated>
+    <updated>2023-04-19T11:24:57.089Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;4-5语法基础&quot;&gt;&lt;a href=&quot;#4-5语法基础&quot; class=&quot;headerlink&quot; title=&quot;4.5语法基础&quot;&gt;&lt;/a&gt;4.5语法基础&lt;/h1&gt;&lt;h2 id=&quot;4-5-2错误处理机制&quot;&gt;&lt;a href=&quot;#4-5-2错误处理机制&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;4-5语法基础&quot;&gt;&lt;a href=&quot;#4-5语法基础&quot; class=&quot;headerlink&quot; title=&quot;4.5语法基础&quot;&gt;&lt;/a&gt;4.5语法基础&lt;/h1&gt;&lt;h2 id=&quot;4-5-1数据类型转换&quot;&gt;&lt;a href=&quot;#4-5-1数据类型转换&quot;</summary>
         
       
     
@@ -204,6 +177,224 @@
     
     
     <category term="JS" scheme="http://example.com/tags/JS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS学习笔记-4.4语言基础（base图灵）</title>
+    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-4%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/"/>
+    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-4%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/</id>
+    <published>2023-04-07T03:34:47.000Z</published>
+    <updated>2023-04-19T11:24:49.020Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;4-4语言基础&quot;&gt;&lt;a href=&quot;#4-4语言基础&quot; class=&quot;headerlink&quot; title=&quot;4.4语言基础&quot;&gt;&lt;/a&gt;4.4语言基础&lt;/h1&gt;&lt;h2 id=&quot;4-4-1标识符&quot;&gt;&lt;a href=&quot;#4-4-1标识符&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="JS" scheme="http://example.com/tags/JS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS学习笔记-4.6标准库（base阮一峰/gpt ）</title>
+    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-6%E6%A0%87%E5%87%86%E5%BA%93/"/>
+    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-6%E6%A0%87%E5%87%86%E5%BA%93/</id>
+    <published>2023-04-07T03:34:47.000Z</published>
+    <updated>2023-04-19T12:39:39.201Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;4-6标准库&quot;&gt;&lt;a href=&quot;#4-6标准库&quot; class=&quot;headerlink&quot; title=&quot;4.6标准库&quot;&gt;&lt;/a&gt;4.6标准库&lt;/h1&gt;&lt;h2 id=&quot;4-6-0基础知识&quot;&gt;&lt;a href=&quot;#4-6-0基础知识&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="JS" scheme="http://example.com/tags/JS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS学习笔记-4.7面向对象（base阮一峰/gpt ）</title>
+    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-7%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-7%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
+    <published>2023-04-07T03:34:47.000Z</published>
+    <updated>2023-04-21T09:29:30.695Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;4-7面向对象&quot;&gt;&lt;a href=&quot;#4-7面向对象&quot; class=&quot;headerlink&quot; title=&quot;4.7面向对象&quot;&gt;&lt;/a&gt;4.7面向对象&lt;/h1&gt;&lt;h2 id=&quot;4-7-1浅薄的了解&quot;&gt;&lt;a href=&quot;#4-7-1浅薄的了解&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="JS" scheme="http://example.com/tags/JS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>爬虫学习笔记-6.0两种异步观念（base大学数据结构+OS老师）</title>
+    <link href="http://example.com/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-0%E4%B8%A4%E7%A7%8D%E5%BC%82%E6%AD%A5%E8%A7%82%E5%BF%B5/"/>
+    <id>http://example.com/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-0%E4%B8%A4%E7%A7%8D%E5%BC%82%E6%AD%A5%E8%A7%82%E5%BF%B5/</id>
+    <published>2023-04-07T03:34:47.000Z</published>
+    <updated>2023-04-21T09:57:31.001Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;有疑问-同步-关注通信机制-跟同步-描述进程中之间的关系-的区别-并发并行与异步的联系&quot;&gt;&lt;a href=&quot;#有疑问-同步-关注通信机制-跟同步-描述进程中之间的关系-的区别-并发并行与异步的联系&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="Python，Scrapy" scheme="http://example.com/tags/Python%EF%BC%8CScrapy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>爬虫学习笔记-6.100Scrapy性能提升（base百度）</title>
+    <link href="http://example.com/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-100Scrapy%E6%80%A7%E8%83%BD%E6%8F%90%E9%AB%98/"/>
+    <id>http://example.com/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-100Scrapy%E6%80%A7%E8%83%BD%E6%8F%90%E9%AB%98/</id>
+    <published>2023-04-07T03:34:47.000Z</published>
+    <updated>2023-04-21T09:53:30.780Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;需求：scrapy爬取网页速度十分缓慢，在目标网站良好的情况下三天才跑了80w条数据，参考其他爬虫的速度，一天抓取1000w条数据是没有问题的，scrapy性能需要优化。&lt;/p&gt;
+&lt;p&gt;思路：经过各种搜索，scrapy提高性能核心逻辑是提高并发数量，最简单的实现方式可以通过</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="Python，Scrapy" scheme="http://example.com/tags/Python%EF%BC%8CScrapy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>爬虫学习笔记-6.1异步相关问答（base大学JS+OS老师）</title>
+    <link href="http://example.com/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-1%E5%BC%82%E6%AD%A5%E9%97%AE%E7%AD%94/"/>
+    <id>http://example.com/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-1%E5%BC%82%E6%AD%A5%E9%97%AE%E7%AD%94/</id>
+    <published>2023-04-07T03:34:47.000Z</published>
+    <updated>2023-04-21T09:55:29.795Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;异步概念，异步执行，异步机制，异步传输数据&quot;&gt;&lt;a href=&quot;#异步概念，异步执行，异步机制，异步传输数据&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="Python，Scrapy" scheme="http://example.com/tags/Python%EF%BC%8CScrapy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>爬虫学习笔记-6.3Ajax工作原理及实例（base百度）</title>
+    <link href="http://example.com/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-3Ajax%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%8F%8A%E5%AE%9E%E4%BE%8B/"/>
+    <id>http://example.com/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-3Ajax%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%8F%8A%E5%AE%9E%E4%BE%8B/</id>
+    <published>2023-04-07T03:34:47.000Z</published>
+    <updated>2023-04-21T09:54:13.693Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;1、关于ajax的名字&lt;/strong&gt;　　&lt;/p&gt;
+&lt;p&gt;　　ajax 的全称是Asynchronous JavaScript and XML，其中，Asynchronous</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="Python，JS" scheme="http://example.com/tags/Python%EF%BC%8CJS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>爬虫学习笔记-6.2Scrapy、JS等异步的事件轮询机制（base百度）</title>
+    <link href="http://example.com/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-2%E5%BC%82%E6%AD%A5%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%BD%AE%E8%AF%A2%E6%9C%BA%E5%88%B6/"/>
+    <id>http://example.com/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-2%E5%BC%82%E6%AD%A5%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%BD%AE%E8%AF%A2%E6%9C%BA%E5%88%B6/</id>
+    <published>2023-04-07T03:34:47.000Z</published>
+    <updated>2023-04-21T09:57:05.914Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Scrapy、JS等异步的事件轮询机制&quot;&gt;&lt;a href=&quot;#Scrapy、JS等异步的事件轮询机制&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="Python，JS" scheme="http://example.com/tags/Python%EF%BC%8CJS/"/>
     
   </entry>
   
@@ -256,54 +447,6 @@
     
     <category term="note" scheme="http://example.com/categories/code/note/"/>
     
-    
-    <category term="CSS" scheme="http://example.com/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端ToDo复盘</title>
-    <link href="http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%96%91%E9%97%AE%E5%A4%8D%E7%9B%98/Q0-Review/"/>
-    <id>http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%96%91%E9%97%AE%E5%A4%8D%E7%9B%98/Q0-Review/</id>
-    <published>2023-03-29T04:30:47.000Z</published>
-    <updated>2023-04-01T06:35:14.633Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;3-31主题：FLEX骰子案例推进-amp-相关新知识&quot;&gt;&lt;a href=&quot;#3-31主题：FLEX骰子案例推进-amp-相关新知识&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端临时页面</title>
-    <link href="http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/Q0-ToDo/"/>
-    <id>http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/Q0-ToDo/</id>
-    <published>2023-03-29T04:30:47.000Z</published>
-    <updated>2023-04-06T13:46:17.321Z</updated>
-    
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
     
     <category term="CSS" scheme="http://example.com/tags/CSS/"/>
     
@@ -419,145 +562,6 @@
     
     
     <category term="CSS" scheme="http://example.com/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTML学习笔记-6实践</title>
-    <link href="http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note6/"/>
-    <id>http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note6/</id>
-    <published>2023-03-28T03:34:47.000Z</published>
-    <updated>2023-03-29T12:55:52.543Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1&gt;HTML学习笔记-6实践&lt;/h1&gt;
-
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTML学习笔记-5体系补充</title>
-    <link href="http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note5/"/>
-    <id>http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note5/</id>
-    <published>2023-03-28T03:34:47.000Z</published>
-    <updated>2023-04-04T12:40:23.264Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;HTML学习笔记-5体系补充&quot;&gt;&lt;a href=&quot;#HTML学习笔记-5体系补充&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTML学习笔记-4head</title>
-    <link href="http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note4/"/>
-    <id>http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note4/</id>
-    <published>2023-03-28T03:33:47.000Z</published>
-    <updated>2023-03-29T14:03:29.111Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;HTML学习笔记-4head&quot;&gt;&lt;a href=&quot;#HTML学习笔记-4head&quot; class=&quot;headerlink&quot; title=&quot;HTML学习笔记-4head&quot;&gt;&lt;/a&gt;HTML学习笔记-4head&lt;/h1&gt;&lt;figure class=&quot;highlight</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTML学习笔记-3进阶标签与属性</title>
-    <link href="http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note3/"/>
-    <id>http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note3/</id>
-    <published>2023-03-28T03:32:47.000Z</published>
-    <updated>2023-03-30T10:50:41.146Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;HTML学习笔记-3进阶标签与属性&quot;&gt;&lt;a href=&quot;#HTML学习笔记-3进阶标签与属性&quot; class=&quot;headerlink&quot; title=&quot;HTML学习笔记-3进阶标签与属性&quot;&gt;&lt;/a&gt;HTML学习笔记-3进阶标签与属性&lt;/h1&gt;&lt;figure</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTML学习笔记-2基础标签</title>
-    <link href="http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note2/"/>
-    <id>http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note2/</id>
-    <published>2023-03-28T03:31:47.000Z</published>
-    <updated>2023-03-29T12:51:23.510Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1&gt;HTML学习笔记-2基础标签&lt;/h1&gt;
-
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
     
   </entry>
   
