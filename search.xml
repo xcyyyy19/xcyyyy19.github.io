@@ -4055,9 +4055,48 @@
 <p>C++:在继承关系中,如果子类没有定义构造函数,会自动调用父类的构造函数;如果子类定义了构造函数,需要在子类构造函数中显式调用父类的构造函数;析构函数与构造函数相反,会先调用子类的析构函数,然后调用父类的析构函数。<br>JS:在继承关系中,如果子类没有定义构造函数,不会自动调用父类的构造函数;子类需要显示调用父类的构造函数;没有析构函数的概念。不同点三:重载与重写不同。</p>
 <p>C++: 构造函数和析构函数都可以重载;子类可以重写父类的构造函数和析构函数。<br>JS:构造函数不能重载,但可以在子类中重写父类的构造函数;没有重写析构函数的概念。</p>
 <p>总体来说,C++ 中的这两个概念更加丰富,而 JS 中针对对象初始化和释放的处理较为简单。</p>
+<h3 id="2-什么是浅拷贝"><a href="#2-什么是浅拷贝" class="headerlink" title="2.什么是浅拷贝"></a>2.什么是浅拷贝</h3><p>就是愚蠢的拷贝，如果对象里嵌套了对象，那么就会把内部对象的引用给拷贝下来（引用类型的拷贝不会改变引用地址，也就是说拷贝下来的新引用还是旧的那个引用）。由于只是拷贝引用,所以如果引用所指向的对象发生变化,浅拷贝得到的对象也会发生变化。</p>
+<h4 id="最直观的例子："><a href="#最直观的例子：" class="headerlink" title="最直观的例子："></a>最直观的例子：</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let obj = &#123; a: 1, b: &#123; c: 2 &#125; &#125;;</span><br><span class="line">let copy = Object.assign(&#123;&#125;, obj);  // 浅拷贝</span><br><span class="line">obj.b.c = 3;</span><br><span class="line">obj.a = 4;</span><br><span class="line">console.log(copy.b.c);  // 3  发生变化</span><br><span class="line">console.log(copy.a);    //1   无变化</span><br></pre></td></tr></table></figure>
+
+<h4 id="具体解释："><a href="#具体解释：" class="headerlink" title="具体解释："></a>具体解释：</h4><p>对上面这个例子,我们来分析浅拷贝后 copy 对象的结构:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">js</span><br><span class="line">obj = &#123;</span><br><span class="line">  a: 1,     // 基本类型,值 </span><br><span class="line">  b: &#123;      // 引用类型,地址1</span><br><span class="line">    c: 2 </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">copy = &#123;</span><br><span class="line">  a: 1,     // 基本类型,值 </span><br><span class="line">  b: &#123;      // 引用类型,地址1</span><br><span class="line">    c: 2 </span><br><span class="line">  &#125;  </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<p>然后当我们修改 obj 时:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">js</span><br><span class="line">obj.b.c = 3;  // 修改的是地址1指向的对象</span><br><span class="line">obj.a = 4;     // 修改的是值</span><br></pre></td></tr></table></figure>
+
+<p>此时,obj 和 copy 的结构变为:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">js</span><br><span class="line">obj = &#123;</span><br><span class="line">  a: 4,      // 新的基本类型值 </span><br><span class="line">  b: &#123;       // 地址1</span><br><span class="line">    c: 3    </span><br><span class="line">  &#125;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">copy = &#123;</span><br><span class="line">  a: 1,       // 原基本类型值</span><br><span class="line">  b: &#123;        // 地址1</span><br><span class="line">    c: 3     </span><br><span class="line">  &#125; </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<p>可以看到:- 当我们修改 obj 的引用类型成员 b 时,由于 copy 中的 b 也指向地址 1,所以 copy 的 b 也发生了变化。- 但是,当我们修改 obj 的基本类型成员 a 时,copy 中的 a 不发生变化,因为它有自己的独立值。所以结果是:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">js</span><br><span class="line">console.log(copy.b.c);  // 3  发生变化</span><br><span class="line">console.log(copy.a);    //1   无变化  </span><br></pre></td></tr></table></figure>
+
+<p>这个过程很好地证明了浅拷贝的特征:- 对引用类型的成员,拷贝的是地址,变化会相互影响<br>- 对基本类型的成员,拷贝的是值,变化互不影响</p>
+<h4 id="浅拷贝常见的实现方式有"><a href="#浅拷贝常见的实现方式有" class="headerlink" title="浅拷贝常见的实现方式有:"></a>浅拷贝常见的实现方式有:</h4><ol>
+<li><h5 id="Object-assign-obj-对象的浅拷贝"><a href="#Object-assign-obj-对象的浅拷贝" class="headerlink" title="Object.assign({}, obj)对象的浅拷贝:"></a>Object.assign({}, obj)对象的浅拷贝:</h5></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let obj = &#123; a: 1, b: &#123; c: 2 &#125; &#125;;</span><br><span class="line">let copy = Object.assign(&#123;&#125;, obj);  // 浅拷贝</span><br><span class="line">obj.b.c = 3;</span><br><span class="line">console.log(copy.b.c);  // 3  发生变化</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><h5 id="arr-slice-数组的浅拷贝"><a href="#arr-slice-数组的浅拷贝" class="headerlink" title="arr.slice()数组的浅拷贝:"></a>arr.slice()数组的浅拷贝:</h5></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let arr = [1, &#123; a: 2 &#125;]; </span><br><span class="line">let copy = arr.slice();   // 浅拷贝</span><br><span class="line">arr[1].a = 3;</span><br><span class="line">console.log(copy[1].a);   // 3  发生变化</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><h5 id="…obj-…arr-展开语法进行浅拷贝"><a href="#…obj-…arr-展开语法进行浅拷贝" class="headerlink" title="{ …obj }  […arr]展开语法进行浅拷贝:"></a>{ …obj }  […arr]展开语法进行浅拷贝:</h5></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let obj = &#123; a: 1, b: &#123; c: 2 &#125; &#125;;</span><br><span class="line">let copy = &#123; ...obj &#125;;   // 浅拷贝</span><br><span class="line">obj.b.c = 3;</span><br><span class="line">console.log(copy.b.c);   // 3  发生变化</span><br></pre></td></tr></table></figure>
+
+<p>所以,浅拷贝的主要用途是快速复制对象,但是由于它只复制引用,对于引用类型的成员来说,如果原对象发生变化,拷贝对象也会变化。如果要避免这种情况,可以使用深拷贝,深拷贝会完整复制一个新对象,两者之间不再有任何引用关系,变化互不影响。</p>
+<h4 id="常见的深拷贝实现方式有"><a href="#常见的深拷贝实现方式有" class="headerlink" title="常见的深拷贝实现方式有:"></a>常见的深拷贝实现方式有:</h4><p>JSON.parse(JSON.stringify(obj))<br>lodash工具库的 _.cloneDeep() 方法<br>手动实现深度遍历对象并复制（及其简单的递归，就是一层层拨开嵌套对象，直到到达内部找到对象内的键值对，浅拷贝它）</p>
+<p>所以,总结来说,浅拷贝和深拷贝的主要区别在于对引用类型的成员的处理方式,理解两者的区别可以更好地选择适合的拷贝方式。</p>
+<h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><p>在工作中,如果要考虑兼容性,或需要灵活指定下标获取部分数组,arr.slice() 会更常用。</p>
+<p>如果项目环境支持 ES6,并且需要获取数组的完整拷贝,展开语法 …arr 会更简洁,也是较常见的用法。</p>
+<p>两者的底层实现原理都是浅拷贝,对于一维数组来说,效果是相同的。</p>
+<p>但也要注意,如果数组包含复杂类型,那么对原数组的修改会影响拷贝得到的数组。</p>
+<p>除此之外,也可以选择 lodash 等工具库提供的深拷贝方法,如 _.cloneDeep(),来完全避免两个数组之间的影响,这在某些场景下也比较常用。</p>
 <h2 id="4-6-1Object"><a href="#4-6-1Object" class="headerlink" title="4.6.1Object"></a>4.6.1Object</h2><h3 id="1-常用方法"><a href="#1-常用方法" class="headerlink" title="1.常用方法"></a>1.常用方法</h3><p>在工作中,Object 对象属性和方法中常用的主要有:</p>
 <ol>
-<li>Object.defineProperty() 和 Object.defineProperties():用于在对象上定义属性或修改属性,常用于<em><strong>数据响应式</strong></em>。</li>
+<li><strong>Object.defineProperty() 和 Object.defineProperties()</strong>:用于在对象上定义属性或修改属性,常用于<em><strong>数据响应式</strong></em>。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let obj = &#123;&#125;;</span><br><span class="line">Object.defineProperty(obj, &quot;prop&quot;, &#123;</span><br><span class="line">  value: true,</span><br><span class="line">  writable: false,</span><br><span class="line">  enumerable: true </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
@@ -4144,29 +4183,107 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">js</span><br><span class="line">let bool = new Boolean(true);   // Boolean 对象</span><br><span class="line"></span><br><span class="line">if (bool.valueOf()) &#123; ... &#125;    // 需要调用 valueOf() 方法</span><br><span class="line"></span><br><span class="line">bool.constructor = 123;        // 可以添加属性</span><br></pre></td></tr></table></figure>
 
 <p>所以,boolean 类型和 Boolean 对象的主要区别在于:- boolean 是基本数据类型,Boolean 是对象。<br>- boolean 只有 true 和 false 两个字面量,Boolean 除了 true 和 false 值外,还可以有其他属性和方法。<br>- boolean 可以直接用于条件判断,Boolean 需要调用 valueOf() 方法。但是,在大多数情况下,我们可以把 Boolean 对象当作 boolean 类型来使用,因为:- Boolean 对象在布尔表达式中会自动调用 valueOf() 方法,返回基本类型值。<br>- <strong>基于性能考虑,大多数情况下我们会使用基本类型boolean而不是Boolean对象。</strong>所以,boolean 和 Boolean 的关系可以看作,boolean 是基本数据类型,Boolean 是它的对象包装形式。</p>
-]]></content>
-      <categories>
-        <category>code</category>
-        <category>note</category>
-      </categories>
-      <tags>
-        <tag>JS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JS学习笔记-4.7面向对象（base阮一峰/gpt ）</title>
-    <url>/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-7%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
-    <content><![CDATA[<h1 id="4-7面向对象"><a href="#4-7面向对象" class="headerlink" title="4.7面向对象"></a>4.7面向对象</h1><h2 id="4-7-1浅薄的了解"><a href="#4-7-1浅薄的了解" class="headerlink" title="4.7.1浅薄的了解"></a>4.7.1浅薄的了解</h2><h3 id="1-构造函数"><a href="#1-构造函数" class="headerlink" title="1.构造函数"></a>1.构造函数</h3><p>用于反复创建相同的对象，和Java一样，就是父类。</p>
-<p>this.price&#x3D;price;意味着把传进来的price参数挂载到构造函数内部当作属性用了。</p>
-<h3 id="2-是否使用原型函数（prototype）"><a href="#2-是否使用原型函数（prototype）" class="headerlink" title="2.是否使用原型函数（prototype）"></a>2.是否使用原型函数（prototype）</h3><p>构造函数内的方法如果是不变的，那么每次new一个新实例的时候都会调用这个方法，从而造成资源浪费。所以要把它挂载到原型上，并写在函数外部，这样就相当于只初始化一次。这样他实例化时，就会通过实例化（子类）的声明覆盖掉父类的声明。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//Car构造函数的初始化</span><br><span class="line">Car(price)&#123;</span><br><span class="line">	this.price=price;</span><br><span class="line">&#125;</span><br><span class="line">//给Car函数增加原型函数</span><br><span class="line">Car.run=function()&#123;console.log(&quot;run as 100km/h&quot;)&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-Number"><a href="#4-Number" class="headerlink" title="4.Number"></a>4.Number</h3><p>只有可继承的原型函数prototype.toString（）值得一看</p>
+<h3 id="5-String"><a href="#5-String" class="headerlink" title="5.String"></a>5.String</h3><h4 id="5-1原型属性"><a href="#5-1原型属性" class="headerlink" title="5.1原型属性"></a>5.1原型属性</h4><ol>
+<li>字符串实例的length属性返回字符串的长度。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;abc&#x27;.length // 3</span><br></pre></td></tr></table></figure>
 
-<p>构造函数内的方法如果是基于传进来的参数要进行选择性创建的，那么就不用写成原型函数，且可以写在构造函数内部。<br><img src="./Q4-JS-7%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.assets/image-20230421171703306.png" alt="image-20230421171703306" style="zoom:33%;" /></p>
-<h3 id="3-原型链"><a href="#3-原型链" class="headerlink" title="3.原型链"></a>3.原型链</h3><p>在调用某个类的子函数的时候，先去找它本身是否声明过（这会覆盖父类的声明），然后找父类内部是否声明过，再找父类的prototype（原型）函数中有没有。</p>
-<h3 id="4-覆盖"><a href="#4-覆盖" class="headerlink" title="4.覆盖"></a>4.覆盖</h3><p>子类的重复声明，会把父类的声明覆盖掉。</p>
-<h3 id="5-静态属性"><a href="#5-静态属性" class="headerlink" title="5.静态属性"></a>5.静态属性</h3><p>就是只属于自己的属性。简称属性。</p>
-<p>注：构造函数也可以有只属于自己的（无法被继承的）属性。</p>
-]]></content>
+<h4 id="5-2原型函数"><a href="#5-2原型函数" class="headerlink" title="5.2原型函数"></a>5.2原型函数</h4><ol>
+<li>charAt():返回指定索引处的字符,索引从 0 开始。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;hello&#x27;.charAt(0);  // &#x27;h&#x27;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>concat():连接两个或多个字符串,返回连接后的字符串。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;hello&#x27;.concat(&#x27; &#x27;, &#x27;world&#x27;);  // &#x27;hello world&#x27;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>startsWith():检查字符串是否以指定的子字符串开头,返回 true 或 false。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;hello&#x27;.startsWith(&#x27;he&#x27;);   // true</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>endsWith():检查字符串是否以指定的子字符串结尾,返回 true 或 false。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;hello&#x27;.endsWith(&#x27;lo&#x27;);   // true</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>indexOf():返回指定子字符串首次出现的索引,如果不存在则返回 -1。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;hello&#x27;.indexOf(&#x27;l&#x27;);   // 2</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>lastIndexOf():返回指定子字符串最后一次出现的索引,如果不存在则返回 -1。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;hello&#x27;.lastIndexOf(&#x27;l&#x27;);   // 3</span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>slice():提取字符串的一部分,返回提取后的字符串。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;hello&#x27;.slice(1, 3);   // &#x27;el&#x27;</span><br></pre></td></tr></table></figure>
+
+<ol start="8">
+<li>substring():提取字符串的一部分,返回提取后的字符串。与 slice() 类似。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;hello&#x27;.substring(1, 3);   // &#x27;el&#x27;</span><br></pre></td></tr></table></figure>
+
+<ol start="9">
+<li>split():将字符串按指定分隔符拆分成数组,返回数组。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">js</span><br><span class="line">&#x27;a-b-c&#x27;.split(&#x27;-&#x27;);   // [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]</span><br></pre></td></tr></table></figure>
+
+<ol start="10">
+<li>replace():替换字符串中的指定子字符串,返回替换后的字符串。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;hello&#x27;.replace(&#x27;l&#x27;, &#x27;x&#x27;);   // &#x27;hexxo&#x27;</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-Math"><a href="#6-Math" class="headerlink" title="6.Math"></a>6.Math</h3><h4 id="6-1（只有）静态函数"><a href="#6-1（只有）静态函数" class="headerlink" title="6.1（只有）静态函数"></a>6.1（只有）静态函数</h4><ul>
+<li><p><code>Math.abs()</code>：绝对值</p>
+</li>
+<li><p><code>Math.ceil()</code>：向上取整</p>
+</li>
+<li><p><code>Math.floor()</code>：向下取整</p>
+</li>
+<li><p><code>Math.max()</code>：最大值</p>
+</li>
+<li><p><code>Math.min()</code>：最小值</p>
+</li>
+<li><p><code>Math.pow()</code>：幂运算</p>
+<p>Math.pow方法返回以第一个参数为底数、第二个参数为指数的幂运算值。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 等同于 2 ** 2</span><br><span class="line">Math.pow(2, 2) // 4</span><br><span class="line">// 等同于 2 ** 3</span><br><span class="line">Math.pow(2, 3) // 8</span><br></pre></td></tr></table></figure>
+
+<p>下面是计算圆面积的方法。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var radius = 20;</span><br><span class="line">var area = Math.PI * Math.pow(radius, 2);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>Math.sqrt()</code>：平方根</p>
+<p>Math.sqrt方法返回参数值的平方根。如果参数是一个负值，则返回<code>NaN</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Math.sqrt(4) // 2</span><br><span class="line">Math.sqrt(-4) // NaN</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>Math.log()</code>：自然对数</p>
+</li>
+<li><p><code>Math.exp()</code>：<code>e</code>的指数</p>
+</li>
+<li><p><code>Math.round()</code>：四舍五入</p>
+</li>
+<li><p><code>Math.random()</code>：随机数</p>
+<p><code>Math.random()</code>返回0到1之间的一个伪随机数，可能等于0，但是一定小于1。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Math.random() // 0.7151307314634323</span><br></pre></td></tr></table></figure>
+
+<p>任意范围的随机数生成函数如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function getRandomArbitrary(min, max) &#123;</span><br><span class="line">  return Math.random() * (max - min) + min;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">getRandomArbitrary(1.5, 6.5)</span><br><span class="line">// 2.4942810038223864</span><br></pre></td></tr></table></figure>
+
+<p>任意范围的随机整数生成函数如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function getRandomInt(min, max) &#123;</span><br><span class="line">  return Math.floor(Math.random() * (max - min + 1)) + min;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">getRandomInt(1, 6) // 5</span><br></pre></td></tr></table></figure>
+
+<p>返回随机字符的例子如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function random_str(length) &#123;</span><br><span class="line">  var ALPHABET = &#x27;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#x27;;</span><br><span class="line">  ALPHABET += &#x27;abcdefghijklmnopqrstuvwxyz&#x27;;</span><br><span class="line">  ALPHABET += &#x27;0123456789-_&#x27;;</span><br><span class="line">  var str = &#x27;&#x27;;</span><br><span class="line">  for (var i = 0; i &lt; length; ++i) &#123;</span><br><span class="line">    var rand = Math.floor(Math.random() * ALPHABET.length);</span><br><span class="line">    str += ALPHABET.substring(rand, rand + 1);</span><br><span class="line">  &#125;</span><br><span class="line">  return str;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">random_str(6) // &quot;NdQKOr&quot;</span><br></pre></td></tr></table></figure>
+
+<p>上面代码中，<code>random_str</code>函数接受一个整数作为参数，返回变量<code>ALPHABET</code>内的随机字符所组成的指定长度的字符串。</p>
+</li>
+</ul>
+<h3 id="7-Date"><a href="#7-Date" class="headerlink" title="7.Date"></a>7.Date</h3><h4 id="7-1作为普通函数"><a href="#7-1作为普通函数" class="headerlink" title="7.1作为普通函数"></a>7.1作为普通函数</h4><h4 id="7-2作为构造函数"><a href="#7-2作为构造函数" class="headerlink" title="7.2作为构造函数"></a>7.2作为构造函数</h4><h5 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h5><h5 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h5><h3 id="8-RegExp"><a href="#8-RegExp" class="headerlink" title="8.RegExp"></a>8.RegExp</h3><h4 id="5-1"><a href="#5-1" class="headerlink" title="5.1"></a>5.1</h4><h4 id="5-2"><a href="#5-2" class="headerlink" title="5.2"></a>5.2</h4><h3 id="9-JOSN"><a href="#9-JOSN" class="headerlink" title="9.JOSN"></a>9.JOSN</h3><h4 id="5-1-1"><a href="#5-1-1" class="headerlink" title="5.1"></a>5.1</h4><h4 id="5-2-1"><a href="#5-2-1" class="headerlink" title="5.2"></a>5.2</h4>]]></content>
       <categories>
         <category>code</category>
         <category>note</category>
@@ -4510,5 +4627,597 @@
       <tags>
         <tag>Python，JS</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>JS学习笔记-4.7过滤（base  gpt ）</title>
+    <url>/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-7%E8%BF%87%E6%BB%A4/</url>
+    <content><![CDATA[<h1 id="4-7-1数组过滤"><a href="#4-7-1数组过滤" class="headerlink" title="4.7.1数组过滤"></a>4.7.1数组过滤</h1><ol>
+<li><p>filter():过滤出符合条件的元素,返回新数组。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">array.filter(callbackFunc)</span><br></pre></td></tr></table></figure>
+
+<p>callbackFunc 是过滤函数,用于测试每个元素是否通过测试。<br>filter() 方法返回一个过滤后的新数组。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const fruits = [&#x27;apple&#x27;, &#x27;banana&#x27;, &#x27;grape&#x27;, &#x27;mango&#x27;, &#x27;orange&#x27;];</span><br><span class="line"></span><br><span class="line">const filterItems = fruits.filter(fruit =&gt; fruit.length &gt; 6);</span><br><span class="line"></span><br><span class="line">console.log(filterItems); </span><br><span class="line">// [&#x27;banana&#x27;, &#x27;mango&#x27;, &#x27;orange&#x27;]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>slice():提取符合条件的元素,返回新数组，属于浅拷贝。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">array.slice(start, end)</span><br></pre></td></tr></table></figure>
+
+<p>start 和 end 表示截取的起止位置,不包含 end 位置的元素。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let fruits = [&#x27;apple&#x27;, &#x27;banana&#x27;, &#x27;grape&#x27;, &#x27;mango&#x27;, &#x27;orange&#x27;];</span><br><span class="line">let sliceFruits = fruits.slice(1, 3);</span><br><span class="line">// sliceFruits = [&#x27;banana&#x27;, &#x27;grape&#x27;]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>splice():移除元素,并可以在移除的位置添加新元素。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">array.splice(start, deleteCount, ...newItems) </span><br></pre></td></tr></table></figure>
+
+<p>- start:移除元素的起始位置<br>- deleteCount:要移除的元素个数<br>- newItems:要添加的新元素示例:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let fruits = [&#x27;apple&#x27;, &#x27;banana&#x27;, &#x27;grape&#x27;, &#x27;mango&#x27;, &#x27;orange&#x27;]; </span><br><span class="line">fruits.splice(1, 2, &#x27;strawberry&#x27;);</span><br><span class="line">// fruits = [&#x27;apple&#x27;, &#x27;strawberry&#x27;, &#x27;mango&#x27;, &#x27;orange&#x27;]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>pop()&#x2F;shift():移除数组的最后&#x2F;第一个元素。</p>
+</li>
+<li><p>concat():相当于C++里的set。连接两个数组,并返回新数组。可以用于过滤两个数组的公共元素。</p>
+</li>
+<li><p>…(展开运算符):将一个数组展开为用 , 分隔的参数序列,可以用于过滤数组中的某些元素。</p>
+<p>除此之外,我们也可以使用 ES6 的 Set 和 Map 等新数据结构进行过滤。</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>code</category>
+        <category>note</category>
+      </categories>
+      <tags>
+        <tag>JS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JS学习笔记-4.8面向对象（base  gpt/答疑 ）</title>
+    <url>/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-8%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
+    <content><![CDATA[<h1 id="4-8面向对象"><a href="#4-8面向对象" class="headerlink" title="4.8面向对象"></a>4.8面向对象</h1><h2 id="4-8-1浅薄的了解"><a href="#4-8-1浅薄的了解" class="headerlink" title="4.8.1浅薄的了解"></a>4.8.1浅薄的了解</h2><h3 id="1-构造函数"><a href="#1-构造函数" class="headerlink" title="1.构造函数"></a>1.构造函数</h3><p>用于反复创建相同的对象，和Java一样，就是父类。</p>
+<p>this.price&#x3D;price;意味着把传进来的price参数挂载到构造函数内部当作属性用了。</p>
+<h3 id="2-是否使用原型函数（prototype）"><a href="#2-是否使用原型函数（prototype）" class="headerlink" title="2.是否使用原型函数（prototype）"></a>2.是否使用原型函数（prototype）</h3><p>构造函数内的方法如果是不变的，那么每次new一个新实例的时候都会调用这个方法，从而造成资源浪费。所以要把它挂载到原型上，并写在函数外部，这样就相当于只初始化一次。这样他实例化时，就会通过实例化（子类）的声明覆盖掉父类的声明。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//Car构造函数的初始化</span><br><span class="line">Car(price)&#123;</span><br><span class="line">	this.price=price;</span><br><span class="line">&#125;</span><br><span class="line">//给Car函数增加原型函数</span><br><span class="line">Car.run=function()&#123;console.log(&quot;run as 100km/h&quot;)&#125;</span><br></pre></td></tr></table></figure>
+
+<p>构造函数内的方法如果是基于传进来的参数要进行选择性创建的，那么就不用写成原型函数，且可以写在构造函数内部。<br><img src="./Q4-JS-7%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.assets/image-20230421171703306.png" alt="image-20230421171703306" style="zoom:33%;" /></p>
+<h3 id="3-原型链"><a href="#3-原型链" class="headerlink" title="3.原型链"></a>3.原型链</h3><p>在调用某个类的子函数的时候，先去找它本身是否声明过（这会覆盖父类的声明），然后找父类内部是否声明过，再找父类的prototype（原型）函数中有没有。</p>
+<h3 id="4-覆盖"><a href="#4-覆盖" class="headerlink" title="4.覆盖"></a>4.覆盖</h3><p>子类的重复声明，会把父类的声明覆盖掉。</p>
+<h3 id="5-静态属性"><a href="#5-静态属性" class="headerlink" title="5.静态属性"></a>5.静态属性</h3><p>就是只属于自己的属性。简称属性。</p>
+<p>注：构造函数也可以有只属于自己的（无法被继承的）属性。</p>
+<h3 id="6-一些疑问"><a href="#6-一些疑问" class="headerlink" title="6.一些疑问"></a>6.一些疑问</h3><p>1.浅拷贝都有什么实现方式<br>2.为什么创建对象的时候，对象里面的方法用的是引用，而属性不是</p>
+<pre><code>这是因为在 JavaScript 中,对象的方法和属性有不同的存储方式:
+属性:
+- 属性的值直接存储在对象中
+- 当读取属性时,直接返回对象中存储的值方法:- 方法的值实际上是一个函数
+- 函数是引用类型,所以方法的值是一个指向函数的引用
+- 当读取方法时,返回的是对函数的引用
+</code></pre>
+<p>   <a href="https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682137400226899">https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682137400226899</a><br>3.为什么函数是引用类型，而不是拷贝？</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1.为了让函数实现共用</span><br><span class="line">2.避免每次传递函数时都需要创建一个函数的完整拷贝。</span><br><span class="line">因为函数也是对象,如果是值类型,每次传递都需要将整个函数对象拷贝一份,这会消耗额外资源。</span><br><span class="line">而作为引用类型,我们只需要传递函数的引用,就能在多个地方调用同一个函数,不需要每次都创建一个新的函数对象。</span><br><span class="line">3.支持函数的动态性。如果函数是值类型,那么函数创建后其引用就永远固定了。而作为引用类型,函数的引用是可以动态修改和重新赋值的。</span><br><span class="line">在 JavaScript 中,函数是对象,而对象是引用类型。</span><br><span class="line">所以当我们传递或赋值一个函数时,传递的其实是对该函数对象的引用,而不是函数的拷贝。</span><br></pre></td></tr></table></figure>
+
+<p>   <a href="https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682137463065349">https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682137463065349</a><br>4.引用在JS里有什么用？</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 允许对象之间共享信息。因为对对象的引用可以在多个变量之间传递,所以指向同一对象的多个变量可以共享该对象中的信息。</span><br><span class="line">例如:</span><br><span class="line">js</span><br><span class="line">let obj = &#123; a: 1 &#125;;</span><br><span class="line">let ref1 = obj;</span><br><span class="line">let ref2 = obj;</span><br><span class="line"></span><br><span class="line">ref1.a = 2;  // 通过 ref1 修改</span><br><span class="line"></span><br><span class="line">console.log(ref2.a); // 2  ref2 也受到影响</span><br><span class="line">这里 ref1 和 ref2 指向同一对象 obj,所以通过 ref1 对 obj 的修改也影响了 ref2。</span><br><span class="line"></span><br><span class="line">2. 实现继承和原型链。JS 中的继承是通过原型链实现的,子对象通过__proto__属性指向父对象,这个过程其实就是引用传递。</span><br><span class="line">例如:</span><br><span class="line">js</span><br><span class="line">let parent = &#123;</span><br><span class="line">  name: &#x27;parent&#x27; </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">let child = &#123;</span><br><span class="line">  __proto__: parent  // child 的 __proto__ 属性引用 parent</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">console.log(child.name); // parent </span><br><span class="line">这里 child 对 parent 的引用允许其访问 parent 的属性和方法。</span><br><span class="line"></span><br><span class="line">3. 函数也是对象,所以对函数的传递和赋值也是通过引用来实现的。这意味着多个变量可以共享同一个函数,并且函数的内部状态会影响所有接受到其引用的变量。</span><br><span class="line">例如:</span><br><span class="line">js</span><br><span class="line">function foo() &#123;</span><br><span class="line">  foo.count++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let bar = foo;</span><br><span class="line"></span><br><span class="line">bar();  // foo.count 是 1 </span><br><span class="line">foo();  // foo.count 是 2</span><br><span class="line">这里 bar 和 foo 指向同一个函数对象,所以调用 bar 或 foo 都会修改这个共享的函数对象。</span><br><span class="line"></span><br><span class="line">4. 允许循环引用。通过引用,两个对象可以相互引用对方,形成闭环。</span><br><span class="line">例如:</span><br><span class="line">js</span><br><span class="line">let obj1 = &#123;</span><br><span class="line">  name: &#x27;obj1&#x27;,</span><br><span class="line">  ref: obj2  // 引用 obj2 </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">let obj2 = &#123;</span><br><span class="line">  name: &#x27;obj2&#x27;,</span><br><span class="line">  ref: obj1  // 引用 obj1</span><br><span class="line">&#125;;</span><br><span class="line">  </span><br><span class="line">所以,总结来说,引用在 JS 中实现了对象之间的连接,是支持大部分面向对象特性和功能的基础。</span><br></pre></td></tr></table></figure>
+
+<p>   <a href="https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682137511999319">https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682137511999319</a><br>5.为什么对象是引用类型？<br>   <a href="https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682137569143519">https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682137569143519</a><br>6.构造函数可以被继承的部分一定是引用类型吗？<br>   <a href="https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682137669380839">https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682137669380839</a><br>7.不是引用类型的部分怎么实现可以被继承的？<br>   <a href="https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682137704757199">https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682137704757199</a><br>8.构造函数中，可继承的部分中，不是引用类型的部分为什么不用引用实现被继承？<br>    每一个继承对象理应拥有父对象中某些属性的一个独立拷贝,而不是共享一个属性的引用<br>    <a href="https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682138844233269">https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682138844233269</a><br>9.完整拷贝对象比引用浪费了哪些资源？<br>    1更多的内存空间,需要存储对象的完整结构<br>    2更长的处理时间,需要遍历对象属性进行拷贝<br>    3创建额外的临时对象   </p>
+<p>10.引用不用储存对象的完整结构吗？什么叫对象的完整结构？<br>    引用也需要存储对象的结构,但是与拷贝相比,引用只需要存储对象结构一次。<br>    引用的工作原理是:多个变量存储的是对同一个对象的引用,通过这个引用可以访问到对象的结构。</p>
+]]></content>
+      <categories>
+        <category>code</category>
+        <category>note</category>
+      </categories>
+      <tags>
+        <tag>JS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JS学习笔记-4.9衍生知识（base gpt/答疑）</title>
+    <url>/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-9%E8%A1%8D%E7%94%9F%E7%9F%A5%E8%AF%86%EF%BC%88es6%E3%80%81%E8%BF%87%E6%BB%A4%E6%80%9D%E8%B7%AF%E3%80%81%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%8E%9F%E7%90%86%E3%80%81debug%E3%80%81%E5%87%BD%E6%95%B0%E5%A4%8D%E7%94%A8%EF%BC%89/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 一个数据里面去匹配</span><br><span class="line">// 1.字符的匹配</span><br><span class="line">const text = &#x27;hello world&#x27;;</span><br><span class="line">const reg = /helli/;</span><br><span class="line"></span><br><span class="line">const result = text.match(reg);</span><br><span class="line"></span><br><span class="line">// console.log(&quot;result&quot;,result)</span><br><span class="line"></span><br><span class="line">// 2.在一堆数据里面去筛选</span><br><span class="line"></span><br><span class="line">// 3.浅拷贝</span><br><span class="line">const shallowClone = (target) =&gt; &#123;</span><br><span class="line">  const result = &#123;&#125;;</span><br><span class="line">  for (let key in target) &#123;</span><br><span class="line">    result[key] = target[key];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return result;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// // 4.深拷贝</span><br><span class="line">// const deepClone = (target) =&gt; &#123;</span><br><span class="line">//     const obj = &#123;&#125;</span><br><span class="line">//     for (let key in target) &#123;</span><br><span class="line">//         const value = target[key];</span><br><span class="line">//         if (isObj(target)) &#123;</span><br><span class="line">//             obj[key] = deepClone(value)</span><br><span class="line">//         &#125; else &#123;</span><br><span class="line">//             obj[key] = value</span><br><span class="line">//         &#125;</span><br><span class="line">//     &#125;</span><br><span class="line"></span><br><span class="line">//     return obj</span><br><span class="line">// &#125;</span><br><span class="line"></span><br><span class="line">//5.找到复杂对象中的某几个符合的数据</span><br><span class="line">const list = [</span><br><span class="line">  &#123; name: &#x27;zhangsan&#x27;, id: 1 &#125;,</span><br><span class="line">  &#123; name: &#x27;lisi&#x27;, id: 2 &#125;,</span><br><span class="line">  &#123; name: &#x27;wangwu&#x27;, id: 3 &#125;,</span><br><span class="line">  &#123; name: &#x27;wangwu&#x27;, id: 4 &#125;,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">// 得分字段 score:10</span><br><span class="line"></span><br><span class="line">const getName = function (item) &#123;</span><br><span class="line">  return item.name === &#x27;wangwu&#x27;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// 5.1 forEach 遍历</span><br><span class="line"></span><br><span class="line">// 5.2 for of遍历，判断 数组是否满足条件</span><br><span class="line"></span><br><span class="line">//5.3 判断条件独立出来，函数复用</span><br><span class="line"></span><br><span class="line">// 5.2.1every 所有条件满足返回true,否则返回false</span><br><span class="line">const everyResult = list.every(getName);</span><br><span class="line">console.log(&#x27;everyResult&#x27;, everyResult);</span><br><span class="line"></span><br><span class="line">// 5.2.2some 任一条件满足返回true，否则返回false</span><br><span class="line">const someResult = list.some(getName);</span><br><span class="line">console.log(&#x27;someResult&#x27;, someResult);</span><br><span class="line"></span><br><span class="line">const target = [];</span><br><span class="line"></span><br><span class="line">list.forEach((item) =&gt; &#123;</span><br><span class="line">  target.push(&#123;</span><br><span class="line">    ...item,</span><br><span class="line">    score: 10,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">return target;</span><br><span class="line"></span><br><span class="line">// 5.3map</span><br><span class="line"></span><br><span class="line">// 5.4reduce</span><br><span class="line"></span><br><span class="line">// 6.深拷贝的底层原理：判断数据类型是否为Object</span><br><span class="line">const isObj = (target) =&gt;</span><br><span class="line">  Object.prototype.toString.call(target) === &#x27;[object Object]&#x27;;</span><br><span class="line"></span><br><span class="line">const deepClone = (target) =&gt; &#123;</span><br><span class="line">  const obj = &#123;&#125;;</span><br><span class="line">  for (let key in target) &#123;</span><br><span class="line">    const value = target[key];</span><br><span class="line">    debugger;</span><br><span class="line">    if (isObj(value)) &#123;</span><br><span class="line">      debugger;</span><br><span class="line">      obj[key] = deepClone(value);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      debugger;</span><br><span class="line">      obj[key] = value;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return obj;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">deepClone(&#123; a: &#123; b: 10 &#125; &#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>code</category>
+        <category>note</category>
+      </categories>
+      <tags>
+        <tag>JS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/main/</url>
+    <content><![CDATA[// 一个数据里面去匹配
+// 1.字符的匹配
+const text = 'hello world';
+const reg = /helli/;
+
+const result = text.match(reg);
+
+// console.log("result",result)
+
+// 2.在一堆数据里面去筛选
+
+// 3.浅拷贝
+const shallowClone = (target) => {
+  const result = {};
+  for (let key in target) {
+    result[key] = target[key];
+  }
+
+  return result;
+};
+
+// // 4.深拷贝
+// const deepClone = (target) => {
+//     const obj = {}
+//     for (let key in target) {
+//         const value = target[key];
+//         if (isObj(target)) {
+//             obj[key] = deepClone(value)
+//         } else {
+//             obj[key] = value
+//         }
+//     }
+
+//     return obj
+// }
+
+//5.找到复杂对象中的某几个符合的数据
+const list = [
+  { name: 'zhangsan', id: 1 },
+  { name: 'lisi', id: 2 },
+  { name: 'wangwu', id: 3 },
+  { name: 'wangwu', id: 4 },
+];
+
+// 得分字段 score:10
+
+const getName = function (item) {
+  return item.name === 'wangwu';
+};
+
+// 5.1 forEach 遍历
+
+// 5.2 for of遍历，判断 数组是否满足条件
+
+//5.3 判断条件独立出来，函数复用
+
+// 5.2.1every 所有条件满足返回true,否则返回false
+const everyResult = list.every(getName);
+console.log('everyResult', everyResult);
+
+// 5.2.2some 任一条件满足返回true，否则返回false
+const someResult = list.some(getName);
+console.log('someResult', someResult);
+
+const target = [];
+
+list.forEach((item) => {
+  target.push({
+    ...item,
+    score: 10,
+  });
+});
+
+return target;
+
+// 5.3map
+
+// 5.4reduce
+
+// 6.深拷贝的底层原理：判断数据类型是否为Object
+const isObj = (target) =>
+  Object.prototype.toString.call(target) === '[object Object]';
+
+const deepClone = (target) => {
+  const obj = {};
+  for (let key in target) {
+    const value = target[key];
+    debugger;
+    if (isObj(value)) {
+      debugger;
+      obj[key] = deepClone(value);
+    } else {
+      debugger;
+      obj[key] = value;
+    }
+  }
+
+  return obj;
+};
+
+deepClone({ a: { b: 10 } });
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/debugger/</url>
+    <content><![CDATA[let arr = ['a', 'b', 'c', 'A', 'B', 'A'];
+let findA = (arr) => {
+  const result = [];
+  for (value of arr) {
+    if (value === 'A') {
+      result.push(value);
+    }
+  }
+  return result;
+};
+findA(arr);
+console.log(result);
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/main/</url>
+    <content><![CDATA[// // // 一个数据里面去匹配 
+// // // 字符的匹配
+// // const text = 'hello world'
+// // const reg = /helli/
+
+// // const result = text.match(reg)
+
+// // // console.log("result",result)
+
+
+// // // 在一堆数据里面去筛选
+
+
+
+// // // 浅拷贝
+// // const shallowClone = (target) => {
+// //     const result = {};
+// //     for (let key in target) {
+// //         result[key] = target[key]
+// //     }
+
+// //     return result
+// // }
+
+
+
+// // // 深拷贝
+// // const deepClone = (target) => {   
+// //     const obj = {}
+// //     for (let key in target) {
+// //         const value = target[key];
+// //         if (isObj(target)) {
+// //             obj[key] = deepClone(value)
+// //         } else {
+// //             obj[key] = value
+// //         }
+// //     }
+
+// //     return obj
+// // }
+
+
+
+// // const list = [
+// //     {name:"zhangsan",id:1},
+// //     {name:"lisi",id:2},
+// //     {name:"wangwu",id:3},
+// //     {name:"wangwu",id:4},
+// // ]
+
+
+// // // 得分字段 score:10
+
+
+// // const getName = function(item) {
+// //     return item.name === 'wangwu'
+// // };
+
+
+// // // forEach 遍历
+
+
+// // // 判断 数组是否满足条件
+
+// // // every 所有条件满足返回true,否则返回false
+// // const everyResult= list.every(getName)
+// // console.log("everyResult",everyResult)
+
+// // // some 任一条件满足返回true，否则返回false
+// // const someResult= list.some(getName)
+// // console.log("someResult",someResult)
+
+
+// // const target = [];
+
+// // list.forEach(item => {
+// //     target.push({
+// //         ...item,
+// //         score:10
+// //     })
+// // })
+
+// // return target
+
+// // // map
+
+
+
+// // // reduce
+
+// // // 判断数据类型是否为Object
+// const isObj = (target) => Object.prototype.toString.call(target) === '[object Object]'
+
+// const deepClone = (target) => {   
+//     const obj = {}
+//     for (let key in target) {
+//         const value = target[key];
+//         debugger
+//         if (isObj(value)) {
+//             debugger
+//             obj[key] = deepClone(value)
+//         } else {
+//             debugger
+//             obj[key] = value
+//         }
+//     }
+
+//     return obj
+// }
+
+// deepClone({a:{b:10}})]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/04/04/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/CSS/%E5%9B%9B%E7%82%B9%E9%AA%B0%E5%AD%90/%E5%9B%9B%E7%82%B9%E9%AA%B0%E5%AD%90/</url>
+    <content><![CDATA[/* 容器 */
+.box {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+
+    /* 阴影效果 */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px 12px;
+}
+
+/*子容器*/
+.box-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* 骰子的点 */
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius:50%;
+}
+
+
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/04/04/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/CSS/%E5%9B%9B%E7%82%B9%E9%AA%B0%E5%AD%90/%E5%9B%9B%E7%82%B9%E9%AA%B0%E5%AD%90/</url>
+    <content><![CDATA[<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="box">
+        <div class="box-content">
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <div class="box-content">
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+</body>
+</html>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/04/05/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/CSS/4.4%204.5position/3.%E7%B2%98%E6%80%A7%E5%AE%9A%E4%BD%8D/index/</url>
+    <content><![CDATA[<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <div class="box">
+        <ul class="menu">
+            <li>链接A</li>
+            <li>链接B</li>
+            <li>链接C</li>
+        </ul>
+        <div class="content">
+            <div>内容很长</div>
+            <div>内容很长</div>
+            <div>内容很长</div>
+            <div>内容很长</div>
+            <div>内容很长</div>
+            <div>内容很长</div>
+            <div>内容很长</div>
+            <div>内容很长</div>
+            <div>内容很长</div>
+            <div>内容很长</div>
+            <div>内容很长</div>
+            <div>内容很长</div>
+            <div>内容很长</div>
+            <div>内容很长</div>
+            <div>内容很长</div>
+            <div>内容很长</div>
+            <div>内容很长</div>
+            <div>内容很长</div>
+            <div>内容很长</div>
+            <div>内容很长</div>
+        </div>
+    </div>
+</body>
+
+</html>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/04/05/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/CSS/4.4%204.5position/3.%E7%B2%98%E6%80%A7%E5%AE%9A%E4%BD%8D/main/</url>
+    <content><![CDATA[* {
+    margin: 0;
+    padding: 0;
+}
+.box {
+    position: relative;
+}
+ul {
+    list-style: none;
+    display: flex;
+    background-color: #09d;
+    padding: 6px 6px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+ul li {
+    font-size: 14px;
+    color: #fff;
+}
+ul li:not(:last-child) {
+    margin-right: 8px;
+}
+
+.content div {
+    margin: 60px 0;
+}]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/04/05/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/CSS/4.4%204.5position/1.%E5%9F%BA%E7%A1%80position/index/</url>
+    <content><![CDATA[<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+
+    <div class="grand">
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+    </div>
+</body>
+
+</html>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/04/05/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/CSS/4.4%204.5position/1.%E5%9F%BA%E7%A1%80position/main/</url>
+    <content><![CDATA[.container {
+    background-color: #09d;
+    width: 400px;
+    height: 400px;
+    margin: 20px 20px;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.grand {
+    background-color: yellow;
+    width: 600px;
+    height: 600px;
+    margin: 20px 20px;
+    /* 实际上不会根据 .grand 做偏移，直接父元素是body，为什么不能根据body做偏移？*/
+    position: relative;
+    top: 0px;
+}
+
+.parent {
+    background-color: blue;
+    width: 300px;
+    height: 300px;
+    padding: 10px 10px;
+    /**可以尝试给.parent 加上position: relative;看下效果**/
+}
+
+.child {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/04/05/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/CSS/4.4%204.5position/0.%E7%9B%92%E5%AD%90/index/</url>
+    <content><![CDATA[<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="a">A</div>
+        <div class="b">B</div>
+    </div>
+</body>
+
+</html>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/04/05/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/CSS/4.4%204.5position/0.%E7%9B%92%E5%AD%90/main/</url>
+    <content><![CDATA[.container {
+    display: flex;
+    justify-content: space-around;
+}
+.container .a,.container .b {
+    width: 300px;
+    height: 300px;
+    background-color: #09d;
+    font-size: 14px;
+    color: #fff;
+    padding: 12px 0;
+    border: 2px solid red;
+}
+
+.container .a{
+    box-sizing: border-box;
+}
+
+
+.container .b {
+    box-sizing: content-box;
+}]]></content>
   </entry>
 </search>

@@ -88,7 +88,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">2.5k</span>
+            <span class="post-count">4.3k</span>
         </span>
     </span>
 
@@ -97,7 +97,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">10 分钟</span>
+            <span class="post-count">17 分钟</span>
         </span>
     </span>
 </div>
@@ -119,9 +119,48 @@
 <p>C++:在继承关系中,如果子类没有定义构造函数,会自动调用父类的构造函数;如果子类定义了构造函数,需要在子类构造函数中显式调用父类的构造函数;析构函数与构造函数相反,会先调用子类的析构函数,然后调用父类的析构函数。<br>JS:在继承关系中,如果子类没有定义构造函数,不会自动调用父类的构造函数;子类需要显示调用父类的构造函数;没有析构函数的概念。不同点三:重载与重写不同。</p>
 <p>C++: 构造函数和析构函数都可以重载;子类可以重写父类的构造函数和析构函数。<br>JS:构造函数不能重载,但可以在子类中重写父类的构造函数;没有重写析构函数的概念。</p>
 <p>总体来说,C++ 中的这两个概念更加丰富,而 JS 中针对对象初始化和释放的处理较为简单。</p>
+<h3 id="2-什么是浅拷贝"><a href="#2-什么是浅拷贝" class="headerlink" title="2.什么是浅拷贝"></a>2.什么是浅拷贝</h3><p>就是愚蠢的拷贝，如果对象里嵌套了对象，那么就会把内部对象的引用给拷贝下来（引用类型的拷贝不会改变引用地址，也就是说拷贝下来的新引用还是旧的那个引用）。由于只是拷贝引用,所以如果引用所指向的对象发生变化,浅拷贝得到的对象也会发生变化。</p>
+<h4 id="最直观的例子："><a href="#最直观的例子：" class="headerlink" title="最直观的例子："></a>最直观的例子：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let obj = &#123; a: 1, b: &#123; c: 2 &#125; &#125;;</span><br><span class="line">let copy = Object.assign(&#123;&#125;, obj);  // 浅拷贝</span><br><span class="line">obj.b.c = 3;</span><br><span class="line">obj.a = 4;</span><br><span class="line">console.log(copy.b.c);  // 3  发生变化</span><br><span class="line">console.log(copy.a);    //1   无变化</span><br></pre></td></tr></table></figure>
+
+<h4 id="具体解释："><a href="#具体解释：" class="headerlink" title="具体解释："></a>具体解释：</h4><p>对上面这个例子,我们来分析浅拷贝后 copy 对象的结构:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">js</span><br><span class="line">obj = &#123;</span><br><span class="line">  a: 1,     // 基本类型,值 </span><br><span class="line">  b: &#123;      // 引用类型,地址1</span><br><span class="line">    c: 2 </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">copy = &#123;</span><br><span class="line">  a: 1,     // 基本类型,值 </span><br><span class="line">  b: &#123;      // 引用类型,地址1</span><br><span class="line">    c: 2 </span><br><span class="line">  &#125;  </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<p>然后当我们修改 obj 时:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">js</span><br><span class="line">obj.b.c = 3;  // 修改的是地址1指向的对象</span><br><span class="line">obj.a = 4;     // 修改的是值</span><br></pre></td></tr></table></figure>
+
+<p>此时,obj 和 copy 的结构变为:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">js</span><br><span class="line">obj = &#123;</span><br><span class="line">  a: 4,      // 新的基本类型值 </span><br><span class="line">  b: &#123;       // 地址1</span><br><span class="line">    c: 3    </span><br><span class="line">  &#125;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">copy = &#123;</span><br><span class="line">  a: 1,       // 原基本类型值</span><br><span class="line">  b: &#123;        // 地址1</span><br><span class="line">    c: 3     </span><br><span class="line">  &#125; </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<p>可以看到:- 当我们修改 obj 的引用类型成员 b 时,由于 copy 中的 b 也指向地址 1,所以 copy 的 b 也发生了变化。- 但是,当我们修改 obj 的基本类型成员 a 时,copy 中的 a 不发生变化,因为它有自己的独立值。所以结果是:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">js</span><br><span class="line">console.log(copy.b.c);  // 3  发生变化</span><br><span class="line">console.log(copy.a);    //1   无变化  </span><br></pre></td></tr></table></figure>
+
+<p>这个过程很好地证明了浅拷贝的特征:- 对引用类型的成员,拷贝的是地址,变化会相互影响<br>- 对基本类型的成员,拷贝的是值,变化互不影响</p>
+<h4 id="浅拷贝常见的实现方式有"><a href="#浅拷贝常见的实现方式有" class="headerlink" title="浅拷贝常见的实现方式有:"></a>浅拷贝常见的实现方式有:</h4><ol>
+<li><h5 id="Object-assign-obj-对象的浅拷贝"><a href="#Object-assign-obj-对象的浅拷贝" class="headerlink" title="Object.assign({}, obj)对象的浅拷贝:"></a>Object.assign({}, obj)对象的浅拷贝:</h5></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let obj = &#123; a: 1, b: &#123; c: 2 &#125; &#125;;</span><br><span class="line">let copy = Object.assign(&#123;&#125;, obj);  // 浅拷贝</span><br><span class="line">obj.b.c = 3;</span><br><span class="line">console.log(copy.b.c);  // 3  发生变化</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><h5 id="arr-slice-数组的浅拷贝"><a href="#arr-slice-数组的浅拷贝" class="headerlink" title="arr.slice()数组的浅拷贝:"></a>arr.slice()数组的浅拷贝:</h5></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let arr = [1, &#123; a: 2 &#125;]; </span><br><span class="line">let copy = arr.slice();   // 浅拷贝</span><br><span class="line">arr[1].a = 3;</span><br><span class="line">console.log(copy[1].a);   // 3  发生变化</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><h5 id="…obj-…arr-展开语法进行浅拷贝"><a href="#…obj-…arr-展开语法进行浅拷贝" class="headerlink" title="{ …obj }  […arr]展开语法进行浅拷贝:"></a>{ …obj }  […arr]展开语法进行浅拷贝:</h5></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let obj = &#123; a: 1, b: &#123; c: 2 &#125; &#125;;</span><br><span class="line">let copy = &#123; ...obj &#125;;   // 浅拷贝</span><br><span class="line">obj.b.c = 3;</span><br><span class="line">console.log(copy.b.c);   // 3  发生变化</span><br></pre></td></tr></table></figure>
+
+<p>所以,浅拷贝的主要用途是快速复制对象,但是由于它只复制引用,对于引用类型的成员来说,如果原对象发生变化,拷贝对象也会变化。如果要避免这种情况,可以使用深拷贝,深拷贝会完整复制一个新对象,两者之间不再有任何引用关系,变化互不影响。</p>
+<h4 id="常见的深拷贝实现方式有"><a href="#常见的深拷贝实现方式有" class="headerlink" title="常见的深拷贝实现方式有:"></a>常见的深拷贝实现方式有:</h4><p>JSON.parse(JSON.stringify(obj))<br>lodash工具库的 _.cloneDeep() 方法<br>手动实现深度遍历对象并复制（及其简单的递归，就是一层层拨开嵌套对象，直到到达内部找到对象内的键值对，浅拷贝它）</p>
+<p>所以,总结来说,浅拷贝和深拷贝的主要区别在于对引用类型的成员的处理方式,理解两者的区别可以更好地选择适合的拷贝方式。</p>
+<h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><p>在工作中,如果要考虑兼容性,或需要灵活指定下标获取部分数组,arr.slice() 会更常用。</p>
+<p>如果项目环境支持 ES6,并且需要获取数组的完整拷贝,展开语法 …arr 会更简洁,也是较常见的用法。</p>
+<p>两者的底层实现原理都是浅拷贝,对于一维数组来说,效果是相同的。</p>
+<p>但也要注意,如果数组包含复杂类型,那么对原数组的修改会影响拷贝得到的数组。</p>
+<p>除此之外,也可以选择 lodash 等工具库提供的深拷贝方法,如 _.cloneDeep(),来完全避免两个数组之间的影响,这在某些场景下也比较常用。</p>
 <h2 id="4-6-1Object"><a href="#4-6-1Object" class="headerlink" title="4.6.1Object"></a>4.6.1Object</h2><h3 id="1-常用方法"><a href="#1-常用方法" class="headerlink" title="1.常用方法"></a>1.常用方法</h3><p>在工作中,Object 对象属性和方法中常用的主要有:</p>
 <ol>
-<li>Object.defineProperty() 和 Object.defineProperties():用于在对象上定义属性或修改属性,常用于<em><strong>数据响应式</strong></em>。</li>
+<li><strong>Object.defineProperty() 和 Object.defineProperties()</strong>:用于在对象上定义属性或修改属性,常用于<em><strong>数据响应式</strong></em>。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let obj = &#123;&#125;;</span><br><span class="line">Object.defineProperty(obj, &quot;prop&quot;, &#123;</span><br><span class="line">  value: true,</span><br><span class="line">  writable: false,</span><br><span class="line">  enumerable: true </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
@@ -208,7 +247,107 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">js</span><br><span class="line">let bool = new Boolean(true);   // Boolean 对象</span><br><span class="line"></span><br><span class="line">if (bool.valueOf()) &#123; ... &#125;    // 需要调用 valueOf() 方法</span><br><span class="line"></span><br><span class="line">bool.constructor = 123;        // 可以添加属性</span><br></pre></td></tr></table></figure>
 
 <p>所以,boolean 类型和 Boolean 对象的主要区别在于:- boolean 是基本数据类型,Boolean 是对象。<br>- boolean 只有 true 和 false 两个字面量,Boolean 除了 true 和 false 值外,还可以有其他属性和方法。<br>- boolean 可以直接用于条件判断,Boolean 需要调用 valueOf() 方法。但是,在大多数情况下,我们可以把 Boolean 对象当作 boolean 类型来使用,因为:- Boolean 对象在布尔表达式中会自动调用 valueOf() 方法,返回基本类型值。<br>- <strong>基于性能考虑,大多数情况下我们会使用基本类型boolean而不是Boolean对象。</strong>所以,boolean 和 Boolean 的关系可以看作,boolean 是基本数据类型,Boolean 是它的对象包装形式。</p>
- 
+<h3 id="4-Number"><a href="#4-Number" class="headerlink" title="4.Number"></a>4.Number</h3><p>只有可继承的原型函数prototype.toString（）值得一看</p>
+<h3 id="5-String"><a href="#5-String" class="headerlink" title="5.String"></a>5.String</h3><h4 id="5-1原型属性"><a href="#5-1原型属性" class="headerlink" title="5.1原型属性"></a>5.1原型属性</h4><ol>
+<li>字符串实例的length属性返回字符串的长度。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;abc&#x27;.length // 3</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-2原型函数"><a href="#5-2原型函数" class="headerlink" title="5.2原型函数"></a>5.2原型函数</h4><ol>
+<li>charAt():返回指定索引处的字符,索引从 0 开始。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.charAt(0);  // &#x27;h&#x27;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>concat():连接两个或多个字符串,返回连接后的字符串。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.concat(&#x27; &#x27;, &#x27;world&#x27;);  // &#x27;hello world&#x27;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>startsWith():检查字符串是否以指定的子字符串开头,返回 true 或 false。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.startsWith(&#x27;he&#x27;);   // true</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>endsWith():检查字符串是否以指定的子字符串结尾,返回 true 或 false。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.endsWith(&#x27;lo&#x27;);   // true</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>indexOf():返回指定子字符串首次出现的索引,如果不存在则返回 -1。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.indexOf(&#x27;l&#x27;);   // 2</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>lastIndexOf():返回指定子字符串最后一次出现的索引,如果不存在则返回 -1。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.lastIndexOf(&#x27;l&#x27;);   // 3</span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>slice():提取字符串的一部分,返回提取后的字符串。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.slice(1, 3);   // &#x27;el&#x27;</span><br></pre></td></tr></table></figure>
+
+<ol start="8">
+<li>substring():提取字符串的一部分,返回提取后的字符串。与 slice() 类似。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.substring(1, 3);   // &#x27;el&#x27;</span><br></pre></td></tr></table></figure>
+
+<ol start="9">
+<li>split():将字符串按指定分隔符拆分成数组,返回数组。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">js</span><br><span class="line">&#x27;a-b-c&#x27;.split(&#x27;-&#x27;);   // [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]</span><br></pre></td></tr></table></figure>
+
+<ol start="10">
+<li>replace():替换字符串中的指定子字符串,返回替换后的字符串。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.replace(&#x27;l&#x27;, &#x27;x&#x27;);   // &#x27;hexxo&#x27;</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-Math"><a href="#6-Math" class="headerlink" title="6.Math"></a>6.Math</h3><h4 id="6-1（只有）静态函数"><a href="#6-1（只有）静态函数" class="headerlink" title="6.1（只有）静态函数"></a>6.1（只有）静态函数</h4><ul>
+<li><p><code>Math.abs()</code>：绝对值</p>
+</li>
+<li><p><code>Math.ceil()</code>：向上取整</p>
+</li>
+<li><p><code>Math.floor()</code>：向下取整</p>
+</li>
+<li><p><code>Math.max()</code>：最大值</p>
+</li>
+<li><p><code>Math.min()</code>：最小值</p>
+</li>
+<li><p><code>Math.pow()</code>：幂运算</p>
+<p>Math.pow方法返回以第一个参数为底数、第二个参数为指数的幂运算值。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 等同于 2 ** 2</span><br><span class="line">Math.pow(2, 2) // 4</span><br><span class="line">// 等同于 2 ** 3</span><br><span class="line">Math.pow(2, 3) // 8</span><br></pre></td></tr></table></figure>
+
+<p>下面是计算圆面积的方法。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var radius = 20;</span><br><span class="line">var area = Math.PI * Math.pow(radius, 2);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>Math.sqrt()</code>：平方根</p>
+<p>Math.sqrt方法返回参数值的平方根。如果参数是一个负值，则返回<code>NaN</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Math.sqrt(4) // 2</span><br><span class="line">Math.sqrt(-4) // NaN</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>Math.log()</code>：自然对数</p>
+</li>
+<li><p><code>Math.exp()</code>：<code>e</code>的指数</p>
+</li>
+<li><p><code>Math.round()</code>：四舍五入</p>
+</li>
+<li><p><code>Math.random()</code>：随机数</p>
+<p><code>Math.random()</code>返回0到1之间的一个伪随机数，可能等于0，但是一定小于1。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Math.random() // 0.7151307314634323</span><br></pre></td></tr></table></figure>
+
+<p>任意范围的随机数生成函数如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function getRandomArbitrary(min, max) &#123;</span><br><span class="line">  return Math.random() * (max - min) + min;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">getRandomArbitrary(1.5, 6.5)</span><br><span class="line">// 2.4942810038223864</span><br></pre></td></tr></table></figure>
+
+<p>任意范围的随机整数生成函数如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function getRandomInt(min, max) &#123;</span><br><span class="line">  return Math.floor(Math.random() * (max - min + 1)) + min;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">getRandomInt(1, 6) // 5</span><br></pre></td></tr></table></figure>
+
+<p>返回随机字符的例子如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function random_str(length) &#123;</span><br><span class="line">  var ALPHABET = &#x27;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#x27;;</span><br><span class="line">  ALPHABET += &#x27;abcdefghijklmnopqrstuvwxyz&#x27;;</span><br><span class="line">  ALPHABET += &#x27;0123456789-_&#x27;;</span><br><span class="line">  var str = &#x27;&#x27;;</span><br><span class="line">  for (var i = 0; i &lt; length; ++i) &#123;</span><br><span class="line">    var rand = Math.floor(Math.random() * ALPHABET.length);</span><br><span class="line">    str += ALPHABET.substring(rand, rand + 1);</span><br><span class="line">  &#125;</span><br><span class="line">  return str;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">random_str(6) // &quot;NdQKOr&quot;</span><br></pre></td></tr></table></figure>
+
+<p>上面代码中，<code>random_str</code>函数接受一个整数作为参数，返回变量<code>ALPHABET</code>内的随机字符所组成的指定长度的字符串。</p>
+</li>
+</ul>
+<h3 id="7-Date"><a href="#7-Date" class="headerlink" title="7.Date"></a>7.Date</h3><h4 id="7-1作为普通函数"><a href="#7-1作为普通函数" class="headerlink" title="7.1作为普通函数"></a>7.1作为普通函数</h4><h4 id="7-2作为构造函数"><a href="#7-2作为构造函数" class="headerlink" title="7.2作为构造函数"></a>7.2作为构造函数</h4><h5 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h5><h5 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h5><h3 id="8-RegExp"><a href="#8-RegExp" class="headerlink" title="8.RegExp"></a>8.RegExp</h3><h4 id="5-1"><a href="#5-1" class="headerlink" title="5.1"></a>5.1</h4><h4 id="5-2"><a href="#5-2" class="headerlink" title="5.2"></a>5.2</h4><h3 id="9-JOSN"><a href="#9-JOSN" class="headerlink" title="9.JOSN"></a>9.JOSN</h3><h4 id="5-1-1"><a href="#5-1-1" class="headerlink" title="5.1"></a>5.1</h4><h4 id="5-2-1"><a href="#5-2-1" class="headerlink" title="5.2"></a>5.2</h4> 
       <!-- reward -->
       
     </div>
@@ -295,9 +434,9 @@
       </a>
     
     
-      <a href="/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-7%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="article-nav-link">
+      <a href="/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-0%E4%B8%A4%E7%A7%8D%E5%BC%82%E6%AD%A5%E8%A7%82%E5%BF%B5/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">JS学习笔记-4.7面向对象（base阮一峰/gpt ）</div>
+        <div class="article-nav-title">爬虫学习笔记-6.0两种异步观念（base大学数据结构+OS老师）</div>
       </a>
     
   </nav>

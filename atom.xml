@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-04-15T08:13:56.289Z</updated>
+  <updated>2023-04-22T15:19:01.461Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,88 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/main/"/>
+    <id>http://example.com/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/main/</id>
+    <published>2023-04-22T15:09:55.072Z</published>
+    <updated>2023-04-22T15:19:01.461Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">// 一个数据里面去匹配
+// 1.字符的匹配
+const text = &#39;hello world&#39;;
+const reg = /helli/;
+
+const result = text.match(reg);
+
+//</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/main/"/>
+    <id>http://example.com/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/main/</id>
+    <published>2023-04-22T15:07:38.126Z</published>
+    <updated>2023-04-22T07:05:55.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">// // // 一个数据里面去匹配 
+// // // 字符的匹配
+// // const text = &#39;hello world&#39;
+// // const reg = /helli/
+
+// // const result = text.match(reg)
+
+// //</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/debugger/"/>
+    <id>http://example.com/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/debugger/</id>
+    <published>2023-04-22T06:27:47.841Z</published>
+    <updated>2023-04-22T07:05:48.524Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">let arr = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;A&#39;, &#39;B&#39;, &#39;A&#39;];
+let findA = (arr) =&gt; {
+  const result = [];
+  for (value of arr) {
+    if (value === &#39;A&#39;) {
+     </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -212,7 +294,7 @@
     <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-6%E6%A0%87%E5%87%86%E5%BA%93/"/>
     <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-6%E6%A0%87%E5%87%86%E5%BA%93/</id>
     <published>2023-04-07T03:34:47.000Z</published>
-    <updated>2023-04-19T12:39:39.201Z</updated>
+    <updated>2023-04-22T07:13:22.175Z</updated>
     
     
       
@@ -220,33 +302,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;4-6标准库&quot;&gt;&lt;a href=&quot;#4-6标准库&quot; class=&quot;headerlink&quot; title=&quot;4.6标准库&quot;&gt;&lt;/a&gt;4.6标准库&lt;/h1&gt;&lt;h2 id=&quot;4-6-0基础知识&quot;&gt;&lt;a href=&quot;#4-6-0基础知识&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="JS" scheme="http://example.com/tags/JS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS学习笔记-4.7面向对象（base阮一峰/gpt ）</title>
-    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-7%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-7%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
-    <published>2023-04-07T03:34:47.000Z</published>
-    <updated>2023-04-21T09:29:30.695Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;4-7面向对象&quot;&gt;&lt;a href=&quot;#4-7面向对象&quot; class=&quot;headerlink&quot; title=&quot;4.7面向对象&quot;&gt;&lt;/a&gt;4.7面向对象&lt;/h1&gt;&lt;h2 id=&quot;4-7-1浅薄的了解&quot;&gt;&lt;a href=&quot;#4-7-1浅薄的了解&quot;</summary>
         
       
     
@@ -376,7 +431,7 @@
     <link href="http://example.com/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-2%E5%BC%82%E6%AD%A5%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%BD%AE%E8%AF%A2%E6%9C%BA%E5%88%B6/"/>
     <id>http://example.com/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-2%E5%BC%82%E6%AD%A5%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%BD%AE%E8%AF%A2%E6%9C%BA%E5%88%B6/</id>
     <published>2023-04-07T03:34:47.000Z</published>
-    <updated>2023-04-21T09:57:05.914Z</updated>
+    <updated>2023-04-21T10:12:24.957Z</updated>
     
     
       
@@ -399,18 +454,18 @@
   </entry>
   
   <entry>
-    <title>CSS学习笔记-2.1盒子、定位与布局</title>
-    <link href="http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q3-CSS-1%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%B8%83%E5%B1%80/"/>
-    <id>http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q3-CSS-1%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%B8%83%E5%B1%80/</id>
-    <published>2023-04-01T03:34:47.000Z</published>
-    <updated>2023-04-17T06:21:34.331Z</updated>
+    <title>JS学习笔记-4.7过滤（base  gpt ）</title>
+    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-7%E8%BF%87%E6%BB%A4/"/>
+    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-7%E8%BF%87%E6%BB%A4/</id>
+    <published>2023-04-07T03:34:47.000Z</published>
+    <updated>2023-04-22T05:27:48.706Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;CSS学习笔记-2-1盒子、定位与布局-三种重要布局及其它布局&quot;&gt;&lt;a href=&quot;#CSS学习笔记-2-1盒子、定位与布局-三种重要布局及其它布局&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;4-7-1数组过滤&quot;&gt;&lt;a href=&quot;#4-7-1数组过滤&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -421,23 +476,23 @@
     <category term="note" scheme="http://example.com/categories/code/note/"/>
     
     
-    <category term="CSS" scheme="http://example.com/tags/CSS/"/>
+    <category term="JS" scheme="http://example.com/tags/JS/"/>
     
   </entry>
   
   <entry>
-    <title>CSS学习笔记-2.3flex布局实现</title>
-    <link href="http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q3-CSS-3%E5%AE%9E%E8%B7%B5%EF%BC%88flex%E5%B8%83%E5%B1%80%EF%BC%89/"/>
-    <id>http://example.com/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q3-CSS-3%E5%AE%9E%E8%B7%B5%EF%BC%88flex%E5%B8%83%E5%B1%80%EF%BC%89/</id>
-    <published>2023-04-01T03:34:47.000Z</published>
-    <updated>2023-04-07T06:47:52.199Z</updated>
+    <title>JS学习笔记-4.8面向对象（base  gpt/答疑 ）</title>
+    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-8%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-8%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
+    <published>2023-04-07T03:34:47.000Z</published>
+    <updated>2023-04-22T15:23:50.737Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;CSS学习笔记-2-3实践&quot;&gt;&lt;a href=&quot;#CSS学习笔记-2-3实践&quot; class=&quot;headerlink&quot; title=&quot;CSS学习笔记-2.3实践&quot;&gt;&lt;/a&gt;CSS学习笔记-2.3实践&lt;/h1&gt;&lt;p&gt;&lt;a</summary>
+    <summary type="html">&lt;h1 id=&quot;4-8面向对象&quot;&gt;&lt;a href=&quot;#4-8面向对象&quot; class=&quot;headerlink&quot; title=&quot;4.8面向对象&quot;&gt;&lt;/a&gt;4.8面向对象&lt;/h1&gt;&lt;h2 id=&quot;4-8-1浅薄的了解&quot;&gt;&lt;a href=&quot;#4-8-1浅薄的了解&quot;</summary>
         
       
     
@@ -448,28 +503,23 @@
     <category term="note" scheme="http://example.com/categories/code/note/"/>
     
     
-    <category term="CSS" scheme="http://example.com/tags/CSS/"/>
+    <category term="JS" scheme="http://example.com/tags/JS/"/>
     
   </entry>
   
   <entry>
-    <title>前端英文列表</title>
-    <link href="http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/Q0-Word/"/>
-    <id>http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/Q0-Word/</id>
-    <published>2023-03-29T04:30:47.000Z</published>
-    <updated>2023-03-30T11:03:05.321Z</updated>
+    <title>JS学习笔记-4.9衍生知识（base gpt/答疑）</title>
+    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-9%E8%A1%8D%E7%94%9F%E7%9F%A5%E8%AF%86%EF%BC%88es6%E3%80%81%E8%BF%87%E6%BB%A4%E6%80%9D%E8%B7%AF%E3%80%81%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%8E%9F%E7%90%86%E3%80%81debug%E3%80%81%E5%87%BD%E6%95%B0%E5%A4%8D%E7%94%A8%EF%BC%89/"/>
+    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-9%E8%A1%8D%E7%94%9F%E7%9F%A5%E8%AF%86%EF%BC%88es6%E3%80%81%E8%BF%87%E6%BB%A4%E6%80%9D%E8%B7%AF%E3%80%81%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%8E%9F%E7%90%86%E3%80%81debug%E3%80%81%E5%87%BD%E6%95%B0%E5%A4%8D%E7%94%A8%EF%BC%89/</id>
+    <published>2023-04-07T03:34:47.000Z</published>
+    <updated>2023-04-22T15:24:00.371Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;margin：外边距&lt;/p&gt;
-&lt;p&gt;border：框架&lt;/p&gt;
-&lt;p&gt;padding：内边距&lt;/p&gt;
-&lt;p&gt;br：Barter rabbet  &lt;/p&gt;
-&lt;p&gt;en： &amp;#x2F;ˈbär-tər    ræbɪt&amp;#x2F;  换行&lt;/p&gt;
-&lt;p&gt;span：行内组合,</summary>
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
         
       
     
@@ -480,88 +530,38 @@
     <category term="note" scheme="http://example.com/categories/code/note/"/>
     
     
-    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
+    <category term="JS" scheme="http://example.com/tags/JS/"/>
     
   </entry>
   
   <entry>
-    <title>CSS学习笔记-1.2实践</title>
-    <link href="http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q2-CSS-2%E5%AE%9E%E8%B7%B5%EF%BC%88%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F%EF%BC%89/"/>
-    <id>http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q2-CSS-2%E5%AE%9E%E8%B7%B5%EF%BC%88%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F%EF%BC%89/</id>
-    <published>2023-03-29T03:34:47.000Z</published>
-    <updated>2023-04-06T13:53:00.804Z</updated>
+    <title></title>
+    <link href="http://example.com/2023/04/05/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/CSS/4.4%204.5position/3.%E7%B2%98%E6%80%A7%E5%AE%9A%E4%BD%8D/main/"/>
+    <id>http://example.com/2023/04/05/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/CSS/4.4%204.5position/3.%E7%B2%98%E6%80%A7%E5%AE%9A%E4%BD%8D/main/</id>
+    <published>2023-04-05T10:07:10.000Z</published>
+    <updated>2023-04-05T12:26:32.952Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;CSS学习笔记-1-2实践&quot;&gt;&lt;a href=&quot;#CSS学习笔记-1-2实践&quot; class=&quot;headerlink&quot; title=&quot;CSS学习笔记-1.2实践&quot;&gt;&lt;/a&gt;CSS学习笔记-1.2实践&lt;/h1&gt;&lt;figure class=&quot;highlight</summary>
+    <summary type="html">* {
+    margin: 0;
+    padding: 0;
+}
+.box {
+    position: relative;
+}
+ul {
+    list-style: none;
+    display: flex;
+    background-color:</summary>
         
       
     
     
     
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="CSS" scheme="http://example.com/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS学习笔记-1.1基本样式</title>
-    <link href="http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/"/>
-    <id>http://example.com/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/</id>
-    <published>2023-03-29T03:00:47.000Z</published>
-    <updated>2023-04-17T06:15:21.251Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;CSS学习笔记-1-1基本样式&quot;&gt;&lt;a href=&quot;#CSS学习笔记-1-1基本样式&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="CSS" scheme="http://example.com/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS学习笔记-2.2选择器</title>
-    <link href="http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q3-CSS-2%E9%80%89%E6%8B%A9%E5%99%A8/"/>
-    <id>http://example.com/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q3-CSS-2%E9%80%89%E6%8B%A9%E5%99%A8/</id>
-    <published>2023-03-28T03:34:47.000Z</published>
-    <updated>2023-04-17T06:22:08.395Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;CSS学习笔记-2-2选择器&quot;&gt;&lt;a href=&quot;#CSS学习笔记-2-2选择器&quot; class=&quot;headerlink&quot; title=&quot;CSS学习笔记-2.2选择器&quot;&gt;&lt;/a&gt;CSS学习笔记-2.2选择器&lt;/h1&gt;&lt;h4 id=&quot;选择器字典&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="CSS" scheme="http://example.com/tags/CSS/"/>
     
   </entry>
   

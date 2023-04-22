@@ -151,7 +151,7 @@
     
     
     <article
-  id="post-Python/P3-Python爬虫-数据分析-前后端代码（毕设）"
+  id="post-前端学习笔记/CSS/Q2-CSS-2实践（基本样式）"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -162,8 +162,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2023/03/11/Python/P3-Python%E7%88%AC%E8%99%AB-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BB%A3%E7%A0%81%EF%BC%88%E6%AF%95%E8%AE%BE%EF%BC%89/"
-    >Python爬虫&amp;数据分析&amp;前后端代码（毕设）【待上传】</a> 
+  <a class="article-title" href="/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q2-CSS-2%E5%AE%9E%E8%B7%B5%EF%BC%88%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F%EF%BC%89/"
+    >CSS学习笔记-1.2实践</a> 
 </h2>
  
 
@@ -171,8 +171,778 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/03/11/Python/P3-Python%E7%88%AC%E8%99%AB-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BB%A3%E7%A0%81%EF%BC%88%E6%AF%95%E8%AE%BE%EF%BC%89/" class="article-date">
-  <time datetime="2023-03-11T03:42:35.000Z" itemprop="datePublished">2023-03-11</time>
+      <a href="/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q2-CSS-2%E5%AE%9E%E8%B7%B5%EF%BC%88%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F%EF%BC%89/" class="article-date">
+  <time datetime="2023-03-29T03:34:47.000Z" itemprop="datePublished">2023-03-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="CSS学习笔记-1-2实践"><a href="#CSS学习笔记-1-2实践" class="headerlink" title="CSS学习笔记-1.2实践"></a>CSS学习笔记-1.2实践</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">  	&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  	&lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">    &lt;title&gt;Cafe Menu&lt;/title&gt;</span><br><span class="line">    &lt;link href=&quot;../CSS/咖啡.css&quot; rel=&quot;stylesheet&quot;&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;div class=&quot;menu&quot;&gt;</span><br><span class="line">      &lt;main&gt;</span><br><span class="line">        &lt;h1&gt;CAMPER CAFE&lt;/h1&gt;</span><br><span class="line">        &lt;p class=&quot;established&quot;&gt;Est. 2020&lt;/p&gt;</span><br><span class="line">        &lt;hr&gt;</span><br><span class="line">        &lt;section&gt;</span><br><span class="line">          &lt;h2&gt;Coffee&lt;/h2&gt;</span><br><span class="line">          &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg&quot; alt=&quot;coffee icon&quot;/&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;French Vanilla&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.00&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;Caramel Macchiato&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.75&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;Pumpkin Spice&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.50&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;Hazelnut&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;4.00&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;flavor&quot;&gt;Mocha&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;4.50&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">        &lt;/section&gt;</span><br><span class="line">        &lt;section&gt;</span><br><span class="line">          &lt;h2&gt;Desserts&lt;/h2&gt;</span><br><span class="line">          &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg&quot; alt=&quot;pie icon&quot;/&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;dessert&quot;&gt;Donut&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;1.50&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;dessert&quot;&gt;Cherry Pie&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;2.75&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;dessert&quot;&gt;Cheesecake&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.00&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">          &lt;article class=&quot;item&quot;&gt;</span><br><span class="line">            &lt;p class=&quot;dessert&quot;&gt;Cinnamon Roll&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;2.50&lt;/p&gt;</span><br><span class="line">          &lt;/article&gt;</span><br><span class="line">        &lt;/section&gt;</span><br><span class="line">      &lt;/main&gt;</span><br><span class="line">      &lt;hr class=&quot;bottom-line&quot;&gt;</span><br><span class="line">      &lt;footer&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">          &lt;a href=&quot;https://www.freecodecamp.org&quot; target=&quot;_blank&quot;&gt;Visit our website&lt;/a&gt;</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">        &lt;p class=&quot;address&quot;&gt;123 Free Code Camp Drive&lt;/p&gt;</span><br><span class="line">      &lt;/footer&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);</span><br><span class="line">  font-family: sans-serif;</span><br><span class="line">  padding: 20px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">h1 &#123;</span><br><span class="line">  font-size: 40px;</span><br><span class="line">  margin-top: 0;</span><br><span class="line">  margin-bottom: 15px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">h2 &#123;</span><br><span class="line">  font-size: 30px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.established &#123;</span><br><span class="line">  font-style: italic;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">h1, h2, p &#123;</span><br><span class="line">  text-align: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.menu &#123;</span><br><span class="line">  width: 80%;</span><br><span class="line">  background-color: burlywood;</span><br><span class="line">  margin-left: auto;</span><br><span class="line">  margin-right: auto;</span><br><span class="line">  padding: 20px;</span><br><span class="line">  max-width: 500px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">img &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  margin-left: auto;</span><br><span class="line">  margin-right: auto;</span><br><span class="line">  margin-top: -25;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">hr &#123;</span><br><span class="line">  height: 2px;</span><br><span class="line">  background-color: brown;</span><br><span class="line">  border-color: brown;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.bottom-line &#123;</span><br><span class="line">  margin-top: 25px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">h1, h2 &#123;</span><br><span class="line">  font-family: Impact, serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.item p &#123;</span><br><span class="line">  display: inline-block;</span><br><span class="line">  margin-top: 5px;</span><br><span class="line">  margin-bottom: 5px;</span><br><span class="line">  font-size: 18px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.flavor, .dessert &#123;</span><br><span class="line">  text-align: left;</span><br><span class="line">  width: 75%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.price &#123;</span><br><span class="line">  text-align: right;</span><br><span class="line">  width: 25%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* FOOTER */</span><br><span class="line"></span><br><span class="line">footer &#123;</span><br><span class="line">  font-size: 14px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.address &#123;</span><br><span class="line">  margin-bottom: 5px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a &#123;</span><br><span class="line">  color: black;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a:visited &#123;</span><br><span class="line">  color: black;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a:hover &#123;</span><br><span class="line">  color: brown;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a:active &#123;</span><br><span class="line">  color: brown;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-前端学习笔记/CSS/Q2-CSS-1基本样式+盒子模型"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/"
+    >CSS学习笔记-1.1基本样式</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/29/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/" class="article-date">
+  <time datetime="2023-03-29T03:00:47.000Z" itemprop="datePublished">2023-03-29</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="CSS学习笔记-1-1基本样式"><a href="#CSS学习笔记-1-1基本样式" class="headerlink" title="CSS学习笔记-1.1基本样式"></a>CSS学习笔记-1.1基本样式</h1><p>注释:</p>
+<p>​			CSS:&#x2F;**&#x2F;</p>
+<p>技巧：</p>
+<p>​			先写html框架，再考虑CSS</p>
+<p>​			定义主要容器时，要定义成宽度是由我们固定的，高度完全是由内容撑开的。</p>
+<p>CSS游戏：</p>
+<p>​			<a target="_blank" rel="noopener" href="https://frontend30.com/css-selectors-cheatsheet/">CSS Selectors Cheatsheet - FrontEnd30</a></p>
+<p>思维导图：</p>
+<p>​			<a target="_blank" rel="noopener" href="https://flowus.cn/d3cec49a-35cf-46aa-a095-f5ed4406287e">CSS思维导图 (flowus.cn)</a></p>
+<h3 id="0-CSS基本样式"><a href="#0-CSS基本样式" class="headerlink" title="0.CSS基本样式"></a>0.CSS基本样式</h3><p>选择器（Selector）<br>HTML 元素的名称位于规则集开始。它选择了一个或多个需要添加样式的元素）。要给不同元素添加样式只需要更改选择器就行了。可以用固定标签名，或.+自定义名称来进行选择。如用.menu来选择class属性为menu的盒子。</p>
+<p>通配符选择器作用：给当前界面上所有的标签设置属性。（*的意思是选中所有的标签）</p>
+<p>声明（Declaration）<br>一个单独的规则，如 color: red; 用来指定添加样式元素的属性。</p>
+<p>属性（Properties）<br>改变 HTML 元素样式的途径。（本例中 color 就是 <p> 元素的属性。）CSS 中，由编写人员决定修改哪个属性以改变规则。</p>
+<p>属性的值（Property value）<br>在属性的右边，冒号后面即属性的值，它从指定属性的众多外观中选择一个值（我们除了 red 之外还有很多属性值可以用于 color ）。</p>
+<h3 id="1-常见基础样式"><a href="#1-常见基础样式" class="headerlink" title="1.常见基础样式"></a>1.常见基础样式</h3><h3 id=""><a href="#" class="headerlink" title=""></a></h3><ul>
+<li><p>基础：</p>
+<p>声明该边框的类型：display ：可选项如下</p>
+<p>​								flex灵活布局</p>
+<p>​								grid网格布局</p>
+<p><img src="/markdown-img/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B.assets/image-20230329162830851.png" alt="image-20230329162830851"></p>
+<p>​							</p>
+<ul>
+<li><p>通用（框架相关）:</p>
+<p>宽度:   width: 300px;（百分制也行），div默认居左，所以背景颜色随着宽度的改变也居左。</p>
+<p>最大宽度: max-width: 500px;</p>
+<p>​				（背景是不动的，主页面随着浏览器大小变化，有最大宽度的约束，内容看起来就不会过宽）</p>
+<p>最小宽度：</p>
+<p>最大高度：</p>
+<p>最小高度：</p>
+</li>
+</ul>
+<h3 id="2-文字相关"><a href="#2-文字相关" class="headerlink" title="2.文字相关"></a>2.文字相关</h3><p>单位：</p>
+<p>​		em设置成几个字符大小（根据用户使用的字体自适应）</p>
+<p>​		px像素</p>
+<p>​		%百分比</p>
+<p>颜色：</p>
+<p>​		<img src="../其它/markdown-img\Q2-CSS-1基本样式+盒子模型.assets\image-20230407121714988.png" alt="image-20230407121714988" style="zoom:25%;" /></p>
+<p>文本对齐：<strong>text-align</strong></p>
+<p>​	居中: text-align: <strong>center;</strong></p>
+<p>​	居左: text-align: <strong>left;</strong></p>
+<p>​	居右: text-align: <strong>right;</strong></p>
+<p>​	居左: text-align: <strong>justify;</strong></p>
+<p>​	应用：文本的垂直居中（flex也行）</p>
+<p>[CSS 布局 – 水平 &amp; 垂直对齐 | 菜鸟教程 (runoob.com)](<a target="_blank" rel="noopener" href="https://www.runoob.com/css/css-align.html#:~:text=CSS">https://www.runoob.com/css/css-align.html#:~:text=CSS</a> 布局 - 水平 %26 垂直对齐 1 元素居中对齐,8 垂直居中 - 使用 position 和 transform 更多项目)</p>
+<p>字间距：<strong>letter-spacing</strong></p>
+<p>​	取值：2px&#x2F;-2px</p>
+<p>行高：<strong>line-height</strong></p>
+<p>​	取值：14px&#x2F;1.5em几倍行高&#x2F;120%基于当前字符的百分比行高</p>
+<p>装饰线：<strong>text-decoration</strong> </p>
+<p>​	上划线：<strong>overline</strong></p>
+<p>​	删除线：<strong>line-throuth</strong></p>
+<p>​	下划线：<strong>underling</strong></p>
+<p>​	删除：<strong>none</strong>（针对a标签，去掉自带的下划线）</p>
+<p>字体：</p>
+<p>​		字体所有属性：<strong>font</strong>：很多设定 字号及行高（用斜线隔开） 字体名称；</p>
+<p>​					例子：font：bold（粗体） italic（斜体） 18px&#x2F;1.5em ‘幼圆’</p>
+<p>​		字体系列: <strong>font-family:</strong> Impact,serif;</p>
+<p>​					重点：可以写多个字体，用逗号隔开。找不到第一种字体就用第二种，都找不到就用默认字体。</p>
+<p>​					易错点：字体含有空格时，应加双引号</p>
+<p>​					例子：font-family：“Microsoft YaHei”</p>
+<p>​		字体大小：<strong>font-size：</strong>18px；</p>
+<p>​		字重：<strong>font-weight</strong>（字体粗细）</p>
+<p>​		斜体： font-style:italic;</p>
+<p>CSS3中三种文本相关属性：</p>
+<p>​				文本阴影：<strong>text-shadow</strong>：水平偏移量 垂直偏移量  阴影大小（可省略） 颜色；</p>
+<p>​									常用效果：</p>
+<p>​													文本描边：0 0 3px black；</p>
+<p>​													文字浮雕效果：color：white； text-shadow：2px 2px 4px #000；</p>
+<p>​								   类似于《CSS-1定位与布局》中的盒子阴影。</p>
+<p>​				长文本换行：<strong>word-warp</strong>：break-word；</p>
+<p>​				网络字体：**@font-face**</p>
+<p>​									需要从网络上下载字体到服务器本地，并转化成各种浏览器支持的格式</p>
+<p>​									最后通过引用本地的字体文件来给用户端进行显示。</p>
+<h3 id="3-其它"><a href="#3-其它" class="headerlink" title="3.其它"></a>3.其它</h3><p>圆角：<img src="/markdown-img/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B.assets/1680769113691.png" alt="1680769113691" style="zoom:30%;" />值为px</p>
+<p>​			border-radius：25px；圆角边框。</p>
+<p>阴影：属性box-shadow</p>
+<p>​			选项为inside&#x2F;outside（默认值为外部阴影），值为水平偏移px 垂直偏移px 模糊强度px 颜色。</p>
+<p>​			举例：<img src="/markdown-img/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B.assets/1680769413222.png" alt="1680769413222" style="zoom:38%;" />就是阴影是盒子往右下角偏移10px的效果。</p>
+<p>​			举例2：<img src="/markdown-img/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B.assets/1680769550505.png" alt="1680769550505" style="zoom:38%;" /></p>
+<h1 id="分割线：html的hr标签"><a href="#分割线：html的hr标签" class="headerlink" title="分割线：html的hr标签"></a>分割线：html的hr标签</h1><h1 id="样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）"><a href="#样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）" class="headerlink" title="样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）"></a>样式有heigh、background-color、border-color（边框颜色）border-width（边框宽度）</h1><h1 id="（看起来会有凹陷效果）"><a href="#（看起来会有凹陷效果）" class="headerlink" title="（看起来会有凹陷效果）"></a>（看起来会有凹陷效果）</h1><p>链接文字的颜色：a{color：black；}</p>
+<p>链接访问后：a:visited {  }</p>
+<p>链接上有鼠标悬停时：a:hover{}</p>
+<p>链接被点击时：a:active{}</p>
+</li>
+<li><p>背景相关:</p>
+<p>背景颜色:background-color:</p>
+<p>背景图:background-image: url(<a target="_blank" rel="noopener" href="https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg">https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg</a>);</p>
+</li>
+<li><p>盒子相关:</p>
+</li>
+</ul>
+<p>​				对块级元素进行强制内联状:display: inline-block;</p>
+<p>​				去除元素前端可能存在的空白符:<style>   div{font-size:0;}    </style></p>
+<p>​					</p>
+<blockquote>
+<p>​	【【Q1为什么不能直接用内联元素？】】</p>
+<p>​	【inline-block是元素具备了块级和内联元素的功能，inline最重要的一点就是:</p>
+<p>​	元素能够在一行展示，而inline元素所缺失的设置宽高，是block 元素的功能】</p>
+</blockquote>
+<blockquote>
+<p>​	【【Q2为什么用了i-b会导致，设置宽度时，总和必须小于100%？（否则会另起一行）】】</p>
+<p>​	【因为HTML 中的换行符、空格符、制表符等合并为空白符，字体大小不为 0 的情况下，</p>
+<pre><code> 空白符自然占据定的宽度，使用inline-block 会产生了元素间的空隙。】
+</code></pre>
+</blockquote>
+<blockquote>
+<p>​	【【Q3不想自己调试合适的宽度怎么办？】】</p>
+<p>​	【在写用了强制内联化的块级元素时，全部写在同一行，一个空格都不要加。比如<p>1</p><p>2</p>】</p>
+</blockquote>
+<blockquote>
+<p>​	【【Q4最佳解决办法是什么？】】</p>
+<p>​	【父元素设置font-size:0,子元素有需要可以另外设置font-size，</p>
+<p>​	 这样空白符因为font-size:0就不会占据宽度了】</p>
+</blockquote>
+<blockquote>
+<p>实例:</p>
+<p><a target="_blank" rel="noopener" href="https://www.zhangxinxu.com/study/201011/img-blank-space.html">display:inline-block元素间换行符的空格间隙 </a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zhangxinxu.com/study/201011/img-font-size-clear-blank.html">font-size:0清除display:inline-block元素换行符间隙</a></p>
+</blockquote>
+<h3 id="4-style元素"><a href="#4-style元素" class="headerlink" title="4.style元素"></a><strong>4.style元素</strong></h3><ul>
+<li><p>单独写在css文件夹里，并在head里通过link来链接。 </p>
+<link rel="stylesheet" href="styles.css">
+</li>
+<li><p>用于给body里的某一种&#x2F;多种元素指定样式。</p>
+</li>
+</ul>
+<h3 id="5-多端样式归一化必加代码【【【【】】】】"><a href="#5-多端样式归一化必加代码【【【【】】】】" class="headerlink" title="5.多端样式归一化必加代码【【【【】】】】"></a><strong>5.多端样式归一化必加代码</strong>【【【【】】】】</h3><p>​    <meta name="viewport" content="width=device-width, initial-scale=1.0" /></p>
+<h3 id="6-过度与动画"><a href="#6-过度与动画" class="headerlink" title="6.过度与动画"></a>6.过度与动画</h3><p>过渡：<strong>transition</strong>属性</p>
+<p>​				知识：  transition：属性    时间    速度；<img src="/markdown-img/Q2-CSS-1%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F+%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B.assets/image-20230406211511826.png" alt="image-20230406211511826" style="zoom:25%;" /></p>
+<p>​							transition：a，p   1s    linear；          </p>
+<p>​							transition：     all   1s    linear；</p>
+<p>​				作用：在规定时间内，暂时改变选定元素属性的值（和选择器一起使用）</p>
+<p>​				举例：鼠标悬停在确认按钮上的时候，按钮显示为绿色。</p>
+<p>动画：<strong>animation</strong>属性（需要连续的过渡时，改用动画）</p>
+<p>@keyframes规则（关键帧规则）</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-前端学习笔记/CSS/Q3-CSS-2选择器"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q3-CSS-2%E9%80%89%E6%8B%A9%E5%99%A8/"
+    >CSS学习笔记-2.2选择器</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q3-CSS-2%E9%80%89%E6%8B%A9%E5%99%A8/" class="article-date">
+  <time datetime="2023-03-28T03:34:47.000Z" itemprop="datePublished">2023-03-28</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="CSS学习笔记-2-2选择器"><a href="#CSS学习笔记-2-2选择器" class="headerlink" title="CSS学习笔记-2.2选择器"></a>CSS学习笔记-2.2选择器</h1><h4 id="选择器字典"><a href="#选择器字典" class="headerlink" title="选择器字典"></a>选择器字典</h4><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Attribute_selectors">属性选择器 - CSS：层叠样式表 | MDN (mozilla.org)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2009/03/css_selectors.html">CSS选择器笔记 - 阮一峰的网络日志 (ruanyifeng.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://frontend30.com/css-selectors-cheatsheet/">CSS Selectors Cheatsheet - FrontEnd30</a></p>
+<h4 id="选择器的优先级"><a href="#选择器的优先级" class="headerlink" title="选择器的优先级"></a>选择器的优先级</h4><p><img src="/.%5CQ3%5Cimage-20230401185155310.png" alt="image-20230401185155310"></p>
+<h4 id="选择器的构成"><a href="#选择器的构成" class="headerlink" title="选择器的构成"></a>选择器的构成</h4><p>选择器分为符号和框架</p>
+<p>关系选择符：＄ ~ # ^等（可组合到框架中）</p>
+<p>框架：[ ] , nth-of-child等 </p>
+<h2 id="一-基本选择器"><a href="#一-基本选择器" class="headerlink" title="一.基本选择器"></a>一.基本选择器</h2><h3 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h3><ol>
+<li><h6 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h6><ul>
+<li>#id</li>
+</ul>
+</li>
+<li><h6 id="易错点"><a href="#易错点" class="headerlink" title="易错点"></a>易错点</h6><ul>
+<li>id不能有任何数字</li>
+</ul>
+</li>
+</ol>
+<h3 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h3><p><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230404152420883.png" alt="image-20230404152420883" style="zoom: 50%;" /><img src=".\Q3\image-20230404152441816.png" alt="image-20230404152441816" style="zoom:50%;" /></p>
+<h6 id=""><a href="#" class="headerlink" title=""></a><img src=".\Q3\1680587935181.png" alt="1680587935181" style="zoom:50%;" /></h6><p>元素[属性1] [属性2]</p>
+<ul>
+<li>同时有两个选择的元素</li>
+</ul>
+<p>元素[属性&#x3D;值] 	</p>
+<ul>
+<li>属性的值&#x3D;值的元素</li>
+<li>a[href&#x3D;”<a target="_blank" rel="noopener" href="https://example.org"]">https://example.org&quot;]</a></li>
+</ul>
+<p>元素[属性^&#x3D;开头值]</p>
+<ul>
+<li>[attr^&#x3D;value]：表示带有以 <em>attr</em> 命名的属性，且属性值是以 <em>value</em> 开头的元素。</li>
+</ul>
+<p>元素[属性$&#x3D;结尾值]</p>
+<ul>
+<li><p>属性的值的结尾是”结尾值“的元素。</p>
+</li>
+<li><p>a[href$&#x3D;”.org”]：存在 href 属性并且属性值结尾是”.org”的 <a> 元素</p>
+</li>
+</ul>
+<p>元素[属性*&#x3D;”值“]</p>
+<ul>
+<li>属性的值包含”值“的元素</li>
+</ul>
+<p>元素[属性~&#x3D;值]</p>
+<ul>
+<li><p>属性的值包含”值“的元素，该属性是一个以空格作为分隔的值列表</p>
+</li>
+<li><p>a[class~&#x3D;”logo”]：存在 class 属性并且属性值包含单词”logo”的<a>元素</p>
+</li>
+</ul>
+<p>元素[       i]</p>
+<ul>
+<li>在属性选择器的右方括号前添加一个用空格隔开的字母 <code>i</code>（或 <code>I</code>），可以在匹配属性值时忽略大小写（支持 ASCII 字符范围之内的字母）。</li>
+</ul>
+<p>元素[		s]</p>
+<ul>
+<li>在属性选择器的右方括号前添加一个用空格隔开的字母 <code>s</code>（或 <code>S</code>），可以在匹配属性值时区分大小写（支持 ASCII 字符范围之内的字母）。</li>
+</ul>
+<h3 id="3-元素选择器"><a href="#3-元素选择器" class="headerlink" title="3.元素选择器"></a>3.元素选择器</h3><h4 id="通用元素选择器"><a href="#通用元素选择器" class="headerlink" title="通用元素选择器"></a>通用元素选择器</h4><ul>
+<li></li>
+</ul>
+<p>**【【【【【【没有找到】】】】】】】</p>
+<h4 id="同级元素通用选择器"><a href="#同级元素通用选择器" class="headerlink" title="同级元素通用选择器"></a>同级元素通用选择器</h4><img src=".\Q3\image-20230404151520256.png" alt="image-20230404151520256" style="zoom:50%;" />
+
+<h4 id="多元素的组合选择器"><a href="#多元素的组合选择器" class="headerlink" title="多元素的组合选择器"></a>多元素的组合选择器</h4><img src=".\Q3\1680592298848.png" alt="1680592298848" style="zoom: 50%;" />
+
+<h2 id="二-关系型选择器"><a href="#二-关系型选择器" class="headerlink" title="二.关系型选择器"></a>二.关系型选择器</h2><p>子选择器<img src=".\Q3\image-20230404132255364.png" alt="image-20230404132255364" style="zoom:50%;" /></p>
+<p>后代选择器<img src=".\Q3\image-20230404132326607.png" alt="image-20230404132326607" style="zoom: 50%;" /></p>
+<p>相邻兄弟选择器<img src=".\Q3\image-20230404133357624.png" alt="image-20230404133357624" style="zoom:50%;" /></p>
+<p>通用兄弟选择<img src=".\Q3\image-20230404133450743.png" alt="image-20230404133450743" style="zoom:50%;" /></p>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Column_combinator">列组合器</a> </p>
+<p><code>||</code> 组合器选择属于某个表格行的节点。</p>
+<p><strong>语法：</strong><code>A || B</code></p>
+<p><strong>例子：</strong><code>col || td</code> 会匹配所有 作用域内的td元素。</p>
+<p>独子选择器<img src=".\Q3\image-20230404133754657.png" alt="image-20230404133754657" style="zoom:50%;" />		a 表示选择a元素的独子，b表示如果b是独子则被选择</p>
+<p>第 N 个最后一个子选择器<img src=".\Q3\image-20230404134515253.png" alt="image-20230404134515253" style="zoom:50%;" /></p>
+<p>首项选择器<img src=".\Q3\image-20230404134548820.png" alt="image-20230404134548820" style="zoom:50%;" />可以根据元素、属性进行选择</p>
+<p>尾项选择器<img src=".\Q3\image-20230404134901176.png" alt="image-20230404134901176" style="zoom:50%;" />尾属性的class不等于x则不选任何东西</p>
+<h2 id="三-伪类选择器"><a href="#三-伪类选择器" class="headerlink" title="三.伪类选择器"></a>三.伪类选择器</h2><p>用户界面伪类选择器</p>
+<img src=".\Q3\image-20230404150313528.png" alt="image-20230404150313528" style="zoom: 50%;" />
+
+<img src=".\Q3\image-20230404150546942.png" alt="image-20230404150546942" style="zoom:50%;" />
+
+<img src=".\Q3\image-20230404152535460.png" alt="image-20230404152535460" style="zoom:50%;" />
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">两个写法相同的选择器，意思为子元素的父元素的第n个子元素</span><br><span class="line">父元素 子元素：nth-child(1)</span><br><span class="line">父元素 子元素：first-child</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/*意思是.dot的父元素的第二个孩子*/</span><br><span class="line">.bg2 .dot:nth-child(2)&#123;</span><br><span class="line">    align-self: flex-end;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>反选伪类选择器<img src=".\Q3\image-20230404135618254.png" alt="image-20230404135618254" style="zoom:50%;" /></p>
+<p>看不懂</p>
+<img src=".\Q3\image-20230404152643373.png" alt="image-20230404152643373" style="zoom: 50%;" />
+
+<h2 id="四-伪元素选择器"><a href="#四-伪元素选择器" class="headerlink" title="四.伪元素选择器"></a>四.伪元素选择器</h2><img src=".\Q3\image-20230404150514659.png" alt="image-20230404150514659" style="zoom:50%;" />
+
+
+
+<h2 id="五-易错点"><a href="#五-易错点" class="headerlink" title="五.易错点"></a>五.易错点</h2><p>1.~：写在[ ]里表示字符串匹配，匹配到就选择。写在[ ]外表示通用兄弟选择器。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-前端学习笔记/HTML/Q1-HTML-Note6"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note6/"
+    >HTML学习笔记-6实践</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note6/" class="article-date">
+  <time datetime="2023-03-28T03:34:47.000Z" itemprop="datePublished">2023-03-28</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1>HTML学习笔记-6实践</h1>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;title&gt;CatPhotoApp&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;main&gt;</span><br><span class="line">  &lt;section&gt;&lt;!--[[[[[[[[[]]]]]]]]]]--&gt;</span><br><span class="line">    &lt;h1&gt;CatPhotoApp&lt;/h1&gt;</span><br><span class="line">    &lt;h2&gt;Cat Photos&lt;/h2&gt;</span><br><span class="line">    &lt;p&gt;</span><br><span class="line">      See more &lt;a href=&quot;../img/cat1.jpg&quot;&gt;cat photos&lt;/a&gt; in our gallery&lt;br&gt;</span><br><span class="line">      &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg&quot; alt=&quot;A text.&quot;&gt;</span><br><span class="line">      &lt;!--[[[[[[[[[[[[alt是备注]]]]]]]]]]]--&gt;</span><br><span class="line">    &lt;/p&gt;</span><br><span class="line">  &lt;/section&gt;</span><br><span class="line"></span><br><span class="line">  &lt;section&gt;</span><br><span class="line">    &lt;h2&gt;Cat Lists&lt;/h2&gt;</span><br><span class="line">    &lt;h3&gt;Things cats love:&lt;/h3&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">      &lt;li&gt;cat nip&lt;/li&gt;</span><br><span class="line">      &lt;li&gt;laser pointers&lt;/li&gt;</span><br><span class="line">      &lt;li&gt;lasagna&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">    &lt;figure&gt;&lt;!--[[[[[[[[[图像标题]]]]]]]]]]]]]]--&gt;</span><br><span class="line">      &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg&quot; alt=&quot;A slice of lasagna on a plate.&quot;&gt;</span><br><span class="line">      &lt;figcaption&gt;&lt;!--[[[[[[[[[]]]]]]]]]]]]]--&gt;</span><br><span class="line">        Cats</span><br><span class="line">        &lt;em&gt;love&lt;/em&gt;</span><br><span class="line">        lasagna.</span><br><span class="line">      &lt;/figcaption&gt;</span><br><span class="line">    &lt;/figure&gt;</span><br><span class="line">  &lt;/section&gt;</span><br><span class="line"></span><br><span class="line">  &lt;section&gt;</span><br><span class="line">    &lt;h2&gt;Top 3 things cats hate:&lt;/h2&gt;</span><br><span class="line">    &lt;ol&gt;</span><br><span class="line">      &lt;li&gt;flea treatment&lt;/li&gt;</span><br><span class="line">      &lt;li&gt;thunder&lt;/li&gt;</span><br><span class="line">      &lt;li&gt;other cats&lt;/li&gt;</span><br><span class="line">    &lt;/ol&gt;</span><br><span class="line">    &lt;figure&gt;</span><br><span class="line">      &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg&quot; alt=&quot;Five cats looking around a field.&quot;&gt;</span><br><span class="line">      &lt;figcaption&gt;</span><br><span class="line">        Cats &lt;strong&gt;hate&lt;/strong&gt; other cats.</span><br><span class="line">      &lt;/figcaption&gt;</span><br><span class="line">    &lt;/figure&gt;</span><br><span class="line">  &lt;/section&gt;</span><br><span class="line"></span><br><span class="line">  &lt;section&gt;</span><br><span class="line">    &lt;h2&gt;Cat form&lt;/h2&gt;</span><br><span class="line">    &lt;fieldset&gt;&lt;!--给form增加实线框--&gt;</span><br><span class="line">      &lt;legend&gt;Is your cat an indoor or outdoor cat?&lt;/legend&gt;&lt;!--给块增加标题--&gt;</span><br><span class="line">      &lt;form&gt;</span><br><span class="line">        &lt;label&gt;</span><br><span class="line">          &lt;!--[[[[[[[[[[label用于将 input 元素与其近邻的文本进行绑定]]]]]]]]]--&gt;</span><br><span class="line">          &lt;input name=&quot;door&quot; id=&quot;indoor&quot; value=&quot;indoor&quot; type=&quot;radio&quot; checked&gt;indoor</span><br><span class="line">          &lt;!--用checked给本块（legend）设置默认选项--&gt;</span><br><span class="line">        &lt;/label&gt;</span><br><span class="line">        &lt;label&gt;</span><br><span class="line">          &lt;input name=&quot;door&quot; id=&quot;outdoor&quot; value=&quot;outdoor&quot; type=&quot;radio&quot;&gt;out door</span><br><span class="line">        &lt;/label&gt;</span><br><span class="line">      &lt;/form&gt;</span><br><span class="line">    &lt;/fieldset&gt;</span><br><span class="line">    &lt;fieldset&gt;</span><br><span class="line">      &lt;legend&gt;What&#x27;s your cat&#x27;s personality?&lt;/legend&gt;</span><br><span class="line">      &lt;!--id应与选项相同，是具有唯一性的，不能当成name用--&gt;</span><br><span class="line">      &lt;!--label是必须加的,for 对应的是input的id，label和input直接看成元组就行--&gt;</span><br><span class="line">      &lt;label for=&quot;loving&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;personality&quot; id=&quot;loving&quot; checked&gt; Loving</span><br><span class="line">      &lt;label for=&quot;lazy&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;personality&quot; id=&quot;lazy&quot;&gt; lazy</span><br><span class="line">      &lt;label for=&quot;energetic&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; value=&quot;personality&quot; id=&quot;energetic&quot;&gt; energetic</span><br><span class="line">    &lt;/fieldset&gt;</span><br><span class="line">    &lt;input type=&quot;text&quot;  placeholder=&quot;cat photo URL&quot;&gt;</span><br><span class="line">    &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;</span><br><span class="line">  &lt;/section&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;/main&gt;</span><br><span class="line">&lt;footer&gt;</span><br><span class="line">  No Copyright - &lt;a href=&quot;https://www.freecodecamp.org&quot;&gt;freeCodeCamp.org&lt;/a&gt;</span><br><span class="line">&lt;/footer&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-前端学习笔记/HTML/Q1-HTML-Note5"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note5/"
+    >HTML学习笔记-5体系补充</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note5/" class="article-date">
+  <time datetime="2023-03-28T03:34:47.000Z" itemprop="datePublished">2023-03-28</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="HTML学习笔记-5体系补充"><a href="#HTML学习笔记-5体系补充" class="headerlink" title="HTML学习笔记-5体系补充"></a>HTML学习笔记-5体系补充</h1><p>前文关于内容的错误理解以本文的“整体分类”为主。</p>
+<p>整体分类：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Content_categories">url</a></p>
+<p>主要分成几类:</p>
+<p>​	内容类（比如文字&#x2F;图片&#x2F;视频&#x2F;画布）</p>
+<p>​	表单相关（比如下拉菜单，文本输入框）</p>
+<p>​	结构(比如div span)</p>
+<p>了解块级元素和行内元素</p>
+<p>块级元素就是自成一行，比如div p h1 table ul ol</p>
+<p>行内元素和块级元素不一样，不会自成一行，可以多个排列成一行, 比如:img span button input</p>
+<p>补充一些常用的HTML标签</p>
+<p>input 输入元素的几种种类 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input"></a><br>textarea 文本区元素 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/textarea"></a><br>select 下拉菜单 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/select"></a><br>table 表格 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/table"></a><br>video 视频 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video"></a></p>
+<p>补充和css有关的HTML元素</p>
+<ol>
+<li><p>div元素: 主要用于设计布局</p>
+</li>
+<li><p>article元素: 方便搜索的元素,属于父级元素。</p>
+</li>
+<li></li>
+</ol>
+<ul>
+<li><h4 id="易错点归档："><a href="#易错点归档：" class="headerlink" title="易错点归档："></a>易错点归档：</h4><ol>
+<li><h5 id="链接相关：url、href、src"><a href="#链接相关：url、href、src" class="headerlink" title="链接相关：url、href、src"></a>链接相关：url、href、src</h5><p>a：href</p>
+<p>link：href</p>
+<p>script：src</p>
+<p>img：src</p>
+<h6 id="作用结果不同"><a href="#作用结果不同" class="headerlink" title="作用结果不同"></a>作用结果不同</h6><p>（1）href 用于在当前文档和引用资源之间确立联系；</p>
+<p>（2）src 用于替换当前内容；</p>
+</li>
+<li><h5 id="附加：link和-import的区别"><a href="#附加：link和-import的区别" class="headerlink" title="附加：link和@import的区别"></a>附加：link和@import的区别</h5><p>（1）link是XHTML标签，除了能够加载CSS，还可以定义RSS等其他事务；而@import属于CSS范畴，只可以加载CSS。</p>
+<p>（2）link引用CSS时，在页面载入时同时加载；@import需要页面完全载入以后再加载。</p>
+<p>（3）link是XHTML标签，无兼容问题；@import则是在CSS2.1提出的，低版本的浏览器不支持。</p>
+<p>（4）link支持使用Javascript控制DOM改变样式；而@import不支持。</p>
+<h5 id="3-为什么js用script标签的src引入，而css用link标签的href引入"><a href="#3-为什么js用script标签的src引入，而css用link标签的href引入" class="headerlink" title="3.为什么js用script标签的src引入，而css用link标签的href引入"></a>3.为什么js用script标签的src引入，而css用link标签的href引入</h5><p>外部共享的JavaScript文件，通过 <code>&lt;script src=&quot;...&quot;&gt;&lt;/script&gt;</code>来引入，共享的样式文件不是通过 <code>&lt;style src=&quot;&quot;&gt;&lt;/style&gt;</code> 的形式引入，而是通过 <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;...&quot;&gt;</code>形式引入。</p>
+<p>w3c最初的设计中<script>标签也没有src属性，使用 <code>&lt;link rel=&quot;...&quot; href=&quot;...&quot;&gt;</code> 来引入当前文档外部的资源，如：父文档，翻译，或者层叠样式表等。<code>&lt;link rel=&quot;&quot; href=&quot;&quot; meidia=&quot;&quot;&gt;</code> 元素规定了当前文档和外部资源之间的关系，它常用来引入外部的样式表，我们可以通过rel属性设置为stylesheet来使用。后来为<code>&lt;script&gt;</code>添加了src属性。</p>
+<p><strong><code>href</code>是引用和页面关联，是在当前元素和引用资源之间建立联系，<code>src</code>表示引用资源，表示替换当前元素，用在img，script，iframe上，src是页面内容不可缺少的一部分。</strong></p>
+<script src="js.js"></script>当浏览器解析到这一句的时候会暂停其他资源的下载和处理，直至将该资源加载，编译，执行完毕，图片和框架等元素也是如此，类似于该元素所指向的资源嵌套如当前标签内，这也是为什么要把放在底部而不是头部。
+
+<link href="common.css" rel="stylesheet"/>当浏览器解析到这一句的时候会识别该文档为css文件，会下载并且不会停止对当前文档的处理，这也是为什么建议使用link方式来加载css而不是使用@import。</li>
+</ol>
+</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-前端学习笔记/HTML/Q1-HTML-Note4"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note4/"
+    >HTML学习笔记-4head</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note4/" class="article-date">
+  <time datetime="2023-03-28T03:33:47.000Z" itemprop="datePublished">2023-03-28</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="HTML学习笔记-4head"><a href="#HTML学习笔记-4head" class="headerlink" title="HTML学习笔记-4head"></a>HTML学习笔记-4head</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;!--</span><br><span class="line"></span><br><span class="line">&lt;meta &gt;:</span><br><span class="line">    name 指定了 meta 元素的类型；说明该元素包含了什么类型的信息。</span><br><span class="line">    content 指定了实际的元数据内容【就是搜索网页时，标题下面的一连串简述】。</span><br><span class="line"></span><br><span class="line">    &lt; meta name=&quot;author&quot; content=&quot;Chris Mills&quot; /&gt;</span><br><span class="line">    &lt;meta name=&quot;description&quot; content=&quot;The MDN Web &quot; /&gt;</span><br><span class="line"></span><br><span class="line">     比如搜索MDN Web Docs会显示</span><br><span class="line">     标题：MDN Web Docs</span><br><span class="line">     链接：https://developer.mozilla.org/zh</span><br><span class="line">     简述：The MDN Web</span><br><span class="line"></span><br><span class="line">&lt;link&gt;:</span><br><span class="line">    &lt;link&gt; 用来添加CSS。link元素经常位于文档的头部，</span><br><span class="line">    rel=&quot;stylesheet&quot; 表明这是文档的样式表（固定不变）</span><br><span class="line">    href 包含了样式表文件的路径</span><br><span class="line"></span><br><span class="line">    图标类型</span><br><span class="line">     含有高分辨率 Retina 显示屏的第三代 iPad：</span><br><span class="line">       &lt;link</span><br><span class="line">        rel=&quot;apple-touch-icon-precomposed&quot;</span><br><span class="line">        sizes=&quot;144x144&quot;</span><br><span class="line">        href=&quot;https://developer.mozilla.org/static/img/favicon144.png&quot; /&gt;</span><br><span class="line">这些注释解释了每个图标的用途——这些元素涵盖的东西提供一个高分辨率图标，这些高分辨率图标当网站保存到 iPad 的主屏幕时使用。</span><br><span class="line"></span><br><span class="line">不用担心现在实现所有这些类型的图标——这是一个相当先进的功能，不要求你有这方面的知识来通过课程的进展。</span><br><span class="line">这里的主要目的是让你提前了解有这一样东西，以防当你浏览其他网站的源代码时不理解源代码的含义。</span><br><span class="line"></span><br><span class="line">&lt;script&gt; ：</span><br><span class="line">&lt;script&gt; 用来添加JavaScript来让王爷具有交互功能。</span><br><span class="line">script元素也应当放在文档的头部，并包含 src 属性来指向需要加载的 JavaScript 文件路径，</span><br><span class="line">同时最好加上 defer 以告诉浏览器在解析完成 HTML 后再加载 JavaScript。</span><br><span class="line">这样可以确保在加载脚本之前浏览器已经解析了所有的 HTML 内容。</span><br><span class="line">这样你就不会因为 JavaScript 试图访问页面上不存在的 HTML 元素而产生错误。</span><br><span class="line">实际上有很多方法来处理在你的页面上加载 JavaScript，但对于现代浏览器来说，这是最可靠的方法（对于其他方法，请阅读脚本加载策略）。</span><br><span class="line">&lt;script src=&quot;my-js-file.js&quot; defer&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">--&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;html lang=&quot;zh-CN&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-前端学习笔记/HTML/Q1-HTML-Note3"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note3/"
+    >HTML学习笔记-3进阶标签与属性</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note3/" class="article-date">
+  <time datetime="2023-03-28T03:32:47.000Z" itemprop="datePublished">2023-03-28</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="HTML学习笔记-3进阶标签与属性"><a href="#HTML学习笔记-3进阶标签与属性" class="headerlink" title="HTML学习笔记-3进阶标签与属性"></a>HTML学习笔记-3进阶标签与属性</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br></pre></td><td class="code"><pre><span class="line">1.超链接     	&lt;a href=&quot;网址&quot; target=&quot;_blank&quot; &gt; 文字或图片 &lt;/a&gt;</span><br><span class="line"> 注：href就是属性的一种</span><br><span class="line"></span><br><span class="line">2.内联元素与块级元素</span><br><span class="line"> 内联：不会自动换行，比如em、strong、input、button。也就是说。如果不特意指定button的作用的话，如果input、button相邻，button就会被默认关联在input上。</span><br><span class="line"> 块级：会自动换行，比如p、fieldset。注：section跟他们有点像,不管什么东西，都要记得用section包裹。</span><br><span class="line">【【【【【【【&lt;article&gt;是干什么用的？？】】】】】</span><br><span class="line">&lt;article&gt; 标签规定独立的自包含内容。</span><br><span class="line">一篇文章应有其自身的意义，应该有可能独立于站点的其余部分对其进行分发。【【【分发是什么意思】】】</span><br><span class="line">&lt;article&gt; 元素的潜在来源：</span><br><span class="line">论坛帖子</span><br><span class="line">报纸文章</span><br><span class="line">博客条目</span><br><span class="line">用户评论】</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">11.内容分块元素      &lt;section&gt;&lt;/section&gt;</span><br><span class="line">section 元素的使用禁忌如下：</span><br><span class="line">.不要将section元素用作设置样式的页面容器，那是div的工作；</span><br><span class="line">.如果article元素或者aside元素或者nav元素更符合使用条件，不要使用section元素；</span><br><span class="line">.不要为没有标题的内容区块使用section元素；</span><br><span class="line"></span><br><span class="line">3.空元素/自闭合元素</span><br><span class="line">  比如&lt;img&gt; &lt;input&gt;</span><br><span class="line">4.属性与布尔属性</span><br><span class="line">  属性：元素的附加限定。用于控制这个元素的行为。</span><br><span class="line">  布尔属性：用布尔值来代表“是否”允许元素做什么事</span><br><span class="line"> eg.输入框   使用 disabled 属性来禁止在输入框里输入</span><br><span class="line">          	&lt;input type=&quot;text&quot; disabled /&gt;</span><br><span class="line">          	下面这个输入框不包含 disabled 属性，所以用户可以向其中输入</span><br><span class="line">        	&lt;input type=&quot;text&quot; /&gt;</span><br><span class="line"></span><br><span class="line">6.特殊字符的引用     https://zh.wikipedia.org/wiki/XML%E4%B8%8EHTML%E5%AD%97%E7%AC%A6%E5%AE%9E%E4%BD%93%E5%BC%95%E7%94%A8%E5%88%97%E8%A1%A8</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">12.无/有序列表        &lt;ul&gt;   &lt;li&gt;&lt;/li&gt; &lt;li&gt;&lt;/li&gt;   &lt;/ul&gt;</span><br><span class="line">                    &lt;ol&gt;   &lt;li&gt;&lt;/li&gt; &lt;li&gt;&lt;/li&gt;   &lt;/ol&gt;</span><br><span class="line"></span><br><span class="line">13.全局属性</span><br><span class="line">13.1id</span><br><span class="line">        id 属性用于标识特定的 HTML 元素。 每个 id 属性的值必须不同于整个页面的所有其他 id 值。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">表单相关</span><br><span class="line">14.表单（接下来的东西都与表单有关）             &lt;form action=&quot;/页面地址&quot; required&gt;&lt;/form&gt;</span><br><span class="line">   # form表单元素，用来收集来自用户的信息</span><br><span class="line">   # action属性，就是我需要把这表单信息提交到后台，action相当于指明哪个接口。例如，&lt;form action=&quot;http://localhost:30/form-submit&quot;&gt;&lt;/form&gt; 告诉浏览器应该将表单数据发送到路径/submit-url</span><br><span class="line">   # required属性，用于防止用户不输入信息也能提交。</span><br><span class="line">    不过现在form的action用的比较少了，了解一下action属性的用途就行</span><br><span class="line">    一般我们实际开发很少用action去发送请求，而是收集表单数据，用fetch之类去发送给后端（js）</span><br><span class="line"></span><br><span class="line">15.可点击的按钮      &lt;button&gt;&lt;/button&gt;</span><br><span class="line">单击没有任何属性的表单按钮的默认行为，会将表单提交到表单的 action 属性中指定的位置。</span><br><span class="line">【一般来说是一个form里面有一个type为submit的按钮。这个按钮的作用就是把form表单的数据进行提交。</span><br><span class="line">即使你在文本输入下方添加了按钮，它们也会在页面上彼此相邻。 这是因为 input 和 button 元素都是内联元素，它们不会出现在新的行上。</span><br><span class="line">你添加的按钮将默认提交表单。 然而，依赖默认行为可能造成混乱。 type=“submit” 添加到 button 以明确它是一个提交按钮。】</span><br><span class="line"></span><br><span class="line">16.单选按钮值  radio</span><br><span class="line">radio是input标签中，type属性的一种值。比如&lt;input type=&quot;radio&quot;&gt;</span><br><span class="line">重点：想要实现几个单选按钮互斥（如男女），就要把两个单选按钮所在的index加上相同的name属性.</span><br><span class="line">          &lt;label&gt;&lt;input id=&quot;indoor&quot; type=&quot;radio&quot; name=&quot;indoor-outdoor&quot;&gt; Indoor&lt;/label&gt;</span><br><span class="line">          &lt;label&gt;&lt;input id=&quot;outdoor&quot; type=&quot;radio&quot; name=&quot;indoor-outdoor&quot;&gt; Outdoor&lt;/label&gt;</span><br><span class="line"></span><br><span class="line">17.给某一块增加实线框用的块级标签     &lt;fieldset&gt;&lt;/fieldset&gt;</span><br><span class="line">      相当于表单分块，会形成一个实线框框。不分块就会默认分出超级多的块，乱的要死。 fieldset 元素是块级元素，这意味着它们出现在新的一行上。</span><br><span class="line">17.1 fieldset 元素中内容的标题      &lt;legend&gt;文字提示&lt;/legend&gt;</span><br><span class="line">      会在fieldset形成的实现框之上，显示文字。一般用于提示用户应该输入什么样的数据。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">图片相关：img figure figcaption</span><br><span class="line">8.图片标签                     &lt;img src=&quot;地址&quot; alt=&quot;代替地址所显示的文本&quot;&gt;</span><br><span class="line">    所有的 img 元素都应该有一个 alt 属性。 alt 属性的文本（值）有两个作用，</span><br><span class="line">    第一个作用是让屏幕阅读器可以知晓图片的内容，这会对网页的可访问性有很大提升；另一个作用是当图片无法加载时，页面需要显示的替代文本。</span><br><span class="line">9.独立的内容                 &lt;figure&gt;&lt;/figure&gt;</span><br><span class="line">图像，并允许你将图像与标题相关联。</span><br><span class="line">10.图像标题                  &lt;figcaption&gt;&lt;/&gt;figcaption&gt;</span><br><span class="line">用于描述 figure 元素中包含的图像,比如某张图的标题叫“图1”。</span><br><span class="line"> &lt;figure&gt;</span><br><span class="line">          &lt;img src=&quot;链接&quot; alt=&quot;文字&quot;&gt;</span><br><span class="line">          &lt;figcaption&gt;Cats love lasagna.&lt;/figcaption&gt;</span><br><span class="line"> &lt;/figure&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">输入相关</span><br><span class="line">5.输入框     &lt;input&gt;</span><br><span class="line">    最复杂的标签，以下为常用属性</span><br><span class="line">    #type=“text”                  待输入数据类型为text文字</span><br><span class="line">    </span><br><span class="line">    #type=“radio”                 单选项</span><br><span class="line">            1.使文本与radio绑定的方法</span><br><span class="line">            &lt;label&gt;&lt;input type=&quot;radio&quot;&gt;Indoor&lt;/label&gt;表示有一个单选项Indoor</span><br><span class="line">            </span><br><span class="line">    #type=&quot;checkbox&quot;       复选框</span><br><span class="line">            使文本与checkbox绑定的方法</span><br><span class="line">            1.id与for      &lt;input id=&quot;loving&quot; type=&quot;checkbox&quot;&gt;  </span><br><span class="line">            			   &lt;label for=&quot;loving&quot;&gt;Loving&lt;/label&gt;</span><br><span class="line">            			   </span><br><span class="line">    #&lt;label&gt;&lt;/label&gt;     包裹含有radio/checkbox属性的input元素。</span><br><span class="line">                         【一句input一对儿label。】</span><br><span class="line">                         用于将 input 元素与其近邻的文本进行绑定，达到点击文本也能单选的效果。</span><br><span class="line">                         </span><br><span class="line">    #checked属性         使复选框或单选按钮默认被选中</span><br><span class="line"></span><br><span class="line">    #name               name是给后端人员搜索用的，id是给前端人员写代码用的。</span><br><span class="line">                        【input这一类属于原生的控件，</span><br><span class="line">                        name属性的主要作用就是用来在发送的时候作为url拼接，</span><br><span class="line">                        拼接成查询条件，可以理解成：后端需要什么查询条件，前端的传对应的name】</span><br><span class="line">                        主要是用于用户提交时，将自动拼接给程序员看</span><br><span class="line">                        （注：多个input有同一个name会使他们互斥）</span><br><span class="line">                        </span><br><span class="line">    #placeholder         占位符（提示用户该输入什么）</span><br><span class="line">    </span><br><span class="line">    #value               默认值（如果用户不输入，就提交默认值）</span><br><span class="line"></span><br><span class="line">    注：&lt;input type=&quot;radio&quot;&gt;Indoor表示有一个单选项Indoor</span><br><span class="line">    注：&lt;input type=&quot;checkbox&quot;&gt; Loving请确保元素和文本之间有一个空格。</span><br><span class="line">    教程：https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input#attr-disabled</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">6.文字相关</span><br><span class="line">	分割线：&lt;hr&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-前端学习笔记/HTML/Q1-HTML-Note2"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note2/"
+    >HTML学习笔记-2基础标签</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note2/" class="article-date">
+  <time datetime="2023-03-28T03:31:47.000Z" itemprop="datePublished">2023-03-28</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1>HTML学习笔记-2基础标签</h1>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">0.定义预格式化的文本         &lt;pre&gt;&lt;/pre&gt;    比如以下内容中，空格空行都会保留</span><br><span class="line">1.空格与段内换行            &amp;nbsp;&lt;br/&gt;</span><br><span class="line"> 无论你在 HTML 元素的内容中使用多少空格（包括一个或多个空白字符或换行），</span><br><span class="line"> 当渲染这些代码的时候，HTML 解释器会将连续出现的空白字符减少为一个单独的空格符。</span><br><span class="line">2.行内组合                &lt;span&gt;&lt;/span&gt;</span><br><span class="line">3.水平线                  &lt;hr/&gt;</span><br><span class="line">4.段                     &lt;p&gt;&lt;/p&gt;</span><br><span class="line">5.强调      &lt;strong&gt;&lt;/strong&gt;</span><br><span class="line">6.斜体      &lt;em&gt;&lt;/em&gt;</span><br><span class="line">7.n级标题                 &lt;h1&gt;一级标题只能有一个&lt;/h1&gt;</span><br><span class="line">8.标识页面的主要部分  &lt;main&gt;&lt;/main&gt;</span><br><span class="line">    HTML5 有些元素能够指明不同的内容区域。</span><br><span class="line">     这些元素能让你的 HTML 易于阅读，并有助于搜索引擎优化（SEO）和无障碍访问。</span><br><span class="line">9.表示预定义格式文本		&lt;pre&gt;&lt;/pre&gt;</span><br><span class="line">--&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;pre&gt;</span><br><span class="line"></span><br><span class="line">    &lt;p&gt;1.空格与换行</span><br><span class="line">        这里将会有三个空格&amp;nbsp;&amp;nbsp;&amp;nbsp;然后换行</span><br><span class="line">        &lt;br/&gt;</span><br><span class="line">        换行结束</span><br><span class="line">    &lt;/p&gt;</span><br><span class="line">    &lt;p&gt;2.行内组合</span><br><span class="line">        这里的&lt;span&gt;标签用于标记，被标记的文字将可以通过css进行格式化的美化&lt;/span&gt;</span><br><span class="line">    &lt;/p&gt;</span><br><span class="line"></span><br><span class="line">    &lt;p&gt;3.hr水平线</span><br><span class="line">        以下是水平线</span><br><span class="line">      &lt;hr/&gt;</span><br><span class="line">      水平线结束</span><br><span class="line">    &lt;/p&gt;</span><br><span class="line">&lt;/pre&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-前端学习笔记/HTML/Q1-HTML-Note1"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note1/"
+    >HTML学习笔记-1基础</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note1/" class="article-date">
+  <time datetime="2023-03-28T03:30:47.000Z" itemprop="datePublished">2023-03-28</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1>HTML学习笔记-1基础</h1>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">1.&lt;标签名 属性1=“值1” 属性2=“值2”&gt;</span><br><span class="line">2.元素==标签+内容</span><br><span class="line">3.Dom树：文档对象模型，以树形的方式直观的表示标签嵌套结构</span><br><span class="line">4.html不区分大小写</span><br><span class="line">5.文档基础</span><br><span class="line">&lt;!DOCTYPE html&gt;:</span><br><span class="line">声明文档类型。需要包含它才能使其他东西正常工作。</span><br><span class="line"></span><br><span class="line">&lt;html&gt;&lt;/html&gt;:</span><br><span class="line">这个元素包裹了页面中所有的内容，有时被称为根元素。</span><br><span class="line"></span><br><span class="line">&lt;head&gt;&lt;/head&gt;:</span><br><span class="line">这个元素是一个容器，它包含了所有你想包含在 HTML 页面中但不在 HTML 页面中显示的内容。</span><br><span class="line">这些内容包括你想在搜索结果中出现的关键字和页面描述、CSS 样式、字符集声明等等。以后的章节中会学到更多相关的内容。</span><br><span class="line"></span><br><span class="line">&lt;meta charset=&quot;utf-8&quot;&gt;:</span><br><span class="line">    这个元素代表了不能由其他 HTML 元相关元素表示的元数据【描述html页面的数据】，比如 &lt;base&gt;、&lt;link&gt;、&lt;script&gt;、&lt;style&gt; 或 &lt;title&gt;。</span><br><span class="line"></span><br><span class="line">&lt;title&gt;&lt;/title&gt;:</span><br><span class="line">这设置了页面的标题，也就是出现在该页面加载的浏览器标签中的内容。当页面被加入书签时，页面标题也被用来描述该页面。</span><br><span class="line"></span><br><span class="line">&lt;body&gt;&lt;/body&gt;:</span><br><span class="line">包含了你访问页面时所有显示在页面上的内容，包含文本、图片、视频、游戏、可播放音频轨道等等。</span><br><span class="line"></span><br><span class="line">&lt;!--  ctrl+alt+L 格式化代码--&gt;</span><br></pre></td></tr></table></figure>
+
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-Python/P1-Python大数据分析（企业竞赛项目）"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/11/Python/P1-Python%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%EF%BC%88%E4%BC%81%E4%B8%9A%E7%AB%9E%E8%B5%9B%E9%A1%B9%E7%9B%AE%EF%BC%89/"
+    >Python大数据分析（企业竞赛项目）</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/11/Python/P1-Python%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%EF%BC%88%E4%BC%81%E4%B8%9A%E7%AB%9E%E8%B5%9B%E9%A1%B9%E7%9B%AE%EF%BC%89/" class="article-date">
+  <time datetime="2023-03-11T05:08:24.000Z" itemprop="datePublished">2023-03-11</time>
 </a> 
   <div class="article-category">
     <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/project/">project</a>
@@ -182,219 +952,10 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-   
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-Python/P2-Python爬虫练习代码与笔记（社工）"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/03/11/Python/P2-Python%E7%88%AC%E8%99%AB%E7%BB%83%E4%B9%A0%E4%BB%A3%E7%A0%81%E4%B8%8E%E7%AC%94%E8%AE%B0%EF%BC%88%E7%A4%BE%E5%B7%A5%EF%BC%89/"
-    >Python爬虫练习代码与笔记（社工）</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/03/11/Python/P2-Python%E7%88%AC%E8%99%AB%E7%BB%83%E4%B9%A0%E4%BB%A3%E7%A0%81%E4%B8%8E%E7%AC%94%E8%AE%B0%EF%BC%88%E7%A4%BE%E5%B7%A5%EF%BC%89/" class="article-date">
-  <time datetime="2023-03-11T03:41:57.000Z" itemprop="datePublished">2023-03-11</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>声明：仅供学习使用</p>
-<p>以下黑色代码块包含入门时的学习链接以及中文标题</p>
-<ul>
-<li><p><input disabled="" type="checkbox"> 
-待上传html链接版本</p>
-</li>
-<li><p><input disabled="" type="checkbox"> 
-待上传代码</p>
-<pre><code>                  &lt;H3 ADD_DATE=&quot;1678696134&quot; LAST_MODIFIED=&quot;1678696150&quot;&gt;河蟹&lt;/H3&gt;
-                  &lt;DL&gt;
-                      &lt;p&gt;
-                          &lt;DT&gt;
-                              &lt;H3 ADD_DATE=&quot;1678696134&quot; LAST_MODIFIED=&quot;1678696134&quot;&gt;github的河蟹&lt;/H3&gt;
-                              &lt;DL&gt;
-                                  &lt;p&gt;
-                                      &lt;DT&gt;
-                                          &lt;A HREF=&quot;https://github.com/lymwpc/phone_email_extract&quot; ADD_DATE=&quot;1678696134&quot;&gt;GitHub - lymwpc/phone_email_extract: 一个python的正则表达式模块，可以完成给定页面内容中符合格式要求的手机号和邮箱的提取&lt;/A&gt;
-                                      &lt;DT&gt;
-                                          &lt;A HREF=&quot;https://github.com/hahaxiaowei/spring-boot-login&quot; ADD_DATE=&quot;1678696134&quot;&gt;GitHub - hahaxiaowei/spring-boot-login: 里面包含了登录所需的所有接口，包括了手机号登录，邮箱登录，用户名登录&lt;/A&gt;
-                                      &lt;DT&gt;
-                                          &lt;A HREF=&quot;https://github.com/fenglingdeyi/Regular&quot; ADD_DATE=&quot;1678696134&quot;&gt;GitHub - fenglingdeyi/Regular: 该项目是对一些验证的封装，在登录注册中进行身份证、手机号、邮箱等验证的封装&lt;/A&gt;
-                                      &lt;DT&gt;
-                                          &lt;A HREF=&quot;https://github.com/hellozhengmingming/Utility&quot; ADD_DATE=&quot;1678696134&quot;&gt;GitHub - hellozhengmingming/Utility: 公共库，主要是字符串的判断，如：手机号，邮箱，身份证号的验证，颜色的转换，&lt;/A&gt;
-                                      &lt;DT&gt;
-                                          &lt;A HREF=&quot;https://github.com/toviLau/angular.strCover&quot; ADD_DATE=&quot;1678696134&quot;&gt;GitHub - toviLau/angular.strCover: 这是一个angular字符串格式化的过滤器，支持手机号 / 固定电话 / 银行卡 / 普通数字卡号 / 身份证 / 姓名 / 用户名 / 电子邮箱&lt;/A&gt;
-                                      &lt;DT&gt;
-                                          &lt;A HREF=&quot;https://github.com/PhoenixHai/Mobile-area&quot; ADD_DATE=&quot;1678696134&quot;&gt;GitHub - PhoenixHai/Mobile-area: 手机归属地号段大全，提ISSUE留下邮箱。&lt;/A&gt;
-                                      &lt;DT&gt;
-                                          &lt;A HREF=&quot;https://github.com/DandreYang/YFValidate&quot; ADD_DATE=&quot;1678696134&quot;&gt;GitHub - DandreYang/YFValidate: 用于手机号、邮箱、车牌号码、车架号、银行卡号、身份证号、URL等格式的验证&lt;/A&gt;
-                                      &lt;DT&gt;
-                                          &lt;A HREF=&quot;https://github.com/shuaiwang007/RE&quot; ADD_DATE=&quot;1678696134&quot;&gt;GitHub - shuaiwang007/RE: 正则使用的简单封装，验证用户名、密码、手机号、邮箱等等，只要一句话&lt;/A&gt;
-                                      &lt;DT&gt;
-                                          &lt;A HREF=&quot;https://github.com/Fairy-happy/checkNumber&quot; ADD_DATE=&quot;1678696134&quot;&gt;GitHub - Fairy-happy/checkNumber: 集成了检验各种号码包括手机号，邮箱，车牌合法性的方法&lt;/A&gt;
-                                      &lt;DT&gt;
-                                          &lt;A HREF=&quot;https://github.com/Conquer17/iOS-SQRegularExpression&quot; ADD_DATE=&quot;1678696134&quot;&gt;GitHub - Conquer17/iOS-SQRegularExpression: 手机号、密码、身份证号、银行卡号、邮箱等常用正则表达式&lt;/A&gt;
-                                      &lt;DT&gt;
-                                          &lt;A HREF=&quot;https://github.com/ChenZhongPu/checkReg&quot; ADD_DATE=&quot;1678696134&quot;&gt;GitHub - ChenZhongPu/checkReg: 检测一个邮箱或手机号在互联网上的注册情况&lt;/A&gt;
-                                      &lt;DT&gt;
-                                          &lt;A HREF=&quot;https://github.com/yshysh123/regular-expression&quot; ADD_DATE=&quot;1678696134&quot;&gt;GitHub - yshysh123/regular-expression: 正则验证QQ号，邮箱，手机，生日&lt;/A&gt;
-                                      &lt;DT&gt;
-                                          &lt;A HREF=&quot;https://github.com/fighting41love/funNLP&quot; ADD_DATE=&quot;1678696134&quot;&gt;超级丰富的re&lt;/A&gt;
-                                      &lt;DT&gt;
-                                          &lt;A HREF=&quot;https://github.com/zhengboss/sina_weibo_spider/blob/spider/target/test-classes/com/ideepwise/AppTest.class&quot; ADD_DATE=&quot;1678696134&quot;&gt;sina_weibo_spider/AppTest.class at spider · zhengboss/sina_weibo_spider · GitHub&lt;/A&gt;
-                                      &lt;DT&gt;
-                                          &lt;A HREF=&quot;https://github.com/zhengboss/sina_weibo_spider&quot; ADD_DATE=&quot;1678696134&quot;&gt;GitHub - zhengboss/sina_weibo_spider: 使用htmlunit框架的新浪微博爬虫&lt;/A&gt;
-                                      &lt;DT&gt;
-                                          &lt;A HREF=&quot;https://github.com/wshuai17//scrapy_spider&quot; ADD_DATE=&quot;1678696134&quot;&gt;王帅的spider&lt;/A&gt;
-                                      &lt;DT&gt;
-                                          &lt;A HREF=&quot;https://github.com/wshuai17/scrapy_spider/blob/master/first_spider/spiders/spider1.py&quot; ADD_DATE=&quot;1678696134&quot;&gt;ws_spider&lt;/A&gt;
-                                      &lt;DT&gt;
-                                          &lt;A HREF=&quot;https://github.com/PhoenixHai/Mobile-area/blob/master/README.md&quot; ADD_DATE=&quot;1678696134&quot;&gt;三年前的所有手机号归属地&lt;/A&gt;
-                                      &lt;DT&gt;
-                                          &lt;A HREF=&quot;https://github.com/zhaozichuan/wxby&quot; ADD_DATE=&quot;1678696134&quot;&gt;GitHub - zhaozichuan/wxby&lt;/A&gt;
-                                      &lt;DT&gt;
-                                          &lt;A HREF=&quot;https://github.com/eninem123/code&quot; ADD_DATE=&quot;1678696134&quot;&gt;GitHub - eninem123/code: 全是各种爬虫 京东，谷歌搜索，大象医生，ip池，百度搜索web实现，豆瓣，itchat,qq爬虫，词云，微博爬虫，知乎爬虫，微信机器人&lt;/A&gt;
-                                      &lt;DT&gt;
-                                          &lt;A HREF=&quot;https://github.com/VincentSit/ChinaMobilePhoneNumberRegex&quot; ADD_DATE=&quot;1678696134&quot;&gt;中国电话正则&lt;/A&gt;
-                                      &lt;DT&gt;
-                                          &lt;A HREF=&quot;https://github.com/dunizb/JS-Regular-expression-awesome&quot; ADD_DATE=&quot;1678696134&quot;&gt;各种re&lt;/A&gt;
-                              &lt;/DL&gt;
-                              &lt;p&gt;
-                                  &lt;DT&gt;
-                                      &lt;H3 ADD_DATE=&quot;1678696134&quot; LAST_MODIFIED=&quot;1678696134&quot;&gt;现在用不上的河蟹&lt;/H3&gt;
-                                      &lt;DL&gt;
-                                          &lt;p&gt;
-                                              &lt;DT&gt;
-                                                  &lt;A HREF=&quot;https://juejin.im/entry/59a764b96fb9a0249c007520&quot; ADD_DATE=&quot;1678696134&quot;&gt;利用搜索引擎做一些「不可描述」的事情 - 后端 - 掘金&lt;/A&gt;
-                                              &lt;DT&gt;
-                                                  &lt;A HREF=&quot;https://www.zoomeye.org/&quot; ADD_DATE=&quot;1678696134&quot;&gt;ZoomEye - Cyberspace Search Engine&lt;/A&gt;
-                                              &lt;DT&gt;
-                                                  &lt;A HREF=&quot;https://www.shodan.io/?language=en&quot; ADD_DATE=&quot;1678696134&quot;&gt;Shodan&lt;/A&gt;
-                                              &lt;DT&gt;
-                                                  &lt;A HREF=&quot;https://www.tianxia.la/wap/news/1628.html&quot; ADD_DATE=&quot;1678696134&quot;&gt;暗网&lt;/A&gt;
-                                              &lt;DT&gt;
-                                                  &lt;A HREF=&quot;http://www.hackdig.com/wap/hacktool.php&quot; ADD_DATE=&quot;1678696134&quot;&gt;黑客工具导航&lt;/A&gt;
-                                              &lt;DT&gt;
-                                                  &lt;A HREF=&quot;https://dns.aizhan.com/&quot; ADD_DATE=&quot;1678696134&quot;&gt;IP反查域名&lt;/A&gt;
-                                              &lt;DT&gt;
-                                                  &lt;A HREF=&quot;http://www.hackdig.com/?09/hack-13542.htm&quot; ADD_DATE=&quot;1678696134&quot;&gt;常用的渗透测试工具型网站整合【分享】_黑客技术&lt;/A&gt;
-                                              &lt;DT&gt;
-                                                  &lt;A HREF=&quot;https://who.is/&quot; ADD_DATE=&quot;1678696134&quot;&gt;WHOIS（ip 域名）&lt;/A&gt;
-                                              &lt;DT&gt;
-                                                  &lt;A HREF=&quot;https://booter.xyz/&quot; ADD_DATE=&quot;1678696134&quot;&gt;XyZ Booter/Stresser - TOP 1 IP Stresser&lt;/A&gt;
-                                              &lt;DT&gt;
-                                                  &lt;A HREF=&quot;https://thief.one/2017/05/19/1/&quot; ADD_DATE=&quot;1678696134&quot;&gt;【渗透神器系列】搜索引擎 | nMask &amp;#39;s Blog&lt;/A&gt;
-                                              &lt;DT&gt;
-                                                  &lt;A HREF=&quot;https://www.seebug.org/&quot; ADD_DATE=&quot;1678696134&quot;&gt;知道创宇 Seebug 漏洞平台 - 洞悉漏洞，让你掌握第一手漏洞情报！&lt;/A&gt;
-                                              &lt;DT&gt;
-                                                  &lt;A HREF=&quot;https://www.cnblogs.com/hackerschina/p/5063649.html&quot; ADD_DATE=&quot;1678696134&quot;&gt;2015.12.21日官方最新公告！中国骇客云安全响应平台正式上线啦！ - 中国寒龙联盟核心管理 - 博客园&lt;/A&gt;
-                                      &lt;/DL&gt;
-                                      &lt;p&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;https://zhuanlan.zhihu.com/p/39277625&quot; ADD_DATE=&quot;1678696134&quot;&gt;人肉搜索的思路分享／信息挖掘与情报收集 - 知乎&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;https://blog.csdn.net/huqianxun/article/details/54646497&quot; ADD_DATE=&quot;1678696134&quot;&gt;通过邮箱查询手机号/通过手机号查询邮箱【人肉搜索原理】 - 绫里千寻的栏目 - CSDN博客&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;https://blog.csdn.net/zrools/article/details/50678365&quot; ADD_DATE=&quot;1678696134&quot;&gt;手机号查QQ号（Python3版） - zrools的博客 - CSDN博客&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;https://www.jianshu.com/p/d73488564356&quot; ADD_DATE=&quot;1678696134&quot;&gt;我是如何通过手机号码得到ta的信息 - 瞬间秒杀 - 简书&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;https://www.52pojie.cn/thread-385527-1-1.html&quot; ADD_DATE=&quot;1678696134&quot;&gt;手机号2QQ号 - 『原创发布区』 - 吾爱破解 - LCG - LSG |安卓破解|病毒分析|破解软件|www.52pojie.cn&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;https://publicdbhost.dmca.gripe/&quot; ADD_DATE=&quot;1678696134&quot;&gt;Index of /&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;https://www.v2ex.com/t/416708&quot; ADD_DATE=&quot;1678696134&quot;&gt;那个查询你注册过哪些网站的网站又起死回生了 - V2EX&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;http://site2.sjk.space/dosgk1.php&quot; ADD_DATE=&quot;1678696134&quot;&gt;社工库免费查询&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;http://www.anonymouschina.org/?p=762&quot; ADD_DATE=&quot;1678696134&quot;&gt;中国骇客云教你社工之手机信息查询新技能！ – 中国骇客云平台官网&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;https://blog.csdn.net/Fly_hps/article/details/79406517&quot; ADD_DATE=&quot;1678696134&quot;&gt;11、信息收集篇————钟馗之眼使用 - Fly_鹏程万里 - CSDN博客&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;http://www.anonymouschina.org/&quot; ADD_DATE=&quot;1678696134&quot;&gt;中国骇客云平台官网 – Chinese hackers cloud platform international website&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;https://discord.en.softonic.com/windows/alternatives/free&quot; ADD_DATE=&quot;1678696134&quot;&gt;联系方式&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;https://www.5566.net/hack-.htm&quot; ADD_DATE=&quot;1678696134&quot;&gt;【黑客_网络安全_论坛】_中国精彩网址『 5566.NET，5566.ORG 』&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;https://www.zhihu.com/question/20289531/answer/277240688&quot; ADD_DATE=&quot;1678696134&quot;&gt;怎样防范被人肉搜索？ - 知乎&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;https://bbs.ichunqiu.com/thread-29654-1-1.html&quot; ADD_DATE=&quot;1678696134&quot;&gt;常见社工方法以及如何防社工_白帽子技术/思路_i春秋社区-分享你的技术，为安全加点温度.&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;http://whois.chinaz.com/reverse?ddlSearchMode=3&quot; ADD_DATE=&quot;1678696134&quot;&gt;域名Whois反查 - 站长之家&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;http://byr.wiki/&quot; ADD_DATE=&quot;1678696134&quot;&gt;Byr.wiki·北邮人导航&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;http://search.chongbuluo.com/&quot; ADD_DATE=&quot;1678696134&quot;&gt;快搜 - 搜索快人一步 - Google&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;http://www.chongbuluo.com/forum.php&quot; ADD_DATE=&quot;1678696134&quot;&gt;虫部落社区 — 在这里发现更大的世界！&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;https://www.qichacha.com/&quot; ADD_DATE=&quot;1678696134&quot;&gt;企查查-工商信息查询-公司企业注册信息查询-全国企业信用信息公示系统&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;https://www.linkedin.com/?trk=brandpage_baidu_pc-mainlink&quot; ADD_DATE=&quot;1678696134&quot;&gt;LinkedIn：登入或註冊&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;https://unroll.me/&quot; ADD_DATE=&quot;1678696134&quot;&gt;Unsubscribe from emails, instantly - Unroll.Me&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;https://haoma.baidu.com/query&quot; ADD_DATE=&quot;1678696134&quot;&gt;百度号码认证平台-号码查询&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;http://www.cellmap.cn/&quot; ADD_DATE=&quot;1678696134&quot;&gt;cellmap|基站查询|基站定位&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;http://www.gpsspg.com/bs.htm&quot; ADD_DATE=&quot;1678696134&quot;&gt;基站定位查询 — 移动基站联通基站电信基站 LBS —GPSspg&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;http://www.sohu.com/a/237452060_704736&quot; ADD_DATE=&quot;1678696134&quot;&gt;推荐几个手机基站位置查询的公开平台&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;http://www.cnblogs.com/cellmap/p/3669944.html&quot; ADD_DATE=&quot;1678696134&quot;&gt;Cellmap 基站查询 For Pc - cellmap - 博客园&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;http://www.researchclinic.net/&quot; ADD_DATE=&quot;1678696134&quot;&gt;Research Clinic&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;https://www.linkedin.com/&quot; ADD_DATE=&quot;1678696134&quot;&gt;LinkedIn：登入或註冊&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;http://s.xysjk.com/detail.aspx?sel=1&amp;keyword=17585468883&quot; ADD_DATE=&quot;1678696134&quot;&gt;信用数据库&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;http://s.xysjk.com/search.aspx&quot; ADD_DATE=&quot;1678696134&quot;&gt;信用数据库(www.xysjk.com) - 评论列表&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;https://cn.gijn.org/2015/10/15/bbc%E6%90%9C%E7%B4%A2%E4%B8%93%E5%AE%B6%EF%BC%9A%E5%8D%81%E6%AC%BE%E5%BC%BA%E5%8A%9B%E4%BA%BA%E8%82%89%E6%90%9C%E7%B4%A2%E5%B7%A5%E5%85%B7/&quot; ADD_DATE=&quot;1678696134&quot;&gt;BBC搜索专家：十款强力“人肉”搜索工具 | 全球深度报道网&lt;/A&gt;
-                                          &lt;DT&gt;
-                                              &lt;A HREF=&quot;https://blog.csdn.net/lzhd24/article/details/50667572&quot; ADD_DATE=&quot;1678696134&quot;&gt;Setoolkit社会工程学工具包 - 飞沙风中转 - CSDN博客&lt;/A&gt;
-</code></pre>
-</li>
-</ul>
+  <p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/pic/P1/unicom.zip">银联数据分析代码下载链接（含原脱敏数据及交叉数据）</a><br><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/pic/P1/unipay.zip">联通数据分析代码下载链接（含原脱敏数据及交叉数据）</a></p>
+<p>【【【【【【【【【【【【【该完善这里了！！！！！！】】】】】】】】】】】】】</p>
+<p>1.代码设计想法展现，数据切入点展现</p>
+<p>2.获奖证书及答辩现场</p>
  
       <!-- reward -->
       
@@ -406,285 +967,6 @@
     <footer class="article-footer">
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-ACM/C2-大二社团练习与竞赛代码笔记"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/03/11/ACM/C2-%E5%A4%A7%E4%BA%8C%E7%A4%BE%E5%9B%A2%E7%BB%83%E4%B9%A0%E4%B8%8E%E7%AB%9E%E8%B5%9B%E4%BB%A3%E7%A0%81%E7%AC%94%E8%AE%B0/"
-    >大二社团练习与竞赛代码笔记</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/03/11/ACM/C2-%E5%A4%A7%E4%BA%8C%E7%A4%BE%E5%9B%A2%E7%BB%83%E4%B9%A0%E4%B8%8E%E7%AB%9E%E8%B5%9B%E4%BB%A3%E7%A0%81%E7%AC%94%E8%AE%B0/" class="article-date">
-  <time datetime="2023-03-11T03:41:05.000Z" itemprop="datePublished">2023-03-11</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="附件见文末"><a href="#附件见文末" class="headerlink" title="附件见文末"></a>附件见文末</h2><p><img src="/../pic/C2/1.png"><br><img src="/../pic/C2/2.png"><br><img src="/../pic/C2/3.png"></p>
-<h2 id="附件"><a href="#附件" class="headerlink" title="附件"></a>附件</h2><p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/code/C2/LxhCode2.zip">代码下载链接</a></p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C-C/" rel="tag">C&#x2F;C++</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-ACM/C1-大一社团练习与竞赛代码笔记"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/03/11/ACM/C1-%E5%A4%A7%E4%B8%80%E7%A4%BE%E5%9B%A2%E7%BB%83%E4%B9%A0%E4%B8%8E%E7%AB%9E%E8%B5%9B%E4%BB%A3%E7%A0%81%E7%AC%94%E8%AE%B0/"
-    >大一社团练习与竞赛代码笔记</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/03/11/ACM/C1-%E5%A4%A7%E4%B8%80%E7%A4%BE%E5%9B%A2%E7%BB%83%E4%B9%A0%E4%B8%8E%E7%AB%9E%E8%B5%9B%E4%BB%A3%E7%A0%81%E7%AC%94%E8%AE%B0/" class="article-date">
-  <time datetime="2023-03-11T03:40:47.000Z" itemprop="datePublished">2023-03-11</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="附件见文末"><a href="#附件见文末" class="headerlink" title="附件见文末"></a>附件见文末</h2><p><img src="/../pic/C1/1.png"><br><img src="/../pic/C1/2.png"><br><img src="/../pic/C1/3.png"><br><img src="/../pic/C1/4.png"></p>
-<h2 id="附件"><a href="#附件" class="headerlink" title="附件"></a>附件</h2><p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/code/C1/lxhcode.zip">代码下载链接</a></p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C-C/" rel="tag">C&#x2F;C++</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-说明文档/Z2-快速了解我在大学期间学了什么"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/03/10/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/Z2-%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E6%88%91%E5%9C%A8%E5%A4%A7%E5%AD%A6%E6%9C%9F%E9%97%B4%E5%AD%A6%E4%BA%86%E4%BB%80%E4%B9%88/"
-    >快速了解我在大学期间学了什么</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/03/10/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/Z2-%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E6%88%91%E5%9C%A8%E5%A4%A7%E5%AD%A6%E6%9C%9F%E9%97%B4%E5%AD%A6%E4%BA%86%E4%BB%80%E4%B9%88/" class="article-date">
-  <time datetime="2023-03-10T03:39:45.000Z" itemprop="datePublished">2023-03-10</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%BF%85%E7%9C%8B%EF%BC%81%E6%88%91%E6%98%AF%E8%B0%81%EF%BC%8C%E6%88%91%E5%9C%A8%E5%B9%B2%E4%BB%80%E4%B9%88/">必看！我是谁，我在干什么</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="获奖证书"><a href="#获奖证书" class="headerlink" title="获奖证书"></a>获奖证书</h1><p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/pic/Z2/%E5%9B%BD%E5%AE%B6%E7%BA%A7%EF%BC%9AACM.jpg">国家级：ACM</a><br><img src="/..%5Cpic%5CZ2%5C%E5%9B%BD%E5%AE%B6%E7%BA%A7%EF%BC%9AACM.jpg"></p>
-<p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/pic/Z2/%E7%9C%81%E7%BA%A7%EF%BC%9A%E8%93%9D%E6%A1%A51.jpg">省级：蓝桥1</a><br><img src="/..%5Cpic%5CZ2%5C%E7%9C%81%E7%BA%A7%EF%BC%9A%E8%93%9D%E6%A1%A51.jpg"></p>
-<p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/pic/Z2/%E7%9C%81%E7%BA%A7%EF%BC%9A%E8%93%9D%E6%A1%A52.jpg">省级：蓝桥2</a><br><img src="/..%5Cpic%5CZ2%5C%E7%9C%81%E7%BA%A7%EF%BC%9A%E8%93%9D%E6%A1%A52.jpg"></p>
-<p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/pic/Z2/%E7%9C%81%E7%BA%A7%EF%BC%9A%E8%93%9D%E6%A1%A53.jpg">省级：蓝桥3</a><br><img src="/..%5Cpic%5CZ2%5C%E7%9C%81%E7%BA%A7%EF%BC%9A%E8%93%9D%E6%A1%A53.jpg"></p>
-<p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/pic/Z2/%E5%B8%82%E7%BA%A7%EF%BC%9A%E5%A4%A7%E8%BF%9E%E5%B8%82%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AB%9E%E8%B5%9B.jpg">市级：大连市大数据竞赛</a><br><img src="/..%5Cpic%5CZ2%5C%E5%B8%82%E7%BA%A7%EF%BC%9A%E5%A4%A7%E8%BF%9E%E5%B8%82%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AB%9E%E8%B5%9B.jpg"></p>
-<p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/pic/Z2/%E6%A0%A1%E5%86%85%EF%BC%9A%E7%AB%9E%E8%B5%9B.jpg">校级：竞赛</a><br><img src="/..%5Cpic%5CZ2%5C%E6%A0%A1%E5%86%85%EF%BC%9A%E7%AB%9E%E8%B5%9B.jpg"></p>
-<p>Codevita证书</p>
-<p>【【【【【【找邮件附件】】】】】】】】</p>
-<p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/pic/Z2/%E8%8B%B1%E8%AF%AD%EF%BC%9A%E5%9B%9B%E7%BA%A7.jpg">英语：四级证书下载链接</a><br><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/pic/Z2/%E8%8B%B1%E8%AF%AD%EF%BC%9A%E5%85%AD%E7%BA%A7.jpg">英语：六级证书下载链接</a></p>
-<h1 id="及部分专业满分成绩证明"><a href="#及部分专业满分成绩证明" class="headerlink" title="及部分专业满分成绩证明"></a>及部分专业满分成绩证明</h1><p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/pic/Z2/%E5%85%B6%E4%BB%96%EF%BC%9A%E5%A4%A7%E5%AD%A6%E5%88%86%E6%95%B0.jpg">其他：大学部分专业课满分证明</a><br><img src="/..%5Cpic%5CZ2%5C%E5%85%B6%E4%BB%96%EF%BC%9A%E5%A4%A7%E5%AD%A6%E5%88%86%E6%95%B0.jpg"></p>
-<h1 id="“我的收藏夹”附件"><a href="#“我的收藏夹”附件" class="headerlink" title="“我的收藏夹”附件"></a>“我的收藏夹”附件</h1><p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/pic/Z2/%E7%88%AC%E8%99%AB%E4%B8%8E%E6%B2%B3%E8%9F%B9.html">爬虫社工相关内容下载链接</a><br><img src="/..%5Cpic%5CZ2%5C%E7%88%AC%E8%99%AB%E4%B8%8E%E6%B2%B3%E8%9F%B9.jpg"></p>
-<p>【【【【【【【【【该完善这里了！！！！！】】】】】】】】】】】</p>
-<p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/pic/Z2/lxhpic.zip">JavaWeb与小程序相关内容下载链接</a></p>
-<p>[相关内容下载链接]<br>[相关内容下载链接]<br>[相关内容下载链接]<br>[相关内容下载链接]<br>[相关内容下载链接]<br>[相关内容下载链接]</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/profile/" rel="tag">profile</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-说明文档/Z1-hello-world"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/03/08/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/Z1-hello-world/"
-    >网站完善与专业学习ToDoList</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/03/08/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/Z1-hello-world/" class="article-date">
-  <time datetime="2023-03-08T06:24:17.709Z" itemprop="datePublished">2023-03-08</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%BF%85%E7%9C%8B%EF%BC%81%E6%88%91%E6%98%AF%E8%B0%81%EF%BC%8C%E6%88%91%E5%9C%A8%E5%B9%B2%E4%BB%80%E4%B9%88/">必看！我是谁，我在干什么</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="网页完善计划"><a href="#网页完善计划" class="headerlink" title="网页完善计划"></a>网页完善计划</h2><ul>
-<li><input checked="" disabled="" type="checkbox"> 初步搞清楚hexo框架文件体系</li>
-<li><input checked="" disabled="" type="checkbox"> 学markdown</li>
-<li><input checked="" disabled="" type="checkbox"> 看看hexo框架和自己写的项目有什么区别</li>
-<li><input checked="" disabled="" type="checkbox"> 试错，随便上传点东西</li>
-<li><input checked="" disabled="" type="checkbox"> 新电脑里想上传的的文件，全部搞成markdown格式，并进行精修</li>
-<li><input checked="" disabled="" type="checkbox"> 上传、调试</li>
-<li><input checked="" disabled="" type="checkbox"> 写个专门用来做计划的md</li>
-<li><input checked="" disabled="" type="checkbox"> 把确定要发布的所有文章进行分类和贴标签</li>
-<li><input disabled="" type="checkbox"> 把“我是谁，我在干什么”搞好【非常重要！！！！】</li>
-<li><input disabled="" type="checkbox"> 把“关于我”做成网站说明书</li>
-<li><input checked="" disabled="" type="checkbox"> 搞清楚最近的上传幽灵事件，是浏览器缓存问题还是github部署延迟问题</li>
-<li><input checked="" disabled="" type="checkbox"> 为什么hexo s本地结束后，网站部署才能更新？幽灵事件就是因为这个？翻翻逻辑</li>
-<li><input checked="" disabled="" type="checkbox"> 看看图片是hexo内嵌上传好，还是单独列个文件夹直接部署然后导入好</li>
-<li><input checked="" disabled="" type="checkbox"> 深入搞清楚hexo框架文件体系，花一个点专门看整个代码构架，找找想自定义的其它地方都有啥<ul>
-<li><input checked="" disabled="" type="checkbox"> 侧边栏相关的几个文件</li>
-<li><input checked="" disabled="" type="checkbox"> 告示板</li>
-<li><input checked="" disabled="" type="checkbox"> 侧边栏更改</li>
-<li><input checked="" disabled="" type="checkbox"> 底下的浙江改成自己家这边</li>
-<li><input checked="" disabled="" type="checkbox"> 有空的话弄一个置顶栏</li>
-</ul>
-</li>
-<li><input checked="" disabled="" type="checkbox"> 看看代码是上传到hexo内嵌里好，还是直接上传部署好，还是搞个预览再加个下载链接好。</li>
-<li><input disabled="" type="checkbox"> 看看markdown图片怎么排版，和vue一样能调吗？</li>
-</ul>
-<h2 id="代码翻出来"><a href="#代码翻出来" class="headerlink" title="代码翻出来"></a>代码翻出来</h2><ul>
-<li><input checked="" disabled="" type="checkbox"> 高级网页设计（HtmlCssVue）</li>
-<li><input checked="" disabled="" type="checkbox"> 数据库（Mysql）</li>
-<li><input checked="" disabled="" type="checkbox"> 大一竞赛代码（- [ ] 待上传）</li>
-<li><input checked="" disabled="" type="checkbox"> 把大一竞赛代码的目录结构优化一下</li>
-<li><input checked="" disabled="" type="checkbox"> 大二竞赛代码（- [ ] 待上传）</li>
-<li><input checked="" disabled="" type="checkbox"> 把大二竞赛代码的目录结构优化一下</li>
-<li><input disabled="" type="checkbox"> JavaWeb（翻翻主力机，把便携机的环境配好）</li>
-<li><input disabled="" type="checkbox"> 毕设</li>
-</ul>
-<h2 id="读读代码，看看它还认不认主了，一群逆子"><a href="#读读代码，看看它还认不认主了，一群逆子" class="headerlink" title="读读代码，看看它还认不认主了，一群逆子"></a>读读代码，看看它还认不认主了，一群逆子</h2><ul>
-<li><input checked="" disabled="" type="checkbox"> 数据分析代码</li>
-<li><input checked="" disabled="" type="checkbox"> 高级网页设计</li>
-<li><input disabled="" type="checkbox"> 数据库</li>
-<li><input disabled="" type="checkbox"> JavaWeb</li>
-<li><input disabled="" type="checkbox"> 毕设</li>
-</ul>
-<h2 id="便携用电脑环境配置"><a href="#便携用电脑环境配置" class="headerlink" title="便携用电脑环境配置"></a>便携用电脑环境配置</h2><ul>
-<li><input checked="" disabled="" type="checkbox"> annaconda系列</li>
-<li><input checked="" disabled="" type="checkbox"> JetBrains系列</li>
-<li><input checked="" disabled="" type="checkbox"> 找找JetBrains破解激活</li>
-<li><input disabled="" type="checkbox"> Vscode</li>
-<li><input disabled="" type="checkbox"> 看看主力机Vscode自定义的两个配置是哪个更好使来着？</li>
-</ul>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/profile/" rel="tag">profile</a></li></ul>
 
     </footer>
   </div>
@@ -701,7 +983,7 @@
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/3/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+    <a class="extend prev" rel="prev" href="/page/3/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">下一页</a>
   </nav>
   
 </section>
