@@ -3888,10 +3888,15 @@
 <p>​					<strong>const作用域</strong>：和let一样</p>
 <p>​					<strong>const的冗余声明</strong>：和let一样</p>
 <p>​					<strong>let的全局变量声明</strong>：和let一样	</p>
-<h2 id="4-4-3小结"><a href="#4-4-3小结" class="headerlink" title="4.4.3小结"></a><strong>4.4.3小结</strong></h2><ol>
-<li><h3 id="不使用var"><a href="#不使用var" class="headerlink" title="不使用var"></a><strong>不使用<code>var</code></strong></h3><p>有了<code>let</code>和<code>const</code>，大多数开发者会发现自己不再需要<code>var</code>了。限制自己只使用<code>let</code>和<code>const</code>有助于提升代码质量，因为变量有了明确的作用域、声明位置，以及不变的值。</p>
+<ol start="2">
+<li>易错点<br>const 定义的变量不能被重新赋值,但是如果是对象或数组,其内部的属性是可以被修改的。<br>const 只保证变量名的指针是固定的,指向的对象或数组的内部状态是可以被修改的。</li>
+</ol>
+<h2 id="4-4-3小结"><a href="#4-4-3小结" class="headerlink" title="4.4.3小结"></a>4.4.3小结</h2><ol>
+<li><h3 id="不使用var"><a href="#不使用var" class="headerlink" title="不使用var"></a>不使用var</h3><p>有了<code>let</code>和<code>const</code>，大多数开发者会发现自己不再需要<code>var</code>了。限制自己只使用<code>let</code>和<code>const</code>有助于提升代码质量，因为变量有了明确的作用域、声明位置，以及不变的值。</p>
 </li>
-<li><h3 id="const优先，let次之"><a href="#const优先，let次之" class="headerlink" title="const优先，let次之"></a><strong><code>const</code>优先，<code>let</code>次之</strong></h3><p>使用<code>const</code>声明可以让浏览器运行时强制保持变量不变，也可以让静态代码分析工具提前发现不合法的赋值操作。因此，很多开发者认为应该优先使用<code>const</code>来声明变量，只在提前知道未来会有修改时，再使用<code>let</code>。这样可以让开发者更有信心地推断某些变量的值永远不会变，同时也能迅速发现因意外赋值导致的非预期行为。</p>
+<li><h3 id="const优先，let次之"><a href="#const优先，let次之" class="headerlink" title="const优先，let次之"></a>const优先，let次之</h3><p>使用<code>const</code>声明可以让浏览器运行时强制保持变量不变，也可以让静态代码分析工具提前发现不合法的赋值操作。因此，很多开发者认为应该优先使用<code>const</code>来声明变量，只在提前知道未来会有修改时，再使用<code>let</code>。这样可以让开发者更有信心地推断某些变量的值永远不会变，同时也能迅速发现因意外赋值导致的非预期行为。</p>
+</li>
+<li><h3 id="const有易错点"><a href="#const有易错点" class="headerlink" title="const有易错点"></a>const有易错点</h3><p>const 定义的变量不能被重新赋值,但是如果是对象或数组,其内部的属性是可以被修改的。<br>const 只保证变量名的指针是固定的,指向的对象或数组的内部状态是可以被修改的。</p>
 </li>
 </ol>
 <p>在使用<code>var</code>的时候，最常见的问题就是对迭代变量的奇特声明和修改：</p>
@@ -4072,7 +4077,7 @@
 
 <p>这个过程很好地证明了浅拷贝的特征:- 对引用类型的成员,拷贝的是地址,变化会相互影响<br>- 对基本类型的成员,拷贝的是值,变化互不影响</p>
 <h4 id="浅拷贝常见的实现方式有"><a href="#浅拷贝常见的实现方式有" class="headerlink" title="浅拷贝常见的实现方式有:"></a>浅拷贝常见的实现方式有:</h4><ol>
-<li><h5 id="Object-assign-obj-对象的浅拷贝"><a href="#Object-assign-obj-对象的浅拷贝" class="headerlink" title="Object.assign({}, obj)对象的浅拷贝:"></a>Object.assign({}, obj)对象的浅拷贝:</h5></li>
+<li><h5 id="Object-assign-obj1-obj2-对象的浅拷贝"><a href="#Object-assign-obj1-obj2-对象的浅拷贝" class="headerlink" title="Object.assign(obj1, obj2)对象的浅拷贝:"></a>Object.assign(obj1, obj2)对象的浅拷贝:</h5></li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let obj = &#123; a: 1, b: &#123; c: 2 &#125; &#125;;</span><br><span class="line">let copy = Object.assign(&#123;&#125;, obj);  // 浅拷贝</span><br><span class="line">obj.b.c = 3;</span><br><span class="line">console.log(copy.b.c);  // 3  发生变化</span><br></pre></td></tr></table></figure>
 
@@ -4101,21 +4106,16 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let obj = &#123;&#125;;</span><br><span class="line">Object.defineProperty(obj, &quot;prop&quot;, &#123;</span><br><span class="line">  value: true,</span><br><span class="line">  writable: false,</span><br><span class="line">  enumerable: true </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 <ol start="2">
-<li>Object.getOwnPropertyDescriptor():用于获得指定属性的属性描述符。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let obj = &#123; prop: 1 &#125;;</span><br><span class="line">let desc = Object.getOwnPropertyDescriptor(obj, &quot;prop&quot;);</span><br><span class="line">// desc is &#123; value: 1, writable: true, enumerable: true, configurable: true &#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
 <li>Object.keys() 和 Object.values():用于获得对象的键名数组和键值数组。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let obj = &#123; a: 1, b: 2 &#125;;</span><br><span class="line">Object.keys(obj); // [&#x27;a&#x27;, &#x27;b&#x27;]</span><br><span class="line">Object.values(obj); // [1, 2]</span><br></pre></td></tr></table></figure>
 
-<ol start="4">
-<li>Object.assign():用于对象的浅拷贝和合并。</li>
+<ol start="3">
+<li>Object.assign():用于对象合并，B合并到A里（是浅拷贝）。&#x2F;&#x2F;assign：分配、指派（任务）<br>                            不会去重，但是如果键值对的key是一样的，新的会把旧的覆盖，即旧的value消失</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let target = &#123; a: 1 &#125;;</span><br><span class="line">let source = &#123; b: 2 &#125;;</span><br><span class="line">Object.assign(target, source);</span><br><span class="line">// target is now &#123;a: 1, b: 2&#125;</span><br></pre></td></tr></table></figure>
 
-<ol start="5">
+<ol start="4">
 <li>Object.freeze():用于冻结对象,使其不能被修改。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let obj = &#123; a: 1 &#125;;</span><br><span class="line">Object.freeze(obj);</span><br><span class="line">obj.a = 2; // 无效</span><br></pre></td></tr></table></figure>
@@ -4161,7 +4161,7 @@
 <h2 id="4-6-2小结"><a href="#4-6-2小结" class="headerlink" title="4.6.2小结"></a>4.6.2小结</h2><p>有些类型直接使用太麻烦，包装成对象可以调用更多的库函数。</p>
 <h2 id="4-6-3Boolean"><a href="#4-6-3Boolean" class="headerlink" title="4.6.3Boolean"></a>4.6.3Boolean</h2><h4 id="0-使用与易错点"><a href="#0-使用与易错点" class="headerlink" title="0.使用与易错点"></a>0.使用与易错点</h4><p>0.1使用：直接 let a&#x3D;true；就行。</p>
 <p>0.2易错点：小心使用，并不是只有0和false是false，空字符串等也是。</p>
-<h4 id="1-Boolean中得到true的例子（都要记住）"><a href="#1-Boolean中得到true的例子（都要记住）" class="headerlink" title="1.Boolean中得到true的例子（都要记住）"></a>1.Boolean中得到true的例子（都要记住）</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Boolean(1) // true</span><br><span class="line">Boolean(&#x27;false&#x27;) // true</span><br><span class="line">Boolean([]) // true</span><br><span class="line">Boolean(&#123;&#125;) // true</span><br><span class="line">Boolean(function () &#123;&#125;) // true</span><br><span class="line">Boolean(/foo/) // true</span><br></pre></td></tr></table></figure>
+<h4 id="1-Boolean中得到true的例子（都要记住）"><a href="#1-Boolean中得到true的例子（都要记住）" class="headerlink" title="1.Boolean中得到true的例子（都要记住）"></a>1.Boolean中得到true的例子（都要记住）</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Boolean(1) // true				数字</span><br><span class="line">Boolean(&#x27;false&#x27;) // true		字符串</span><br><span class="line">Boolean([]) // true				空数组</span><br><span class="line">Boolean(&#123;&#125;) // true				空对象</span><br><span class="line">Boolean(function () &#123;&#125;) // true	空函数</span><br><span class="line">Boolean(/foo/) // true			正则</span><br></pre></td></tr></table></figure>
 
 <h3 id="2-JS和C中的bool类型的异同"><a href="#2-JS和C中的bool类型的异同" class="headerlink" title="2.JS和C中的bool类型的异同"></a>2.JS和C中的bool类型的异同</h3><p>异同点:</p>
 <p>都只有两个值:true 和 false。</p>
@@ -4182,9 +4182,10 @@
 <h4 id="3-2Boolean-对象"><a href="#3-2Boolean-对象" class="headerlink" title="3.2Boolean 对象:"></a>3.2Boolean 对象:</h4><p>是 JS 的内置对象,继承自 Object。<br>- 包装了 boolean 基本类型,有 true 和 false 两个值。<br>- 大小写不敏感,TRUE 和 true 是同一个值。<br>- 不能直接在条件语句中使用,需要调用 valueOf() 方法。<br>- 除了 true 和 false,可以有其他的属性和方法。例如:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">js</span><br><span class="line">let bool = new Boolean(true);   // Boolean 对象</span><br><span class="line"></span><br><span class="line">if (bool.valueOf()) &#123; ... &#125;    // 需要调用 valueOf() 方法</span><br><span class="line"></span><br><span class="line">bool.constructor = 123;        // 可以添加属性</span><br></pre></td></tr></table></figure>
 
-<p>所以,boolean 类型和 Boolean 对象的主要区别在于:- boolean 是基本数据类型,Boolean 是对象。<br>- boolean 只有 true 和 false 两个字面量,Boolean 除了 true 和 false 值外,还可以有其他属性和方法。<br>- boolean 可以直接用于条件判断,Boolean 需要调用 valueOf() 方法。但是,在大多数情况下,我们可以把 Boolean 对象当作 boolean 类型来使用,因为:- Boolean 对象在布尔表达式中会自动调用 valueOf() 方法,返回基本类型值。<br>- <strong>基于性能考虑,大多数情况下我们会使用基本类型boolean而不是Boolean对象。</strong>所以,boolean 和 Boolean 的关系可以看作,boolean 是基本数据类型,Boolean 是它的对象包装形式。</p>
-<h3 id="4-Number"><a href="#4-Number" class="headerlink" title="4.Number"></a>4.Number</h3><p>只有可继承的原型函数prototype.toString（）值得一看</p>
-<h3 id="5-String"><a href="#5-String" class="headerlink" title="5.String"></a>5.String</h3><h4 id="5-1原型属性"><a href="#5-1原型属性" class="headerlink" title="5.1原型属性"></a>5.1原型属性</h4><ol>
+<p>所以,boolean 类型和 Boolean 对象的主要区别在于:- boolean 是基本数据类型,Boolean 是对象。<br>- boolean 只有 true 和 false 两个字面量,Boolean 除了 true 和 false 值外,还可以有其他属性和方法。<br>- boolean 可以直接用于条件判断,Boolean 需要调用 valueOf() 方法。但是,在大多数情况下,我们可以把 Boolean 对象当作 boolean 类型来使用,因为:- Boolean 对象在布尔表达式中会自动调用 valueOf() 方法,返回基本类型值。</p>
+<h2 id="4-6-3小结"><a href="#4-6-3小结" class="headerlink" title="4.6.3小结"></a>4.6.3小结</h2><p><strong>基于性能考虑,大多数情况下我们会使用基本类型boolean而不是Boolean对象。</strong>所以,boolean 和 Boolean的关系可以看作,boolean 是基本数据类型,Boolean 是它的对象包装形式。</p>
+<h2 id="4-6-4Number"><a href="#4-6-4Number" class="headerlink" title="4.6.4Number"></a>4.6.4Number</h2><p>只有可继承的原型函数prototype.toString（）值得一看</p>
+<h2 id="4-6-5-String"><a href="#4-6-5-String" class="headerlink" title="4.6.5.String"></a>4.6.5.String</h2><h4 id="5-1原型属性"><a href="#5-1原型属性" class="headerlink" title="5.1原型属性"></a>5.1原型属性</h4><ol>
 <li>字符串实例的length属性返回字符串的长度。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;abc&#x27;.length // 3</span><br></pre></td></tr></table></figure>
@@ -4283,7 +4284,31 @@
 <p>上面代码中，<code>random_str</code>函数接受一个整数作为参数，返回变量<code>ALPHABET</code>内的随机字符所组成的指定长度的字符串。</p>
 </li>
 </ul>
-<h3 id="7-Date"><a href="#7-Date" class="headerlink" title="7.Date"></a>7.Date</h3><h4 id="7-1作为普通函数"><a href="#7-1作为普通函数" class="headerlink" title="7.1作为普通函数"></a>7.1作为普通函数</h4><h4 id="7-2作为构造函数"><a href="#7-2作为构造函数" class="headerlink" title="7.2作为构造函数"></a>7.2作为构造函数</h4><h5 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h5><h5 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h5><h3 id="8-RegExp"><a href="#8-RegExp" class="headerlink" title="8.RegExp"></a>8.RegExp</h3><h4 id="5-1"><a href="#5-1" class="headerlink" title="5.1"></a>5.1</h4><h4 id="5-2"><a href="#5-2" class="headerlink" title="5.2"></a>5.2</h4><h3 id="9-JOSN"><a href="#9-JOSN" class="headerlink" title="9.JOSN"></a>9.JOSN</h3><h4 id="5-1-1"><a href="#5-1-1" class="headerlink" title="5.1"></a>5.1</h4><h4 id="5-2-1"><a href="#5-2-1" class="headerlink" title="5.2"></a>5.2</h4>]]></content>
+<h3 id="7-Date"><a href="#7-Date" class="headerlink" title="7.Date"></a>7.Date</h3><h4 id="7-1作为普通函数"><a href="#7-1作为普通函数" class="headerlink" title="7.1作为普通函数"></a>7.1作为普通函数</h4><p>无论有没有参数，直接调用<code>Date</code>总是返回当前时间。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Date()</span><br><span class="line">// &quot;Tue Dec 01 2015 09:34:43 GMT+0800 (CST)&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-2作为构造函数"><a href="#7-2作为构造函数" class="headerlink" title="7.2作为构造函数"></a>7.2作为构造函数</h4><p>作为构造函数时，<code>Date</code>对象可以接受多种格式的参数，返回一个该参数对应的时间实例。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 参数为日期字符串</span><br><span class="line">new Date(&#x27;January 6, 2013&#x27;);</span><br><span class="line">// Sun Jan 06 2013 00:00:00 GMT+0800 (CST)</span><br><span class="line"></span><br><span class="line">// 参数为多个整数，</span><br><span class="line">// 代表年、月、日、小时、分钟、秒、毫秒</span><br><span class="line">new Date(2013, 0, 1, 0, 0, 0, 0)</span><br><span class="line">// Tue Jan 01 2013 00:00:00 GMT+0800 (CST)</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-3包含的静态函数"><a href="#7-3包含的静态函数" class="headerlink" title="7.3包含的静态函数"></a>7.3包含的静态函数</h4><p>没啥用</p>
+<h4 id="7-4实例方法"><a href="#7-4实例方法" class="headerlink" title="7.4实例方法"></a>7.4实例方法</h4><p><strong>（1）一堆用不上的，略</strong></p>
+<p><strong>（2）本地时间</strong></p>
+<p>以下三种方法，可以将 Date 实例转为表示本地时间的字符串。</p>
+<ul>
+<li>Date.prototype.toLocaleString()：完整的本地时间。</li>
+<li>Date.prototype.toLocaleDateString()：本地日期（不含小时、分和秒）。</li>
+<li>Date.prototype.toLocaleTimeString()：本地时间（不含年月日）。</li>
+</ul>
+<p>下面是用法实例。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var d = new Date(2013, 0, 1);</span><br><span class="line"></span><br><span class="line">d.toLocaleString()</span><br><span class="line">// 中文版浏览器为&quot;2013年1月1日 上午12:00:00&quot;</span><br><span class="line">// 英文版浏览器为&quot;1/1/2013 12:00:00 AM&quot;</span><br><span class="line"></span><br><span class="line">d.toLocaleDateString()</span><br><span class="line">// 中文版浏览器为&quot;2013年1月1日&quot;</span><br><span class="line">// 英文版浏览器为&quot;1/1/2013&quot;</span><br><span class="line"></span><br><span class="line">d.toLocaleTimeString()</span><br><span class="line">// 中文版浏览器为&quot;上午12:00:00&quot;</span><br><span class="line">// 英文版浏览器为&quot;12:00:00 AM&quot;</span><br></pre></td></tr></table></figure>
+
+<p>这三个方法都有两个可选的参数。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dateObj.toLocaleString([locales[, options]])</span><br><span class="line">dateObj.toLocaleDateString([locales[, options]])</span><br><span class="line">dateObj.toLocaleTimeString([locales[, options]])</span><br></pre></td></tr></table></figure>
+
+<p>这两个参数中，<code>locales</code>是一个指定所用语言的字符串，<code>options</code>是一个配置对象。下面是<code>locales</code>的例子，分别采用<code>en-US</code>和<code>zh-CN</code>语言设定。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var d = new Date(2013, 0, 1);</span><br><span class="line"></span><br><span class="line">d.toLocaleString(&#x27;en-US&#x27;) // &quot;1/1/2013, 12:00:00 AM&quot;</span><br><span class="line">d.toLocaleString(&#x27;zh-CN&#x27;) // &quot;2013/1/1 上午12:00:00&quot;</span><br><span class="line"></span><br><span class="line">d.toLocaleDateString(&#x27;en-US&#x27;) // &quot;1/1/2013&quot;</span><br><span class="line">d.toLocaleDateString(&#x27;zh-CN&#x27;) // &quot;2013/1/1&quot;</span><br><span class="line"></span><br><span class="line">d.toLocaleTimeString(&#x27;en-US&#x27;) // &quot;12:00:00 AM&quot;</span><br><span class="line">d.toLocaleTimeString(&#x27;zh-CN&#x27;) // &quot;上午12:00:00&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-RegExp正则"><a href="#8-RegExp正则" class="headerlink" title="8.RegExp正则"></a>8.RegExp正则</h3><h4 id="5-1"><a href="#5-1" class="headerlink" title="5.1"></a>5.1</h4><h4 id="5-2"><a href="#5-2" class="headerlink" title="5.2"></a>5.2</h4><h3 id="9-JOSN"><a href="#9-JOSN" class="headerlink" title="9.JOSN"></a>9.JOSN</h3><h4 id="5-1-1"><a href="#5-1-1" class="headerlink" title="5.1"></a>5.1</h4><h4 id="5-2-1"><a href="#5-2-1" class="headerlink" title="5.2"></a>5.2</h4>]]></content>
       <categories>
         <category>code</category>
         <category>note</category>

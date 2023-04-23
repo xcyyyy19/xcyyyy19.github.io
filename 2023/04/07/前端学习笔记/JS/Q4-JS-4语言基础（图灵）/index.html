@@ -88,7 +88,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">2k</span>
+            <span class="post-count">2.2k</span>
         </span>
     </span>
 
@@ -97,7 +97,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">8 分钟</span>
+            <span class="post-count">9 分钟</span>
         </span>
     </span>
 </div>
@@ -136,10 +136,15 @@
 <p>​					<strong>const作用域</strong>：和let一样</p>
 <p>​					<strong>const的冗余声明</strong>：和let一样</p>
 <p>​					<strong>let的全局变量声明</strong>：和let一样	</p>
-<h2 id="4-4-3小结"><a href="#4-4-3小结" class="headerlink" title="4.4.3小结"></a><strong>4.4.3小结</strong></h2><ol>
-<li><h3 id="不使用var"><a href="#不使用var" class="headerlink" title="不使用var"></a><strong>不使用<code>var</code></strong></h3><p>有了<code>let</code>和<code>const</code>，大多数开发者会发现自己不再需要<code>var</code>了。限制自己只使用<code>let</code>和<code>const</code>有助于提升代码质量，因为变量有了明确的作用域、声明位置，以及不变的值。</p>
+<ol start="2">
+<li>易错点<br>const 定义的变量不能被重新赋值,但是如果是对象或数组,其内部的属性是可以被修改的。<br>const 只保证变量名的指针是固定的,指向的对象或数组的内部状态是可以被修改的。</li>
+</ol>
+<h2 id="4-4-3小结"><a href="#4-4-3小结" class="headerlink" title="4.4.3小结"></a>4.4.3小结</h2><ol>
+<li><h3 id="不使用var"><a href="#不使用var" class="headerlink" title="不使用var"></a>不使用var</h3><p>有了<code>let</code>和<code>const</code>，大多数开发者会发现自己不再需要<code>var</code>了。限制自己只使用<code>let</code>和<code>const</code>有助于提升代码质量，因为变量有了明确的作用域、声明位置，以及不变的值。</p>
 </li>
-<li><h3 id="const优先，let次之"><a href="#const优先，let次之" class="headerlink" title="const优先，let次之"></a><strong><code>const</code>优先，<code>let</code>次之</strong></h3><p>使用<code>const</code>声明可以让浏览器运行时强制保持变量不变，也可以让静态代码分析工具提前发现不合法的赋值操作。因此，很多开发者认为应该优先使用<code>const</code>来声明变量，只在提前知道未来会有修改时，再使用<code>let</code>。这样可以让开发者更有信心地推断某些变量的值永远不会变，同时也能迅速发现因意外赋值导致的非预期行为。</p>
+<li><h3 id="const优先，let次之"><a href="#const优先，let次之" class="headerlink" title="const优先，let次之"></a>const优先，let次之</h3><p>使用<code>const</code>声明可以让浏览器运行时强制保持变量不变，也可以让静态代码分析工具提前发现不合法的赋值操作。因此，很多开发者认为应该优先使用<code>const</code>来声明变量，只在提前知道未来会有修改时，再使用<code>let</code>。这样可以让开发者更有信心地推断某些变量的值永远不会变，同时也能迅速发现因意外赋值导致的非预期行为。</p>
+</li>
+<li><h3 id="const有易错点"><a href="#const有易错点" class="headerlink" title="const有易错点"></a>const有易错点</h3><p>const 定义的变量不能被重新赋值,但是如果是对象或数组,其内部的属性是可以被修改的。<br>const 只保证变量名的指针是固定的,指向的对象或数组的内部状态是可以被修改的。</p>
 </li>
 </ol>
 <p>在使用<code>var</code>的时候，最常见的问题就是对迭代变量的奇特声明和修改：</p>
