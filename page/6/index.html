@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title> Pravite Home</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="Pravite Home" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
+    <main class="content on">
+      
+<section class="cover">
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/cover1.jpg" alt="image frame" />
+    </div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">Pravite Home</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+        <img
+          src="/images/ayer.svg"
+          class="cover-logo"
+          alt="Pravite Home"
+        />
+        
+      </div>
+    </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
+
+
+
+<script src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js"></script>
+
+
+<!-- Subtitle -->
+
+  <script>
+    try {
+      var typed = new Typed("#subtitle", {
+        strings: ['群英荟萃，萝卜开会', '圣火昭昭，圣火耀耀，凡我弟子，喵喵喵喵', '不跟唱？您诫过毒吧'],
+        startDelay: 30,
+        typeSpeed: 100,
+        loop: true,
+        backSpeed: 50,
+        showCursor: true
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  </script>
+  
+<div id="main">
+  <section class="outer">
+  
+  
+  
+<div class="notice" style="margin-top:50px">
+    <i class="ri-heart-fill"></i>
+    <div class="notice-content">【网页完善中，1.点击标签-&gt;必看-&gt;网页完善ToDoList。 2.或主页拉到最下方了解进度。】</div>
+</div>
+
+
+<style>
+    .notice {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+    }
+
+    .notice i {
+        float: left;
+        color: #999;
+        font-size: 16px;
+        padding-right: 10px;
+        vertical-align: middle;
+        margin-top: -2px;
+    }
+
+    .notice-content {
+        display: initial;
+        vertical-align: middle;
+    }
+</style>
+  
+  <article class="articles">
+    
+    
+    
+    
+    <article
+  id="post-ACM/C2-大二社团练习与竞赛代码笔记"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/11/ACM/C2-%E5%A4%A7%E4%BA%8C%E7%A4%BE%E5%9B%A2%E7%BB%83%E4%B9%A0%E4%B8%8E%E7%AB%9E%E8%B5%9B%E4%BB%A3%E7%A0%81%E7%AC%94%E8%AE%B0/"
+    >大二社团练习与竞赛代码笔记</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/11/ACM/C2-%E5%A4%A7%E4%BA%8C%E7%A4%BE%E5%9B%A2%E7%BB%83%E4%B9%A0%E4%B8%8E%E7%AB%9E%E8%B5%9B%E4%BB%A3%E7%A0%81%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2023-03-11T03:41:05.000Z" itemprop="datePublished">2023-03-11</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="附件见文末"><a href="#附件见文末" class="headerlink" title="附件见文末"></a>附件见文末</h2><p><img src="/../pic/C2/1.png"><br><img src="/../pic/C2/2.png"><br><img src="/../pic/C2/3.png"></p>
+<h2 id="附件"><a href="#附件" class="headerlink" title="附件"></a>附件</h2><p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/code/C2/LxhCode2.zip">代码下载链接</a></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C-C/" rel="tag">C&#x2F;C++</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-ACM/C1-大一社团练习与竞赛代码笔记"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/11/ACM/C1-%E5%A4%A7%E4%B8%80%E7%A4%BE%E5%9B%A2%E7%BB%83%E4%B9%A0%E4%B8%8E%E7%AB%9E%E8%B5%9B%E4%BB%A3%E7%A0%81%E7%AC%94%E8%AE%B0/"
+    >大一社团练习与竞赛代码笔记</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/11/ACM/C1-%E5%A4%A7%E4%B8%80%E7%A4%BE%E5%9B%A2%E7%BB%83%E4%B9%A0%E4%B8%8E%E7%AB%9E%E8%B5%9B%E4%BB%A3%E7%A0%81%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2023-03-11T03:40:47.000Z" itemprop="datePublished">2023-03-11</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="附件见文末"><a href="#附件见文末" class="headerlink" title="附件见文末"></a>附件见文末</h2><p><img src="/../pic/C1/1.png"><br><img src="/../pic/C1/2.png"><br><img src="/../pic/C1/3.png"><br><img src="/../pic/C1/4.png"></p>
+<h2 id="附件"><a href="#附件" class="headerlink" title="附件"></a>附件</h2><p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/code/C1/lxhcode.zip">代码下载链接</a></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C-C/" rel="tag">C&#x2F;C++</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-说明文档/Z2-快速了解我在大学期间学了什么"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/10/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/Z2-%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E6%88%91%E5%9C%A8%E5%A4%A7%E5%AD%A6%E6%9C%9F%E9%97%B4%E5%AD%A6%E4%BA%86%E4%BB%80%E4%B9%88/"
+    >快速了解我在大学期间学了什么</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/10/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/Z2-%E5%BF%AB%E9%80%9F%E4%BA%86%E8%A7%A3%E6%88%91%E5%9C%A8%E5%A4%A7%E5%AD%A6%E6%9C%9F%E9%97%B4%E5%AD%A6%E4%BA%86%E4%BB%80%E4%B9%88/" class="article-date">
+  <time datetime="2023-03-10T03:39:45.000Z" itemprop="datePublished">2023-03-10</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%BF%85%E7%9C%8B%EF%BC%81%E6%88%91%E6%98%AF%E8%B0%81%EF%BC%8C%E6%88%91%E5%9C%A8%E5%B9%B2%E4%BB%80%E4%B9%88/">必看！我是谁，我在干什么</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="获奖证书"><a href="#获奖证书" class="headerlink" title="获奖证书"></a>获奖证书</h1><p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/pic/Z2/%E5%9B%BD%E5%AE%B6%E7%BA%A7%EF%BC%9AACM.jpg">国家级：ACM</a><br><img src="/..%5Cpic%5CZ2%5C%E5%9B%BD%E5%AE%B6%E7%BA%A7%EF%BC%9AACM.jpg"></p>
+<p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/pic/Z2/%E7%9C%81%E7%BA%A7%EF%BC%9A%E8%93%9D%E6%A1%A51.jpg">省级：蓝桥1</a><br><img src="/..%5Cpic%5CZ2%5C%E7%9C%81%E7%BA%A7%EF%BC%9A%E8%93%9D%E6%A1%A51.jpg"></p>
+<p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/pic/Z2/%E7%9C%81%E7%BA%A7%EF%BC%9A%E8%93%9D%E6%A1%A52.jpg">省级：蓝桥2</a><br><img src="/..%5Cpic%5CZ2%5C%E7%9C%81%E7%BA%A7%EF%BC%9A%E8%93%9D%E6%A1%A52.jpg"></p>
+<p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/pic/Z2/%E7%9C%81%E7%BA%A7%EF%BC%9A%E8%93%9D%E6%A1%A53.jpg">省级：蓝桥3</a><br><img src="/..%5Cpic%5CZ2%5C%E7%9C%81%E7%BA%A7%EF%BC%9A%E8%93%9D%E6%A1%A53.jpg"></p>
+<p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/pic/Z2/%E5%B8%82%E7%BA%A7%EF%BC%9A%E5%A4%A7%E8%BF%9E%E5%B8%82%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AB%9E%E8%B5%9B.jpg">市级：大连市大数据竞赛</a><br><img src="/..%5Cpic%5CZ2%5C%E5%B8%82%E7%BA%A7%EF%BC%9A%E5%A4%A7%E8%BF%9E%E5%B8%82%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AB%9E%E8%B5%9B.jpg"></p>
+<p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/pic/Z2/%E6%A0%A1%E5%86%85%EF%BC%9A%E7%AB%9E%E8%B5%9B.jpg">校级：竞赛</a><br><img src="/..%5Cpic%5CZ2%5C%E6%A0%A1%E5%86%85%EF%BC%9A%E7%AB%9E%E8%B5%9B.jpg"></p>
+<p>Codevita证书</p>
+<p>【【【【【【找邮件附件】】】】】】】】</p>
+<p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/pic/Z2/%E8%8B%B1%E8%AF%AD%EF%BC%9A%E5%9B%9B%E7%BA%A7.jpg">英语：四级证书下载链接</a><br><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/pic/Z2/%E8%8B%B1%E8%AF%AD%EF%BC%9A%E5%85%AD%E7%BA%A7.jpg">英语：六级证书下载链接</a></p>
+<h1 id="及部分专业满分成绩证明"><a href="#及部分专业满分成绩证明" class="headerlink" title="及部分专业满分成绩证明"></a>及部分专业满分成绩证明</h1><p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/pic/Z2/%E5%85%B6%E4%BB%96%EF%BC%9A%E5%A4%A7%E5%AD%A6%E5%88%86%E6%95%B0.jpg">其他：大学部分专业课满分证明</a><br><img src="/..%5Cpic%5CZ2%5C%E5%85%B6%E4%BB%96%EF%BC%9A%E5%A4%A7%E5%AD%A6%E5%88%86%E6%95%B0.jpg"></p>
+<h1 id="“我的收藏夹”附件"><a href="#“我的收藏夹”附件" class="headerlink" title="“我的收藏夹”附件"></a>“我的收藏夹”附件</h1><p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/pic/Z2/%E7%88%AC%E8%99%AB%E4%B8%8E%E6%B2%B3%E8%9F%B9.html">爬虫社工相关内容下载链接</a><br><img src="/..%5Cpic%5CZ2%5C%E7%88%AC%E8%99%AB%E4%B8%8E%E6%B2%B3%E8%9F%B9.jpg"></p>
+<p>【【【【【【【【【该完善这里了！！！！！】】】】】】】】】】】</p>
+<p><a target="_blank" rel="noopener" href="https://xcyyyy19.github.io/pic/Z2/lxhpic.zip">JavaWeb与小程序相关内容下载链接</a></p>
+<p>[相关内容下载链接]<br>[相关内容下载链接]<br>[相关内容下载链接]<br>[相关内容下载链接]<br>[相关内容下载链接]<br>[相关内容下载链接]</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/profile/" rel="tag">profile</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-说明文档/Z1-hello-world"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/03/08/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/Z1-hello-world/"
+    >网站完善与专业学习ToDoList</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/03/08/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/Z1-hello-world/" class="article-date">
+  <time datetime="2023-03-08T06:24:17.709Z" itemprop="datePublished">2023-03-08</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%BF%85%E7%9C%8B%EF%BC%81%E6%88%91%E6%98%AF%E8%B0%81%EF%BC%8C%E6%88%91%E5%9C%A8%E5%B9%B2%E4%BB%80%E4%B9%88/">必看！我是谁，我在干什么</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="网页完善计划"><a href="#网页完善计划" class="headerlink" title="网页完善计划"></a>网页完善计划</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> 初步搞清楚hexo框架文件体系</li>
+<li><input checked="" disabled="" type="checkbox"> 学markdown</li>
+<li><input checked="" disabled="" type="checkbox"> 看看hexo框架和自己写的项目有什么区别</li>
+<li><input checked="" disabled="" type="checkbox"> 试错，随便上传点东西</li>
+<li><input checked="" disabled="" type="checkbox"> 新电脑里想上传的的文件，全部搞成markdown格式，并进行精修</li>
+<li><input checked="" disabled="" type="checkbox"> 上传、调试</li>
+<li><input checked="" disabled="" type="checkbox"> 写个专门用来做计划的md</li>
+<li><input checked="" disabled="" type="checkbox"> 把确定要发布的所有文章进行分类和贴标签</li>
+<li><input disabled="" type="checkbox"> 把“我是谁，我在干什么”搞好【非常重要！！！！】</li>
+<li><input disabled="" type="checkbox"> 把“关于我”做成网站说明书</li>
+<li><input checked="" disabled="" type="checkbox"> 搞清楚最近的上传幽灵事件，是浏览器缓存问题还是github部署延迟问题</li>
+<li><input checked="" disabled="" type="checkbox"> 为什么hexo s本地结束后，网站部署才能更新？幽灵事件就是因为这个？翻翻逻辑</li>
+<li><input checked="" disabled="" type="checkbox"> 看看图片是hexo内嵌上传好，还是单独列个文件夹直接部署然后导入好</li>
+<li><input checked="" disabled="" type="checkbox"> 深入搞清楚hexo框架文件体系，花一个点专门看整个代码构架，找找想自定义的其它地方都有啥<ul>
+<li><input checked="" disabled="" type="checkbox"> 侧边栏相关的几个文件</li>
+<li><input checked="" disabled="" type="checkbox"> 告示板</li>
+<li><input checked="" disabled="" type="checkbox"> 侧边栏更改</li>
+<li><input checked="" disabled="" type="checkbox"> 底下的浙江改成自己家这边</li>
+<li><input checked="" disabled="" type="checkbox"> 有空的话弄一个置顶栏</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> 看看代码是上传到hexo内嵌里好，还是直接上传部署好，还是搞个预览再加个下载链接好。</li>
+<li><input disabled="" type="checkbox"> 看看markdown图片怎么排版，和vue一样能调吗？</li>
+</ul>
+<h2 id="代码翻出来"><a href="#代码翻出来" class="headerlink" title="代码翻出来"></a>代码翻出来</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> 高级网页设计（HtmlCssVue）</li>
+<li><input checked="" disabled="" type="checkbox"> 数据库（Mysql）</li>
+<li><input checked="" disabled="" type="checkbox"> 大一竞赛代码（- [ ] 待上传）</li>
+<li><input checked="" disabled="" type="checkbox"> 把大一竞赛代码的目录结构优化一下</li>
+<li><input checked="" disabled="" type="checkbox"> 大二竞赛代码（- [ ] 待上传）</li>
+<li><input checked="" disabled="" type="checkbox"> 把大二竞赛代码的目录结构优化一下</li>
+<li><input disabled="" type="checkbox"> JavaWeb（翻翻主力机，把便携机的环境配好）</li>
+<li><input disabled="" type="checkbox"> 毕设</li>
+</ul>
+<h2 id="读读代码，看看它还认不认主了，一群逆子"><a href="#读读代码，看看它还认不认主了，一群逆子" class="headerlink" title="读读代码，看看它还认不认主了，一群逆子"></a>读读代码，看看它还认不认主了，一群逆子</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> 数据分析代码</li>
+<li><input checked="" disabled="" type="checkbox"> 高级网页设计</li>
+<li><input disabled="" type="checkbox"> 数据库</li>
+<li><input disabled="" type="checkbox"> JavaWeb</li>
+<li><input disabled="" type="checkbox"> 毕设</li>
+</ul>
+<h2 id="便携用电脑环境配置"><a href="#便携用电脑环境配置" class="headerlink" title="便携用电脑环境配置"></a>便携用电脑环境配置</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> annaconda系列</li>
+<li><input checked="" disabled="" type="checkbox"> JetBrains系列</li>
+<li><input checked="" disabled="" type="checkbox"> 找找JetBrains破解激活</li>
+<li><input disabled="" type="checkbox"> Vscode</li>
+<li><input disabled="" type="checkbox"> 看看主力机Vscode自定义的两个配置是哪个更好使来着？</li>
+</ul>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/profile/" rel="tag">profile</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+  </article>
+  
+
+  
+  <nav class="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/5/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span>
+  </nav>
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2023
+        <i class="ri-heart-fill heart_icon"></i> LIXiaohan
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+      <li>
+          <img src="/images/beian.png"></img>
+          <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=01234567890123" target="_black" rel="nofollow">黑公网安备0123456789号</a>
+      </li>
+        
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src=''></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Pravite Home"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+ 
+<script src="/js/clickBoom2.js"></script>
+ 
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=22707008&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+    
+<script>
+  const password = "11";
+  const lock_password = window.sessionStorage.getItem("lock_password");
+  console.log(password, lock_password);
+  if (lock_password !== password) {
+    Swal.fire({
+      title: "请输入访问密码",
+      input: "text",
+      inputAttributes: {
+        autocapitalize: "off",
+      },
+      showCancelButton: false,
+      showLoaderOnConfirm: true,
+      allowOutsideClick: false,
+      confirmButtonText: "确定",
+    }).then((result) => {
+      console.log(result);
+      if (result.isConfirmed) {
+        console.log(password);
+        if (result.value === password) {
+          window.sessionStorage.setItem("lock_password", result.value);
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "密码错误，请重试",
+            confirmButtonText: "确定",
+            allowOutsideClick: false,
+          }).then(() => {
+            window.location.reload();
+          });
+        }
+      }
+    });
+  }
+</script>
+
+
+  </div>
+</body>
+
+</html>

@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-04-22T15:19:01.461Z</updated>
+  <updated>2023-04-24T06:13:28.147Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -18,22 +18,121 @@
   
   <entry>
     <title></title>
-    <link href="http://example.com/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/main/"/>
-    <id>http://example.com/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/main/</id>
-    <published>2023-04-22T15:09:55.072Z</published>
-    <updated>2023-04-22T15:19:01.461Z</updated>
+    <link href="http://example.com/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/02-obj-hash/"/>
+    <id>http://example.com/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/02-obj-hash/</id>
+    <published>2023-04-24T06:29:33.635Z</published>
+    <updated>2023-04-24T06:13:28.147Z</updated>
     
     
       
       
         
         
-    <summary type="html">// 一个数据里面去匹配
-// 1.字符的匹配
-const text = &#39;hello world&#39;;
-const reg = /helli/;
+    <summary type="html">// 给定一个整数数组，除了一个数字之外，其余的数字均出现了两次。请找出这个只出现了一次的数。
+// const arr = [10, 2, 2 , 1, 0, 0, 10]
+// findSingle(arr) // 1
 
-const result = text.match(reg);
+//</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/02-map-hash/"/>
+    <id>http://example.com/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/02-map-hash/</id>
+    <published>2023-04-24T06:29:33.634Z</published>
+    <updated>2023-04-24T06:21:15.861Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">// 通过Map做映射关系
+// Map和Object的区别，Object的key需要为字符串，如果不是，会转化为字符串类型
+// Map的key可以为任意类型
+// Map使用set（写）和get（读） has(判断是否有映射关系)
+//</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/01-sort/"/>
+    <id>http://example.com/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/01-sort/</id>
+    <published>2023-04-24T06:29:33.630Z</published>
+    <updated>2023-04-24T05:44:21.340Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">// 给定一个整数数组，任意选择两个数a和b，可以通过 Math.abs(a - b)求得其差值。
+// 请实现一个函数来求得这个数组的最大差值。
+
+// 解体思路其实就是最小值 - 最大值，再做绝对值的计算（因为差值是非0整数）
+//</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/01-math/"/>
+    <id>http://example.com/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/01-math/</id>
+    <published>2023-04-24T06:29:33.627Z</published>
+    <updated>2023-04-24T05:41:01.626Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">// 给定一个整数数组，任意选择两个数a和b，可以通过 Math.abs(a - b)求得其差值。
+// 请实现一个函数来求得这个数组的最大差值。
+
+
+// 解体思路其实就是最小值 - 最大值，再做绝对值的计算（因为差值是非0整数）
+const largestDiff =</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/01-custom-sort/"/>
+    <id>http://example.com/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/01-custom-sort/</id>
+    <published>2023-04-24T06:29:33.616Z</published>
+    <updated>2023-04-24T05:59:59.833Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">// 给定一个整数数组，任意选择两个数a和b，可以通过 Math.abs(a - b)求得其差值。
+// 请实现一个函数来求得这个数组的最大差值。
+
+// 解体思路其实就是最小值 - 最大值，再做绝对值的计算（因为差值是非0整数）
 
 //</summary>
         
@@ -74,8 +173,8 @@ const result = text.match(reg);
   
   <entry>
     <title></title>
-    <link href="http://example.com/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/debugger/"/>
-    <id>http://example.com/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/debugger/</id>
+    <link href="http://example.com/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/test/"/>
+    <id>http://example.com/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/test/</id>
     <published>2023-04-22T06:27:47.841Z</published>
     <updated>2023-04-22T07:05:48.524Z</updated>
     
@@ -126,6 +225,60 @@ let findA = (arr) =&gt; {
   </entry>
   
   <entry>
+    <title>JS学习笔记-4.9衍生知识（base gpt/答疑）</title>
+    <link href="http://example.com/2023/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-9%E8%A1%8D%E7%94%9F%E7%9F%A5%E8%AF%86%EF%BC%88es6%E3%80%81%E8%BF%87%E6%BB%A4%E6%80%9D%E8%B7%AF%E3%80%81%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%8E%9F%E7%90%86%E3%80%81debug%E3%80%81%E5%87%BD%E6%95%B0%E5%A4%8D%E7%94%A8%EF%BC%89/"/>
+    <id>http://example.com/2023/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-9%E8%A1%8D%E7%94%9F%E7%9F%A5%E8%AF%86%EF%BC%88es6%E3%80%81%E8%BF%87%E6%BB%A4%E6%80%9D%E8%B7%AF%E3%80%81%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%8E%9F%E7%90%86%E3%80%81debug%E3%80%81%E5%87%BD%E6%95%B0%E5%A4%8D%E7%94%A8%EF%BC%89/</id>
+    <published>2023-04-15T03:34:47.000Z</published>
+    <updated>2023-04-23T09:45:19.596Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="JS" scheme="http://example.com/tags/JS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS学习笔记-4.10两道题（base gpt/答疑/BFE网站）</title>
+    <link href="http://example.com/2023/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-10%E4%B8%A4%E9%81%93%E9%A2%98%EF%BC%88BFE.dev%EF%BC%89/"/>
+    <id>http://example.com/2023/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-10%E4%B8%A4%E9%81%93%E9%A2%98%EF%BC%88BFE.dev%EF%BC%89/</id>
+    <published>2023-04-15T03:34:47.000Z</published>
+    <updated>2023-04-24T14:04:03.255Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;107-找到最大的差&quot;&gt;&lt;a href=&quot;#107-找到最大的差&quot; class=&quot;headerlink&quot; title=&quot;107.找到最大的差&quot;&gt;&lt;/a&gt;107.找到最大的差&lt;/h2&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="JS" scheme="http://example.com/tags/JS/"/>
+    
+  </entry>
+  
+  <entry>
     <title></title>
     <link href="http://example.com/2023/04/14/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/%E8%AE%BF%E9%97%AE%E5%87%BD%E6%95%B0%E5%86%85%E5%B5%8C%E5%A5%97%E7%9A%84%E5%AF%B9%E8%B1%A1/"/>
     <id>http://example.com/2023/04/14/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/%E8%AE%BF%E9%97%AE%E5%87%BD%E6%95%B0%E5%86%85%E5%B5%8C%E5%A5%97%E7%9A%84%E5%AF%B9%E8%B1%A1/</id>
@@ -155,45 +308,18 @@ let findA = (arr) =&gt; {
   </entry>
   
   <entry>
-    <title>JS学习笔记-4.1JS基础（base mooc）</title>
-    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-1%E5%9F%BA%E7%A1%80%EF%BC%88mooc%EF%BC%89/"/>
-    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-1%E5%9F%BA%E7%A1%80%EF%BC%88mooc%EF%BC%89/</id>
-    <published>2023-04-07T03:34:47.000Z</published>
-    <updated>2023-04-19T11:50:23.152Z</updated>
+    <title>JS学习笔记-4.8面向对象（base  gpt/答疑 ）</title>
+    <link href="http://example.com/2023/04/14/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-8%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://example.com/2023/04/14/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-8%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
+    <published>2023-04-14T03:34:47.000Z</published>
+    <updated>2023-04-23T09:43:26.870Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;4-1JS基础（mooc）&quot;&gt;&lt;a href=&quot;#4-1JS基础（mooc）&quot; class=&quot;headerlink&quot; title=&quot;4.1JS基础（mooc）&quot;&gt;&lt;/a&gt;4.1JS基础（mooc）&lt;/h1&gt;&lt;h2 id=&quot;大纲&quot;&gt;&lt;a href=&quot;#大纲&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="JS" scheme="http://example.com/tags/JS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS学习笔记-4.2JS标准库（base mooc）</title>
-    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-2%E6%A0%87%E5%87%86%E5%BA%93%EF%BC%88mooc%EF%BC%89/"/>
-    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-2%E6%A0%87%E5%87%86%E5%BA%93%EF%BC%88mooc%EF%BC%89/</id>
-    <published>2023-04-07T03:34:47.000Z</published>
-    <updated>2023-04-19T11:50:47.084Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;3-2JS标准库（mooc）&quot;&gt;&lt;a href=&quot;#3-2JS标准库（mooc）&quot; class=&quot;headerlink&quot; title=&quot;3.2JS标准库（mooc）&quot;&gt;&lt;/a&gt;3.2JS标准库（mooc）&lt;/h1&gt;&lt;h2 id=&quot;1-Object对象&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h1 id=&quot;4-8面向对象&quot;&gt;&lt;a href=&quot;#4-8面向对象&quot; class=&quot;headerlink&quot; title=&quot;4.8面向对象&quot;&gt;&lt;/a&gt;4.8面向对象&lt;/h1&gt;&lt;h2 id=&quot;4-8-1浅薄的了解&quot;&gt;&lt;a href=&quot;#4-8-1浅薄的了解&quot;</summary>
         
       
     
@@ -209,18 +335,45 @@ let findA = (arr) =&gt; {
   </entry>
   
   <entry>
-    <title>JS学习笔记-4.3脚本加载（base图灵）</title>
-    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-3%E8%84%9A%E6%9C%AC%E5%8A%A0%E8%BD%BD%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/"/>
-    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-3%E8%84%9A%E6%9C%AC%E5%8A%A0%E8%BD%BD%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/</id>
-    <published>2023-04-07T03:34:47.000Z</published>
-    <updated>2023-04-19T11:24:43.824Z</updated>
+    <title>JS学习笔记-4.7过滤（base  gpt ）</title>
+    <link href="http://example.com/2023/04/13/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-7%E8%BF%87%E6%BB%A4/"/>
+    <id>http://example.com/2023/04/13/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-7%E8%BF%87%E6%BB%A4/</id>
+    <published>2023-04-13T03:34:47.000Z</published>
+    <updated>2023-04-23T09:43:22.277Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;4-3脚本的加载时机&quot;&gt;&lt;a href=&quot;#4-3脚本的加载时机&quot; class=&quot;headerlink&quot; title=&quot;4.3脚本的加载时机&quot;&gt;&lt;/a&gt;4.3脚本的加载时机&lt;/h1&gt;&lt;h2 id=&quot;4-3-1script标签&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h1 id=&quot;4-7-1数组过滤&quot;&gt;&lt;a href=&quot;#4-7-1数组过滤&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="JS" scheme="http://example.com/tags/JS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS学习笔记-4.6标准库（base阮一峰/gpt ）</title>
+    <link href="http://example.com/2023/04/12/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-6%E6%A0%87%E5%87%86%E5%BA%93/"/>
+    <id>http://example.com/2023/04/12/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-6%E6%A0%87%E5%87%86%E5%BA%93/</id>
+    <published>2023-04-12T03:34:47.000Z</published>
+    <updated>2023-04-24T14:05:06.697Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;4-6标准库&quot;&gt;&lt;a href=&quot;#4-6标准库&quot; class=&quot;headerlink&quot; title=&quot;4.6标准库&quot;&gt;&lt;/a&gt;4.6标准库&lt;/h1&gt;&lt;h2 id=&quot;4-6-0基础知识&quot;&gt;&lt;a href=&quot;#4-6-0基础知识&quot;</summary>
         
       
     
@@ -237,10 +390,10 @@ let findA = (arr) =&gt; {
   
   <entry>
     <title>JS学习笔记-4.5语法基础（base阮一峰/gpt ）</title>
-    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/"/>
-    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</id>
-    <published>2023-04-07T03:34:47.000Z</published>
-    <updated>2023-04-19T11:24:57.089Z</updated>
+    <link href="http://example.com/2023/04/11/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/"/>
+    <id>http://example.com/2023/04/11/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</id>
+    <published>2023-04-11T03:34:47.000Z</published>
+    <updated>2023-04-23T09:43:12.190Z</updated>
     
     
       
@@ -264,10 +417,10 @@ let findA = (arr) =&gt; {
   
   <entry>
     <title>JS学习笔记-4.4语言基础（base图灵）</title>
-    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-4%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/"/>
-    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-4%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/</id>
-    <published>2023-04-07T03:34:47.000Z</published>
-    <updated>2023-04-23T07:32:25.364Z</updated>
+    <link href="http://example.com/2023/04/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-4%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/"/>
+    <id>http://example.com/2023/04/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-4%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/</id>
+    <published>2023-04-10T03:34:47.000Z</published>
+    <updated>2023-04-23T09:43:07.688Z</updated>
     
     
       
@@ -290,182 +443,18 @@ let findA = (arr) =&gt; {
   </entry>
   
   <entry>
-    <title>JS学习笔记-4.6标准库（base阮一峰/gpt ）</title>
-    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-6%E6%A0%87%E5%87%86%E5%BA%93/"/>
-    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-6%E6%A0%87%E5%87%86%E5%BA%93/</id>
-    <published>2023-04-07T03:34:47.000Z</published>
-    <updated>2023-04-23T08:50:55.783Z</updated>
+    <title>JS学习笔记-4.3脚本加载（base图灵）</title>
+    <link href="http://example.com/2023/04/09/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-3%E8%84%9A%E6%9C%AC%E5%8A%A0%E8%BD%BD%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/"/>
+    <id>http://example.com/2023/04/09/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-3%E8%84%9A%E6%9C%AC%E5%8A%A0%E8%BD%BD%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/</id>
+    <published>2023-04-09T03:34:47.000Z</published>
+    <updated>2023-04-23T09:43:03.373Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;4-6标准库&quot;&gt;&lt;a href=&quot;#4-6标准库&quot; class=&quot;headerlink&quot; title=&quot;4.6标准库&quot;&gt;&lt;/a&gt;4.6标准库&lt;/h1&gt;&lt;h2 id=&quot;4-6-0基础知识&quot;&gt;&lt;a href=&quot;#4-6-0基础知识&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="JS" scheme="http://example.com/tags/JS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>爬虫学习笔记-6.0两种异步观念（base大学数据结构+OS老师）</title>
-    <link href="http://example.com/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-0%E4%B8%A4%E7%A7%8D%E5%BC%82%E6%AD%A5%E8%A7%82%E5%BF%B5/"/>
-    <id>http://example.com/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-0%E4%B8%A4%E7%A7%8D%E5%BC%82%E6%AD%A5%E8%A7%82%E5%BF%B5/</id>
-    <published>2023-04-07T03:34:47.000Z</published>
-    <updated>2023-04-21T09:57:31.001Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;有疑问-同步-关注通信机制-跟同步-描述进程中之间的关系-的区别-并发并行与异步的联系&quot;&gt;&lt;a href=&quot;#有疑问-同步-关注通信机制-跟同步-描述进程中之间的关系-的区别-并发并行与异步的联系&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="Python，Scrapy" scheme="http://example.com/tags/Python%EF%BC%8CScrapy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>爬虫学习笔记-6.100Scrapy性能提升（base百度）</title>
-    <link href="http://example.com/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-100Scrapy%E6%80%A7%E8%83%BD%E6%8F%90%E9%AB%98/"/>
-    <id>http://example.com/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-100Scrapy%E6%80%A7%E8%83%BD%E6%8F%90%E9%AB%98/</id>
-    <published>2023-04-07T03:34:47.000Z</published>
-    <updated>2023-04-21T09:53:30.780Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;需求：scrapy爬取网页速度十分缓慢，在目标网站良好的情况下三天才跑了80w条数据，参考其他爬虫的速度，一天抓取1000w条数据是没有问题的，scrapy性能需要优化。&lt;/p&gt;
-&lt;p&gt;思路：经过各种搜索，scrapy提高性能核心逻辑是提高并发数量，最简单的实现方式可以通过</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="Python，Scrapy" scheme="http://example.com/tags/Python%EF%BC%8CScrapy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>爬虫学习笔记-6.1异步相关问答（base大学JS+OS老师）</title>
-    <link href="http://example.com/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-1%E5%BC%82%E6%AD%A5%E9%97%AE%E7%AD%94/"/>
-    <id>http://example.com/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-1%E5%BC%82%E6%AD%A5%E9%97%AE%E7%AD%94/</id>
-    <published>2023-04-07T03:34:47.000Z</published>
-    <updated>2023-04-21T09:55:29.795Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;异步概念，异步执行，异步机制，异步传输数据&quot;&gt;&lt;a href=&quot;#异步概念，异步执行，异步机制，异步传输数据&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="Python，Scrapy" scheme="http://example.com/tags/Python%EF%BC%8CScrapy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>爬虫学习笔记-6.3Ajax工作原理及实例（base百度）</title>
-    <link href="http://example.com/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-3Ajax%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%8F%8A%E5%AE%9E%E4%BE%8B/"/>
-    <id>http://example.com/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-3Ajax%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%8F%8A%E5%AE%9E%E4%BE%8B/</id>
-    <published>2023-04-07T03:34:47.000Z</published>
-    <updated>2023-04-21T09:54:13.693Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;strong&gt;1、关于ajax的名字&lt;/strong&gt;　　&lt;/p&gt;
-&lt;p&gt;　　ajax 的全称是Asynchronous JavaScript and XML，其中，Asynchronous</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="Python，JS" scheme="http://example.com/tags/Python%EF%BC%8CJS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>爬虫学习笔记-6.2Scrapy、JS等异步的事件轮询机制（base百度）</title>
-    <link href="http://example.com/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-2%E5%BC%82%E6%AD%A5%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%BD%AE%E8%AF%A2%E6%9C%BA%E5%88%B6/"/>
-    <id>http://example.com/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-2%E5%BC%82%E6%AD%A5%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%BD%AE%E8%AF%A2%E6%9C%BA%E5%88%B6/</id>
-    <published>2023-04-07T03:34:47.000Z</published>
-    <updated>2023-04-21T10:12:24.957Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Scrapy、JS等异步的事件轮询机制&quot;&gt;&lt;a href=&quot;#Scrapy、JS等异步的事件轮询机制&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="Python，JS" scheme="http://example.com/tags/Python%EF%BC%8CJS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS学习笔记-4.7过滤（base  gpt ）</title>
-    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-7%E8%BF%87%E6%BB%A4/"/>
-    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-7%E8%BF%87%E6%BB%A4/</id>
-    <published>2023-04-07T03:34:47.000Z</published>
-    <updated>2023-04-22T05:27:48.706Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;4-7-1数组过滤&quot;&gt;&lt;a href=&quot;#4-7-1数组过滤&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;4-3脚本的加载时机&quot;&gt;&lt;a href=&quot;#4-3脚本的加载时机&quot; class=&quot;headerlink&quot; title=&quot;4.3脚本的加载时机&quot;&gt;&lt;/a&gt;4.3脚本的加载时机&lt;/h1&gt;&lt;h2 id=&quot;4-3-1script标签&quot;&gt;&lt;a</summary>
         
       
     
@@ -481,18 +470,18 @@ let findA = (arr) =&gt; {
   </entry>
   
   <entry>
-    <title>JS学习笔记-4.8面向对象（base  gpt/答疑 ）</title>
-    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-8%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-8%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
-    <published>2023-04-07T03:34:47.000Z</published>
-    <updated>2023-04-22T15:23:50.737Z</updated>
+    <title>JS学习笔记-4.2JS标准库（base mooc）</title>
+    <link href="http://example.com/2023/04/08/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-2%E6%A0%87%E5%87%86%E5%BA%93%EF%BC%88mooc%EF%BC%89/"/>
+    <id>http://example.com/2023/04/08/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-2%E6%A0%87%E5%87%86%E5%BA%93%EF%BC%88mooc%EF%BC%89/</id>
+    <published>2023-04-08T03:34:47.000Z</published>
+    <updated>2023-04-23T09:42:59.045Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;4-8面向对象&quot;&gt;&lt;a href=&quot;#4-8面向对象&quot; class=&quot;headerlink&quot; title=&quot;4.8面向对象&quot;&gt;&lt;/a&gt;4.8面向对象&lt;/h1&gt;&lt;h2 id=&quot;4-8-1浅薄的了解&quot;&gt;&lt;a href=&quot;#4-8-1浅薄的了解&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;3-2JS标准库（mooc）&quot;&gt;&lt;a href=&quot;#3-2JS标准库（mooc）&quot; class=&quot;headerlink&quot; title=&quot;3.2JS标准库（mooc）&quot;&gt;&lt;/a&gt;3.2JS标准库（mooc）&lt;/h1&gt;&lt;h2 id=&quot;1-Object对象&quot;&gt;&lt;a</summary>
         
       
     
@@ -508,18 +497,18 @@ let findA = (arr) =&gt; {
   </entry>
   
   <entry>
-    <title>JS学习笔记-4.9衍生知识（base gpt/答疑）</title>
-    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-9%E8%A1%8D%E7%94%9F%E7%9F%A5%E8%AF%86%EF%BC%88es6%E3%80%81%E8%BF%87%E6%BB%A4%E6%80%9D%E8%B7%AF%E3%80%81%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%8E%9F%E7%90%86%E3%80%81debug%E3%80%81%E5%87%BD%E6%95%B0%E5%A4%8D%E7%94%A8%EF%BC%89/"/>
-    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-9%E8%A1%8D%E7%94%9F%E7%9F%A5%E8%AF%86%EF%BC%88es6%E3%80%81%E8%BF%87%E6%BB%A4%E6%80%9D%E8%B7%AF%E3%80%81%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%8E%9F%E7%90%86%E3%80%81debug%E3%80%81%E5%87%BD%E6%95%B0%E5%A4%8D%E7%94%A8%EF%BC%89/</id>
+    <title>JS学习笔记-4.1JS基础（base mooc）</title>
+    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-1%E5%9F%BA%E7%A1%80%EF%BC%88mooc%EF%BC%89/"/>
+    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-1%E5%9F%BA%E7%A1%80%EF%BC%88mooc%EF%BC%89/</id>
     <published>2023-04-07T03:34:47.000Z</published>
-    <updated>2023-04-22T15:24:00.371Z</updated>
+    <updated>2023-04-19T11:50:23.152Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+    <summary type="html">&lt;h1 id=&quot;4-1JS基础（mooc）&quot;&gt;&lt;a href=&quot;#4-1JS基础（mooc）&quot; class=&quot;headerlink&quot; title=&quot;4.1JS基础（mooc）&quot;&gt;&lt;/a&gt;4.1JS基础（mooc）&lt;/h1&gt;&lt;h2 id=&quot;大纲&quot;&gt;&lt;a href=&quot;#大纲&quot;</summary>
         
       
     

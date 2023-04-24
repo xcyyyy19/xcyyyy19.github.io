@@ -31,7 +31,7 @@
   </entry>
   <entry>
     <title>Python爬虫&amp;数据分析&amp;前后端代码（毕设）【待上传】</title>
-    <url>/2023/03/11/Python/P3-Python%E7%88%AC%E8%99%AB-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BB%A3%E7%A0%81%EF%BC%88%E6%AF%95%E8%AE%BE%EF%BC%89/</url>
+    <url>/2023/03/13/Python/P3-Python%E7%88%AC%E8%99%AB-%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BB%A3%E7%A0%81%EF%BC%88%E6%AF%95%E8%AE%BE%EF%BC%89/</url>
     <content><![CDATA[]]></content>
       <categories>
         <category>code</category>
@@ -57,7 +57,7 @@
   </entry>
   <entry>
     <title>Python爬虫练习代码与笔记（社工）</title>
-    <url>/2023/03/11/Python/P2-Python%E7%88%AC%E8%99%AB%E7%BB%83%E4%B9%A0%E4%BB%A3%E7%A0%81%E4%B8%8E%E7%AC%94%E8%AE%B0%EF%BC%88%E7%A4%BE%E5%B7%A5%EF%BC%89/</url>
+    <url>/2023/03/12/Python/P2-Python%E7%88%AC%E8%99%AB%E7%BB%83%E4%B9%A0%E4%BB%A3%E7%A0%81%E4%B8%8E%E7%AC%94%E8%AE%B0%EF%BC%88%E7%A4%BE%E5%B7%A5%EF%BC%89/</url>
     <content><![CDATA[<p>声明：仅供学习使用</p>
 <p>以下黑色代码块包含入门时的学习链接以及中文标题</p>
 <ul>
@@ -305,7 +305,7 @@
   </entry>
   <entry>
     <title>Python网站--废品回收（数据库结业项目）</title>
-    <url>/2023/03/11/Python/P5-Python%E7%BD%91%E7%AB%99--%E5%BA%9F%E5%93%81%E5%9B%9E%E6%94%B6%EF%BC%88%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BB%93%E4%B8%9A%E9%A1%B9%E7%9B%AE%EF%BC%89/</url>
+    <url>/2023/03/15/Python/P5-Python%E7%BD%91%E7%AB%99--%E5%BA%9F%E5%93%81%E5%9B%9E%E6%94%B6%EF%BC%88%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BB%93%E4%B8%9A%E9%A1%B9%E7%9B%AE%EF%BC%89/</url>
     <content><![CDATA[<h2 id="基于Django的废品回收网站设计与实现（附件见文末）"><a href="#基于Django的废品回收网站设计与实现（附件见文末）" class="headerlink" title="基于Django的废品回收网站设计与实现（附件见文末）"></a>基于Django的废品回收网站设计与实现（附件见文末）</h2><h2 id="系统原型"><a href="#系统原型" class="headerlink" title="系统原型"></a>系统原型</h2><p>进入系统登录页面，在该部分向<img src="/../pic/media-fp/0a11328ae013230e51ec2122e8c73146.jpeg" alt="登录页面">用户提供登录、注册功能。</p>
 <p>图 4.3 登录原型图</p>
 <p>用户进入用户主页后，可以看到自己的昵称，以及侧边栏的功能选项，点击个人中心按钮进入个人中心页面填写个人信息，用户个人中心页原型图如图 4.4 所示。</p>
@@ -1002,7 +1002,7 @@
   </entry>
   <entry>
     <title>Python网站--盘中餐（Vue结业项目）</title>
-    <url>/2023/03/11/Python/P4-Python%E7%BD%91%E7%AB%99--%E7%9B%98%E4%B8%AD%E9%A4%90%EF%BC%88Vue%E7%BB%93%E4%B8%9A%E9%A1%B9%E7%9B%AE%EF%BC%89/</url>
+    <url>/2023/03/14/Python/P4-Python%E7%BD%91%E7%AB%99--%E7%9B%98%E4%B8%AD%E9%A4%90%EF%BC%88Vue%E7%BB%93%E4%B8%9A%E9%A1%B9%E7%9B%AE%EF%BC%89/</url>
     <content><![CDATA[<h2 id="基于Django-的“盘中餐”健康饮食网站的设计与实现（附件见文末）"><a href="#基于Django-的“盘中餐”健康饮食网站的设计与实现（附件见文末）" class="headerlink" title="基于Django 的“盘中餐”健康饮食网站的设计与实现（附件见文末）"></a>基于Django 的“盘中餐”健康饮食网站的设计与实现（附件见文末）</h2><h2 id="系统原型"><a href="#系统原型" class="headerlink" title="系统原型"></a>系统原型</h2><p>用户在想要评论的文章详情页面点击评论，系统弹出添加评论窗口，含有两个按钮， 分别对应评论发表成功和重置评论。用户评论文章原型图如下图所示。</p>
 <p><img src="/../pic/media-pzc/67be40de8257f28f7e6bd8bf78c6e5e5.jpeg"></p>
 <p>用户评论文章原型图</p>
@@ -3559,7 +3559,7 @@
   </entry>
   <entry>
     <title>JS学习笔记-4.2JS标准库（base mooc）</title>
-    <url>/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-2%E6%A0%87%E5%87%86%E5%BA%93%EF%BC%88mooc%EF%BC%89/</url>
+    <url>/2023/04/08/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-2%E6%A0%87%E5%87%86%E5%BA%93%EF%BC%88mooc%EF%BC%89/</url>
     <content><![CDATA[<h1 id="3-2JS标准库（mooc）"><a href="#3-2JS标准库（mooc）" class="headerlink" title="3.2JS标准库（mooc）"></a>3.2JS标准库（mooc）</h1><h2 id="1-Object对象"><a href="#1-Object对象" class="headerlink" title="1.Object对象"></a>1.Object对象</h2><p><a href="https://wangdoc.com/javascript/stdlib/object">Object 对象 - JavaScript 教程 - 网道 (wangdoc.com)</a></p>
 <ol>
 <li>Object() 是用来创建一个新的对象的构造函数；</li>
@@ -3757,7 +3757,7 @@
   </entry>
   <entry>
     <title>JS学习笔记-4.3脚本加载（base图灵）</title>
-    <url>/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-3%E8%84%9A%E6%9C%AC%E5%8A%A0%E8%BD%BD%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/</url>
+    <url>/2023/04/09/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-3%E8%84%9A%E6%9C%AC%E5%8A%A0%E8%BD%BD%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/</url>
     <content><![CDATA[<h1 id="4-3脚本的加载时机"><a href="#4-3脚本的加载时机" class="headerlink" title="4.3脚本的加载时机"></a>4.3脚本的加载时机</h1><h2 id="4-3-1script标签"><a href="#4-3-1script标签" class="headerlink" title="4.3.1script标签"></a>4.3.1script标签</h2><h3 id="1-属性"><a href="#1-属性" class="headerlink" title="1.属性"></a>1.属性</h3><p>​	1.crossorigin：可选。</p>
 <p>​		配置相关请求的CORS（跨源资源共享）设置。默认不使用CORS。	</p>
 <ul>
@@ -3813,7 +3813,7 @@
   </entry>
   <entry>
     <title>JS学习笔记-4.5语法基础（base阮一峰/gpt ）</title>
-    <url>/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</url>
+    <url>/2023/04/11/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h1 id="4-5语法基础"><a href="#4-5语法基础" class="headerlink" title="4.5语法基础"></a>4.5语法基础</h1><h2 id="4-5-1数据类型转换"><a href="#4-5-1数据类型转换" class="headerlink" title="4.5.1数据类型转换"></a>4.5.1数据类型转换</h2><h2 id="4-5-2错误处理机制"><a href="#4-5-2错误处理机制" class="headerlink" title="4.5.2错误处理机制"></a>4.5.2错误处理机制</h2><h3 id="1-抛出异常"><a href="#1-抛出异常" class="headerlink" title="1.抛出异常"></a>1.抛出异常</h3><p>在 JavaScript 中,throw 语句用于抛出一个异常并停止运行。</p>
 <p>1.函数参数校验</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function divide(x, y) &#123;</span><br><span class="line">  // 如果 y 为 0,抛出异常</span><br><span class="line">  if (y === 0) &#123; </span><br><span class="line">    throw &#x27;除数不能为 0&#x27;; </span><br><span class="line">  &#125;</span><br><span class="line">  // 否则进行除法运算</span><br><span class="line">  return x / y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -3863,7 +3863,7 @@
   </entry>
   <entry>
     <title>JS学习笔记-4.4语言基础（base图灵）</title>
-    <url>/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-4%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/</url>
+    <url>/2023/04/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-4%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/</url>
     <content><![CDATA[<h1 id="4-4语言基础"><a href="#4-4语言基础" class="headerlink" title="4.4语言基础"></a>4.4语言基础</h1><h2 id="4-4-1标识符"><a href="#4-4-1标识符" class="headerlink" title="4.4.1标识符"></a>4.4.1标识符</h2><p>所谓<strong>标识符</strong>，就是变量、函数、属性或函数参数的名称。标识符可以由一或多个下列字符组成：</p>
 <ul>
 <li>开头：字母、下划线或美元符$；</li>
@@ -4052,7 +4052,7 @@
   </entry>
   <entry>
     <title>JS学习笔记-4.6标准库（base阮一峰/gpt ）</title>
-    <url>/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-6%E6%A0%87%E5%87%86%E5%BA%93/</url>
+    <url>/2023/04/12/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-6%E6%A0%87%E5%87%86%E5%BA%93/</url>
     <content><![CDATA[<h1 id="4-6标准库"><a href="#4-6标准库" class="headerlink" title="4.6标准库"></a>4.6标准库</h1><h2 id="4-6-0基础知识"><a href="#4-6-0基础知识" class="headerlink" title="4.6.0基础知识"></a>4.6.0基础知识</h2><h3 id="1-C-和-JS-中的构造函数和析构函数的异同"><a href="#1-C-和-JS-中的构造函数和析构函数的异同" class="headerlink" title="1.C++ 和 JS 中的构造函数和析构函数的异同"></a>1.C++ 和 JS 中的构造函数和析构函数的异同</h3><p>C++ 和 JS 中的构造函数和析构函数有以下的异同:异同点一:初始化资源申请以及释放。它们都是用来初始化申请资源以及释放资源的。异同点二:以类名一样的方法命名。构造函数都是以类名命名的,析构函数都是以类名加上 ~ 符号命名的。</p>
 <p>不同点一:调用时机不同。</p>
 <p>C++: 构造函数在对象定义时或通过 new 关键字动态分配内存时调用;析构函数在对象释放时或 delete 关键字释放内存时调用。<br>JS:构造函数在通过 new 关键字调用时执行;没有析构函数的概念,JS 中由垃圾回收机制实现内存释放。</p>
@@ -4240,8 +4240,9 @@
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;hello&#x27;.replace(&#x27;l&#x27;, &#x27;x&#x27;);   // &#x27;hexxo&#x27;</span><br></pre></td></tr></table></figure>
 
-<h3 id="6-Math"><a href="#6-Math" class="headerlink" title="6.Math"></a>6.Math</h3><h4 id="6-1（只有）静态函数"><a href="#6-1（只有）静态函数" class="headerlink" title="6.1（只有）静态函数"></a>6.1（只有）静态函数</h4><ul>
-<li><p><code>Math.abs()</code>：绝对值</p>
+<h3 id="4-6-6Math"><a href="#4-6-6Math" class="headerlink" title="4.6.6Math"></a>4.6.6Math</h3><h4 id="6-1（只有）静态函数"><a href="#6-1（只有）静态函数" class="headerlink" title="6.1（只有）静态函数"></a>6.1（只有）静态函数</h4><ul>
+<li><p><code>Math.abs()</code>：绝对值（负数也适用，求ab差的绝对值：Math.abs(2 - 3)）</p>
+<p>两下标之间的距离不能用a+b，要用abs（a-b），防止有负数下标</p>
 </li>
 <li><p><code>Math.ceil()</code>：向上取整</p>
 </li>
@@ -4284,14 +4285,26 @@
 <p>上面代码中，<code>random_str</code>函数接受一个整数作为参数，返回变量<code>ALPHABET</code>内的随机字符所组成的指定长度的字符串。</p>
 </li>
 </ul>
-<h3 id="7-Date"><a href="#7-Date" class="headerlink" title="7.Date"></a>7.Date</h3><h4 id="7-1作为普通函数"><a href="#7-1作为普通函数" class="headerlink" title="7.1作为普通函数"></a>7.1作为普通函数</h4><p>无论有没有参数，直接调用<code>Date</code>总是返回当前时间。</p>
+<h3 id="4-6-7Date-x2F-x2F-主要了解如何创建日期-new-Date，get方法"><a href="#4-6-7Date-x2F-x2F-主要了解如何创建日期-new-Date，get方法" class="headerlink" title="4.6.7Date&#x2F;&#x2F;主要了解如何创建日期 new Date，get方法"></a>4.6.7Date&#x2F;&#x2F;主要了解如何创建日期 new Date，get方法</h3><h4 id="7-1作为普通函数"><a href="#7-1作为普通函数" class="headerlink" title="7.1作为普通函数"></a>7.1作为普通函数</h4><p>无论有没有参数，直接调用<code>Date</code>总是返回当前时间。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Date()</span><br><span class="line">// &quot;Tue Dec 01 2015 09:34:43 GMT+0800 (CST)&quot;</span><br></pre></td></tr></table></figure>
 
 <h4 id="7-2作为构造函数"><a href="#7-2作为构造函数" class="headerlink" title="7.2作为构造函数"></a>7.2作为构造函数</h4><p>作为构造函数时，<code>Date</code>对象可以接受多种格式的参数，返回一个该参数对应的时间实例。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 参数为日期字符串</span><br><span class="line">new Date(&#x27;January 6, 2013&#x27;);</span><br><span class="line">// Sun Jan 06 2013 00:00:00 GMT+0800 (CST)</span><br><span class="line"></span><br><span class="line">// 参数为多个整数，</span><br><span class="line">// 代表年、月、日、小时、分钟、秒、毫秒</span><br><span class="line">new Date(2013, 0, 1, 0, 0, 0, 0)</span><br><span class="line">// Tue Jan 01 2013 00:00:00 GMT+0800 (CST)</span><br></pre></td></tr></table></figure>
 
 <h4 id="7-3包含的静态函数"><a href="#7-3包含的静态函数" class="headerlink" title="7.3包含的静态函数"></a>7.3包含的静态函数</h4><p>没啥用</p>
-<h4 id="7-4实例方法"><a href="#7-4实例方法" class="headerlink" title="7.4实例方法"></a>7.4实例方法</h4><p><strong>（1）一堆用不上的，略</strong></p>
+<h4 id="7-4实例方法"><a href="#7-4实例方法" class="headerlink" title="7.4实例方法"></a>7.4实例方法</h4><p><strong>（1）只有get函数有用</strong>（暂时记住年月日星期就行）</p>
+<ul>
+<li><code>getTime()</code>：返回实例距离1970年1月1日00:00:00的毫秒数，等同于<code>valueOf</code>方法。</li>
+<li><code>getDate()</code>：返回实例对象对应每个月的几号（从1开始）。</li>
+<li><code>getDay()</code>：返回星期几，星期日为0，星期一为1，以此类推。</li>
+<li><code>getFullYear()</code>：返回四位的年份。</li>
+<li><code>getMonth()</code>：返回月份（0表示1月，11表示12月）。</li>
+<li><code>getHours()</code>：返回小时（0-23）。</li>
+<li><code>getMilliseconds()</code>：返回毫秒（0-999）。</li>
+<li><code>getMinutes()</code>：返回分钟（0-59）。</li>
+<li><code>getSeconds()</code>：返回秒（0-59）。</li>
+<li><code>getTimezoneOffset()</code>：返回当前时间与 UTC 的时区差异，以分钟表示，返回结果考虑到了夏令时因素。</li>
+</ul>
 <p><strong>（2）本地时间</strong></p>
 <p>以下三种方法，可以将 Date 实例转为表示本地时间的字符串。</p>
 <ul>
@@ -4308,7 +4321,38 @@
 <p>这两个参数中，<code>locales</code>是一个指定所用语言的字符串，<code>options</code>是一个配置对象。下面是<code>locales</code>的例子，分别采用<code>en-US</code>和<code>zh-CN</code>语言设定。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var d = new Date(2013, 0, 1);</span><br><span class="line"></span><br><span class="line">d.toLocaleString(&#x27;en-US&#x27;) // &quot;1/1/2013, 12:00:00 AM&quot;</span><br><span class="line">d.toLocaleString(&#x27;zh-CN&#x27;) // &quot;2013/1/1 上午12:00:00&quot;</span><br><span class="line"></span><br><span class="line">d.toLocaleDateString(&#x27;en-US&#x27;) // &quot;1/1/2013&quot;</span><br><span class="line">d.toLocaleDateString(&#x27;zh-CN&#x27;) // &quot;2013/1/1&quot;</span><br><span class="line"></span><br><span class="line">d.toLocaleTimeString(&#x27;en-US&#x27;) // &quot;12:00:00 AM&quot;</span><br><span class="line">d.toLocaleTimeString(&#x27;zh-CN&#x27;) // &quot;上午12:00:00&quot;</span><br></pre></td></tr></table></figure>
 
-<h3 id="8-RegExp正则"><a href="#8-RegExp正则" class="headerlink" title="8.RegExp正则"></a>8.RegExp正则</h3><h4 id="5-1"><a href="#5-1" class="headerlink" title="5.1"></a>5.1</h4><h4 id="5-2"><a href="#5-2" class="headerlink" title="5.2"></a>5.2</h4><h3 id="9-JOSN"><a href="#9-JOSN" class="headerlink" title="9.JOSN"></a>9.JOSN</h3><h4 id="5-1-1"><a href="#5-1-1" class="headerlink" title="5.1"></a>5.1</h4><h4 id="5-2-1"><a href="#5-2-1" class="headerlink" title="5.2"></a>5.2</h4>]]></content>
+<h3 id="4-6-8RegExp正则-x2F-x2F-找旧笔记对比着看"><a href="#4-6-8RegExp正则-x2F-x2F-找旧笔记对比着看" class="headerlink" title="4.6.8RegExp正则&#x2F;&#x2F;找旧笔记对比着看"></a>4.6.8RegExp正则&#x2F;&#x2F;找旧笔记对比着看</h3><h3 id="4-6-9JOSN"><a href="#4-6-9JOSN" class="headerlink" title="4.6.9JOSN"></a>4.6.9JOSN</h3><h4 id="5-1格式"><a href="#5-1格式" class="headerlink" title="5.1格式"></a>5.1格式</h4><ol>
+<li><p>[]  {}</p>
+<p>复合类型的值只能是数组或对象，不能是函数、正则表达式对象、日期对象。</p>
+</li>
+<li><p>String，Number，Boolean，NULL</p>
+<p>原始类型的值只有四种：字符串、数值（必须以十进制表示，二进制十六进制都不行）、布尔值和null（不能使用NaN<code>, </code>Infinity, -Infinity和undefined）。</p>
+</li>
+<li><p>“asdf”</p>
+<p>字符串必须使用双引号表示，不能使用单引号。</p>
+</li>
+<li><p>“key”：value</p>
+<p>对象的键名必须放在双引号里面。</p>
+</li>
+<li><p>数组或对象最后一个成员的后面，不能加逗号。</p>
+</li>
+</ol>
+<h4 id="5-2静态方法"><a href="#5-2静态方法" class="headerlink" title="5.2静态方法"></a>5.2静态方法</h4><ol>
+<li><p>JSON.stringify	&#x2F;&#x2F;Json字符串化</p>
+<ol>
+<li><p>JSON.stringify(obj，[‘key1’,’key2’])	</p>
+</li>
+<li><p>JSON.stringify(value)</p>
+<p>value可以是任何JSON格式支持的值，包括空对象、null、空数组</p>
+</li>
+<li><p>JSON.stringify(value,function)</p>
+</li>
+</ol>
+</li>
+<li><p>JSON.parse()              &#x2F;&#x2F;字符串JSON化</p>
+</li>
+</ol>
+]]></content>
       <categories>
         <category>code</category>
         <category>note</category>
@@ -4319,7 +4363,7 @@
   </entry>
   <entry>
     <title>爬虫学习笔记-6.0两种异步观念（base大学数据结构+OS老师）</title>
-    <url>/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-0%E4%B8%A4%E7%A7%8D%E5%BC%82%E6%AD%A5%E8%A7%82%E5%BF%B5/</url>
+    <url>/2023/03/16/Python/%E7%88%AC%E8%99%AB/P6-Py-0%E4%B8%A4%E7%A7%8D%E5%BC%82%E6%AD%A5%E8%A7%82%E5%BF%B5/</url>
     <content><![CDATA[<h1 id="有疑问-同步-关注通信机制-跟同步-描述进程中之间的关系-的区别-并发并行与异步的联系"><a href="#有疑问-同步-关注通信机制-跟同步-描述进程中之间的关系-的区别-并发并行与异步的联系" class="headerlink" title="[有疑问]同步(关注通信机制)跟同步(描述进程中之间的关系)的区别  并发并行与异步的联系"></a>[有疑问]同步(关注通信机制)跟同步(描述进程中之间的关系)的区别  并发并行与异步的联系</h1><h2 id="两种关于异步的理解"><a href="#两种关于异步的理解" class="headerlink" title="两种关于异步的理解"></a><strong>两种关于异步的理解</strong></h2><p>1.线程&#x2F;进程&#x2F;作业 不按代码顺序执行(其他)</p>
 <p>2.不按发送请求的顺序返回结果(消息通信机制)</p>
 <p><strong>消息通信机制中的同步异步(顺带并发并行)</strong></p>
@@ -4363,7 +4407,7 @@
   </entry>
   <entry>
     <title>爬虫学习笔记-6.100Scrapy性能提升（base百度）</title>
-    <url>/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-100Scrapy%E6%80%A7%E8%83%BD%E6%8F%90%E9%AB%98/</url>
+    <url>/2023/03/20/Python/%E7%88%AC%E8%99%AB/P6-Py-100Scrapy%E6%80%A7%E8%83%BD%E6%8F%90%E9%AB%98/</url>
     <content><![CDATA[<p>需求：scrapy爬取网页速度十分缓慢，在目标网站良好的情况下三天才跑了80w条数据，参考其他爬虫的速度，一天抓取1000w条数据是没有问题的，scrapy性能需要优化。</p>
 <p>思路：经过各种搜索，scrapy提高性能核心逻辑是提高并发数量，最简单的实现方式可以通过调整settings的‘CONCURRENT_REQUESTS’等参数或者使用分布式爬虫来提速。除此之外代码也要尽量少用循环。本人的简单优化主要通过以下方式</p>
 <p><strong>settings中设置CONCURRENT_REQUESTS</strong></p>
@@ -4392,7 +4436,7 @@
   </entry>
   <entry>
     <title>爬虫学习笔记-6.1异步相关问答（base大学JS+OS老师）</title>
-    <url>/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-1%E5%BC%82%E6%AD%A5%E9%97%AE%E7%AD%94/</url>
+    <url>/2023/03/17/Python/%E7%88%AC%E8%99%AB/P6-Py-1%E5%BC%82%E6%AD%A5%E9%97%AE%E7%AD%94/</url>
     <content><![CDATA[<h1 id="异步概念，异步执行，异步机制，异步传输数据"><a href="#异步概念，异步执行，异步机制，异步传输数据" class="headerlink" title="异步概念，异步执行，异步机制，异步传输数据"></a>异步概念，异步执行，异步机制，异步传输数据</h1><p>在我印象里异步传输数据就是A发送一字节数据，B不知道啥时候接收到，也不知道B啥时候返回。B返回时会通知A回来处理。</p>
 <p>异步机制是通过回调函数。。。。。。</p>
 <p>异步概念跟异步传输差不多</p>
@@ -4434,7 +4478,7 @@
   </entry>
   <entry>
     <title>爬虫学习笔记-6.3Ajax工作原理及实例（base百度）</title>
-    <url>/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-3Ajax%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%8F%8A%E5%AE%9E%E4%BE%8B/</url>
+    <url>/2023/03/19/Python/%E7%88%AC%E8%99%AB/P6-Py-3Ajax%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%E5%8F%8A%E5%AE%9E%E4%BE%8B/</url>
     <content><![CDATA[<p><strong>1、关于ajax的名字</strong>　　</p>
 <p>　　ajax 的全称是Asynchronous JavaScript and XML，其中，Asynchronous 是异步的意思，它有别于传统web开发中采用的同步的方式。</p>
 <p><strong>2、关于同步和异步</strong>　</p>
@@ -4617,7 +4661,7 @@
   </entry>
   <entry>
     <title>爬虫学习笔记-6.2Scrapy、JS等异步的事件轮询机制（base百度）</title>
-    <url>/2023/04/07/Python/%E7%88%AC%E8%99%AB/P6-Py-2%E5%BC%82%E6%AD%A5%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%BD%AE%E8%AF%A2%E6%9C%BA%E5%88%B6/</url>
+    <url>/2023/03/18/Python/%E7%88%AC%E8%99%AB/P6-Py-2%E5%BC%82%E6%AD%A5%E7%9A%84%E4%BA%8B%E4%BB%B6%E8%BD%AE%E8%AF%A2%E6%9C%BA%E5%88%B6/</url>
     <content><![CDATA[<h1 id="Scrapy、JS等异步的事件轮询机制"><a href="#Scrapy、JS等异步的事件轮询机制" class="headerlink" title="Scrapy、JS等异步的事件轮询机制"></a>Scrapy、JS等异步的事件轮询机制</h1><p><strong>什么是异步</strong></p>
 <p><a href="https://www.cnblogs.com/lan-cheng/p/10223455.html">https://www.cnblogs.com/lan-cheng/p/10223455.html</a></p>
 <p><strong>什么是异步</strong></p>
@@ -4655,7 +4699,7 @@
   </entry>
   <entry>
     <title>JS学习笔记-4.7过滤（base  gpt ）</title>
-    <url>/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-7%E8%BF%87%E6%BB%A4/</url>
+    <url>/2023/04/13/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-7%E8%BF%87%E6%BB%A4/</url>
     <content><![CDATA[<h1 id="4-7-1数组过滤"><a href="#4-7-1数组过滤" class="headerlink" title="4.7.1数组过滤"></a>4.7.1数组过滤</h1><ol>
 <li><p>filter():过滤出符合条件的元素,返回新数组。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">array.filter(callbackFunc)</span><br></pre></td></tr></table></figure>
@@ -4694,7 +4738,7 @@
   </entry>
   <entry>
     <title>JS学习笔记-4.8面向对象（base  gpt/答疑 ）</title>
-    <url>/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-8%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
+    <url>/2023/04/14/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-8%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
     <content><![CDATA[<h1 id="4-8面向对象"><a href="#4-8面向对象" class="headerlink" title="4.8面向对象"></a>4.8面向对象</h1><h2 id="4-8-1浅薄的了解"><a href="#4-8-1浅薄的了解" class="headerlink" title="4.8.1浅薄的了解"></a>4.8.1浅薄的了解</h2><h3 id="1-构造函数"><a href="#1-构造函数" class="headerlink" title="1.构造函数"></a>1.构造函数</h3><p>用于反复创建相同的对象，和Java一样，就是父类。</p>
 <p>this.price&#x3D;price;意味着把传进来的price参数挂载到构造函数内部当作属性用了。</p>
 <h3 id="2-是否使用原型函数（prototype）"><a href="#2-是否使用原型函数（prototype）" class="headerlink" title="2.是否使用原型函数（prototype）"></a>2.是否使用原型函数（prototype）</h3><p>构造函数内的方法如果是不变的，那么每次new一个新实例的时候都会调用这个方法，从而造成资源浪费。所以要把它挂载到原型上，并写在函数外部，这样就相当于只初始化一次。这样他实例化时，就会通过实例化（子类）的声明覆盖掉父类的声明。</p>
@@ -4732,7 +4776,7 @@
   </entry>
   <entry>
     <title>JS学习笔记-4.9衍生知识（base gpt/答疑）</title>
-    <url>/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-9%E8%A1%8D%E7%94%9F%E7%9F%A5%E8%AF%86%EF%BC%88es6%E3%80%81%E8%BF%87%E6%BB%A4%E6%80%9D%E8%B7%AF%E3%80%81%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%8E%9F%E7%90%86%E3%80%81debug%E3%80%81%E5%87%BD%E6%95%B0%E5%A4%8D%E7%94%A8%EF%BC%89/</url>
+    <url>/2023/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-9%E8%A1%8D%E7%94%9F%E7%9F%A5%E8%AF%86%EF%BC%88es6%E3%80%81%E8%BF%87%E6%BB%A4%E6%80%9D%E8%B7%AF%E3%80%81%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%8E%9F%E7%90%86%E3%80%81debug%E3%80%81%E5%87%BD%E6%95%B0%E5%A4%8D%E7%94%A8%EF%BC%89/</url>
     <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 一个数据里面去匹配</span><br><span class="line">// 1.字符的匹配</span><br><span class="line">const text = &#x27;hello world&#x27;;</span><br><span class="line">const reg = /helli/;</span><br><span class="line"></span><br><span class="line">const result = text.match(reg);</span><br><span class="line"></span><br><span class="line">// console.log(&quot;result&quot;,result)</span><br><span class="line"></span><br><span class="line">// 2.在一堆数据里面去筛选</span><br><span class="line"></span><br><span class="line">// 3.浅拷贝</span><br><span class="line">const shallowClone = (target) =&gt; &#123;</span><br><span class="line">  const result = &#123;&#125;;</span><br><span class="line">  for (let key in target) &#123;</span><br><span class="line">    result[key] = target[key];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return result;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// // 4.深拷贝</span><br><span class="line">// const deepClone = (target) =&gt; &#123;</span><br><span class="line">//     const obj = &#123;&#125;</span><br><span class="line">//     for (let key in target) &#123;</span><br><span class="line">//         const value = target[key];</span><br><span class="line">//         if (isObj(target)) &#123;</span><br><span class="line">//             obj[key] = deepClone(value)</span><br><span class="line">//         &#125; else &#123;</span><br><span class="line">//             obj[key] = value</span><br><span class="line">//         &#125;</span><br><span class="line">//     &#125;</span><br><span class="line"></span><br><span class="line">//     return obj</span><br><span class="line">// &#125;</span><br><span class="line"></span><br><span class="line">//5.找到复杂对象中的某几个符合的数据</span><br><span class="line">const list = [</span><br><span class="line">  &#123; name: &#x27;zhangsan&#x27;, id: 1 &#125;,</span><br><span class="line">  &#123; name: &#x27;lisi&#x27;, id: 2 &#125;,</span><br><span class="line">  &#123; name: &#x27;wangwu&#x27;, id: 3 &#125;,</span><br><span class="line">  &#123; name: &#x27;wangwu&#x27;, id: 4 &#125;,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">// 得分字段 score:10</span><br><span class="line"></span><br><span class="line">const getName = function (item) &#123;</span><br><span class="line">  return item.name === &#x27;wangwu&#x27;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// 5.1 forEach 遍历</span><br><span class="line"></span><br><span class="line">// 5.2 for of遍历，判断 数组是否满足条件</span><br><span class="line"></span><br><span class="line">//5.3 判断条件独立出来，函数复用</span><br><span class="line"></span><br><span class="line">// 5.2.1every 所有条件满足返回true,否则返回false</span><br><span class="line">const everyResult = list.every(getName);</span><br><span class="line">console.log(&#x27;everyResult&#x27;, everyResult);</span><br><span class="line"></span><br><span class="line">// 5.2.2some 任一条件满足返回true，否则返回false</span><br><span class="line">const someResult = list.some(getName);</span><br><span class="line">console.log(&#x27;someResult&#x27;, someResult);</span><br><span class="line"></span><br><span class="line">const target = [];</span><br><span class="line"></span><br><span class="line">list.forEach((item) =&gt; &#123;</span><br><span class="line">  target.push(&#123;</span><br><span class="line">    ...item,</span><br><span class="line">    score: 10,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">return target;</span><br><span class="line"></span><br><span class="line">// 5.3map</span><br><span class="line"></span><br><span class="line">// 5.4reduce</span><br><span class="line"></span><br><span class="line">// 6.深拷贝的底层原理：判断数据类型是否为Object</span><br><span class="line">const isObj = (target) =&gt;</span><br><span class="line">  Object.prototype.toString.call(target) === &#x27;[object Object]&#x27;;</span><br><span class="line"></span><br><span class="line">const deepClone = (target) =&gt; &#123;</span><br><span class="line">  const obj = &#123;&#125;;</span><br><span class="line">  for (let key in target) &#123;</span><br><span class="line">    const value = target[key];</span><br><span class="line">    debugger;</span><br><span class="line">    if (isObj(value)) &#123;</span><br><span class="line">      debugger;</span><br><span class="line">      obj[key] = deepClone(value);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      debugger;</span><br><span class="line">      obj[key] = value;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return obj;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">deepClone(&#123; a: &#123; b: 10 &#125; &#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 ]]></content>
@@ -4743,129 +4787,6 @@
       <tags>
         <tag>JS</tag>
       </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/main/</url>
-    <content><![CDATA[// 一个数据里面去匹配
-// 1.字符的匹配
-const text = 'hello world';
-const reg = /helli/;
-
-const result = text.match(reg);
-
-// console.log("result",result)
-
-// 2.在一堆数据里面去筛选
-
-// 3.浅拷贝
-const shallowClone = (target) => {
-  const result = {};
-  for (let key in target) {
-    result[key] = target[key];
-  }
-
-  return result;
-};
-
-// // 4.深拷贝
-// const deepClone = (target) => {
-//     const obj = {}
-//     for (let key in target) {
-//         const value = target[key];
-//         if (isObj(target)) {
-//             obj[key] = deepClone(value)
-//         } else {
-//             obj[key] = value
-//         }
-//     }
-
-//     return obj
-// }
-
-//5.找到复杂对象中的某几个符合的数据
-const list = [
-  { name: 'zhangsan', id: 1 },
-  { name: 'lisi', id: 2 },
-  { name: 'wangwu', id: 3 },
-  { name: 'wangwu', id: 4 },
-];
-
-// 得分字段 score:10
-
-const getName = function (item) {
-  return item.name === 'wangwu';
-};
-
-// 5.1 forEach 遍历
-
-// 5.2 for of遍历，判断 数组是否满足条件
-
-//5.3 判断条件独立出来，函数复用
-
-// 5.2.1every 所有条件满足返回true,否则返回false
-const everyResult = list.every(getName);
-console.log('everyResult', everyResult);
-
-// 5.2.2some 任一条件满足返回true，否则返回false
-const someResult = list.some(getName);
-console.log('someResult', someResult);
-
-const target = [];
-
-list.forEach((item) => {
-  target.push({
-    ...item,
-    score: 10,
-  });
-});
-
-return target;
-
-// 5.3map
-
-// 5.4reduce
-
-// 6.深拷贝的底层原理：判断数据类型是否为Object
-const isObj = (target) =>
-  Object.prototype.toString.call(target) === '[object Object]';
-
-const deepClone = (target) => {
-  const obj = {};
-  for (let key in target) {
-    const value = target[key];
-    debugger;
-    if (isObj(value)) {
-      debugger;
-      obj[key] = deepClone(value);
-    } else {
-      debugger;
-      obj[key] = value;
-    }
-  }
-
-  return obj;
-};
-
-deepClone({ a: { b: 10 } });
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/debugger/</url>
-    <content><![CDATA[let arr = ['a', 'b', 'c', 'A', 'B', 'A'];
-let findA = (arr) => {
-  const result = [];
-  for (value of arr) {
-    if (value === 'A') {
-      result.push(value);
-    }
-  }
-  return result;
-};
-findA(arr);
-console.log(result);
-]]></content>
   </entry>
   <entry>
     <title></title>
@@ -5244,5 +5165,271 @@ ul li:not(:last-child) {
 .container .b {
     box-sizing: content-box;
 }]]></content>
+  </entry>
+  <entry>
+    <title>JS学习笔记-4.10两道题（base gpt/答疑/BFE网站）</title>
+    <url>/2023/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-10%E4%B8%A4%E9%81%93%E9%A2%98%EF%BC%88BFE.dev%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="107-找到最大的差"><a href="#107-找到最大的差" class="headerlink" title="107.找到最大的差"></a>107.找到最大的差</h2><p><a href="https://bigfrontend.dev/zh/problem/Find-the-largest-difference">107. 找到最大的差 | BFE.dev - 前端刷题，准备前端面试拿到心仪的Offer。 (bigfrontend.dev)</a></p>
+<p>原始思路：略（还是框在C语言和Python里了，实现方法很麻烦，很多东西JS已经给包装好了可以直接用）</p>
+<h3 id="法一："><a href="#法一：" class="headerlink" title="法一："></a>法一：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 给定一个整数数组，任意选择两个数a和b，可以通过 Math.abs(a - b)求得其差值。</span><br><span class="line">// 请实现一个函数来求得这个数组的最大差值。</span><br><span class="line"></span><br><span class="line">// 解体思路其实就是最小值 - 最大值，再做绝对值的计算（因为差值是非0整数）</span><br><span class="line"></span><br><span class="line">// 如果不会使用sort方法进行排序，我们也可以自己实现一个sort方法</span><br><span class="line"></span><br><span class="line">// 默认的type为&quot;max&quot;,找出最大值,反之为&quot;max&quot;，找出最小值</span><br><span class="line">const findNum = (list, type = &quot;max&quot;) =&gt; &#123;</span><br><span class="line">  let target;</span><br><span class="line">  if (type === &quot;max&quot;) &#123;</span><br><span class="line">    list.forEach((item, index) =&gt; &#123;</span><br><span class="line">      if (index === 0) &#123;</span><br><span class="line">        // 开始循环，将首个数字作为基准，进行比较</span><br><span class="line">        target = item;</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        if (item &gt; target) &#123;</span><br><span class="line">          // 替换target的值</span><br><span class="line">          target = item;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    list.forEach((item, index) =&gt; &#123;</span><br><span class="line">      if (index === 0) &#123;</span><br><span class="line">        target = item;</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        if (item &lt; target) &#123;</span><br><span class="line">          target = item;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  return target;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// 上述的代码可以优化一下语句，因为整体思路是一致的</span><br><span class="line">// 进行index === 0 赋值</span><br><span class="line">// 通过 type 判断是什么条件下，更新target的值</span><br><span class="line">const simplifyFindNum = (list, type = &quot;max&quot;) =&gt; &#123;</span><br><span class="line">  let target;</span><br><span class="line">  // 优化一下，type不为max或者min，不处理数据了。</span><br><span class="line">  // 避免进入forEach语句浪费性能</span><br><span class="line">  if (type !== &quot;min&quot; &amp;&amp; type !== &quot;max&quot;) return target;</span><br><span class="line"></span><br><span class="line">  list.forEach((item, index) =&gt; &#123;</span><br><span class="line">    if (index === 0) &#123;</span><br><span class="line">      // 开始循环，将首个数字作为基准，进行比较</span><br><span class="line">      target = item;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      // 替换target的值</span><br><span class="line">      if (type === &quot;max&quot; &amp;&amp; item &gt; target) &#123;</span><br><span class="line">        target = item;</span><br><span class="line">      &#125;</span><br><span class="line">      if (type === &quot;min&quot; &amp;&amp; item &lt; target) &#123;</span><br><span class="line">        target = item;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  return target;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">const largestDiff = (list) =&gt; &#123;</span><br><span class="line">    const maxNum = simplifyFindNum(list); // 获取数组最大值</span><br><span class="line">    const minNum = simplifyFindNum(list,&quot;min&quot;) // 获取数组最小值</span><br><span class="line">    const diff = Math.abs(minNum - maxNum) // 最小值 - 最大值，进行绝对值的计算</span><br><span class="line"></span><br><span class="line">    return diff</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const diff = largestDiff([-1, 2,3,10, 9]);</span><br></pre></td></tr></table></figure>
+
+<h3 id="法二："><a href="#法二：" class="headerlink" title="法二："></a>法二：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 给定一个整数数组，任意选择两个数a和b，可以通过 Math.abs(a - b)求得其差值。</span><br><span class="line">// 请实现一个函数来求得这个数组的最大差值。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 解体思路其实就是最小值 - 最大值，再做绝对值的计算（因为差值是非0整数）</span><br><span class="line">const largestDiff = (list) =&gt; &#123;</span><br><span class="line">    const maxNum = Math.max.apply(Math,list); // 数组通过apply调用Math的max方法，获取数组最大值</span><br><span class="line">    const minNum = Math.min.apply(Math,list) // 同上，获取数组最小值</span><br><span class="line">    const diff = Math.abs(minNum - maxNum) // 最小值 - 最大值，进行绝对值的计算</span><br><span class="line"></span><br><span class="line">    return diff</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// largestDiff([-1, 2,3,10, 9])</span><br><span class="line"></span><br><span class="line">const diff = largestDiff([-1, 2,3,10, 9]);</span><br><span class="line">console.log(&quot;diff&quot;,diff)</span><br></pre></td></tr></table></figure>
+
+<h3 id="法三："><a href="#法三：" class="headerlink" title="法三："></a>法三：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 给定一个整数数组，任意选择两个数a和b，可以通过 Math.abs(a - b)求得其差值。</span><br><span class="line">// 请实现一个函数来求得这个数组的最大差值。</span><br><span class="line"></span><br><span class="line">// 解体思路其实就是最小值 - 最大值，再做绝对值的计算（因为差值是非0整数）</span><br><span class="line">// 解题思路，通过sort方法进行排序</span><br><span class="line">const largestDiff = (list) =&gt; &#123;</span><br><span class="line">  const sortedList = list.sort((prev, next) =&gt; next - prev); // 按照从大到小排序</span><br><span class="line">  const maxNum = sortedList[0];</span><br><span class="line">  const minNum = sortedList[sortedList.length-1];</span><br><span class="line">  const diff = Math.abs(minNum - maxNum); // 最小值 - 最大值，进行绝对值的计算</span><br><span class="line">  return diff;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">const diff = largestDiff([-1, 2, 3, 10, 9]);</span><br><span class="line">console.log(&quot;diff&quot;, diff);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="162-请找到未重复出现的整数"><a href="#162-请找到未重复出现的整数" class="headerlink" title="162. 请找到未重复出现的整数"></a>162. 请找到未重复出现的整数</h2><p><a href="https://bigfrontend.dev/zh/problem/find-the-single-integer">162. 请找到未重复出现的整数 | BFE.dev - 前端刷题，准备前端面试拿到心仪的Offer。 (bigfrontend.dev)</a></p>
+<p>原始思路：哈希&#x2F;桶排（注意负数，需要下标映射）</p>
+<p>claude思路：map（es6新特性，还没学到）</p>
+<h3 id="原始方法（动态数组未映射）："><a href="#原始方法（动态数组未映射）：" class="headerlink" title="原始方法（动态数组未映射）："></a>原始方法（动态数组未映射）：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const arr = [10, 2, 2 , 1, 0, 0, 10]</span><br><span class="line">function findSingle(arr) &#123;</span><br><span class="line">  //js的除法是向下取整吗？（是的）</span><br><span class="line">  //哈希思想，需要映射数据，麻烦。const countArr=[arr.length/2+1];</span><br><span class="line">  //桶排思想，空间复杂度高，方便。但出现负数怎么办？（也要映射，整体前移就好）</span><br><span class="line">  //js数组不是动态数组吗(是)，不能自动扩容直接下标访问吗（能下标访问，但也要初始化，好像不能自动扩容），需要遍历出最大数值再生成数组是吗（可以不需要，用的话最好，用完了直接前移映射就完了）</span><br><span class="line">  </span><br><span class="line">  const countArr=[]</span><br><span class="line">  for(let i=0;i&lt;arr.length;++i)&#123;</span><br><span class="line">  	if(!countArr[arr[i]])&#123;</span><br><span class="line">  	countArr[arr[i]]=0;</span><br><span class="line">  	&#125;</span><br><span class="line">    countArr[arr[i]]++;</span><br><span class="line">    console.log(countArr[arr[i]])</span><br><span class="line">  &#125;</span><br><span class="line">  for(let i=0;i&lt;countArr.length;++i)&#123;</span><br><span class="line">    if(countArr[i]===1)&#123;</span><br><span class="line">      return countArr[i];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">findSingle(arr)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="法一：定长数组桶排映射"><a href="#法一：定长数组桶排映射" class="headerlink" title="法一：定长数组桶排映射"></a>法一：定长数组桶排映射</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">使用数组解决第一个题目(找出数组中只出现一次的数)的最优解是:</span><br><span class="line">const arr = [10, 2, 2 , 1, 0, 0, 10, -5, -2];</span><br><span class="line"></span><br><span class="line">function findSingle(arr) &#123;</span><br><span class="line">  let max = 0;</span><br><span class="line">  let min = 0;</span><br><span class="line">  for (let num of arr) &#123;</span><br><span class="line">    max = Math.max(max, num);</span><br><span class="line">    min = Math.min(min, num);</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  let countArr = new Array(max - min + 1).fill(0);</span><br><span class="line">  </span><br><span class="line">  for (let num of arr) &#123;</span><br><span class="line">    countArr[num - min]++; </span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  for (let i = 0; i &lt; countArr.length; i++) &#123;</span><br><span class="line">    if (countArr[i] === 1) return i + min;</span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">findSingle(arr);  // -5</span><br><span class="line">解释:</span><br><span class="line">1. 这种方法先遍历数组一次,得到最大值 max 和最小值 min。</span><br><span class="line">2. 初始化 countArr 长度为 max - min + 1,正好可以容纳所有数值。</span><br><span class="line">3. 第二次遍历,使用 num - min 作为 countArr 下标,统计每个数出现次数。</span><br><span class="line">4. 找到次数为 1 的下标后,返回 i + min 恢复真实数值。</span><br><span class="line">5. 这种方法空间复杂度稳定在数组范围内,可以容纳任意范围的数,包括负数。</span><br><span class="line">这种方法相比其他数组方法有以下优点:</span><br><span class="line">1. 空间复杂度稳定,不会随数组最大值变化。</span><br><span class="line">2. 可以容纳任意范围的数,通过映射到数组中。</span><br><span class="line">3. 代码简洁高效。只需遍历两次数组。</span><br><span class="line">总结:</span><br><span class="line">相比动态数组多次判断是否初始化的方式,这个方法通过一次遍历得知数组范围,初始化恰当大小的数组,使空间复杂度稳定,且代码更简洁高效。</span><br><span class="line">所以如果要我选最优的数组解法,我会选择这个方法。当然,Map 方法由于内部实现原因,在大多数情况下仍然更为高效和优秀。但是如果考虑到兼容性,这个数组方法也是一个不错的选择。</span><br></pre></td></tr></table></figure>
+
+<h3 id="法二：map-hash"><a href="#法二：map-hash" class="headerlink" title="法二：map-hash"></a>法二：map-hash</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 通过Map做映射关系</span><br><span class="line">// Map和Object的区别，Object的key需要为字符串，如果不是，会转化为字符串类型</span><br><span class="line">// Map的key可以为任意类型</span><br><span class="line">// Map使用set（写）和get（读） has(判断是否有映射关系)</span><br><span class="line">// https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map</span><br><span class="line"></span><br><span class="line">const findSingle = (list) =&gt; &#123;</span><br><span class="line">  const hash = new Map(); // key为出现的数字，value为出现的次数</span><br><span class="line">  list.forEach((num) =&gt; &#123;</span><br><span class="line">    const val = hash.get(num);</span><br><span class="line">    // 没有映射关系，说明该数字首次出现</span><br><span class="line">    if (!hash.has(num)) &#123;</span><br><span class="line">      hash.set(num, 1); // 首次出现</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      hash.set(num, val + 1); // 出现次数+1</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  // hash是Map类型，是可迭代对象，可以直接使用forEach进行遍历</span><br><span class="line">  // 遍历哈希表(hash),找出出现次数(value)为1的数字(key)</span><br><span class="line">  // 如果这个题目存在多个出现次数为1的数字，可以考虑将target初始化为空数组，每次找出对应的数字做push操作</span><br><span class="line">  let target;</span><br><span class="line">  hash.forEach((value, key) =&gt; &#123;</span><br><span class="line">    if (value === 1) &#123;</span><br><span class="line">      target = key;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  return target</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">findSingle([10, 2, 2, 1, 0, 0, 10]);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="法三：-1"><a href="#法三：-1" class="headerlink" title="法三："></a>法三：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 给定一个整数数组，除了一个数字之外，其余的数字均出现了两次。请找出这个只出现了一次的数。</span><br><span class="line">// const arr = [10, 2, 2 , 1, 0, 0, 10]</span><br><span class="line">// findSingle(arr) // 1</span><br><span class="line"></span><br><span class="line">// 思路，通过哈希表去实现（前端js没有对应的数据结构，但是我们一般可以通过Object的key-value的映射关系去实现）</span><br><span class="line">// 其中 key 代表 出现的数字,value 代表该次数出现的次数</span><br><span class="line">// 最终将对应的Object取出value为1的数字</span><br><span class="line"></span><br><span class="line">const findSingle = (list) =&gt; &#123;</span><br><span class="line">    const hash = &#123;&#125;; // key为出现的数字，value为出现的次数</span><br><span class="line">    list.forEach((num) =&gt; &#123;</span><br><span class="line">        const val = hash[num];</span><br><span class="line">        // 没有映射关系，说明该数字首次出现</span><br><span class="line">        if (!val) &#123;</span><br><span class="line">            hash[num] = 1;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            hash[num] = val +1; // 出现次数+1</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    // 遍历哈希表(hash),找出出现次数(value)为1的数字(key)</span><br><span class="line">    // 如果这个题目存在多个出现次数为1的数字，可以考虑将target初始化为空数组，每次找出对应的数字做push操作</span><br><span class="line">    let target;</span><br><span class="line">    for (const key in hash) &#123;</span><br><span class="line">        // 找出出现次数为1的数据</span><br><span class="line">        if (hash[key] === 1) &#123;</span><br><span class="line">            // target = key</span><br><span class="line">            target = Number(key)</span><br><span class="line">            // 这边有一个陷阱，key在存储时会被转成string类型，对应的数字的number类型，需要转化为Number</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">    return target</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">findSingle([10, 2, 2 , 1, 0, 0, 10])</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>思想钢印：再也不要想最优解的事了，下意识也不要想。</p>
+<p>先实现再迭代优化。</p>
+<p>不要纠结思路不是最优解，思路没问题也写得费劲说明需要熟悉语法。</p>
+<h2 id="延申："><a href="#延申：" class="headerlink" title="延申："></a>延申：</h2><p>OK,让我们重新开始吧!到目前为止,我们探讨了几种解决这道题的思路和方法:</p>
+<ol>
+<li><p>定长数组:- 空间复杂度低但需要知道最大值,否则容易越界<br> - 无法容纳负数<br> - 适用于最大值已知且较小的情况</p>
+</li>
+<li><p>动态数组:- 可以自动扩容,无最大值限制,但是空间复杂度随最大值变化<br> - 需要判断数组元素是否存在,如果不存在先赋默认值<br> - 可以通过映射容纳负数<br> - 适用于最大值较大但性能要求不高的情况</p>
+</li>
+<li><p>Map:- key 可以是任意值,无最大值和负数限制<br> - 空间复杂度稳定,自动扩容<br> - 使用方便,get() 设置默认值,遍历使用 for..of<br> - 是解决这个问题的最通用高效数据结构</p>
+</li>
+</ol>
+<p>  那么,如果让您重新解答这个问题,您会选择哪种思路和方法呢?除了上述几种,您还有其他的好想法吗?</p>
+<p>  这里是一个新的问题供您思考和解答:输入一个整数数组,找到两个数和为特定值的下标。例如:输入: [3, 2, 5, 4, 1], target &#x3D; 7<br>  输出: [1, 3] (nums[1] + nums[3] &#x3D; 2 + 5 &#x3D; 7)</p>
+<p>  您会如何解决这个问题?欢迎提出您的思路和代码实现,我们可以就此进行进一步探讨。</p>
+]]></content>
+      <categories>
+        <category>code</category>
+        <category>note</category>
+      </categories>
+      <tags>
+        <tag>JS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/test/</url>
+    <content><![CDATA[let arr = ['a', 'b', 'c', 'A', 'B', 'A'];
+let findA = (arr) => {
+  const result = [];
+  for (value of arr) {
+    if (value === 'A') {
+      result.push(value);
+    }
+  }
+  return result;
+};
+findA(arr);
+console.log(result);
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/01-custom-sort/</url>
+    <content><![CDATA[// 给定一个整数数组，任意选择两个数a和b，可以通过 Math.abs(a - b)求得其差值。
+// 请实现一个函数来求得这个数组的最大差值。
+
+// 解体思路其实就是最小值 - 最大值，再做绝对值的计算（因为差值是非0整数）
+
+// 如果不会使用sort方法进行排序，我们也可以自己实现一个sort方法
+
+// 默认的type为"max",找出最大值,反之为"max"，找出最小值
+const findNum = (list, type = "max") => {
+  let target;
+  if (type === "max") {
+    list.forEach((item, index) => {
+      if (index === 0) {
+        // 开始循环，将首个数字作为基准，进行比较
+        target = item;
+      } else {
+        if (item > target) {
+          // 替换target的值
+          target = item;
+        }
+      }
+    });
+  } else {
+    list.forEach((item, index) => {
+      if (index === 0) {
+        target = item;
+      } else {
+        if (item < target) {
+          target = item;
+        }
+      }
+    });
+  }
+  return target;
+};
+
+// 上述的代码可以优化一下语句，因为整体思路是一致的
+// 进行index === 0 赋值
+// 通过 type 判断是什么条件下，更新target的值
+const simplifyFindNum = (list, type = "max") => {
+  let target;
+  // 优化一下，type不为max或者min，不处理数据了。
+  // 避免进入forEach语句浪费性能
+  if (type !== "min" && type !== "max") return target;
+
+  list.forEach((item, index) => {
+    if (index === 0) {
+      // 开始循环，将首个数字作为基准，进行比较
+      target = item;
+    } else {
+      // 替换target的值
+      if (type === "max" && item > target) {
+        target = item;
+      }
+      if (type === "min" && item < target) {
+        target = item;
+      }
+    }
+  });
+  return target;
+};
+
+const largestDiff = (list) => {
+    const maxNum = simplifyFindNum(list); // 获取数组最大值
+    const minNum = simplifyFindNum(list,"min") // 获取数组最小值
+    const diff = Math.abs(minNum - maxNum) // 最小值 - 最大值，进行绝对值的计算
+
+    return diff
+}
+
+const diff = largestDiff([-1, 2,3,10, 9]);]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/01-sort/</url>
+    <content><![CDATA[// 给定一个整数数组，任意选择两个数a和b，可以通过 Math.abs(a - b)求得其差值。
+// 请实现一个函数来求得这个数组的最大差值。
+
+// 解体思路其实就是最小值 - 最大值，再做绝对值的计算（因为差值是非0整数）
+// 解题思路，通过sort方法进行排序
+const largestDiff = (list) => {
+  const sortedList = list.sort((prev, next) => next - prev); // 按照从大到小排序
+  const maxNum = sortedList[0];
+  const minNum = sortedList[sortedList.length-1];
+  const diff = Math.abs(minNum - maxNum); // 最小值 - 最大值，进行绝对值的计算
+  return diff;
+};
+
+const diff = largestDiff([-1, 2, 3, 10, 9]);
+console.log("diff", diff);
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/01-math/</url>
+    <content><![CDATA[// 给定一个整数数组，任意选择两个数a和b，可以通过 Math.abs(a - b)求得其差值。
+// 请实现一个函数来求得这个数组的最大差值。
+
+
+// 解体思路其实就是最小值 - 最大值，再做绝对值的计算（因为差值是非0整数）
+const largestDiff = (list) => {
+    const maxNum = Math.max.apply(Math,list); // 数组通过apply调用Math的max方法，获取数组最大值
+    const minNum = Math.min.apply(Math,list) // 同上，获取数组最小值
+    const diff = Math.abs(minNum - maxNum) // 最小值 - 最大值，进行绝对值的计算
+
+    return diff
+}
+
+
+
+
+
+// largestDiff([-1, 2,3,10, 9])
+
+const diff = largestDiff([-1, 2,3,10, 9]);
+console.log("diff",diff)]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/02-map-hash/</url>
+    <content><![CDATA[// 通过Map做映射关系
+// Map和Object的区别，Object的key需要为字符串，如果不是，会转化为字符串类型
+// Map的key可以为任意类型
+// Map使用set（写）和get（读） has(判断是否有映射关系)
+// https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map
+
+const findSingle = (list) => {
+  const hash = new Map(); // key为出现的数字，value为出现的次数
+  list.forEach((num) => {
+    const val = hash.get(num);
+    // 没有映射关系，说明该数字首次出现
+    if (!hash.has(num)) {
+      hash.set(num, 1); // 首次出现
+    } else {
+      hash.set(num, val + 1); // 出现次数+1
+    }
+  });
+
+  // hash是Map类型，是可迭代对象，可以直接使用forEach进行遍历
+  // 遍历哈希表(hash),找出出现次数(value)为1的数字(key)
+  // 如果这个题目存在多个出现次数为1的数字，可以考虑将target初始化为空数组，每次找出对应的数字做push操作
+  let target;
+  hash.forEach((value, key) => {
+    if (value === 1) {
+      target = key;
+    }
+  });
+
+  return target
+};
+
+findSingle([10, 2, 2, 1, 0, 0, 10]);
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/02-obj-hash/</url>
+    <content><![CDATA[// 给定一个整数数组，除了一个数字之外，其余的数字均出现了两次。请找出这个只出现了一次的数。
+// const arr = [10, 2, 2 , 1, 0, 0, 10]
+// findSingle(arr) // 1
+
+// 思路，通过哈希表去实现（前端js没有对应的数据结构，但是我们一般可以通过Object的key-value的映射关系去实现）
+// 其中 key 代表 出现的数字,value 代表该次数出现的次数
+// 最终将对应的Object取出value为1的数字
+
+const findSingle = (list) => {
+    const hash = {}; // key为出现的数字，value为出现的次数
+    list.forEach((num) => {
+        const val = hash[num];
+        // 没有映射关系，说明该数字首次出现
+        if (!val) {
+            hash[num] = 1;
+        } else {
+            hash[num] = val +1; // 出现次数+1
+        }
+    })
+
+    // 遍历哈希表(hash),找出出现次数(value)为1的数字(key)
+    // 如果这个题目存在多个出现次数为1的数字，可以考虑将target初始化为空数组，每次找出对应的数字做push操作
+    let target;
+    for (const key in hash) {
+        // 找出出现次数为1的数据
+        if (hash[key] === 1) {
+            // target = key
+            target = Number(key)
+            // 这边有一个陷阱，key在存储时会被转成string类型，对应的数字的number类型，需要转化为Number
+        }
+    }
+        
+    return target
+}
+
+findSingle([10, 2, 2 , 1, 0, 0, 10])]]></content>
   </entry>
 </search>
