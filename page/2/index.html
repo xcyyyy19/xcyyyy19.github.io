@@ -632,7 +632,7 @@
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.replace(&#x27;l&#x27;, &#x27;x&#x27;);   // &#x27;hexxo&#x27;</span><br></pre></td></tr></table></figure>
 
-<h3 id="4-6-6Math"><a href="#4-6-6Math" class="headerlink" title="4.6.6Math"></a>4.6.6Math</h3><h4 id="6-1（只有）静态函数"><a href="#6-1（只有）静态函数" class="headerlink" title="6.1（只有）静态函数"></a>6.1（只有）静态函数</h4><ul>
+<h2 id="4-6-6Math"><a href="#4-6-6Math" class="headerlink" title="4.6.6Math"></a>4.6.6Math</h2><h4 id="6-1（只有）静态函数"><a href="#6-1（只有）静态函数" class="headerlink" title="6.1（只有）静态函数"></a>6.1（只有）静态函数</h4><ul>
 <li><p><code>Math.abs()</code>：绝对值（负数也适用，求ab差的绝对值：Math.abs(2 - 3)）</p>
 <p>两下标之间的距离不能用a+b，要用abs（a-b），防止有负数下标</p>
 </li>
@@ -677,7 +677,7 @@
 <p>上面代码中，<code>random_str</code>函数接受一个整数作为参数，返回变量<code>ALPHABET</code>内的随机字符所组成的指定长度的字符串。</p>
 </li>
 </ul>
-<h3 id="4-6-7Date-x2F-x2F-主要了解如何创建日期-new-Date，get方法"><a href="#4-6-7Date-x2F-x2F-主要了解如何创建日期-new-Date，get方法" class="headerlink" title="4.6.7Date&#x2F;&#x2F;主要了解如何创建日期 new Date，get方法"></a>4.6.7Date&#x2F;&#x2F;主要了解如何创建日期 new Date，get方法</h3><h4 id="7-1作为普通函数"><a href="#7-1作为普通函数" class="headerlink" title="7.1作为普通函数"></a>7.1作为普通函数</h4><p>无论有没有参数，直接调用<code>Date</code>总是返回当前时间。</p>
+<h2 id="4-6-7Date-x2F-x2F-主要了解如何创建日期-new-Date，get方法"><a href="#4-6-7Date-x2F-x2F-主要了解如何创建日期-new-Date，get方法" class="headerlink" title="4.6.7Date&#x2F;&#x2F;主要了解如何创建日期 new Date，get方法"></a>4.6.7Date&#x2F;&#x2F;主要了解如何创建日期 new Date，get方法</h2><h4 id="7-1作为普通函数"><a href="#7-1作为普通函数" class="headerlink" title="7.1作为普通函数"></a>7.1作为普通函数</h4><p>无论有没有参数，直接调用<code>Date</code>总是返回当前时间。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Date()</span><br><span class="line">// &quot;Tue Dec 01 2015 09:34:43 GMT+0800 (CST)&quot;</span><br></pre></td></tr></table></figure>
 
 <h4 id="7-2作为构造函数"><a href="#7-2作为构造函数" class="headerlink" title="7.2作为构造函数"></a>7.2作为构造函数</h4><p>作为构造函数时，<code>Date</code>对象可以接受多种格式的参数，返回一个该参数对应的时间实例。</p>
@@ -713,7 +713,7 @@
 <p>这两个参数中，<code>locales</code>是一个指定所用语言的字符串，<code>options</code>是一个配置对象。下面是<code>locales</code>的例子，分别采用<code>en-US</code>和<code>zh-CN</code>语言设定。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var d = new Date(2013, 0, 1);</span><br><span class="line"></span><br><span class="line">d.toLocaleString(&#x27;en-US&#x27;) // &quot;1/1/2013, 12:00:00 AM&quot;</span><br><span class="line">d.toLocaleString(&#x27;zh-CN&#x27;) // &quot;2013/1/1 上午12:00:00&quot;</span><br><span class="line"></span><br><span class="line">d.toLocaleDateString(&#x27;en-US&#x27;) // &quot;1/1/2013&quot;</span><br><span class="line">d.toLocaleDateString(&#x27;zh-CN&#x27;) // &quot;2013/1/1&quot;</span><br><span class="line"></span><br><span class="line">d.toLocaleTimeString(&#x27;en-US&#x27;) // &quot;12:00:00 AM&quot;</span><br><span class="line">d.toLocaleTimeString(&#x27;zh-CN&#x27;) // &quot;上午12:00:00&quot;</span><br></pre></td></tr></table></figure>
 
-<h3 id="4-6-8RegExp正则-x2F-x2F-找旧笔记对比着看"><a href="#4-6-8RegExp正则-x2F-x2F-找旧笔记对比着看" class="headerlink" title="4.6.8RegExp正则&#x2F;&#x2F;找旧笔记对比着看"></a>4.6.8RegExp正则&#x2F;&#x2F;找旧笔记对比着看</h3><h3 id="4-6-9JOSN"><a href="#4-6-9JOSN" class="headerlink" title="4.6.9JOSN"></a>4.6.9JOSN</h3><h4 id="5-1格式"><a href="#5-1格式" class="headerlink" title="5.1格式"></a>5.1格式</h4><ol>
+<h2 id="4-6-8RegExp正则-x2F-x2F-找旧笔记对比着看"><a href="#4-6-8RegExp正则-x2F-x2F-找旧笔记对比着看" class="headerlink" title="4.6.8RegExp正则&#x2F;&#x2F;找旧笔记对比着看"></a>4.6.8RegExp正则&#x2F;&#x2F;找旧笔记对比着看</h2><h2 id="4-6-9JOSN"><a href="#4-6-9JOSN" class="headerlink" title="4.6.9JOSN"></a>4.6.9JOSN</h2><h4 id="9-1格式"><a href="#9-1格式" class="headerlink" title="9.1格式"></a>9.1格式</h4><ol>
 <li><p>[]  {}</p>
 <p>复合类型的值只能是数组或对象，不能是函数、正则表达式对象、日期对象。</p>
 </li>
@@ -729,7 +729,7 @@
 <li><p>数组或对象最后一个成员的后面，不能加逗号。</p>
 </li>
 </ol>
-<h4 id="5-2静态方法"><a href="#5-2静态方法" class="headerlink" title="5.2静态方法"></a>5.2静态方法</h4><ol>
+<h4 id="9-2静态方法"><a href="#9-2静态方法" class="headerlink" title="9.2静态方法"></a>9.2静态方法</h4><ol>
 <li><p>JSON.stringify	&#x2F;&#x2F;Json字符串化</p>
 <ol>
 <li><p>JSON.stringify(obj，[‘key1’,’key2’])	</p>
