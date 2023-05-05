@@ -151,6 +151,392 @@
     
     
     <article
+  id="post-前端学习笔记/【【【【【疑问解答】】】】】/JS/main"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+     
+    <div class="article-meta">
+      <a href="/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/main/" class="article-date">
+  <time datetime="2023-04-22T15:07:38.126Z" itemprop="datePublished">2023-04-22</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  // // // 一个数据里面去匹配 
+// // // 字符的匹配
+// // const text = 'hello world'
+// // const reg = /helli/
+
+// // const result = text.match(reg)
+
+// // // console.log("result",result)
+
+
+// // // 在一堆数据里面去筛选
+
+
+
+// // // 浅拷贝
+// // const shallowClone = (target) => {
+// //     const result = {};
+// //     for (let key in target) {
+// //         result[key] = target[key]
+// //     }
+
+// //     return result
+// // }
+
+
+
+// // // 深拷贝
+// // const deepClone = (target) => {   
+// //     const obj = {}
+// //     for (let key in target) {
+// //         const value = target[key];
+// //         if (isObj(target)) {
+// //             obj[key] = deepClone(value)
+// //         } else {
+// //             obj[key] = value
+// //         }
+// //     }
+
+// //     return obj
+// // }
+
+
+
+// // const list = [
+// //     {name:"zhangsan",id:1},
+// //     {name:"lisi",id:2},
+// //     {name:"wangwu",id:3},
+// //     {name:"wangwu",id:4},
+// // ]
+
+
+// // // 得分字段 score:10
+
+
+// // const getName = function(item) {
+// //     return item.name === 'wangwu'
+// // };
+
+
+// // // forEach 遍历
+
+
+// // // 判断 数组是否满足条件
+
+// // // every 所有条件满足返回true,否则返回false
+// // const everyResult= list.every(getName)
+// // console.log("everyResult",everyResult)
+
+// // // some 任一条件满足返回true，否则返回false
+// // const someResult= list.some(getName)
+// // console.log("someResult",someResult)
+
+
+// // const target = [];
+
+// // list.forEach(item => {
+// //     target.push({
+// //         ...item,
+// //         score:10
+// //     })
+// // })
+
+// // return target
+
+// // // map
+
+
+
+// // // reduce
+
+// // // 判断数据类型是否为Object
+// const isObj = (target) => Object.prototype.toString.call(target) === '[object Object]'
+
+// const deepClone = (target) => {   
+//     const obj = {}
+//     for (let key in target) {
+//         const value = target[key];
+//         debugger
+//         if (isObj(value)) {
+//             debugger
+//             obj[key] = deepClone(value)
+//         } else {
+//             debugger
+//             obj[key] = value
+//         }
+//     }
+
+//     return obj
+// }
+
+// deepClone({a:{b:10}}) 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-前端学习笔记/JS/VSCode代码/test"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+     
+    <div class="article-meta">
+      <a href="/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/test/" class="article-date">
+  <time datetime="2023-04-22T06:27:47.841Z" itemprop="datePublished">2023-04-22</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  let arr = ['a', 'b', 'c', 'A', 'B', 'A'];
+let findA = (arr) => {
+  const result = [];
+  for (value of arr) {
+    if (value === 'A') {
+      result.push(value);
+    }
+  }
+  return result;
+};
+findA(arr);
+console.log(result);
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-前端学习笔记/JS/VSCode代码/对象嵌套"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+     
+    <div class="article-meta">
+      <a href="/2023/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/%E5%AF%B9%E8%B1%A1%E5%B5%8C%E5%A5%97/" class="article-date">
+  <time datetime="2023-04-15T07:58:03.700Z" itemprop="datePublished">2023-04-15</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+  </head>
+  <body></body>
+</html>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-前端学习笔记/JS/Q4-JS-9衍生知识（es6、过滤思路、深浅拷贝的原理、debug、函数复用）"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-9%E8%A1%8D%E7%94%9F%E7%9F%A5%E8%AF%86%EF%BC%88es6%E3%80%81%E8%BF%87%E6%BB%A4%E6%80%9D%E8%B7%AF%E3%80%81%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%8E%9F%E7%90%86%E3%80%81debug%E3%80%81%E5%87%BD%E6%95%B0%E5%A4%8D%E7%94%A8%EF%BC%89/"
+    >JS学习笔记-4.9衍生知识（base gpt/答疑）</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-9%E8%A1%8D%E7%94%9F%E7%9F%A5%E8%AF%86%EF%BC%88es6%E3%80%81%E8%BF%87%E6%BB%A4%E6%80%9D%E8%B7%AF%E3%80%81%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%8E%9F%E7%90%86%E3%80%81debug%E3%80%81%E5%87%BD%E6%95%B0%E5%A4%8D%E7%94%A8%EF%BC%89/" class="article-date">
+  <time datetime="2023-04-15T03:34:47.000Z" itemprop="datePublished">2023-04-15</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line">// 一个数据里面去匹配</span><br><span class="line">// 1.字符的匹配</span><br><span class="line">const text = &#x27;hello world&#x27;;</span><br><span class="line">const reg = /helli/;</span><br><span class="line"></span><br><span class="line">const result = text.match(reg);</span><br><span class="line"></span><br><span class="line">// console.log(&quot;result&quot;,result)</span><br><span class="line"></span><br><span class="line">// 2.在一堆数据里面去筛选</span><br><span class="line"></span><br><span class="line">// 3.浅拷贝</span><br><span class="line">const shallowClone = (target) =&gt; &#123;</span><br><span class="line">  const result = &#123;&#125;;</span><br><span class="line">  for (let key in target) &#123;</span><br><span class="line">    result[key] = target[key];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return result;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// // 4.深拷贝</span><br><span class="line">// const deepClone = (target) =&gt; &#123;</span><br><span class="line">//     const obj = &#123;&#125;</span><br><span class="line">//     for (let key in target) &#123;</span><br><span class="line">//         const value = target[key];</span><br><span class="line">//         if (isObj(target)) &#123;</span><br><span class="line">//             obj[key] = deepClone(value)</span><br><span class="line">//         &#125; else &#123;</span><br><span class="line">//             obj[key] = value</span><br><span class="line">//         &#125;</span><br><span class="line">//     &#125;</span><br><span class="line"></span><br><span class="line">//     return obj</span><br><span class="line">// &#125;</span><br><span class="line"></span><br><span class="line">//5.找到复杂对象中的某几个符合的数据</span><br><span class="line">const list = [</span><br><span class="line">  &#123; name: &#x27;zhangsan&#x27;, id: 1 &#125;,</span><br><span class="line">  &#123; name: &#x27;lisi&#x27;, id: 2 &#125;,</span><br><span class="line">  &#123; name: &#x27;wangwu&#x27;, id: 3 &#125;,</span><br><span class="line">  &#123; name: &#x27;wangwu&#x27;, id: 4 &#125;,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">// 得分字段 score:10</span><br><span class="line"></span><br><span class="line">const getName = function (item) &#123;</span><br><span class="line">  return item.name === &#x27;wangwu&#x27;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// 5.1 forEach 遍历</span><br><span class="line"></span><br><span class="line">// 5.2 for of遍历，判断 数组是否满足条件</span><br><span class="line"></span><br><span class="line">//5.3 判断条件独立出来，函数复用</span><br><span class="line"></span><br><span class="line">// 5.2.1every 所有条件满足返回true,否则返回false</span><br><span class="line">const everyResult = list.every(getName);</span><br><span class="line">console.log(&#x27;everyResult&#x27;, everyResult);</span><br><span class="line"></span><br><span class="line">// 5.2.2some 任一条件满足返回true，否则返回false</span><br><span class="line">const someResult = list.some(getName);</span><br><span class="line">console.log(&#x27;someResult&#x27;, someResult);</span><br><span class="line"></span><br><span class="line">const target = [];</span><br><span class="line"></span><br><span class="line">list.forEach((item) =&gt; &#123;</span><br><span class="line">  target.push(&#123;</span><br><span class="line">    ...item,</span><br><span class="line">    score: 10,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">return target;</span><br><span class="line"></span><br><span class="line">// 5.3map</span><br><span class="line"></span><br><span class="line">// 5.4reduce</span><br><span class="line"></span><br><span class="line">// 6.深拷贝的底层原理：判断数据类型是否为Object</span><br><span class="line">const isObj = (target) =&gt;</span><br><span class="line">  Object.prototype.toString.call(target) === &#x27;[object Object]&#x27;;</span><br><span class="line"></span><br><span class="line">const deepClone = (target) =&gt; &#123;</span><br><span class="line">  const obj = &#123;&#125;;</span><br><span class="line">  for (let key in target) &#123;</span><br><span class="line">    const value = target[key];</span><br><span class="line">    debugger;</span><br><span class="line">    if (isObj(value)) &#123;</span><br><span class="line">      debugger;</span><br><span class="line">      obj[key] = deepClone(value);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      debugger;</span><br><span class="line">      obj[key] = value;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return obj;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">deepClone(&#123; a: &#123; b: 10 &#125; &#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-前端学习笔记/JS/Q4-JS-10两道题（BFE.dev）"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-10%E4%B8%A4%E9%81%93%E9%A2%98%EF%BC%88BFE.dev%EF%BC%89/"
+    >JS学习笔记-4.10两道题（base gpt/答疑/BFE网站）</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-10%E4%B8%A4%E9%81%93%E9%A2%98%EF%BC%88BFE.dev%EF%BC%89/" class="article-date">
+  <time datetime="2023-04-15T03:34:47.000Z" itemprop="datePublished">2023-04-15</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="107-找到最大的差"><a href="#107-找到最大的差" class="headerlink" title="107.找到最大的差"></a>107.找到最大的差</h2><p><a target="_blank" rel="noopener" href="https://bigfrontend.dev/zh/problem/Find-the-largest-difference">107. 找到最大的差 | BFE.dev - 前端刷题，准备前端面试拿到心仪的Offer。 (bigfrontend.dev)</a></p>
+<p>原始思路：略（还是框在C语言和Python里了，实现方法很麻烦，很多东西JS已经给包装好了可以直接用）</p>
+<h3 id="法一："><a href="#法一：" class="headerlink" title="法一："></a>法一：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">// 给定一个整数数组，任意选择两个数a和b，可以通过 Math.abs(a - b)求得其差值。</span><br><span class="line">// 请实现一个函数来求得这个数组的最大差值。</span><br><span class="line"></span><br><span class="line">// 解体思路其实就是最小值 - 最大值，再做绝对值的计算（因为差值是非0整数）</span><br><span class="line"></span><br><span class="line">// 如果不会使用sort方法进行排序，我们也可以自己实现一个sort方法</span><br><span class="line"></span><br><span class="line">// 默认的type为&quot;max&quot;,找出最大值,反之为&quot;max&quot;，找出最小值</span><br><span class="line">const findNum = (list, type = &quot;max&quot;) =&gt; &#123;</span><br><span class="line">  let target;</span><br><span class="line">  if (type === &quot;max&quot;) &#123;</span><br><span class="line">    list.forEach((item, index) =&gt; &#123;</span><br><span class="line">      if (index === 0) &#123;</span><br><span class="line">        // 开始循环，将首个数字作为基准，进行比较</span><br><span class="line">        target = item;</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        if (item &gt; target) &#123;</span><br><span class="line">          // 替换target的值</span><br><span class="line">          target = item;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    list.forEach((item, index) =&gt; &#123;</span><br><span class="line">      if (index === 0) &#123;</span><br><span class="line">        target = item;</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        if (item &lt; target) &#123;</span><br><span class="line">          target = item;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  return target;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// 上述的代码可以优化一下语句，因为整体思路是一致的</span><br><span class="line">// 进行index === 0 赋值</span><br><span class="line">// 通过 type 判断是什么条件下，更新target的值</span><br><span class="line">const simplifyFindNum = (list, type = &quot;max&quot;) =&gt; &#123;</span><br><span class="line">  let target;</span><br><span class="line">  // 优化一下，type不为max或者min，不处理数据了。</span><br><span class="line">  // 避免进入forEach语句浪费性能</span><br><span class="line">  if (type !== &quot;min&quot; &amp;&amp; type !== &quot;max&quot;) return target;</span><br><span class="line"></span><br><span class="line">  list.forEach((item, index) =&gt; &#123;</span><br><span class="line">    if (index === 0) &#123;</span><br><span class="line">      // 开始循环，将首个数字作为基准，进行比较</span><br><span class="line">      target = item;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      // 替换target的值</span><br><span class="line">      if (type === &quot;max&quot; &amp;&amp; item &gt; target) &#123;</span><br><span class="line">        target = item;</span><br><span class="line">      &#125;</span><br><span class="line">      if (type === &quot;min&quot; &amp;&amp; item &lt; target) &#123;</span><br><span class="line">        target = item;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  return target;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">const largestDiff = (list) =&gt; &#123;</span><br><span class="line">    const maxNum = simplifyFindNum(list); // 获取数组最大值</span><br><span class="line">    const minNum = simplifyFindNum(list,&quot;min&quot;) // 获取数组最小值</span><br><span class="line">    const diff = Math.abs(minNum - maxNum) // 最小值 - 最大值，进行绝对值的计算</span><br><span class="line"></span><br><span class="line">    return diff</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const diff = largestDiff([-1, 2,3,10, 9]);</span><br></pre></td></tr></table></figure>
+
+<h3 id="法二："><a href="#法二：" class="headerlink" title="法二："></a>法二：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">// 给定一个整数数组，任意选择两个数a和b，可以通过 Math.abs(a - b)求得其差值。</span><br><span class="line">// 请实现一个函数来求得这个数组的最大差值。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 解体思路其实就是最小值 - 最大值，再做绝对值的计算（因为差值是非0整数）</span><br><span class="line">const largestDiff = (list) =&gt; &#123;</span><br><span class="line">    const maxNum = Math.max.apply(Math,list); // 数组通过apply调用Math的max方法，获取数组最大值</span><br><span class="line">    const minNum = Math.min.apply(Math,list) // 同上，获取数组最小值</span><br><span class="line">    const diff = Math.abs(minNum - maxNum) // 最小值 - 最大值，进行绝对值的计算</span><br><span class="line"></span><br><span class="line">    return diff</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// largestDiff([-1, 2,3,10, 9])</span><br><span class="line"></span><br><span class="line">const diff = largestDiff([-1, 2,3,10, 9]);</span><br><span class="line">console.log(&quot;diff&quot;,diff)</span><br></pre></td></tr></table></figure>
+
+<h3 id="法三："><a href="#法三：" class="headerlink" title="法三："></a>法三：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// 给定一个整数数组，任意选择两个数a和b，可以通过 Math.abs(a - b)求得其差值。</span><br><span class="line">// 请实现一个函数来求得这个数组的最大差值。</span><br><span class="line"></span><br><span class="line">// 解体思路其实就是最小值 - 最大值，再做绝对值的计算（因为差值是非0整数）</span><br><span class="line">// 解题思路，通过sort方法进行排序</span><br><span class="line">const largestDiff = (list) =&gt; &#123;</span><br><span class="line">  const sortedList = list.sort((prev, next) =&gt; next - prev); // 按照从大到小排序</span><br><span class="line">  const maxNum = sortedList[0];</span><br><span class="line">  const minNum = sortedList[sortedList.length-1];</span><br><span class="line">  const diff = Math.abs(minNum - maxNum); // 最小值 - 最大值，进行绝对值的计算</span><br><span class="line">  return diff;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">const diff = largestDiff([-1, 2, 3, 10, 9]);</span><br><span class="line">console.log(&quot;diff&quot;, diff);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="162-请找到未重复出现的整数"><a href="#162-请找到未重复出现的整数" class="headerlink" title="162. 请找到未重复出现的整数"></a>162. 请找到未重复出现的整数</h2><p><a target="_blank" rel="noopener" href="https://bigfrontend.dev/zh/problem/find-the-single-integer">162. 请找到未重复出现的整数 | BFE.dev - 前端刷题，准备前端面试拿到心仪的Offer。 (bigfrontend.dev)</a></p>
+<p>原始思路：哈希&#x2F;桶排（注意负数，需要下标映射）</p>
+<p>claude思路：map（es6新特性，还没学到）</p>
+<h3 id="原始方法（动态数组未映射）："><a href="#原始方法（动态数组未映射）：" class="headerlink" title="原始方法（动态数组未映射）："></a>原始方法（动态数组未映射）：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">const arr = [10, 2, 2 , 1, 0, 0, 10]</span><br><span class="line">function findSingle(arr) &#123;</span><br><span class="line">  //js的除法是向下取整吗？（是的）</span><br><span class="line">  //哈希思想，需要映射数据，麻烦。const countArr=[arr.length/2+1];</span><br><span class="line">  //桶排思想，空间复杂度高，方便。但出现负数怎么办？（也要映射，整体前移就好）</span><br><span class="line">  //js数组不是动态数组吗(是)，不能自动扩容直接下标访问吗（能下标访问，但也要初始化，好像不能自动扩容），需要遍历出最大数值再生成数组是吗（可以不需要，用的话最好，用完了直接前移映射就完了）</span><br><span class="line">  </span><br><span class="line">  const countArr=[]</span><br><span class="line">  for(let i=0;i&lt;arr.length;++i)&#123;</span><br><span class="line">  	if(!countArr[arr[i]])&#123;</span><br><span class="line">  	countArr[arr[i]]=0;</span><br><span class="line">  	&#125;</span><br><span class="line">    countArr[arr[i]]++;</span><br><span class="line">    console.log(countArr[arr[i]])</span><br><span class="line">  &#125;</span><br><span class="line">  for(let i=0;i&lt;countArr.length;++i)&#123;</span><br><span class="line">    if(countArr[i]===1)&#123;</span><br><span class="line">      return countArr[i];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">findSingle(arr)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="法一：定长数组桶排映射"><a href="#法一：定长数组桶排映射" class="headerlink" title="法一：定长数组桶排映射"></a>法一：定长数组桶排映射</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">使用数组解决第一个题目(找出数组中只出现一次的数)的最优解是:</span><br><span class="line">const arr = [10, 2, 2 , 1, 0, 0, 10, -5, -2];</span><br><span class="line"></span><br><span class="line">function findSingle(arr) &#123;</span><br><span class="line">  let max = 0;</span><br><span class="line">  let min = 0;</span><br><span class="line">  for (let num of arr) &#123;</span><br><span class="line">    max = Math.max(max, num);</span><br><span class="line">    min = Math.min(min, num);</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  let countArr = new Array(max - min + 1).fill(0);</span><br><span class="line">  </span><br><span class="line">  for (let num of arr) &#123;</span><br><span class="line">    countArr[num - min]++; </span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  for (let i = 0; i &lt; countArr.length; i++) &#123;</span><br><span class="line">    if (countArr[i] === 1) return i + min;</span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">findSingle(arr);  // -5</span><br><span class="line">解释:</span><br><span class="line">1. 这种方法先遍历数组一次,得到最大值 max 和最小值 min。</span><br><span class="line">2. 初始化 countArr 长度为 max - min + 1,正好可以容纳所有数值。</span><br><span class="line">3. 第二次遍历,使用 num - min 作为 countArr 下标,统计每个数出现次数。</span><br><span class="line">4. 找到次数为 1 的下标后,返回 i + min 恢复真实数值。</span><br><span class="line">5. 这种方法空间复杂度稳定在数组范围内,可以容纳任意范围的数,包括负数。</span><br><span class="line">这种方法相比其他数组方法有以下优点:</span><br><span class="line">1. 空间复杂度稳定,不会随数组最大值变化。</span><br><span class="line">2. 可以容纳任意范围的数,通过映射到数组中。</span><br><span class="line">3. 代码简洁高效。只需遍历两次数组。</span><br><span class="line">总结:</span><br><span class="line">相比动态数组多次判断是否初始化的方式,这个方法通过一次遍历得知数组范围,初始化恰当大小的数组,使空间复杂度稳定,且代码更简洁高效。</span><br><span class="line">所以如果要我选最优的数组解法,我会选择这个方法。当然,Map 方法由于内部实现原因,在大多数情况下仍然更为高效和优秀。但是如果考虑到兼容性,这个数组方法也是一个不错的选择。</span><br></pre></td></tr></table></figure>
+
+<h3 id="法二：map-hash"><a href="#法二：map-hash" class="headerlink" title="法二：map-hash"></a>法二：map-hash</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">// 通过Map做映射关系</span><br><span class="line">// Map和Object的区别，Object的key需要为字符串，如果不是，会转化为字符串类型</span><br><span class="line">// Map的key可以为任意类型</span><br><span class="line">// Map使用set（写）和get（读） has(判断是否有映射关系)</span><br><span class="line">// https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map</span><br><span class="line"></span><br><span class="line">const findSingle = (list) =&gt; &#123;</span><br><span class="line">  const hash = new Map(); // key为出现的数字，value为出现的次数</span><br><span class="line">  list.forEach((num) =&gt; &#123;</span><br><span class="line">    const val = hash.get(num);</span><br><span class="line">    // 没有映射关系，说明该数字首次出现</span><br><span class="line">    if (!hash.has(num)) &#123;</span><br><span class="line">      hash.set(num, 1); // 首次出现</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      hash.set(num, val + 1); // 出现次数+1</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  // hash是Map类型，是可迭代对象，可以直接使用forEach进行遍历</span><br><span class="line">  // 遍历哈希表(hash),找出出现次数(value)为1的数字(key)</span><br><span class="line">  // 如果这个题目存在多个出现次数为1的数字，可以考虑将target初始化为空数组，每次找出对应的数字做push操作</span><br><span class="line">  let target;</span><br><span class="line">  hash.forEach((value, key) =&gt; &#123;</span><br><span class="line">    if (value === 1) &#123;</span><br><span class="line">      target = key;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  return target</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">findSingle([10, 2, 2, 1, 0, 0, 10]);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="法三：-1"><a href="#法三：-1" class="headerlink" title="法三："></a>法三：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">// 给定一个整数数组，除了一个数字之外，其余的数字均出现了两次。请找出这个只出现了一次的数。</span><br><span class="line">// const arr = [10, 2, 2 , 1, 0, 0, 10]</span><br><span class="line">// findSingle(arr) // 1</span><br><span class="line"></span><br><span class="line">// 思路，通过哈希表去实现（前端js没有对应的数据结构，但是我们一般可以通过Object的key-value的映射关系去实现）</span><br><span class="line">// 其中 key 代表 出现的数字,value 代表该次数出现的次数</span><br><span class="line">// 最终将对应的Object取出value为1的数字</span><br><span class="line"></span><br><span class="line">const findSingle = (list) =&gt; &#123;</span><br><span class="line">    const hash = &#123;&#125;; // key为出现的数字，value为出现的次数</span><br><span class="line">    list.forEach((num) =&gt; &#123;</span><br><span class="line">        const val = hash[num];</span><br><span class="line">        // 没有映射关系，说明该数字首次出现</span><br><span class="line">        if (!val) &#123;</span><br><span class="line">            hash[num] = 1;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            hash[num] = val +1; // 出现次数+1</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    // 遍历哈希表(hash),找出出现次数(value)为1的数字(key)</span><br><span class="line">    // 如果这个题目存在多个出现次数为1的数字，可以考虑将target初始化为空数组，每次找出对应的数字做push操作</span><br><span class="line">    let target;</span><br><span class="line">    for (const key in hash) &#123;</span><br><span class="line">        // 找出出现次数为1的数据</span><br><span class="line">        if (hash[key] === 1) &#123;</span><br><span class="line">            // target = key</span><br><span class="line">            target = Number(key)</span><br><span class="line">            // 这边有一个陷阱，key在存储时会被转成string类型，对应的数字的number类型，需要转化为Number</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">    return target</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">findSingle([10, 2, 2 , 1, 0, 0, 10])</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>思想钢印：再也不要想最优解的事了，下意识也不要想。</p>
+<p>先实现再迭代优化。</p>
+<p>不要纠结思路不是最优解，思路没问题也写得费劲说明需要熟悉语法。</p>
+<h2 id="延申："><a href="#延申：" class="headerlink" title="延申："></a>延申：</h2><p>OK,让我们重新开始吧!到目前为止,我们探讨了几种解决这道题的思路和方法:</p>
+<ol>
+<li><p>定长数组:- 空间复杂度低但需要知道最大值,否则容易越界<br> - 无法容纳负数<br> - 适用于最大值已知且较小的情况</p>
+</li>
+<li><p>动态数组:- 可以自动扩容,无最大值限制,但是空间复杂度随最大值变化<br> - 需要判断数组元素是否存在,如果不存在先赋默认值<br> - 可以通过映射容纳负数<br> - 适用于最大值较大但性能要求不高的情况</p>
+</li>
+<li><p>Map:- key 可以是任意值,无最大值和负数限制<br> - 空间复杂度稳定,自动扩容<br> - 使用方便,get() 设置默认值,遍历使用 for..of<br> - 是解决这个问题的最通用高效数据结构</p>
+</li>
+</ol>
+<p>  那么,如果让您重新解答这个问题,您会选择哪种思路和方法呢?除了上述几种,您还有其他的好想法吗?</p>
+<p>  这里是一个新的问题供您思考和解答:输入一个整数数组,找到两个数和为特定值的下标。例如:输入: [3, 2, 5, 4, 1], target &#x3D; 7<br>  输出: [1, 3] (nums[1] + nums[3] &#x3D; 2 + 5 &#x3D; 7)</p>
+<p>  您会如何解决这个问题?欢迎提出您的思路和代码实现,我们可以就此进行进一步探讨。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-前端学习笔记/JS/VSCode代码/访问函数内嵌套的对象"
   class="article article-type-post"
   itemscope
@@ -426,7 +812,7 @@
        
 <h2 itemprop="name">
   <a class="article-title" href="/2023/04/12/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-6%E6%A0%87%E5%87%86%E5%BA%93/"
-    >JS学习笔记-4.6标准库（base阮一峰/gpt ）</a> 
+    >JS学习笔记-4.6标准库（base阮一峰/claude/MDN ）</a> 
 </h2>
  
 
@@ -542,7 +928,54 @@
 
 <p>所以,总的来说,在工作中 Object.prototype 最常用于扩展内置对象、实现继承和共享方法、模拟类、以及实现通用工具方法。它让 JS 的框架和库设计变得简单高效,也使我们的代码更加优雅。</p>
 <h2 id="4-6-1小结"><a href="#4-6-1小结" class="headerlink" title="4.6.1小结"></a>4.6.1小结</h2><p>Object有的函数能继承，有的不能。但不知道怎么主动让它继承，也不知道都哪些能继承。</p>
-<h2 id="4-6-2原始类型的对象化"><a href="#4-6-2原始类型的对象化" class="headerlink" title="4.6.2原始类型的对象化"></a>4.6.2原始类型的对象化</h2><h3 id="1-三种包装对象"><a href="#1-三种包装对象" class="headerlink" title="1.三种包装对象"></a>1.三种包装对象</h3><p>Number、String、Boolean</p>
+<h2 id="4-6-2Array类型"><a href="#4-6-2Array类型" class="headerlink" title="4.6.2Array类型"></a>4.6.2Array类型</h2><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array">Array - JavaScript | MDN (mozilla.org)</a></p>
+<h3 id="1-构造函数（最好别用）"><a href="#1-构造函数（最好别用）" class="headerlink" title="1.构造函数（最好别用）"></a>1.构造函数（最好别用）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// bad</span><br><span class="line">var arr = new Array(1, 2);</span><br><span class="line"></span><br><span class="line">// good</span><br><span class="line">var arr = [1, 2];</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-静态方法"><a href="#2-静态方法" class="headerlink" title="2.静态方法"></a>2.静态方法</h3><p>Array.isArray()</p>
+<p>它可以弥补<code>typeof</code>运算符的不足。<code>typeof</code>运算符只能显示数组的类型是<code>Object</code>，而<code>Array.isArray</code>方法可以识别数组。</p>
+<h3 id="3-实例属性"><a href="#3-实例属性" class="headerlink" title="3.实例属性"></a>3.实例属性</h3><p>length</p>
+<h3 id="4-实例方法"><a href="#4-实例方法" class="headerlink" title="4.实例方法"></a>4.实例方法</h3><h4 id="valueOf-，toString"><a href="#valueOf-，toString" class="headerlink" title="valueOf()，toString()"></a>valueOf()，toString()</h4><h4 id="push-尾插，pop-尾删"><a href="#push-尾插，pop-尾删" class="headerlink" title="push()尾插，pop()尾删"></a>push()尾插，pop()尾删</h4><h4 id="shift-头删，unshift-头插"><a href="#shift-头删，unshift-头插" class="headerlink" title="shift()头删，unshift()头插"></a>shift()头删，unshift()头插</h4><p>​				1.shift()头删</p>
+<p>​						shift()方法用于删除数组的第一个元素，并返回该元素。注意，该方法会改变原数组。</p>
+<p>​						shift()方法可以遍历并清空一个数组。</p>
+<p>​						push()和shift()结合使用，就构成了“先进先出”的队列结构（queue）。</p>
+<p>​				2.unshift()头插</p>
+<p>​						用于在数组的第一个位置添加元素，并返回新的数组的长度。注意，该方法会改变原数组。</p>
+<p>​						可以接受多个参数，这些参数都会添加到目标数组头部。</p>
+<h4 id="join-符号链接"><a href="#join-符号链接" class="headerlink" title="join()符号链接"></a>join()符号链接</h4><p>​				join()方法以指定参数作为分隔符，将所有数组成员连接并返回。如果不提供参数，默认用逗号分隔。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">通过call方法，这个方法也可以用于字符串或类似数组的对象。</span><br><span class="line"></span><br><span class="line">Array.prototype.join.call(&#x27;hello&#x27;, &#x27;-&#x27;)</span><br><span class="line">// &quot;h-e-l-l-o&quot;</span><br><span class="line"></span><br><span class="line">var obj = &#123; 0: &#x27;a&#x27;, 1: &#x27;b&#x27;, length: 2 &#125;;</span><br><span class="line">Array.prototype.join.call(obj, &#x27;-&#x27;)</span><br><span class="line">// &#x27;a-b&#x27;	</span><br></pre></td></tr></table></figure>
+
+<h4 id="at-下标-访问"><a href="#at-下标-访问" class="headerlink" title="at(下标)访问"></a>at(下标)访问</h4><p>​				返回给定索引处的数组元素。接受从最后一项往回计算的负整数。</p>
+<h4 id="concat-合并"><a href="#concat-合并" class="headerlink" title="concat()合并"></a>concat()合并</h4><p>​				用于多个数组的合并。尾插，然后返回一个新数组，原数组不变。</p>
+<p>​				如果数组成员包括对象，<code>concat</code>方法返回当前数组的一个浅拷贝。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[&#x27;hello&#x27;].concat([&#x27;world&#x27;], [&#x27;!&#x27;], [&#123;a:4&#125;], 1)   </span><br><span class="line">// [&quot;hello&quot;, &quot;world&quot;, &quot;!&quot;, &#123;a:4&#125;, 1]</span><br></pre></td></tr></table></figure>
+
+<h4 id="reverse"><a href="#reverse" class="headerlink" title="reverse()"></a>reverse()</h4><p>​				用于颠倒排列数组元素，返回改变后的数组。注意，该方法将改变原数组。</p>
+<h4 id="slice-切片"><a href="#slice-切片" class="headerlink" title="slice()切片"></a>slice()切片</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.slice(start, end);</span><br></pre></td></tr></table></figure>
+
+<h4 id="splice-删除"><a href="#splice-删除" class="headerlink" title="splice()删除"></a>splice()删除</h4><p>​				用于删除原数组的一部分成员，并可以在删除的位置添加新的数组成员，返回值是被删除的元素。注意，该方法会改变原数组。</p>
+<h4 id="sort-不传参-排字典序"><a href="#sort-不传参-排字典序" class="headerlink" title="sort(不传参)排字典序"></a>sort(不传参)排字典序</h4><p>​				对数组成员进行排序。排序后，原数组将被改变。</p>
+<p>​				不是按大小排序，而是按字典排序。数值会被先转成字符串，再比较，所以<code>101</code>排在<code>11</code>的前面。</p>
+<h4 id="sort-传入函数-排数值序"><a href="#sort-传入函数-排数值序" class="headerlink" title="sort(传入函数)排数值序"></a>sort(传入函数)排数值序</h4><p>​				.sort((a, b) &#x3D;&gt; a - b)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[1, 4, 2, 6, 0, 6, 2, 6].sort((a, b) =&gt; a - b)</span><br></pre></td></tr></table></figure>
+
+<h4 id="map-传入函数-所有成员依次执行函数"><a href="#map-传入函数-所有成员依次执行函数" class="headerlink" title="map(传入函数)所有成员依次执行函数"></a>map(传入函数)所有成员依次执行函数</h4><p>​				将数组的所有成员依次传入参数函数，然后把每一次的执行结果组成一个新数组返回。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var numbers = [1, 2, 3];</span><br><span class="line"></span><br><span class="line">numbers.map(function (n) &#123;</span><br><span class="line">  return n + 1;</span><br><span class="line">&#125;);</span><br><span class="line">// [2, 3, 4]</span><br><span class="line"></span><br><span class="line">numbers</span><br><span class="line">// [1, 2, 3]</span><br></pre></td></tr></table></figure>
+
+<h4 id="forEach-传入函数-所有成员依次执行函数"><a href="#forEach-传入函数-所有成员依次执行函数" class="headerlink" title="forEach(传入函数)所有成员依次执行函数"></a>forEach(传入函数)所有成员依次执行函数</h4><p>​				与<code>map()</code>方法很相似，也是对数组的所有成员依次执行参数函数。但不返回值，只用来操作数据。</p>
+<h4 id="filter-传入函数-所有成员依次执行函数"><a href="#filter-传入函数-所有成员依次执行函数" class="headerlink" title="filter(传入函数)所有成员依次执行函数"></a>filter(传入函数)所有成员依次执行函数</h4><p>​			过滤数组成员，参数是一个函数，所有数组成员依次执行该函数，返回结果为<code>true</code>的成员组成一个新数组返回。该方法不会改变原数组。</p>
+<h4 id="some-存在，every-所有"><a href="#some-存在，every-所有" class="headerlink" title="some()存在，every()所有"></a>some()存在，every()所有</h4><p>​				判断数组成员是否符合某种条件，返回一个布尔值。</p>
+<p>​				它们接受一个函数作为参数，所有数组成员依次执行该函数。</p>
+<p>​				every方法是所有成员的返回值都是true<code>，整个</code>every<code>方法才返回</code>true<code>，否则返回</code>false。</p>
+<h4 id="reduce-，reduceRight"><a href="#reduce-，reduceRight" class="headerlink" title="reduce()，reduceRight()"></a>reduce()，reduceRight()</h4><p>​				<code>reduce()</code>方法和<code>reduceRight()</code>方法依次处理数组的每个成员，最终累计为一个值。它们的差别是，<code>reduce()</code>是从左到右处理（从第一个成员到最后一个成员），<code>reduceRight()</code>则是从右到左（从最后一个成员到第一个成员），其他完全一样。</p>
+<h4 id="indexOf-，lastIndexOf"><a href="#indexOf-，lastIndexOf" class="headerlink" title="indexOf()，lastIndexOf()"></a>indexOf()，lastIndexOf()</h4><p>​				<code>indexOf</code>方法返回给定元素在数组中第一次出现的位置，如果没有出现则返回<code>-1</code>。</p>
+<p>​				<code>lastIndexOf</code>方法返回给定元素在数组中最后一次出现的位置，如果没有出现则返回<code>-1</code>。</p>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/fill"><code>Array.prototype.fill()</code></a></p>
+<p>用静态值填充数组中从开始索引到结束索引的所有元素。</p>
+<h4 id="链式使用"><a href="#链式使用" class="headerlink" title="链式使用"></a>链式使用</h4><p>上面这些数组方法之中，有不少返回的还是数组，所以可以链式使用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var users = [</span><br><span class="line">  &#123;name: &#x27;tom&#x27;, email: &#x27;tom@example.com&#x27;&#125;,</span><br><span class="line">  &#123;name: &#x27;peter&#x27;, email: &#x27;peter@example.com&#x27;&#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">users</span><br><span class="line">.map(function (user) &#123;</span><br><span class="line">  return user.email;</span><br><span class="line">&#125;)</span><br><span class="line">.filter(function (email) &#123;</span><br><span class="line">  return /^t/.test(email);</span><br><span class="line">&#125;)</span><br><span class="line">.forEach(function (email) &#123;</span><br><span class="line">  console.log(email);</span><br><span class="line">&#125;);</span><br><span class="line">// &quot;tom@example.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p>上面代码中，先产生一个所有 Email 地址组成的数组，然后再过滤出以<code>t</code>开头的 Email 地址，最后将它打印出来。</p>
+<h2 id="4-6-3原始类型的对象化"><a href="#4-6-3原始类型的对象化" class="headerlink" title="4.6.3原始类型的对象化"></a>4.6.3原始类型的对象化</h2><h3 id="1-三种包装对象"><a href="#1-三种包装对象" class="headerlink" title="1.三种包装对象"></a>1.三种包装对象</h3><p>Number、String、Boolean</p>
 <h3 id="2-包装成对象的原因"><a href="#2-包装成对象的原因" class="headerlink" title="2.包装成对象的原因"></a>2.包装成对象的原因</h3><p>用于继承并使用Object类型中的函数。其中三者公用的是valueOf()<code>和</code>toString()。</p>
 <h4 id="2-1valueOf"><a href="#2-1valueOf" class="headerlink" title="2.1valueOf()"></a>2.1valueOf()</h4><p>返回包装对象实例对应的原始类型的值。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">new Number(123).valueOf()  // 123</span><br><span class="line">new String(&#x27;abc&#x27;).valueOf() // &quot;abc&quot;</span><br><span class="line">new Boolean(true).valueOf() // true</span><br></pre></td></tr></table></figure>
@@ -577,61 +1010,132 @@
 <p>所以,boolean 类型和 Boolean 对象的主要区别在于:- boolean 是基本数据类型,Boolean 是对象。<br>- boolean 只有 true 和 false 两个字面量,Boolean 除了 true 和 false 值外,还可以有其他属性和方法。<br>- boolean 可以直接用于条件判断,Boolean 需要调用 valueOf() 方法。但是,在大多数情况下,我们可以把 Boolean 对象当作 boolean 类型来使用,因为:- Boolean 对象在布尔表达式中会自动调用 valueOf() 方法,返回基本类型值。</p>
 <h2 id="4-6-3小结"><a href="#4-6-3小结" class="headerlink" title="4.6.3小结"></a>4.6.3小结</h2><p><strong>基于性能考虑,大多数情况下我们会使用基本类型boolean而不是Boolean对象。</strong>所以,boolean 和 Boolean的关系可以看作,boolean 是基本数据类型,Boolean 是它的对象包装形式。</p>
 <h2 id="4-6-4Number"><a href="#4-6-4Number" class="headerlink" title="4.6.4Number"></a>4.6.4Number</h2><p>只有可继承的原型函数prototype.toString（）值得一看</p>
-<h2 id="4-6-5-String"><a href="#4-6-5-String" class="headerlink" title="4.6.5.String"></a>4.6.5.String</h2><h4 id="5-1原型属性"><a href="#5-1原型属性" class="headerlink" title="5.1原型属性"></a>5.1原型属性</h4><ol>
+<h2 id="4-6-5-String"><a href="#4-6-5-String" class="headerlink" title="4.6.5.String"></a>4.6.5.String</h2><h3 id="5-1实例属性（原型属性）"><a href="#5-1实例属性（原型属性）" class="headerlink" title="5.1实例属性（原型属性）"></a>5.1实例属性（原型属性）</h3><ol>
 <li>字符串实例的length属性返回字符串的长度。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;abc&#x27;.length // 3</span><br></pre></td></tr></table></figure>
 
-<h4 id="5-2原型函数"><a href="#5-2原型函数" class="headerlink" title="5.2原型函数"></a>5.2原型函数</h4><ol>
-<li>charAt():返回指定索引处的字符,索引从 0 开始。</li>
+<h3 id="5-2实例方法（原型函数）"><a href="#5-2实例方法（原型函数）" class="headerlink" title="5.2实例方法（原型函数）"></a>5.2实例方法（原型函数）</h3><ol>
+<li><p>charAt():返回指定索引处的字符,索引从 0 开始。</p>
+<p>或当成数组，使用下标访问(这种方法是只读的，想改动这个字符就会报错)。</p>
+</li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.charAt(0);  // &#x27;h&#x27;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.charAt(0);  // &#x27;h&#x27;</span><br><span class="line">&#x27;hello&#x27;[0];			// &#x27;h&#x27;</span><br></pre></td></tr></table></figure>
 
 <ol start="2">
+<li>at():返回指定索引处的字符。接受负整数，从最后一个字符串字符开始倒数。</li>
+<li>includes():确定调用字符串是否包含 searchString。</li>
 <li>concat():连接两个或多个字符串,返回连接后的字符串。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.concat(&#x27; &#x27;, &#x27;world&#x27;);  // &#x27;hello world&#x27;</span><br></pre></td></tr></table></figure>
 
-<ol start="3">
+<ol start="5">
 <li>startsWith():检查字符串是否以指定的子字符串开头,返回 true 或 false。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.startsWith(&#x27;he&#x27;);   // true</span><br></pre></td></tr></table></figure>
 
-<ol start="4">
+<ol start="6">
 <li>endsWith():检查字符串是否以指定的子字符串结尾,返回 true 或 false。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.endsWith(&#x27;lo&#x27;);   // true</span><br></pre></td></tr></table></figure>
 
-<ol start="5">
+<ol start="7">
 <li>indexOf():返回指定子字符串首次出现的索引,如果不存在则返回 -1。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.indexOf(&#x27;l&#x27;);   // 2</span><br></pre></td></tr></table></figure>
 
-<ol start="6">
+<ol start="8">
 <li>lastIndexOf():返回指定子字符串最后一次出现的索引,如果不存在则返回 -1。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.lastIndexOf(&#x27;l&#x27;);   // 3</span><br></pre></td></tr></table></figure>
 
-<ol start="7">
-<li>slice():提取字符串的一部分,返回提取后的字符串。</li>
+<ol start="9">
+<li>slice():切片。提取字符串的一部分,返回提取后的字符串。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.slice(1, 3);   // &#x27;el&#x27;</span><br></pre></td></tr></table></figure>
 
-<ol start="8">
-<li>substring():提取字符串的一部分,返回提取后的字符串。与 slice() 类似。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.substring(1, 3);   // &#x27;el&#x27;</span><br></pre></td></tr></table></figure>
-
-<ol start="9">
-<li>split():将字符串按指定分隔符拆分成数组,返回数组。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">js</span><br><span class="line">&#x27;a-b-c&#x27;.split(&#x27;-&#x27;);   // [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]</span><br></pre></td></tr></table></figure>
-
 <ol start="10">
+<li>split():拆分。将字符串按指定分隔符拆分成数组,返回数组。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;a-b-c&#x27;.split(&#x27;-&#x27;);   // [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]</span><br></pre></td></tr></table></figure>
+
+<ol start="11">
 <li>replace():替换字符串中的指定子字符串,返回替换后的字符串。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.replace(&#x27;l&#x27;, &#x27;x&#x27;);   // &#x27;hexxo&#x27;</span><br></pre></td></tr></table></figure>
 
+<p>&#x2F;&#x2F;正则相关<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String">String - JavaScript | MDN (mozilla.org)</a></p>
+<ol start="12">
+<li><p>match()</p>
+</li>
+<li><p>matchAll()</p>
+</li>
+<li><p>replace()</p>
+</li>
+<li><p>replaceAll()</p>
+</li>
+<li><p>serach()</p>
+</li>
+</ol>
+<p>&#x2F;&#x2F;claude认为的常用方法</p>
+<ol>
+<li>String.prototype.indexOf() 和String.prototype.lastIndexOf() :用于查找字符串中的子字符串,前者从前往后,后者从后往前。</li>
+<li>String.prototype.slice() :用于提取字符串的一部分,返回一个新的字符串。</li>
+<li>String.prototype.substring() <code>:也用于提取字符串的一部分,返回一个新的字符串。和 slice 稍有不同。</code></li>
+<li>String.prototype.substr() :同样用于提取字符串的一部分,返回一个新的字符串。和 slice、substring 也有差异。</li>
+<li>String.prototype.replace() :用于替换字符串中的子字符串</li>
+<li>String.prototype.toUpperCase() <code>和</code> String.prototype.toLowerCase():用于转换字符串的大小写。</li>
+<li>String.prototype.concat() :用于连接两个或更多字符串,返回一个新字符串。&#96;</li>
+<li>String.prototype.trim() 、String.prototype.trimStart() <code>和</code> String.prototype.trimEnd():用于删除字符串开头或结尾的空格。</li>
+<li>String.prototype.charAt() :返回指定索引处的字符。</li>
+<li>String.prototype.split() :将字符串分割成子字符串数组。</li>
+<li>String.prototype.match() :将正则表达式应用于字符串,返回匹配结果。</li>
+<li>String.prototype.search() :搜索字符串中第一个匹配项的索引。</li>
+<li>String.prototype.startsWith() <code>和</code>String.prototype.endsWith() :用于判断字符串是否以某个子字符串开头或结尾。</li>
+</ol>
+<h3 id="5-3构造函数"><a href="#5-3构造函数" class="headerlink" title="5.3构造函数"></a>5.3构造函数</h3><p>不当构造函数用，当强制转换用：String(value)&#x3D;&#x3D;&#x3D;value.valueOf();返回的不是String对象而是字面量string类型。</p>
+<h3 id="5-4静态方法"><a href="#5-4静态方法" class="headerlink" title="5.4静态方法"></a>5.4静态方法</h3><p>没用</p>
+<h3 id="5-5其它es6补充"><a href="#5-5其它es6补充" class="headerlink" title="5.5其它es6补充"></a>5.5其它es6补充</h3><h4 id="1-标记变量（并替换）"><a href="#1-标记变量（并替换）" class="headerlink" title="1.标记变量（并替换）${}"></a>1.标记变量（并替换）${}</h4><ol>
+<li><p>作用：字符串连接时需要用‘’+‘’号链接，用了＄{}后，就不用了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let a = 10;</span><br><span class="line">let b = 20;</span><br><span class="line">console.log(`$&#123;a&#125;小于$&#123;b&#125;`);</span><br><span class="line">// 输出:10小于20 </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>原理</p>
+<p>相当于标记了一下，大括号里的是变量，省的被函数默认当成字符了。</p>
+</li>
+<li><p>易错点</p>
+<p>只有使用反引号,字符串插值语法才会被识别和渲染。`${a}小于${b}`</p>
+</li>
+</ol>
+<h4 id="2-忽略转义"><a href="#2-忽略转义" class="headerlink" title="2.忽略转义"></a>2.忽略转义</h4><p>String.raw()是ES6新增的一个字符串原生方法。它的作用是使转义符和${}失效。</p>
+<p>它的基本语法是:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String.raw`string` </span><br></pre></td></tr></table></figure>
+
+<p>它有以下几个值得注意的点:</p>
+<ol>
+<li>符串中的转义字符会被当成普通字符直接输出。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String.raw`String with \n`   // &quot;String with \n&quot;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>它可以解析字符串模板中${}内的表达式。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let name = &quot;Bob&quot;;</span><br><span class="line">String.raw`Hello, $&#123;name&#125;!`   // &quot;Hello, $&#123;name&#125;!&quot;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>它主要用于创建带有未转义\字符的字符串,以及在模板字符串中包含大量${expression}时,避免字符串拼接的性能开销。</li>
+<li>如果原字符串没有需要转义的字符或模板变量,使用String.raw()和普通字符串没有任何区别。例子:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String.raw`Hello\nworld!`   // &quot;Hello\nworld!&quot;  </span><br><span class="line">String.raw`Hello$&#123;name&#125;!`   // &quot;Hello$&#123;name&#125;!&quot;</span><br><span class="line"></span><br><span class="line">&quot;Hello\nworld!&quot;              // &quot;Hello </span><br><span class="line">world!&quot;</span><br><span class="line">&quot;Hello$&#123;name&#125;!&quot;              // &quot;HelloBob!&quot;</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li><h1 id="String-raw-可以和标签函数一起使用-此时会调用标签函数-并将原始字符串作为参数传入。（没看懂）"><a href="#String-raw-可以和标签函数一起使用-此时会调用标签函数-并将原始字符串作为参数传入。（没看懂）" class="headerlink" title="String.raw()可以和标签函数一起使用,此时会调用标签函数,并将原始字符串作为参数传入。（没看懂）"></a>String.raw()可以和标签函数一起使用,此时会调用标签函数,并将原始字符串作为参数传入。（没看懂）</h1>例如:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function tag(strings) &#123;</span><br><span class="line">  console.log(strings.raw[0]);</span><br><span class="line">&#125;</span><br><span class="line">tag`Hello\nworld!`   // &quot;Hello\\nworld!&quot;</span><br></pre></td></tr></table></figure>
+
+<p>总之,String.raw()是一个获取原生字符串字面量的强大方法,可以用来避免字符串解析,或在模板字符串中包含大量变量时提升性能。</p>
+<h3 id="5-6其他补充"><a href="#5-6其他补充" class="headerlink" title="5.6其他补充"></a>5.6其他补充</h3><ol>
+<li>长字符串的处理<br>1.+<br>    const longString &#x3D;<br>      “This is a very long string which needs “ +<br>      “to wrap across multiple lines because “ +<br>      “otherwise my code is unreadable.”;<br>2.<br>    const longString &#x3D;<br>      “This is a very long string which needs <br>    to wrap across multiple lines because <br>    otherwise my code is unreadable.”;</li>
+</ol>
 <h2 id="4-6-6Math"><a href="#4-6-6Math" class="headerlink" title="4.6.6Math"></a>4.6.6Math</h2><h4 id="6-1（只有）静态函数"><a href="#6-1（只有）静态函数" class="headerlink" title="6.1（只有）静态函数"></a>6.1（只有）静态函数</h4><ul>
 <li><p><code>Math.abs()</code>：绝对值（负数也适用，求ab差的绝对值：Math.abs(2 - 3)）</p>
 <p>两下标之间的距离不能用a+b，要用abs（a-b），防止有负数下标</p>
@@ -847,967 +1351,6 @@
        
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li></ul>
 
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-前端学习笔记/JS/Q4-JS-4语言基础（图灵）"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/04/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-4%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/"
-    >JS学习笔记-4.4语言基础（base图灵）</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/04/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-4%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/" class="article-date">
-  <time datetime="2023-04-10T03:34:47.000Z" itemprop="datePublished">2023-04-10</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="4-4语言基础"><a href="#4-4语言基础" class="headerlink" title="4.4语言基础"></a>4.4语言基础</h1><h2 id="4-4-1标识符"><a href="#4-4-1标识符" class="headerlink" title="4.4.1标识符"></a>4.4.1标识符</h2><p>所谓<strong>标识符</strong>，就是变量、函数、属性或函数参数的名称。标识符可以由一或多个下列字符组成：</p>
-<ul>
-<li>开头：字母、下划线或美元符$；</li>
-<li>剩下：字母数字下划线美元符。</li>
-</ul>
-<h2 id="4-4-2三种声明变量的方法"><a href="#4-4-2三种声明变量的方法" class="headerlink" title="4.4.2三种声明变量的方法"></a>4.4.2三种声明变量的方法</h2><h3 id="1-var"><a href="#1-var" class="headerlink" title="1.var"></a>1.var</h3><p>​		1.基本知识</p>
-<p>​					<strong>var作用域</strong>：函数的局部变量。</p>
-<p>​					<strong>var的冗余声明</strong>：允许，所以很有可能在冗余声明后造成脏数据问题。</p>
-<p>​					<strong>var的全局变量声明</strong>：想让let在函数里也能变成全局变量，就干脆不声明变量，直接用。比如在函数里直接写age&#x3D;30；</p>
-<p>​		2.声明提升</p>
-<p>​					var声明在后面也行，ECMAScript会自动把它提升到第一行。</p>
-<h3 id="2-let"><a href="#2-let" class="headerlink" title="2.let"></a>2.let</h3><p>​		1.基本知识</p>
-<p>​					<strong>let作用域</strong>：块级的局部变量。（块级就是for之类的也算）</p>
-<p>​					<strong>let的冗余声明</strong>：不允许。就是不能在同一个块内let  a；let a；</p>
-<p>​					<strong>let的全局变量声明</strong>：let写在全局里可以在页面生命周期内使用，但永远也不可能变成全局变量，它的类型只会是undefined。</p>
-<p>​		2.声明提升</p>
-<p>​					let不会声明提升，声明必须写在第一行。</p>
-<p>​		3.用处</p>
-<p>​					写在for循环里。</p>
-<h3 id="3-const"><a href="#3-const" class="headerlink" title="3.const"></a><strong>3.const</strong></h3><p>​		1.基本知识</p>
-<p>​					<strong>const重点</strong>：常量必须给初始值，且不能更改。</p>
-<p>​					<strong>const作用域</strong>：和let一样</p>
-<p>​					<strong>const的冗余声明</strong>：和let一样</p>
-<p>​					<strong>let的全局变量声明</strong>：和let一样	</p>
-<ol start="2">
-<li>易错点<br>const 定义的变量不能被重新赋值,但是如果是对象或数组,其内部的属性是可以被修改的。<br>const 只保证变量名的指针是固定的,指向的对象或数组的内部状态是可以被修改的。</li>
-</ol>
-<h2 id="4-4-3小结"><a href="#4-4-3小结" class="headerlink" title="4.4.3小结"></a>4.4.3小结</h2><ol>
-<li><h3 id="不使用var"><a href="#不使用var" class="headerlink" title="不使用var"></a>不使用var</h3><p>有了<code>let</code>和<code>const</code>，大多数开发者会发现自己不再需要<code>var</code>了。限制自己只使用<code>let</code>和<code>const</code>有助于提升代码质量，因为变量有了明确的作用域、声明位置，以及不变的值。</p>
-</li>
-<li><h3 id="const优先，let次之"><a href="#const优先，let次之" class="headerlink" title="const优先，let次之"></a>const优先，let次之</h3><p>使用<code>const</code>声明可以让浏览器运行时强制保持变量不变，也可以让静态代码分析工具提前发现不合法的赋值操作。因此，很多开发者认为应该优先使用<code>const</code>来声明变量，只在提前知道未来会有修改时，再使用<code>let</code>。这样可以让开发者更有信心地推断某些变量的值永远不会变，同时也能迅速发现因意外赋值导致的非预期行为。</p>
-</li>
-<li><h3 id="const有易错点"><a href="#const有易错点" class="headerlink" title="const有易错点"></a>const有易错点</h3><p>const 定义的变量不能被重新赋值,但是如果是对象或数组,其内部的属性是可以被修改的。<br>const 只保证变量名的指针是固定的,指向的对象或数组的内部状态是可以被修改的。</p>
-</li>
-</ol>
-<p>在使用<code>var</code>的时候，最常见的问题就是对迭代变量的奇特声明和修改：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for (var i = 0; i &lt; 5; ++i) &#123;</span><br><span class="line">    setTimeout(() =&gt; console.log(i), 0)</span><br><span class="line">&#125;</span><br><span class="line">// 你可能以为会输出0、1、2、3、4</span><br><span class="line">// 实际上会输出5、5、5、5、5</span><br></pre></td></tr></table></figure>
-
-<p>之所以会这样，是因为在退出循环时，迭代变量保存的是导致循环退出的值：5。在之后执行超时逻辑时，所有的<code>i</code>都是同一个变量，因而输出的都是同一个最终值。</p>
-<p>而在使用<code>let</code>声明迭代变量时，<strong>JavaScript引擎在后台会为每个迭代循环声明一个新的迭代变量</strong>。每个<code>setTimeout</code>引用的都是不同的变量实例，所以<code>console.log</code>输出的是我们期望的值，也就是循环执行过程中每个迭代变量的值。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for (let i = 0; i &lt; 5; ++i) &#123;</span><br><span class="line">    setTimeout(() =&gt; console.log(i), 0)</span><br><span class="line">&#125;</span><br><span class="line">// 会输出0、1、2、3、4</span><br></pre></td></tr></table></figure>
-
-<p>这种每次迭代声明一个独立变量实例的行为适用于所有风格的<code>for</code>循环，包括<code>for-in</code>和<code>for-of</code>循环。4.3.2标识符.</p>
-<h2 id="易错点："><a href="#易错点：" class="headerlink" title="易错点："></a>易错点：</h2><p>null：空指针</p>
-<p>NULL未声明的变量</p>
-<h2 id="4-4-4各种符号"><a href="#4-4-4各种符号" class="headerlink" title="4.4.4各种符号"></a>4.4.4各种符号</h2><h3 id="4-4-4-1字符串连接的两种方法"><a href="#4-4-4-1字符串连接的两种方法" class="headerlink" title="4.4.4.1字符串连接的两种方法"></a>4.4.4.1字符串连接的两种方法</h3><h5 id="1"><a href="#1" class="headerlink" title="1.+"></a>1.+</h5><p>​		“adf”+“asd”</p>
-<h5 id="2-x3D"><a href="#2-x3D" class="headerlink" title="2.+&#x3D;"></a>2.+&#x3D;</h5><p>​		let a&#x3D;“dfe”</p>
-<p>​		let b&#x3D;“jin”</p>
-<p>​		b+&#x3D;a</p>
-<h3 id="4-4-4-2字符串长度"><a href="#4-4-4-2字符串长度" class="headerlink" title="4.4.4.2字符串长度"></a>4.4.4.2字符串长度</h3><h5 id="1-String-length（只能用于字符串）"><a href="#1-String-length（只能用于字符串）" class="headerlink" title="1.String.length（只能用于字符串）"></a>1.String.length（只能用于字符串）</h5><p>​		(123).length不成立</p>
-<p>​		“123”.length</p>
-<h3 id="4-4-4-3字符串也能当成数组用"><a href="#4-4-4-3字符串也能当成数组用" class="headerlink" title="4.4.4.3字符串也能当成数组用"></a>4.4.4.3字符串也能当成数组用</h3><h5 id="1-string-0"><a href="#1-string-0" class="headerlink" title="1.string[0]"></a>1.string[0]</h5><p>​				let string&#x3D;“asd”</p>
-<p>​				string[0]</p>
-<p>​				》’a’</p>
-<h5 id="2-string-1"><a href="#2-string-1" class="headerlink" title="2.string[-1]"></a>2.string[-1]</h5><h5 id="3-string-n"><a href="#3-string-n" class="headerlink" title="3.string[-n]"></a>3.string[-n]</h5><h2 id="4-4-4小结"><a href="#4-4-4小结" class="headerlink" title="4.4.4小结"></a>4.4.4小结</h2><p>-*&#x2F;号，会使原始类型隐式转换成number类型</p>
-<p>也就是说加减乘除里只有加号需要注意两端变量的类型（只有加号重载了）</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 - &#x27;2&#x27; // -1</span><br><span class="line">1 * &#x27;2&#x27; // 2</span><br><span class="line">1 / &#x27;2&#x27; // 0.5</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-4-5数组"><a href="#4-4-5数组" class="headerlink" title="4.4.5数组"></a>4.4.5数组</h2><h5 id="1-多维数组"><a href="#1-多维数组" class="headerlink" title="1.多维数组"></a>1.多维数组</h5><p>​		1.声明</p>
-<p>​				const arr &#x3D; [</p>
-<p>​				  [1, 2, 3],<br>​				  [4, 5, 6],<br>​				  [7, 8, 9],<br>​				  [[10, 11, 12], 13, 14]<br>​				];</p>
-<p>​				const ourPets &#x3D; [  &#x2F;&#x2F;数组嵌套object嵌套数组</p>
-<p>​			  {<br>​			    animalType: “cat”,<br>​			    names: [<br>​			      “Meowzer”,<br>​			      “Fluffy”,<br>​			      “Kit-Cat”<br>​			    ]<br>​			  },<br>​			  {<br>                animalType: “dog”,<br>                names: [<br>​     			 “Spot”,<br>                  “Bowser”,<br>                  “Frankie”<br>​			    ]<br>​			  }<br>​			];</p>
-<p>​		2.访问</p>
-<p>​				<strong>const subarray &#x3D; arr[3];</strong><br>​				<strong>const nestedSubarray &#x3D; arr【3]【0];</strong><br>​				<strong>const element &#x3D; arr【3]【0]【1];</strong></p>
-<p>​				<strong>ourPets[0].names[1];</strong><br>​				<strong>ourPets[1].names[0];</strong></p>
-<p>​		3.操作</p>
-<p>​					3.1push尾插</p>
-<p>​								arr.push([“a”,”b”]);</p>
-<p>​					3.2pop尾删（作返回值）</p>
-<p>​								arr.pop();</p>
-<p>​					3.3shift头删（作返回值）</p>
-<p>​								arr.shift();</p>
-<p>​					3.4unshift头插</p>
-<p>​								arr.unshift();</p>
-<h2 id="4-4-5小结"><a href="#4-4-5小结" class="headerlink" title="4.4.5小结"></a>4.4.5小结</h2><p>无</p>
-<h2 id="4-4-6函数"><a href="#4-4-6函数" class="headerlink" title="4.4.6函数"></a>4.4.6函数</h2><h1 id="1-函数也可返回undefined（说明了什么？什么时候会返回这种？用于写错代码了的时候不会报错所以不用写异常处理了是么？）"><a href="#1-函数也可返回undefined（说明了什么？什么时候会返回这种？用于写错代码了的时候不会报错所以不用写异常处理了是么？）" class="headerlink" title="1.函数也可返回undefined（说明了什么？什么时候会返回这种？用于写错代码了的时候不会报错所以不用写异常处理了是么？）"></a>1.函数也可返回undefined（说明了什么？什么时候会返回这种？用于写错代码了的时候不会报错所以不用写异常处理了是么？）</h1><h2 id="4-4-7运算符"><a href="#4-4-7运算符" class="headerlink" title="4.4.7运算符"></a>4.4.7运算符</h2><p>1.等于</p>
-<p>​		&#x3D;&#x3D;</p>
-<p>​		&#x3D;&#x3D;&#x3D;</p>
-<p>2.不等于</p>
-<p>​		!&#x3D;</p>
-<p>​		!&#x3D;&#x3D;</p>
-<p>3.与或非</p>
-<p>​		&amp;&amp;   ||  ！</p>
-<p>4.大于小于</p>
-<p>​		&gt;&lt;</p>
-<p>​		注：如果是原始类型比较，那就会隐式转换成number类型</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">5 &gt; &#x27;4&#x27; // true</span><br><span class="line">// 等同于 5 &gt; Number(&#x27;4&#x27;)</span><br><span class="line">// 即 5 &gt; 4</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-4-7小结"><a href="#4-4-7小结" class="headerlink" title="4.4.7小结"></a>4.4.7小结</h2><p>&lt;&gt;号，会使原始类型隐式转换成number类型</p>
-<h2 id="4-4-8对象（键值对）"><a href="#4-4-8对象（键值对）" class="headerlink" title="4.4.8对象（键值对）"></a>4.4.8对象（键值对）</h2><h6 id="1-创建对象"><a href="#1-创建对象" class="headerlink" title="1.创建对象"></a>1.创建对象</h6><p>​		法一：字面量（花括号里放固定的值）</p>
-<p>​				可以使用数字作为属性。 </p>
-<p>​				可以省略单字字符串属性中的引号。</p>
-<p>​				有非字符串属性的话，JavaScript 会自动将它们转为字符串。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> cat = &#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Whiskers&quot;</span>,</span><br><span class="line">  <span class="string">&quot;legs&quot;</span>: <span class="number">4</span>,</span><br><span class="line">  <span class="string">&quot;tails&quot;</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="string">&quot;enemies&quot;</span>: [<span class="string">&quot;Water&quot;</span>, <span class="string">&quot;Dogs&quot;</span>]</span><br><span class="line">  <span class="attr">make</span>: <span class="string">&quot;Ford&quot;</span>,</span><br><span class="line">  <span class="number">5</span>: <span class="string">&quot;five&quot;</span>,</span><br><span class="line">  <span class="string">&quot;model&quot;</span>: <span class="string">&quot;focus&quot;</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>​		法二：new</p>
-<p>​					var  a&#x3D;new Object（）；</p>
-<p>​					a.age&#x3D;”15”;</p>
-<p>​					a.name&#x3D;”xcy”;</p>
-<p>​					a.sayHello&#x3D;function(){				&#x2F;&#x2F;sayHello方法，里面是个匿名函数（不传参的函数）</p>
-<p>​							return “hello!!!!!!!”;</p>
-<p>​					}</p>
-<p>​					console.log(a.age);</p>
-<p>​					</p>
-<p>​		法三：构造函数(封装函数，和new一起用，相当于用于继承）</p>
-<p>​					&#x2F;&#x2F;一定要用this，不然生成的多个子对象会被最后一个的值覆盖</p>
-<p>​					function    Father（uname,uage）{</p>
-<p>​									this.name&#x3D;uname;</p>
-<p>​									this.age&#x3D;uage;</p>
-<p>​									this.sayHello&#x3D;function(strHi){</p>
-<p>​												return strHi;</p>
-<p>​									}</p>
-<p>​					}</p>
-<p>​					&#x2F;&#x2F;实例化</p>
-<p>​					var son&#x3D;new Father(“xcy”,”15”);</p>
-<p>​					son.sayHello(“Hello!!”);</p>
-<p>​					son.sayHello(“Hi~”);</p>
-<h6 id="2-增加对象的新属性"><a href="#2-增加对象的新属性" class="headerlink" title="2.增加对象的新属性"></a>2.增加对象的新属性</h6><p>1.点</p>
-<p>​				ourDog.bark &#x3D; “bow-wow”;</p>
-<p>2.中括号</p>
-<p>​				ourDog[“bark”] &#x3D; “bow-wow”;</p>
-<h6 id="3-删除对象的属性"><a href="#3-删除对象的属性" class="headerlink" title="3.删除对象的属性"></a>3.删除对象的属性</h6><p>1.delete</p>
-<p>​				const ourDog &#x3D; {<br>                  “name”: “Camper”,<br>​				  “legs”: 4,<br>​				  “tails”: 1,<br>​				  “friends”: [“everything!”],<br>​				  “bark”: “bow-wow”<br>​				};</p>
-<p>​				delete ourDog.bark;</p>
-<h6 id="4-改属性"><a href="#4-改属性" class="headerlink" title="4.改属性"></a>4.改属性</h6><p>1.点</p>
-<p>​				ourDog.name &#x3D; “Happy Camper”; </p>
-<p>2.中括号</p>
-<p>​				 ourDog[“name”] &#x3D; “Happy Camper”;</p>
-<h6 id="5-查属性"><a href="#5-查属性" class="headerlink" title="5.查属性 . []"></a>5.查属性 . []</h6><p>​		2.1用.访问属性（属性名没有空格）</p>
-<p>​				const myObj &#x3D; {<br>​				  prop1: “val1”,<br>​				  prop2: “val2”<br>​				};</p>
-<p>​				const prop1val &#x3D; myObj.prop1;<br>​				const prop2val &#x3D; myObj.prop2;</p>
-<p>​		2.2用[]访问属性（属性名有空格）</p>
-<p>​				如果属性名中包含空格，就必须使用方括号表示法来获取它的属性值。</p>
-<p>​				如果属性名中包含空格，就必须使用引号（单引号或双引号）将它们包裹起来。</p>
-<p>​				const myObj &#x3D; {<br>                  “Space Name”: “Kirk”,<br>​				  “More Space”: “Spock”,<br>​				  “NoSpace”: “USS Enterprise”<br>​				};</p>
-<p>​				myObj[“Space Name”];<br>​				myObj[‘More Space’];<br>​				myObj[“NoSpace”];</p>
-<p>​		2.3用变量访问</p>
-<p>​				1.基础</p>
-<p>​					const dogs &#x3D; {<br>​					  Fido: “Mutt”,<br>​					  Hunter: “Doberman”,<br>​					  Snoopie: “Beagle”<br>​					};</p>
-<p>​					const myDog &#x3D; “Hunter”;<br>​					const myBreed &#x3D; dogs[myDog];<br>​					console.log(myBreed);</p>
-<p>​				2.复合</p>
-<p><img src="../markdown-img/Q4-JS-4语言基础（图灵）.assets\image-20230414163952811.png" alt="image-20230414163952811" style="zoom:33%;" /><img src="../markdown-img/Q4-JS-4语言基础（图灵）.assets\image-20230414174937591.png" alt="image-20230414174937591" style="zoom:50%;" /></p>
-<p><img src="../markdown-img/Q4-JS-4语言基础（图灵）.assets\image-20230414164428406.png" alt="image-20230414164428406" style="zoom:50%;" /><img src="../markdown-img/Q4-JS-4语言基础（图灵）.assets\image-20230414173434503.png" alt="image-20230414173434503" style="zoom:50%;" /></p>
-<p>​								</p>
-<h6 id="6-查嵌套对象的属性"><a href="#6-查嵌套对象的属性" class="headerlink" title="6.查嵌套对象的属性"></a>6.查嵌套对象的属性</h6><p>​		const ourStorage &#x3D; </p>
-<p>​		{<br>​		  “desk”: </p>
-<p>​			  {<br>​		   		 “drawer”: “stapler”<br>​		  	},<br>​		  “cabinet”: </p>
-<p>​			{<br>           	 “top drawer”:</p>
-<p>​						 {<br>                              “folder1”: “a file”,<br>                              “folder2”: <strong>“secrets”</strong><br>                        },<br>                “bottom drawer”: “soda”<br>              }<br>​		};</p>
-<p>​		<strong>ourStorage.cabinet[“top drawer”].folder2;</strong></p>
-<h6 id="7-复杂对象举例（JS的糅杂数据结构）"><a href="#7-复杂对象举例（JS的糅杂数据结构）" class="headerlink" title="7.复杂对象举例（JS的糅杂数据结构）"></a>7.复杂对象举例（JS的糅杂数据结构）</h6><p>const ourMusic &#x3D; [<br>  {<br>    “artist”: “Daft Punk”,<br>    “title”: “Homework”,<br>    “release_year”: 1997,<br>    “formats”: [<br>      “CD”,<br>      “Cassette”,<br>      “LP”<br>    ],<br>    “gold”: true<br>  }<br>];</p>
-<p><strong>提示：</strong>数组中有多个 JSON 对象的时候，对象与对象之间要用逗号隔开。</p>
-<h6 id="8-判断对象是否有指定属性"><a href="#8-判断对象是否有指定属性" class="headerlink" title="8.判断对象是否有指定属性"></a>8.判断对象是否有指定属性</h6><p>1.方法</p>
-<p>​		.hasOwnProperty(propname)</p>
-<p>2.举例</p>
-<p>​		myObj.hasOwnProperty(“top”);<br>​		myObj.hasOwnProperty(“middle”);</p>
-<h6 id="9-对象遍历for-in"><a href="#9-对象遍历for-in" class="headerlink" title="9.对象遍历for  in"></a>9.对象遍历for  in</h6><p>1.取属性名（而非整个属性）</p>
-<p>​		for(var k in son){</p>
-<p>​		console.log（k）;</p>
-<p>​		}</p>
-<p>2.取属性值(只能用【】不能用   .    )</p>
-<p>​		console.log（k.name);</p>
-<h3 id="4-4-8小结"><a href="#4-4-8小结" class="headerlink" title="4.4.8小结"></a>4.4.8小结</h3><p>1.对象之间赋值是引用的  </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let a = new Object();  </span><br><span class="line">let b = a;                //则b===a（地址完全一样）。</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="4-4-9其它"><a href="#4-4-9其它" class="headerlink" title="4.4.9其它"></a>4.4.9其它</h3><h4 id="1-随机数"><a href="#1-随机数" class="headerlink" title="1.随机数"></a>1.随机数</h4><p>​	1.随机小数[0,1)</p>
-<p>​			let a&#x3D;Math.random();</p>
-<p>​	2.向下取整</p>
-<p>​			Math.floor(a) ；</p>
-<p>​	3.生成某范围内的随机数</p>
-<p>​			Math.floor(Math.random() * (myMax - myMin + 1) + myMin)；</p>
-<h4 id="2-递归"><a href="#2-递归" class="headerlink" title="2.递归"></a>2.递归</h4><p>​	1.</p>
-<p>​	2.</p>
-<p>​	3.</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-前端学习笔记/JS/Q4-JS-3脚本加载基础（图灵）"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/04/09/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-3%E8%84%9A%E6%9C%AC%E5%8A%A0%E8%BD%BD%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/"
-    >JS学习笔记-4.3脚本加载（base图灵）</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/04/09/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-3%E8%84%9A%E6%9C%AC%E5%8A%A0%E8%BD%BD%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/" class="article-date">
-  <time datetime="2023-04-09T03:34:47.000Z" itemprop="datePublished">2023-04-09</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="4-3脚本的加载时机"><a href="#4-3脚本的加载时机" class="headerlink" title="4.3脚本的加载时机"></a>4.3脚本的加载时机</h1><h2 id="4-3-1script标签"><a href="#4-3-1script标签" class="headerlink" title="4.3.1script标签"></a>4.3.1script标签</h2><h3 id="1-属性"><a href="#1-属性" class="headerlink" title="1.属性"></a>1.属性</h3><p>​	1.crossorigin：可选。</p>
-<p>​		配置相关请求的CORS（跨源资源共享）设置。默认不使用CORS。	</p>
-<ul>
-<li>​				crossorigin&#x3D;  “anonymous”配置文件请求不必设置凭据标志。</li>
-<li>​				crossorigin&#x3D;”use-credentials”设置凭据 标志，意味着出站请求会包含凭据。</li>
-</ul>
-<p>​	2.integrity：可选。</p>
-<p>​			允许比对加密签名以验证子资源完整性。用于确保中介网没有恶意篡改。</p>
-<p>​	3.async：异步执行脚本, 可选。</p>
-<p>​			表示立即开始下载脚本文件，但不会阻止其他资源的下载（如图片、CSS 等），也不会等待页面完全加载完毕</p>
-<p>​			与<code>defer</code>不同的是，标记为<code>async</code>的脚本<strong>并不保证能按照它们出现的次序执行</strong>。</p>
-<p>​			因此，该属性常用于不需要等待页面加载完毕就可以立即执行的脚本。</p>
-<p>​	4.defer：可选。</p>
-<p>​			表示<strong>外部脚本</strong>可以延迟到文档完全被解析和显示之后再执行。</p>
-<p>​			因此，该属性常用于，我们想要延迟脚本的执行的情况。</p>
-<p>5.举例</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">3.async实例</span><br><span class="line">    &lt;h1&gt;async 示例&lt;/h1&gt;</span><br><span class="line">    &lt;script src=&quot;./example.js&quot; async&gt;&lt;/script&gt;</span><br><span class="line">    &lt;p&gt;此段文字不受脚本影响，可瞬间加载。&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">由于 async 属性的作用，浏览器会立即下载该 JavaScript 文件，并在下载完成后会立即执行其中的代码。同时，页面内容也会立即显示出来，而不必等待 JavaScript 文件的下载和执行。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">4.defer实例</span><br><span class="line">    &lt;h1&gt;defer 示例&lt;/h1&gt;</span><br><span class="line">    &lt;script src=&quot;./example.js&quot; defer&gt;&lt;/script&gt;</span><br><span class="line">    &lt;p&gt;此段文字受脚本影响，需要等待脚本完成执行后才能完全加载。&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">由于 defer 属性的作用，浏览器会延迟 JavaScript 文件的执行，直到页面完全加载完毕并且 JavaScript 文件下载完成后才会执行其中的代码。在执行完脚本后，页面内容也会完全显示出来。需要注意的是，如果有多个带有 defer 属性的脚本文件，它们会按照它们在文档中出现的顺序依次执行。</span><br><span class="line"></span><br><span class="line">综上所述，async 和 defer 属性可以用来控制 JavaScript 文件的下载和执行时间，从而优化页面加载速度和用户体验。</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-3-2动态加载脚本（未细看）"><a href="#4-3-2动态加载脚本（未细看）" class="headerlink" title="4.3.2动态加载脚本（未细看）"></a>4.3.2动态加载脚本（未细看）</h2><h3 id="1-本质"><a href="#1-本质" class="headerlink" title="1.本质"></a>1.本质</h3><p>因为JavaScript可以使用DOM API，所以通过向DOM中动态添加<code>script</code>元素同样可以加载指定的脚本。只要创建一个<code>script</code>元素并将其添加到DOM即可。</p>
-<h3 id="2-实例"><a href="#2-实例" class="headerlink" title="2.实例"></a>2.实例</h3><p>JavaScript 代码可以通过创建 script 元素并将其添加到 DOM 中的方式来加载脚本。以下是一个示例：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码// 创建一个 script 元素</span><br><span class="line">let script = document.createElement(&#x27;script&#x27;);</span><br><span class="line">// 设置该 script 元素要加载的 JavaScript 脚本文件路径</span><br><span class="line">script.src = &#x27;gibberish.js&#x27;;</span><br><span class="line">// 将创建的 script 元素添加到 head 元素中</span><br><span class="line">document.head.appendChild(script);</span><br></pre></td></tr></table></figure>
-
-<p>这段代码首先使用 <code>document.createElement()</code> 方法创建一个 <code>script</code> 元素，然后将要加载的 JavaScript 文件路径设置为 <code>script.src</code> 属性的值，并将创建的 <code>script</code> 元素添加到了 <code>head</code> 元素中。</p>
-<p>需要注意的是，默认情况下以这种方式创建的 <code>script</code> 元素都是以异步方式加载的，相当于添加了 <code>async</code> 属性。这意味着，当执行到上述代码时，浏览器会立即开始下载指定的 JavaScript 文件，但不会阻止其他资源（如图片、CSS 等）的下载，也不会等待页面内容完全加载完毕。</p>
-<p>如果要统一动态脚本的加载行为，可以明确设置为同步加载。在上述示例代码中，只需要为创建的 <code>script</code> 元素设置 <code>async</code> 属性的值为 <code>false</code> 即可：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">javascript复制代码// 创建一个 script 元素</span><br><span class="line">let script = document.createElement(&#x27;script&#x27;);</span><br><span class="line">// 设置该 script 元素要加载的 JavaScript 脚本文件路径</span><br><span class="line">script.src = &#x27;gibberish.js&#x27;;</span><br><span class="line">// 明确设置该 script 元素以同步方式加载</span><br><span class="line">script.async = false;</span><br><span class="line">// 将创建的 script 元素添加到 head 元素中</span><br><span class="line">document.head.appendChild(script);</span><br></pre></td></tr></table></figure>
-
-<p>需要注意的是，以这种方式获取的资源对浏览器预加载器是不可见的，这意味着它们在资源获取队列中的优先级比较低。如果想要让预加载器知道这些动态请求的文件存在，可以在文档头部显式声明它们：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">html复制代码&lt;!-- 显式声明要预加载的 JavaScript 文件 --&gt;</span><br><span class="line">&lt;link rel=&quot;preload&quot; href=&quot;gibberish.js&quot;&gt;</span><br></pre></td></tr></table></figure>
-
-<p>在上述示例代码中，使用 <code>rel</code> 属性值为 <code>preload</code> 来声明该文件是要预加载的，<code>href</code> 属性指定要加载的文件路径。</p>
-<p>总之，通过动态创建 <code>script</code> 标签并将其添加到 DOM 中的方式来加载 JavaScript 脚本，可以灵活地控制 JavaScript 的加载时间，提高页面性能。但需要注意的是，如果使用异步加载，可能会影响页面其他资源的下载和渲染，而如果使用同步加载，则可能会影响页面的加载速度。因此，需要根据具体情况进行权衡和选择。</p>
-<h2 id="4-3-3弱类型进行转换"><a href="#4-3-3弱类型进行转换" class="headerlink" title="4.3.3弱类型进行转换"></a>4.3.3弱类型进行转换</h2><p>​		JS是弱类型，想要类型转换不用强制类型转换</p>
-<p>​		var  a&#x3D;“asdf”；</p>
-<p>​		a&#x3D;100；&#x2F;&#x2F;a由string类型转换为number类型。</p>
-<h2 id="4-3-4小结"><a href="#4-3-4小结" class="headerlink" title="4.3.4小结"></a>4.3.4小结</h2><p>JavaScript是通过<code>&lt;script&gt;</code>元素插入到HTML页面中的。这个元素可用于把JavaScript代码嵌入到HTML页面中，跟其他标记混合在一起，也可用于引入保存在外部文件中的JavaScript。本章的重点可以总结如下。</p>
-<ul>
-<li>要包含外部JavaScript文件，必须将<code>src</code>属性设置为要包含文件的URL。文件可以跟网页在同一台服务器上，也可以位于完全不同的域。</li>
-<li>所有<code>&lt;script&gt;</code>元素会依照它们在网页中出现的次序被解释。在不使用<code>defer</code>和<code>async</code>属性的情况下，包含在<code>&lt;script&gt;</code>元素中的代码必须严格按次序解释。</li>
-<li>对不推迟执行的脚本，浏览器必须解释完位于<code>&lt;script&gt;</code>元素中的代码，然后才能继续渲染页面的剩余部分。为此，通常应该把<code>&lt;script&gt;</code>元素放到页面末尾，介于主内容之后及<code>&lt;/body&gt;</code>标签之前。</li>
-<li>可以使用<code>defer</code>属性把脚本推迟到文档渲染完毕后再执行。推迟的脚本原则上按照它们被列出的次序执行。</li>
-<li>可以使用<code>async</code>属性表示脚本不需要等待其他脚本，同时也不阻塞文档渲染，即异步加载。异步脚本不能保证按照它们在页面中出现的次序执行。</li>
-<li>通过使用<code>&lt;noscript&gt;</code>元素，可以指定在浏览器不支持脚本时显示的内容。如果浏览器支持并启用脚本，则<code>&lt;noscript&gt;</code>元素中的任何内容都不会被渲染。</li>
-</ul>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-前端学习笔记/JS/Q4-JS-2标准库（mooc）"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/04/08/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-2%E6%A0%87%E5%87%86%E5%BA%93%EF%BC%88mooc%EF%BC%89/"
-    >JS学习笔记-4.2JS标准库（base mooc）</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/04/08/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-2%E6%A0%87%E5%87%86%E5%BA%93%EF%BC%88mooc%EF%BC%89/" class="article-date">
-  <time datetime="2023-04-08T03:34:47.000Z" itemprop="datePublished">2023-04-08</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="3-2JS标准库（mooc）"><a href="#3-2JS标准库（mooc）" class="headerlink" title="3.2JS标准库（mooc）"></a>3.2JS标准库（mooc）</h1><h2 id="1-Object对象"><a href="#1-Object对象" class="headerlink" title="1.Object对象"></a>1.Object对象</h2><p><a target="_blank" rel="noopener" href="https://wangdoc.com/javascript/stdlib/object">Object 对象 - JavaScript 教程 - 网道 (wangdoc.com)</a></p>
-<ol>
-<li>Object() 是用来创建一个新的对象的构造函数；</li>
-<li>Object.keys() 和 Object.getOwnPropertyNames() 是用来获取对象属性名的方法；</li>
-<li>Object.prototype.toString() 是判断数据类型的重要方法；</li>
-<li>Object.prototype.hasOwnProperty() 可以用来判断一个对象是否包含指定的属性。</li>
-</ol>
-<p>需要注意的是，Object.keys()和Object.getOwnPropertyNames()这两个方法虽然类似，但是在获取对象属性名时有一些不同的地方。</p>
-<h2 id="2-属性描述对象"><a href="#2-属性描述对象" class="headerlink" title="2.属性描述对象"></a>2.属性描述对象</h2><p><a target="_blank" rel="noopener" href="https://wangdoc.com/javascript/stdlib/attributes">属性描述对象 - JavaScript 教程 - 网道 (wangdoc.com)</a></p>
-<ol>
-<li><p>Object.getOwnPropertyDescriptor() 获取对象属性的描述符，并返回一个包含属性信息的对象；</p>
-<p>通常在需要了解或控制属性的特性（例如是否可枚举、可写、可配置）时使用。</p>
-</li>
-<li><p>Object.getOwnPropertyNames() 返回一个由一个对象自己拥有的属性名称组成的数组，不包括继承的属性名称；</p>
-<p>通常用于遍历对象的属性。</p>
-</li>
-<li><p>Object.defineProperty() 给对象添加新属性或者修改已存在属性并返回修改后的对象；</p>
-<p>通常在需要控制属性的一些特性时使用。</p>
-</li>
-<li><p>Object.defineProperties() 批量添加属性或修改已存在属性并返回修改后的对象；</p>
-<p>通常用于一次性操作多个属性。</p>
-</li>
-<li><p>Object.prototype.propertyIsEnumerable() 判断对象的某个属性是否可枚举，返回一个布尔值；</p>
-<p>通常用于判断对象的属性是否可以通过 for…in 循环枚举出来。</p>
-</li>
-<li><p>value等元属性 属性描述符对象中的 value、get 和 set 分别表示属性的值、getter 函数和 setter 函数；</p>
-<p>通常用于控制属性的访问和赋值行为。</p>
-</li>
-<li><p>Object.preventExtensions() 禁止一个对象添加新属性并返回原对象；</p>
-<p>通常在需要冻结一个对象时使用。</p>
-</li>
-<li><p>Object.isExtensible() 判断一个对象是否可扩展，返回一个布尔值；</p>
-<p>通常用于判断对象是否可以添加新属性。</p>
-</li>
-<li><p>Object.seal() 让一个对象不可扩展并将其所有属性的 configurable 特性设置为 false；</p>
-<p>通常用于保护对象，防止意外修改其属性。</p>
-</li>
-<li><p>Object.isSealed() 判断一个对象是否被封闭，返回一个布尔值；</p>
-<p>通常用于判断对象是否可以添加或删除属性。</p>
-</li>
-<li><p>Object.freeze() 冻结一个对象并将其所有属性的 writable、configurable 特性都设置为 false；</p>
-<p>通常用于保护对象，防止任何修改。</p>
-</li>
-<li><p>Object.isFrozen() 判断一个对象是否被冻结，返回一个布尔值；</p>
-<p>通常用于判断对象是否可以被修改。</p>
-</li>
-</ol>
-<p>这些方法在前端和 Node.js 开发中经常用得到。例如在 React 中，通过 Object.freeze() 冻结组件的 props 和 state 属性，防止意外修改；在 Vue.js 中，则通过 Object.defineProperty() 和 Object.defineProperties() 来实现双向绑定等功能。这些方法使用方便灵活，但需要注意不同方法的使用场景和属性特性，以避免出现意外错误。</p>
-<ol>
-<li>Object.getOwnPropertyDescriptor() - 获取一个对象上指定属性的描述符</li>
-</ol>
-<p>该方法用于获取一个对象上指定属性的描述符。返回一个包含获取的描述符属性的对象。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123; <span class="attr">name</span>: <span class="string">&#x27;Tom&#x27;</span>, <span class="attr">age</span>: <span class="number">20</span> &#125;</span><br><span class="line"><span class="keyword">const</span> descriptor = <span class="title class_">Object</span>.<span class="title function_">getOwnPropertyDescriptor</span>(obj, <span class="string">&#x27;name&#x27;</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(descriptor)</span><br><span class="line"><span class="comment">// 输出: &#123; value: &#x27;Tom&#x27;, writable: true, enumerable: true, configurable: true &#125;</span></span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>Object.getOwnPropertyNames() - 获取一个对象的所有属性名（包括不可遍历的属性名）</li>
-</ol>
-<p>该方法用于获取一个对象的所有属性名，返回一个数组，包括不可遍历的属性名。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123; <span class="attr">name</span>: <span class="string">&#x27;Tom&#x27;</span>, <span class="attr">age</span>: <span class="number">20</span> &#125;</span><br><span class="line"><span class="keyword">const</span> propertyNames = <span class="title class_">Object</span>.<span class="title function_">getOwnPropertyNames</span>(obj)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(propertyNames)</span><br><span class="line"><span class="comment">// 输出: [&quot;name&quot;, &quot;age&quot;]</span></span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>Object.defineProperty() - 给一个对象定义一个新属性</li>
-</ol>
-<p>该方法用于给一个对象定义一个新属性。接收三个参数：对象obj、定义的属性名和属性描述符descriptor。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;&#125;</span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">defineProperty</span>(obj, <span class="string">&#x27;name&#x27;</span>, &#123;</span><br><span class="line">  <span class="attr">value</span>: <span class="string">&#x27;Tom&#x27;</span>,</span><br><span class="line">  <span class="attr">writable</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">enumerable</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">configurable</span>: <span class="literal">true</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj.<span class="property">name</span>) <span class="comment">// 输出: Tom</span></span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>Object.defineProperties() - 给对象定义多个属性</li>
-</ol>
-<p>该方法用于给一个对象定义多个属性。接收两个参数：对象obj和一个包含属性名及对应属性描述符的对象。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;&#125;</span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">defineProperties</span>(obj, &#123;</span><br><span class="line">  <span class="attr">name</span>: &#123;</span><br><span class="line">    <span class="attr">value</span>: <span class="string">&#x27;Tom&#x27;</span>,</span><br><span class="line">    <span class="attr">writable</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">enumerable</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">configurable</span>: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">age</span>: &#123;</span><br><span class="line">    <span class="attr">value</span>: <span class="number">20</span>,</span><br><span class="line">    <span class="attr">writable</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">enumerable</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">configurable</span>: <span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj)</span><br><span class="line"><span class="comment">// 输出: &#123; name: &quot;Tom&quot;, age: 20 &#125;</span></span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>Object.prototype.propertyIsEnumerable() - 判断一个属性是否可枚举</li>
-</ol>
-<p>该方法用于判断一个对象上的属性是否可以被枚举。返回一个布尔值。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123; <span class="attr">name</span>: <span class="string">&#x27;Tom&#x27;</span>, <span class="attr">age</span>: <span class="number">20</span> &#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj.<span class="title function_">propertyIsEnumerable</span>(<span class="string">&#x27;name&#x27;</span>)) <span class="comment">// 输出: true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj.<span class="title function_">propertyIsEnumerable</span>(<span class="string">&#x27;toString&#x27;</span>)) <span class="comment">// 输出: false</span></span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>value等元属性 - 改变属性的描述符</li>
-</ol>
-<p>描述符包括（value，writable，enumerable，configurable），是属性对象的一组元属性。可以使用Object.defineProperty()或Object.defineProperties()方法更改元属性描述符。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;&#125;</span><br><span class="line"><span class="keyword">const</span> descriptor = &#123;</span><br><span class="line">  <span class="attr">value</span>: <span class="string">&#x27;Tom&#x27;</span>,</span><br><span class="line">  <span class="attr">writable</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">enumerable</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">configurable</span>: <span class="literal">false</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">defineProperty</span>(obj, <span class="string">&#x27;name&#x27;</span>, descriptor)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj.<span class="property">name</span>) <span class="comment">// 输出: Tom</span></span><br><span class="line">descriptor.<span class="property">value</span> = <span class="string">&#x27;Jerry&#x27;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj.<span class="property">name</span>) <span class="comment">// 输出: Tom，由于writable为false，所以值没有被改变</span></span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">freeze</span>(descriptor)</span><br><span class="line">descriptor.<span class="property">value</span> = <span class="string">&#x27;Jerry&#x27;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj.<span class="property">name</span>) <span class="comment">// 输出: Tom，由于value被冻结，所以值没有被改变</span></span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>Object.preventExtensions() - 防止向一个对象添加新属性</li>
-</ol>
-<p>该方法用于防止向一个对象添加新属性。返回修改后的对象。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123; <span class="attr">name</span>: <span class="string">&#x27;Tom&#x27;</span>, <span class="attr">age</span>: <span class="number">20</span> &#125;</span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">preventExtensions</span>(obj)</span><br><span class="line">obj.<span class="property">gender</span> = <span class="string">&#x27;male&#x27;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj.<span class="property">gender</span>) <span class="comment">// 输出: undefined，由于已经预防拓展，gender属性没有被添加</span></span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>Object.isExtensible() - 判断一个对象是否可以拓展</li>
-</ol>
-<p>该方法用于判断一个对象是否可以拓展。返回一个布尔值。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123; <span class="attr">name</span>: <span class="string">&#x27;Tom&#x27;</span>, <span class="attr">age</span>: <span class="number">20</span> &#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">isExtensible</span>(obj)) <span class="comment">// 输出: true</span></span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">preventExtensions</span>(obj)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">isExtensible</span>(obj)) <span class="comment">// 输出: false</span></span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>Object.seal() - 密封一个对象，防止添加和删除属性</li>
-</ol>
-<p>该方法用于密封一个对象，即防止向一个对象添加和删除属性。返回修改后的对象。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123; <span class="attr">name</span>: <span class="string">&#x27;Tom&#x27;</span>, <span class="attr">age</span>: <span class="number">20</span> &#125;</span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">seal</span>(obj)</span><br><span class="line">obj.<span class="property">gender</span> = <span class="string">&#x27;male&#x27;</span></span><br><span class="line"><span class="keyword">delete</span> obj.<span class="property">age</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj)</span><br><span class="line"><span class="comment">// 输出: &#123; name: &quot;Tom&quot;, age: 20 &#125;，由于已经被封闭，gender属性没有被添加，age属性没有被删除</span></span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>Object.isSealed() - 判断一个对象是否被密封</li>
-</ol>
-<p>该方法用于判断一个对象是否被密封。返回一个布尔值。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123; <span class="attr">name</span>: <span class="string">&#x27;Tom&#x27;</span>, <span class="attr">age</span>: <span class="number">20</span> &#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">isSealed</span>(obj)) <span class="comment">// 输出: false</span></span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">seal</span>(obj)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">isSealed</span>(obj)) <span class="comment">// 输出: true</span></span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>Object.freeze() - 冻结一个对象，防止添加、删除和更改属性</li>
-</ol>
-<p>该方法用于冻结一个对象，即防止向一个对象添加、删除、更改属性。返回修改后的对象。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123; <span class="attr">name</span>: <span class="string">&#x27;Tom&#x27;</span>, <span class="attr">age</span>: <span class="number">20</span> &#125;</span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">freeze</span>(obj)</span><br><span class="line">obj.<span class="property">gender</span> = <span class="string">&#x27;male&#x27;</span></span><br><span class="line"><span class="keyword">delete</span> obj.<span class="property">age</span></span><br><span class="line">obj.<span class="property">name</span> = <span class="string">&#x27;Jerry&#x27;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj)</span><br><span class="line"><span class="comment">// 输出: &#123; name: &quot;Tom&quot;, age: 20 &#125;，由于已经被冻结，gender属性没有被添加，age属性没有被删除，name属性没有被更改</span></span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>Object.isFrozen() - 判断一个对象是否被冻结</li>
-</ol>
-<p>该方法用于判断一个对象是否被冻结。返回一个布尔值。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123; <span class="attr">name</span>: <span class="string">&#x27;Tom&#x27;</span>, <span class="attr">age</span>: <span class="number">20</span> &#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">isFrozen</span>(obj)) <span class="comment">// 输出: false</span></span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">freeze</span>(obj)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">isFrozen</span>(obj)) <span class="comment">// 输出: true</span></span><br></pre></td></tr></table></figure>
-
-<p>需要注意的是，Object.freeze()不仅会把属性的writable特性设置为false，还会把configurable特性设置为false，因此不能再通过Object.defineProperty()方法修改或删除现有属性。</p>
-<h2 id="3-Array数组对象"><a href="#3-Array数组对象" class="headerlink" title="3.Array数组对象"></a>3.Array数组对象</h2><ol>
-<li><p>构造函数 通过构造函数创建对象实例，由于 JS 中函数也是对象，因此也可以</p>
-<p>为函数添加属性或方法。</p>
-</li>
-<li><p>静态方法 直接通过类（构造函数）调用的方法，而非实例方法，</p>
-<p>用于对类进行操作或返回特定信息。</p>
-</li>
-<li><p>Array.isArray() 静态方法，判断传入的参数是否为数组，返回一个布尔值；</p>
-<p>通常用于数组类型的检查。</p>
-</li>
-<li><p>实例方法 通过实例对象调用的方法，</p>
-<p>一般用于操作实例的属性或方法。</p>
-</li>
-<li><p>valueOf()，toString() 均为实例方法，用于将一个对象转换成字符串或原始值；</p>
-<p>通常在需要将对象转换为不同类型的数据时使用。</p>
-</li>
-<li><p>push()，pop() 向数组末尾添加一个或多个元素，或从数组末尾弹出一个元素；</p>
-<p>通常用于对数组进行增删操作。</p>
-</li>
-<li><p>shift()，unshift() 向数组开头添加一个或多个元素，或从数组开头删除一个元素；</p>
-<p>通常用于对数组进行增删操作。</p>
-</li>
-<li><p>join() 将数组转换为字符串，用指定的分隔符分隔各元素；</p>
-<p>通常用于将数组内容连接为一串字符串。</p>
-</li>
-<li><p>concat() 将两个或多个数组合并为一个新数组；</p>
-<p>通常用于将多个数组进行合并。</p>
-</li>
-<li><p>reverse() 将数组中的元素顺序反转；</p>
-<p>通常用于对数组进行倒序排列。</p>
-</li>
-<li><p>slice() 返回一个数组的一部分浅拷贝，不改变原数组；</p>
-<p>通常用于对数组进行截取或复制。</p>
-</li>
-<li><p>splice() 向数组中添加或删除元素，并返回被删除元素的数组；</p>
-<p>通常用于对数组进行增删操作。</p>
-</li>
-<li><p>sort() 对数组进行升序或降序排列；</p>
-<p>通常用于对数组进行排序。</p>
-</li>
-<li><p>map() 将数组中的每个元素通过函数映射为一个新的元素，并返回新数组；</p>
-<p>通常用于对元素进行转换或提取。</p>
-</li>
-<li><p>forEach() 对数组中的每个元素执行指定的操作，不改变原数组；</p>
-<p>通常用于对数组进行遍历或执行某个操作。</p>
-</li>
-<li><p>filter() 筛选数组中符合条件的元素并返回一个新数组；</p>
-<p>通常用于对数组进行筛选或过滤。</p>
-</li>
-<li><p>some()，every() 均对数组中的所有元素进行指定的操作，并返回一个布尔值表示是否符合条件；</p>
-<p>通常用于对数组进行条件判断。</p>
-</li>
-<li><p>reduce()，reduceRight() 通过对数组中的元素执行函数来将其转化为一个值并返回；</p>
-<p>通常用于对数组进行聚合、求和、平均等操作。</p>
-</li>
-<li><p>indexOf()，lastIndexOf() 返回指定元素在数组中第一次出现的位置或最后一次出现的位置，如果未找到则返回 -1；</p>
-<p>通常用于查询元素在数组中的位置。</p>
-</li>
-<li><p>链式使用 将以上方法进行链式调用，可简化代码且易于阅读；</p>
-<p>通常用于多个数组操作进行合并，提高代码的可读性。</p>
-</li>
-<li><p>.length返回数组的长度</p>
-</li>
-</ol>
-<p>在前端和 Node.js 开发中，数组的使用频率非常高。例如在 Vue.js 中，通过数组的相关方法来动态修改组件的值，从而实现数据的响应式更新。这些方法使用方便灵活，但需要注意不同方法的使用场景和不同方法之间的区别，以避免出现错误或代码可读性较差的情况。</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-前端学习笔记/JS/Q4-JS-1基础（mooc）"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-1%E5%9F%BA%E7%A1%80%EF%BC%88mooc%EF%BC%89/"
-    >JS学习笔记-4.1JS基础（base mooc）</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-1%E5%9F%BA%E7%A1%80%EF%BC%88mooc%EF%BC%89/" class="article-date">
-  <time datetime="2023-04-07T03:34:47.000Z" itemprop="datePublished">2023-04-07</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="4-1JS基础（mooc）"><a href="#4-1JS基础（mooc）" class="headerlink" title="4.1JS基础（mooc）"></a>4.1JS基础（mooc）</h1><h2 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h2><ul>
-<li><input checked="" disabled="" type="checkbox"> 1.了解js的数据类型:</li>
-</ul>
-<p>​		基础数据类型：number string boolean undefined null<br>​		引用类型:object(对象) array(数组)</p>
-<ul>
-<li><p><input checked="" disabled="" type="checkbox"> 
-2.string（字符串）</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox"> 
-​		获取长度 (length属性)</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox"> 
-​		字符串的拼接(使用加号)</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox"> 
-​		字符串的访问 (string[0],或者<strong>charAt方法</strong>)</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox"> 
-​		换行符号(\n)</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox"> 
-​		转义(&quot;hello&quot;)</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox"> 
-​		string的方法: <a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_string_methods.asp">https://www.w3school.com.cn/js/js_string_methods.asp</a></p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox"> 
-3.object （对象）</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox"> 
-​		定义一组键值对</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox"> 
-​		object的构造方式 (var a &#x3D; {b:1} 或者 var a &#x3D; new Object({b:1}))</p>
-<p>​			推荐使用前者，后者了解即可</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox"> 
-​		对象的赋值 (a.b &#x3D; xx)</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox"> 
-​		访问对象的所有属性（Object.keys）</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox"> 
-​		删除对象的键值对 (delete )</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox"> 
-​		检查属性（键） 是否存在 (in)</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox"> 
-​		遍历 (for …in)</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox"> 
-​		对象的访问 (object.a 访问object的a属性)</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox"> 
-​		了解对象的引用</p>
-<p>​			var a &#x3D; {b:1}  var c &#x3D; a</p>
-<p>​			a.b &#x3D; 2 </p>
-<p>​			console.log(c.b) &#x2F;&#x2F; 打印c.b&#x3D;1</p>
-<p>​			&#x2F;&#x2F; 从引用的角度去思考，为什么对象c发生了变化。可以用展开运算符…来定义一个新的对象</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox"> 
-​		object的方法 <a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_object_methods.asp">https://www.w3school.com.cn/js/js_object_methods.asp</a></p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox"> 
-​		this关键字(重要)</p>
-</li>
-</ul>
-<p>4.function 函数<br>        函数的声明<br>            function fn() {} &#x2F;&#x2F; function 声明<br>            var fn &#x3D; function() {} &#x2F;&#x2F; 变量声明<br>            var fn &#x3D; new Function() {} &#x2F;&#x2F; 使用Function构造，了解就好，很少使用<br>        函数的参数<br>            function fn(text){ &#x2F;&#x2F; 变量text是形式参数<br>                return text &#x2F;&#x2F; return  关键词将返回指定的值<br>            }<br>        函数的调用<br>            fn() &#x2F;&#x2F; 调用fn函数<br>            fn(1,2) &#x2F;&#x2F; 传入实际参数<br>            call方法 <a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_function_call.asp">https://www.w3school.com.cn/js/js_function_call.asp</a><br>            apply方法 <a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_function_apply.asp">https://www.w3school.com.cn/js/js_function_apply.asp</a></p>
-<p>​		重复声明函数，会覆盖原有的定义<br>​			function fn() {<br>​				console.log(1)<br>​			}	<br>​			function fn() {<br>​				console.log(2)<br>​			}<br>​		递归<br>​			反复调用自身<br>​			了解递归的定义和实现思路，<br>​				 计算斐波那契数列 的函数如何实现</p>
-<ul>
-<li><p><input disabled="" type="checkbox"> 
-​		了解函数的作用域</p>
-</li>
-<li><p><input disabled="" type="checkbox"> 
-​			函数内部可以读取到外部定义的变量</p>
-</li>
-<li><p><input disabled="" type="checkbox"> 
-​			函数内部定义的变量，无法被外部读取</p>
-<p>​			var a &#x3D; 5</p>
-<p>​			function fn() {</p>
-<p>​				var b &#x3D; 10</p>
-<p>​				console.log(b)</p>
-<p>​				console.log(a)</p>
-<p>​			}</p>
-<p>​			console.log(b)</p>
-</li>
-<li><p><input disabled="" type="checkbox"> 
-​		arguments对象，可以获取参数</p>
-<p>​			&#x2F;&#x2F; 可以等看过数组再回头看这个</p>
-<p>​			var add &#x3D; function (a,b) {</p>
-<p>​				console.log(arguments[0]) </p>
-<p>​			}</p>
-</li>
-<li><p><input disabled="" type="checkbox"> 
-​		闭包(后续再理解)</p>
-<p>​			理解一下定义，后续再了解深入的原因</p>
-<p>​			<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_function_closures.asp">https://www.w3school.com.cn/js/js_function_closures.asp</a></p>
-</li>
-</ul>
-<p>​		5.数组(array)</p>
-<ul>
-<li><p><input checked="" disabled="" type="checkbox"> 
-​		数组的定义</p>
-</li>
-<li><p><input disabled="" type="checkbox"> 
-​		声明数组</p>
-<p>​			var arr &#x3D; [11,22,33]</p>
-<p>​			var arr &#x3D; new Array([11,22,33])</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox"> 
-​		数组的访问</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox"> 
-​		数组的长度</p>
-<p>​			arr.length (length属性)</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox"> 
-​		通过索引访问，从0开始</p>
-<p>​			arr[0] &#x2F;&#x2F; 第一个元素</p>
-<p>​			arr[arr.length-1] &#x2F;&#x2F; 最后一个元素</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox"> 
-​		循环</p>
-<p>​			for</p>
-<p>​			for in </p>
-</li>
-<li><p><input disabled="" type="checkbox"> 
-​		数组的方法:</p>
-<p>​			<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_array_methods.asp">https://www.w3school.com.cn/js/js_array_methods.asp</a></p>
-<p>​			<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_array_sort.asp">https://www.w3school.com.cn/js/js_array_sort.asp</a></p>
-<p>​			<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_array_iteration.asp">https://www.w3school.com.cn/js/js_array_iteration.asp</a></p>
-</li>
-</ul>
-<h2 id="1-分类"><a href="#1-分类" class="headerlink" title="1.分类"></a>1.分类</h2><p>​		1.ECMAJS：基础语法</p>
-<p>​		2.DOM：文档对象模型，可以访问某个元素</p>
-<p>​		3.BOM：浏览器对象模型，可以对浏览器操作</p>
-<h2 id="2-基础语法"><a href="#2-基础语法" class="headerlink" title="2.基础语法"></a>2.基础语法</h2><p>​	作为属性引用：console.log();    document.write();</p>
-<p>​	外部引用1：head里写<code>&lt;script src=&quot;js文件名称.js&quot;&gt;不允许出现任何js代码&lt;/script&gt;</code></p>
-<p>​	内部引用：《script》需要出现js代码《&#x2F;script》</p>
-<p>​	多文件引用:<code>&lt;script src=&quot;/js/script1.js&quot;&gt;&lt;/script&gt; </code><br>​			   		 <code>&lt;script src=&quot;/js/script2.js&quot;&gt;&lt;/script&gt;</code></p>
-<p>​	注释：&#x2F;&#x2F; 			 &#x2F;**&#x2F;</p>
-<p>​	易错点：大小写敏感</p>
-<h2 id="3-变量与作用域"><a href="#3-变量与作用域" class="headerlink" title="3.变量与作用域"></a>3.变量与作用域</h2><p>变量：</p>
-<p>​		局部变量：   var 变量名&#x3D;   ；</p>
-<p>​						  或者    var 变量名； 变量名&#x3D;   ；</p>
-<p>​		全局变量：  变量名&#x3D;   ； </p>
-<p>​		多个变量：  var 变量名1&#x3D;值1,变量名2,变量名3,变量名4&#x3D;值2；</p>
-<p>​		变量名命名规范：和c语言唯一的区别是可以以字母数字下划线及＄组成。</p>
-<p>作用域：</p>
-<p>​		JavaScript 使用大括号，将多个相关的语句组合在一起，称为“区块”（block），单并不构成单独的作用域。</p>
-<p>​		对于<code>var</code>命令来说，JavaScript 的区块不构成单独的作用域（scope）。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  var a = 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a // 1</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="4-数据类型"><a href="#4-数据类型" class="headerlink" title="4.数据类型"></a>4.数据类型</h2><h4 id="1-原始类型"><a href="#1-原始类型" class="headerlink" title="1.原始类型"></a>1.原始类型</h4><p>​				<a target="_blank" rel="noopener" href="https://wangdoc.com/javascript/types/general#typeof-%E8%BF%90%E7%AE%97%E7%AC%A6">数据类型概述 - JavaScript 教程 - 网道 (wangdoc.com)</a>（非常详细且有用，不要只看自己的笔记）</p>
-<h5 id="1-分类-1"><a href="#1-分类-1" class="headerlink" title="1.分类"></a>1.分类</h5><p>​				1.unmber数字类型</p>
-<p>​						整数：4字节32位</p>
-<p>​						小数（浮点数）：8字节64位</p>
-<p>​				2.string字符串                         </p>
-<p>​						方法: <a target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_string_methods.asp">https://www.w3school.com.cn/js/js_string_methods.asp</a></p>
-<p>​						转义:斜杠(\ “hello \ “)</p>
-<p>​						方法：</p>
-<p>​								charAt() - 返回指定索引位置的字符<br>​								<strong>charCodeAt() - 返回指定索引位置字符的 Unicode 编码</strong><br>​								<strong>concat() - 连接两个字符串</strong><br>​								endsWith() - 检查字符串是否以指定的字符结束<br>​								<strong>includes() - 检查字符串是否包含指定的字符</strong><br>​								indexOf() - 检索字符首次出现的索引位置<br>​								lastIndexOf() - 从后向前检索字符最后一次出现的索引位置<br>​								<strong>localeCompare() - 根据本地排序规则比较两个字符串</strong><br>​								<strong>match() - 找到一个或多个正则表达式的匹配</strong><br>​								<strong>replace() - 替换与正则表达式匹配的子串</strong><br>​								<strong>search() - 检索与正则表达式相匹配的值</strong><br>​								<strong>slice() - 提取字符串的片断,并返回新的字符串</strong><br>​								<strong>split() - 把字符串分割为字符串数组</strong><br>​								startsWith() - 检查字符串是否以指定的字符开始<br>​								substring() - 提取字符串中两个指定的索引位置之间的字符<br>​								toLowerCase() - 转换字符串为小写<br>​								toUpperCase() - 转换字符串为大写<br>​								trim() - 移除字符串首尾空白</p>
-<p>例如:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">js</span><br><span class="line">let str = &quot;Hello World!&quot;;</span><br><span class="line"></span><br><span class="line">str.charAt(0);     // H</span><br><span class="line">str.concat(&quot;Claude&quot;); // Hello World!Claude</span><br><span class="line">str.endsWith(&quot;d!&quot;);  // true</span><br><span class="line">str.includes(&quot;o&quot;);   // true </span><br><span class="line">str.indexOf(&quot;o&quot;);    // 4</span><br><span class="line">str.lastIndexOf(&quot;o&quot;); // 7 </span><br><span class="line">str.match(/o/g);     // [&quot;o&quot;, &quot;o&quot;, &quot;o&quot;]</span><br><span class="line">str.replace(&quot;o&quot;, &quot;_&quot;); // Hell_ W_rld!</span><br><span class="line">str.slice(0, 5);     // Hello</span><br><span class="line">str.split(&quot; &quot;);      // [&quot;Hello&quot;, &quot;World!&quot;]</span><br><span class="line">str.startsWith(&quot;He&quot;); // true</span><br><span class="line">str.substring(0, 5);  // Hello </span><br><span class="line">str.toUpperCase();   // HELLO WORLD!</span><br></pre></td></tr></table></figure>
-
-<p>​				3.boolean布尔</p>
-<p>​				4.null空</p>
-<p>​				5.undefined未定义		声明变量未赋值，访问对象不存在</p>
-<p>​					</p>
-<h5 id="2-数据转换"><a href="#2-数据转换" class="headerlink" title="2.数据转换"></a>2.数据转换</h5><p>​				取类型并赋值：typeof（）</p>
-<p>​										   作用：判断变量是否未定义的同时，避免抛出错误。</p>
-<p>​												  	<img src="../其它/markdown-img\Q4-JS-1基础.assets\image-20230408212824971.png" alt="image-20230408212824971" style="zoom:50%;" /></p>
-<p>​				判断是否为数字类型：isNaN</p>
-<p>​				强制转换字符串：变量.toString（）</p>
-<p>​				强制转换整数（小数点后的全部舍掉）：parseInt（数据）；</p>
-<p>​				强制转换小数：parseFloat（数据）；</p>
-<p>​										易错点：如果数据里包含非数字型数据，则会输出转换好的数据，并停止转换异常数据。</p>
-<p>​										例子：var  i &#x3D; parseFloat（13.2你好442）；将会输出13.2。</p>
-<h4 id="2-引用类型"><a href="#2-引用类型" class="headerlink" title="2.引用类型"></a>2.引用类型</h4><h2 id="5-运算符"><a href="#5-运算符" class="headerlink" title="5.运算符"></a>5.运算符</h2><h4 id="1-算数运算符"><a href="#1-算数运算符" class="headerlink" title="1.算数运算符"></a>1.算数运算符</h4><h4 id="2-关系运算符"><a href="#2-关系运算符" class="headerlink" title="2.关系运算符"></a>2.关系运算符</h4><p>​				<img src="../其它/markdown-img\Q4-JS-1基础.assets\image-20230408111058932.png" alt="image-20230408111058932" style="zoom: 33%;" /></p>
-<p>​					</p>
-<p>​					&#x3D;&#x3D;与&#x3D;&#x3D;&#x3D;的区别：&#x3D;&#x3D;会使两侧进行类型转换，并比较。&#x3D;&#x3D;&#x3D;会严格比较类型和数据。</p>
-<h4 id="3-逻辑运算符"><a href="#3-逻辑运算符" class="headerlink" title="3.逻辑运算符"></a>3.逻辑运算符</h4><p>​					<img src="../其它/markdown-img\Q4-JS-1基础.assets\image-20230408111154450.png" alt="image-20230408111154450" style="zoom: 50%;" /></p>
-<h4 id="4-条件-x2F-三目运算符"><a href="#4-条件-x2F-三目运算符" class="headerlink" title="4.条件&#x2F;三目运算符"></a>4.条件&#x2F;三目运算符</h4><p>​					普通：</p>
-<p>​					<img src="../其它/markdown-img\Q4-JS-1基础.assets\image-20230408111436303.png" alt="image-20230408111436303" style="zoom:33%;" /></p>
-<p>​					嵌套：</p>
-<p>​					<img src="../其它/markdown-img\Q4-JS-1基础.assets\image-20230408111514675.png" alt="image-20230408111514675" style="zoom:33%;" /></p>
-<h2 id="6-标签（label）"><a href="#6-标签（label）" class="headerlink" title="6.标签（label）"></a>6.标签（label）</h2><p>JavaScript 语言允许，语句的前面有标签（label），相当于定位符，用于跳转到程序的任意位置，标签的格式如下。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">label:</span><br><span class="line">  语句</span><br></pre></td></tr></table></figure>
-
-<p>标签可以是任意的标识符，但不能是保留字，语句部分可以是任意语句。</p>
-<p>标签通常与<code>break</code>语句和<code>continue</code>语句配合使用，跳出特定的循环。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">top:</span><br><span class="line">  for (var i = 0; i &lt; 3; i++)&#123;</span><br><span class="line">    for (var j = 0; j &lt; 3; j++)&#123;</span><br><span class="line">      if (i === 1 &amp;&amp; j === 1) break top;</span><br><span class="line">      console.log(&#x27;i=&#x27; + i + &#x27;, j=&#x27; + j);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">// i=0, j=0</span><br><span class="line">// i=0, j=1</span><br><span class="line">// i=0, j=2</span><br><span class="line">// i=1, j=0</span><br></pre></td></tr></table></figure>
-
-<p>上面代码为一个双重循环区块，<code>break</code>命令后面加上了<code>top</code>标签（注意，<code>top</code>不用加引号），满足条件时，直接跳出双层循环。如果<code>break</code>语句后面不使用标签，则只能跳出内层循环，进入下一次的外层循环。</p>
-<p>标签也可以用于跳出代码块。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">foo: &#123;</span><br><span class="line">  console.log(1);</span><br><span class="line">  break foo;</span><br><span class="line">  console.log(&#x27;本行不会输出&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">console.log(2);</span><br><span class="line">// 1</span><br><span class="line">// 2</span><br></pre></td></tr></table></figure>
-
-<p>上面代码执行到<code>break foo</code>，就会跳出区块。</p>
-<p><code>continue</code>语句也可以与标签配合使用。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">top:</span><br><span class="line">  for (var i = 0; i &lt; 3; i++)&#123;</span><br><span class="line">    for (var j = 0; j &lt; 3; j++)&#123;</span><br><span class="line">      if (i === 1 &amp;&amp; j === 1) continue top;</span><br><span class="line">      console.log(&#x27;i=&#x27; + i + &#x27;, j=&#x27; + j);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">// i=0, j=0</span><br><span class="line">// i=0, j=1</span><br><span class="line">// i=0, j=2</span><br><span class="line">// i=1, j=0</span><br><span class="line">// i=2, j=0</span><br><span class="line">// i=2, j=1</span><br><span class="line">// i=2, j=2</span><br></pre></td></tr></table></figure>
-
-<p>上面代码中，<code>continue</code>命令后面有一个标签名，满足条件时，会跳过当前循环，直接进入下一轮外层循环。如果<code>continue</code>语句后面不使用标签，则只能进入下一轮的内层循环。</p>
-<h2 id="7-分支语句"><a href="#7-分支语句" class="headerlink" title="7.分支语句"></a>7.分支语句</h2><p>1.if else</p>
-<p>2.switch-case：优先用于等值判断</p>
-<p>​						  <img src="./markdown-img\Q4-JS-1基础.assets\image-20230408111942096.png" alt="image-20230408111942096" style="zoom:33%;" /></p>
-<p>​				1.break</p>
-<p>​				2.<strong>continue用于立即终止本轮循环，返回循环结构的头部，开始下一轮循环。</strong></p>
-<p>​						<img src="../其它/markdown-img\Q4-JS-1基础.assets\image-20230408205506290.png" alt="image-20230408205506290" style="zoom: 50%;" /></p>
-<p>7.循环</p>
-<p>1.while</p>
-<p>2.do while：先执行再判断</p>
-<p>​							<img src="../其它/markdown-img\Q4-JS-1基础.assets\image-20230408112304642.png" alt="image-20230408112304642" style="zoom:33%;" /></p>
-<p>3.for</p>
-<p>for in循环会遍历对象上所有可枚举的属性，包括从原型链继承下来的属性。 例如：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const obj = &#123; a: 1, b: 2, c: 3 &#125;;</span><br><span class="line">for (let prop in obj) &#123;</span><br><span class="line">  console.log(prop);</span><br><span class="line">&#125;</span><br><span class="line">// 输出 a, b, c</span><br></pre></td></tr></table></figure>
-
-<p>for of是ES6中新增的遍历数据结构的循环方式，它可以遍历所有具有迭代器的数据结构（例如数组、Set、Map等）。for of循环不能直接迭代对象，因为对象不是可迭代的数据结构。 例如：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const arr = [1, 2, 3];</span><br><span class="line">for (let value of arr) &#123;</span><br><span class="line">  console.log(value);</span><br><span class="line">&#125;</span><br><span class="line">// 输出 1, 2, 3</span><br></pre></td></tr></table></figure>
-
-<h2 id="8-数组——类型为object，而不是数组类型"><a href="#8-数组——类型为object，而不是数组类型" class="headerlink" title="8.数组——类型为object，而不是数组类型"></a>8.数组——类型为object，而不是数组类型</h2><h3 id="1-索引数组"><a href="#1-索引数组" class="headerlink" title="1.索引数组"></a>1.索引数组</h3><h5 id="1-动态数组"><a href="#1-动态数组" class="headerlink" title="1.动态数组"></a>1.动态数组</h5><p>​											var arr&#x3D;new Array（“add”，“okm”，“fnwk”）；</p>
-<h5 id="2-静态数组（在JS里，这也是动态数组）"><a href="#2-静态数组（在JS里，这也是动态数组）" class="headerlink" title="2.静态数组（在JS里，这也是动态数组）"></a>2.静态数组（在JS里，这也是动态数组）</h5><p>​											var arr&#x3D;【15，1，3】；</p>
-<h5 id="3-最好的方法"><a href="#3-最好的方法" class="headerlink" title="3.最好的方法"></a>3.最好的方法</h5><p>​											先声明空数组，再通过arr[index]访问并赋值。</p>
-<h5 id="4-arr-length没有括号"><a href="#4-arr-length没有括号" class="headerlink" title="4.arr.length	没有括号"></a>4.arr.length	没有括号</h5><p>​											console.log（arr.length）</p>
-<h5 id="5-访问倒数第n个数据"><a href="#5-访问倒数第n个数据" class="headerlink" title="5.访问倒数第n个数据"></a>5.访问倒数第n个数据</h5><p>​											倒数第一个：arr[length-1]</p>
-<p>​											<strong>倒数第n个：arr[length-n]</strong></p>
-<h3 id="2-关联数组-hash数组（只希望快速查找时使用）"><a href="#2-关联数组-hash数组（只希望快速查找时使用）" class="headerlink" title="2.关联数组   hash数组（只希望快速查找时使用）"></a>2.关联数组   hash数组（只希望快速查找时使用）</h3><h5 id="1-区别"><a href="#1-区别" class="headerlink" title="1.区别"></a>1.区别</h5><p>​											1.可以自定义下标名称。</p>
-<p>​											2.查找快，o（1）.</p>
-<p>​											3.查找不用遍历，也无法遍历。</p>
-<h5 id="2-创建方式"><a href="#2-创建方式" class="headerlink" title="2.创建方式"></a>2.创建方式</h5><p>​											1.创建空数组</p>
-<p>​											2.以自定义字符串为下标，给数组赋值</p>
-<p>​												<img src="../其它/markdown-img\Q4-JS-1基础.assets\image-20230408132738093.png" alt="image-20230408132738093" style="zoom: 25%;" /></p>
-<h5 id="3-易错点"><a href="#3-易错点" class="headerlink" title="3.易错点"></a>3.易错点</h5><p>​											不能用for循环，不能遍历，和存储位置无关</p>
-<p>​											<img src="../其它/markdown-img\Q4-JS-1基础.assets\image-20230408133014313.png" alt="image-20230408133014313" style="zoom: 33%;" /></p>
-<h3 id="3-数组API"><a href="#3-数组API" class="headerlink" title="3.数组API"></a>3.数组API</h3><h5 id="1-String-arr-；数组转字符串"><a href="#1-String-arr-；数组转字符串" class="headerlink" title="1.String(arr)；数组转字符串"></a>1.String(arr)；<strong>数组转字符串</strong></h5><p>​											概念：转化成字符串，并用逗号隔开。</p>
-<p>​											作用：打印出arr，判断一下数据有没有被更改过。</p>
-<h5 id="2-arr-join-“连接符”-；拼接数组元素"><a href="#2-arr-join-“连接符”-；拼接数组元素" class="headerlink" title="2.arr.join(“连接符”)；拼接数组元素"></a>2.arr.join(“连接符”)；<strong>拼接数组元素</strong></h5><p>​									概念：将array中每个部分，用”连接符“连接成字符串</p>
-<p>​												<img src="../其它/markdown-img\Q4-JS-1基础.assets\image-20230408135220827.png" alt="image-20230408135220827" style="zoom:25%;" /></p>
-<p>​									作用1：判断数组为空。</p>
-<p>​									作用2：字符串连接，将数组转化为html内容。<strong>（动态页面）</strong></p>
-<p>​												方法1：”&lt;开始1&gt;&lt;开始2&gt;”+arr.join(“&lt;&#x2F;结束2&gt;&lt;开始2&gt;”)+”&lt;&#x2F;结束2&gt;&lt;&#x2F;结束1&gt;“</p>
-<p>​												方法2：”&lt;开始标签1&gt;”+arr.join(“&lt;&#x2F;结束标签1&gt;&lt;开始标签1&gt;”)+”&lt;&#x2F;结束标签1&gt;“</p>
-<p>​												看不懂后面有说明。</p>
-<h5 id="3-concat-拼接"><a href="#3-concat-拼接" class="headerlink" title="3.concat()拼接"></a>3.concat()拼接</h5><p>​								1.概念：引用并拼接多个数组（不改变原数组值），返回结果值。（表面是复制数组值并拼接，本质还是引用）</p>
-<h5 id="4-arr-slice-index1，index2-查数组元素"><a href="#4-arr-slice-index1，index2-查数组元素" class="headerlink" title="4.arr.slice(index1，index2)查数组元素"></a>4.arr.slice(index1，index2)<strong>查数组元素</strong></h5><p>​								1.概念：</p>
-<p>​												1.选取一个范围的：选取arr[index1]~arr[index2]的值。</p>
-<p>​												2.选取到尾部的：arr.slice(index1)省略第二个值。</p>
-<p>​												3.复制数组：arr.slice(0,arr.length)&#x3D;&#x3D;&#x3D;arr.slice();</p>
-<p>​								2.例子：<img src="../其它/markdown-img\Q4-JS-1基础.assets\image-20230408151232135.png" alt="image-20230408151232135" style="zoom:33%;" /></p>
-<p>​								3.重点：下标可以用负数</p>
-<h3 id="4-arr-splice增删改数组元素"><a href="#4-arr-splice增删改数组元素" class="headerlink" title="4.arr.splice增删改数组元素"></a>4.arr.splice<strong>增删改数组元素</strong></h3><p>​								注：是改变数组本身，而不是引用。<strong>删除和插入的元素个数不必一致，数组下标会自动后移。</strong></p>
-<h5 id="1-增"><a href="#1-增" class="headerlink" title="1.增"></a>1.增</h5><p>​								1.arr.splice(start,<strong>0</strong>,var1,var2….varn);</p>
-<h5 id="2-删"><a href="#2-删" class="headerlink" title="2.删"></a>2.删</h5><p>​								1.arr.splice(start,n);</p>
-<p>​										删除从start开始的（含start）n个元素，<strong>返回值为被删除数据组成的临时数组</strong>。</p>
-<h5 id="3-改"><a href="#3-改" class="headerlink" title="3.改"></a>3.改</h5><p>​								1.arr.splice(start,n,<strong>var1,var2….varn</strong>);</p>
-<p>​										删除从start开始的（含start）n个元素，并用n种var填充。</p>
-<p>​								2.arr.splice(start,n,<strong>…arr2</strong>);</p>
-<p>​										删除从start开始的（含start）n个元素，并用数组的所有值填充。<strong>易错点：…必须有</strong></p>
-<p>​								3.例<img src="../其它/markdown-img\Q4-JS-1基础.assets\image-20230408155222560.png" alt="image-20230408155222560" style="zoom: 50%;" /></p>
-<h4 id="5-颠倒arr-reverse"><a href="#5-颠倒arr-reverse" class="headerlink" title="5.颠倒arr.reverse();"></a>5.颠倒arr.reverse();</h4><p>​							只颠倒，不排序。</p>
-<h4 id="6-排序arr-sort"><a href="#6-排序arr-sort" class="headerlink" title="6.排序arr.sort();"></a>6.排序arr.sort();</h4><p>​							缺点：默认将所有类型转成字符串，再从小到大排序。</p>
-<p>​							解决方法：重构比较函数。</p>
-<blockquote>
-<p>arr.join()说明</p>
-<p>​			arr.join()<code>方法取出的是数组</code>arr<code>中的每个元素，将它们用</code>&lt;&#x2F;结束标签&gt;&lt;开始标签&gt;&#96; 连接起来形成一个新的字符串。</p>
-<p>​			&lt;开始标签1&gt;<code>和</code>&lt;&#x2F;结束标签1&gt;<code>是代码里本来就有的标签，分别表示HTML元素的开始标签和结束标签；而</code>&lt;开始标签2&gt;<code>和</code>&lt;&#x2F;结束标签2&gt;&#96;是你添加进去的标签。</p>
-<p>​			<code>arr.join()</code>方法取出的是数组<code>arr</code>中的每个元素，可以是任何类型的值，例如字符串或数字。将它们用<code>&lt;/结束标签2&gt;&lt;开始标签2&gt;</code>连接起来形成一个新的字符串。这里的<code>&lt;/结束标签2&gt;&lt;开始标签2&gt;</code>是你添加的标签内容。</p>
-<p>以下是一个例子：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let arr = [&#x27;apple&#x27;, &#x27;banana&#x27;, &#x27;orange&#x27;];</span><br><span class="line">let result = &#x27;&lt;ul&gt;&lt;li&gt;&#x27; + arr.join(&#x27;&lt;/li&gt;&lt;li&gt;&#x27;) + &#x27;&lt;/li&gt;&lt;/ul&gt;&#x27;;</span><br><span class="line">console.log(result);</span><br></pre></td></tr></table></figure>
-
-<p>​			在这个例子中，<code>&lt;开始标签1&gt;</code>是<code>&lt;ul&gt;</code>，<code>&lt;/结束标签1&gt;</code>是<code>&lt;/ul&gt;</code>，<code>&lt;开始标签2&gt;</code>是<code>&lt;li&gt;</code>，<code>&lt;/结束标签2&gt;</code>是<code>&lt;/li&gt;</code>。<code>arr.join(&#39;&lt;/li&gt;&lt;li&gt;&#39;)</code>取出的数组值是<code>&#39;apple&#39;</code>、<code>&#39;banana&#39;</code>和<code>&#39;orange&#39;</code>，它们将被用<code>&lt;/li&gt;&lt;li&gt;</code>连接起来形成一个新的字符串<code>&#39;apple&lt;/li&gt;&lt;li&gt;banana&lt;/li&gt;&lt;li&gt;orange&#39;</code>，最后生成的完整HTML元素如下所示：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li&gt;apple&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;banana&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;orange&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
-
-<p>​			该HTML元素包含了多个子元素，子元素的内容从数组<code>arr</code>中取出，并且用<code>&lt;li&gt;</code>和<code>&lt;/li&gt;</code>标签包裹起来，每个子元素之间用<code>&lt;/li&gt;&lt;li&gt;</code>连接，而这些子元素整体则用<code>&lt;ul&gt;</code>和<code>&lt;/ul&gt;</code>标签包裹。</p>
-</blockquote>
-<p>​							</p>
-<h2 id="9-函数"><a href="#9-函数" class="headerlink" title="9.函数"></a>9.函数</h2><p>1.输出：console.log();</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-前端学习笔记/【【【【【疑问解答】】】】】/CSS/4.4 4.5position/3.粘性定位/main"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-     
-    <div class="article-meta">
-      <a href="/2023/04/05/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/CSS/4.4%204.5position/3.%E7%B2%98%E6%80%A7%E5%AE%9A%E4%BD%8D/main/" class="article-date">
-  <time datetime="2023-04-05T10:07:10.000Z" itemprop="datePublished">2023-04-05</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  * {
-    margin: 0;
-    padding: 0;
-}
-.box {
-    position: relative;
-}
-ul {
-    list-style: none;
-    display: flex;
-    background-color: #09d;
-    padding: 6px 6px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-ul li {
-    font-size: 14px;
-    color: #fff;
-}
-ul li:not(:last-child) {
-    margin-right: 8px;
-}
-
-.content div {
-    margin: 60px 0;
-} 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
     </footer>
   </div>
 

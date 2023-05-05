@@ -4051,7 +4051,7 @@
       </tags>
   </entry>
   <entry>
-    <title>JS学习笔记-4.6标准库（base阮一峰/gpt ）</title>
+    <title>JS学习笔记-4.6标准库（base阮一峰/claude/MDN ）</title>
     <url>/2023/04/12/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-6%E6%A0%87%E5%87%86%E5%BA%93/</url>
     <content><![CDATA[<h1 id="4-6标准库"><a href="#4-6标准库" class="headerlink" title="4.6标准库"></a>4.6标准库</h1><h2 id="4-6-0基础知识"><a href="#4-6-0基础知识" class="headerlink" title="4.6.0基础知识"></a>4.6.0基础知识</h2><h3 id="1-C-和-JS-中的构造函数和析构函数的异同"><a href="#1-C-和-JS-中的构造函数和析构函数的异同" class="headerlink" title="1.C++ 和 JS 中的构造函数和析构函数的异同"></a>1.C++ 和 JS 中的构造函数和析构函数的异同</h3><p>C++ 和 JS 中的构造函数和析构函数有以下的异同:异同点一:初始化资源申请以及释放。它们都是用来初始化申请资源以及释放资源的。异同点二:以类名一样的方法命名。构造函数都是以类名命名的,析构函数都是以类名加上 ~ 符号命名的。</p>
 <p>不同点一:调用时机不同。</p>
@@ -4150,7 +4150,54 @@
 
 <p>所以,总的来说,在工作中 Object.prototype 最常用于扩展内置对象、实现继承和共享方法、模拟类、以及实现通用工具方法。它让 JS 的框架和库设计变得简单高效,也使我们的代码更加优雅。</p>
 <h2 id="4-6-1小结"><a href="#4-6-1小结" class="headerlink" title="4.6.1小结"></a>4.6.1小结</h2><p>Object有的函数能继承，有的不能。但不知道怎么主动让它继承，也不知道都哪些能继承。</p>
-<h2 id="4-6-2原始类型的对象化"><a href="#4-6-2原始类型的对象化" class="headerlink" title="4.6.2原始类型的对象化"></a>4.6.2原始类型的对象化</h2><h3 id="1-三种包装对象"><a href="#1-三种包装对象" class="headerlink" title="1.三种包装对象"></a>1.三种包装对象</h3><p>Number、String、Boolean</p>
+<h2 id="4-6-2Array类型"><a href="#4-6-2Array类型" class="headerlink" title="4.6.2Array类型"></a>4.6.2Array类型</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array">Array - JavaScript | MDN (mozilla.org)</a></p>
+<h3 id="1-构造函数（最好别用）"><a href="#1-构造函数（最好别用）" class="headerlink" title="1.构造函数（最好别用）"></a>1.构造函数（最好别用）</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// bad</span><br><span class="line">var arr = new Array(1, 2);</span><br><span class="line"></span><br><span class="line">// good</span><br><span class="line">var arr = [1, 2];</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-静态方法"><a href="#2-静态方法" class="headerlink" title="2.静态方法"></a>2.静态方法</h3><p>Array.isArray()</p>
+<p>它可以弥补<code>typeof</code>运算符的不足。<code>typeof</code>运算符只能显示数组的类型是<code>Object</code>，而<code>Array.isArray</code>方法可以识别数组。</p>
+<h3 id="3-实例属性"><a href="#3-实例属性" class="headerlink" title="3.实例属性"></a>3.实例属性</h3><p>length</p>
+<h3 id="4-实例方法"><a href="#4-实例方法" class="headerlink" title="4.实例方法"></a>4.实例方法</h3><h4 id="valueOf-，toString"><a href="#valueOf-，toString" class="headerlink" title="valueOf()，toString()"></a>valueOf()，toString()</h4><h4 id="push-尾插，pop-尾删"><a href="#push-尾插，pop-尾删" class="headerlink" title="push()尾插，pop()尾删"></a>push()尾插，pop()尾删</h4><h4 id="shift-头删，unshift-头插"><a href="#shift-头删，unshift-头插" class="headerlink" title="shift()头删，unshift()头插"></a>shift()头删，unshift()头插</h4><p>​				1.shift()头删</p>
+<p>​						shift()方法用于删除数组的第一个元素，并返回该元素。注意，该方法会改变原数组。</p>
+<p>​						shift()方法可以遍历并清空一个数组。</p>
+<p>​						push()和shift()结合使用，就构成了“先进先出”的队列结构（queue）。</p>
+<p>​				2.unshift()头插</p>
+<p>​						用于在数组的第一个位置添加元素，并返回新的数组的长度。注意，该方法会改变原数组。</p>
+<p>​						可以接受多个参数，这些参数都会添加到目标数组头部。</p>
+<h4 id="join-符号链接"><a href="#join-符号链接" class="headerlink" title="join()符号链接"></a>join()符号链接</h4><p>​				join()方法以指定参数作为分隔符，将所有数组成员连接并返回。如果不提供参数，默认用逗号分隔。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">通过call方法，这个方法也可以用于字符串或类似数组的对象。</span><br><span class="line"></span><br><span class="line">Array.prototype.join.call(&#x27;hello&#x27;, &#x27;-&#x27;)</span><br><span class="line">// &quot;h-e-l-l-o&quot;</span><br><span class="line"></span><br><span class="line">var obj = &#123; 0: &#x27;a&#x27;, 1: &#x27;b&#x27;, length: 2 &#125;;</span><br><span class="line">Array.prototype.join.call(obj, &#x27;-&#x27;)</span><br><span class="line">// &#x27;a-b&#x27;	</span><br></pre></td></tr></table></figure>
+
+<h4 id="at-下标-访问"><a href="#at-下标-访问" class="headerlink" title="at(下标)访问"></a>at(下标)访问</h4><p>​				返回给定索引处的数组元素。接受从最后一项往回计算的负整数。</p>
+<h4 id="concat-合并"><a href="#concat-合并" class="headerlink" title="concat()合并"></a>concat()合并</h4><p>​				用于多个数组的合并。尾插，然后返回一个新数组，原数组不变。</p>
+<p>​				如果数组成员包括对象，<code>concat</code>方法返回当前数组的一个浅拷贝。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[&#x27;hello&#x27;].concat([&#x27;world&#x27;], [&#x27;!&#x27;], [&#123;a:4&#125;], 1)   </span><br><span class="line">// [&quot;hello&quot;, &quot;world&quot;, &quot;!&quot;, &#123;a:4&#125;, 1]</span><br></pre></td></tr></table></figure>
+
+<h4 id="reverse"><a href="#reverse" class="headerlink" title="reverse()"></a>reverse()</h4><p>​				用于颠倒排列数组元素，返回改变后的数组。注意，该方法将改变原数组。</p>
+<h4 id="slice-切片"><a href="#slice-切片" class="headerlink" title="slice()切片"></a>slice()切片</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">arr.slice(start, end);</span><br></pre></td></tr></table></figure>
+
+<h4 id="splice-删除"><a href="#splice-删除" class="headerlink" title="splice()删除"></a>splice()删除</h4><p>​				用于删除原数组的一部分成员，并可以在删除的位置添加新的数组成员，返回值是被删除的元素。注意，该方法会改变原数组。</p>
+<h4 id="sort-不传参-排字典序"><a href="#sort-不传参-排字典序" class="headerlink" title="sort(不传参)排字典序"></a>sort(不传参)排字典序</h4><p>​				对数组成员进行排序。排序后，原数组将被改变。</p>
+<p>​				不是按大小排序，而是按字典排序。数值会被先转成字符串，再比较，所以<code>101</code>排在<code>11</code>的前面。</p>
+<h4 id="sort-传入函数-排数值序"><a href="#sort-传入函数-排数值序" class="headerlink" title="sort(传入函数)排数值序"></a>sort(传入函数)排数值序</h4><p>​				.sort((a, b) &#x3D;&gt; a - b)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[1, 4, 2, 6, 0, 6, 2, 6].sort((a, b) =&gt; a - b)</span><br></pre></td></tr></table></figure>
+
+<h4 id="map-传入函数-所有成员依次执行函数"><a href="#map-传入函数-所有成员依次执行函数" class="headerlink" title="map(传入函数)所有成员依次执行函数"></a>map(传入函数)所有成员依次执行函数</h4><p>​				将数组的所有成员依次传入参数函数，然后把每一次的执行结果组成一个新数组返回。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var numbers = [1, 2, 3];</span><br><span class="line"></span><br><span class="line">numbers.map(function (n) &#123;</span><br><span class="line">  return n + 1;</span><br><span class="line">&#125;);</span><br><span class="line">// [2, 3, 4]</span><br><span class="line"></span><br><span class="line">numbers</span><br><span class="line">// [1, 2, 3]</span><br></pre></td></tr></table></figure>
+
+<h4 id="forEach-传入函数-所有成员依次执行函数"><a href="#forEach-传入函数-所有成员依次执行函数" class="headerlink" title="forEach(传入函数)所有成员依次执行函数"></a>forEach(传入函数)所有成员依次执行函数</h4><p>​				与<code>map()</code>方法很相似，也是对数组的所有成员依次执行参数函数。但不返回值，只用来操作数据。</p>
+<h4 id="filter-传入函数-所有成员依次执行函数"><a href="#filter-传入函数-所有成员依次执行函数" class="headerlink" title="filter(传入函数)所有成员依次执行函数"></a>filter(传入函数)所有成员依次执行函数</h4><p>​			过滤数组成员，参数是一个函数，所有数组成员依次执行该函数，返回结果为<code>true</code>的成员组成一个新数组返回。该方法不会改变原数组。</p>
+<h4 id="some-存在，every-所有"><a href="#some-存在，every-所有" class="headerlink" title="some()存在，every()所有"></a>some()存在，every()所有</h4><p>​				判断数组成员是否符合某种条件，返回一个布尔值。</p>
+<p>​				它们接受一个函数作为参数，所有数组成员依次执行该函数。</p>
+<p>​				every方法是所有成员的返回值都是true<code>，整个</code>every<code>方法才返回</code>true<code>，否则返回</code>false。</p>
+<h4 id="reduce-，reduceRight"><a href="#reduce-，reduceRight" class="headerlink" title="reduce()，reduceRight()"></a>reduce()，reduceRight()</h4><p>​				<code>reduce()</code>方法和<code>reduceRight()</code>方法依次处理数组的每个成员，最终累计为一个值。它们的差别是，<code>reduce()</code>是从左到右处理（从第一个成员到最后一个成员），<code>reduceRight()</code>则是从右到左（从最后一个成员到第一个成员），其他完全一样。</p>
+<h4 id="indexOf-，lastIndexOf"><a href="#indexOf-，lastIndexOf" class="headerlink" title="indexOf()，lastIndexOf()"></a>indexOf()，lastIndexOf()</h4><p>​				<code>indexOf</code>方法返回给定元素在数组中第一次出现的位置，如果没有出现则返回<code>-1</code>。</p>
+<p>​				<code>lastIndexOf</code>方法返回给定元素在数组中最后一次出现的位置，如果没有出现则返回<code>-1</code>。</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/fill"><code>Array.prototype.fill()</code></a></p>
+<p>用静态值填充数组中从开始索引到结束索引的所有元素。</p>
+<h4 id="链式使用"><a href="#链式使用" class="headerlink" title="链式使用"></a>链式使用</h4><p>上面这些数组方法之中，有不少返回的还是数组，所以可以链式使用。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var users = [</span><br><span class="line">  &#123;name: &#x27;tom&#x27;, email: &#x27;tom@example.com&#x27;&#125;,</span><br><span class="line">  &#123;name: &#x27;peter&#x27;, email: &#x27;peter@example.com&#x27;&#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">users</span><br><span class="line">.map(function (user) &#123;</span><br><span class="line">  return user.email;</span><br><span class="line">&#125;)</span><br><span class="line">.filter(function (email) &#123;</span><br><span class="line">  return /^t/.test(email);</span><br><span class="line">&#125;)</span><br><span class="line">.forEach(function (email) &#123;</span><br><span class="line">  console.log(email);</span><br><span class="line">&#125;);</span><br><span class="line">// &quot;tom@example.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p>上面代码中，先产生一个所有 Email 地址组成的数组，然后再过滤出以<code>t</code>开头的 Email 地址，最后将它打印出来。</p>
+<h2 id="4-6-3原始类型的对象化"><a href="#4-6-3原始类型的对象化" class="headerlink" title="4.6.3原始类型的对象化"></a>4.6.3原始类型的对象化</h2><h3 id="1-三种包装对象"><a href="#1-三种包装对象" class="headerlink" title="1.三种包装对象"></a>1.三种包装对象</h3><p>Number、String、Boolean</p>
 <h3 id="2-包装成对象的原因"><a href="#2-包装成对象的原因" class="headerlink" title="2.包装成对象的原因"></a>2.包装成对象的原因</h3><p>用于继承并使用Object类型中的函数。其中三者公用的是valueOf()<code>和</code>toString()。</p>
 <h4 id="2-1valueOf"><a href="#2-1valueOf" class="headerlink" title="2.1valueOf()"></a>2.1valueOf()</h4><p>返回包装对象实例对应的原始类型的值。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">new Number(123).valueOf()  // 123</span><br><span class="line">new String(&#x27;abc&#x27;).valueOf() // &quot;abc&quot;</span><br><span class="line">new Boolean(true).valueOf() // true</span><br></pre></td></tr></table></figure>
@@ -4185,61 +4232,132 @@
 <p>所以,boolean 类型和 Boolean 对象的主要区别在于:- boolean 是基本数据类型,Boolean 是对象。<br>- boolean 只有 true 和 false 两个字面量,Boolean 除了 true 和 false 值外,还可以有其他属性和方法。<br>- boolean 可以直接用于条件判断,Boolean 需要调用 valueOf() 方法。但是,在大多数情况下,我们可以把 Boolean 对象当作 boolean 类型来使用,因为:- Boolean 对象在布尔表达式中会自动调用 valueOf() 方法,返回基本类型值。</p>
 <h2 id="4-6-3小结"><a href="#4-6-3小结" class="headerlink" title="4.6.3小结"></a>4.6.3小结</h2><p><strong>基于性能考虑,大多数情况下我们会使用基本类型boolean而不是Boolean对象。</strong>所以,boolean 和 Boolean的关系可以看作,boolean 是基本数据类型,Boolean 是它的对象包装形式。</p>
 <h2 id="4-6-4Number"><a href="#4-6-4Number" class="headerlink" title="4.6.4Number"></a>4.6.4Number</h2><p>只有可继承的原型函数prototype.toString（）值得一看</p>
-<h2 id="4-6-5-String"><a href="#4-6-5-String" class="headerlink" title="4.6.5.String"></a>4.6.5.String</h2><h4 id="5-1原型属性"><a href="#5-1原型属性" class="headerlink" title="5.1原型属性"></a>5.1原型属性</h4><ol>
+<h2 id="4-6-5-String"><a href="#4-6-5-String" class="headerlink" title="4.6.5.String"></a>4.6.5.String</h2><h3 id="5-1实例属性（原型属性）"><a href="#5-1实例属性（原型属性）" class="headerlink" title="5.1实例属性（原型属性）"></a>5.1实例属性（原型属性）</h3><ol>
 <li>字符串实例的length属性返回字符串的长度。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;abc&#x27;.length // 3</span><br></pre></td></tr></table></figure>
 
-<h4 id="5-2原型函数"><a href="#5-2原型函数" class="headerlink" title="5.2原型函数"></a>5.2原型函数</h4><ol>
-<li>charAt():返回指定索引处的字符,索引从 0 开始。</li>
+<h3 id="5-2实例方法（原型函数）"><a href="#5-2实例方法（原型函数）" class="headerlink" title="5.2实例方法（原型函数）"></a>5.2实例方法（原型函数）</h3><ol>
+<li><p>charAt():返回指定索引处的字符,索引从 0 开始。</p>
+<p>或当成数组，使用下标访问(这种方法是只读的，想改动这个字符就会报错)。</p>
+</li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;hello&#x27;.charAt(0);  // &#x27;h&#x27;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;hello&#x27;.charAt(0);  // &#x27;h&#x27;</span><br><span class="line">&#x27;hello&#x27;[0];			// &#x27;h&#x27;</span><br></pre></td></tr></table></figure>
 
 <ol start="2">
+<li>at():返回指定索引处的字符。接受负整数，从最后一个字符串字符开始倒数。</li>
+<li>includes():确定调用字符串是否包含 searchString。</li>
 <li>concat():连接两个或多个字符串,返回连接后的字符串。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;hello&#x27;.concat(&#x27; &#x27;, &#x27;world&#x27;);  // &#x27;hello world&#x27;</span><br></pre></td></tr></table></figure>
 
-<ol start="3">
+<ol start="5">
 <li>startsWith():检查字符串是否以指定的子字符串开头,返回 true 或 false。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;hello&#x27;.startsWith(&#x27;he&#x27;);   // true</span><br></pre></td></tr></table></figure>
 
-<ol start="4">
+<ol start="6">
 <li>endsWith():检查字符串是否以指定的子字符串结尾,返回 true 或 false。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;hello&#x27;.endsWith(&#x27;lo&#x27;);   // true</span><br></pre></td></tr></table></figure>
 
-<ol start="5">
+<ol start="7">
 <li>indexOf():返回指定子字符串首次出现的索引,如果不存在则返回 -1。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;hello&#x27;.indexOf(&#x27;l&#x27;);   // 2</span><br></pre></td></tr></table></figure>
 
-<ol start="6">
+<ol start="8">
 <li>lastIndexOf():返回指定子字符串最后一次出现的索引,如果不存在则返回 -1。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;hello&#x27;.lastIndexOf(&#x27;l&#x27;);   // 3</span><br></pre></td></tr></table></figure>
 
-<ol start="7">
-<li>slice():提取字符串的一部分,返回提取后的字符串。</li>
+<ol start="9">
+<li>slice():切片。提取字符串的一部分,返回提取后的字符串。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;hello&#x27;.slice(1, 3);   // &#x27;el&#x27;</span><br></pre></td></tr></table></figure>
 
-<ol start="8">
-<li>substring():提取字符串的一部分,返回提取后的字符串。与 slice() 类似。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;hello&#x27;.substring(1, 3);   // &#x27;el&#x27;</span><br></pre></td></tr></table></figure>
-
-<ol start="9">
-<li>split():将字符串按指定分隔符拆分成数组,返回数组。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">js</span><br><span class="line">&#x27;a-b-c&#x27;.split(&#x27;-&#x27;);   // [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]</span><br></pre></td></tr></table></figure>
-
 <ol start="10">
+<li>split():拆分。将字符串按指定分隔符拆分成数组,返回数组。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;a-b-c&#x27;.split(&#x27;-&#x27;);   // [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]</span><br></pre></td></tr></table></figure>
+
+<ol start="11">
 <li>replace():替换字符串中的指定子字符串,返回替换后的字符串。</li>
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#x27;hello&#x27;.replace(&#x27;l&#x27;, &#x27;x&#x27;);   // &#x27;hexxo&#x27;</span><br></pre></td></tr></table></figure>
 
+<p>&#x2F;&#x2F;正则相关<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String">String - JavaScript | MDN (mozilla.org)</a></p>
+<ol start="12">
+<li><p>match()</p>
+</li>
+<li><p>matchAll()</p>
+</li>
+<li><p>replace()</p>
+</li>
+<li><p>replaceAll()</p>
+</li>
+<li><p>serach()</p>
+</li>
+</ol>
+<p>&#x2F;&#x2F;claude认为的常用方法</p>
+<ol>
+<li>String.prototype.indexOf() 和String.prototype.lastIndexOf() :用于查找字符串中的子字符串,前者从前往后,后者从后往前。</li>
+<li>String.prototype.slice() :用于提取字符串的一部分,返回一个新的字符串。</li>
+<li>String.prototype.substring() <code>:也用于提取字符串的一部分,返回一个新的字符串。和 slice 稍有不同。</code></li>
+<li>String.prototype.substr() :同样用于提取字符串的一部分,返回一个新的字符串。和 slice、substring 也有差异。</li>
+<li>String.prototype.replace() :用于替换字符串中的子字符串</li>
+<li>String.prototype.toUpperCase() <code>和</code> String.prototype.toLowerCase():用于转换字符串的大小写。</li>
+<li>String.prototype.concat() :用于连接两个或更多字符串,返回一个新字符串。&#96;</li>
+<li>String.prototype.trim() 、String.prototype.trimStart() <code>和</code> String.prototype.trimEnd():用于删除字符串开头或结尾的空格。</li>
+<li>String.prototype.charAt() :返回指定索引处的字符。</li>
+<li>String.prototype.split() :将字符串分割成子字符串数组。</li>
+<li>String.prototype.match() :将正则表达式应用于字符串,返回匹配结果。</li>
+<li>String.prototype.search() :搜索字符串中第一个匹配项的索引。</li>
+<li>String.prototype.startsWith() <code>和</code>String.prototype.endsWith() :用于判断字符串是否以某个子字符串开头或结尾。</li>
+</ol>
+<h3 id="5-3构造函数"><a href="#5-3构造函数" class="headerlink" title="5.3构造函数"></a>5.3构造函数</h3><p>不当构造函数用，当强制转换用：String(value)&#x3D;&#x3D;&#x3D;value.valueOf();返回的不是String对象而是字面量string类型。</p>
+<h3 id="5-4静态方法"><a href="#5-4静态方法" class="headerlink" title="5.4静态方法"></a>5.4静态方法</h3><p>没用</p>
+<h3 id="5-5其它es6补充"><a href="#5-5其它es6补充" class="headerlink" title="5.5其它es6补充"></a>5.5其它es6补充</h3><h4 id="1-标记变量（并替换）"><a href="#1-标记变量（并替换）" class="headerlink" title="1.标记变量（并替换）${}"></a>1.标记变量（并替换）${}</h4><ol>
+<li><p>作用：字符串连接时需要用‘’+‘’号链接，用了＄{}后，就不用了。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let a = 10;</span><br><span class="line">let b = 20;</span><br><span class="line">console.log(`$&#123;a&#125;小于$&#123;b&#125;`);</span><br><span class="line">// 输出:10小于20 </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>原理</p>
+<p>相当于标记了一下，大括号里的是变量，省的被函数默认当成字符了。</p>
+</li>
+<li><p>易错点</p>
+<p>只有使用反引号,字符串插值语法才会被识别和渲染。`${a}小于${b}`</p>
+</li>
+</ol>
+<h4 id="2-忽略转义"><a href="#2-忽略转义" class="headerlink" title="2.忽略转义"></a>2.忽略转义</h4><p>String.raw()是ES6新增的一个字符串原生方法。它的作用是使转义符和${}失效。</p>
+<p>它的基本语法是:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">String.raw`string` </span><br></pre></td></tr></table></figure>
+
+<p>它有以下几个值得注意的点:</p>
+<ol>
+<li>符串中的转义字符会被当成普通字符直接输出。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">String.raw`String with \n`   // &quot;String with \n&quot;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>它可以解析字符串模板中${}内的表达式。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let name = &quot;Bob&quot;;</span><br><span class="line">String.raw`Hello, $&#123;name&#125;!`   // &quot;Hello, $&#123;name&#125;!&quot;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>它主要用于创建带有未转义\字符的字符串,以及在模板字符串中包含大量${expression}时,避免字符串拼接的性能开销。</li>
+<li>如果原字符串没有需要转义的字符或模板变量,使用String.raw()和普通字符串没有任何区别。例子:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">String.raw`Hello\nworld!`   // &quot;Hello\nworld!&quot;  </span><br><span class="line">String.raw`Hello$&#123;name&#125;!`   // &quot;Hello$&#123;name&#125;!&quot;</span><br><span class="line"></span><br><span class="line">&quot;Hello\nworld!&quot;              // &quot;Hello </span><br><span class="line">world!&quot;</span><br><span class="line">&quot;Hello$&#123;name&#125;!&quot;              // &quot;HelloBob!&quot;</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li><h1 id="String-raw-可以和标签函数一起使用-此时会调用标签函数-并将原始字符串作为参数传入。（没看懂）"><a href="#String-raw-可以和标签函数一起使用-此时会调用标签函数-并将原始字符串作为参数传入。（没看懂）" class="headerlink" title="String.raw()可以和标签函数一起使用,此时会调用标签函数,并将原始字符串作为参数传入。（没看懂）"></a>String.raw()可以和标签函数一起使用,此时会调用标签函数,并将原始字符串作为参数传入。（没看懂）</h1>例如:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function tag(strings) &#123;</span><br><span class="line">  console.log(strings.raw[0]);</span><br><span class="line">&#125;</span><br><span class="line">tag`Hello\nworld!`   // &quot;Hello\\nworld!&quot;</span><br></pre></td></tr></table></figure>
+
+<p>总之,String.raw()是一个获取原生字符串字面量的强大方法,可以用来避免字符串解析,或在模板字符串中包含大量变量时提升性能。</p>
+<h3 id="5-6其他补充"><a href="#5-6其他补充" class="headerlink" title="5.6其他补充"></a>5.6其他补充</h3><ol>
+<li>长字符串的处理<br>1.+<br>    const longString &#x3D;<br>      “This is a very long string which needs “ +<br>      “to wrap across multiple lines because “ +<br>      “otherwise my code is unreadable.”;<br>2.<br>    const longString &#x3D;<br>      “This is a very long string which needs <br>    to wrap across multiple lines because <br>    otherwise my code is unreadable.”;</li>
+</ol>
 <h2 id="4-6-6Math"><a href="#4-6-6Math" class="headerlink" title="4.6.6Math"></a>4.6.6Math</h2><h4 id="6-1（只有）静态函数"><a href="#6-1（只有）静态函数" class="headerlink" title="6.1（只有）静态函数"></a>6.1（只有）静态函数</h4><ul>
 <li><p><code>Math.abs()</code>：绝对值（负数也适用，求ab差的绝对值：Math.abs(2 - 3)）</p>
 <p>两下标之间的距离不能用a+b，要用abs（a-b），防止有负数下标</p>
@@ -5431,5 +5549,151 @@ const findSingle = (list) => {
 }
 
 findSingle([10, 2, 2 , 1, 0, 0, 10])]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/05/01/giligili/</url>
+    <content><![CDATA[<p><img src="/./markdown-img/giligili.assets/image-20230501160218413.png" alt="image-20230501160218413"></p>
+<p>为什么直接使用display flex就能直接让flex的内容横过来</p>
+<p>注释写好，是为了方便查找，ctrl f头部就能找到头部的所有样式</p>
+<p><img src="/./markdown-img/giligili.assets/image-20230501162247727.png" alt="image-20230501162247727"></p>
+<p><img src="/./markdown-img/giligili.assets/image-20230501162235824.png" alt="image-20230501162235824"></p>
+<p>在f12计算样式里查样式</p>
+<p>去掉边框线</p>
+<p><img src="/./markdown-img/giligili.assets/image-20230501170906132.png" alt="image-20230501170906132"></p>
+<p>padding ：上下px  左右px；</p>
+<p>win+v剪切板</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/04/30/github%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>tailwind.css（公司在用）         </p>
+<p>两个预处理器：sass（网站：sass文档）（用的多可以学，优点比如嵌套）less（用的多）</p>
+<p>怎么在desktop上，</p>
+<p>C:\Users\11096\Documents\GitHub\MyBlog&gt;code .</p>
+<p>pnpm的优点</p>
+<p>​		软连接</p>
+<p>vscode 里直接打开终端</p>
+<p>ctrl shift c（cmd） 或者ctrl shift &#96;（内嵌）</p>
+<p>npm i下载依赖</p>
+<p>npm run 【script命令】</p>
+<p>0.npm -i下载依赖</p>
+<p>&#x2F;&#x2F;上传</p>
+<p>1.npm run build(第一个终端，结束后别关)</p>
+<p>2.npm run start（第二个终端）</p>
+<p>&#x2F;&#x2F;</p>
+<p>1.本地启动</p>
+<p>C:\Users\11096\Documents\GitHub\MyBlog&gt;npm run dev</p>
+<blockquote>
+<p><a href="mailto:&#98;&#x6c;&#x6f;&#x67;&#x2d;&#x76;&#50;&#64;&#48;&#x2e;&#x31;&#x2e;&#48;">&#98;&#x6c;&#x6f;&#x67;&#x2d;&#x76;&#50;&#64;&#48;&#x2e;&#x31;&#x2e;&#48;</a> dev<br>next dev -p 3002</p>
+</blockquote>
+<ol start="2">
+<li></li>
+</ol>
+<p>更改about页面</p>
+<p><img src="/./../%E5%85%B6%E5%AE%83/markdown-img/github%E4%BD%BF%E7%94%A8.assets/image-20230430144640393.png" alt="image-20230430144640393"></p>
+<p>github仓库自动部署用网站</p>
+<p><a href="https://app.netlify.com/">https://app.netlify.com/</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>静态页面-1girigiri_love</title>
+    <url>/2023/05/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/Q0-intrest/</url>
+    <content><![CDATA[<h1 id="1-视差滚动"><a href="#1-视差滚动" class="headerlink" title="1.视差滚动"></a>1.视差滚动</h1><p>可以查范例看看</p>
+]]></content>
+      <categories>
+        <category>code</category>
+        <category>note</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>静态页面-1girigiri_love</title>
+    <url>/2023/05/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E7%BB%83%E4%B9%A0/girigiri_love/</url>
+    <content><![CDATA[<h2 id="1-一个问题"><a href="#1-一个问题" class="headerlink" title="1.一个问题"></a>1.一个问题</h2><p>想实现的效果：head里的‘个人’图标，想要实现红色圆形底色，且‘个人’图标需要跟其它图标大小相等。且内容部分不会由于宽度的原因冒出头来。</p>
+<ol>
+<li><h3 id="用broder-box"><a href="#用broder-box" class="headerlink" title="用broder-box"></a>用broder-box</h3><p>直接用会导致‘个人’图标缩小</p>
+<img src="./../_posts/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/markdown-img/girigiri_love.assets/image-20230505225632986.png" alt="image-20230505225632986" style="zoom:50%;" />
+</li>
+<li><h3 id="不用broder-box"><a href="#不用broder-box" class="headerlink" title="不用broder-box"></a>不用broder-box</h3><p>主体部分中，很多部分都需要设定宽度100%，又需要设定position：absolute</p>
+<img src="./../_posts/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/markdown-img/girigiri_love.assets/image-20230505225731776.png" alt="image-20230505225731776" style="zoom:33%;" />
+</li>
+<li><h3 id="总结：用broder-box，所以要改‘个人部分’，最好的办法是"><a href="#总结：用broder-box，所以要改‘个人部分’，最好的办法是" class="headerlink" title="总结：用broder-box，所以要改‘个人部分’，最好的办法是"></a>总结：用broder-box，所以要改‘个人部分’，最好的办法是</h3><ol>
+<li><p>利用选择器的优先级原理，给‘个人’的·上一层加一个id&#x3D;user。上一层本身的class选择器不用管。</p>
+<p>重复的部分会被id选择器覆盖。</p>
+<p><img src="./../_posts/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/markdown-img/girigiri_love.assets/image-20230505232718506.png" alt="image-20230505232718506" style="zoom:33%;" /><img src="./../_posts/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/markdown-img/girigiri_love.assets/image-20230505233056969.png" alt="image-20230505233056969" style="zoom: 50%;" /></p>
+</li>
+<li><p>设置它的宽高使其（装‘个人’图片的盒子）成为一个正方形，然后设置border-radius。&#x2F;&#x2F;底部红圆</p>
+</li>
+<li><p>然后通过设置padding来合理缩小图片。</p>
+<img src="./../_posts/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/markdown-img/girigiri_love.assets/1683300580219.png" alt="1683300580219" style="zoom:38%;" /></li>
+</ol>
+</li>
+</ol>
+<h2 id="2-一个知识点"><a href="#2-一个知识点" class="headerlink" title="2.一个知识点"></a>2.一个知识点</h2><p>position：absolute是在偏移，它如果设了left 20等，这和width：100%是互斥的。所以要用broder-box；</p>
+]]></content>
+      <categories>
+        <category>code</category>
+        <category>note</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/04/25/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/String%E7%BB%83%E4%B9%A0/</url>
+    <content><![CDATA[let str = 'Hello World';
+
+//1.访问单个字符：charAt访问法||方括号访问法
+console.log('1.访问单个字符：charAt访问法||方括号访问法');
+console.log('charAt访问法 ' + str.charAt(0));
+console.log('方括号访问法 ' + str[0]);
+console.log('由于方括号表示法不可修改该字符,否则会报错' + str);
+//str[0] = 'c';
+//str[0] = '';
+
+//2.标记变量（es6）
+console.log('2.标记变量（es6）');
+let a = 'a',
+  b = 'b';
+console.log(
+  '${}号使得' +
+    `${a} 不用加号就能连接 ${b}  ，易错点：用的是反单引号，不是单引号`
+);
+
+//3.比较字符串：><=
+console.log('3.比较字符串：><=');
+if (a < b) {
+  console.log(`${a} < ${b}`);
+}
+
+//4.at()
+var str4 = str;
+console.log('4. ' + str4.at(1));
+
+//5.includes()
+var str5 = str;
+console.log('5. ' + str5.includes('he'));
+
+//6.concat()
+var str6 = str;
+console.log('6. ' + str6.concat(' ', 'hi', ' ', 'there'));
+
+//7.lastIndexOf()
+var str7 = str;
+console.log('7. ' + str7 + '最后一个l的下标是' + str7.lastIndexOf('l'));
+
+//8.slice()切片
+var str8 = str;
+console.log('8. ' + str8.slice(0, 9));
+
+//9.split()拆分
+]]></content>
   </entry>
 </search>

@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-04-24T06:13:28.147Z</updated>
+  <updated>2023-05-01T09:39:03.583Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,132 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2023/05/01/giligili/"/>
+    <id>http://example.com/2023/05/01/giligili/</id>
+    <published>2023-05-01T08:02:09.851Z</published>
+    <updated>2023-05-01T09:39:03.583Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/./markdown-img/giligili.assets/image-20230501160218413.png&quot; alt=&quot;image-20230501160218413&quot;&gt;&lt;/p&gt;
+&lt;p&gt;为什么直接使用display</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>静态页面-1girigiri_love</title>
+    <link href="http://example.com/2023/05/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/Q0-intrest/"/>
+    <id>http://example.com/2023/05/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/Q0-intrest/</id>
+    <published>2023-05-01T03:34:47.000Z</published>
+    <updated>2023-05-05T14:55:20.620Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1-视差滚动&quot;&gt;&lt;a href=&quot;#1-视差滚动&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
+    
+    <category term="CSS" scheme="http://example.com/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>静态页面-1girigiri_love</title>
+    <link href="http://example.com/2023/05/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E7%BB%83%E4%B9%A0/girigiri_love/"/>
+    <id>http://example.com/2023/05/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E7%BB%83%E4%B9%A0/girigiri_love/</id>
+    <published>2023-05-01T03:34:47.000Z</published>
+    <updated>2023-05-05T15:36:52.333Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-一个问题&quot;&gt;&lt;a href=&quot;#1-一个问题&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="code" scheme="http://example.com/categories/code/"/>
+    
+    <category term="note" scheme="http://example.com/categories/code/note/"/>
+    
+    
+    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
+    
+    <category term="CSS" scheme="http://example.com/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2023/04/30/github%E4%BD%BF%E7%94%A8/"/>
+    <id>http://example.com/2023/04/30/github%E4%BD%BF%E7%94%A8/</id>
+    <published>2023-04-30T05:32:21.097Z</published>
+    <updated>2023-04-30T07:19:10.759Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;tailwind.css（公司在用）        </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2023/04/25/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/String%E7%BB%83%E4%B9%A0/"/>
+    <id>http://example.com/2023/04/25/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/String%E7%BB%83%E4%B9%A0/</id>
+    <published>2023-04-25T05:41:32.060Z</published>
+    <updated>2023-04-25T15:07:09.075Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">let str = &#39;Hello World&#39;;
+
+//1.访问单个字符：charAt访问法||方括号访问法
+console.log(&#39;1.访问单个字符：charAt访问法||方括号访问法&#39;);
+console.log(&#39;charAt访问法 &#39; +</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -362,11 +488,11 @@ let findA = (arr) =&gt; {
   </entry>
   
   <entry>
-    <title>JS学习笔记-4.6标准库（base阮一峰/gpt ）</title>
+    <title>JS学习笔记-4.6标准库（base阮一峰/claude/MDN ）</title>
     <link href="http://example.com/2023/04/12/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-6%E6%A0%87%E5%87%86%E5%BA%93/"/>
     <id>http://example.com/2023/04/12/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-6%E6%A0%87%E5%87%86%E5%BA%93/</id>
     <published>2023-04-12T03:34:47.000Z</published>
-    <updated>2023-04-25T03:37:23.437Z</updated>
+    <updated>2023-04-28T13:29:20.574Z</updated>
     
     
       
@@ -412,145 +538,6 @@ let findA = (arr) =&gt; {
     
     
     <category term="JS" scheme="http://example.com/tags/JS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS学习笔记-4.4语言基础（base图灵）</title>
-    <link href="http://example.com/2023/04/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-4%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/"/>
-    <id>http://example.com/2023/04/10/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-4%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/</id>
-    <published>2023-04-10T03:34:47.000Z</published>
-    <updated>2023-04-23T09:43:07.688Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;4-4语言基础&quot;&gt;&lt;a href=&quot;#4-4语言基础&quot; class=&quot;headerlink&quot; title=&quot;4.4语言基础&quot;&gt;&lt;/a&gt;4.4语言基础&lt;/h1&gt;&lt;h2 id=&quot;4-4-1标识符&quot;&gt;&lt;a href=&quot;#4-4-1标识符&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="JS" scheme="http://example.com/tags/JS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS学习笔记-4.3脚本加载（base图灵）</title>
-    <link href="http://example.com/2023/04/09/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-3%E8%84%9A%E6%9C%AC%E5%8A%A0%E8%BD%BD%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/"/>
-    <id>http://example.com/2023/04/09/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-3%E8%84%9A%E6%9C%AC%E5%8A%A0%E8%BD%BD%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9B%BE%E7%81%B5%EF%BC%89/</id>
-    <published>2023-04-09T03:34:47.000Z</published>
-    <updated>2023-04-23T09:43:03.373Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;4-3脚本的加载时机&quot;&gt;&lt;a href=&quot;#4-3脚本的加载时机&quot; class=&quot;headerlink&quot; title=&quot;4.3脚本的加载时机&quot;&gt;&lt;/a&gt;4.3脚本的加载时机&lt;/h1&gt;&lt;h2 id=&quot;4-3-1script标签&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="JS" scheme="http://example.com/tags/JS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS学习笔记-4.2JS标准库（base mooc）</title>
-    <link href="http://example.com/2023/04/08/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-2%E6%A0%87%E5%87%86%E5%BA%93%EF%BC%88mooc%EF%BC%89/"/>
-    <id>http://example.com/2023/04/08/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-2%E6%A0%87%E5%87%86%E5%BA%93%EF%BC%88mooc%EF%BC%89/</id>
-    <published>2023-04-08T03:34:47.000Z</published>
-    <updated>2023-04-23T09:42:59.045Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;3-2JS标准库（mooc）&quot;&gt;&lt;a href=&quot;#3-2JS标准库（mooc）&quot; class=&quot;headerlink&quot; title=&quot;3.2JS标准库（mooc）&quot;&gt;&lt;/a&gt;3.2JS标准库（mooc）&lt;/h1&gt;&lt;h2 id=&quot;1-Object对象&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="JS" scheme="http://example.com/tags/JS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS学习笔记-4.1JS基础（base mooc）</title>
-    <link href="http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-1%E5%9F%BA%E7%A1%80%EF%BC%88mooc%EF%BC%89/"/>
-    <id>http://example.com/2023/04/07/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-1%E5%9F%BA%E7%A1%80%EF%BC%88mooc%EF%BC%89/</id>
-    <published>2023-04-07T03:34:47.000Z</published>
-    <updated>2023-04-19T11:50:23.152Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;4-1JS基础（mooc）&quot;&gt;&lt;a href=&quot;#4-1JS基础（mooc）&quot; class=&quot;headerlink&quot; title=&quot;4.1JS基础（mooc）&quot;&gt;&lt;/a&gt;4.1JS基础（mooc）&lt;/h1&gt;&lt;h2 id=&quot;大纲&quot;&gt;&lt;a href=&quot;#大纲&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="JS" scheme="http://example.com/tags/JS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2023/04/05/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/CSS/4.4%204.5position/3.%E7%B2%98%E6%80%A7%E5%AE%9A%E4%BD%8D/main/"/>
-    <id>http://example.com/2023/04/05/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/CSS/4.4%204.5position/3.%E7%B2%98%E6%80%A7%E5%AE%9A%E4%BD%8D/main/</id>
-    <published>2023-04-05T10:07:10.000Z</published>
-    <updated>2023-04-05T12:26:32.952Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">* {
-    margin: 0;
-    padding: 0;
-}
-.box {
-    position: relative;
-}
-ul {
-    list-style: none;
-    display: flex;
-    background-color:</summary>
-        
-      
-    
-    
-    
     
   </entry>
   
