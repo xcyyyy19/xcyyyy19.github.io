@@ -18,69 +18,6 @@
   
   <entry>
     <title></title>
-    <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(8)--%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%99%A8/"/>
-    <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(8)--%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%99%A8/</id>
-    <published>2023-06-21T07:42:41.529Z</published>
-    <updated>2021-07-09T11:19:02.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;上篇主要介绍和讨论了支持向量机。从最初的分类函数，通过最大化分类间隔，max(1&amp;#x2F;||w||)，min(1&amp;#x2F;2||w||^2)，凸二次规划，朗格朗日函数，对偶问题，一直到最后的SMO算法求解，都为寻找一个最优解。接着引入核函数将低维空间映射到高维特征空间</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(9)--EM%E7%AE%97%E6%B3%95/"/>
-    <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(9)--EM%E7%AE%97%E6%B3%95/</id>
-    <published>2023-06-21T07:42:41.529Z</published>
-    <updated>2021-07-09T11:19:02.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;上篇主要介绍了贝叶斯分类器，从贝叶斯公式到贝叶斯决策论，再到通过极大似然法估计类条件概率，贝叶斯分类器的训练就是参数估计的过程。朴素贝叶斯则是“属性条件独立性假设”下的特例，它避免了假设属性联合分布过于经验性和训练集不足引起参数估计较大偏差两个大问题，最后介绍的拉普拉斯修正</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(6)--%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
-    <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(6)--%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</id>
-    <published>2023-06-21T07:42:41.526Z</published>
-    <updated>2021-07-09T11:19:02.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;上篇主要讨论了决策树算法。首先从决策树的基本概念出发，引出决策树基于树形结构进行决策，进一步介绍了构造决策树的递归流程以及其递归终止条件，在递归的过程中，划分属性的选择起到了关键作用，因此紧接着讨论了三种评估属性划分效果的经典算法，介绍了剪枝策略来解决原生决策树容易产生的过</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
     <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(16)--%E6%A6%82%E7%8E%87%E5%9B%BE%E6%A8%A1%E5%9E%8B/"/>
     <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(16)--%E6%A6%82%E7%8E%87%E5%9B%BE%E6%A8%A1%E5%9E%8B/</id>
     <published>2023-06-21T07:42:41.513Z</published>
@@ -271,24 +208,26 @@
   </entry>
   
   <entry>
-    <title>西瓜书</title>
+    <title>西瓜书1 2.1 2.2 2.3 2.4</title>
     <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(1)--%E7%BB%AA%E8%AE%BA/"/>
     <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(1)--%E7%BB%AA%E8%AE%BA/</id>
     <published>2023-06-21T03:43:25.000Z</published>
-    <updated>2023-06-21T07:46:15.975Z</updated>
+    <updated>2023-06-21T08:01:15.752Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;机器学习是目前信息技术中最激动人心的方向之一，其应用已经深入到生活的各个层面且与普通人的日常生活密切相关。本文为清华大学最新出版的《机器学习》教材的Learning</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;1 </summary>
         
       
     
     
     
-    <category term="note" scheme="http://example.com/categories/note/"/>
+    <category term="AI" scheme="http://example.com/categories/AI/"/>
+    
+    <category term="note" scheme="http://example.com/categories/AI/note/"/>
     
     
     <category term="ML" scheme="http://example.com/tags/ML/"/>
@@ -296,11 +235,11 @@
   </entry>
   
   <entry>
-    <title>西瓜书</title>
+    <title>西瓜书2.5</title>
     <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(2)--%E6%80%A7%E8%83%BD%E5%BA%A6%E9%87%8F/"/>
     <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(2)--%E6%80%A7%E8%83%BD%E5%BA%A6%E9%87%8F/</id>
     <published>2023-06-21T03:43:25.000Z</published>
-    <updated>2023-06-21T07:46:35.138Z</updated>
+    <updated>2023-06-21T07:57:21.405Z</updated>
     
     
       
@@ -313,7 +252,9 @@
     
     
     
-    <category term="note" scheme="http://example.com/categories/note/"/>
+    <category term="AI" scheme="http://example.com/categories/AI/"/>
+    
+    <category term="note" scheme="http://example.com/categories/AI/note/"/>
     
     
     <category term="ML" scheme="http://example.com/tags/ML/"/>
@@ -321,11 +262,11 @@
   </entry>
   
   <entry>
-    <title>西瓜书</title>
+    <title>西瓜书2.6 2.7</title>
     <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(3)--%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C&amp;%E6%96%B9%E5%B7%AE&amp;%E5%81%8F%E5%B7%AE/"/>
     <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(3)--%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C&amp;%E6%96%B9%E5%B7%AE&amp;%E5%81%8F%E5%B7%AE/</id>
     <published>2023-06-21T03:43:25.000Z</published>
-    <updated>2023-06-21T07:46:46.510Z</updated>
+    <updated>2023-06-21T07:57:15.634Z</updated>
     
     
       
@@ -338,7 +279,9 @@
     
     
     
-    <category term="note" scheme="http://example.com/categories/note/"/>
+    <category term="AI" scheme="http://example.com/categories/AI/"/>
+    
+    <category term="note" scheme="http://example.com/categories/AI/note/"/>
     
     
     <category term="ML" scheme="http://example.com/tags/ML/"/>
@@ -350,7 +293,7 @@
     <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(5)--%E5%86%B3%E7%AD%96%E6%A0%91/"/>
     <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(5)--%E5%86%B3%E7%AD%96%E6%A0%91/</id>
     <published>2023-06-21T03:43:25.000Z</published>
-    <updated>2023-06-21T07:47:13.347Z</updated>
+    <updated>2023-06-21T07:55:10.990Z</updated>
     
     
       
@@ -363,7 +306,9 @@
     
     
     
-    <category term="note" scheme="http://example.com/categories/note/"/>
+    <category term="AI" scheme="http://example.com/categories/AI/"/>
+    
+    <category term="note" scheme="http://example.com/categories/AI/note/"/>
     
     
     <category term="ML" scheme="http://example.com/tags/ML/"/>
@@ -371,11 +316,11 @@
   </entry>
   
   <entry>
-    <title>西瓜书</title>
+    <title>西瓜书3.1 3.2 3.3 3.4 3.5</title>
     <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(4)--%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/"/>
     <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(4)--%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/</id>
     <published>2023-06-21T03:43:25.000Z</published>
-    <updated>2023-06-21T07:46:55.657Z</updated>
+    <updated>2023-06-21T07:58:02.183Z</updated>
     
     
       
@@ -389,7 +334,117 @@
     
     
     
-    <category term="note" scheme="http://example.com/categories/note/"/>
+    <category term="AI" scheme="http://example.com/categories/AI/"/>
+    
+    <category term="note" scheme="http://example.com/categories/AI/note/"/>
+    
+    
+    <category term="ML" scheme="http://example.com/tags/ML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>西瓜书</title>
+    <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(6)--%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
+    <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(6)--%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</id>
+    <published>2023-06-21T03:43:25.000Z</published>
+    <updated>2023-06-21T07:55:22.452Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;上篇主要讨论了决策树算法。首先从决策树的基本概念出发，引出决策树基于树形结构进行决策，进一步介绍了构造决策树的递归流程以及其递归终止条件，在递归的过程中，划分属性的选择起到了关键作用，因此紧接着讨论了三种评估属性划分效果的经典算法，介绍了剪枝策略来解决原生决策树容易产生的过</summary>
+        
+      
+    
+    
+    
+    <category term="AI" scheme="http://example.com/categories/AI/"/>
+    
+    <category term="note" scheme="http://example.com/categories/AI/note/"/>
+    
+    
+    <category term="ML" scheme="http://example.com/tags/ML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>西瓜书</title>
+    <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(8)--%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%99%A8/"/>
+    <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(8)--%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%99%A8/</id>
+    <published>2023-06-21T03:43:25.000Z</published>
+    <updated>2023-06-21T07:55:52.808Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;上篇主要介绍和讨论了支持向量机。从最初的分类函数，通过最大化分类间隔，max(1&amp;#x2F;||w||)，min(1&amp;#x2F;2||w||^2)，凸二次规划，朗格朗日函数，对偶问题，一直到最后的SMO算法求解，都为寻找一个最优解。接着引入核函数将低维空间映射到高维特征空间</summary>
+        
+      
+    
+    
+    
+    <category term="AI" scheme="http://example.com/categories/AI/"/>
+    
+    <category term="note" scheme="http://example.com/categories/AI/note/"/>
+    
+    
+    <category term="ML" scheme="http://example.com/tags/ML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>西瓜书</title>
+    <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(9)--EM%E7%AE%97%E6%B3%95/"/>
+    <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(9)--EM%E7%AE%97%E6%B3%95/</id>
+    <published>2023-06-21T03:43:25.000Z</published>
+    <updated>2023-06-21T07:56:03.010Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;上篇主要介绍了贝叶斯分类器，从贝叶斯公式到贝叶斯决策论，再到通过极大似然法估计类条件概率，贝叶斯分类器的训练就是参数估计的过程。朴素贝叶斯则是“属性条件独立性假设”下的特例，它避免了假设属性联合分布过于经验性和训练集不足引起参数估计较大偏差两个大问题，最后介绍的拉普拉斯修正</summary>
+        
+      
+    
+    
+    
+    <category term="AI" scheme="http://example.com/categories/AI/"/>
+    
+    <category term="note" scheme="http://example.com/categories/AI/note/"/>
+    
+    
+    <category term="ML" scheme="http://example.com/tags/ML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>西瓜书</title>
+    <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(7)--%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA/"/>
+    <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(7)--%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA/</id>
+    <published>2023-06-21T03:43:25.000Z</published>
+    <updated>2023-06-21T07:55:43.776Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;上篇主要介绍了神经网络。首先从生物学神经元出发，引出了它的数学抽象模型–MP神经元以及由两层神经元组成的感知机模型，并基于梯度下降的方法描述了感知机模型的权值调整规则。由于简单的感知机不能处理线性不可分的情形，因此接着引入了含隐层的前馈型神经网络，BP神经网络则是其中最为成</summary>
+        
+      
+    
+    
+    
+    <category term="AI" scheme="http://example.com/categories/AI/"/>
+    
+    <category term="note" scheme="http://example.com/categories/AI/note/"/>
     
     
     <category term="ML" scheme="http://example.com/tags/ML/"/>
@@ -431,35 +486,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;1-视差滚动&quot;&gt;&lt;a href=&quot;#1-视差滚动&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
-    
-    <category term="CSS" scheme="http://example.com/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>静态页面-1girigiri_love</title>
-    <link href="http://example.com/2023/05/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E7%BB%83%E4%B9%A0/girigiri_love/"/>
-    <id>http://example.com/2023/05/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E7%BB%83%E4%B9%A0/girigiri_love/</id>
-    <published>2023-05-01T03:34:47.000Z</published>
-    <updated>2023-05-05T16:09:57.655Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1-一个问题&quot;&gt;&lt;a href=&quot;#1-一个问题&quot; class=&quot;headerlink&quot;</summary>
         
       
     

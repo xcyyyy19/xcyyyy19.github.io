@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>西瓜书 |  Pravite Home</title>
+      <title>西瓜书1 2.1 2.2 2.3 2.4 |  Pravite Home</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -68,7 +68,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  西瓜书
+  西瓜书1 2.1 2.2 2.3 2.4
 </h1>
  
 
@@ -80,7 +80,7 @@
   <time datetime="2023-06-21T03:43:25.000Z" itemprop="datePublished">2023-06-21</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/note/">note</a>
+    <a class="article-category-link" href="/categories/AI/">AI</a> / <a class="article-category-link" href="/categories/AI/note/">note</a>
   </div>
   
 <div class="word_count">
@@ -88,7 +88,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">3.4k</span>
+            <span class="post-count">3.3k</span>
         </span>
     </span>
 
@@ -110,8 +110,7 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>机器学习是目前信息技术中最激动人心的方向之一，其应用已经深入到生活的各个层面且与普通人的日常生活密切相关。本文为清华大学最新出版的《机器学习》教材的Learning Notes，书作者是南京大学周志华教授，多个大陆首位彰显其学术奢华。本篇主要介绍了该教材前两个章节的知识点以及自己一点浅陋的理解。</p>
-<p><strong>1  绪论</strong></p>
+  <p><strong>1  绪论</strong></p>
 <p>傍晚小街路面上沁出微雨后的湿润，和熙的细风吹来，抬头看看天边的晚霞，嗯，明天又是一个好天气。走到水果摊旁，挑了个根蒂蜷缩、敲起来声音浊响的青绿西瓜，一边满心期待着皮薄肉厚瓢甜的爽落感，一边愉快地想着，这学期狠下了工夫，基础概念弄得清清楚楚，算法作业也是信手拈来，这门课成绩一定差不了！哈哈，也希望自己这学期的machine learning课程取得一个好成绩！</p>
 <p><strong>1.1 机器学习的定义</strong></p>
 <p>正如我们根据过去的经验来判断明天的天气，吃货们希望从购买经验中挑选一个好瓜，那能不能让计算机帮助人类来实现这个呢？机器学习正是这样的一门学科，人的“经验”对应计算机中的“数据”，让计算机来学习这些经验数据，生成一个算法模型，在面对新的情况中，计算机便能作出有效的判断，这便是机器学习。</p>
@@ -129,9 +128,9 @@
 </li>
 <li><p>每一条记录为：一个实例（instance）或样本（sample）。</p>
 </li>
-<li><p>例如：色泽或敲声，单个的特点为特征（feature）或属性（attribute）。</p>
+<li><p>例如：色泽或敲声，单个的特点为【【特征】】（feature）或属性（attribute）。</p>
 </li>
-<li><p>对于一条记录，如果在坐标轴上表示，每个西瓜都可以用坐标轴中的一个点表示，一个点也是一个向量，例如（青绿，蜷缩，浊响），即每个西瓜为：一个特征向量（feature vector）。</p>
+<li><p>对于一条记录，如果在坐标轴上表示，每个西瓜都可以用坐标轴中的一个点表示，一个点也是一个向量，例如（青绿，蜷缩，浊响），即每个西瓜为：一个【【特征向量】】（feature vector）。</p>
 </li>
 <li><p>一个样本的特征数为：维数（dimensionality），该西瓜的例子维数为3，当维数非常大时，也就是现在说的“维数灾难”。</p>
 <p> 计算机程序学习经验数据生成算法模型的过程中，每一条记录称为一个“训练样本”，同时在训练好模型后，我们希望使用新的样本来测试模型的效果，则每一个新的样本称为一个“测试样本”。定义：	</p>
@@ -174,7 +173,7 @@
 <p>假设老师出了10 道习题供同学们练习，考试时老师又用同样的这10道题作为试题，可能有的童鞋只会做这10 道题却能得高分，很明显：这个考试成绩并不能有效地反映出真实水平。回到我们的问题上来，我们希望得到泛化性能好的模型，好比希望同学们课程学得好并获得了对所学知识”举一反三”的能力；训练样本相当于给同学们练习的习题，测试过程则相当于考试。显然，若测试样本被用作训练了，则得到的将是过于”乐观”的估计结果。</p>
 <p><strong>2.3 训练集与测试集的划分方法</strong></p>
 <p>如上所述：我们希望用一个“测试集”的“测试误差”来作为“泛化误差”的近似，因此我们需要对初始数据集进行有效划分，划分出互斥的“训练集”和“测试集”。下面介绍几种常用的划分方法：</p>
-<p><strong>2.3.1 留出法</strong></p>
+<p><strong>2.3.1 留出法</strong>【【【【分层抽样具体应用在哪些方法上了？？】】】】</p>
 <p>将数据集D划分为两个互斥的集合，一个作为训练集S，一个作为测试集T，满足D&#x3D;S∪T且S∩T&#x3D;∅，常见的划分为：大约2&#x2F;3-4&#x2F;5的样本用作训练，剩下的用作测试。需要注意的是：训练&#x2F;测试集的划分要尽可能保持数据分布的一致性，以避免由于分布的差异引入额外的偏差，常见的做法是采取分层抽样。同时，由于划分的随机性，单次的留出法结果往往不够稳定，一般要采用若干次随机划分，重复实验取平均值的做法。</p>
 <p><strong>2.3.2 交叉验证法</strong></p>
 <p>将数据集D划分为k个大小相同的互斥子集，满足D&#x3D;D1∪D2∪…∪Dk，Di∩Dj&#x3D;∅（i≠j），同样地尽可能保持数据分布的一致性，即采用分层抽样的方法获得这些子集。交叉验证法的思想是：每次用k-1个子集的并集作为训练集，余下的那个子集作为测试集，这样就有K种训练集&#x2F;测试集划分的情况，从而可进行k次训练和测试，最终返回k次测试结果的均值。交叉验证法也称“k折交叉验证”，k最常用的取值是10，下图给出了10折交叉验证的示意图。</p>
@@ -278,7 +277,7 @@
     
       <a href="/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(2)--%E6%80%A7%E8%83%BD%E5%BA%A6%E9%87%8F/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">西瓜书</div>
+        <div class="article-nav-title">西瓜书2.5</div>
       </a>
     
   </nav>

@@ -151,6 +151,203 @@
     
     
     <article
+  id="post-前端学习笔记/CSS/Q3-CSS-1定位与布局"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q3-CSS-1%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%B8%83%E5%B1%80/"
+    >CSS学习笔记-2.1盒子、定位与布局</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/04/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/CSS/Q3-CSS-1%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%B8%83%E5%B1%80/" class="article-date">
+  <time datetime="2023-04-01T03:34:47.000Z" itemprop="datePublished">2023-04-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="CSS学习笔记-2-1盒子、定位与布局-三种重要布局及其它布局"><a href="#CSS学习笔记-2-1盒子、定位与布局-三种重要布局及其它布局" class="headerlink" title="CSS学习笔记-2.1盒子、定位与布局-三种重要布局及其它布局"></a>CSS学习笔记-2.1盒子、定位与布局-三种重要布局及其它布局</h1><p><a target="_blank" rel="noopener" href="https://www.icourse163.org/learn/BFU-1003382003?tid=1469987444#/learn/content?type=detail&id=1253020763&sm=1">Web前端开发_中国大学MOOC(慕课) (icourse163.org)</a></p>
+<h2 id="布局三种定位机制："><a href="#布局三种定位机制：" class="headerlink" title="布局三种定位机制："></a>布局三种定位机制：</h2><p>文档流（元素分类inlineblock.元素类型转换display）→浮动（float属性）→层（position属性）</p>
+<img src=".\Q3\1680613753098.png" alt="1680613753098" style="zoom:50%;" />
+
+<h2 id="1-元素布局（终极布局，最好用）"><a href="#1-元素布局（终极布局，最好用）" class="headerlink" title="1.元素布局（终极布局，最好用）"></a>1.元素布局（终极布局，最好用）</h2><ol>
+<li><h3 id="灵活-x2F-弹性-x2F-伸缩布局flex"><a href="#灵活-x2F-弹性-x2F-伸缩布局flex" class="headerlink" title="灵活&#x2F;弹性&#x2F;伸缩布局flex"></a>灵活&#x2F;弹性&#x2F;伸缩布局flex</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Lp4y1S7XM/?spm_id_from=333.337.search-card.all.click&vd_source=ef1cf51b50e94d98e56cf1e5ecbbeb92">五分钟掌握 css3 flex弹性布局</a></p>
+<p>Flex 布局教程：语法篇</p>
+<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
+<p>Flex 布局教程：实例篇</p>
+<p><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2015/07/flex-examples.html">https://www.ruanyifeng.com/blog/2015/07/flex-examples.html</a></p>
+<p>小青蛙游戏学flex</p>
+<p><a target="_blank" rel="noopener" href="http://flexboxfroggy.com/">Flexbox Froggy - A game for learning CSS flexbox</a></p>
+<h4 id="属性作用域分类："><a href="#属性作用域分类：" class="headerlink" title="属性作用域分类："></a>属性作用域分类：</h4><img src=".\Q3\image-20230406114818874.png" alt="image-20230406114818874" style="zoom: 25%;" />
+
+
+
+<h4 id="易错点："><a href="#易错点：" class="headerlink" title="易错点："></a>易错点：</h4><ol>
+<li><p>display：flex；</p>
+<p>常用于有高度的类（body也能用）。且不能用于有其它display需求的类。（如inline-block）。</p>
+</li>
+<li><p>主轴侧轴的改变</p>
+<p>当flex-derection的值改变时，两个轴也会跟着变，也就是说justify-content和align-items也要变。</p>
+</li>
+<li><p>flex的作用域</p>
+<p>只有所在的类，所在类的子类都不算。比如body里写了的flex，justify只能控制body的布局，想控制内部元素的布局就只能嵌套，在.div里也写flex。</p>
+</li>
+<li><p><strong>弹性布局是一维的，网页是二维的</strong>，想要控制盒子，就需要父元素控制一个轴，子元素控制另一个轴。</p>
+</li>
+<li><p>弹性布局是可以嵌套的，祖宗元素设置display：flex，父元素也设置display：flex。</p>
+</li>
+</ol>
+<h4 id="知识点："><a href="#知识点：" class="headerlink" title="知识点："></a>知识点：</h4><p>1.布局原理：采用 Flex 布局的元素，称为容器。它的所有子元素自动成为容器成员，称为项目。</p>
+<p>2.易错点：父盒子设为 flex 后，子元素的float、clear和 vertical-align属性将失效。</p>
+<p>3.flex布局父项常见属性<br>            <strong>flex-direction：</strong>设置主轴的方	</p>
+<blockquote>
+<p>​	   row：行    column：柱子</p>
+</blockquote>
+<img src=".\Q3\image-20230329190849686.png" alt="image-20230329190849686" style="zoom:50%;" />
+
+<p>​			<strong>flex-wrap：</strong>设置子元素是否换行</p>
+<p>​						nowrap 不换行	(装不下会缩小子元素的宽度)<br>​						wrap 换行</p>
+<p>​			<strong>justify-content：</strong>设置<strong>主轴</strong>上的子元素排列方式【【【【【不分单行多行吗？】】】】】】</p>
+<img src=".\Q3\image-20230329190910922.png" alt="image-20230329190910922" style="zoom:50%;" />
+
+
+<p>​			<strong>align-items：</strong>设置<strong>辅轴</strong>上的子元素排列方式（单行）</p>
+<p>​						该属性是控制子项在侧轴上的排列方式 在子项为单行的时候使用<br>​						flex-start 从头部开始<br>​						flex-end 从尾部开始<br>​						center 居中显示<br>​						stretch 拉伸      拉伸高度直至完整的占据父元素的高度。</p>
+<p>​			<strong>align-content：</strong> 设置<strong>辅轴</strong>上的子元素的排列方式（多行）</p>
+<p>​				<img src=".\Q3\image-20230329190910922.png" alt="image-20230329190910922" style="zoom: 50%;" /></p>
+<p>​			align-content 和align-items区别<br>​						align-items 适用于单行情况下， 只有上对齐、下对齐、居中和 拉伸<br>​						align-content适用多行换行的情况（单行无效）</p>
+<p>​			<strong>flex-flow：</strong>复合属性，相当于同时设置了 flex-direction 和 flex-wrap</p>
+<p>3.flex布局子项常见属性【少用】<br>            flex子项目占的份数<br>            align-self控制子项自己在侧轴的排列方式<br>            order属性定义子项的排列顺序（前后顺序）<br>4.flex属性<br>            flex 属性定义子项目分配剩余空间，用flex来表示占多少份数。</p>
+<p>​			<strong>【重点：flex：1；表示flex-grow1；&amp;&amp;  flex-shrink：1；</strong></p>
+<p>​			<strong>意味着如果盒子剩余的布局大就自适应缩小，反之就自适应增大】</strong></p>
+<p>5.align-self控制子项自己在侧轴上的排列方式【少用】<br>            align-self 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖 align-items 属性。<br>            默认值为 auto，表示继承父元素的 align-items 属性，如果没有父元素，则等同于 stretch。</p>
+</li>
+<li><h3 id="网格布局Grid"><a href="#网格布局Grid" class="headerlink" title="网格布局Grid"></a>网格布局Grid</h3><p><a target="_blank" rel="noopener" href="https://www.runoob.com/css3/css-grid.html">CSS 网格布局 | 菜鸟教程 (runoob.com)</a></p>
+<h4 id="属性作用域分类：-1"><a href="#属性作用域分类：-1" class="headerlink" title="属性作用域分类："></a>属性作用域分类：</h4><img src=".\Q3\image-20230406160133663.png" alt="image-20230406160133663" style="zoom:50%;" /></li>
+</ol>
+<h4 id="知识点：-1"><a href="#知识点：-1" class="headerlink" title="知识点："></a>知识点：</h4><p>​					<img src=".\Q3\image-20230406160552994.png" alt="image-20230406160552994" style="zoom: 25%;" /></p>
+<h1 id="2-文档流定位（默认布局）"><a href="#2-文档流定位（默认布局）" class="headerlink" title="2.文档流定位（默认布局）"></a>2.文档流定位（默认布局）</h1><h1 id="（元素分类inlineblock-元素类型转换display）"><a href="#（元素分类inlineblock-元素类型转换display）" class="headerlink" title="（元素分类inlineblock.元素类型转换display）"></a>（元素分类inlineblock.元素类型转换display）</h1><p>元素分类：</p>
+<p>​			inline：两个inline元素之间会有一个间隙，需要去除。</p>
+<p>​			block：</p>
+<p>​			inline-block：</p>
+<p>元素转换：</p>
+<h1 id="3-浮动定位"><a href="#3-浮动定位" class="headerlink" title="3.浮动定位"></a>3.浮动定位</h1><h4 id="float属性值："><a href="#float属性值：" class="headerlink" title="float属性值："></a>float属性值：</h4><p>​			1.left</p>
+<p>​			2.right</p>
+<p>​			3.top</p>
+<p>​			4.bottom</p>
+<h4 id="应用："><a href="#应用：" class="headerlink" title="应用："></a>应用：</h4><h4 id=""><a href="#" class="headerlink" title=""></a><img src=".\Q3\image-20230405161130046.png" alt="image-20230405161130046" style="zoom: 33%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161204082.png" alt="image-20230405161204082" style="zoom:33%;" /><img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161227150.png" alt="image-20230405161227150" style="zoom: 25%;" /></h4><h4 id="易错点：1注意浮动时，宽度是否够用的情况"><a href="#易错点：1注意浮动时，宽度是否够用的情况" class="headerlink" title="易错点：1注意浮动时，宽度是否够用的情况"></a>易错点：1注意浮动时，宽度是否够用的情况</h4><p>​					<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405161350930.png" alt="image-20230405161350930" style="zoom: 25%;" /><img src=".\Q3\image-20230405161312570.png" alt="image-20230405161312570" style="zoom: 25%;" /></p>
+<h4 id="易错点：2浮动与flex互斥"><a href="#易错点：2浮动与flex互斥" class="headerlink" title="易错点：2浮动与flex互斥"></a>易错点：2浮动与flex互斥</h4><h4 id="clear清除浮动："><a href="#clear清除浮动：" class="headerlink" title="clear清除浮动："></a>clear清除浮动：</h4><p>​	易错点：清除某一方向的浮动不是把某方向上的浮动元素删除，</p>
+<p>​								而是该元素的某一方向不能有浮动元素。也就是说，该元素会另起一行。</p>
+<p>​	属性值：both（两侧）left right</p>
+<p>​	举例：</p>
+<p>​			单向清除浮动举例<img src=".\Q3\image-20230405165442568.png" alt="image-20230405165442568" style="zoom:25%;" /></p>
+<p>​			both清除浮动举例</p>
+<p>​											<img src="C:\Users\11096\AppData\Roaming\Typora\typora-user-images\image-20230405165348256.png" alt="image-20230405165348256" style="zoom:25%;" /><img src=".\Q3\image-20230405165322218.png" alt="image-20230405165322218" style="zoom: 25%;" /></p>
+<h4 id="float总结："><a href="#float总结：" class="headerlink" title="float总结："></a>float总结：</h4><p>​		1.浮动定位是在同一层面的，可以两个都设置成向左浮动或者一个向左一个向右，来实现同样的效果。 </p>
+<p>​		2.清除浮动不是删除元素，相当于另起一行的效果 。</p>
+<p>​		3.实现几行几列的效果，最初用的都是浮动。想要实现分行，就用清除浮动，想要实现分列，就用增加浮动。</p>
+<h1 id="4-层定位"><a href="#4-层定位" class="headerlink" title="4.层定位"></a>4.层定位</h1><h4 id="1-position属性"><a href="#1-position属性" class="headerlink" title="1.position属性"></a>1.position属性</h4><p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/css/css_positioning.asp">CSS 布局 - position 属性 (w3school.com.cn)</a></p>
+<p>​	概念：</p>
+<p>​		<code>position</code> 属性规定应用于元素的定位方法的类型。</p>
+<p>​	四个不同的平面定位属性：</p>
+<p>​		top bottom left right</p>
+<p>​	一个层叠定位属性：</p>
+<p>​		z-index：哪个元素应放置在其他元素的前面或后面，正负都可，取值大的在上方。</p>
+<p>​	五种不同的定位方式：</p>
+<p>​		static（无定位，还是文件流模式定位）</p>
+<p>​						易错点：top bottom left right z-index无效。</p>
+<p>​		fixed（固定定位，相对于浏览器窗口进行定位）</p>
+<p>​										<strong>用于侧边栏</strong></p>
+<p>​										<strong>易错点：必须设置宽度高度，因为旧有的框架被position打破了。记得设置成100%</strong></p>
+<p>​		relative（相对定位，相对于直接父元素进行定位，不管直接父元素是什么定位方式）</p>
+<p>​						易错点：偏移后，偏移前的位置依然被保留，所以不会有其它元素自动占据它原来的位置。</p>
+<p>​										如果附近有块级元素，它的相对定位会被影响。</p>
+<p>​		absolute（绝对定位，从直接父元素开始向外层查找，</p>
+<p>​						直到找到不是static定位的父元素。如果都是static，则相对于body进行定位）</p>
+<p>​						易错点：偏移后，偏移前的位置不再被保留，所以会有其它元素自动占据它原来的位置。</p>
+<p>​		sticky（粘性定位，根据用户的滚动位置进行定位）</p>
+<p>​						适用于：导航栏本身并不在网页的边边上，在文章中间。直到用户下拉页面，使导航栏到了边边上，为了继续展示导航栏，导航栏就会附着在边上。不是这种情况的话，relative就行了。</p>
+<p>​										<strong>用于吸顶吸底广告</strong>。</p>
+<p>​										兼容性<a target="_blank" rel="noopener" href="https://caniuse.com/?search=position:sticky;">“position:sticky;” | Can I use… Support tables for HTML5, CSS3, etc</a></p>
+<p>​	粘性定位与固定定位的区别：</p>
+<p>​					<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_51093047/article/details/126923647"> 固定定位（fixed）和粘性定位（sticky）的比较-CSDN博客</a>						</p>
+<p>​					粘性定位算在文档流中，固定定位不算。所以固定的小广告会挡视线，粘性的不会</p>
+<p>​	总结：</p>
+<p>​					祖宗元素相对定位，子孙元素全部绝对定位。这样保证更改祖宗元素时，子孙元素都能跟它一起动。</p>
+<p>​	实例：</p>
+<p>​					<a target="_blank" rel="noopener" href="https://juejin.cn/post/7175552665974210615">CSS固定定位与粘性定位4大企业级案例 - 掘金 (juejin.cn)</a></p>
+<h1 id="3-盒子模型"><a href="#3-盒子模型" class="headerlink" title="3.盒子模型"></a>3.盒子模型</h1><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model">盒模型 - 学习 Web 开发 | MDN</a></p>
+<p>内边距:   <strong>padding</strong></p>
+<p>​                padding-left&#x2F;right&#x2F;top&#x2F;bottom:20px;  </p>
+<p>​				padding:10px;（上下左右都是10）</p>
+<p>​				<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/cssref/pr_padding.asp">CSS padding 属性更多用法</a></p>
+<p>框架：<strong>border</strong></p>
+<p>​				框架为宽度50px的实心黑色，border: 50px <strong>solid</strong> black;</p>
+<p>外边距：   <strong>margin</strong></p>
+<p>​                水平居中:margin-left: auto; &amp;&amp; margin-right: auto;</p>
+<p>​				可用于块级标签，p、div等。</p>
+<p>​                去除默认边框宽度：margin：0；（font-size：0是为了解决多余空白符的问题）</p>
+<p>​                缩小上方过大的宽度： margin-top:-25px;（需要来回调试）</p>
+<p>盒子大小：box-sizing</p>
+<p>CSS3中对盒子进行2D变换的属性：<strong>transform</strong></p>
+<p>​				旋转：**transform:rotate(30deg);**顺时针旋转30度。transform:rotate(-30deg);逆时针旋转30度。</p>
+<p>​				缩放：<strong>transform:scale(x,y);</strong></p>
+<p>​							xy取值范围为 【0-1缩小】 【1 ~ +∞放大】</p>
+<h5 id="盒子种类"><a href="#盒子种类" class="headerlink" title="盒子种类:"></a>盒子种类:</h5><img src=".\Q3\image-20230404195037016.png" alt="image-20230404195037016" style="zoom:50%;" />
+
+<h5 id="两种盒模型的区别："><a href="#两种盒模型的区别：" class="headerlink" title="两种盒模型的区别："></a>两种盒模型的区别：</h5><p>​		分别定义了user agent应该如何计算一个元素的总宽度和总高度的方法</p>
+<ul>
+<li>box-sizing：<code>content-box</code> 是默认值。如果你设置一个元素的宽为 100px，那么这个元素的内容区会有 100px 宽，并且任何边框和内边距的宽度都会被增加到最后绘制出来的元素宽度中。</li>
+<li>box-sizing：<code>border-box</code> 告诉浏览器：你想要设置的边框和内边距的值是包含在 width 内的。也就是说，如果你将一个元素的 width 设为 100px，那么这 100px 会包含它的 border 和 padding，内容区的实际宽度是 width 减去 (border + padding) 的值。大多数情况下，这使得我们更容易地设定一个元素的宽高。</li>
+</ul>
+<h5 id="盒子相关的问题："><a href="#盒子相关的问题：" class="headerlink" title="盒子相关的问题："></a>盒子相关的问题：</h5><p>​		<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/110617108">CSS 的两种盒模型 - 及边距异常合并问题</a></p>
+<h4 id="outline和border的区别"><a href="#outline和border的区别" class="headerlink" title="outline和border的区别"></a>outline和border的区别</h4><p>​	主要区别在于: </p>
+<p>​		1.应用场景:一般border能适用于任何元素的样式，outline针对链接、表单控件和ImageMap等元素设计(比如input&#x2F;textarea) </p>
+<p>​		2.特性不一样：border一般会被计算在元素的宽高大小里面，影响元素的尺寸、位置。outline不会</p>
+<p>​		3.outline 的效果将随元素的 focus 而自动出现，相应的由 blur 而自动消失，常设置悬停的动态效果。</p>
+<h3 id="相关层次图"><a href="#相关层次图" class="headerlink" title="相关层次图"></a>相关层次图</h3><p>​	margin：外边距</p>
+<p>​	border：边框</p>
+<p>​	outline：边框</p>
+<p>​	padding：内边距</p>
+<img src=".\Q3\image-20230329124305228.png" alt="image-20230329124305228" style="zoom: 33%;" />
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-前端学习笔记/CSS/Q3-CSS-3实践（flex布局）"
   class="article article-type-post"
   itemscope
@@ -1679,63 +1876,6 @@
     <div class="article-entry" itemprop="articleBody">
        
   <h1 id="HTML学习笔记-3进阶标签与属性"><a href="#HTML学习笔记-3进阶标签与属性" class="headerlink" title="HTML学习笔记-3进阶标签与属性"></a>HTML学习笔记-3进阶标签与属性</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br></pre></td><td class="code"><pre><span class="line">1.超链接     	&lt;a href=&quot;网址&quot; target=&quot;_blank&quot; &gt; 文字或图片 &lt;/a&gt;</span><br><span class="line"> 注：href就是属性的一种</span><br><span class="line"></span><br><span class="line">2.内联元素与块级元素</span><br><span class="line"> 内联：不会自动换行，比如em、strong、input、button。也就是说。如果不特意指定button的作用的话，如果input、button相邻，button就会被默认关联在input上。</span><br><span class="line"> 块级：会自动换行，比如p、fieldset。注：section跟他们有点像,不管什么东西，都要记得用section包裹。</span><br><span class="line">【【【【【【【&lt;article&gt;是干什么用的？？】】】】】</span><br><span class="line">&lt;article&gt; 标签规定独立的自包含内容。</span><br><span class="line">一篇文章应有其自身的意义，应该有可能独立于站点的其余部分对其进行分发。【【【分发是什么意思】】】</span><br><span class="line">&lt;article&gt; 元素的潜在来源：</span><br><span class="line">论坛帖子</span><br><span class="line">报纸文章</span><br><span class="line">博客条目</span><br><span class="line">用户评论】</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">11.内容分块元素      &lt;section&gt;&lt;/section&gt;</span><br><span class="line">section 元素的使用禁忌如下：</span><br><span class="line">.不要将section元素用作设置样式的页面容器，那是div的工作；</span><br><span class="line">.如果article元素或者aside元素或者nav元素更符合使用条件，不要使用section元素；</span><br><span class="line">.不要为没有标题的内容区块使用section元素；</span><br><span class="line"></span><br><span class="line">3.空元素/自闭合元素</span><br><span class="line">  比如&lt;img&gt; &lt;input&gt;</span><br><span class="line">4.属性与布尔属性</span><br><span class="line">  属性：元素的附加限定。用于控制这个元素的行为。</span><br><span class="line">  布尔属性：用布尔值来代表“是否”允许元素做什么事</span><br><span class="line"> eg.输入框   使用 disabled 属性来禁止在输入框里输入</span><br><span class="line">          	&lt;input type=&quot;text&quot; disabled /&gt;</span><br><span class="line">          	下面这个输入框不包含 disabled 属性，所以用户可以向其中输入</span><br><span class="line">        	&lt;input type=&quot;text&quot; /&gt;</span><br><span class="line"></span><br><span class="line">6.特殊字符的引用     https://zh.wikipedia.org/wiki/XML%E4%B8%8EHTML%E5%AD%97%E7%AC%A6%E5%AE%9E%E4%BD%93%E5%BC%95%E7%94%A8%E5%88%97%E8%A1%A8</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">12.无/有序列表        &lt;ul&gt;   &lt;li&gt;&lt;/li&gt; &lt;li&gt;&lt;/li&gt;   &lt;/ul&gt;</span><br><span class="line">                    &lt;ol&gt;   &lt;li&gt;&lt;/li&gt; &lt;li&gt;&lt;/li&gt;   &lt;/ol&gt;</span><br><span class="line"></span><br><span class="line">13.全局属性</span><br><span class="line">13.1id</span><br><span class="line">        id 属性用于标识特定的 HTML 元素。 每个 id 属性的值必须不同于整个页面的所有其他 id 值。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">表单相关</span><br><span class="line">14.表单（接下来的东西都与表单有关）             &lt;form action=&quot;/页面地址&quot; required&gt;&lt;/form&gt;</span><br><span class="line">   # form表单元素，用来收集来自用户的信息</span><br><span class="line">   # action属性，就是我需要把这表单信息提交到后台，action相当于指明哪个接口。例如，&lt;form action=&quot;http://localhost:30/form-submit&quot;&gt;&lt;/form&gt; 告诉浏览器应该将表单数据发送到路径/submit-url</span><br><span class="line">   # required属性，用于防止用户不输入信息也能提交。</span><br><span class="line">    不过现在form的action用的比较少了，了解一下action属性的用途就行</span><br><span class="line">    一般我们实际开发很少用action去发送请求，而是收集表单数据，用fetch之类去发送给后端（js）</span><br><span class="line"></span><br><span class="line">15.可点击的按钮      &lt;button&gt;&lt;/button&gt;</span><br><span class="line">单击没有任何属性的表单按钮的默认行为，会将表单提交到表单的 action 属性中指定的位置。</span><br><span class="line">【一般来说是一个form里面有一个type为submit的按钮。这个按钮的作用就是把form表单的数据进行提交。</span><br><span class="line">即使你在文本输入下方添加了按钮，它们也会在页面上彼此相邻。 这是因为 input 和 button 元素都是内联元素，它们不会出现在新的行上。</span><br><span class="line">你添加的按钮将默认提交表单。 然而，依赖默认行为可能造成混乱。 type=“submit” 添加到 button 以明确它是一个提交按钮。】</span><br><span class="line"></span><br><span class="line">16.单选按钮值  radio</span><br><span class="line">radio是input标签中，type属性的一种值。比如&lt;input type=&quot;radio&quot;&gt;</span><br><span class="line">重点：想要实现几个单选按钮互斥（如男女），就要把两个单选按钮所在的index加上相同的name属性.</span><br><span class="line">          &lt;label&gt;&lt;input id=&quot;indoor&quot; type=&quot;radio&quot; name=&quot;indoor-outdoor&quot;&gt; Indoor&lt;/label&gt;</span><br><span class="line">          &lt;label&gt;&lt;input id=&quot;outdoor&quot; type=&quot;radio&quot; name=&quot;indoor-outdoor&quot;&gt; Outdoor&lt;/label&gt;</span><br><span class="line"></span><br><span class="line">17.给某一块增加实线框用的块级标签     &lt;fieldset&gt;&lt;/fieldset&gt;</span><br><span class="line">      相当于表单分块，会形成一个实线框框。不分块就会默认分出超级多的块，乱的要死。 fieldset 元素是块级元素，这意味着它们出现在新的一行上。</span><br><span class="line">17.1 fieldset 元素中内容的标题      &lt;legend&gt;文字提示&lt;/legend&gt;</span><br><span class="line">      会在fieldset形成的实现框之上，显示文字。一般用于提示用户应该输入什么样的数据。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">图片相关：img figure figcaption</span><br><span class="line">8.图片标签                     &lt;img src=&quot;地址&quot; alt=&quot;代替地址所显示的文本&quot;&gt;</span><br><span class="line">    所有的 img 元素都应该有一个 alt 属性。 alt 属性的文本（值）有两个作用，</span><br><span class="line">    第一个作用是让屏幕阅读器可以知晓图片的内容，这会对网页的可访问性有很大提升；另一个作用是当图片无法加载时，页面需要显示的替代文本。</span><br><span class="line">9.独立的内容                 &lt;figure&gt;&lt;/figure&gt;</span><br><span class="line">图像，并允许你将图像与标题相关联。</span><br><span class="line">10.图像标题                  &lt;figcaption&gt;&lt;/&gt;figcaption&gt;</span><br><span class="line">用于描述 figure 元素中包含的图像,比如某张图的标题叫“图1”。</span><br><span class="line"> &lt;figure&gt;</span><br><span class="line">          &lt;img src=&quot;链接&quot; alt=&quot;文字&quot;&gt;</span><br><span class="line">          &lt;figcaption&gt;Cats love lasagna.&lt;/figcaption&gt;</span><br><span class="line"> &lt;/figure&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">输入相关</span><br><span class="line">5.输入框     &lt;input&gt;</span><br><span class="line">    最复杂的标签，以下为常用属性</span><br><span class="line">    #type=“text”                  待输入数据类型为text文字</span><br><span class="line">    </span><br><span class="line">    #type=“radio”                 单选项</span><br><span class="line">            1.使文本与radio绑定的方法</span><br><span class="line">            &lt;label&gt;&lt;input type=&quot;radio&quot;&gt;Indoor&lt;/label&gt;表示有一个单选项Indoor</span><br><span class="line">            </span><br><span class="line">    #type=&quot;checkbox&quot;       复选框</span><br><span class="line">            使文本与checkbox绑定的方法</span><br><span class="line">            1.id与for      &lt;input id=&quot;loving&quot; type=&quot;checkbox&quot;&gt;  </span><br><span class="line">            			   &lt;label for=&quot;loving&quot;&gt;Loving&lt;/label&gt;</span><br><span class="line">            			   </span><br><span class="line">    #&lt;label&gt;&lt;/label&gt;     包裹含有radio/checkbox属性的input元素。</span><br><span class="line">                         【一句input一对儿label。】</span><br><span class="line">                         用于将 input 元素与其近邻的文本进行绑定，达到点击文本也能单选的效果。</span><br><span class="line">                         </span><br><span class="line">    #checked属性         使复选框或单选按钮默认被选中</span><br><span class="line"></span><br><span class="line">    #name               name是给后端人员搜索用的，id是给前端人员写代码用的。</span><br><span class="line">                        【input这一类属于原生的控件，</span><br><span class="line">                        name属性的主要作用就是用来在发送的时候作为url拼接，</span><br><span class="line">                        拼接成查询条件，可以理解成：后端需要什么查询条件，前端的传对应的name】</span><br><span class="line">                        主要是用于用户提交时，将自动拼接给程序员看</span><br><span class="line">                        （注：多个input有同一个name会使他们互斥）</span><br><span class="line">                        </span><br><span class="line">    #placeholder         占位符（提示用户该输入什么）</span><br><span class="line">    </span><br><span class="line">    #value               默认值（如果用户不输入，就提交默认值）</span><br><span class="line"></span><br><span class="line">    注：&lt;input type=&quot;radio&quot;&gt;Indoor表示有一个单选项Indoor</span><br><span class="line">    注：&lt;input type=&quot;checkbox&quot;&gt; Loving请确保元素和文本之间有一个空格。</span><br><span class="line">    教程：https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input#attr-disabled</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">6.文字相关</span><br><span class="line">	分割线：&lt;hr&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-前端学习笔记/HTML/Q1-HTML-Note2"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note2/"
-    >HTML学习笔记-2基础标签</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/03/28/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/Q1-HTML-Note2/" class="article-date">
-  <time datetime="2023-03-28T03:31:47.000Z" itemprop="datePublished">2023-03-28</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1>HTML学习笔记-2基础标签</h1>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">0.定义预格式化的文本         &lt;pre&gt;&lt;/pre&gt;    比如以下内容中，空格空行都会保留</span><br><span class="line">1.空格与段内换行            &amp;nbsp;&lt;br/&gt;</span><br><span class="line"> 无论你在 HTML 元素的内容中使用多少空格（包括一个或多个空白字符或换行），</span><br><span class="line"> 当渲染这些代码的时候，HTML 解释器会将连续出现的空白字符减少为一个单独的空格符。</span><br><span class="line">2.行内组合                &lt;span&gt;&lt;/span&gt;</span><br><span class="line">3.水平线                  &lt;hr/&gt;</span><br><span class="line">4.段                     &lt;p&gt;&lt;/p&gt;</span><br><span class="line">5.强调      &lt;strong&gt;&lt;/strong&gt;</span><br><span class="line">6.斜体      &lt;em&gt;&lt;/em&gt;</span><br><span class="line">7.n级标题                 &lt;h1&gt;一级标题只能有一个&lt;/h1&gt;</span><br><span class="line">8.标识页面的主要部分  &lt;main&gt;&lt;/main&gt;</span><br><span class="line">    HTML5 有些元素能够指明不同的内容区域。</span><br><span class="line">     这些元素能让你的 HTML 易于阅读，并有助于搜索引擎优化（SEO）和无障碍访问。</span><br><span class="line">9.表示预定义格式文本		&lt;pre&gt;&lt;/pre&gt;</span><br><span class="line">--&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;pre&gt;</span><br><span class="line"></span><br><span class="line">    &lt;p&gt;1.空格与换行</span><br><span class="line">        这里将会有三个空格&amp;nbsp;&amp;nbsp;&amp;nbsp;然后换行</span><br><span class="line">        &lt;br/&gt;</span><br><span class="line">        换行结束</span><br><span class="line">    &lt;/p&gt;</span><br><span class="line">    &lt;p&gt;2.行内组合</span><br><span class="line">        这里的&lt;span&gt;标签用于标记，被标记的文字将可以通过css进行格式化的美化&lt;/span&gt;</span><br><span class="line">    &lt;/p&gt;</span><br><span class="line"></span><br><span class="line">    &lt;p&gt;3.hr水平线</span><br><span class="line">        以下是水平线</span><br><span class="line">      &lt;hr/&gt;</span><br><span class="line">      水平线结束</span><br><span class="line">    &lt;/p&gt;</span><br><span class="line">&lt;/pre&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
  
       <!-- reward -->

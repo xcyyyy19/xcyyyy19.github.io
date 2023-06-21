@@ -151,6 +151,82 @@
     
     
     <article
+  id="post-前端学习笔记/静态页面练习/girigiri_love"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/05/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E7%BB%83%E4%B9%A0/girigiri_love/"
+    >静态页面-1girigiri_love</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/05/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E7%BB%83%E4%B9%A0/girigiri_love/" class="article-date">
+  <time datetime="2023-05-01T03:34:47.000Z" itemprop="datePublished">2023-05-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="1-一个问题"><a href="#1-一个问题" class="headerlink" title="1.一个问题"></a>1.一个问题</h2><p>想实现的效果：head里的‘个人’图标，想要实现红色圆形底色，且‘个人’图标需要跟其它图标大小相等。且内容部分不会由于宽度的原因冒出头来。</p>
+<ol>
+<li><h3 id="用broder-box"><a href="#用broder-box" class="headerlink" title="用broder-box"></a>用broder-box</h3><p>直接用会导致‘个人’图标缩小</p>
+<img src="./../_posts/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/markdown-img/girigiri_love.assets/image-20230505225632986.png" alt="image-20230505225632986" style="zoom:50%;" />
+</li>
+<li><h3 id="不用broder-box"><a href="#不用broder-box" class="headerlink" title="不用broder-box"></a>不用broder-box</h3><p>主体部分中，很多部分都需要设定宽度100%，又需要设定position：absolute</p>
+<img src="./../_posts/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/markdown-img/girigiri_love.assets/image-20230505225731776.png" alt="image-20230505225731776" style="zoom:33%;" />
+</li>
+<li><h3 id="总结：用broder-box，所以要改‘个人部分’，最好的办法是"><a href="#总结：用broder-box，所以要改‘个人部分’，最好的办法是" class="headerlink" title="总结：用broder-box，所以要改‘个人部分’，最好的办法是"></a>总结：用broder-box，所以要改‘个人部分’，最好的办法是</h3><ol>
+<li><p>利用选择器的优先级原理，给‘个人’的·上一层加一个id&#x3D;user。上一层本身的class选择器不用管。</p>
+<p>重复的部分会被id选择器覆盖。</p>
+<p><img src="./../_posts/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/markdown-img/girigiri_love.assets/image-20230505232718506.png" alt="image-20230505232718506" style="zoom:33%;" /><img src="./../_posts/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/markdown-img/girigiri_love.assets/image-20230505233056969.png" alt="image-20230505233056969" style="zoom: 50%;" /></p>
+</li>
+<li><p>设置它的宽高使其（装‘个人’图片的盒子）成为一个正方形，然后设置border-radius。&#x2F;&#x2F;底部红圆</p>
+</li>
+<li><p>然后通过设置padding来合理缩小图片。</p>
+<img src="./../_posts/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/markdown-img/girigiri_love.assets/1683300580219.png" alt="1683300580219" style="zoom:38%;" /></li>
+</ol>
+</li>
+</ol>
+<h2 id="2-一个知识点"><a href="#2-一个知识点" class="headerlink" title="2.一个知识点"></a>2.一个知识点</h2><p>position：absolute是在偏移，它如果设了left 20等，这和width：100%是互斥的。所以要用broder-box；</p>
+<h2 id="3-一个技巧"><a href="#3-一个技巧" class="headerlink" title="3.一个技巧"></a>3.一个技巧</h2><p>debug可以在浏览器端*{border: 1px solid green;}</p>
+<h2 id="4-最终效果-底部红字是桌面歌词"><a href="#4-最终效果-底部红字是桌面歌词" class="headerlink" title="4.最终效果(底部红字是桌面歌词)"></a>4.最终效果(底部红字是桌面歌词)</h2><p><img src="/./../_posts/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/markdown-img/girigiri_love.assets/image-20230505234450766.png" alt="image-20230505234450766"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-github使用"
   class="article article-type-post"
   itemscope
@@ -822,50 +898,6 @@ let findA = (arr) => {
 };
 findA(arr);
 console.log(result);
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-前端学习笔记/JS/VSCode代码/对象嵌套"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-     
-    <div class="article-meta">
-      <a href="/2023/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/%E5%AF%B9%E8%B1%A1%E5%B5%8C%E5%A5%97/" class="article-date">
-  <time datetime="2023-04-15T07:58:03.700Z" itemprop="datePublished">2023-04-15</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <title></title>
-  </head>
-  <body></body>
-</html>
  
       <!-- reward -->
       
