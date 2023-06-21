@@ -151,7 +151,7 @@
     
     
     <article
-  id="post-前端学习笔记/【【【【【疑问解答】】】】】/JS/main"
+  id="post-MachineLearning/Machine-learning-learning-notes-master/周志华《Machine Learning》学习笔记(10)--集成学习"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -160,1094 +160,83 @@
   <div class="article-inner">
      
     <div class="article-meta">
-      <a href="/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/main/" class="article-date">
-  <time datetime="2023-04-22T15:07:38.126Z" itemprop="datePublished">2023-04-22</time>
+      <a href="/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(10)--%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/" class="article-date">
+  <time datetime="2023-06-21T07:42:41.499Z" itemprop="datePublished">2023-06-21</time>
 </a>    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  // // // 一个数据里面去匹配 
-// // // 字符的匹配
-// // const text = 'hello world'
-// // const reg = /helli/
-
-// // const result = text.match(reg)
-
-// // // console.log("result",result)
-
-
-// // // 在一堆数据里面去筛选
-
-
-
-// // // 浅拷贝
-// // const shallowClone = (target) => {
-// //     const result = {};
-// //     for (let key in target) {
-// //         result[key] = target[key]
-// //     }
-
-// //     return result
-// // }
-
-
-
-// // // 深拷贝
-// // const deepClone = (target) => {   
-// //     const obj = {}
-// //     for (let key in target) {
-// //         const value = target[key];
-// //         if (isObj(target)) {
-// //             obj[key] = deepClone(value)
-// //         } else {
-// //             obj[key] = value
-// //         }
-// //     }
-
-// //     return obj
-// // }
-
-
-
-// // const list = [
-// //     {name:"zhangsan",id:1},
-// //     {name:"lisi",id:2},
-// //     {name:"wangwu",id:3},
-// //     {name:"wangwu",id:4},
-// // ]
-
-
-// // // 得分字段 score:10
-
-
-// // const getName = function(item) {
-// //     return item.name === 'wangwu'
-// // };
-
-
-// // // forEach 遍历
-
-
-// // // 判断 数组是否满足条件
-
-// // // every 所有条件满足返回true,否则返回false
-// // const everyResult= list.every(getName)
-// // console.log("everyResult",everyResult)
-
-// // // some 任一条件满足返回true，否则返回false
-// // const someResult= list.some(getName)
-// // console.log("someResult",someResult)
-
-
-// // const target = [];
-
-// // list.forEach(item => {
-// //     target.push({
-// //         ...item,
-// //         score:10
-// //     })
-// // })
-
-// // return target
-
-// // // map
-
-
-
-// // // reduce
-
-// // // 判断数据类型是否为Object
-// const isObj = (target) => Object.prototype.toString.call(target) === '[object Object]'
-
-// const deepClone = (target) => {   
-//     const obj = {}
-//     for (let key in target) {
-//         const value = target[key];
-//         debugger
-//         if (isObj(value)) {
-//             debugger
-//             obj[key] = deepClone(value)
-//         } else {
-//             debugger
-//             obj[key] = value
-//         }
-//     }
-
-//     return obj
-// }
-
-// deepClone({a:{b:10}}) 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-前端学习笔记/JS/VSCode代码/test"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-     
-    <div class="article-meta">
-      <a href="/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/test/" class="article-date">
-  <time datetime="2023-04-22T06:27:47.841Z" itemprop="datePublished">2023-04-22</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  let arr = ['a', 'b', 'c', 'A', 'B', 'A'];
-let findA = (arr) => {
-  const result = [];
-  for (value of arr) {
-    if (value === 'A') {
-      result.push(value);
-    }
-  }
-  return result;
-};
-findA(arr);
-console.log(result);
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-前端学习笔记/JS/VSCode代码/对象嵌套"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-     
-    <div class="article-meta">
-      <a href="/2023/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/%E5%AF%B9%E8%B1%A1%E5%B5%8C%E5%A5%97/" class="article-date">
-  <time datetime="2023-04-15T07:58:03.700Z" itemprop="datePublished">2023-04-15</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <title></title>
-  </head>
-  <body></body>
-</html>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-前端学习笔记/JS/Q4-JS-9衍生知识（es6、过滤思路、深浅拷贝的原理、debug、函数复用）"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-9%E8%A1%8D%E7%94%9F%E7%9F%A5%E8%AF%86%EF%BC%88es6%E3%80%81%E8%BF%87%E6%BB%A4%E6%80%9D%E8%B7%AF%E3%80%81%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%8E%9F%E7%90%86%E3%80%81debug%E3%80%81%E5%87%BD%E6%95%B0%E5%A4%8D%E7%94%A8%EF%BC%89/"
-    >JS学习笔记-4.9衍生知识（base gpt/答疑）</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-9%E8%A1%8D%E7%94%9F%E7%9F%A5%E8%AF%86%EF%BC%88es6%E3%80%81%E8%BF%87%E6%BB%A4%E6%80%9D%E8%B7%AF%E3%80%81%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%8E%9F%E7%90%86%E3%80%81debug%E3%80%81%E5%87%BD%E6%95%B0%E5%A4%8D%E7%94%A8%EF%BC%89/" class="article-date">
-  <time datetime="2023-04-15T03:34:47.000Z" itemprop="datePublished">2023-04-15</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line">// 一个数据里面去匹配</span><br><span class="line">// 1.字符的匹配</span><br><span class="line">const text = &#x27;hello world&#x27;;</span><br><span class="line">const reg = /helli/;</span><br><span class="line"></span><br><span class="line">const result = text.match(reg);</span><br><span class="line"></span><br><span class="line">// console.log(&quot;result&quot;,result)</span><br><span class="line"></span><br><span class="line">// 2.在一堆数据里面去筛选</span><br><span class="line"></span><br><span class="line">// 3.浅拷贝</span><br><span class="line">const shallowClone = (target) =&gt; &#123;</span><br><span class="line">  const result = &#123;&#125;;</span><br><span class="line">  for (let key in target) &#123;</span><br><span class="line">    result[key] = target[key];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return result;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// // 4.深拷贝</span><br><span class="line">// const deepClone = (target) =&gt; &#123;</span><br><span class="line">//     const obj = &#123;&#125;</span><br><span class="line">//     for (let key in target) &#123;</span><br><span class="line">//         const value = target[key];</span><br><span class="line">//         if (isObj(target)) &#123;</span><br><span class="line">//             obj[key] = deepClone(value)</span><br><span class="line">//         &#125; else &#123;</span><br><span class="line">//             obj[key] = value</span><br><span class="line">//         &#125;</span><br><span class="line">//     &#125;</span><br><span class="line"></span><br><span class="line">//     return obj</span><br><span class="line">// &#125;</span><br><span class="line"></span><br><span class="line">//5.找到复杂对象中的某几个符合的数据</span><br><span class="line">const list = [</span><br><span class="line">  &#123; name: &#x27;zhangsan&#x27;, id: 1 &#125;,</span><br><span class="line">  &#123; name: &#x27;lisi&#x27;, id: 2 &#125;,</span><br><span class="line">  &#123; name: &#x27;wangwu&#x27;, id: 3 &#125;,</span><br><span class="line">  &#123; name: &#x27;wangwu&#x27;, id: 4 &#125;,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">// 得分字段 score:10</span><br><span class="line"></span><br><span class="line">const getName = function (item) &#123;</span><br><span class="line">  return item.name === &#x27;wangwu&#x27;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// 5.1 forEach 遍历</span><br><span class="line"></span><br><span class="line">// 5.2 for of遍历，判断 数组是否满足条件</span><br><span class="line"></span><br><span class="line">//5.3 判断条件独立出来，函数复用</span><br><span class="line"></span><br><span class="line">// 5.2.1every 所有条件满足返回true,否则返回false</span><br><span class="line">const everyResult = list.every(getName);</span><br><span class="line">console.log(&#x27;everyResult&#x27;, everyResult);</span><br><span class="line"></span><br><span class="line">// 5.2.2some 任一条件满足返回true，否则返回false</span><br><span class="line">const someResult = list.some(getName);</span><br><span class="line">console.log(&#x27;someResult&#x27;, someResult);</span><br><span class="line"></span><br><span class="line">const target = [];</span><br><span class="line"></span><br><span class="line">list.forEach((item) =&gt; &#123;</span><br><span class="line">  target.push(&#123;</span><br><span class="line">    ...item,</span><br><span class="line">    score: 10,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">return target;</span><br><span class="line"></span><br><span class="line">// 5.3map</span><br><span class="line"></span><br><span class="line">// 5.4reduce</span><br><span class="line"></span><br><span class="line">// 6.深拷贝的底层原理：判断数据类型是否为Object</span><br><span class="line">const isObj = (target) =&gt;</span><br><span class="line">  Object.prototype.toString.call(target) === &#x27;[object Object]&#x27;;</span><br><span class="line"></span><br><span class="line">const deepClone = (target) =&gt; &#123;</span><br><span class="line">  const obj = &#123;&#125;;</span><br><span class="line">  for (let key in target) &#123;</span><br><span class="line">    const value = target[key];</span><br><span class="line">    debugger;</span><br><span class="line">    if (isObj(value)) &#123;</span><br><span class="line">      debugger;</span><br><span class="line">      obj[key] = deepClone(value);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      debugger;</span><br><span class="line">      obj[key] = value;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return obj;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">deepClone(&#123; a: &#123; b: 10 &#125; &#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-前端学习笔记/JS/Q4-JS-10两道题（BFE.dev）"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-10%E4%B8%A4%E9%81%93%E9%A2%98%EF%BC%88BFE.dev%EF%BC%89/"
-    >JS学习笔记-4.10两道题（base gpt/答疑/BFE网站）</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-10%E4%B8%A4%E9%81%93%E9%A2%98%EF%BC%88BFE.dev%EF%BC%89/" class="article-date">
-  <time datetime="2023-04-15T03:34:47.000Z" itemprop="datePublished">2023-04-15</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="107-找到最大的差"><a href="#107-找到最大的差" class="headerlink" title="107.找到最大的差"></a>107.找到最大的差</h2><p><a target="_blank" rel="noopener" href="https://bigfrontend.dev/zh/problem/Find-the-largest-difference">107. 找到最大的差 | BFE.dev - 前端刷题，准备前端面试拿到心仪的Offer。 (bigfrontend.dev)</a></p>
-<p>原始思路：略（还是框在C语言和Python里了，实现方法很麻烦，很多东西JS已经给包装好了可以直接用）</p>
-<h3 id="法一："><a href="#法一：" class="headerlink" title="法一："></a>法一：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">// 给定一个整数数组，任意选择两个数a和b，可以通过 Math.abs(a - b)求得其差值。</span><br><span class="line">// 请实现一个函数来求得这个数组的最大差值。</span><br><span class="line"></span><br><span class="line">// 解体思路其实就是最小值 - 最大值，再做绝对值的计算（因为差值是非0整数）</span><br><span class="line"></span><br><span class="line">// 如果不会使用sort方法进行排序，我们也可以自己实现一个sort方法</span><br><span class="line"></span><br><span class="line">// 默认的type为&quot;max&quot;,找出最大值,反之为&quot;max&quot;，找出最小值</span><br><span class="line">const findNum = (list, type = &quot;max&quot;) =&gt; &#123;</span><br><span class="line">  let target;</span><br><span class="line">  if (type === &quot;max&quot;) &#123;</span><br><span class="line">    list.forEach((item, index) =&gt; &#123;</span><br><span class="line">      if (index === 0) &#123;</span><br><span class="line">        // 开始循环，将首个数字作为基准，进行比较</span><br><span class="line">        target = item;</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        if (item &gt; target) &#123;</span><br><span class="line">          // 替换target的值</span><br><span class="line">          target = item;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    list.forEach((item, index) =&gt; &#123;</span><br><span class="line">      if (index === 0) &#123;</span><br><span class="line">        target = item;</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        if (item &lt; target) &#123;</span><br><span class="line">          target = item;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  return target;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// 上述的代码可以优化一下语句，因为整体思路是一致的</span><br><span class="line">// 进行index === 0 赋值</span><br><span class="line">// 通过 type 判断是什么条件下，更新target的值</span><br><span class="line">const simplifyFindNum = (list, type = &quot;max&quot;) =&gt; &#123;</span><br><span class="line">  let target;</span><br><span class="line">  // 优化一下，type不为max或者min，不处理数据了。</span><br><span class="line">  // 避免进入forEach语句浪费性能</span><br><span class="line">  if (type !== &quot;min&quot; &amp;&amp; type !== &quot;max&quot;) return target;</span><br><span class="line"></span><br><span class="line">  list.forEach((item, index) =&gt; &#123;</span><br><span class="line">    if (index === 0) &#123;</span><br><span class="line">      // 开始循环，将首个数字作为基准，进行比较</span><br><span class="line">      target = item;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      // 替换target的值</span><br><span class="line">      if (type === &quot;max&quot; &amp;&amp; item &gt; target) &#123;</span><br><span class="line">        target = item;</span><br><span class="line">      &#125;</span><br><span class="line">      if (type === &quot;min&quot; &amp;&amp; item &lt; target) &#123;</span><br><span class="line">        target = item;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  return target;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">const largestDiff = (list) =&gt; &#123;</span><br><span class="line">    const maxNum = simplifyFindNum(list); // 获取数组最大值</span><br><span class="line">    const minNum = simplifyFindNum(list,&quot;min&quot;) // 获取数组最小值</span><br><span class="line">    const diff = Math.abs(minNum - maxNum) // 最小值 - 最大值，进行绝对值的计算</span><br><span class="line"></span><br><span class="line">    return diff</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const diff = largestDiff([-1, 2,3,10, 9]);</span><br></pre></td></tr></table></figure>
-
-<h3 id="法二："><a href="#法二：" class="headerlink" title="法二："></a>法二：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">// 给定一个整数数组，任意选择两个数a和b，可以通过 Math.abs(a - b)求得其差值。</span><br><span class="line">// 请实现一个函数来求得这个数组的最大差值。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 解体思路其实就是最小值 - 最大值，再做绝对值的计算（因为差值是非0整数）</span><br><span class="line">const largestDiff = (list) =&gt; &#123;</span><br><span class="line">    const maxNum = Math.max.apply(Math,list); // 数组通过apply调用Math的max方法，获取数组最大值</span><br><span class="line">    const minNum = Math.min.apply(Math,list) // 同上，获取数组最小值</span><br><span class="line">    const diff = Math.abs(minNum - maxNum) // 最小值 - 最大值，进行绝对值的计算</span><br><span class="line"></span><br><span class="line">    return diff</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// largestDiff([-1, 2,3,10, 9])</span><br><span class="line"></span><br><span class="line">const diff = largestDiff([-1, 2,3,10, 9]);</span><br><span class="line">console.log(&quot;diff&quot;,diff)</span><br></pre></td></tr></table></figure>
-
-<h3 id="法三："><a href="#法三：" class="headerlink" title="法三："></a>法三：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// 给定一个整数数组，任意选择两个数a和b，可以通过 Math.abs(a - b)求得其差值。</span><br><span class="line">// 请实现一个函数来求得这个数组的最大差值。</span><br><span class="line"></span><br><span class="line">// 解体思路其实就是最小值 - 最大值，再做绝对值的计算（因为差值是非0整数）</span><br><span class="line">// 解题思路，通过sort方法进行排序</span><br><span class="line">const largestDiff = (list) =&gt; &#123;</span><br><span class="line">  const sortedList = list.sort((prev, next) =&gt; next - prev); // 按照从大到小排序</span><br><span class="line">  const maxNum = sortedList[0];</span><br><span class="line">  const minNum = sortedList[sortedList.length-1];</span><br><span class="line">  const diff = Math.abs(minNum - maxNum); // 最小值 - 最大值，进行绝对值的计算</span><br><span class="line">  return diff;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">const diff = largestDiff([-1, 2, 3, 10, 9]);</span><br><span class="line">console.log(&quot;diff&quot;, diff);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="162-请找到未重复出现的整数"><a href="#162-请找到未重复出现的整数" class="headerlink" title="162. 请找到未重复出现的整数"></a>162. 请找到未重复出现的整数</h2><p><a target="_blank" rel="noopener" href="https://bigfrontend.dev/zh/problem/find-the-single-integer">162. 请找到未重复出现的整数 | BFE.dev - 前端刷题，准备前端面试拿到心仪的Offer。 (bigfrontend.dev)</a></p>
-<p>原始思路：哈希&#x2F;桶排（注意负数，需要下标映射）</p>
-<p>claude思路：map（es6新特性，还没学到）</p>
-<h3 id="原始方法（动态数组未映射）："><a href="#原始方法（动态数组未映射）：" class="headerlink" title="原始方法（动态数组未映射）："></a>原始方法（动态数组未映射）：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">const arr = [10, 2, 2 , 1, 0, 0, 10]</span><br><span class="line">function findSingle(arr) &#123;</span><br><span class="line">  //js的除法是向下取整吗？（是的）</span><br><span class="line">  //哈希思想，需要映射数据，麻烦。const countArr=[arr.length/2+1];</span><br><span class="line">  //桶排思想，空间复杂度高，方便。但出现负数怎么办？（也要映射，整体前移就好）</span><br><span class="line">  //js数组不是动态数组吗(是)，不能自动扩容直接下标访问吗（能下标访问，但也要初始化，好像不能自动扩容），需要遍历出最大数值再生成数组是吗（可以不需要，用的话最好，用完了直接前移映射就完了）</span><br><span class="line">  </span><br><span class="line">  const countArr=[]</span><br><span class="line">  for(let i=0;i&lt;arr.length;++i)&#123;</span><br><span class="line">  	if(!countArr[arr[i]])&#123;</span><br><span class="line">  	countArr[arr[i]]=0;</span><br><span class="line">  	&#125;</span><br><span class="line">    countArr[arr[i]]++;</span><br><span class="line">    console.log(countArr[arr[i]])</span><br><span class="line">  &#125;</span><br><span class="line">  for(let i=0;i&lt;countArr.length;++i)&#123;</span><br><span class="line">    if(countArr[i]===1)&#123;</span><br><span class="line">      return countArr[i];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">findSingle(arr)</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="法一：定长数组桶排映射"><a href="#法一：定长数组桶排映射" class="headerlink" title="法一：定长数组桶排映射"></a>法一：定长数组桶排映射</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">使用数组解决第一个题目(找出数组中只出现一次的数)的最优解是:</span><br><span class="line">const arr = [10, 2, 2 , 1, 0, 0, 10, -5, -2];</span><br><span class="line"></span><br><span class="line">function findSingle(arr) &#123;</span><br><span class="line">  let max = 0;</span><br><span class="line">  let min = 0;</span><br><span class="line">  for (let num of arr) &#123;</span><br><span class="line">    max = Math.max(max, num);</span><br><span class="line">    min = Math.min(min, num);</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  let countArr = new Array(max - min + 1).fill(0);</span><br><span class="line">  </span><br><span class="line">  for (let num of arr) &#123;</span><br><span class="line">    countArr[num - min]++; </span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  for (let i = 0; i &lt; countArr.length; i++) &#123;</span><br><span class="line">    if (countArr[i] === 1) return i + min;</span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">findSingle(arr);  // -5</span><br><span class="line">解释:</span><br><span class="line">1. 这种方法先遍历数组一次,得到最大值 max 和最小值 min。</span><br><span class="line">2. 初始化 countArr 长度为 max - min + 1,正好可以容纳所有数值。</span><br><span class="line">3. 第二次遍历,使用 num - min 作为 countArr 下标,统计每个数出现次数。</span><br><span class="line">4. 找到次数为 1 的下标后,返回 i + min 恢复真实数值。</span><br><span class="line">5. 这种方法空间复杂度稳定在数组范围内,可以容纳任意范围的数,包括负数。</span><br><span class="line">这种方法相比其他数组方法有以下优点:</span><br><span class="line">1. 空间复杂度稳定,不会随数组最大值变化。</span><br><span class="line">2. 可以容纳任意范围的数,通过映射到数组中。</span><br><span class="line">3. 代码简洁高效。只需遍历两次数组。</span><br><span class="line">总结:</span><br><span class="line">相比动态数组多次判断是否初始化的方式,这个方法通过一次遍历得知数组范围,初始化恰当大小的数组,使空间复杂度稳定,且代码更简洁高效。</span><br><span class="line">所以如果要我选最优的数组解法,我会选择这个方法。当然,Map 方法由于内部实现原因,在大多数情况下仍然更为高效和优秀。但是如果考虑到兼容性,这个数组方法也是一个不错的选择。</span><br></pre></td></tr></table></figure>
-
-<h3 id="法二：map-hash"><a href="#法二：map-hash" class="headerlink" title="法二：map-hash"></a>法二：map-hash</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">// 通过Map做映射关系</span><br><span class="line">// Map和Object的区别，Object的key需要为字符串，如果不是，会转化为字符串类型</span><br><span class="line">// Map的key可以为任意类型</span><br><span class="line">// Map使用set（写）和get（读） has(判断是否有映射关系)</span><br><span class="line">// https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map</span><br><span class="line"></span><br><span class="line">const findSingle = (list) =&gt; &#123;</span><br><span class="line">  const hash = new Map(); // key为出现的数字，value为出现的次数</span><br><span class="line">  list.forEach((num) =&gt; &#123;</span><br><span class="line">    const val = hash.get(num);</span><br><span class="line">    // 没有映射关系，说明该数字首次出现</span><br><span class="line">    if (!hash.has(num)) &#123;</span><br><span class="line">      hash.set(num, 1); // 首次出现</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      hash.set(num, val + 1); // 出现次数+1</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  // hash是Map类型，是可迭代对象，可以直接使用forEach进行遍历</span><br><span class="line">  // 遍历哈希表(hash),找出出现次数(value)为1的数字(key)</span><br><span class="line">  // 如果这个题目存在多个出现次数为1的数字，可以考虑将target初始化为空数组，每次找出对应的数字做push操作</span><br><span class="line">  let target;</span><br><span class="line">  hash.forEach((value, key) =&gt; &#123;</span><br><span class="line">    if (value === 1) &#123;</span><br><span class="line">      target = key;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  return target</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">findSingle([10, 2, 2, 1, 0, 0, 10]);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="法三：-1"><a href="#法三：-1" class="headerlink" title="法三："></a>法三：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">// 给定一个整数数组，除了一个数字之外，其余的数字均出现了两次。请找出这个只出现了一次的数。</span><br><span class="line">// const arr = [10, 2, 2 , 1, 0, 0, 10]</span><br><span class="line">// findSingle(arr) // 1</span><br><span class="line"></span><br><span class="line">// 思路，通过哈希表去实现（前端js没有对应的数据结构，但是我们一般可以通过Object的key-value的映射关系去实现）</span><br><span class="line">// 其中 key 代表 出现的数字,value 代表该次数出现的次数</span><br><span class="line">// 最终将对应的Object取出value为1的数字</span><br><span class="line"></span><br><span class="line">const findSingle = (list) =&gt; &#123;</span><br><span class="line">    const hash = &#123;&#125;; // key为出现的数字，value为出现的次数</span><br><span class="line">    list.forEach((num) =&gt; &#123;</span><br><span class="line">        const val = hash[num];</span><br><span class="line">        // 没有映射关系，说明该数字首次出现</span><br><span class="line">        if (!val) &#123;</span><br><span class="line">            hash[num] = 1;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            hash[num] = val +1; // 出现次数+1</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    // 遍历哈希表(hash),找出出现次数(value)为1的数字(key)</span><br><span class="line">    // 如果这个题目存在多个出现次数为1的数字，可以考虑将target初始化为空数组，每次找出对应的数字做push操作</span><br><span class="line">    let target;</span><br><span class="line">    for (const key in hash) &#123;</span><br><span class="line">        // 找出出现次数为1的数据</span><br><span class="line">        if (hash[key] === 1) &#123;</span><br><span class="line">            // target = key</span><br><span class="line">            target = Number(key)</span><br><span class="line">            // 这边有一个陷阱，key在存储时会被转成string类型，对应的数字的number类型，需要转化为Number</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">    return target</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">findSingle([10, 2, 2 , 1, 0, 0, 10])</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>思想钢印：再也不要想最优解的事了，下意识也不要想。</p>
-<p>先实现再迭代优化。</p>
-<p>不要纠结思路不是最优解，思路没问题也写得费劲说明需要熟悉语法。</p>
-<h2 id="延申："><a href="#延申：" class="headerlink" title="延申："></a>延申：</h2><p>OK,让我们重新开始吧!到目前为止,我们探讨了几种解决这道题的思路和方法:</p>
-<ol>
-<li><p>定长数组:- 空间复杂度低但需要知道最大值,否则容易越界<br> - 无法容纳负数<br> - 适用于最大值已知且较小的情况</p>
-</li>
-<li><p>动态数组:- 可以自动扩容,无最大值限制,但是空间复杂度随最大值变化<br> - 需要判断数组元素是否存在,如果不存在先赋默认值<br> - 可以通过映射容纳负数<br> - 适用于最大值较大但性能要求不高的情况</p>
-</li>
-<li><p>Map:- key 可以是任意值,无最大值和负数限制<br> - 空间复杂度稳定,自动扩容<br> - 使用方便,get() 设置默认值,遍历使用 for..of<br> - 是解决这个问题的最通用高效数据结构</p>
-</li>
-</ol>
-<p>  那么,如果让您重新解答这个问题,您会选择哪种思路和方法呢?除了上述几种,您还有其他的好想法吗?</p>
-<p>  这里是一个新的问题供您思考和解答:输入一个整数数组,找到两个数和为特定值的下标。例如:输入: [3, 2, 5, 4, 1], target &#x3D; 7<br>  输出: [1, 3] (nums[1] + nums[3] &#x3D; 2 + 5 &#x3D; 7)</p>
-<p>  您会如何解决这个问题?欢迎提出您的思路和代码实现,我们可以就此进行进一步探讨。</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-前端学习笔记/JS/VSCode代码/访问函数内嵌套的对象"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-     
-    <div class="article-meta">
-      <a href="/2023/04/14/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/%E8%AE%BF%E9%97%AE%E5%87%BD%E6%95%B0%E5%86%85%E5%B5%8C%E5%A5%97%E7%9A%84%E5%AF%B9%E8%B1%A1/" class="article-date">
-  <time datetime="2023-04-14T08:18:34.213Z" itemprop="datePublished">2023-04-14</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>1.访问函数内嵌套的对象</title>
-  </head>
-  <body>
-    <script>
-      /*函数将会检查通讯录中是否存在一个 firstName 与传入的 name 相同的联系人。 如果存在，那么还需要检查对应的联系人中是否存在 prop 属性。
-      如果它们都存在，函数返回 prop 属性对应的值。
-      如果 name 不对应于任何联系人，然后返回字符串 No such contact。
-      如果 prop 属性在匹配 name 的联系人里不存在，返回 No such property。 */
-
-      const contacts = [
-        {
-          firstName: 'Akira',
-          lastName: 'Laine',
-          number: '0543236543',
-          likes: ['Pizza', 'Coding', 'Brownie Points'],
-        },
-        {
-          firstName: 'Harry',
-          lastName: 'Potter',
-          number: '0994372684',
-          likes: ['Hogwarts', 'Magic', 'Hagrid'],
-        },
-        {
-          firstName: 'Sherlock',
-          lastName: 'Holmes',
-          number: '0487345643',
-          likes: ['Intriguing Cases', 'Violin'],
-        },
-        {
-          firstName: 'Kristian',
-          lastName: 'Vos',
-          number: 'unknown',
-          likes: ['JavaScript', 'Gaming', 'Foxes'],
-        },
-      ];
-
-      // 1.[{1}{2}{3}{4}]结构,forin的结果并不是取[]内的几个{}，而是数数。
-      // for (let sq in contacts) {
-      //   console.log(sq); //0 1 2 3
-      // }
-      // 2.for in 在js中只能用来遍历对象的属性,py里是for i in range(10);
-      //   for (let i in contacts.length) {
-      //     console.log('2222');
-      //   }
-      function lookUpProfile(name, prop) {
-        for (let i = 0; i < contacts.length; ++i) {
-          console.log(contacts[i]);
-          if (contacts[i].firstName === name) {
-            console.log('name findable');
-            for (let j in contacts[1]) {
-              if (j === prop) {
-                console.log(contacts[i][prop]);
-                return contacts[i][prop];
-              }
-            }
-            return 'No such property';
-          }
-        }
-        return 'No such contact';
-      }
-      lookUpProfile('Harry', 'likes');
-    </script>
-  </body>
-</html>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-前端学习笔记/JS/Q4-JS-8面向对象"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/04/14/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-8%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"
-    >JS学习笔记-4.8面向对象（base  gpt/答疑 ）</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/04/14/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-8%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="article-date">
-  <time datetime="2023-04-14T03:34:47.000Z" itemprop="datePublished">2023-04-14</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="4-8面向对象"><a href="#4-8面向对象" class="headerlink" title="4.8面向对象"></a>4.8面向对象</h1><h2 id="4-8-1浅薄的了解"><a href="#4-8-1浅薄的了解" class="headerlink" title="4.8.1浅薄的了解"></a>4.8.1浅薄的了解</h2><h3 id="1-构造函数"><a href="#1-构造函数" class="headerlink" title="1.构造函数"></a>1.构造函数</h3><p>用于反复创建相同的对象，和Java一样，就是父类。</p>
-<p>this.price&#x3D;price;意味着把传进来的price参数挂载到构造函数内部当作属性用了。</p>
-<h3 id="2-是否使用原型函数（prototype）"><a href="#2-是否使用原型函数（prototype）" class="headerlink" title="2.是否使用原型函数（prototype）"></a>2.是否使用原型函数（prototype）</h3><p>构造函数内的方法如果是不变的，那么每次new一个新实例的时候都会调用这个方法，从而造成资源浪费。所以要把它挂载到原型上，并写在函数外部，这样就相当于只初始化一次。这样他实例化时，就会通过实例化（子类）的声明覆盖掉父类的声明。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//Car构造函数的初始化</span><br><span class="line">Car(price)&#123;</span><br><span class="line">	this.price=price;</span><br><span class="line">&#125;</span><br><span class="line">//给Car函数增加原型函数</span><br><span class="line">Car.run=function()&#123;console.log(&quot;run as 100km/h&quot;)&#125;</span><br></pre></td></tr></table></figure>
-
-<p>构造函数内的方法如果是基于传进来的参数要进行选择性创建的，那么就不用写成原型函数，且可以写在构造函数内部。<br><img src="./Q4-JS-7%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1.assets/image-20230421171703306.png" alt="image-20230421171703306" style="zoom:33%;" /></p>
-<h3 id="3-原型链"><a href="#3-原型链" class="headerlink" title="3.原型链"></a>3.原型链</h3><p>在调用某个类的子函数的时候，先去找它本身是否声明过（这会覆盖父类的声明），然后找父类内部是否声明过，再找父类的prototype（原型）函数中有没有。</p>
-<h3 id="4-覆盖"><a href="#4-覆盖" class="headerlink" title="4.覆盖"></a>4.覆盖</h3><p>子类的重复声明，会把父类的声明覆盖掉。</p>
-<h3 id="5-静态属性"><a href="#5-静态属性" class="headerlink" title="5.静态属性"></a>5.静态属性</h3><p>就是只属于自己的属性。简称属性。</p>
-<p>注：构造函数也可以有只属于自己的（无法被继承的）属性。</p>
-<h3 id="6-一些疑问"><a href="#6-一些疑问" class="headerlink" title="6.一些疑问"></a>6.一些疑问</h3><p>1.浅拷贝都有什么实现方式<br>2.为什么创建对象的时候，对象里面的方法用的是引用，而属性不是</p>
-<pre><code>这是因为在 JavaScript 中,对象的方法和属性有不同的存储方式:
-属性:
-- 属性的值直接存储在对象中
-- 当读取属性时,直接返回对象中存储的值方法:- 方法的值实际上是一个函数
-- 函数是引用类型,所以方法的值是一个指向函数的引用
-- 当读取方法时,返回的是对函数的引用
-</code></pre>
-<p>   <a target="_blank" rel="noopener" href="https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682137400226899">https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682137400226899</a><br>3.为什么函数是引用类型，而不是拷贝？</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1.为了让函数实现共用</span><br><span class="line">2.避免每次传递函数时都需要创建一个函数的完整拷贝。</span><br><span class="line">因为函数也是对象,如果是值类型,每次传递都需要将整个函数对象拷贝一份,这会消耗额外资源。</span><br><span class="line">而作为引用类型,我们只需要传递函数的引用,就能在多个地方调用同一个函数,不需要每次都创建一个新的函数对象。</span><br><span class="line">3.支持函数的动态性。如果函数是值类型,那么函数创建后其引用就永远固定了。而作为引用类型,函数的引用是可以动态修改和重新赋值的。</span><br><span class="line">在 JavaScript 中,函数是对象,而对象是引用类型。</span><br><span class="line">所以当我们传递或赋值一个函数时,传递的其实是对该函数对象的引用,而不是函数的拷贝。</span><br></pre></td></tr></table></figure>
-
-<p>   <a target="_blank" rel="noopener" href="https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682137463065349">https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682137463065349</a><br>4.引用在JS里有什么用？</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">1. 允许对象之间共享信息。因为对对象的引用可以在多个变量之间传递,所以指向同一对象的多个变量可以共享该对象中的信息。</span><br><span class="line">例如:</span><br><span class="line">js</span><br><span class="line">let obj = &#123; a: 1 &#125;;</span><br><span class="line">let ref1 = obj;</span><br><span class="line">let ref2 = obj;</span><br><span class="line"></span><br><span class="line">ref1.a = 2;  // 通过 ref1 修改</span><br><span class="line"></span><br><span class="line">console.log(ref2.a); // 2  ref2 也受到影响</span><br><span class="line">这里 ref1 和 ref2 指向同一对象 obj,所以通过 ref1 对 obj 的修改也影响了 ref2。</span><br><span class="line"></span><br><span class="line">2. 实现继承和原型链。JS 中的继承是通过原型链实现的,子对象通过__proto__属性指向父对象,这个过程其实就是引用传递。</span><br><span class="line">例如:</span><br><span class="line">js</span><br><span class="line">let parent = &#123;</span><br><span class="line">  name: &#x27;parent&#x27; </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">let child = &#123;</span><br><span class="line">  __proto__: parent  // child 的 __proto__ 属性引用 parent</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">console.log(child.name); // parent </span><br><span class="line">这里 child 对 parent 的引用允许其访问 parent 的属性和方法。</span><br><span class="line"></span><br><span class="line">3. 函数也是对象,所以对函数的传递和赋值也是通过引用来实现的。这意味着多个变量可以共享同一个函数,并且函数的内部状态会影响所有接受到其引用的变量。</span><br><span class="line">例如:</span><br><span class="line">js</span><br><span class="line">function foo() &#123;</span><br><span class="line">  foo.count++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let bar = foo;</span><br><span class="line"></span><br><span class="line">bar();  // foo.count 是 1 </span><br><span class="line">foo();  // foo.count 是 2</span><br><span class="line">这里 bar 和 foo 指向同一个函数对象,所以调用 bar 或 foo 都会修改这个共享的函数对象。</span><br><span class="line"></span><br><span class="line">4. 允许循环引用。通过引用,两个对象可以相互引用对方,形成闭环。</span><br><span class="line">例如:</span><br><span class="line">js</span><br><span class="line">let obj1 = &#123;</span><br><span class="line">  name: &#x27;obj1&#x27;,</span><br><span class="line">  ref: obj2  // 引用 obj2 </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">let obj2 = &#123;</span><br><span class="line">  name: &#x27;obj2&#x27;,</span><br><span class="line">  ref: obj1  // 引用 obj1</span><br><span class="line">&#125;;</span><br><span class="line">  </span><br><span class="line">所以,总结来说,引用在 JS 中实现了对象之间的连接,是支持大部分面向对象特性和功能的基础。</span><br></pre></td></tr></table></figure>
-
-<p>   <a target="_blank" rel="noopener" href="https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682137511999319">https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682137511999319</a><br>5.为什么对象是引用类型？<br>   <a target="_blank" rel="noopener" href="https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682137569143519">https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682137569143519</a><br>6.构造函数可以被继承的部分一定是引用类型吗？<br>   <a target="_blank" rel="noopener" href="https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682137669380839">https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682137669380839</a><br>7.不是引用类型的部分怎么实现可以被继承的？<br>   <a target="_blank" rel="noopener" href="https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682137704757199">https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682137704757199</a><br>8.构造函数中，可继承的部分中，不是引用类型的部分为什么不用引用实现被继承？<br>    每一个继承对象理应拥有父对象中某些属性的一个独立拷贝,而不是共享一个属性的引用<br>    <a target="_blank" rel="noopener" href="https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682138844233269">https://test-rnt2063.slack.com/archives/D053Z3YFB4Y/p1682138844233269</a><br>9.完整拷贝对象比引用浪费了哪些资源？<br>    1更多的内存空间,需要存储对象的完整结构<br>    2更长的处理时间,需要遍历对象属性进行拷贝<br>    3创建额外的临时对象   </p>
-<p>10.引用不用储存对象的完整结构吗？什么叫对象的完整结构？<br>    引用也需要存储对象的结构,但是与拷贝相比,引用只需要存储对象结构一次。<br>    引用的工作原理是:多个变量存储的是对同一个对象的引用,通过这个引用可以访问到对象的结构。</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-前端学习笔记/JS/Q4-JS-7过滤"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/04/13/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-7%E8%BF%87%E6%BB%A4/"
-    >JS学习笔记-4.7过滤（base  gpt ）</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/04/13/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-7%E8%BF%87%E6%BB%A4/" class="article-date">
-  <time datetime="2023-04-13T03:34:47.000Z" itemprop="datePublished">2023-04-13</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="4-7-1数组过滤"><a href="#4-7-1数组过滤" class="headerlink" title="4.7.1数组过滤"></a>4.7.1数组过滤</h1><ol>
-<li><p>filter():过滤出符合条件的元素,返回新数组。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.filter(callbackFunc)</span><br></pre></td></tr></table></figure>
-
-<p>callbackFunc 是过滤函数,用于测试每个元素是否通过测试。<br>filter() 方法返回一个过滤后的新数组。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const fruits = [&#x27;apple&#x27;, &#x27;banana&#x27;, &#x27;grape&#x27;, &#x27;mango&#x27;, &#x27;orange&#x27;];</span><br><span class="line"></span><br><span class="line">const filterItems = fruits.filter(fruit =&gt; fruit.length &gt; 6);</span><br><span class="line"></span><br><span class="line">console.log(filterItems); </span><br><span class="line">// [&#x27;banana&#x27;, &#x27;mango&#x27;, &#x27;orange&#x27;]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>slice():提取符合条件的元素,返回新数组，属于浅拷贝。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.slice(start, end)</span><br></pre></td></tr></table></figure>
-
-<p>start 和 end 表示截取的起止位置,不包含 end 位置的元素。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let fruits = [&#x27;apple&#x27;, &#x27;banana&#x27;, &#x27;grape&#x27;, &#x27;mango&#x27;, &#x27;orange&#x27;];</span><br><span class="line">let sliceFruits = fruits.slice(1, 3);</span><br><span class="line">// sliceFruits = [&#x27;banana&#x27;, &#x27;grape&#x27;]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>splice():移除元素,并可以在移除的位置添加新元素。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.splice(start, deleteCount, ...newItems) </span><br></pre></td></tr></table></figure>
-
-<p>- start:移除元素的起始位置<br>- deleteCount:要移除的元素个数<br>- newItems:要添加的新元素示例:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let fruits = [&#x27;apple&#x27;, &#x27;banana&#x27;, &#x27;grape&#x27;, &#x27;mango&#x27;, &#x27;orange&#x27;]; </span><br><span class="line">fruits.splice(1, 2, &#x27;strawberry&#x27;);</span><br><span class="line">// fruits = [&#x27;apple&#x27;, &#x27;strawberry&#x27;, &#x27;mango&#x27;, &#x27;orange&#x27;]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>pop()&#x2F;shift():移除数组的最后&#x2F;第一个元素。</p>
-</li>
-<li><p>concat():相当于C++里的set。连接两个数组,并返回新数组。可以用于过滤两个数组的公共元素。</p>
-</li>
-<li><p>…(展开运算符):将一个数组展开为用 , 分隔的参数序列,可以用于过滤数组中的某些元素。</p>
-<p>除此之外,我们也可以使用 ES6 的 Set 和 Map 等新数据结构进行过滤。</p>
-</li>
-</ol>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-前端学习笔记/JS/Q4-JS-6标准库"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/04/12/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-6%E6%A0%87%E5%87%86%E5%BA%93/"
-    >JS学习笔记-4.6标准库（base阮一峰/claude/MDN ）</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/04/12/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-6%E6%A0%87%E5%87%86%E5%BA%93/" class="article-date">
-  <time datetime="2023-04-12T03:34:47.000Z" itemprop="datePublished">2023-04-12</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="4-6标准库"><a href="#4-6标准库" class="headerlink" title="4.6标准库"></a>4.6标准库</h1><h2 id="4-6-0基础知识"><a href="#4-6-0基础知识" class="headerlink" title="4.6.0基础知识"></a>4.6.0基础知识</h2><h3 id="1-C-和-JS-中的构造函数和析构函数的异同"><a href="#1-C-和-JS-中的构造函数和析构函数的异同" class="headerlink" title="1.C++ 和 JS 中的构造函数和析构函数的异同"></a>1.C++ 和 JS 中的构造函数和析构函数的异同</h3><p>C++ 和 JS 中的构造函数和析构函数有以下的异同:异同点一:初始化资源申请以及释放。它们都是用来初始化申请资源以及释放资源的。异同点二:以类名一样的方法命名。构造函数都是以类名命名的,析构函数都是以类名加上 ~ 符号命名的。</p>
-<p>不同点一:调用时机不同。</p>
-<p>C++: 构造函数在对象定义时或通过 new 关键字动态分配内存时调用;析构函数在对象释放时或 delete 关键字释放内存时调用。<br>JS:构造函数在通过 new 关键字调用时执行;没有析构函数的概念,JS 中由垃圾回收机制实现内存释放。</p>
-<p>不同点二:继承的调用关系不同。</p>
-<p>C++:在继承关系中,如果子类没有定义构造函数,会自动调用父类的构造函数;如果子类定义了构造函数,需要在子类构造函数中显式调用父类的构造函数;析构函数与构造函数相反,会先调用子类的析构函数,然后调用父类的析构函数。<br>JS:在继承关系中,如果子类没有定义构造函数,不会自动调用父类的构造函数;子类需要显示调用父类的构造函数;没有析构函数的概念。不同点三:重载与重写不同。</p>
-<p>C++: 构造函数和析构函数都可以重载;子类可以重写父类的构造函数和析构函数。<br>JS:构造函数不能重载,但可以在子类中重写父类的构造函数;没有重写析构函数的概念。</p>
-<p>总体来说,C++ 中的这两个概念更加丰富,而 JS 中针对对象初始化和释放的处理较为简单。</p>
-<h3 id="2-什么是浅拷贝"><a href="#2-什么是浅拷贝" class="headerlink" title="2.什么是浅拷贝"></a>2.什么是浅拷贝</h3><p>就是愚蠢的拷贝，如果对象里嵌套了对象，那么就会把内部对象的引用给拷贝下来（引用类型的拷贝不会改变引用地址，也就是说拷贝下来的新引用还是旧的那个引用）。由于只是拷贝引用,所以如果引用所指向的对象发生变化,浅拷贝得到的对象也会发生变化。</p>
-<h4 id="最直观的例子："><a href="#最直观的例子：" class="headerlink" title="最直观的例子："></a>最直观的例子：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let obj = &#123; a: 1, b: &#123; c: 2 &#125; &#125;;</span><br><span class="line">let copy = Object.assign(&#123;&#125;, obj);  // 浅拷贝</span><br><span class="line">obj.b.c = 3;</span><br><span class="line">obj.a = 4;</span><br><span class="line">console.log(copy.b.c);  // 3  发生变化</span><br><span class="line">console.log(copy.a);    //1   无变化</span><br></pre></td></tr></table></figure>
-
-<h4 id="具体解释："><a href="#具体解释：" class="headerlink" title="具体解释："></a>具体解释：</h4><p>对上面这个例子,我们来分析浅拷贝后 copy 对象的结构:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">js</span><br><span class="line">obj = &#123;</span><br><span class="line">  a: 1,     // 基本类型,值 </span><br><span class="line">  b: &#123;      // 引用类型,地址1</span><br><span class="line">    c: 2 </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">copy = &#123;</span><br><span class="line">  a: 1,     // 基本类型,值 </span><br><span class="line">  b: &#123;      // 引用类型,地址1</span><br><span class="line">    c: 2 </span><br><span class="line">  &#125;  </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-<p>然后当我们修改 obj 时:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">js</span><br><span class="line">obj.b.c = 3;  // 修改的是地址1指向的对象</span><br><span class="line">obj.a = 4;     // 修改的是值</span><br></pre></td></tr></table></figure>
-
-<p>此时,obj 和 copy 的结构变为:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">js</span><br><span class="line">obj = &#123;</span><br><span class="line">  a: 4,      // 新的基本类型值 </span><br><span class="line">  b: &#123;       // 地址1</span><br><span class="line">    c: 3    </span><br><span class="line">  &#125;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">copy = &#123;</span><br><span class="line">  a: 1,       // 原基本类型值</span><br><span class="line">  b: &#123;        // 地址1</span><br><span class="line">    c: 3     </span><br><span class="line">  &#125; </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-<p>可以看到:- 当我们修改 obj 的引用类型成员 b 时,由于 copy 中的 b 也指向地址 1,所以 copy 的 b 也发生了变化。- 但是,当我们修改 obj 的基本类型成员 a 时,copy 中的 a 不发生变化,因为它有自己的独立值。所以结果是:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">js</span><br><span class="line">console.log(copy.b.c);  // 3  发生变化</span><br><span class="line">console.log(copy.a);    //1   无变化  </span><br></pre></td></tr></table></figure>
-
-<p>这个过程很好地证明了浅拷贝的特征:- 对引用类型的成员,拷贝的是地址,变化会相互影响<br>- 对基本类型的成员,拷贝的是值,变化互不影响</p>
-<h4 id="浅拷贝常见的实现方式有"><a href="#浅拷贝常见的实现方式有" class="headerlink" title="浅拷贝常见的实现方式有:"></a>浅拷贝常见的实现方式有:</h4><ol>
-<li><h5 id="Object-assign-obj1-obj2-对象的浅拷贝"><a href="#Object-assign-obj1-obj2-对象的浅拷贝" class="headerlink" title="Object.assign(obj1, obj2)对象的浅拷贝:"></a>Object.assign(obj1, obj2)对象的浅拷贝:</h5></li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let obj = &#123; a: 1, b: &#123; c: 2 &#125; &#125;;</span><br><span class="line">let copy = Object.assign(&#123;&#125;, obj);  // 浅拷贝</span><br><span class="line">obj.b.c = 3;</span><br><span class="line">console.log(copy.b.c);  // 3  发生变化</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li><h5 id="arr-slice-数组的浅拷贝"><a href="#arr-slice-数组的浅拷贝" class="headerlink" title="arr.slice()数组的浅拷贝:"></a>arr.slice()数组的浅拷贝:</h5></li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let arr = [1, &#123; a: 2 &#125;]; </span><br><span class="line">let copy = arr.slice();   // 浅拷贝</span><br><span class="line">arr[1].a = 3;</span><br><span class="line">console.log(copy[1].a);   // 3  发生变化</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li><h5 id="…obj-…arr-展开语法进行浅拷贝"><a href="#…obj-…arr-展开语法进行浅拷贝" class="headerlink" title="{ …obj }  […arr]展开语法进行浅拷贝:"></a>{ …obj }  […arr]展开语法进行浅拷贝:</h5></li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let obj = &#123; a: 1, b: &#123; c: 2 &#125; &#125;;</span><br><span class="line">let copy = &#123; ...obj &#125;;   // 浅拷贝</span><br><span class="line">obj.b.c = 3;</span><br><span class="line">console.log(copy.b.c);   // 3  发生变化</span><br></pre></td></tr></table></figure>
-
-<p>所以,浅拷贝的主要用途是快速复制对象,但是由于它只复制引用,对于引用类型的成员来说,如果原对象发生变化,拷贝对象也会变化。如果要避免这种情况,可以使用深拷贝,深拷贝会完整复制一个新对象,两者之间不再有任何引用关系,变化互不影响。</p>
-<h4 id="常见的深拷贝实现方式有"><a href="#常见的深拷贝实现方式有" class="headerlink" title="常见的深拷贝实现方式有:"></a>常见的深拷贝实现方式有:</h4><p>JSON.parse(JSON.stringify(obj))<br>lodash工具库的 _.cloneDeep() 方法<br>手动实现深度遍历对象并复制（及其简单的递归，就是一层层拨开嵌套对象，直到到达内部找到对象内的键值对，浅拷贝它）</p>
-<p>所以,总结来说,浅拷贝和深拷贝的主要区别在于对引用类型的成员的处理方式,理解两者的区别可以更好地选择适合的拷贝方式。</p>
-<h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><p>在工作中,如果要考虑兼容性,或需要灵活指定下标获取部分数组,arr.slice() 会更常用。</p>
-<p>如果项目环境支持 ES6,并且需要获取数组的完整拷贝,展开语法 …arr 会更简洁,也是较常见的用法。</p>
-<p>两者的底层实现原理都是浅拷贝,对于一维数组来说,效果是相同的。</p>
-<p>但也要注意,如果数组包含复杂类型,那么对原数组的修改会影响拷贝得到的数组。</p>
-<p>除此之外,也可以选择 lodash 等工具库提供的深拷贝方法,如 _.cloneDeep(),来完全避免两个数组之间的影响,这在某些场景下也比较常用。</p>
-<h2 id="4-6-1Object"><a href="#4-6-1Object" class="headerlink" title="4.6.1Object"></a>4.6.1Object</h2><h3 id="1-常用方法"><a href="#1-常用方法" class="headerlink" title="1.常用方法"></a>1.常用方法</h3><p>在工作中,Object 对象属性和方法中常用的主要有:</p>
-<ol>
-<li><strong>Object.defineProperty() 和 Object.defineProperties()</strong>:用于在对象上定义属性或修改属性,常用于<em><strong>数据响应式</strong></em>。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let obj = &#123;&#125;;</span><br><span class="line">Object.defineProperty(obj, &quot;prop&quot;, &#123;</span><br><span class="line">  value: true,</span><br><span class="line">  writable: false,</span><br><span class="line">  enumerable: true </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>Object.keys() 和 Object.values():用于获得对象的键名数组和键值数组。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let obj = &#123; a: 1, b: 2 &#125;;</span><br><span class="line">Object.keys(obj); // [&#x27;a&#x27;, &#x27;b&#x27;]</span><br><span class="line">Object.values(obj); // [1, 2]</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>Object.assign():用于对象合并，B合并到A里（是浅拷贝）。&#x2F;&#x2F;assign：分配、指派（任务）<br>                            不会去重，但是如果键值对的key是一样的，新的会把旧的覆盖，即旧的value消失</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let target = &#123; a: 1 &#125;;</span><br><span class="line">let source = &#123; b: 2 &#125;;</span><br><span class="line">Object.assign(target, source);</span><br><span class="line">// target is now &#123;a: 1, b: 2&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>Object.freeze():用于冻结对象,使其不能被修改。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let obj = &#123; a: 1 &#125;;</span><br><span class="line">Object.freeze(obj);</span><br><span class="line">obj.a = 2; // 无效</span><br></pre></td></tr></table></figure>
-
-<p>除此之外,对象的元属性(writable、enumerable 等)和存取器(getter、setter)也会使用,但是相对来说较少。控制对象状态的方法(Object.preventExtensions、Object.seal 等)用得比较少,一般只会在需要严格控制对象状态的场景下使用。所以,总的来说,在日常工作中 Object 对象的常用方面主要是属性的操作与管理,包括定义、获取和控制属性。</p>
+  <p>上篇主要介绍了鼎鼎大名的EM算法，从算法思想到数学公式推导（边际似然引入隐变量，Jensen不等式简化求导），EM算法实际上可以理解为一种坐标下降法，首先固定一个变量，接着求另外变量的最优解，通过其优美的“两步走”策略能较好地估计隐变量的值。本篇将继续讨论下一类经典算法–集成学习。</p>
+<p>#<strong>9、集成学习</strong></p>
+<p>顾名思义，集成学习（ensemble learning）指的是将多个学习器进行有效地结合，组建一个“学习器委员会”，其中每个学习器担任委员会成员并行使投票表决权，使得委员会最后的决定更能够四方造福普度众生<del>…</del>，即其泛化性能要能优于其中任何一个学习器。</p>
+<p>##<strong>9.1 个体与集成</strong></p>
+<p>集成学习的基本结构为：先产生一组个体学习器，再使用某种策略将它们结合在一起。集成模型如下图所示：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84d0c15683.png" alt="1.png"></p>
+<p>在上图的集成模型中，若个体学习器都属于同一类别，例如都是决策树或都是神经网络，则称该集成为同质的（homogeneous）;若个体学习器包含多种类型的学习算法，例如既有决策树又有神经网络，则称该集成为异质的（heterogenous）。</p>
 <blockquote>
-<p>注：数据响应式是一种设计模式,其核心思想是:当数据变化时,自动更新视图。在 JavaScript 中,定义响应式数据常用的手段就是 Object.defineProperty()。我们可以在定义对象属性时,指定 getter 和 setter 方法。当属性值发生变化时,getter 和 setter 就会自动调用,这样我们可以在 setter 中更新视图,达到数据响应式的效果。例如:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">let data = &#123;</span><br><span class="line">    name: &quot;John&quot;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Object.defineProperty(data, &quot;name&quot;, &#123;</span><br><span class="line">    get() &#123;</span><br><span class="line">        return this._name;</span><br><span class="line">    &#125;,</span><br><span class="line">    set(newValue) &#123;</span><br><span class="line">        this._name = newValue;</span><br><span class="line">        document.querySelector(&quot;#name&quot;).textContent = newValue;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">data.name = &quot;Jack&quot;; </span><br><span class="line">// 视图自动更新,页面上#name元素的文本变为&quot;Jack&quot;</span><br></pre></td></tr></table></figure>
-
-<p>这里我们定义了 name 属性的 getter 和 setter。当对 name 进行重新赋值时,setter 会自动调用,更新视图中的文本内容。Vue.js 中的响应式就是建立在 Object.defineProperty() 之上的。它通过递归定义对象属性的 getter 和 setter,实现视图的响应更新。所以,我们说 Object.defineProperty() 常用于数据响应式,就是因为它提供了定义属性访问器(getter 和 setter)的能力,可以结合 getter 和 setter 达到响应式更新视图的目的。</p>
+<p><strong>同质集成</strong>：个体学习器称为“基学习器”（base learner），对应的学习算法为“基学习算法”（base learning algorithm）。<br><strong>异质集成</strong>：个体学习器称为“组件学习器”（component learner）或直称为“个体学习器”。</p>
 </blockquote>
-<h3 id="2-Object-prototype（后几个不会用）"><a href="#2-Object-prototype（后几个不会用）" class="headerlink" title="2.Object.prototype（后几个不会用）"></a>2.Object.prototype（后几个不会用）</h3><p>在工作中,Object.prototype 最常用于:</p>
-<ol>
-<li>扩展内置对象。我们会在 Object.prototype 上添加方法,扩展 String、Array、Date 等内置对象的功能。例如:</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String.prototype.reverse = function() &#123;</span><br><span class="line">  return this.split(&#x27;&#x27;).reverse().join(&#x27;&#x27;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x27;hello&#x27;.reverse() // olleh</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>实现继承和共享方法。我们会在 Object.prototype 上定义方法,让多个对象类型共享这些方法,实现继承。例如:</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Object.prototype.sayHi = function() &#123;</span><br><span class="line">  console.log(&#x27;Hi!&#x27;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let str = &#x27;Hello&#x27; </span><br><span class="line">let obj = &#123;name: &#x27;Jack&#x27;&#125;</span><br><span class="line"></span><br><span class="line">str.sayHi() // Hi!</span><br><span class="line">obj.sayHi() // Hi!</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>模拟类。在 JS 中我们会使用构造函数和原型来模拟类,Object.prototype 就是在这里发挥作用。例如:</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function Person(name) &#123;</span><br><span class="line">  this.name = name </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person.prototype.sayName = function() &#123;</span><br><span class="line">  console.log(this.name); </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let jack = new Person(&#x27;Jack&#x27;);</span><br><span class="line">jack.sayName(); // Jack</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>实现 utility 方法。我们会在 Object.prototype 上实现一些通用的工具方法,供所有对象使用。例如:</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Object.prototype.isArray = function() &#123;</span><br><span class="line">  return Object.prototype.toString.call(this) === &#x27;[object Array]&#x27;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">[].isArray() // true </span><br><span class="line">&#123;&#125;.isArray() // false</span><br></pre></td></tr></table></figure>
-
-<p>所以,总的来说,在工作中 Object.prototype 最常用于扩展内置对象、实现继承和共享方法、模拟类、以及实现通用工具方法。它让 JS 的框架和库设计变得简单高效,也使我们的代码更加优雅。</p>
-<h2 id="4-6-1小结"><a href="#4-6-1小结" class="headerlink" title="4.6.1小结"></a>4.6.1小结</h2><p>Object有的函数能继承，有的不能。但不知道怎么主动让它继承，也不知道都哪些能继承。</p>
-<h2 id="4-6-2Array类型"><a href="#4-6-2Array类型" class="headerlink" title="4.6.2Array类型"></a>4.6.2Array类型</h2><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array">Array - JavaScript | MDN (mozilla.org)</a></p>
-<h3 id="1-构造函数（最好别用）"><a href="#1-构造函数（最好别用）" class="headerlink" title="1.构造函数（最好别用）"></a>1.构造函数（最好别用）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// bad</span><br><span class="line">var arr = new Array(1, 2);</span><br><span class="line"></span><br><span class="line">// good</span><br><span class="line">var arr = [1, 2];</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-静态方法"><a href="#2-静态方法" class="headerlink" title="2.静态方法"></a>2.静态方法</h3><p>Array.isArray()</p>
-<p>它可以弥补<code>typeof</code>运算符的不足。<code>typeof</code>运算符只能显示数组的类型是<code>Object</code>，而<code>Array.isArray</code>方法可以识别数组。</p>
-<h3 id="3-实例属性"><a href="#3-实例属性" class="headerlink" title="3.实例属性"></a>3.实例属性</h3><p>length</p>
-<h3 id="4-实例方法"><a href="#4-实例方法" class="headerlink" title="4.实例方法"></a>4.实例方法</h3><h4 id="valueOf-，toString"><a href="#valueOf-，toString" class="headerlink" title="valueOf()，toString()"></a>valueOf()，toString()</h4><h4 id="push-尾插，pop-尾删"><a href="#push-尾插，pop-尾删" class="headerlink" title="push()尾插，pop()尾删"></a>push()尾插，pop()尾删</h4><h4 id="shift-头删，unshift-头插"><a href="#shift-头删，unshift-头插" class="headerlink" title="shift()头删，unshift()头插"></a>shift()头删，unshift()头插</h4><p>​				1.shift()头删</p>
-<p>​						shift()方法用于删除数组的第一个元素，并返回该元素。注意，该方法会改变原数组。</p>
-<p>​						shift()方法可以遍历并清空一个数组。</p>
-<p>​						push()和shift()结合使用，就构成了“先进先出”的队列结构（queue）。</p>
-<p>​				2.unshift()头插</p>
-<p>​						用于在数组的第一个位置添加元素，并返回新的数组的长度。注意，该方法会改变原数组。</p>
-<p>​						可以接受多个参数，这些参数都会添加到目标数组头部。</p>
-<h4 id="join-符号链接"><a href="#join-符号链接" class="headerlink" title="join()符号链接"></a>join()符号链接</h4><p>​				join()方法以指定参数作为分隔符，将所有数组成员连接并返回。如果不提供参数，默认用逗号分隔。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">通过call方法，这个方法也可以用于字符串或类似数组的对象。</span><br><span class="line"></span><br><span class="line">Array.prototype.join.call(&#x27;hello&#x27;, &#x27;-&#x27;)</span><br><span class="line">// &quot;h-e-l-l-o&quot;</span><br><span class="line"></span><br><span class="line">var obj = &#123; 0: &#x27;a&#x27;, 1: &#x27;b&#x27;, length: 2 &#125;;</span><br><span class="line">Array.prototype.join.call(obj, &#x27;-&#x27;)</span><br><span class="line">// &#x27;a-b&#x27;	</span><br></pre></td></tr></table></figure>
-
-<h4 id="at-下标-访问"><a href="#at-下标-访问" class="headerlink" title="at(下标)访问"></a>at(下标)访问</h4><p>​				返回给定索引处的数组元素。接受从最后一项往回计算的负整数。</p>
-<h4 id="concat-合并"><a href="#concat-合并" class="headerlink" title="concat()合并"></a>concat()合并</h4><p>​				用于多个数组的合并。尾插，然后返回一个新数组，原数组不变。</p>
-<p>​				如果数组成员包括对象，<code>concat</code>方法返回当前数组的一个浅拷贝。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[&#x27;hello&#x27;].concat([&#x27;world&#x27;], [&#x27;!&#x27;], [&#123;a:4&#125;], 1)   </span><br><span class="line">// [&quot;hello&quot;, &quot;world&quot;, &quot;!&quot;, &#123;a:4&#125;, 1]</span><br></pre></td></tr></table></figure>
-
-<h4 id="reverse"><a href="#reverse" class="headerlink" title="reverse()"></a>reverse()</h4><p>​				用于颠倒排列数组元素，返回改变后的数组。注意，该方法将改变原数组。</p>
-<h4 id="slice-切片"><a href="#slice-切片" class="headerlink" title="slice()切片"></a>slice()切片</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.slice(start, end);</span><br></pre></td></tr></table></figure>
-
-<h4 id="splice-删除"><a href="#splice-删除" class="headerlink" title="splice()删除"></a>splice()删除</h4><p>​				用于删除原数组的一部分成员，并可以在删除的位置添加新的数组成员，返回值是被删除的元素。注意，该方法会改变原数组。</p>
-<h4 id="sort-不传参-排字典序"><a href="#sort-不传参-排字典序" class="headerlink" title="sort(不传参)排字典序"></a>sort(不传参)排字典序</h4><p>​				对数组成员进行排序。排序后，原数组将被改变。</p>
-<p>​				不是按大小排序，而是按字典排序。数值会被先转成字符串，再比较，所以<code>101</code>排在<code>11</code>的前面。</p>
-<h4 id="sort-传入函数-排数值序"><a href="#sort-传入函数-排数值序" class="headerlink" title="sort(传入函数)排数值序"></a>sort(传入函数)排数值序</h4><p>​				.sort((a, b) &#x3D;&gt; a - b)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[1, 4, 2, 6, 0, 6, 2, 6].sort((a, b) =&gt; a - b)</span><br></pre></td></tr></table></figure>
-
-<h4 id="map-传入函数-所有成员依次执行函数"><a href="#map-传入函数-所有成员依次执行函数" class="headerlink" title="map(传入函数)所有成员依次执行函数"></a>map(传入函数)所有成员依次执行函数</h4><p>​				将数组的所有成员依次传入参数函数，然后把每一次的执行结果组成一个新数组返回。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var numbers = [1, 2, 3];</span><br><span class="line"></span><br><span class="line">numbers.map(function (n) &#123;</span><br><span class="line">  return n + 1;</span><br><span class="line">&#125;);</span><br><span class="line">// [2, 3, 4]</span><br><span class="line"></span><br><span class="line">numbers</span><br><span class="line">// [1, 2, 3]</span><br></pre></td></tr></table></figure>
-
-<h4 id="forEach-传入函数-所有成员依次执行函数"><a href="#forEach-传入函数-所有成员依次执行函数" class="headerlink" title="forEach(传入函数)所有成员依次执行函数"></a>forEach(传入函数)所有成员依次执行函数</h4><p>​				与<code>map()</code>方法很相似，也是对数组的所有成员依次执行参数函数。但不返回值，只用来操作数据。</p>
-<h4 id="filter-传入函数-所有成员依次执行函数"><a href="#filter-传入函数-所有成员依次执行函数" class="headerlink" title="filter(传入函数)所有成员依次执行函数"></a>filter(传入函数)所有成员依次执行函数</h4><p>​			过滤数组成员，参数是一个函数，所有数组成员依次执行该函数，返回结果为<code>true</code>的成员组成一个新数组返回。该方法不会改变原数组。</p>
-<h4 id="some-存在，every-所有"><a href="#some-存在，every-所有" class="headerlink" title="some()存在，every()所有"></a>some()存在，every()所有</h4><p>​				判断数组成员是否符合某种条件，返回一个布尔值。</p>
-<p>​				它们接受一个函数作为参数，所有数组成员依次执行该函数。</p>
-<p>​				every方法是所有成员的返回值都是true<code>，整个</code>every<code>方法才返回</code>true<code>，否则返回</code>false。</p>
-<h4 id="reduce-，reduceRight"><a href="#reduce-，reduceRight" class="headerlink" title="reduce()，reduceRight()"></a>reduce()，reduceRight()</h4><p>​				<code>reduce()</code>方法和<code>reduceRight()</code>方法依次处理数组的每个成员，最终累计为一个值。它们的差别是，<code>reduce()</code>是从左到右处理（从第一个成员到最后一个成员），<code>reduceRight()</code>则是从右到左（从最后一个成员到第一个成员），其他完全一样。</p>
-<h4 id="indexOf-，lastIndexOf"><a href="#indexOf-，lastIndexOf" class="headerlink" title="indexOf()，lastIndexOf()"></a>indexOf()，lastIndexOf()</h4><p>​				<code>indexOf</code>方法返回给定元素在数组中第一次出现的位置，如果没有出现则返回<code>-1</code>。</p>
-<p>​				<code>lastIndexOf</code>方法返回给定元素在数组中最后一次出现的位置，如果没有出现则返回<code>-1</code>。</p>
-<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/fill"><code>Array.prototype.fill()</code></a></p>
-<p>用静态值填充数组中从开始索引到结束索引的所有元素。</p>
-<h4 id="链式使用"><a href="#链式使用" class="headerlink" title="链式使用"></a>链式使用</h4><p>上面这些数组方法之中，有不少返回的还是数组，所以可以链式使用。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var users = [</span><br><span class="line">  &#123;name: &#x27;tom&#x27;, email: &#x27;tom@example.com&#x27;&#125;,</span><br><span class="line">  &#123;name: &#x27;peter&#x27;, email: &#x27;peter@example.com&#x27;&#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">users</span><br><span class="line">.map(function (user) &#123;</span><br><span class="line">  return user.email;</span><br><span class="line">&#125;)</span><br><span class="line">.filter(function (email) &#123;</span><br><span class="line">  return /^t/.test(email);</span><br><span class="line">&#125;)</span><br><span class="line">.forEach(function (email) &#123;</span><br><span class="line">  console.log(email);</span><br><span class="line">&#125;);</span><br><span class="line">// &quot;tom@example.com&quot;</span><br></pre></td></tr></table></figure>
-
-<p>上面代码中，先产生一个所有 Email 地址组成的数组，然后再过滤出以<code>t</code>开头的 Email 地址，最后将它打印出来。</p>
-<h2 id="4-6-3原始类型的对象化"><a href="#4-6-3原始类型的对象化" class="headerlink" title="4.6.3原始类型的对象化"></a>4.6.3原始类型的对象化</h2><h3 id="1-三种包装对象"><a href="#1-三种包装对象" class="headerlink" title="1.三种包装对象"></a>1.三种包装对象</h3><p>Number、String、Boolean</p>
-<h3 id="2-包装成对象的原因"><a href="#2-包装成对象的原因" class="headerlink" title="2.包装成对象的原因"></a>2.包装成对象的原因</h3><p>用于继承并使用Object类型中的函数。其中三者公用的是valueOf()<code>和</code>toString()。</p>
-<h4 id="2-1valueOf"><a href="#2-1valueOf" class="headerlink" title="2.1valueOf()"></a>2.1valueOf()</h4><p>返回包装对象实例对应的原始类型的值。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">new Number(123).valueOf()  // 123</span><br><span class="line">new String(&#x27;abc&#x27;).valueOf() // &quot;abc&quot;</span><br><span class="line">new Boolean(true).valueOf() // true</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-2toString"><a href="#2-2toString" class="headerlink" title="2.2toString()"></a>2.2toString()</h4><p>返回对应的字符串形式。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">new Number(123).toString() // &quot;123&quot;</span><br><span class="line">new String(&#x27;abc&#x27;).toString() // &quot;abc&quot;</span><br><span class="line">new Boolean(true).toString() // &quot;true&quot;</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-6-2小结"><a href="#4-6-2小结" class="headerlink" title="4.6.2小结"></a>4.6.2小结</h2><p>有些类型直接使用太麻烦，包装成对象可以调用更多的库函数。</p>
-<h2 id="4-6-3Boolean"><a href="#4-6-3Boolean" class="headerlink" title="4.6.3Boolean"></a>4.6.3Boolean</h2><h4 id="0-使用与易错点"><a href="#0-使用与易错点" class="headerlink" title="0.使用与易错点"></a>0.使用与易错点</h4><p>0.1使用：直接 let a&#x3D;true；就行。</p>
-<p>0.2易错点：小心使用，并不是只有0和false是false，空字符串等也是。</p>
-<h4 id="1-Boolean中得到true的例子（都要记住）"><a href="#1-Boolean中得到true的例子（都要记住）" class="headerlink" title="1.Boolean中得到true的例子（都要记住）"></a>1.Boolean中得到true的例子（都要记住）</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Boolean(1) // true				数字</span><br><span class="line">Boolean(&#x27;false&#x27;) // true		字符串</span><br><span class="line">Boolean([]) // true				空数组</span><br><span class="line">Boolean(&#123;&#125;) // true				空对象</span><br><span class="line">Boolean(function () &#123;&#125;) // true	空函数</span><br><span class="line">Boolean(/foo/) // true			正则</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-JS和C中的bool类型的异同"><a href="#2-JS和C中的bool类型的异同" class="headerlink" title="2.JS和C中的bool类型的异同"></a>2.JS和C中的bool类型的异同</h3><p>异同点:</p>
-<p>都只有两个值:true 和 false。</p>
-<p>都用于表示逻辑上的真假。</p>
-<h4 id="2-1不同点一-存储方式不同。"><a href="#2-1不同点一-存储方式不同。" class="headerlink" title="2.1不同点一:存储方式不同。"></a>2.1不同点一:存储方式不同。</h4><p>JS:Boolean 是基本数据类型,占据1个字节。<br>C:没有标准的 bool 类型,一般使用整型来存储,占据1个字节(char)或4个字节(int)。</p>
-<h4 id="2-2不同点二-转换规则不同。"><a href="#2-2不同点二-转换规则不同。" class="headerlink" title="2.2不同点二:转换规则不同。"></a>2.2不同点二:转换规则不同。</h4><p>JS:在 Boolean 上下文中,以下值会转换为 false:<br> - false<br> - 0<br> - “”(空字符串)<br> - null<br> - undefined<br> - NaN<br>C:所有非零的值都会转换为 true,0 转换为 false。</p>
-<h4 id="2-3不同点三-操作方式不同。"><a href="#2-3不同点三-操作方式不同。" class="headerlink" title="2.3不同点三:操作方式不同。"></a>2.3不同点三:操作方式不同。</h4><p>JS:可以直接对 Boolean 类型的值进行逻辑运算(&amp;&amp;、||、!)<br>C:需要先将值转换为整型,再进行逻辑运算。</p>
-<p>例如:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">js</span><br><span class="line">let t = true;</span><br><span class="line">let f = false;</span><br><span class="line"></span><br><span class="line">t &amp;&amp; f;     // false</span><br><span class="line">t || f;     // true </span><br><span class="line">!t;         // false</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">c</span><br><span class="line">int t = 1;  // true</span><br><span class="line">int f = 0;  // false</span><br><span class="line"></span><br><span class="line">t &amp;&amp; f;     // 0 </span><br><span class="line">t || f;     // 1</span><br><span class="line">!t;         // 0</span><br></pre></td></tr></table></figure>
-
-<p>所以,Boolean 作为两种语言的基本数据类型,在概念上是相通的,但是具体的实现与使用上存在一定的差异。总体来说,JS 对 Boolean 的支持更加丰富,使用也更加方便,而 C 由于缺乏标准的 bool 类型, Boolean 的表达相对局限。这也是两种语言的特点的体现:JS 侧重表达,C 侧重底层实现。理解两者在这一点上的差异,有助于更好的使用两种语言。</p>
-<h3 id="3-boolean类型与Boolean对象"><a href="#3-boolean类型与Boolean对象" class="headerlink" title="3.boolean类型与Boolean对象"></a>3.boolean类型与Boolean对象</h3><p>在 JS 中,boolean 类型和 Boolean 对象是不同的:</p>
-<h4 id="3-1boolean-类型"><a href="#3-1boolean-类型" class="headerlink" title="3.1boolean 类型:"></a>3.1boolean 类型:</h4><p>是 JS 的基本数据类型之一,只有 true 和 false 两个值。<br>- 表示逻辑上的真或假。<br>- 大小写敏感,true 和 True 是不同的。<br>- 可以直接在条件语句中使用,如 if 和 while。例如:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">js</span><br><span class="line">let bool = true;     // boolean 类型</span><br><span class="line"></span><br><span class="line">if (bool) &#123; ... &#125;    // 可以直接用于条件判断</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-2Boolean-对象"><a href="#3-2Boolean-对象" class="headerlink" title="3.2Boolean 对象:"></a>3.2Boolean 对象:</h4><p>是 JS 的内置对象,继承自 Object。<br>- 包装了 boolean 基本类型,有 true 和 false 两个值。<br>- 大小写不敏感,TRUE 和 true 是同一个值。<br>- 不能直接在条件语句中使用,需要调用 valueOf() 方法。<br>- 除了 true 和 false,可以有其他的属性和方法。例如:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">js</span><br><span class="line">let bool = new Boolean(true);   // Boolean 对象</span><br><span class="line"></span><br><span class="line">if (bool.valueOf()) &#123; ... &#125;    // 需要调用 valueOf() 方法</span><br><span class="line"></span><br><span class="line">bool.constructor = 123;        // 可以添加属性</span><br></pre></td></tr></table></figure>
-
-<p>所以,boolean 类型和 Boolean 对象的主要区别在于:- boolean 是基本数据类型,Boolean 是对象。<br>- boolean 只有 true 和 false 两个字面量,Boolean 除了 true 和 false 值外,还可以有其他属性和方法。<br>- boolean 可以直接用于条件判断,Boolean 需要调用 valueOf() 方法。但是,在大多数情况下,我们可以把 Boolean 对象当作 boolean 类型来使用,因为:- Boolean 对象在布尔表达式中会自动调用 valueOf() 方法,返回基本类型值。</p>
-<h2 id="4-6-3小结"><a href="#4-6-3小结" class="headerlink" title="4.6.3小结"></a>4.6.3小结</h2><p><strong>基于性能考虑,大多数情况下我们会使用基本类型boolean而不是Boolean对象。</strong>所以,boolean 和 Boolean的关系可以看作,boolean 是基本数据类型,Boolean 是它的对象包装形式。</p>
-<h2 id="4-6-4Number"><a href="#4-6-4Number" class="headerlink" title="4.6.4Number"></a>4.6.4Number</h2><p>只有可继承的原型函数prototype.toString（）值得一看</p>
-<h2 id="4-6-5-String"><a href="#4-6-5-String" class="headerlink" title="4.6.5.String"></a>4.6.5.String</h2><h3 id="5-1实例属性（原型属性）"><a href="#5-1实例属性（原型属性）" class="headerlink" title="5.1实例属性（原型属性）"></a>5.1实例属性（原型属性）</h3><ol>
-<li>字符串实例的length属性返回字符串的长度。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;abc&#x27;.length // 3</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-2实例方法（原型函数）"><a href="#5-2实例方法（原型函数）" class="headerlink" title="5.2实例方法（原型函数）"></a>5.2实例方法（原型函数）</h3><ol>
-<li><p>charAt():返回指定索引处的字符,索引从 0 开始。</p>
-<p>或当成数组，使用下标访问(这种方法是只读的，想改动这个字符就会报错)。</p>
-</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.charAt(0);  // &#x27;h&#x27;</span><br><span class="line">&#x27;hello&#x27;[0];			// &#x27;h&#x27;</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>at():返回指定索引处的字符。接受负整数，从最后一个字符串字符开始倒数。</li>
-<li>includes():确定调用字符串是否包含 searchString。</li>
-<li>concat():连接两个或多个字符串,返回连接后的字符串。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.concat(&#x27; &#x27;, &#x27;world&#x27;);  // &#x27;hello world&#x27;</span><br></pre></td></tr></table></figure>
-
-<ol start="5">
-<li>startsWith():检查字符串是否以指定的子字符串开头,返回 true 或 false。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.startsWith(&#x27;he&#x27;);   // true</span><br></pre></td></tr></table></figure>
-
-<ol start="6">
-<li>endsWith():检查字符串是否以指定的子字符串结尾,返回 true 或 false。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.endsWith(&#x27;lo&#x27;);   // true</span><br></pre></td></tr></table></figure>
-
-<ol start="7">
-<li>indexOf():返回指定子字符串首次出现的索引,如果不存在则返回 -1。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.indexOf(&#x27;l&#x27;);   // 2</span><br></pre></td></tr></table></figure>
-
-<ol start="8">
-<li>lastIndexOf():返回指定子字符串最后一次出现的索引,如果不存在则返回 -1。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.lastIndexOf(&#x27;l&#x27;);   // 3</span><br></pre></td></tr></table></figure>
-
-<ol start="9">
-<li>slice():切片。提取字符串的一部分,返回提取后的字符串。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.slice(1, 3);   // &#x27;el&#x27;</span><br></pre></td></tr></table></figure>
-
-<ol start="10">
-<li>split():拆分。将字符串按指定分隔符拆分成数组,返回数组。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;a-b-c&#x27;.split(&#x27;-&#x27;);   // [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]</span><br></pre></td></tr></table></figure>
-
-<ol start="11">
-<li>replace():替换字符串中的指定子字符串,返回替换后的字符串。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;hello&#x27;.replace(&#x27;l&#x27;, &#x27;x&#x27;);   // &#x27;hexxo&#x27;</span><br></pre></td></tr></table></figure>
-
-<p>&#x2F;&#x2F;正则相关<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String">String - JavaScript | MDN (mozilla.org)</a></p>
-<ol start="12">
-<li><p>match()</p>
-</li>
-<li><p>matchAll()</p>
-</li>
-<li><p>replace()</p>
-</li>
-<li><p>replaceAll()</p>
-</li>
-<li><p>serach()</p>
-</li>
-</ol>
-<p>&#x2F;&#x2F;claude认为的常用方法</p>
-<ol>
-<li>String.prototype.indexOf() 和String.prototype.lastIndexOf() :用于查找字符串中的子字符串,前者从前往后,后者从后往前。</li>
-<li>String.prototype.slice() :用于提取字符串的一部分,返回一个新的字符串。</li>
-<li>String.prototype.substring() <code>:也用于提取字符串的一部分,返回一个新的字符串。和 slice 稍有不同。</code></li>
-<li>String.prototype.substr() :同样用于提取字符串的一部分,返回一个新的字符串。和 slice、substring 也有差异。</li>
-<li>String.prototype.replace() :用于替换字符串中的子字符串</li>
-<li>String.prototype.toUpperCase() <code>和</code> String.prototype.toLowerCase():用于转换字符串的大小写。</li>
-<li>String.prototype.concat() :用于连接两个或更多字符串,返回一个新字符串。&#96;</li>
-<li>String.prototype.trim() 、String.prototype.trimStart() <code>和</code> String.prototype.trimEnd():用于删除字符串开头或结尾的空格。</li>
-<li>String.prototype.charAt() :返回指定索引处的字符。</li>
-<li>String.prototype.split() :将字符串分割成子字符串数组。</li>
-<li>String.prototype.match() :将正则表达式应用于字符串,返回匹配结果。</li>
-<li>String.prototype.search() :搜索字符串中第一个匹配项的索引。</li>
-<li>String.prototype.startsWith() <code>和</code>String.prototype.endsWith() :用于判断字符串是否以某个子字符串开头或结尾。</li>
-</ol>
-<h3 id="5-3构造函数"><a href="#5-3构造函数" class="headerlink" title="5.3构造函数"></a>5.3构造函数</h3><p>不当构造函数用，当强制转换用：String(value)&#x3D;&#x3D;&#x3D;value.valueOf();返回的不是String对象而是字面量string类型。</p>
-<h3 id="5-4静态方法"><a href="#5-4静态方法" class="headerlink" title="5.4静态方法"></a>5.4静态方法</h3><p>没用</p>
-<h3 id="5-5其它es6补充"><a href="#5-5其它es6补充" class="headerlink" title="5.5其它es6补充"></a>5.5其它es6补充</h3><h4 id="1-标记变量（并替换）"><a href="#1-标记变量（并替换）" class="headerlink" title="1.标记变量（并替换）${}"></a>1.标记变量（并替换）${}</h4><ol>
-<li><p>作用：字符串连接时需要用‘’+‘’号链接，用了＄{}后，就不用了。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let a = 10;</span><br><span class="line">let b = 20;</span><br><span class="line">console.log(`$&#123;a&#125;小于$&#123;b&#125;`);</span><br><span class="line">// 输出:10小于20 </span><br></pre></td></tr></table></figure>
-</li>
-<li><p>原理</p>
-<p>相当于标记了一下，大括号里的是变量，省的被函数默认当成字符了。</p>
-</li>
-<li><p>易错点</p>
-<p>只有使用反引号,字符串插值语法才会被识别和渲染。`${a}小于${b}`</p>
-</li>
-</ol>
-<h4 id="2-忽略转义"><a href="#2-忽略转义" class="headerlink" title="2.忽略转义"></a>2.忽略转义</h4><p>String.raw()是ES6新增的一个字符串原生方法。它的作用是使转义符和${}失效。</p>
-<p>它的基本语法是:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String.raw`string` </span><br></pre></td></tr></table></figure>
-
-<p>它有以下几个值得注意的点:</p>
-<ol>
-<li>符串中的转义字符会被当成普通字符直接输出。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String.raw`String with \n`   // &quot;String with \n&quot;</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>它可以解析字符串模板中${}内的表达式。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let name = &quot;Bob&quot;;</span><br><span class="line">String.raw`Hello, $&#123;name&#125;!`   // &quot;Hello, $&#123;name&#125;!&quot;</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>它主要用于创建带有未转义\字符的字符串,以及在模板字符串中包含大量${expression}时,避免字符串拼接的性能开销。</li>
-<li>如果原字符串没有需要转义的字符或模板变量,使用String.raw()和普通字符串没有任何区别。例子:</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String.raw`Hello\nworld!`   // &quot;Hello\nworld!&quot;  </span><br><span class="line">String.raw`Hello$&#123;name&#125;!`   // &quot;Hello$&#123;name&#125;!&quot;</span><br><span class="line"></span><br><span class="line">&quot;Hello\nworld!&quot;              // &quot;Hello </span><br><span class="line">world!&quot;</span><br><span class="line">&quot;Hello$&#123;name&#125;!&quot;              // &quot;HelloBob!&quot;</span><br></pre></td></tr></table></figure>
-
-<ol start="5">
-<li><h1 id="String-raw-可以和标签函数一起使用-此时会调用标签函数-并将原始字符串作为参数传入。（没看懂）"><a href="#String-raw-可以和标签函数一起使用-此时会调用标签函数-并将原始字符串作为参数传入。（没看懂）" class="headerlink" title="String.raw()可以和标签函数一起使用,此时会调用标签函数,并将原始字符串作为参数传入。（没看懂）"></a>String.raw()可以和标签函数一起使用,此时会调用标签函数,并将原始字符串作为参数传入。（没看懂）</h1>例如:</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function tag(strings) &#123;</span><br><span class="line">  console.log(strings.raw[0]);</span><br><span class="line">&#125;</span><br><span class="line">tag`Hello\nworld!`   // &quot;Hello\\nworld!&quot;</span><br></pre></td></tr></table></figure>
-
-<p>总之,String.raw()是一个获取原生字符串字面量的强大方法,可以用来避免字符串解析,或在模板字符串中包含大量变量时提升性能。</p>
-<h3 id="5-6其他补充"><a href="#5-6其他补充" class="headerlink" title="5.6其他补充"></a>5.6其他补充</h3><ol>
-<li>长字符串的处理<br>1.+<br>    const longString &#x3D;<br>      “This is a very long string which needs “ +<br>      “to wrap across multiple lines because “ +<br>      “otherwise my code is unreadable.”;<br>2.<br>    const longString &#x3D;<br>      “This is a very long string which needs <br>    to wrap across multiple lines because <br>    otherwise my code is unreadable.”;</li>
-</ol>
-<h2 id="4-6-6Math"><a href="#4-6-6Math" class="headerlink" title="4.6.6Math"></a>4.6.6Math</h2><h4 id="6-1（只有）静态函数"><a href="#6-1（只有）静态函数" class="headerlink" title="6.1（只有）静态函数"></a>6.1（只有）静态函数</h4><ul>
-<li><p><code>Math.abs()</code>：绝对值（负数也适用，求ab差的绝对值：Math.abs(2 - 3)）</p>
-<p>两下标之间的距离不能用a+b，要用abs（a-b），防止有负数下标</p>
-</li>
-<li><p><code>Math.ceil()</code>：向上取整</p>
-</li>
-<li><p><code>Math.floor()</code>：向下取整</p>
-</li>
-<li><p><code>Math.max()</code>：最大值</p>
-</li>
-<li><p><code>Math.min()</code>：最小值</p>
-</li>
-<li><p><code>Math.pow()</code>：幂运算</p>
-<p>Math.pow方法返回以第一个参数为底数、第二个参数为指数的幂运算值。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 等同于 2 ** 2</span><br><span class="line">Math.pow(2, 2) // 4</span><br><span class="line">// 等同于 2 ** 3</span><br><span class="line">Math.pow(2, 3) // 8</span><br></pre></td></tr></table></figure>
-
-<p>下面是计算圆面积的方法。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var radius = 20;</span><br><span class="line">var area = Math.PI * Math.pow(radius, 2);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>Math.sqrt()</code>：平方根</p>
-<p>Math.sqrt方法返回参数值的平方根。如果参数是一个负值，则返回<code>NaN</code>。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Math.sqrt(4) // 2</span><br><span class="line">Math.sqrt(-4) // NaN</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>Math.log()</code>：自然对数</p>
-</li>
-<li><p><code>Math.exp()</code>：<code>e</code>的指数</p>
-</li>
-<li><p><code>Math.round()</code>：四舍五入</p>
-</li>
-<li><p><code>Math.random()</code>：随机数</p>
-<p><code>Math.random()</code>返回0到1之间的一个伪随机数，可能等于0，但是一定小于1。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Math.random() // 0.7151307314634323</span><br></pre></td></tr></table></figure>
-
-<p>任意范围的随机数生成函数如下。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function getRandomArbitrary(min, max) &#123;</span><br><span class="line">  return Math.random() * (max - min) + min;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">getRandomArbitrary(1.5, 6.5)</span><br><span class="line">// 2.4942810038223864</span><br></pre></td></tr></table></figure>
-
-<p>任意范围的随机整数生成函数如下。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function getRandomInt(min, max) &#123;</span><br><span class="line">  return Math.floor(Math.random() * (max - min + 1)) + min;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">getRandomInt(1, 6) // 5</span><br></pre></td></tr></table></figure>
-
-<p>返回随机字符的例子如下。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function random_str(length) &#123;</span><br><span class="line">  var ALPHABET = &#x27;ABCDEFGHIJKLMNOPQRSTUVWXYZ&#x27;;</span><br><span class="line">  ALPHABET += &#x27;abcdefghijklmnopqrstuvwxyz&#x27;;</span><br><span class="line">  ALPHABET += &#x27;0123456789-_&#x27;;</span><br><span class="line">  var str = &#x27;&#x27;;</span><br><span class="line">  for (var i = 0; i &lt; length; ++i) &#123;</span><br><span class="line">    var rand = Math.floor(Math.random() * ALPHABET.length);</span><br><span class="line">    str += ALPHABET.substring(rand, rand + 1);</span><br><span class="line">  &#125;</span><br><span class="line">  return str;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">random_str(6) // &quot;NdQKOr&quot;</span><br></pre></td></tr></table></figure>
-
-<p>上面代码中，<code>random_str</code>函数接受一个整数作为参数，返回变量<code>ALPHABET</code>内的随机字符所组成的指定长度的字符串。</p>
-</li>
-</ul>
-<h2 id="4-6-7Date-x2F-x2F-主要了解如何创建日期-new-Date，get方法"><a href="#4-6-7Date-x2F-x2F-主要了解如何创建日期-new-Date，get方法" class="headerlink" title="4.6.7Date&#x2F;&#x2F;主要了解如何创建日期 new Date，get方法"></a>4.6.7Date&#x2F;&#x2F;主要了解如何创建日期 new Date，get方法</h2><h4 id="7-1作为普通函数"><a href="#7-1作为普通函数" class="headerlink" title="7.1作为普通函数"></a>7.1作为普通函数</h4><p>无论有没有参数，直接调用<code>Date</code>总是返回当前时间。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Date()</span><br><span class="line">// &quot;Tue Dec 01 2015 09:34:43 GMT+0800 (CST)&quot;</span><br></pre></td></tr></table></figure>
-
-<h4 id="7-2作为构造函数"><a href="#7-2作为构造函数" class="headerlink" title="7.2作为构造函数"></a>7.2作为构造函数</h4><p>作为构造函数时，<code>Date</code>对象可以接受多种格式的参数，返回一个该参数对应的时间实例。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 参数为日期字符串</span><br><span class="line">new Date(&#x27;January 6, 2013&#x27;);</span><br><span class="line">// Sun Jan 06 2013 00:00:00 GMT+0800 (CST)</span><br><span class="line"></span><br><span class="line">// 参数为多个整数，</span><br><span class="line">// 代表年、月、日、小时、分钟、秒、毫秒</span><br><span class="line">new Date(2013, 0, 1, 0, 0, 0, 0)</span><br><span class="line">// Tue Jan 01 2013 00:00:00 GMT+0800 (CST)</span><br></pre></td></tr></table></figure>
-
-<h4 id="7-3包含的静态函数"><a href="#7-3包含的静态函数" class="headerlink" title="7.3包含的静态函数"></a>7.3包含的静态函数</h4><p>没啥用</p>
-<h4 id="7-4实例方法"><a href="#7-4实例方法" class="headerlink" title="7.4实例方法"></a>7.4实例方法</h4><p><strong>（1）只有get函数有用</strong>（暂时记住年月日星期就行）</p>
+<p>上面我们已经提到要让集成起来的泛化性能比单个学习器都要好，虽说团结力量大但也有木桶短板理论调皮捣蛋，那如何做到呢？这就引出了集成学习的两个重要概念：<strong>准确性</strong>和<strong>多样性</strong>（diversity）。准确性指的是个体学习器不能太差，要有一定的准确度；多样性则是个体学习器之间的输出要具有差异性。通过下面的这三个例子可以很容易看出这一点，准确度较高，差异度也较高，可以较好地提升集成性能。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84d0d23e13.png" alt="2.png"></p>
+<p>现在考虑二分类的简单情形，假设基分类器之间相互独立（能提供较高的差异度），且错误率相等为 ε，则可以将集成器的预测看做一个伯努利实验，易知当所有基分类器中不足一半预测正确的情况下，集成器预测错误，所以集成器的错误率可以计算为：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84d0cce0bb.png" alt="3.png"></p>
+<p>此时，集成器错误率随着基分类器的个数的增加呈指数下降，但前提是基分类器之间相互独立，在实际情形中显然是不可能的，假设训练有A和B两个分类器，对于某个测试样本，显然满足：P（A&#x3D;1 | B&#x3D;1）&gt; P（A&#x3D;1），因为A和B为了解决相同的问题而训练，因此在预测新样本时存在着很大的联系。因此，<strong>个体学习器的“准确性”和“差异性”本身就是一对矛盾的变量</strong>，准确性高意味着牺牲多样性，所以产生“<strong>好而不同</strong>”的个体学习器正是集成学习研究的核心。现阶段有三种主流的集成学习方法：Boosting、Bagging以及随机森林（Random Forest），接下来将进行逐一介绍。</p>
+<p>##<strong>9.2 Boosting</strong></p>
+<p>Boosting是一种串行的工作机制，即个体学习器的训练存在依赖关系，必须一步一步序列化进行。其基本思想是：增加前一个基学习器在训练训练过程中预测错误样本的权重，使得后续基学习器更加关注这些打标错误的训练样本，尽可能纠正这些错误，一直向下串行直至产生需要的T个基学习器，Boosting最终对这T个学习器进行加权结合，产生学习器委员会。</p>
+<p>Boosting族算法最著名、使用最为广泛的就是AdaBoost，因此下面主要是对AdaBoost算法进行介绍。AdaBoost使用的是<strong>指数损失函数</strong>，因此AdaBoost的权值与样本分布的更新都是围绕着最小化指数损失函数进行的。看到这里回想一下之前的机器学习算法，<strong>不难发现机器学习的大部分带参模型只是改变了最优化目标中的损失函数</strong>：如果是Square loss，那就是最小二乘了；如果是Hinge Loss，那就是著名的SVM了；如果是log-Loss，那就是Logistic Regression了。</p>
+<p>定义基学习器的集成为加权结合，则有：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84d0ca2ca5.png" alt="4.png"></p>
+<p>AdaBoost算法的指数损失函数定义为：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84d0d10461.png" alt="5.png"></p>
+<p>具体说来，整个Adaboost 迭代算法分为3步：</p>
 <ul>
-<li><code>getTime()</code>：返回实例距离1970年1月1日00:00:00的毫秒数，等同于<code>valueOf</code>方法。</li>
-<li><code>getDate()</code>：返回实例对象对应每个月的几号（从1开始）。</li>
-<li><code>getDay()</code>：返回星期几，星期日为0，星期一为1，以此类推。</li>
-<li><code>getFullYear()</code>：返回四位的年份。</li>
-<li><code>getMonth()</code>：返回月份（0表示1月，11表示12月）。</li>
-<li><code>getHours()</code>：返回小时（0-23）。</li>
-<li><code>getMilliseconds()</code>：返回毫秒（0-999）。</li>
-<li><code>getMinutes()</code>：返回分钟（0-59）。</li>
-<li><code>getSeconds()</code>：返回秒（0-59）。</li>
-<li><code>getTimezoneOffset()</code>：返回当前时间与 UTC 的时区差异，以分钟表示，返回结果考虑到了夏令时因素。</li>
+<li>初始化训练数据的权值分布。如果有N个样本，则每一个训练样本最开始时都被赋予相同的权值：1&#x2F;N。</li>
+<li>训练弱分类器。具体训练过程中，如果某个样本点已经被准确地分类，那么在构造下一个训练集中，它的权值就被降低；相反，如果某个样本点没有被准确地分类，那么它的权值就得到提高。然后，权值更新过的样本集被用于训练下一个分类器，整个训练过程如此迭代地进行下去。</li>
+<li>将各个训练得到的弱分类器组合成强分类器。各个弱分类器的训练过程结束后，加大分类误差率小的弱分类器的权重，使其在最终的分类函数中起着较大的决定作用，而降低分类误差率大的弱分类器的权重，使其在最终的分类函数中起着较小的决定作用。</li>
 </ul>
-<p><strong>（2）本地时间</strong></p>
-<p>以下三种方法，可以将 Date 实例转为表示本地时间的字符串。</p>
-<ul>
-<li>Date.prototype.toLocaleString()：完整的本地时间。</li>
-<li>Date.prototype.toLocaleDateString()：本地日期（不含小时、分和秒）。</li>
-<li>Date.prototype.toLocaleTimeString()：本地时间（不含年月日）。</li>
-</ul>
-<p>下面是用法实例。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var d = new Date(2013, 0, 1);</span><br><span class="line"></span><br><span class="line">d.toLocaleString()</span><br><span class="line">// 中文版浏览器为&quot;2013年1月1日 上午12:00:00&quot;</span><br><span class="line">// 英文版浏览器为&quot;1/1/2013 12:00:00 AM&quot;</span><br><span class="line"></span><br><span class="line">d.toLocaleDateString()</span><br><span class="line">// 中文版浏览器为&quot;2013年1月1日&quot;</span><br><span class="line">// 英文版浏览器为&quot;1/1/2013&quot;</span><br><span class="line"></span><br><span class="line">d.toLocaleTimeString()</span><br><span class="line">// 中文版浏览器为&quot;上午12:00:00&quot;</span><br><span class="line">// 英文版浏览器为&quot;12:00:00 AM&quot;</span><br></pre></td></tr></table></figure>
-
-<p>这三个方法都有两个可选的参数。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dateObj.toLocaleString([locales[, options]])</span><br><span class="line">dateObj.toLocaleDateString([locales[, options]])</span><br><span class="line">dateObj.toLocaleTimeString([locales[, options]])</span><br></pre></td></tr></table></figure>
-
-<p>这两个参数中，<code>locales</code>是一个指定所用语言的字符串，<code>options</code>是一个配置对象。下面是<code>locales</code>的例子，分别采用<code>en-US</code>和<code>zh-CN</code>语言设定。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var d = new Date(2013, 0, 1);</span><br><span class="line"></span><br><span class="line">d.toLocaleString(&#x27;en-US&#x27;) // &quot;1/1/2013, 12:00:00 AM&quot;</span><br><span class="line">d.toLocaleString(&#x27;zh-CN&#x27;) // &quot;2013/1/1 上午12:00:00&quot;</span><br><span class="line"></span><br><span class="line">d.toLocaleDateString(&#x27;en-US&#x27;) // &quot;1/1/2013&quot;</span><br><span class="line">d.toLocaleDateString(&#x27;zh-CN&#x27;) // &quot;2013/1/1&quot;</span><br><span class="line"></span><br><span class="line">d.toLocaleTimeString(&#x27;en-US&#x27;) // &quot;12:00:00 AM&quot;</span><br><span class="line">d.toLocaleTimeString(&#x27;zh-CN&#x27;) // &quot;上午12:00:00&quot;</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-6-8RegExp正则-x2F-x2F-找旧笔记对比着看"><a href="#4-6-8RegExp正则-x2F-x2F-找旧笔记对比着看" class="headerlink" title="4.6.8RegExp正则&#x2F;&#x2F;找旧笔记对比着看"></a>4.6.8RegExp正则&#x2F;&#x2F;找旧笔记对比着看</h2><h2 id="4-6-9JOSN"><a href="#4-6-9JOSN" class="headerlink" title="4.6.9JOSN"></a>4.6.9JOSN</h2><h4 id="9-1格式"><a href="#9-1格式" class="headerlink" title="9.1格式"></a>9.1格式</h4><ol>
-<li><p>[]  {}</p>
-<p>复合类型的值只能是数组或对象，不能是函数、正则表达式对象、日期对象。</p>
-</li>
-<li><p>String，Number，Boolean，NULL</p>
-<p>原始类型的值只有四种：字符串、数值（必须以十进制表示，二进制十六进制都不行）、布尔值和null（不能使用NaN<code>, </code>Infinity, -Infinity和undefined）。</p>
-</li>
-<li><p>“asdf”</p>
-<p>字符串必须使用双引号表示，不能使用单引号。</p>
-</li>
-<li><p>“key”：value</p>
-<p>对象的键名必须放在双引号里面。</p>
-</li>
-<li><p>数组或对象最后一个成员的后面，不能加逗号。</p>
-</li>
-</ol>
-<h4 id="9-2静态方法"><a href="#9-2静态方法" class="headerlink" title="9.2静态方法"></a>9.2静态方法</h4><ol>
-<li><p>JSON.stringify	&#x2F;&#x2F;Json字符串化</p>
-<ol>
-<li><p>JSON.stringify(obj，[‘key1’,’key2’])	</p>
-</li>
-<li><p>JSON.stringify(value)</p>
-<p>value可以是任何JSON格式支持的值，包括空对象、null、空数组</p>
-</li>
-<li><p>JSON.stringify(value,function)</p>
-</li>
-</ol>
-</li>
-<li><p>JSON.parse()              &#x2F;&#x2F;字符串JSON化</p>
-</li>
-</ol>
+<p>整个AdaBoost的算法流程如下所示：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84d0d7c057.png" alt="6.png"></p>
+<p>可以看出：<strong>AdaBoost的核心步骤就是计算基学习器权重和样本权重分布</strong>，那为何是上述的计算公式呢？这就涉及到了我们之前为什么说大部分带参机器学习算法只是改变了损失函数，就是因为<strong>大部分模型的参数都是通过最优化损失函数（可能还加个规则项）而计算（梯度下降，坐标下降等）得到</strong>，这里正是通过最优化指数损失函数从而得到这两个参数的计算公式，具体的推导过程此处不进行展开。</p>
+<p>Boosting算法要求基学习器能对特定分布的数据进行学习，即每次都更新样本分布权重，这里书上提到了两种方法：“重赋权法”（re-weighting）和“重采样法”（re-sampling），书上的解释有些晦涩，这里进行展开一下：</p>
+<blockquote>
+<p><strong>重赋权法</strong> : 对每个样本附加一个权重，这时涉及到样本属性与标签的计算，都需要乘上一个权值。<br><strong>重采样法</strong> : 对于一些无法接受带权样本的及学习算法，适合用“重采样法”进行处理。方法大致过程是，根据各个样本的权重，对训练数据进行重采样，初始时样本权重一样，每个样本被采样到的概率一致，每次从N个原始的训练样本中按照权重有放回采样N个样本作为训练集，然后计算训练集错误率，然后调整权重，重复采样，集成多个基学习器。</p>
+</blockquote>
+<p>从偏差-方差分解来看：Boosting算法主要关注于降低偏差，每轮的迭代都关注于训练过程中预测错误的样本，将弱学习提升为强学习器。从AdaBoost的算法流程来看，标准的AdaBoost只适用于二分类问题。在此，当选为数据挖掘十大算法之一的AdaBoost介绍到这里，能够当选正是说明这个算法十分婀娜多姿，背后的数学证明和推导充分证明了这一点，限于篇幅不再继续展开。</p>
+<p>##<strong>9.3 Bagging与Random Forest</strong></p>
+<p>相比之下，Bagging与随机森林算法就简洁了许多，上面已经提到产生“好而不同”的个体学习器是集成学习研究的核心，即在保证基学习器准确性的同时增加基学习器之间的多样性。而这两种算法的基本思（tao）想（lu）都是通过“自助采样”的方法来增加多样性。</p>
+<p>###<strong>9.3.1 Bagging</strong></p>
+<p>Bagging是一种并行式的集成学习方法，即基学习器的训练之间没有前后顺序可以同时进行，Bagging使用“有放回”采样的方式选取训练集，对于包含m个样本的训练集，进行m次有放回的随机采样操作，从而得到m个样本的采样集，这样训练集中有接近36.8%的样本没有被采到。按照相同的方式重复进行，我们就可以采集到T个包含m个样本的数据集，从而训练出T个基学习器，最终对这T个基学习器的输出进行结合。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84d0ce62fc.png" alt="7.png"></p>
+<p>Bagging算法的流程如下所示：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84d0d0e761.png" alt="8.png"></p>
+<p>可以看出Bagging主要通过<strong>样本的扰动</strong>来增加基学习器之间的多样性，因此Bagging的基学习器应为那些对训练集十分敏感的不稳定学习算法，例如：神经网络与决策树等。从偏差-方差分解来看，Bagging算法主要关注于降低方差，即通过多次重复训练提高稳定性。不同于AdaBoost的是，Bagging可以十分简单地移植到多分类、回归等问题。总的说起来则是：<strong>AdaBoost关注于降低偏差，而Bagging关注于降低方差。</strong></p>
+<p>###<strong>9.3.2 随机森林</strong></p>
+<p>随机森林（Random Forest）是Bagging的一个拓展体，它的基学习器固定为决策树，多棵树也就组成了森林，而“随机”则在于选择划分属性的随机，随机森林在训练基学习器时，也采用有放回采样的方式添加样本扰动，同时它还引入了一种<strong>属性扰动</strong>，即在基决策树的训练过程中，在选择划分属性时，RF先从候选属性集中随机挑选出一个包含K个属性的子集，再从这个子集中选择最优划分属性，一般推荐K&#x3D;log2（d）。</p>
+<p>这样随机森林中基学习器的多样性不仅来自样本扰动，还来自属性扰动，从而进一步提升了基学习器之间的差异度。相比决策树的Bagging集成，随机森林的起始性能较差（由于属性扰动，基决策树的准确度有所下降），但随着基学习器数目的增多，随机森林往往会收敛到更低的泛化误差。同时不同于Bagging中决策树从所有属性集中选择最优划分属性，随机森林只在属性集的一个子集中选择划分属性，因此训练效率更高。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84d0d7a4fd.png" alt="9.png"></p>
+<p>##<strong>9.4 结合策略</strong></p>
+<p>结合策略指的是在训练好基学习器后，如何将这些基学习器的输出结合起来产生集成模型的最终输出，下面将介绍一些常用的结合策略：</p>
+<p>###<strong>9.4.1 平均法（回归问题）</strong></p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84d0d07983.png" alt="10.png"></p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84de1b74ff.png" alt="11.png"></p>
+<p>易知简单平均法是加权平均法的一种特例，加权平均法可以认为是集成学习研究的基本出发点。由于各个基学习器的权值在训练中得出，<strong>一般而言，在个体学习器性能相差较大时宜使用加权平均法，在个体学习器性能相差较小时宜使用简单平均法</strong>。</p>
+<p>###<strong>9.4.2 投票法（分类问题）</strong></p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84de2629c4.png" alt="12.png"></p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84de25a74b.png" alt="13.png"></p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84de1bacc4.png" alt="14.png"></p>
+<p>绝对多数投票法（majority voting）提供了拒绝选项，这在可靠性要求很高的学习任务中是一个很好的机制。同时，对于分类任务，各个基学习器的输出值有两种类型，分别为类标记和类概率。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84de2768c1.png" alt="15.png"></p>
+<p>一些在产生类别标记的同时也生成置信度的学习器，置信度可转化为类概率使用，<strong>一般基于类概率进行结合往往比基于类标记进行结合的效果更好</strong>，需要注意的是对于异质集成，其类概率不能直接进行比较，此时需要将类概率转化为类标记输出，然后再投票。</p>
+<p>###<strong>9.4.3 学习法</strong></p>
+<p>学习法是一种更高级的结合策略，即学习出一种“投票”的学习器，Stacking是学习法的典型代表。Stacking的基本思想是：首先训练出T个基学习器，对于一个样本它们会产生T个输出，将这T个基学习器的输出与该样本的真实标记作为新的样本，m个样本就会产生一个m*T的样本集，来训练一个新的“投票”学习器。投票学习器的输入属性与学习算法对Stacking集成的泛化性能有很大的影响，书中已经提到：<strong>投票学习器采用类概率作为输入属性，选用多响应线性回归（MLR）一般会产生较好的效果</strong>。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84de25cbaf.png" alt="16.png"></p>
+<p>##<strong>9.5 多样性（diversity）</strong></p>
+<p>在集成学习中，基学习器之间的多样性是影响集成器泛化性能的重要因素。因此增加多样性对于集成学习研究十分重要，一般的思路是在学习过程中引入随机性，常见的做法主要是对数据样本、输入属性、输出表示、算法参数进行扰动。</p>
+<blockquote>
+<p><strong>数据样本扰动</strong>，即利用具有差异的数据集来训练不同的基学习器。例如：有放回自助采样法，但此类做法只对那些不稳定学习算法十分有效，例如：决策树和神经网络等，训练集的稍微改变能导致学习器的显著变动。<br><strong>输入属性扰动</strong>，即随机选取原空间的一个子空间来训练基学习器。例如：随机森林，从初始属性集中抽取子集，再基于每个子集来训练基学习器。但若训练集只包含少量属性，则不宜使用属性扰动。<br><strong>输出表示扰动</strong>，此类做法可对训练样本的类标稍作变动，或对基学习器的输出进行转化。<br><strong>算法参数扰动</strong>，通过随机设置不同的参数，例如：神经网络中，随机初始化权重与随机设置隐含层节点数。</p>
+</blockquote>
+<p>在此，集成学习就介绍完毕，看到这里，大家也会发现集成学习实质上是一种通用框架，可以使用任何一种基学习器，从而改进单个学习器的泛化性能。据说数据挖掘竞赛KDDCup历年的冠军几乎都使用了集成学习，看来的确是个好东西~</p>
  
       <!-- reward -->
       
@@ -1258,7 +247,182 @@ console.log(result);
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li></ul>
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-MachineLearning/Machine-learning-learning-notes-master/README"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+     
+    <div class="article-meta">
+      <a href="/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/README/" class="article-date">
+  <time datetime="2023-06-21T07:42:41.482Z" itemprop="datePublished">2023-06-21</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>本文为周志华《机器学习》的学习笔记，记录了本人在学习这本书的过程中的理解思路以及一些有助于消化书内容的拓展知识，笔记中参考了许多网上的大牛经典博客以及李航《统计学习》的内容，向前辈们和知识致敬！</p>
+<blockquote>
+<p>啃西瓜学习交流QQ群: 531701485， 遇到疑问可以随时在上面提问，并会不定期分享优质的机器&#x2F;深度学习资料，欢迎各位机器学习爱好者的入群讨论学习!</p>
+</blockquote>
+<blockquote>
+<p>作者目前在腾讯微信事业群从事大数据、机器学习、推荐系统工作，团队会定期输出：机器学习在实际业务领域的技术总结，欢迎大家关注学习，共同进步！</p>
+</blockquote>
+<img src="https://ftp.bmp.ovh/imgs/2021/07/022f98f41a401e3a.jpeg" width="250px" height="250px" />
+
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-MachineLearning/Machine-learning-learning-notes-master/周志华《Machine Learning》学习笔记(1)--绪论"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(1)--%E7%BB%AA%E8%AE%BA/"
+    >西瓜书</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(1)--%E7%BB%AA%E8%AE%BA/" class="article-date">
+  <time datetime="2023-06-21T03:43:25.000Z" itemprop="datePublished">2023-06-21</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>机器学习是目前信息技术中最激动人心的方向之一，其应用已经深入到生活的各个层面且与普通人的日常生活密切相关。本文为清华大学最新出版的《机器学习》教材的Learning Notes，书作者是南京大学周志华教授，多个大陆首位彰显其学术奢华。本篇主要介绍了该教材前两个章节的知识点以及自己一点浅陋的理解。</p>
+<p><strong>1  绪论</strong></p>
+<p>傍晚小街路面上沁出微雨后的湿润，和熙的细风吹来，抬头看看天边的晚霞，嗯，明天又是一个好天气。走到水果摊旁，挑了个根蒂蜷缩、敲起来声音浊响的青绿西瓜，一边满心期待着皮薄肉厚瓢甜的爽落感，一边愉快地想着，这学期狠下了工夫，基础概念弄得清清楚楚，算法作业也是信手拈来，这门课成绩一定差不了！哈哈，也希望自己这学期的machine learning课程取得一个好成绩！</p>
+<p><strong>1.1 机器学习的定义</strong></p>
+<p>正如我们根据过去的经验来判断明天的天气，吃货们希望从购买经验中挑选一个好瓜，那能不能让计算机帮助人类来实现这个呢？机器学习正是这样的一门学科，人的“经验”对应计算机中的“数据”，让计算机来学习这些经验数据，生成一个算法模型，在面对新的情况中，计算机便能作出有效的判断，这便是机器学习。</p>
+<p>另一本经典教材的作者Mitchell给出了一个形式化的定义，假设：</p>
+<ul>
+<li>P：计算机程序在某任务类T上的性能。</li>
+<li>T：计算机程序希望实现的任务类。</li>
+<li>E：表示经验，即历史的数据集。</li>
+</ul>
+<p>若该计算机程序通过利用经验E在任务T上获得了性能P的改善，则称该程序对E进行了学习。</p>
+<p><strong>1.2 机器学习的一些基本术语</strong></p>
+<p>假设我们收集了一批西瓜的数据，例如：（色泽&#x3D;青绿;根蒂&#x3D;蜷缩;敲声&#x3D;浊响)， (色泽&#x3D;乌黑;根蒂&#x3D;稍蜷;敲声&#x3D;沉闷)， (色泽&#x3D;浅自;根蒂&#x3D;硬挺;敲声&#x3D;清脆)……每对括号内是一个西瓜的记录，定义：	 </p>
+<ul>
+<li><p>所有记录的集合为：数据集。</p>
+</li>
+<li><p>每一条记录为：一个实例（instance）或样本（sample）。</p>
+</li>
+<li><p>例如：色泽或敲声，单个的特点为特征（feature）或属性（attribute）。</p>
+</li>
+<li><p>对于一条记录，如果在坐标轴上表示，每个西瓜都可以用坐标轴中的一个点表示，一个点也是一个向量，例如（青绿，蜷缩，浊响），即每个西瓜为：一个特征向量（feature vector）。</p>
+</li>
+<li><p>一个样本的特征数为：维数（dimensionality），该西瓜的例子维数为3，当维数非常大时，也就是现在说的“维数灾难”。</p>
+<p> 计算机程序学习经验数据生成算法模型的过程中，每一条记录称为一个“训练样本”，同时在训练好模型后，我们希望使用新的样本来测试模型的效果，则每一个新的样本称为一个“测试样本”。定义：	</p>
+</li>
+<li><p>所有训练样本的集合为：训练集（trainning set），[特殊]。</p>
+</li>
+<li><p>所有测试样本的集合为：测试集（test set），[一般]。  </p>
+</li>
+<li><p>机器学习出来的模型适用于新样本的能力为：泛化能力（generalization），即从特殊到一般。</p>
+<p> 西瓜的例子中，我们是想计算机通过学习西瓜的特征数据，训练出一个决策模型，来判断一个新的西瓜是否是好瓜。可以得知我们预测的是：西瓜是好是坏，即好瓜与差瓜两种，是离散值。同样地，也有通过历年的人口数据，来预测未来的人口数量，人口数量则是连续值。定义：	</p>
+</li>
+<li><p>预测值为离散值的问题为：分类（classification）。</p>
+</li>
+<li><p>预测值为连续值的问题为：回归（regression）。</p>
+<p> 我们预测西瓜是否是好瓜的过程中，很明显对于训练集中的西瓜，我们事先已经知道了该瓜是否是好瓜，学习器通过学习这些好瓜或差瓜的特征，从而总结出规律，即训练集中的西瓜我们都做了标记，称为标记信息。但也有没有标记信息的情形，例如：我们想将一堆西瓜根据特征分成两个小堆，使得某一堆的西瓜尽可能相似，即都是好瓜或差瓜，对于这种问题，我们事先并不知道西瓜的好坏，样本没有标记信息。定义：	</p>
+</li>
+<li><p>训练数据有标记信息的学习任务为：监督学习（supervised learning），容易知道上面所描述的分类和回归都是监督学习的范畴。</p>
+</li>
+<li><p>训练数据没有标记信息的学习任务为：无监督学习（unsupervised learning），常见的有聚类和关联规则。</p>
+</li>
+</ul>
+<p><strong>2  模型的评估与选择</strong></p>
+<p><strong>2.1 误差与过拟合</strong></p>
+<p>我们将学习器对样本的实际预测结果与样本的真实值之间的差异成为：误差（error）。定义：	</p>
+<ul>
+<li>在训练集上的误差称为训练误差（training error）或经验误差（empirical error）。</li>
+<li>在测试集上的误差称为测试误差（test error）。</li>
+<li>学习器在所有新样本上的误差称为泛化误差（generalization error）。</li>
+</ul>
+<p>显然，我们希望得到的是在新样本上表现得很好的学习器，即泛化误差小的学习器。因此，我们应该让学习器尽可能地从训练集中学出普适性的“一般特征”，这样在遇到新样本时才能做出正确的判别。然而，当学习器把训练集学得“太好”的时候，即把一些训练样本的自身特点当做了普遍特征；同时也有学习能力不足的情况，即训练集的基本特征都没有学习出来。我们定义：</p>
+<ul>
+<li>学习能力过强，以至于把训练样本所包含的不太一般的特性都学到了，称为：过拟合（overfitting）。</li>
+<li>学习能太差，训练样本的一般性质尚未学好，称为：欠拟合（underfitting）。</li>
+</ul>
+<p>可以得知：在过拟合问题中，训练误差十分小，但测试误差教大；在欠拟合问题中，训练误差和测试误差都比较大。目前，欠拟合问题比较容易克服，例如增加迭代次数等，但过拟合问题还没有十分好的解决方案，过拟合是机器学习面临的关键障碍。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc7181172996.png"></p>
+<p><strong>2.2 评估方法</strong></p>
+<p>在现实任务中，我们往往有多种算法可供选择，那么我们应该选择哪一个算法才是最适合的呢？如上所述，我们希望得到的是泛化误差小的学习器，理想的解决方案是对模型的泛化误差进行评估，然后选择泛化误差最小的那个学习器。但是，泛化误差指的是模型在所有新样本上的适用能力，我们无法直接获得泛化误差。</p>
+<p>因此，通常我们采用一个“测试集”来测试学习器对新样本的判别能力，然后以“测试集”上的“测试误差”作为“泛化误差”的近似。显然：我们选取的测试集应尽可能与训练集互斥，下面用一个小故事来解释why：</p>
+<p>假设老师出了10 道习题供同学们练习，考试时老师又用同样的这10道题作为试题，可能有的童鞋只会做这10 道题却能得高分，很明显：这个考试成绩并不能有效地反映出真实水平。回到我们的问题上来，我们希望得到泛化性能好的模型，好比希望同学们课程学得好并获得了对所学知识”举一反三”的能力；训练样本相当于给同学们练习的习题，测试过程则相当于考试。显然，若测试样本被用作训练了，则得到的将是过于”乐观”的估计结果。</p>
+<p><strong>2.3 训练集与测试集的划分方法</strong></p>
+<p>如上所述：我们希望用一个“测试集”的“测试误差”来作为“泛化误差”的近似，因此我们需要对初始数据集进行有效划分，划分出互斥的“训练集”和“测试集”。下面介绍几种常用的划分方法：</p>
+<p><strong>2.3.1 留出法</strong></p>
+<p>将数据集D划分为两个互斥的集合，一个作为训练集S，一个作为测试集T，满足D&#x3D;S∪T且S∩T&#x3D;∅，常见的划分为：大约2&#x2F;3-4&#x2F;5的样本用作训练，剩下的用作测试。需要注意的是：训练&#x2F;测试集的划分要尽可能保持数据分布的一致性，以避免由于分布的差异引入额外的偏差，常见的做法是采取分层抽样。同时，由于划分的随机性，单次的留出法结果往往不够稳定，一般要采用若干次随机划分，重复实验取平均值的做法。</p>
+<p><strong>2.3.2 交叉验证法</strong></p>
+<p>将数据集D划分为k个大小相同的互斥子集，满足D&#x3D;D1∪D2∪…∪Dk，Di∩Dj&#x3D;∅（i≠j），同样地尽可能保持数据分布的一致性，即采用分层抽样的方法获得这些子集。交叉验证法的思想是：每次用k-1个子集的并集作为训练集，余下的那个子集作为测试集，这样就有K种训练集&#x2F;测试集划分的情况，从而可进行k次训练和测试，最终返回k次测试结果的均值。交叉验证法也称“k折交叉验证”，k最常用的取值是10，下图给出了10折交叉验证的示意图。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc718115d224.png"></p>
+<p>与留出法类似，将数据集D划分为K个子集的过程具有随机性，因此K折交叉验证通常也要重复p次，称为p次k折交叉验证，常见的是10次10折交叉验证，即进行了100次训练&#x2F;测试。特殊地当划分的k个子集的每个子集中只有一个样本时，称为“留一法”，显然，留一法的评估结果比较准确，但对计算机的消耗也是巨大的。</p>
+<p><strong>2.3.3 自助法</strong></p>
+<p>我们希望评估的是用整个D训练出的模型。但在留出法和交叉验证法中，由于保留了一部分样本用于测试，因此实际评估的模型所使用的训练集比D小，这必然会引入一些因训练样本规模不同而导致的估计偏差。留一法受训练样本规模变化的影响较小，但计算复杂度又太高了。“自助法”正是解决了这样的问题。</p>
+<p>自助法的基本思想是：给定包含m个样本的数据集D，每次随机从D 中挑选一个样本，将其拷贝放入D’，然后再将该样本放回初始数据集D 中，使得该样本在下次采样时仍有可能被采到。重复执行m 次，就可以得到了包含m个样本的数据集D’。可以得知在m次采样中，样本始终不被采到的概率取极限为：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc71811246dd.png"></p>
+<p>这样，通过自助采样，初始样本集D中大约有36.8%的样本没有出现在D’中，于是可以将D’作为训练集，D-D’作为测试集。自助法在数据集较小，难以有效划分训练集&#x2F;测试集时很有用，但由于自助法产生的数据集（随机抽样）改变了初始数据集的分布，因此引入了估计偏差。在初始数据集足够时，留出法和交叉验证法更加常用。</p>
+<p><strong>2.4 调参</strong></p>
+<p>大多数学习算法都有些参数(parameter) 需要设定，参数配置不同，学得模型的性能往往有显著差别，这就是通常所说的”参数调节”或简称”调参” (parameter tuning)。</p>
+<p>学习算法的很多参数是在实数范围内取值，因此，对每种参数取值都训练出模型来是不可行的。常用的做法是：对每个参数选定一个范围和步长λ，这样使得学习的过程变得可行。例如：假定算法有3 个参数，每个参数仅考虑5 个候选值，这样对每一组训练&#x2F;测试集就有5<em>5</em>5&#x3D; 125 个模型需考察，由此可见：拿下一个参数（即经验值）对于算法人员来说是有多么的happy。</p>
+<p>最后需要注意的是：当选定好模型和调参完成后，我们需要使用初始的数据集D重新训练模型，即让最初划分出来用于评估的测试集也被模型学习，增强模型的学习效果。用上面考试的例子来比喻：就像高中时大家每次考试完，要将考卷的题目消化掉（大多数题目都还是之前没有见过的吧？），这样即使考差了也能开心的玩耍了~。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ML/" rel="tag">ML</a></li></ul>
 
     </footer>
   </div>
@@ -1270,7 +434,7 @@ console.log(result);
 
     
     <article
-  id="post-前端学习笔记/JS/Q4-JS-5语法基础"
+  id="post-MachineLearning/Machine-learning-learning-notes-master/周志华《Machine Learning》学习笔记(2)--性能度量"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -1281,8 +445,8 @@ console.log(result);
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2023/04/11/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/"
-    >JS学习笔记-4.5语法基础（base阮一峰/gpt ）</a> 
+  <a class="article-title" href="/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(2)--%E6%80%A7%E8%83%BD%E5%BA%A6%E9%87%8F/"
+    >西瓜书</a> 
 </h2>
  
 
@@ -1290,56 +454,64 @@ console.log(result);
     </header>
      
     <div class="article-meta">
-      <a href="/2023/04/11/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/" class="article-date">
-  <time datetime="2023-04-11T03:34:47.000Z" itemprop="datePublished">2023-04-11</time>
+      <a href="/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(2)--%E6%80%A7%E8%83%BD%E5%BA%A6%E9%87%8F/" class="article-date">
+  <time datetime="2023-06-21T03:43:25.000Z" itemprop="datePublished">2023-06-21</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+    <a class="article-category-link" href="/categories/note/">note</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="4-5语法基础"><a href="#4-5语法基础" class="headerlink" title="4.5语法基础"></a>4.5语法基础</h1><h2 id="4-5-1数据类型转换"><a href="#4-5-1数据类型转换" class="headerlink" title="4.5.1数据类型转换"></a>4.5.1数据类型转换</h2><h2 id="4-5-2错误处理机制"><a href="#4-5-2错误处理机制" class="headerlink" title="4.5.2错误处理机制"></a>4.5.2错误处理机制</h2><h3 id="1-抛出异常"><a href="#1-抛出异常" class="headerlink" title="1.抛出异常"></a>1.抛出异常</h3><p>在 JavaScript 中,throw 语句用于抛出一个异常并停止运行。</p>
-<p>1.函数参数校验</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function divide(x, y) &#123;</span><br><span class="line">  // 如果 y 为 0,抛出异常</span><br><span class="line">  if (y === 0) &#123; </span><br><span class="line">    throw &#x27;除数不能为 0&#x27;; </span><br><span class="line">  &#125;</span><br><span class="line">  // 否则进行除法运算</span><br><span class="line">  return x / y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>2.范围或类型校验</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function getMonthName(month) &#123;</span><br><span class="line">  // 如果 month 超出 1-12 的范围,抛出异常</span><br><span class="line">  if (month &lt; 1 || month &gt; 12) &#123;</span><br><span class="line">    throw &#x27;月份参数不在范围内&#x27;; </span><br><span class="line">  &#125;</span><br><span class="line">  // 否则返回月份名称</span><br><span class="line">  return [&#x27;January&#x27;, &#x27;February&#x27;, &#x27;March&#x27;, &#x27;April&#x27;, &#x27;May&#x27;, &#x27;June&#x27;, </span><br><span class="line">          &#x27;July&#x27;, &#x27;August&#x27;, &#x27;September&#x27;, &#x27;October&#x27;, &#x27;November&#x27;, &#x27;December&#x27;][month-1];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>3.自定义错误</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 定义自己的错误类型</span><br><span class="line">function CustomError(message) &#123;</span><br><span class="line">  this.message = message; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 之后可以抛出这个错误</span><br><span class="line">function doSomething() &#123;</span><br><span class="line">  // 如果出现错误情况,抛出自定义错误</span><br><span class="line">  if (someCondition) &#123;</span><br><span class="line">    throw new CustomError(&#x27;something went wrong!&#x27;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-<p>4.终止程序执行</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 如果出现非常严重的错误,终止程序执行</span><br><span class="line">if (someSeriousError) &#123;</span><br><span class="line">  throw &#x27;程序遇到严重错误,终止执行&#x27;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-小结"><a href="#1-小结" class="headerlink" title="1.小结"></a>1.小结</h3><p>​	  1. 参数校验和输入验证</p>
-<ol start="2">
-<li>自定义错误和异常</li>
-<li>严重错误情况下终止程序执行它使我们的程序在出现异常情况时可以抛出错误并准确地响应,而不是默默地失败,这是编写健壮程序的关键。</li>
-</ol>
-<h3 id="2尝试执行"><a href="#2尝试执行" class="headerlink" title="2尝试执行"></a>2尝试执行</h3><p>对于前端 JS 来说,try&#x2F;catch&#x2F;finally 更常用于:</p>
-<ol>
-<li><h4 id="捕获异常和错误处理。"><a href="#捕获异常和错误处理。" class="headerlink" title="捕获异常和错误处理。"></a>捕获异常和错误处理。</h4><p>这也是最主要和常见的用法。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//异常处理</span><br><span class="line">try &#123;</span><br><span class="line">  somethingRisky();  // 可能抛出异常的代码</span><br><span class="line">&#125; catch (e) &#123;</span><br><span class="line">  handleError(e);   // 处理异常</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><h4 id="执行环境资源管理。"><a href="#执行环境资源管理。" class="headerlink" title="执行环境资源管理。"></a>执行环境资源管理。</h4><p>比如 DOM 元素创建后,无论是否使用成功,最后都remove DOM 元素。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//dom元素（资源）管理</span><br><span class="line">let elem;</span><br><span class="line">try &#123;</span><br><span class="line">  elem = createElement();// 使用 elem</span><br><span class="line">&#125; catch (e) &#123;</span><br><span class="line">  handleError(e);</span><br><span class="line">&#125; finally &#123;</span><br><span class="line">  removeElement(elem);  // 移除 DOM 元素</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//或普通资源管理</span><br><span class="line">let resource;</span><br><span class="line">try &#123;</span><br><span class="line">  resource = acquireResource();  // 获取资源</span><br><span class="line">  // 使用资源</span><br><span class="line">&#125; finally &#123;</span><br><span class="line">  releaseResource(resource);   // 释放资源</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><h4 id="定时器和监听管理。"><a href="#定时器和监听管理。" class="headerlink" title="定时器和监听管理。"></a>定时器和监听管理。</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//定时器和事件监听器管理 </span><br><span class="line">let timer;</span><br><span class="line">try &#123;</span><br><span class="line">  timer = setTimeout(() =&gt; &#123; /* ... */ &#125;, 1000);</span><br><span class="line">  // 延时1秒后执行</span><br><span class="line">&#125; finally &#123;</span><br><span class="line">  clearTimeout(timer);   // 清除定时器</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><h4 id="互斥"><a href="#互斥" class="headerlink" title="互斥"></a>互斥</h4><p>在前端 JS 中,try&#x2F;catch&#x2F;finally 用于资源互斥的情况并不太常见。这是因为:</p>
-<ol>
-<li>前端 JS 大多运行在单线程环境中,不会出现复杂的互斥资源争用情况。</li>
-<li>前端 JS 中较少打开文件、数据库连接等低级资源操作,所以较少资源管理和释放的需求。</li>
-<li>前端 JS 的执行环境大多提供了垃圾回收机制,可以自动管理和回收资源,减少了手动资源管理的需要。</li>
-</ol>
-</li>
-</ol>
-<h3 id="5-2-2小结"><a href="#5-2-2小结" class="headerlink" title="5.2.2小结"></a>5.2.2小结</h3><p><strong>捕获异常会了就行。资源处理学了dom就会了。</strong>前端用不上自己写互斥，有自动回收（todo：看看自动回收机制，有哪里需要手动回收的地方）。</p>
-<p>无论定时器是否执行成功,最后都会清除定时器,防止定时器泄露。所以总的来说,尽管 try&#x2F;catch&#x2F;finally 也可用于资源互斥,但在前端 JS 中,更主要的是用于异常捕获、资源和执行环境管理。而复杂的低级资源互斥则较少出现。<br>无论 try 块中是否发生异常,finally 块中的代码都一定会执行,主要用于资源清理。catch 块用于捕获 try 块中的异常,并进行处理。</p>
-<h2 id="4-5-3编程风格"><a href="#4-5-3编程风格" class="headerlink" title="4.5.3编程风格"></a>4.5.3编程风格</h2> 
+  <p>本篇主要是对第二章剩余知识的理解，包括：性能度量、比较检验和偏差与方差。在上一篇中，我们解决了评估学习器泛化性能的方法，即用测试集的“测试误差”作为“泛化误差”的近似，当我们划分好训练&#x2F;测试集后，那如何计算“测试误差”呢？这就是性能度量，例如：均方差，错误率等，即“测试误差”的一个评价标准。有了评估方法和性能度量，就可以计算出学习器的“测试误差”，但由于“测试误差”受到很多因素的影响，例如：算法随机性或测试集本身的选择，那如何对两个或多个学习器的性能度量结果做比较呢？这就是比较检验。最后偏差与方差是解释学习器泛化性能的一种重要工具。写到后面发现冗长之后读起来十分没有快感，故本篇主要知识点为性能度量。</p>
+<p><strong>2.5 性能度量</strong></p>
+<p>性能度量（performance measure）是衡量模型泛化能力的评价标准，在对比不同模型的能力时，使用不同的性能度量往往会导致不同的评判结果。本节除2.5.1外，其它主要介绍分类模型的性能度量。</p>
+<p><strong>2.5.1 最常见的性能度量</strong></p>
+<p>在回归任务中，即预测连续值的问题，最常用的性能度量是“均方误差”（mean squared error）,很多的经典算法都是采用了MSE作为评价函数，想必大家都十分熟悉。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc71daf76276.png" alt="1.png"></p>
+<p>在分类任务中，即预测离散值的问题，最常用的是错误率和精度，错误率是分类错误的样本数占样本总数的比例，精度则是分类正确的样本数占样本总数的比例，易知：错误率+精度&#x3D;1。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc71daf4c704.png" alt="2.png"></p>
+<p><img src="https://i.loli.net/2018/10/17/5bc71daf6fb84.png" alt="3.png"></p>
+<p><strong>2.5.2 查准率&#x2F;查全率&#x2F;F1</strong></p>
+<p>错误率和精度虽然常用，但不能满足所有的需求，例如：在推荐系统中，我们只关心推送给用户的内容用户是否感兴趣（即查准率），或者说所有用户感兴趣的内容我们推送出来了多少（即查全率）。因此，使用查准&#x2F;查全率更适合描述这类问题。对于二分类问题，分类结果混淆矩阵与查准&#x2F;查全率定义如下：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc71daf885a4.png" alt="4.png"></p>
+<p>初次接触时，FN与FP很难正确的理解，按照惯性思维容易把FN理解成：False-&gt;Negtive，即将错的预测为错的，这样FN和TN就反了，后来找到一张图，描述得很详细，为方便理解，把这张图也贴在了下边：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc71daf871a6.png" alt="5.png"></p>
+<p>正如天下没有免费的午餐，查准率和查全率是一对矛盾的度量。例如我们想让推送的内容尽可能用户全都感兴趣，那只能推送我们把握高的内容，这样就漏掉了一些用户感兴趣的内容，查全率就低了；如果想让用户感兴趣的内容都被推送，那只有将所有内容都推送上，宁可错杀一千，不可放过一个，这样查准率就很低了。</p>
+<p>“P-R曲线”正是描述查准&#x2F;查全率变化的曲线，P-R曲线定义如下：根据学习器的预测结果（一般为一个实值或概率）对测试样本进行排序，将最可能是“正例”的样本排在前面，最不可能是“正例”的排在后面，按此顺序逐个把样本作为“正例”进行预测，每次计算出当前的P值和R值，如下图所示：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc71dafc4411.png" alt="6.png"></p>
+<p>P-R曲线如何评估呢？若一个学习器A的P-R曲线被另一个学习器B的P-R曲线完全包住，则称：B的性能优于A。若A和B的曲线发生了交叉，则谁的曲线下的面积大，谁的性能更优。但一般来说，曲线下的面积是很难进行估算的，所以衍生出了“平衡点”（Break-Event Point，简称BEP），即当P&#x3D;R时的取值，平衡点的取值越高，性能更优。</p>
+<p>P和R指标有时会出现矛盾的情况，这样就需要综合考虑他们，最常见的方法就是F-Measure，又称F-Score。F-Measure是P和R的加权调和平均，即：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc71daf40ff6.png" alt="7.png"></p>
+<p><img src="https://i.loli.net/2018/10/17/5bc71daf75407.png" alt="8.png"></p>
+<p>特别地，当β&#x3D;1时，也就是常见的F1度量，是P和R的调和平均，当F1较高时，模型的性能越好。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc71daf20885.png" alt="9.png"></p>
+<p><img src="https://i.loli.net/2018/10/17/5bc71daf4b90a.png" alt="10.png"></p>
+<p>有时候我们会有多个二分类混淆矩阵，例如：多次训练或者在多个数据集上训练，那么估算全局性能的方法有两种，分为宏观和微观。简单理解，宏观就是先算出每个混淆矩阵的P值和R值，然后取得平均P值macro-P和平均R值macro-R，在算出Fβ或F1，而微观则是计算出混淆矩阵的平均TP、FP、TN、FN，接着进行计算P、R，进而求出Fβ或F1。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc71ed70230e.png" alt="11.png"></p>
+<p><strong>2.5.3 ROC与AUC</strong></p>
+<p>如上所述：学习器对测试样本的评估结果一般为一个实值或概率，设定一个阈值，大于阈值为正例，小于阈值为负例，因此这个实值的好坏直接决定了学习器的泛化性能，若将这些实值排序，则排序的好坏决定了学习器的性能高低。ROC曲线正是从这个角度出发来研究学习器的泛化性能，ROC曲线与P-R曲线十分类似，都是按照排序的顺序逐一按照正例预测，不同的是ROC曲线以“真正例率”（True Positive Rate，简称TPR）为横轴，纵轴为“假正例率”（False Positive Rate，简称FPR），ROC偏重研究基于测试样本评估值的排序好坏。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc71ed6bee91.png" alt="12.png"></p>
+<p><img src="https://i.loli.net/2018/10/17/5bc71ed75cefe.png" alt="13.png"></p>
+<p>简单分析图像，可以得知：当FN&#x3D;0时，TN也必须0，反之也成立，我们可以画一个队列，试着使用不同的截断点（即阈值）去分割队列，来分析曲线的形状，（0,0）表示将所有的样本预测为负例，（1,1）则表示将所有的样本预测为正例，（0,1）表示正例全部出现在负例之前的理想情况，（1,0）则表示负例全部出现在正例之前的最差情况。限于篇幅，这里不再论述。</p>
+<p>现实中的任务通常都是有限个测试样本，因此只能绘制出近似ROC曲线。绘制方法：首先根据测试样本的评估值对测试样本排序，接着按照以下规则进行绘制。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc71ed740a24.png" alt="14.png"></p>
+<p>同样地，进行模型的性能比较时，若一个学习器A的ROC曲线被另一个学习器B的ROC曲线完全包住，则称B的性能优于A。若A和B的曲线发生了交叉，则谁的曲线下的面积大，谁的性能更优。ROC曲线下的面积定义为AUC（Area Uder ROC Curve），不同于P-R的是，这里的AUC是可估算的，即AOC曲线下每一个小矩形的面积之和。易知：AUC越大，证明排序的质量越好，AUC为1时，证明所有正例排在了负例的前面，AUC为0时，所有的负例排在了正例的前面。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc71ed6e2c57.png" alt="15.png"></p>
+<p><strong>2.5.4 代价敏感错误率与代价曲线</strong></p>
+<p>上面的方法中，将学习器的犯错同等对待，但在现实生活中，将正例预测成假例与将假例预测成正例的代价常常是不一样的，例如：将无疾病–&gt;有疾病只是增多了检查，但有疾病–&gt;无疾病却是增加了生命危险。以二分类为例，由此引入了“代价矩阵”（cost matrix）。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc71ed6ed582.png" alt="16.png"></p>
+<p>在非均等错误代价下，我们希望的是最小化“总体代价”，这样“代价敏感”的错误率（2.5.1节介绍）为：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc71ed70bebe.png" alt="17.png"></p>
+<p>同样对于ROC曲线，在非均等错误代价下，演变成了“代价曲线”，代价曲线横轴是取值在[0,1]之间的正例概率代价，式中p表示正例的概率，纵轴是取值为[0,1]的归一化代价。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc71ed6e952e.png" alt="18.png"></p>
+<p><img src="https://i.loli.net/2018/10/17/5bc71ed6eee7b.png" alt="19.png"></p>
+<p>代价曲线的绘制很简单：设ROC曲线上一点的坐标为(TPR，FPR) ，则可相应计算出FNR，然后在代价平面上绘制一条从(0，FPR) 到(1，FNR) 的线段，线段下的面积即表示了该条件下的期望总体代价；如此将ROC 曲线土的每个点转化为代价平面上的一条线段，然后取所有线段的下界，围成的面积即为在所有条件下学习器的期望总体代价，如图所示：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc71ed716e0d.png" alt="20.png"></p>
+<p>在此模型的性能度量方法就介绍完了，以前一直以为均方误差和精准度就可以了，现在才发现天空如此广阔~</p>
+ 
       <!-- reward -->
       
     </div>
@@ -1349,7 +521,513 @@ console.log(result);
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/" rel="tag">JS</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ML/" rel="tag">ML</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-MachineLearning/Machine-learning-learning-notes-master/周志华《Machine Learning》学习笔记(3)--假设检验&amp;方差&amp;偏差"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(3)--%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C&%E6%96%B9%E5%B7%AE&%E5%81%8F%E5%B7%AE/"
+    >西瓜书</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(3)--%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C&%E6%96%B9%E5%B7%AE&%E5%81%8F%E5%B7%AE/" class="article-date">
+  <time datetime="2023-06-21T03:43:25.000Z" itemprop="datePublished">2023-06-21</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>在上两篇中，我们介绍了多种常见的评估方法和性能度量标准，这样我们就可以根据数据集以及模型任务的特征，选择出最合适的评估和性能度量方法来计算出学习器的“测试误差“。但由于“测试误差”受到很多因素的影响，例如：算法随机性(例如常见的K-Means)或测试集本身的选择，使得同一模型每次得到的结果不尽相同，同时测试误差是作为泛化误差的近似，并不能代表学习器真实的泛化性能，那如何对单个或多个学习器在不同或相同测试集上的性能度量结果做比较呢？这就是比较检验。最后偏差与方差是解释学习器泛化性能的一种重要工具。本篇延续上一篇的内容，主要讨论了比较检验、方差与偏差。</p>
+<p>##<strong>2.6 比较检验</strong></p>
+<p>在比较学习器泛化性能的过程中，统计假设检验（hypothesis test）为学习器性能比较提供了重要依据，即若A在某测试集上的性能优于B，那A学习器比B好的把握有多大。 为方便论述，本篇中都是以“错误率”作为性能度量的标准。</p>
+<p>###<strong>2.6.1 假设检验</strong></p>
+<p>“假设”指的是对样本总体的分布或已知分布中某个参数值的一种猜想，例如：假设总体服从泊松分布，或假设正态总体的期望u&#x3D;u0。回到本篇中，我们可以通过测试获得测试错误率，但直观上测试错误率和泛化错误率相差不会太远，因此可以通过测试错误率来推测泛化错误率的分布，这就是一种假设检验。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc7211aed8e3.png" alt="1.png"></p>
+<p><img src="https://i.loli.net/2018/10/17/5bc7211a5817d.png" alt="2.png"></p>
+<p><img src="https://i.loli.net/2018/10/17/5bc7211a336b5.png" alt="3.png"></p>
+<p>###<strong>2.6.2 交叉验证t检验</strong></p>
+<p><img src="https://i.loli.net/2018/10/17/5bc7211a68ef9.png" alt="4.png"></p>
+<p>###<strong>2.6.3 McNemar检验</strong></p>
+<p>MaNemar主要用于二分类问题，与成对t检验一样也是用于比较两个学习器的性能大小。主要思想是：若两学习器的性能相同，则A预测正确B预测错误数应等于B预测错误A预测正确数，即e01&#x3D;e10，且|e01-e10|服从N（1，e01+e10）分布。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc7211a2c7f9.png" alt="5.png"></p>
+<p>因此，如下所示的变量服从自由度为1的卡方分布，即服从标准正态分布N（0,1）的随机变量的平方和，下式只有一个变量，故自由度为1，检验的方法同上：做出假设–&gt;求出满足显著度的临界点–&gt;给出拒绝域–&gt;验证假设。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc7211a34e96.png" alt="6.png"></p>
+<p>###<strong>2.6.4 Friedman检验与Nemenyi后续检验</strong></p>
+<p>上述的三种检验都只能在一组数据集上，F检验则可以在多组数据集进行多个学习器性能的比较，基本思想是在同一组数据集上，根据测试结果（例：测试错误率）对学习器的性能进行排序，赋予序值1,2,3…，相同则平分序值，如下图所示：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc7211a2db45.png" alt="7.png"></p>
+<p>若学习器的性能相同，则它们的平均序值应该相同，且第i个算法的平均序值ri服从正态分布N（（k+1）&#x2F;2，（k+1）(k-1)&#x2F;12），则有：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc7211a45349.png" alt="8.png"></p>
+<p><img src="https://i.loli.net/2018/10/17/5bc7211a2684c.png" alt="9.png"></p>
+<p>服从自由度为k-1和(k-1)(N-1)的F分布。下面是F检验常用的临界值：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc7211a7e3f0.png" alt="10.png"></p>
+<p>若“H0：所有算法的性能相同”这个假设被拒绝，则需要进行后续检验，来得到具体的算法之间的差异。常用的就是Nemenyi后续检验。Nemenyi检验计算出平均序值差别的临界值域，下表是常用的qa值，若两个算法的平均序值差超出了临界值域CD，则相应的置信度1-α拒绝“两个算法性能相同”的假设。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc722232932b.png" alt="11.png"></p>
+<p><img src="https://i.loli.net/2018/10/17/5bc7222348519.png" alt="12.png"></p>
+<p>##<strong>2.7 偏差与方差</strong></p>
+<p>偏差-方差分解是解释学习器泛化性能的重要工具。在学习算法中，偏差指的是预测的期望值与真实值的偏差，方差则是每一次预测值与预测值得期望之间的差均方。实际上，偏差体现了学习器预测的准确度，而方差体现了学习器预测的稳定性。通过对泛化误差的进行分解，可以得到：</p>
+<ul>
+<li><strong>期望泛化误差&#x3D;方差+偏差</strong>	</li>
+<li><strong>偏差刻画学习器的拟合能力</strong></li>
+<li><strong>方差体现学习器的稳定性</strong></li>
+</ul>
+<p>易知：方差和偏差具有矛盾性，这就是常说的偏差-方差窘境（bias-variance dilamma），随着训练程度的提升，期望预测值与真实值之间的差异越来越小，即偏差越来越小，但是另一方面，随着训练程度加大，学习算法对数据集的波动越来越敏感，方差值越来越大。换句话说：在欠拟合时，偏差主导泛化误差，而训练到一定程度后，偏差越来越小，方差主导了泛化误差。因此训练也不要贪杯，适度辄止。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc722234b09f.png" alt="13.png"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ML/" rel="tag">ML</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-MachineLearning/Machine-learning-learning-notes-master/周志华《Machine Learning》学习笔记(5)--决策树"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(5)--%E5%86%B3%E7%AD%96%E6%A0%91/"
+    >西瓜书</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(5)--%E5%86%B3%E7%AD%96%E6%A0%91/" class="article-date">
+  <time datetime="2023-06-21T03:43:25.000Z" itemprop="datePublished">2023-06-21</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>上篇主要介绍和讨论了线性模型。首先从最简单的最小二乘法开始，讨论输入属性有一个和多个的情形，接着通过广义线性模型延伸开来，将预测连续值的回归问题转化为分类问题，从而引入了对数几率回归，最后线性判别分析LDA将样本点进行投影，多分类问题实质上通过划分的方法转化为多个二分类问题进行求解。本篇将讨论另一种被广泛使用的分类算法–决策树（Decision Tree）。</p>
+<p>#<strong>4、决策树</strong></p>
+<p>##<strong>4.1 决策树基本概念</strong></p>
+<p>顾名思义，决策树是基于树结构来进行决策的，在网上看到一个例子十分有趣，放在这里正好合适。现想象一位捉急的母亲想要给自己的女娃介绍一个男朋友，于是有了下面的对话：</p>
+<hr>
+<pre><code>  女儿：多大年纪了？
+  母亲：26。
+  女儿：长的帅不帅？
+  母亲：挺帅的。
+  女儿：收入高不？
+  母亲：不算很高，中等情况。
+  女儿：是公务员不？
+  母亲：是，在税务局上班呢。
+  女儿：那好，我去见见。
+</code></pre>
+<hr>
+<p>这个女孩的挑剔过程就是一个典型的决策树，即相当于通过年龄、长相、收入和是否公务员将男童鞋分为两个类别：见和不见。假设这个女孩对男人的要求是：30岁以下、长相中等以上并且是高收入者或中等以上收入的公务员，那么使用下图就能很好地表示女孩的决策逻辑（即一颗决策树）。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc728ec84a77.png" alt="1.png"></p>
+<p>在上图的决策树中，决策过程的每一次判定都是对某一属性的“测试”，决策最终结论则对应最终的判定结果。一般一颗决策树包含：一个根节点、若干个内部节点和若干个叶子节点，易知：</p>
+<pre><code>* 每个非叶节点表示一个特征属性测试。
+* 每个分支代表这个特征属性在某个值域上的输出。
+* 每个叶子节点存放一个类别。
+* 每个节点包含的样本集合通过属性测试被划分到子节点中，根节点包含样本全集。
+</code></pre>
+<p>##<strong>4.2 决策树的构造</strong></p>
+<p>决策树的构造是一个递归的过程，有三种情形会导致递归返回：(1) 当前结点包含的样本全属于同一类别，这时直接将该节点标记为叶节点，并设为相应的类别；(2) 当前属性集为空，或是所有样本在所有属性上取值相同，无法划分，这时将该节点标记为叶节点，并将其类别设为该节点所含样本最多的类别；(3) 当前结点包含的样本集合为空，不能划分，这时也将该节点标记为叶节点，并将其类别设为父节点中所含样本最多的类别。算法的基本流程如下图所示：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc728ecc27fe.png" alt="2.png"></p>
+<p>可以看出：决策树学习的关键在于如何选择划分属性，不同的划分属性得出不同的分支结构，从而影响整颗决策树的性能。属性划分的目标是让各个划分出来的子节点尽可能地“纯”，即属于同一类别。因此下面便是介绍量化纯度的具体方法，决策树最常用的算法有三种：ID3，C4.5和CART。</p>
+<p>###<strong>4.2.1 ID3算法</strong></p>
+<p>ID3算法使用信息增益为准则来选择划分属性，“信息熵”(information entropy)是度量样本结合纯度的常用指标，假定当前样本集合D中第k类样本所占比例为pk，则样本集合D的信息熵定义为：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc728ec515a5.png" alt="3.png"></p>
+<p>假定通过属性划分样本集D，产生了V个分支节点，v表示其中第v个分支节点，易知：分支节点包含的样本数越多，表示该分支节点的影响力越大。故可以计算出划分后相比原始数据集D获得的“信息增益”（information gain）。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc728ec3e067.png" alt="4.png"></p>
+<p>信息增益越大，表示使用该属性划分样本集D的效果越好，因此ID3算法在递归过程中，每次选择最大信息增益的属性作为当前的划分属性。</p>
+<p>###<strong>4.2.2 C4.5算法</strong></p>
+<p>ID3算法存在一个问题，就是偏向于取值数目较多的属性，例如：如果存在一个唯一标识，这样样本集D将会被划分为|D|个分支，每个分支只有一个样本，这样划分后的信息熵为零，十分纯净，但是对分类毫无用处。因此C4.5算法使用了“增益率”（gain ratio）来选择划分属性，来避免这个问题带来的困扰。首先使用ID3算法计算出信息增益高于平均水平的候选属性，接着C4.5计算这些候选属性的增益率，增益率定义为：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc728ec69647.png" alt="5.png"></p>
+<p>###<strong>4.2.3 CART算法</strong></p>
+<p>CART决策树使用“基尼指数”（Gini index）来选择划分属性，基尼指数反映的是从样本集D中随机抽取两个样本，其类别标记不一致的概率，因此Gini(D)越小越好，基尼指数定义如下：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc728ec5a2ff.png" alt="6.png"></p>
+<p>进而，使用属性α划分后的基尼指数为：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc728ec62eaf.png" alt="7.png"></p>
+<p>##<strong>4.3 剪枝处理</strong></p>
+<p>从决策树的构造流程中我们可以直观地看出：不管怎么样的训练集，决策树总是能很好地将各个类别分离开来，这时就会遇到之前提到过的问题：过拟合（overfitting），即太依赖于训练样本。剪枝（pruning）则是决策树算法对付过拟合的主要手段，剪枝的策略有两种如下：</p>
+<pre><code>* 预剪枝（prepruning）：在构造的过程中先评估，再考虑是否分支。
+* 后剪枝（post-pruning）：在构造好一颗完整的决策树后，自底向上，评估分支的必要性。
+</code></pre>
+<p>评估指的是性能度量，即决策树的泛化性能。之前提到：可以使用测试集作为学习器泛化性能的近似，因此可以将数据集划分为训练集和测试集。预剪枝表示在构造数的过程中，对一个节点考虑是否分支时，首先计算决策树不分支时在测试集上的性能，再计算分支之后的性能，若分支对性能没有提升，则选择不分支（即剪枝）。后剪枝则表示在构造好一颗完整的决策树后，从最下面的节点开始，考虑该节点分支对模型的性能是否有提升，若无则剪枝，即将该节点标记为叶子节点，类别标记为其包含样本最多的类别。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc728ec80d34.png" alt="8.png"></p>
+<p><img src="https://i.loli.net/2018/10/17/5bc728ec9e330.png" alt="9.png"></p>
+<p><img src="https://i.loli.net/2018/10/17/5bc728ec9d497.png" alt="10.png"></p>
+<p>上图分别表示不剪枝处理的决策树、预剪枝决策树和后剪枝决策树。预剪枝处理使得决策树的很多分支被剪掉，因此大大降低了训练时间开销，同时降低了过拟合的风险，但另一方面由于剪枝同时剪掉了当前节点后续子节点的分支，因此预剪枝“贪心”的本质阻止了分支的展开，在一定程度上带来了欠拟合的风险。而后剪枝则通常保留了更多的分支，因此采用后剪枝策略的决策树性能往往优于预剪枝，但其自底向上遍历了所有节点，并计算性能，训练时间开销相比预剪枝大大提升。</p>
+<p>##<strong>4.4 连续值与缺失值处理</strong></p>
+<p>对于连续值的属性，若每个取值作为一个分支则显得不可行，因此需要进行离散化处理，常用的方法为二分法，基本思想为：给定样本集D与连续属性α，二分法试图找到一个划分点t将样本集D在属性α上分为≤t与＞t。</p>
+<pre><code>* 首先将α的所有取值按升序排列，所有相邻属性的均值作为候选划分点（n-1个，n为α所有的取值数目）。
+* 计算每一个划分点划分集合D（即划分为两个分支）后的信息增益。
+* 选择最大信息增益的划分点作为最优划分点。
+</code></pre>
+<p><img src="https://i.loli.net/2018/10/17/5bc72a0968fad.png" alt="11.png"></p>
+<p>现实中常会遇到不完整的样本，即某些属性值缺失。有时若简单采取剔除，则会造成大量的信息浪费，因此在属性值缺失的情况下需要解决两个问题：（1）如何选择划分属性。（2）给定划分属性，若某样本在该属性上缺失值，如何划分到具体的分支上。假定为样本集中的每一个样本都赋予一个权重，根节点中的权重初始化为1，则定义：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc72a098f3be.png" alt="12.png"></p>
+<p>对于（1）：通过在样本集D中选取在属性α上没有缺失值的样本子集，计算在该样本子集上的信息增益，最终的信息增益等于该样本子集划分后信息增益乘以样本子集占样本集的比重。即：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc72a096ccc3.png" alt="13.png"></p>
+<p>对于（2）：若该样本子集在属性α上的值缺失，则将该样本以不同的权重（即每个分支所含样本比例）划入到所有分支节点中。该样本在分支节点中的权重变为：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc72a093ed3c.png" alt="14.png"></p>
+<p>​    </p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ML/" rel="tag">ML</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-MachineLearning/Machine-learning-learning-notes-master/周志华《Machine Learning》学习笔记(4)--线性模型"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(4)--%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/"
+    >西瓜书</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(4)--%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/" class="article-date">
+  <time datetime="2023-06-21T03:43:25.000Z" itemprop="datePublished">2023-06-21</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>笔记的前一部分主要是对机器学习预备知识的概括，包括机器学习的定义&#x2F;术语、学习器性能的评估&#x2F;度量以及比较，本篇之后将主要对具体的学习算法进行理解总结，本篇则主要是第3章的内容–线性模型。</p>
+<p>#<strong>3、线性模型</strong></p>
+<p>谈及线性模型，其实我们很早就已经与它打过交道，还记得高中数学必修3课本中那个顽皮的“最小二乘法”吗？这就是线性模型的经典算法之一：根据给定的（x，y）点对，求出一条与这些点拟合效果最好的直线y&#x3D;ax+b，之前我们利用下面的公式便可以计算出拟合直线的系数a,b（3.1中给出了具体的计算过程），从而对于一个新的x，可以预测它所对应的y值。前面我们提到：在机器学习的术语中，当预测值为连续值时，称为“回归问题”，离散值时为“分类问题”。本篇先从线性回归任务开始，接着讨论分类和多分类问题。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc722b068e48.png" alt="1.png"></p>
+<p>##<strong>3.1 线性回归</strong></p>
+<p>线性回归问题就是试图学到一个线性模型尽可能准确地预测新样本的输出值，例如：通过历年的人口数据预测2017年人口数量。在这类问题中，往往我们会先得到一系列的有标记数据，例如：2000–&gt;13亿…2016–&gt;15亿，这时输入的属性只有一个，即年份；也有输入多属性的情形，假设我们预测一个人的收入，这时输入的属性值就不止一个了，例如：（学历，年龄，性别，颜值，身高，体重）–&gt;15k。</p>
+<p>有时这些输入的属性值并不能直接被我们的学习模型所用，需要进行相应的处理，对于连续值的属性，一般都可以被学习器所用，有时会根据具体的情形作相应的预处理，例如：归一化等；对于离散值的属性，可作下面的处理：</p>
+<ul>
+<li><p>若属性值之间存在“序关系”，则可以将其转化为连续值，例如：身高属性分为“高”“中等”“矮”，可转化为数值：{1， 0.5， 0}。</p>
+</li>
+<li><p>若属性值之间不存在“序关系”，则通常将其转化为向量的形式，例如：性别属性分为“男”“女”，可转化为二维向量：{（1，0），（0，1）}。</p>
+</li>
+</ul>
+<p>（1）当输入属性只有一个的时候，就是最简单的情形，也就是我们高中时最熟悉的“最小二乘法”（Euclidean distance），首先计算出每个样本预测值与真实值之间的误差并求和，通过最小化均方误差MSE，使用求偏导等于零的方法计算出拟合直线y&#x3D;wx+b的两个参数w和b，计算过程如下图所示：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc722b0ccec4.png" alt="2.png"></p>
+<p>（2）当输入属性有多个的时候，例如对于一个样本有d个属性{（x1,x2…xd）,y}，则y&#x3D;wx+b需要写成：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc72567b8bcd.png" alt="0.png"></p>
+<p>通常对于多元问题，常常使用矩阵的形式来表示数据。在本问题中，将具有m个样本的数据集表示成矩阵X，将系数w与b合并成一个列向量，这样每个样本的预测值以及所有样本的均方误差最小化就可以写成下面的形式：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc722b0ad8f7.png" alt="3.png"></p>
+<p><img src="https://i.loli.net/2018/10/17/5bc722b0af652.png" alt="4.png"></p>
+<p><img src="https://i.loli.net/2018/10/17/5bc722b090543.png" alt="5.png"></p>
+<p>同样地，我们使用最小二乘法对w和b进行估计，令均方误差的求导等于0，需要注意的是，当一个矩阵的行列式不等于0时，我们才可能对其求逆，因此对于下式，我们需要考虑矩阵（X的转置*X）的行列式是否为0，若不为0，则可以求出其解，若为0，则需要使用其它的方法进行计算，书中提到了引入正则化，此处不进行深入。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc722b0cde33.png" alt="6.png"></p>
+<p>另一方面，有时像上面这种原始的线性回归可能并不能满足需求，例如：y值并不是线性变化，而是在指数尺度上变化。这时我们可以采用线性模型来逼近y的衍生物，例如lny，这时衍生的线性模型如下所示，实际上就是相当于将指数曲线投影在一条直线上，如下图所示：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc722b103cbf.png" alt="7.png"></p>
+<p>更一般地，考虑所有y的衍生物的情形，就得到了“广义的线性模型”（generalized linear model），其中，g（*）称为联系函数（link function）。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc722b0a2841.png" alt="8.png"></p>
+<p>##<strong>3.2 线性几率回归</strong></p>
+<p>回归就是通过输入的属性值得到一个预测值，利用上述广义线性模型的特征，是否可以通过一个联系函数，将预测值转化为离散值从而进行分类呢？线性几率回归正是研究这样的问题。对数几率引入了一个对数几率函数（logistic function）,将预测值投影到0-1之间，从而将线性回归问题转化为二分类问题。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc722b0c7748.png" alt="9.png"></p>
+<p><img src="https://i.loli.net/2018/10/17/5bc722b0a655d.png" alt="10.png"></p>
+<p>若将y看做样本为正例的概率，（1-y）看做样本为反例的概率，则上式实际上使用线性回归模型的预测结果器逼近真实标记的对数几率。因此这个模型称为“对数几率回归”（logistic regression），也有一些书籍称之为“逻辑回归”。下面使用最大似然估计的方法来计算出w和b两个参数的取值，下面只列出求解的思路，不列出具体的计算过程。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc723b824f0c.png" alt="11.png"></p>
+<p><img src="https://i.loli.net/2018/10/17/5bc723b817961.png" alt="12.png"></p>
+<p>##<strong>3.3 线性判别分析</strong></p>
+<p>线性判别分析（Linear Discriminant Analysis，简称LDA）,其基本思想是：将训练样本投影到一条直线上，使得同类的样例尽可能近，不同类的样例尽可能远。如图所示：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc723b863ebb.png" alt="13.png"><img src="https://i.loli.net/2018/10/17/5bc723b85bfa9.png" alt="14.png"></p>
+<p>想让同类样本点的投影点尽可能接近，不同类样本点投影之间尽可能远，即：让各类的协方差之和尽可能小，不用类之间中心的距离尽可能大。基于这样的考虑，LDA定义了两个散度矩阵。</p>
+<ul>
+<li>类内散度矩阵（within-class scatter matrix）</li>
+</ul>
+<p><img src="https://i.loli.net/2018/10/17/5bc723b8156e1.png" alt="15.png"></p>
+<ul>
+<li>类间散度矩阵(between-class scaltter matrix)</li>
+</ul>
+<p><img src="https://i.loli.net/2018/10/17/5bc723b7e9db3.png" alt="16.png"></p>
+<p>因此得到了LDA的最大化目标：“广义瑞利商”（generalized Rayleigh quotient）。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc723b7e8a61.png" alt="17.png"></p>
+<p>从而分类问题转化为最优化求解w的问题，当求解出w后，对新的样本进行分类时，只需将该样本点投影到这条直线上，根据与各个类别的中心值进行比较，从而判定出新样本与哪个类别距离最近。求解w的方法如下所示，使用的方法为λ乘子。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc723b83d5e0.png" alt="18.png"></p>
+<p>若将w看做一个投影矩阵，类似PCA的思想，则LDA可将样本投影到N-1维空间（N为类簇数），投影的过程使用了类别信息（标记信息），因此LDA也常被视为一种经典的监督降维技术。<br>​<br>##<strong>3.4 多分类学习</strong></p>
+<p>现实中我们经常遇到不只两个类别的分类问题，即多分类问题，在这种情形下，我们常常运用“拆分”的策略，通过多个二分类学习器来解决多分类问题，即将多分类问题拆解为多个二分类问题，训练出多个二分类学习器，最后将多个分类结果进行集成得出结论。最为经典的拆分策略有三种：“一对一”（OvO）、“一对其余”（OvR）和“多对多”（MvM），核心思想与示意图如下所示。</p>
+<ul>
+<li><p>OvO：给定数据集D，假定其中有N个真实类别，将这N个类别进行两两配对（一个正类&#x2F;一个反类），从而产生N（N-1）&#x2F;2个二分类学习器，在测试阶段，将新样本放入所有的二分类学习器中测试，得出N（N-1）个结果，最终通过投票产生最终的分类结果。</p>
+</li>
+<li><p>OvM：给定数据集D，假定其中有N个真实类别，每次取出一个类作为正类，剩余的所有类别作为一个新的反类，从而产生N个二分类学习器，在测试阶段，得出N个结果，若仅有一个学习器预测为正类，则对应的类标作为最终分类结果。</p>
+</li>
+<li><p>MvM：给定数据集D，假定其中有N个真实类别，每次取若干个类作为正类，若干个类作为反类（通过ECOC码给出，编码），若进行了M次划分，则生成了M个二分类学习器，在测试阶段（解码），得出M个结果组成一个新的码，最终通过计算海明&#x2F;欧式距离选择距离最小的类别作为最终分类结果。</p>
+</li>
+</ul>
+<p><img src="https://i.loli.net/2018/10/17/5bc723b862bfb.png" alt="19.png"></p>
+<p><img src="https://i.loli.net/2018/10/17/5bc723b8300d5.png" alt="20.png"></p>
+<p>##<strong>3.5 类别不平衡问题</strong></p>
+<p>类别不平衡（class-imbanlance）就是指分类问题中不同类别的训练样本相差悬殊的情况，例如正例有900个，而反例只有100个，这个时候我们就需要进行相应的处理来平衡这个问题。常见的做法有三种：</p>
+<ol>
+<li>在训练样本较多的类别中进行“欠采样”（undersampling）,比如从正例中采出100个，常见的算法有：EasyEnsemble。</li>
+<li>在训练样本较少的类别中进行“过采样”（oversampling）,例如通过对反例中的数据进行插值，来产生额外的反例，常见的算法有SMOTE。</li>
+<li>直接基于原数据集进行学习，对预测值进行“再缩放”处理。其中再缩放也是代价敏感学习的基础。<img src="https://i.loli.net/2018/10/17/5bc726fe87ae2.png" alt="21.png"></li>
+</ol>
+<p>​<br>​      </p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ML/" rel="tag">ML</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-giligili"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+     
+    <div class="article-meta">
+      <a href="/2023/05/01/giligili/" class="article-date">
+  <time datetime="2023-05-01T08:02:09.851Z" itemprop="datePublished">2023-05-01</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><img src="/./markdown-img/giligili.assets/image-20230501160218413.png" alt="image-20230501160218413"></p>
+<p>为什么直接使用display flex就能直接让flex的内容横过来</p>
+<p>注释写好，是为了方便查找，ctrl f头部就能找到头部的所有样式</p>
+<p><img src="/./markdown-img/giligili.assets/image-20230501162247727.png" alt="image-20230501162247727"></p>
+<p><img src="/./markdown-img/giligili.assets/image-20230501162235824.png" alt="image-20230501162235824"></p>
+<p>在f12计算样式里查样式</p>
+<p>去掉边框线</p>
+<p><img src="/./markdown-img/giligili.assets/image-20230501170906132.png" alt="image-20230501170906132"></p>
+<p>padding ：上下px  左右px；</p>
+<p>win+v剪切板</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-前端学习笔记/其它/Q0-intrest"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/05/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/Q0-intrest/"
+    >静态页面-1girigiri_love</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/05/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/Q0-intrest/" class="article-date">
+  <time datetime="2023-05-01T03:34:47.000Z" itemprop="datePublished">2023-05-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="1-视差滚动"><a href="#1-视差滚动" class="headerlink" title="1.视差滚动"></a>1.视差滚动</h1><p>可以查范例看看</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-前端学习笔记/静态页面练习/girigiri_love"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2023/05/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E7%BB%83%E4%B9%A0/girigiri_love/"
+    >静态页面-1girigiri_love</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/05/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E7%BB%83%E4%B9%A0/girigiri_love/" class="article-date">
+  <time datetime="2023-05-01T03:34:47.000Z" itemprop="datePublished">2023-05-01</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="1-一个问题"><a href="#1-一个问题" class="headerlink" title="1.一个问题"></a>1.一个问题</h2><p>想实现的效果：head里的‘个人’图标，想要实现红色圆形底色，且‘个人’图标需要跟其它图标大小相等。且内容部分不会由于宽度的原因冒出头来。</p>
+<ol>
+<li><h3 id="用broder-box"><a href="#用broder-box" class="headerlink" title="用broder-box"></a>用broder-box</h3><p>直接用会导致‘个人’图标缩小</p>
+<img src="./../_posts/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/markdown-img/girigiri_love.assets/image-20230505225632986.png" alt="image-20230505225632986" style="zoom:50%;" />
+</li>
+<li><h3 id="不用broder-box"><a href="#不用broder-box" class="headerlink" title="不用broder-box"></a>不用broder-box</h3><p>主体部分中，很多部分都需要设定宽度100%，又需要设定position：absolute</p>
+<img src="./../_posts/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/markdown-img/girigiri_love.assets/image-20230505225731776.png" alt="image-20230505225731776" style="zoom:33%;" />
+</li>
+<li><h3 id="总结：用broder-box，所以要改‘个人部分’，最好的办法是"><a href="#总结：用broder-box，所以要改‘个人部分’，最好的办法是" class="headerlink" title="总结：用broder-box，所以要改‘个人部分’，最好的办法是"></a>总结：用broder-box，所以要改‘个人部分’，最好的办法是</h3><ol>
+<li><p>利用选择器的优先级原理，给‘个人’的·上一层加一个id&#x3D;user。上一层本身的class选择器不用管。</p>
+<p>重复的部分会被id选择器覆盖。</p>
+<p><img src="./../_posts/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/markdown-img/girigiri_love.assets/image-20230505232718506.png" alt="image-20230505232718506" style="zoom:33%;" /><img src="./../_posts/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/markdown-img/girigiri_love.assets/image-20230505233056969.png" alt="image-20230505233056969" style="zoom: 50%;" /></p>
+</li>
+<li><p>设置它的宽高使其（装‘个人’图片的盒子）成为一个正方形，然后设置border-radius。&#x2F;&#x2F;底部红圆</p>
+</li>
+<li><p>然后通过设置padding来合理缩小图片。</p>
+<img src="./../_posts/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/markdown-img/girigiri_love.assets/1683300580219.png" alt="1683300580219" style="zoom:38%;" /></li>
+</ol>
+</li>
+</ol>
+<h2 id="2-一个知识点"><a href="#2-一个知识点" class="headerlink" title="2.一个知识点"></a>2.一个知识点</h2><p>position：absolute是在偏移，它如果设了left 20等，这和width：100%是互斥的。所以要用broder-box；</p>
+<h2 id="3-一个技巧"><a href="#3-一个技巧" class="headerlink" title="3.一个技巧"></a>3.一个技巧</h2><p>debug可以在浏览器端*{border: 1px solid green;}</p>
+<h2 id="4-最终效果-底部红字是桌面歌词"><a href="#4-最终效果-底部红字是桌面歌词" class="headerlink" title="4.最终效果(底部红字是桌面歌词)"></a>4.最终效果(底部红字是桌面歌词)</h2><p><img src="/./../_posts/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/markdown-img/girigiri_love.assets/image-20230505234450766.png" alt="image-20230505234450766"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
 
     </footer>
   </div>
@@ -1366,7 +1044,7 @@ console.log(result);
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
+    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
   </nav>
   
 </section>

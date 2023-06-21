@@ -151,7 +151,7 @@
     
     
     <article
-  id="post-giligili"
+  id="post-MachineLearning/Machine-learning-learning-notes-master/周志华《Machine Learning》学习笔记(8)--贝叶斯分类器"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -160,23 +160,58 @@
   <div class="article-inner">
      
     <div class="article-meta">
-      <a href="/2023/05/01/giligili/" class="article-date">
-  <time datetime="2023-05-01T08:02:09.851Z" itemprop="datePublished">2023-05-01</time>
+      <a href="/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(8)--%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%99%A8/" class="article-date">
+  <time datetime="2023-06-21T07:42:41.529Z" itemprop="datePublished">2023-06-21</time>
 </a>    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <p><img src="/./markdown-img/giligili.assets/image-20230501160218413.png" alt="image-20230501160218413"></p>
-<p>为什么直接使用display flex就能直接让flex的内容横过来</p>
-<p>注释写好，是为了方便查找，ctrl f头部就能找到头部的所有样式</p>
-<p><img src="/./markdown-img/giligili.assets/image-20230501162247727.png" alt="image-20230501162247727"></p>
-<p><img src="/./markdown-img/giligili.assets/image-20230501162235824.png" alt="image-20230501162235824"></p>
-<p>在f12计算样式里查样式</p>
-<p>去掉边框线</p>
-<p><img src="/./markdown-img/giligili.assets/image-20230501170906132.png" alt="image-20230501170906132"></p>
-<p>padding ：上下px  左右px；</p>
-<p>win+v剪切板</p>
+  <p>上篇主要介绍和讨论了支持向量机。从最初的分类函数，通过最大化分类间隔，max(1&#x2F;||w||)，min(1&#x2F;2||w||^2)，凸二次规划，朗格朗日函数，对偶问题，一直到最后的SMO算法求解，都为寻找一个最优解。接着引入核函数将低维空间映射到高维特征空间，解决了非线性可分的情形。最后介绍了软间隔支持向量机，解决了outlier挤歪超平面的问题。本篇将讨论一个经典的统计学习算法–<strong>贝叶斯分类器</strong>。</p>
+<p>#<strong>7、贝叶斯分类器</strong></p>
+<p>贝叶斯分类器是一种概率框架下的统计学习分类器，对分类任务而言，假设在相关概率都已知的情况下，贝叶斯分类器考虑如何基于这些概率为样本判定最优的类标。在开始介绍贝叶斯决策论之前，我们首先来回顾下概率论委员会常委–贝叶斯公式。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc83fd7a2575.png" alt="1.png"></p>
+<p>##<strong>7.1 贝叶斯决策论</strong></p>
+<p>若将上述定义中样本空间的划分Bi看做为类标，A看做为一个新的样本，则很容易将条件概率理解为样本A是类别Bi的概率。在机器学习训练模型的过程中，往往我们都试图去优化一个风险函数，因此在概率框架下我们也可以为贝叶斯定义“<strong>条件风险</strong>”（conditional risk）。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc83fd15db94.png" alt="2.png"></p>
+<p>我们的任务就是寻找一个判定准则最小化所有样本的条件风险总和，因此就有了<strong>贝叶斯判定准则</strong>（Bayes decision rule）:为最小化总体风险，只需在每个样本上选择那个使得条件风险最小的类标。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc83fd308600.png" alt="3.png"></p>
+<p>若损失函数λ取0-1损失，则有：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc83fd37c502.png" alt="4.png"></p>
+<p>即对于每个样本x，选择其后验概率P（c | x）最大所对应的类标，能使得总体风险函数最小，从而将原问题转化为估计后验概率P（c | x）。一般这里有两种策略来对后验概率进行估计：</p>
+<pre><code>* 判别式模型：直接对 P（c | x）进行建模求解。例我们前面所介绍的决策树、神经网络、SVM都是属于判别式模型。
+* 生成式模型：通过先对联合分布P（x,c）建模，从而进一步求解 P（c | x）。
+</code></pre>
+<p>贝叶斯分类器就属于生成式模型，基于贝叶斯公式对后验概率P（c | x） 进行一项神奇的变换，巴拉拉能量…. P（c | x）变身：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc83fd501ad3.png" alt="5.png"></p>
+<p>对于给定的样本x，P（x）与类标无关，P（c）称为类先验概率，p（x | c ）称为类条件概率。这时估计后验概率P（c | x）就变成为估计类先验概率和类条件概率的问题。对于先验概率和后验概率，在看这章之前也是模糊了我好久，这里普及一下它们的基本概念。</p>
+<pre><code>* 先验概率： 根据以往经验和分析得到的概率。
+* 后验概率：后验概率是基于新的信息，修正原来的先验概率后所获得的更接近实际情况的概率估计。
+</code></pre>
+<p>实际上先验概率就是在没有任何结果出来的情况下估计的概率，而后验概率则是在有一定依据后的重新估计，直观意义上后验概率就是条件概率。下面直接上Wiki上的一个例子，简单粗暴快速完事…</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc83fd799610.png" alt="6.png"></p>
+<p>回归正题，对于类先验概率P（c），p（c）就是样本空间中各类样本所占的比例，根据大数定理（当样本足够多时，频率趋于稳定等于其概率），这样当训练样本充足时，p(c)可以使用各类出现的频率来代替。因此只剩下类条件概率p（x | c ），它表达的意思是在类别c中出现x的概率，它涉及到属性的联合概率问题，若只有一个离散属性还好，当属性多时采用频率估计起来就十分困难，因此这里一般采用极大似然法进行估计。</p>
+<p>##<strong>7.2 极大似然法</strong></p>
+<p>极大似然估计（Maximum Likelihood Estimation，简称MLE），是一种根据数据采样来估计概率分布的经典方法。常用的策略是先假定总体具有某种确定的概率分布，再基于训练样本对概率分布的参数进行估计。运用到类条件概率p（x | c ）中，假设p（x | c ）服从一个参数为θ的分布，问题就变为根据已知的训练样本来估计θ。极大似然法的核心思想就是：估计出的参数使得已知样本出现的概率最大，即使得训练数据的似然最大。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc83fd70fb73.png" alt="7.png"></p>
+<p>所以，贝叶斯分类器的训练过程就是参数估计。总结最大似然法估计参数的过程，一般分为以下四个步骤：</p>
+<pre><code>* 1.写出似然函数；
+* 2.对似然函数取对数，并整理；
+* 3.求导数，令偏导数为0，得到似然方程组；
+* 4.解似然方程组，得到所有参数即为所求。
+</code></pre>
+<p>例如：假设样本属性都是连续值，p（x | c ）服从一个多维高斯分布，则通过MLE计算出的参数刚好分别为：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc83fd705729.png" alt="8.png"></p>
+<p>上述结果看起来十分合乎实际，但是采用最大似然法估计参数的效果很大程度上依赖于作出的假设是否合理，是否符合潜在的真实数据分布。这就需要大量的经验知识，搞统计越来越值钱也是这个道理，大牛们掐指一算比我们搬砖几天更有效果。</p>
+<p>##<strong>7.3 朴素贝叶斯分类器</strong></p>
+<p>不难看出：原始的贝叶斯分类器最大的问题在于联合概率密度函数的估计，首先需要根据经验来假设联合概率分布，其次当属性很多时，训练样本往往覆盖不够，参数的估计会出现很大的偏差。为了避免这个问题，朴素贝叶斯分类器（naive Bayes classifier）采用了“属性条件独立性假设”，即样本数据的所有属性之间相互独立。这样类条件概率p（x | c ）可以改写为：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc83fd55e102.png" alt="9.png"></p>
+<p>这样，为每个样本估计类条件概率变成为每个样本的每个属性估计类条件概率。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc83fd6678cd.png" alt="10.png"></p>
+<p>相比原始贝叶斯分类器，朴素贝叶斯分类器基于单个的属性计算类条件概率更加容易操作，需要注意的是：若某个属性值在训练集中和某个类别没有一起出现过，这样会抹掉其它的属性信息，因为该样本的类条件概率被计算为0。因此在估计概率值时，常常用进行平滑（smoothing）处理，拉普拉斯修正（Laplacian correction）就是其中的一种经典方法，具体计算方法如下：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc83fe54aaed.png" alt="11.png"></p>
+<p>当训练集越大时，拉普拉斯修正引入的影响越来越小。对于贝叶斯分类器，模型的训练就是参数估计，因此可以事先将所有的概率储存好，当有新样本需要判定时，直接查表计算即可。</p>
+<p>针对朴素贝叶斯，人们觉得它too sample，sometimes too naive！因此又提出了半朴素的贝叶斯分类器，具体有SPODE、TAN、贝叶斯网络等来刻画属性之间的依赖关系，此处不进行深入，等哪天和贝叶斯邂逅了再回来讨论。在此鼎鼎大名的贝叶斯介绍完毕，下一篇将介绍这一章剩下的内容–EM算法，朴素贝叶斯和EM算法同为数据挖掘的十大经典算法，想着还是单独介绍吧~</p>
  
       <!-- reward -->
       
@@ -197,135 +232,7 @@
 
     
     <article
-  id="post-前端学习笔记/其它/Q0-intrest"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/05/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/Q0-intrest/"
-    >静态页面-1girigiri_love</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/05/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/Q0-intrest/" class="article-date">
-  <time datetime="2023-05-01T03:34:47.000Z" itemprop="datePublished">2023-05-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h1 id="1-视差滚动"><a href="#1-视差滚动" class="headerlink" title="1.视差滚动"></a>1.视差滚动</h1><p>可以查范例看看</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-前端学习笔记/静态页面练习/girigiri_love"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/05/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E7%BB%83%E4%B9%A0/girigiri_love/"
-    >静态页面-1girigiri_love</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/05/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E7%BB%83%E4%B9%A0/girigiri_love/" class="article-date">
-  <time datetime="2023-05-01T03:34:47.000Z" itemprop="datePublished">2023-05-01</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/code/">code</a> / <a class="article-category-link" href="/categories/code/note/">note</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="1-一个问题"><a href="#1-一个问题" class="headerlink" title="1.一个问题"></a>1.一个问题</h2><p>想实现的效果：head里的‘个人’图标，想要实现红色圆形底色，且‘个人’图标需要跟其它图标大小相等。且内容部分不会由于宽度的原因冒出头来。</p>
-<ol>
-<li><h3 id="用broder-box"><a href="#用broder-box" class="headerlink" title="用broder-box"></a>用broder-box</h3><p>直接用会导致‘个人’图标缩小</p>
-<img src="./../_posts/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/markdown-img/girigiri_love.assets/image-20230505225632986.png" alt="image-20230505225632986" style="zoom:50%;" />
-</li>
-<li><h3 id="不用broder-box"><a href="#不用broder-box" class="headerlink" title="不用broder-box"></a>不用broder-box</h3><p>主体部分中，很多部分都需要设定宽度100%，又需要设定position：absolute</p>
-<img src="./../_posts/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/markdown-img/girigiri_love.assets/image-20230505225731776.png" alt="image-20230505225731776" style="zoom:33%;" />
-</li>
-<li><h3 id="总结：用broder-box，所以要改‘个人部分’，最好的办法是"><a href="#总结：用broder-box，所以要改‘个人部分’，最好的办法是" class="headerlink" title="总结：用broder-box，所以要改‘个人部分’，最好的办法是"></a>总结：用broder-box，所以要改‘个人部分’，最好的办法是</h3><ol>
-<li><p>利用选择器的优先级原理，给‘个人’的·上一层加一个id&#x3D;user。上一层本身的class选择器不用管。</p>
-<p>重复的部分会被id选择器覆盖。</p>
-<p><img src="./../_posts/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/markdown-img/girigiri_love.assets/image-20230505232718506.png" alt="image-20230505232718506" style="zoom:33%;" /><img src="./../_posts/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/markdown-img/girigiri_love.assets/image-20230505233056969.png" alt="image-20230505233056969" style="zoom: 50%;" /></p>
-</li>
-<li><p>设置它的宽高使其（装‘个人’图片的盒子）成为一个正方形，然后设置border-radius。&#x2F;&#x2F;底部红圆</p>
-</li>
-<li><p>然后通过设置padding来合理缩小图片。</p>
-<img src="./../_posts/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/markdown-img/girigiri_love.assets/1683300580219.png" alt="1683300580219" style="zoom:38%;" /></li>
-</ol>
-</li>
-</ol>
-<h2 id="2-一个知识点"><a href="#2-一个知识点" class="headerlink" title="2.一个知识点"></a>2.一个知识点</h2><p>position：absolute是在偏移，它如果设了left 20等，这和width：100%是互斥的。所以要用broder-box；</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-github使用"
+  id="post-MachineLearning/Machine-learning-learning-notes-master/周志华《Machine Learning》学习笔记(9)--EM算法"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -334,40 +241,265 @@
   <div class="article-inner">
      
     <div class="article-meta">
-      <a href="/2023/04/30/github%E4%BD%BF%E7%94%A8/" class="article-date">
-  <time datetime="2023-04-30T05:32:21.097Z" itemprop="datePublished">2023-04-30</time>
+      <a href="/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(9)--EM%E7%AE%97%E6%B3%95/" class="article-date">
+  <time datetime="2023-06-21T07:42:41.529Z" itemprop="datePublished">2023-06-21</time>
 </a>    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <p>tailwind.css（公司在用）         </p>
-<p>两个预处理器：sass（网站：sass文档）（用的多可以学，优点比如嵌套）less（用的多）</p>
-<p>怎么在desktop上，</p>
-<p>C:\Users\11096\Documents\GitHub\MyBlog&gt;code .</p>
-<p>pnpm的优点</p>
-<p>​		软连接</p>
-<p>vscode 里直接打开终端</p>
-<p>ctrl shift c（cmd） 或者ctrl shift &#96;（内嵌）</p>
-<p>npm i下载依赖</p>
-<p>npm run 【script命令】</p>
-<p>0.npm -i下载依赖</p>
-<p>&#x2F;&#x2F;上传</p>
-<p>1.npm run build(第一个终端，结束后别关)</p>
-<p>2.npm run start（第二个终端）</p>
-<p>&#x2F;&#x2F;</p>
-<p>1.本地启动</p>
-<p>C:\Users\11096\Documents\GitHub\MyBlog&gt;npm run dev</p>
+  <p>上篇主要介绍了贝叶斯分类器，从贝叶斯公式到贝叶斯决策论，再到通过极大似然法估计类条件概率，贝叶斯分类器的训练就是参数估计的过程。朴素贝叶斯则是“属性条件独立性假设”下的特例，它避免了假设属性联合分布过于经验性和训练集不足引起参数估计较大偏差两个大问题，最后介绍的拉普拉斯修正将概率值进行平滑处理。本篇将介绍另一个当选为数据挖掘十大算法之一的<strong>EM算法</strong>。</p>
+<p>#<strong>8、EM算法</strong></p>
+<p>EM（Expectation-Maximization）算法是一种常用的估计参数隐变量的利器，也称为“期望最大算法”，是数据挖掘的十大经典算法之一。EM算法主要应用于训练集样本不完整即存在隐变量时的情形（例如某个属性值未知），通过其独特的“两步走”策略能较好地估计出隐变量的值。</p>
+<p>##<strong>8.1 EM算法思想</strong></p>
+<p>EM是一种迭代式的方法，它的基本思想就是：若样本服从的分布参数θ已知，则可以根据已观测到的训练样本推断出隐变量Z的期望值（E步），若Z的值已知则运用最大似然法估计出新的θ值（M步）。重复这个过程直到Z和θ值不再发生变化。</p>
+<p>简单来讲：假设我们想估计A和B这两个参数，在开始状态下二者都是未知的，但如果知道了A的信息就可以得到B的信息，反过来知道了B也就得到了A。可以考虑首先赋予A某种初值，以此得到B的估计值，然后从B的当前值出发，重新估计A的取值，这个过程一直持续到收敛为止。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc843bf53eb2.png" alt="1.png"></p>
+<p>现在再来回想聚类的代表算法K-Means：【首先随机选择类中心&#x3D;&gt;将样本点划分到类簇中&#x3D;&gt;重新计算类中心&#x3D;&gt;不断迭代直至收敛】，不难发现这个过程和EM迭代的方法极其相似，事实上，若将样本的类别看做为“隐变量”（latent variable）Z，类中心看作样本的分布参数θ，K-Means就是通过EM算法来进行迭代的，与我们这里不同的是，K-Means的目标是最小化样本点到其对应类中心的距离和，上述为极大化似然函数。</p>
+<p>##<strong>8.2 EM算法数学推导</strong></p>
+<p>在上篇极大似然法中，当样本属性值都已知时，我们很容易通过极大化对数似然，接着对每个参数求偏导计算出参数的值。但当存在隐变量时，就无法直接求解，此时我们通常最大化已观察数据的对数“边际似然”（marginal likelihood）。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc843bfd84d2.png" alt="2.png"></p>
+<p>这时候，通过边缘似然将隐变量Z引入进来，对于参数估计，现在与最大似然不同的只是似然函数式中多了一个未知的变量Z，也就是说我们的目标是找到适合的θ和Z让L(θ)最大，这样我们也可以分别对未知的θ和Z求偏导，再令其等于0。</p>
+<p>然而观察上式可以发现，和的对数（ln(x1+x2+x3)）求导十分复杂，那能否通过变换上式得到一种求导简单的新表达式呢？这时候 Jensen不等式就派上用场了，先回顾一下高等数学凸函数的内容：</p>
+<p><strong>Jensen’s inequality</strong>：过一个凸函数上任意两点所作割线一定在这两点间的函数图象的上方。理解起来也十分简单，对于凸函数f(x)’’&gt;0，即曲线的变化率是越来越大单调递增的，所以函数越到后面增长越厉害，这样在一个区间下，函数的均值就会大一些了。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc843c064c72.png" alt="3.png"></p>
+<p>因为ln(*)函数为凹函数，故可以将上式“和的对数”变为“对数的和”，这样就很容易求导了。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc843c3490ad.png" alt="4.png"></p>
+<p>接着求解Qi和θ：首先固定θ（初始值），通过求解Qi使得J（θ，Q）在θ处与L（θ）相等，即求出L（θ）的下界；然后再固定Qi，调整θ，最大化下界J（θ，Q）。不断重复两个步骤直到稳定。通过jensen不等式的性质，Qi的计算公式实际上就是后验概率：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc843c21276c.png" alt="5.png"></p>
+<p>通过数学公式的推导，简单来理解这一过程：固定θ计算Q的过程就是在建立L（θ）的下界，即通过jenson不等式得到的下界（E步）；固定Q计算θ则是使得下界极大化（M步），从而不断推高边缘似然L（θ）。从而循序渐进地计算出L（θ）取得极大值时隐变量Z的估计值。</p>
+<p>EM算法也可以看作一种“坐标下降法”，首先固定一个值，对另外一个值求极值，不断重复直到收敛。这时候也许大家就有疑问，问什么不直接这两个家伙求偏导用梯度下降呢？这时候就是坐标下降的优势，有些特殊的函数，例如曲线函数z&#x3D;y^2+x^2+x^2y+xy+…，无法直接求导，这时如果先固定其中的一个变量，再对另一个变量求极值，则变得可行。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc843c34e7ff.png" alt="6.png"></p>
+<p>##<strong>8.3 EM算法流程</strong></p>
+<p>看完数学推导，算法的流程也就十分简单了，这里有两个版本，版本一来自西瓜书，周天使的介绍十分简洁；版本二来自于大牛的博客。结合着数学推导，自认为版本二更具有逻辑性，两者唯一的区别就在于版本二多出了红框的部分，这里我也没得到答案，欢迎骚扰讨论~</p>
+<p><strong>版本一：</strong></p>
+<p><img src="https://i.loli.net/2018/10/18/5bc843c0e19db.png" alt="7.png"></p>
+<p><strong>版本二：</strong></p>
+<p><img src="https://i.loli.net/2018/10/18/5bc843c34775b.png" alt="8.png"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-MachineLearning/Machine-learning-learning-notes-master/周志华《Machine Learning》学习笔记(6)--神经网络"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+     
+    <div class="article-meta">
+      <a href="/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(6)--%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" class="article-date">
+  <time datetime="2023-06-21T07:42:41.526Z" itemprop="datePublished">2023-06-21</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>上篇主要讨论了决策树算法。首先从决策树的基本概念出发，引出决策树基于树形结构进行决策，进一步介绍了构造决策树的递归流程以及其递归终止条件，在递归的过程中，划分属性的选择起到了关键作用，因此紧接着讨论了三种评估属性划分效果的经典算法，介绍了剪枝策略来解决原生决策树容易产生的过拟合问题，最后简述了属性连续值&#x2F;缺失值的处理方法。本篇将讨论现阶段十分热门的另一个经典监督学习算法–神经网络（neural network）。</p>
+<p>#<strong>5、神经网络</strong></p>
+<p>在机器学习中，神经网络一般指的是“神经网络学习”，是机器学习与神经网络两个学科的交叉部分。所谓神经网络，目前用得最广泛的一个定义是“神经网络是由具有适应性的简单单元组成的广泛并行互连的网络，它的组织能够模拟生物神经系统对真实世界物体所做出的交互反应”。</p>
+<p>##<strong>5.1 神经元模型</strong></p>
+<p>神经网络中最基本的单元是神经元模型（neuron）。在生物神经网络的原始机制中，每个神经元通常都有多个树突（dendrite），一个轴突（axon）和一个细胞体（cell body），树突短而多分支，轴突长而只有一个；在功能上，树突用于传入其它神经元传递的神经冲动，而轴突用于将神经冲动传出到其它神经元，当树突或细胞体传入的神经冲动使得神经元兴奋时，该神经元就会通过轴突向其它神经元传递兴奋。神经元的生物学结构如下图所示，不得不说高中的生化知识大学忘得可是真干净…</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc72cbb6cc11.png" alt="1.png"></p>
+<p>一直沿用至今的“M-P神经元模型”正是对这一结构进行了抽象，也称“阈值逻辑单元“，其中树突对应于输入部分，每个神经元收到n个其他神经元传递过来的输入信号，这些信号通过带权重的连接传递给细胞体，这些权重又称为连接权（connection weight）。细胞体分为两部分，前一部分计算总输入值（即输入信号的加权和，或者说累积电平），后一部分先计算总输入值与该神经元阈值的差值，然后通过激活函数（activation function）的处理，产生输出从轴突传送给其它神经元。M-P神经元模型如下图所示：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc72cbb7be44.png" alt="2.png"></p>
+<p>与线性分类十分相似，神经元模型最理想的激活函数也是阶跃函数，即将神经元输入值与阈值的差值映射为输出值1或0，若差值大于零输出1，对应兴奋；若差值小于零则输出0，对应抑制。但阶跃函数不连续，不光滑，故在M-P神经元模型中，也采用Sigmoid函数来近似， Sigmoid函数将较大范围内变化的输入值挤压到 (0,1) 输出值范围内，所以也称为挤压函数（squashing function）。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc72cbb40dc5.png" alt="3.png"></p>
+<p>将多个神经元按一定的层次结构连接起来，就得到了神经网络。它是一种包含多个参数的模型，比方说10个神经元两两连接，则有100个参数需要学习（每个神经元有9个连接权以及1个阈值），若将每个神经元都看作一个函数，则整个神经网络就是由这些函数相互嵌套而成。</p>
+<p>##<strong>5.2 感知机与多层网络</strong></p>
+<p>感知机（Perceptron）是由两层神经元组成的一个简单模型，但只有输出层是M-P神经元，即只有输出层神经元进行激活函数处理，也称为功能神经元（functional neuron）；输入层只是接受外界信号（样本属性）并传递给输出层（输入层的神经元个数等于样本的属性数目），而没有激活函数。这样一来，感知机与之前线性模型中的对数几率回归的思想基本是一样的，都是通过对属性加权与另一个常数求和，再使用sigmoid函数将这个输出值压缩到0-1之间，从而解决分类问题。不同的是感知机的输出层应该可以有多个神经元，从而可以实现多分类问题，同时两个模型所用的参数估计方法十分不同。</p>
+<p>给定训练集，则感知机的n+1个参数（n个权重+1个阈值）都可以通过学习得到。阈值Θ可以看作一个输入值固定为-1的哑结点的权重ωn+1，即假设有一个固定输入xn+1&#x3D;-1的输入层神经元，其对应的权重为ωn+1，这样就把权重和阈值统一为权重的学习了。简单感知机的结构如下图所示：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc72cbb3fdf0.png" alt="4.png"></p>
+<p>感知机权重的学习规则如下：对于训练样本（x，y），当该样本进入感知机学习后，会产生一个输出值，若该输出值与样本的真实标记不一致，则感知机会对权重进行调整，若激活函数为阶跃函数，则调整的方法为（基于梯度下降法）：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc72cbb3ba63.png" alt="5.png"></p>
+<p>其中 η∈（0，1）称为学习率，可以看出感知机是通过逐个样本输入来更新权重，首先设定好初始权重（一般为随机），逐个地输入样本数据，若输出值与真实标记相同则继续输入下一个样本，若不一致则更新权重，然后再重新逐个检验，直到每个样本数据的输出值都与真实标记相同。容易看出：感知机模型总是能将训练数据的每一个样本都预测正确，和决策树模型总是能将所有训练数据都分开一样，感知机模型很容易产生过拟合问题。</p>
+<p>由于感知机模型只有一层功能神经元，因此其功能十分有限，只能处理线性可分的问题，对于这类问题，感知机的学习过程一定会收敛（converge），因此总是可以求出适当的权值。但是对于像书上提到的异或问题，只通过一层功能神经元往往不能解决，因此要解决非线性可分问题，需要考虑使用多层功能神经元，即神经网络。多层神经网络的拓扑结构如下图所示：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc72cbb58ec6.png" alt="6.png"></p>
+<p>在神经网络中，输入层与输出层之间的层称为隐含层或隐层（hidden layer），隐层和输出层的神经元都是具有激活函数的功能神经元。只需包含一个隐层便可以称为多层神经网络，常用的神经网络称为“多层前馈神经网络”（multi-layer feedforward neural network），该结构满足以下几个特点：</p>
+<pre><code>* 每层神经元与下一层神经元之间完全互连
+* 神经元之间不存在同层连接
+* 神经元之间不存在跨层连接
+</code></pre>
+<p><img src="https://i.loli.net/2018/10/17/5bc72cbb47ff8.png" alt="7.png"></p>
+<p>根据上面的特点可以得知：这里的“前馈”指的是网络拓扑结构中不存在环或回路，而不是指该网络只能向前传播而不能向后传播（下节中的BP神经网络正是基于前馈神经网络而增加了反馈调节机制）。神经网络的学习过程就是根据训练数据来调整神经元之间的“连接权”以及每个神经元的阈值，换句话说：神经网络所学习到的东西都蕴含在网络的连接权与阈值中。</p>
+<p>##<strong>5.3 BP神经网络算法</strong></p>
+<p>由上面可以得知：神经网络的学习主要蕴含在权重和阈值中，多层网络使用上面简单感知机的权重调整规则显然不够用了，BP神经网络算法即误差逆传播算法（error BackPropagation）正是为学习多层前馈神经网络而设计，BP神经网络算法是迄今为止最成功的的神经网络学习算法。</p>
+<p>一般而言，只需包含一个足够多神经元的隐层，就能以任意精度逼近任意复杂度的连续函数[Hornik et al.,1989]，故下面以训练单隐层的前馈神经网络为例，介绍BP神经网络的算法思想。</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc72cbb92ff5.png" alt="8.png"></p>
+<p>上图为一个单隐层前馈神经网络的拓扑结构，BP神经网络算法也使用梯度下降法（gradient descent），以单个样本的均方误差的负梯度方向对权重进行调节。可以看出：BP算法首先将误差反向传播给隐层神经元，调节隐层到输出层的连接权重与输出层神经元的阈值；接着根据隐含层神经元的均方误差，来调节输入层到隐含层的连接权值与隐含层神经元的阈值。BP算法基本的推导过程与感知机的推导过程原理是相同的，下面给出调整隐含层到输出层的权重调整规则的推导过程：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc72cbb86229.png" alt="9.png"></p>
+<p>学习率η∈（0，1）控制着沿反梯度方向下降的步长，若步长太大则下降太快容易产生震荡，若步长太小则收敛速度太慢，一般地常把η设置为0.1，有时更新权重时会将输出层与隐含层设置为不同的学习率。BP算法的基本流程如下所示：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc72cbb59e99.png" alt="10.png"></p>
+<p>BP算法的更新规则是基于每个样本的预测值与真实类标的均方误差来进行权值调节，即BP算法每次更新只针对于单个样例。需要注意的是：BP算法的最终目标是要最小化整个训练集D上的累积误差，即：</p>
+<p><img src="https://i.loli.net/2018/10/17/5bc72ce222a96.png" alt="11.png"></p>
+<p>如果基于累积误差最小化的更新规则，则得到了累积误差逆传播算法（accumulated error backpropagation），即每次读取全部的数据集一遍，进行一轮学习，从而基于当前的累积误差进行权值调整，因此参数更新的频率相比标准BP算法低了很多，但在很多任务中，尤其是在数据量很大的时候，往往标准BP算法会获得较好的结果。另外对于如何设置隐层神经元个数的问题，至今仍然没有好的解决方案，常使用“试错法”进行调整。</p>
+<p>前面提到，BP神经网络强大的学习能力常常容易造成过拟合问题，有以下两种策略来缓解BP网络的过拟合问题：</p>
+<ul>
+<li>早停：将数据分为训练集与测试集，训练集用于学习，测试集用于评估性能，若在训练过程中，训练集的累积误差降低，而测试集的累积误差升高，则停止训练。</li>
+<li>引入正则化（regularization）：基本思想是在累积误差函数中增加一个用于描述网络复杂度的部分，例如所有权值与阈值的平方和，其中λ∈（0,1）用于对累积经验误差与网络复杂度这两项进行折中，常通过交叉验证法来估计。</li>
+</ul>
+<p><img src="https://i.loli.net/2018/10/17/5bc72ce227ff1.png" alt="12.png"></p>
+<p>##<strong>5.4 全局最小与局部最小</strong></p>
+<p>模型学习的过程实质上就是一个寻找最优参数的过程，例如BP算法试图通过最速下降来寻找使得累积经验误差最小的权值与阈值，在谈到最优时，一般会提到局部极小（local minimum）和全局最小（global minimum）。</p>
+<pre><code>* 局部极小解：参数空间中的某个点，其邻域点的误差函数值均不小于该点的误差函数值。
+* 全局最小解：参数空间中的某个点，所有其他点的误差函数值均不小于该点的误差函数值。
+</code></pre>
+<p><img src="https://i.loli.net/2018/10/17/5bc72ce2803dc.png" alt="13.png"></p>
+<p>要成为局部极小点，只要满足该点在参数空间中的梯度为零。局部极小可以有多个，而全局最小只有一个。全局最小一定是局部极小，但局部最小却不一定是全局最小。显然在很多机器学习算法中，都试图找到目标函数的全局最小。梯度下降法的主要思想就是沿着负梯度方向去搜索最优解，负梯度方向是函数值下降最快的方向，若迭代到某处的梯度为0，则表示达到一个局部最小，参数更新停止。因此在现实任务中，通常使用以下策略尽可能地去接近全局最小。</p>
+<pre><code>* 以多组不同参数值初始化多个神经网络，按标准方法训练，迭代停止后，取其中误差最小的解作为最终参数。
+* 使用“模拟退火”技术，这里不做具体介绍。
+* 使用随机梯度下降，即在计算梯度时加入了随机因素，使得在局部最小时，计算的梯度仍可能不为0，从而迭代可以继续进行。
+</code></pre>
+<p>##<strong>5.5 深度学习</strong></p>
+<p>理论上，参数越多，模型复杂度就越高，容量（capability）就越大，从而能完成更复杂的学习任务。深度学习（deep learning）正是一种极其复杂而强大的模型。</p>
+<p>怎么增大模型复杂度呢？两个办法，一是增加隐层的数目，二是增加隐层神经元的数目。前者更有效一些，因为它不仅增加了功能神经元的数量，还增加了激活函数嵌套的层数。但是对于多隐层神经网络，经典算法如标准BP算法往往会在误差逆传播时发散（diverge），无法收敛达到稳定状态。</p>
+<p>那要怎么有效地训练多隐层神经网络呢？一般来说有以下两种方法：</p>
+<ul>
+<li><p>无监督逐层训练（unsupervised layer-wise training）：每次训练一层隐节点，把上一层隐节点的输出当作输入来训练，本层隐结点训练好后，输出再作为下一层的输入来训练，这称为预训练（pre-training）。全部预训练完成后，再对整个网络进行微调（fine-tuning）训练。一个典型例子就是深度信念网络（deep belief network，简称DBN）。这种做法其实可以视为把大量的参数进行分组，先找出每组较好的设置，再基于这些局部最优的结果来训练全局最优。</p>
+</li>
+<li><p>权共享（weight sharing）：令同一层神经元使用完全相同的连接权，典型的例子是卷积神经网络（Convolutional Neural Network，简称CNN）。这样做可以大大减少需要训练的参数数目。</p>
+</li>
+</ul>
+<p><img src="https://i.loli.net/2018/10/17/5bc72ce28d756.png" alt="14.png"></p>
+<p>深度学习可以理解为一种特征学习（feature learning）或者表示学习（representation learning），无论是DBN还是CNN，都是通过多个隐层来把与输出目标联系不大的初始输入转化为与输出目标更加密切的表示，使原来只通过单层映射难以完成的任务变为可能。即通过多层处理，逐渐将初始的“低层”特征表示转化为“高层”特征表示，从而使得最后可以用简单的模型来完成复杂的学习任务。</p>
+<p>传统任务中，样本的特征需要人类专家来设计，这称为特征工程（feature engineering）。特征好坏对泛化性能有至关重要的影响。而深度学习为全自动数据分析带来了可能，可以自动产生更好的特征。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
+  id="post-MachineLearning/Machine-learning-learning-notes-master/周志华《Machine Learning》学习笔记(16)--概率图模型"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+     
+    <div class="article-meta">
+      <a href="/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(16)--%E6%A6%82%E7%8E%87%E5%9B%BE%E6%A8%A1%E5%9E%8B/" class="article-date">
+  <time datetime="2023-06-21T07:42:41.513Z" itemprop="datePublished">2023-06-21</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>上篇主要介绍了半监督学习，首先从如何利用未标记样本所蕴含的分布信息出发，引入了半监督学习的基本概念，即训练数据同时包含有标记样本和未标记样本的学习方法；接着分别介绍了几种常见的半监督学习方法：生成式方法基于对数据分布的假设，利用未标记样本隐含的分布信息，使得对模型参数的估计更加准确；TSVM给未标记样本赋予伪标记，并通过不断调整易出错样本的标记得到最终输出；基于分歧的方法结合了集成学习的思想，通过多个学习器在不同视图上的协作，有效利用了未标记样本数据 ；最后半监督聚类则是借助已有的监督信息来辅助聚类的过程，带约束k-均值算法需检测当前样本划分是否满足约束关系，带标记k-均值算法则利用有标记样本指定初始类中心。本篇将讨论一种基于图的学习算法–概率图模型。</p>
+<p>#<strong>15、概率图模型</strong></p>
+<p>现在再来谈谈机器学习的核心价值观，可以更通俗地理解为：<strong>根据一些已观察到的证据来推断未知</strong>，更具哲学性地可以阐述为：未来的发展总是遵循着历史的规律。其中<strong>基于概率的模型将学习任务归结为计算变量的概率分布</strong>，正如之前已经提到的：生成式模型先对联合分布进行建模，从而再来求解后验概率，例如：贝叶斯分类器先对联合分布进行最大似然估计，从而便可以计算类条件概率；判别式模型则是直接对条件分布进行建模。</p>
+<p><strong>概率图模型</strong>（probabilistic graphical model）是一类用<strong>图结构</strong>来表达各属性之间相关关系的概率模型，一般而言：<strong>图中的一个结点表示一个或一组随机变量，结点之间的边则表示变量间的相关关系</strong>，从而形成了一张“<strong>变量关系图</strong>”。若使用有向的边来表达变量之间的依赖关系，这样的有向关系图称为<strong>贝叶斯网</strong>（Bayesian nerwork）或有向图模型；若使用无向边，则称为<strong>马尔可夫网</strong>（Markov network）或无向图模型。</p>
+<p>##<strong>15.1 隐马尔可夫模型(HMM)</strong></p>
+<p>隐马尔可夫模型（Hidden Markov Model，简称HMM）是结构最简单的一种贝叶斯网，在语音识别与自然语言处理领域上有着广泛的应用。HMM中的变量分为两组：<strong>状态变量</strong>与<strong>观测变量</strong>，其中状态变量一般是未知的，因此又称为“<strong>隐变量</strong>”，观测变量则是已知的输出值。在隐马尔可夫模型中，变量之间的依赖关系遵循如下两个规则：</p>
 <blockquote>
-<p><a href="mailto:&#98;&#x6c;&#x6f;&#x67;&#x2d;&#x76;&#50;&#64;&#48;&#x2e;&#x31;&#x2e;&#48;">&#98;&#x6c;&#x6f;&#x67;&#x2d;&#x76;&#50;&#64;&#48;&#x2e;&#x31;&#x2e;&#48;</a> dev<br>next dev -p 3002</p>
+<p><strong>1. 观测变量的取值仅依赖于状态变量</strong>；<br><strong>2. 下一个状态的取值仅依赖于当前状态</strong>，通俗来讲：<strong>现在决定未来，未来与过去无关</strong>，这就是著名的<strong>马尔可夫性</strong>。</p>
 </blockquote>
-<ol start="2">
-<li></li>
-</ol>
-<p>更改about页面</p>
-<p><img src="/./../%E5%85%B6%E5%AE%83/markdown-img/github%E4%BD%BF%E7%94%A8.assets/image-20230430144640393.png" alt="image-20230430144640393"></p>
-<p>github仓库自动部署用网站</p>
-<p><a target="_blank" rel="noopener" href="https://app.netlify.com/">https://app.netlify.com/</a></p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwYPmR.png" alt="iwYPmR.png"></p>
+<p>基于上述变量之间的依赖关系，我们很容易写出隐马尔可夫模型中所有变量的联合概率分布：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwY9X9.png" alt="iwY9X9.png"></p>
+<p>易知：<strong>欲确定一个HMM模型需要以下三组参数</strong>：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwYi01.png" alt="iwYi01.png"></p>
+<p>当确定了一个HMM模型的三个参数后，便按照下面的规则来生成观测值序列：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwYFTx.png" alt="iwYFTx.png"></p>
+<p>在实际应用中，HMM模型的发力点主要体现在下述三个问题上：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwYEtK.png" alt="iwYEtK.png"></p>
+<p>###<strong>15.1.1 HMM评估问题</strong></p>
+<p>HMM评估问题指的是：<strong>给定了模型的三个参数与观测值序列，求该观测值序列出现的概率</strong>。例如：对于赌场问题，便可以依据骰子掷出的结果序列来计算该结果序列出现的可能性，若小概率的事件发生了则可认为赌场的骰子有作弊的可能。解决该问题使用的是<strong>前向算法</strong>，即步步为营，自底向上的方式逐步增加序列的长度，直到获得目标概率值。在前向算法中，定义了一个<strong>前向变量</strong>，即给定观察值序列且t时刻的状态为Si的概率：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwYVfO.png" alt="iwYVfO.png"></p>
+<p>基于前向变量，很容易得到该问题的递推关系及终止条件：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwYAk6.png" alt="iwYAk6.png"></p>
+<p>因此可使用动态规划法，从最小的子问题开始，通过填表格的形式一步一步计算出目标结果。</p>
+<p>###<strong>15.1.2 HMM解码问题</strong></p>
+<p>HMM解码问题指的是：<strong>给定了模型的三个参数与观测值序列，求可能性最大的状态序列</strong>。例如：在语音识别问题中，人说话形成的数字信号对应着观测值序列，对应的具体文字则是状态序列，从数字信号转化为文字正是对应着根据观测值序列推断最有可能的状态值序列。解决该问题使用的是<strong>Viterbi算法</strong>，与前向算法十分类似地，Viterbi算法定义了一个<strong>Viterbi变量</strong>，也是采用动态规划的方法，自底向上逐步求解。</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwYepD.png" alt="iwYepD.png"></p>
+<p>###<strong>15.1.3 HMM学习问题</strong></p>
+<p>HMM学习问题指的是：<strong>给定观测值序列，如何调整模型的参数使得该序列出现的概率最大</strong>。这便转化成了机器学习问题，即从给定的观测值序列中学习出一个HMM模型，<strong>该问题正是EM算法的经典案例之一</strong>。其思想也十分简单：对于给定的观测值序列，如果我们能够按照该序列潜在的规律来调整模型的三个参数，则可以使得该序列出现的可能性最大。假设状态值序列也已知，则很容易计算出与该序列最契合的模型参数：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwYm1e.png" alt="iwYm1e.png"></p>
+<p>但一般状态值序列都是不可观测的，且<strong>即使给定观测值序列与模型参数，状态序列仍然遭遇组合爆炸</strong>。因此上面这种简单的统计方法就行不通了，若将状态值序列看作为隐变量，这时便可以考虑使用EM算法来对该问题进行求解：</p>
+<p>【1】首先对HMM模型的三个参数进行随机初始化；<br>【2】根据模型的参数与观测值序列，计算t时刻状态为i且t+1时刻状态为j的概率以及t时刻状态为i的概率。</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwYn6H.png" alt="iwYn6H.png"><br><img src="https://s1.ax1x.com/2018/10/18/iwYdns.png" alt="iwYdns.png"></p>
+<p>【3】接着便可以对模型的三个参数进行重新估计：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwYY9S.png" alt="iwYY9S.png"></p>
+<p>【4】重复步骤2-3，直至三个参数值收敛，便得到了最终的HMM模型。</p>
+<p>##<strong>15.2 马尔可夫随机场（MRF）</strong></p>
+<p>马尔可夫随机场（Markov Random Field）是一种典型的马尔可夫网，即使用无向边来表达变量间的依赖关系。在马尔可夫随机场中，对于关系图中的一个子集，<strong>若任意两结点间都有边连接，则称该子集为一个团；若再加一个结点便不能形成团，则称该子集为极大团</strong>。MRF使用<strong>势函数</strong>来定义多个变量的概率分布函数，其中<strong>每个（极大）团对应一个势函数</strong>，一般团中的变量关系也体现在它所对应的极大团中，因此常常基于极大团来定义变量的联合概率分布函数。具体而言，若所有变量构成的极大团的集合为C，则MRF的联合概率函数可以定义为：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwYGh8.png" alt="iwYGh8.png"></p>
+<p>对于条件独立性，<strong>马尔可夫随机场通过分离集来实现条件独立</strong>，若A结点集必须经过C结点集才能到达B结点集，则称C为分离集。书上给出了一个简单情形下的条件独立证明过程，十分贴切易懂，此处不再展开。基于分离集的概念，得到了MRF的三个性质：</p>
+<blockquote>
+<p><strong>全局马尔可夫性</strong>：给定两个变量子集的分离集，则这两个变量子集条件独立。<br><strong>局部马尔可夫性</strong>：给定某变量的邻接变量，则该变量与其它变量条件独立。<br><strong>成对马尔可夫性</strong>：给定所有其他变量，两个非邻接变量条件独立。</p>
+</blockquote>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwY07q.png" alt="iwY07q.png"></p>
+<p>对于MRF中的势函数，势函数主要用于描述团中变量之间的相关关系，且要求为非负函数，直观来看：势函数需要在偏好的变量取值上函数值较大，例如：若x1与x2成正相关，则需要将这种关系反映在势函数的函数值中。一般我们常使用指数函数来定义势函数：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwY8tf.png" alt="iwY8tf.png"></p>
+<p>##<strong>15.3 条件随机场（CRF）</strong></p>
+<p>前面所讲到的<strong>隐马尔可夫模型和马尔可夫随机场都属于生成式模型，即对联合概率进行建模，条件随机场则是对条件分布进行建模</strong>。CRF试图在给定观测值序列后，对状态序列的概率分布进行建模，即P(y | x)。直观上看：CRF与HMM的解码问题十分类似，都是在给定观测值序列后，研究状态序列可能的取值。CRF可以有多种结构，只需保证状态序列满足马尔可夫性即可，一般我们常使用的是<strong>链式条件随机场</strong>：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwYt1g.png" alt="iwYt1g.png"></p>
+<p>与马尔可夫随机场定义联合概率类似地，CRF也通过团以及势函数的概念来定义条件概率P(y | x)。在给定观测值序列的条件下，链式条件随机场主要包含两种团结构：单个状态团及相邻状态团，通过引入两类特征函数便可以定义出目标条件概率：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwYNcQ.png" alt="iwYNcQ.png"></p>
+<p>以词性标注为例，如何判断给出的一个标注序列靠谱不靠谱呢？<strong>转移特征函数主要判定两个相邻的标注是否合理</strong>，例如：动词+动词显然语法不通；<strong>状态特征函数则判定观测值与对应的标注是否合理</strong>，例如： ly结尾的词–&gt;副词较合理。因此我们可以定义一个特征函数集合，用这个特征函数集合来为一个标注序列打分，并据此选出最靠谱的标注序列。也就是说，每一个特征函数（对应一种规则）都可以用来为一个标注序列评分，把集合中所有特征函数对同一个标注序列的评分综合起来，就是这个标注序列最终的评分值。可以看出：<strong>特征函数是一些经验的特性</strong>。</p>
+<p>##<strong>15.4 学习与推断</strong></p>
+<p>对于生成式模型，通常我们都是先对变量的联合概率分布进行建模，接着再求出目标变量的<strong>边际分布</strong>（marginal distribution），那如何从联合概率得到边际分布呢？这便是学习与推断。下面主要介绍两种精确推断的方法：<strong>变量消去</strong>与<strong>信念传播</strong>。</p>
+<p>###<strong>15.4.1 变量消去</strong></p>
+<p>变量消去利用条件独立性来消减计算目标概率值所需的计算量，它通过运用<strong>乘法与加法的分配率</strong>，将对变量的积的求和问题转化为对部分变量交替进行求积与求和的问题，从而将每次的<strong>运算控制在局部</strong>，达到简化运算的目的。</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwYUXj.png" alt="iwYUXj.png"><br><img src="https://s1.ax1x.com/2018/10/18/iwYwBn.png" alt="iwYwBn.png"></p>
+<p>###<strong>15.4.2 信念传播</strong></p>
+<p>若将变量求和操作看作是一种消息的传递过程，信念传播可以理解成：<strong>一个节点在接收到所有其它节点的消息后才向另一个节点发送消息</strong>，同时当前节点的边际概率正比于他所接收的消息的乘积：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwYDA0.png" alt="iwYDA0.png"></p>
+<p>因此只需要经过下面两个步骤，便可以完成所有的消息传递过程。利用动态规划法的思想记录传递过程中的所有消息，当计算某个结点的边际概率分布时，只需直接取出传到该结点的消息即可，从而避免了计算多个边际分布时的冗余计算问题。</p>
+<blockquote>
+<p>1.指定一个根节点，从所有的叶节点开始向根节点传递消息，直到根节点收到所有邻接结点的消息<strong>（从叶到根）</strong>；<br>2.从根节点开始向叶节点传递消息，直到所有叶节点均收到消息<strong>（从根到叶）</strong>。</p>
+</blockquote>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwYgc4.png" alt="iwYgc4.png"></p>
+<p>##<strong>15.5 LDA话题模型</strong></p>
+<p>话题模型主要用于处理文本类数据，其中<strong>隐狄利克雷分配模型</strong>（Latent Dirichlet Allocation，简称LDA）是话题模型的杰出代表。在话题模型中，有以下几个基本概念：词（word）、文档（document）、话题（topic）。</p>
+<blockquote>
+<p><strong>词</strong>：最基本的离散单元；<br><strong>文档</strong>：由一组词组成，词在文档中不计顺序；<br><strong>话题</strong>：由一组特定的词组成，这组词具有较强的相关关系。</p>
+</blockquote>
+<p>在现实任务中，一般我们可以得出一个文档的词频分布，但不知道该文档对应着哪些话题，LDA话题模型正是为了解决这个问题。具体来说：<strong>LDA认为每篇文档包含多个话题，且其中每一个词都对应着一个话题</strong>。因此可以假设文档是通过如下方式生成：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwY2jJ.png" alt="iwY2jJ.png"></p>
+<p>这样一个文档中的所有词都可以认为是通过话题模型来生成的，当已知一个文档的词频分布后（即一个N维向量，N为词库大小），则可以认为：<strong>每一个词频元素都对应着一个话题，而话题对应的词频分布则影响着该词频元素的大小</strong>。因此很容易写出LDA模型对应的联合概率函数：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwYc3F.png" alt="iwYc3F.png"><br><img src="https://s1.ax1x.com/2018/10/18/iwYWu9.png" alt="iwYWu9.png"></p>
+<p>从上图可以看出，LDA的三个表示层被三种颜色表示出来：</p>
+<blockquote>
+<p><strong>corpus-level（红色）：</strong> α和β表示语料级别的参数，也就是每个文档都一样，因此生成过程只采样一次。<br><strong>document-level（橙色）：</strong> θ是文档级别的变量，每个文档对应一个θ。<br><strong>word-level（绿色）：</strong> z和w都是单词级别变量，z由θ生成，w由z和β共同生成，一个单词w对应一个主题z。</p>
+</blockquote>
+<p>通过上面对LDA生成模型的讨论，可以知道<strong>LDA模型主要是想从给定的输入语料中学习训练出两个控制参数α和β</strong>，当学习出了这两个控制参数就确定了模型，便可以用来生成文档。其中α和β分别对应以下各个信息：</p>
+<blockquote>
+<p><strong>α</strong>：分布p(θ)需要一个向量参数，即Dirichlet分布的参数，用于生成一个主题θ向量；<br><strong>β</strong>：各个主题对应的单词概率分布矩阵p(w|z)。</p>
+</blockquote>
+<p>把w当做观察变量，θ和z当做隐藏变量，就可以通过EM算法学习出α和β，求解过程中遇到后验概率p(θ,z|w)无法直接求解，需要找一个似然函数下界来近似求解，原作者使用基于分解（factorization）假设的变分法（varialtional inference）进行计算，用到了EM算法。每次E-step输入α和β，计算似然函数，M-step最大化这个似然函数，算出α和β，不断迭代直到收敛。</p>
+<p>在此，概率图模型就介绍完毕。上周受到协同训练的启发，让实验的小伙伴做了一个HMM的slides，结果扩充了好多知识，所以完成这篇笔记还是花费了不少功夫，还刚好赶上实验室没空调回到解放前的日子，可谓汗流之作…</p>
  
       <!-- reward -->
       
@@ -388,7 +520,7 @@
 
     
     <article
-  id="post-前端学习笔记/JS/VSCode代码/String练习"
+  id="post-MachineLearning/Machine-learning-learning-notes-master/周志华《Machine Learning》学习笔记(17)--强化学习"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -397,59 +529,93 @@
   <div class="article-inner">
      
     <div class="article-meta">
-      <a href="/2023/04/25/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/String%E7%BB%83%E4%B9%A0/" class="article-date">
-  <time datetime="2023-04-25T05:41:32.060Z" itemprop="datePublished">2023-04-25</time>
+      <a href="/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(17)--%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/" class="article-date">
+  <time datetime="2023-06-21T07:42:41.513Z" itemprop="datePublished">2023-06-21</time>
 </a>    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  let str = 'Hello World';
-
-//1.访问单个字符：charAt访问法||方括号访问法
-console.log('1.访问单个字符：charAt访问法||方括号访问法');
-console.log('charAt访问法 ' + str.charAt(0));
-console.log('方括号访问法 ' + str[0]);
-console.log('由于方括号表示法不可修改该字符,否则会报错' + str);
-//str[0] = 'c';
-//str[0] = '';
-
-//2.标记变量（es6）
-console.log('2.标记变量（es6）');
-let a = 'a',
-  b = 'b';
-console.log(
-  '${}号使得' +
-    `${a} 不用加号就能连接 ${b}  ，易错点：用的是反单引号，不是单引号`
-);
-
-//3.比较字符串：><=
-console.log('3.比较字符串：><=');
-if (a < b) {
-  console.log(`${a} < ${b}`);
-}
-
-//4.at()
-var str4 = str;
-console.log('4. ' + str4.at(1));
-
-//5.includes()
-var str5 = str;
-console.log('5. ' + str5.includes('he'));
-
-//6.concat()
-var str6 = str;
-console.log('6. ' + str6.concat(' ', 'hi', ' ', 'there'));
-
-//7.lastIndexOf()
-var str7 = str;
-console.log('7. ' + str7 + '最后一个l的下标是' + str7.lastIndexOf('l'));
-
-//8.slice()切片
-var str8 = str;
-console.log('8. ' + str8.slice(0, 9));
-
-//9.split()拆分
+  <p>上篇主要介绍了概率图模型，首先从生成式模型与判别式模型的定义出发，引出了概率图模型的基本概念，即利用图结构来表达变量之间的依赖关系；接着分别介绍了隐马尔可夫模型、马尔可夫随机场、条件随机场、精确推断方法以及LDA话题模型：HMM主要围绕着评估&#x2F;解码&#x2F;学习这三个实际问题展开论述；MRF基于团和势函数的概念来定义联合概率分布；CRF引入两种特征函数对状态序列进行评价打分；变量消去与信念传播在给定联合概率分布后计算特定变量的边际分布；LDA话题模型则试图去推断给定文档所蕴含的话题分布。本篇将介绍最后一种学习算法–强化学习。</p>
+<p>#<strong>16、强化学习</strong></p>
+<p><strong>强化学习</strong>（Reinforcement Learning，简称<strong>RL</strong>）是机器学习的一个重要分支，前段时间人机大战的主角AlphaGo正是以强化学习为核心技术。在强化学习中，包含两种基本的元素：<strong>状态</strong>与<strong>动作</strong>，<strong>在某个状态下执行某种动作，这便是一种策略</strong>，学习器要做的就是通过不断地探索学习，从而获得一个好的策略。例如：在围棋中，一种落棋的局面就是一种状态，若能知道每种局面下的最优落子动作，那就攻无不克&#x2F;百战不殆了~</p>
+<p>若将状态看作为属性，动作看作为标记，易知：<strong>监督学习和强化学习都是在试图寻找一个映射，从已知属性&#x2F;状态推断出标记&#x2F;动作</strong>，这样强化学习中的策略相当于监督学习中的分类&#x2F;回归器。但在实际问题中，<strong>强化学习并没有监督学习那样的标记信息</strong>，通常都是在<strong>尝试动作后才能获得结果</strong>，因此强化学习是通过反馈的结果信息不断调整之前的策略，从而算法能够学习到：在什么样的状态下选择什么样的动作可以获得最好的结果。</p>
+<p>##<strong>16.1 基本要素</strong></p>
+<p>强化学习任务通常使用<strong>马尔可夫决策过程</strong>（Markov Decision Process，简称<strong>MDP</strong>）来描述，具体而言：机器处在一个环境中，每个状态为机器对当前环境的感知；机器只能通过动作来影响环境，当机器执行一个动作后，会使得环境按某种概率转移到另一个状态；同时，环境会根据潜在的奖赏函数反馈给机器一个奖赏。综合而言，强化学习主要包含四个要素：状态、动作、转移概率以及奖赏函数。</p>
+<blockquote>
+<p><strong>状态（X）</strong>：机器对环境的感知，所有可能的状态称为状态空间；<br><strong>动作（A）</strong>：机器所采取的动作，所有能采取的动作构成动作空间；<br><strong>转移概率（P）</strong>：当执行某个动作后，当前状态会以某种概率转移到另一个状态；<br><strong>奖赏函数（R）</strong>：在状态转移的同时，环境给反馈给机器一个奖赏。</p>
+</blockquote>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwYOud.png" alt="iwYOud.png"></p>
+<p>因此，<strong>强化学习的主要任务就是通过在环境中不断地尝试，根据尝试获得的反馈信息调整策略，最终生成一个较好的策略π，机器根据这个策略便能知道在什么状态下应该执行什么动作</strong>。常见的策略表示方法有以下两种：</p>
+<blockquote>
+<p><strong>确定性策略</strong>：π（x）&#x3D;a，即在状态x下执行a动作；<br><strong>随机性策略</strong>：P&#x3D;π（x,a），即在状态x下执行a动作的概率。</p>
+</blockquote>
+<p><strong>一个策略的优劣取决于长期执行这一策略后的累积奖赏</strong>，换句话说：可以使用累积奖赏来评估策略的好坏，最优策略则表示在初始状态下一直执行该策略后，最后的累积奖赏值最高。长期累积奖赏通常使用下述两种计算方法：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwYH3D.png" alt="iwYH3D.png"></p>
+<p>##<strong>16.2 K摇摆赌博机</strong></p>
+<p>首先我们考虑强化学习最简单的情形：仅考虑一步操作，即在状态x下只需执行一次动作a便能观察到奖赏结果。易知：欲最大化单步奖赏，我们需要知道每个动作带来的期望奖赏值，这样便能选择奖赏值最大的动作来执行。若每个动作的奖赏值为确定值，则只需要将每个动作尝试一遍即可，但大多数情形下，一个动作的奖赏值来源于一个概率分布，因此需要进行多次的尝试。</p>
+<p>单步强化学习实质上是<strong>K-摇臂赌博机</strong>（K-armed bandit）的原型，一般我们<strong>尝试动作的次数是有限的</strong>，那如何利用有限的次数进行有效地探索呢？这里有两种基本的想法：</p>
+<blockquote>
+<p><strong>仅探索法</strong>：将尝试的机会平均分给每一个动作，即轮流执行，最终将每个动作的平均奖赏作为期望奖赏的近似值。<br><strong>仅利用法</strong>：将尝试的机会分给当前平均奖赏值最大的动作，隐含着让一部分人先富起来的思想。</p>
+</blockquote>
+<p>可以看出：上述<strong>两种方法是相互矛盾的</strong>，仅探索法能较好地估算每个动作的期望奖赏，但是没能根据当前的反馈结果调整尝试策略；仅利用法在每次尝试之后都更新尝试策略，符合强化学习的思（tao）维（lu），但容易找不到最优动作。因此需要在这两者之间进行折中。</p>
+<p>###<strong>16.2.1 ε-贪心</strong></p>
+<p><strong>ε-贪心法基于一个概率来对探索和利用进行折中</strong>，具体而言：在每次尝试时，以ε的概率进行探索，即以均匀概率随机选择一个动作；以1-ε的概率进行利用，即选择当前最优的动作。ε-贪心法只需记录每个动作的当前平均奖赏值与被选中的次数，便可以增量式更新。</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwYzUP.png" alt="iwYzUP.png"></p>
+<p>###<strong>16.2.2 Softmax</strong></p>
+<p><strong>Softmax算法则基于当前每个动作的平均奖赏值来对探索和利用进行折中，Softmax函数将一组值转化为一组概率</strong>，值越大对应的概率也越高，因此当前平均奖赏值越高的动作被选中的几率也越大。Softmax函数如下所示：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwYbge.png" alt="iwYbge.png"><br><img src="https://s1.ax1x.com/2018/10/18/iwYqjH.png" alt="iwYqjH.png"></p>
+<p>##<strong>16.3 有模型学习</strong></p>
+<p>若学习任务中的四个要素都已知，即状态空间、动作空间、转移概率以及奖赏函数都已经给出，这样的情形称为“<strong>有模型学习</strong>”。假设状态空间和动作空间均为有限，即均为离散值，这样我们不用通过尝试便可以对某个策略进行评估。</p>
+<p>###<strong>16.3.1 策略评估</strong></p>
+<p>前面提到：<strong>在模型已知的前提下，我们可以对任意策略的进行评估</strong>（后续会给出演算过程）。一般常使用以下两种值函数来评估某个策略的优劣：</p>
+<blockquote>
+<p><strong>状态值函数（V）</strong>：V（x），即从状态x出发，使用π策略所带来的累积奖赏；<br><strong>状态-动作值函数（Q）</strong>：Q（x,a），即从状态x出发，执行动作a后再使用π策略所带来的累积奖赏。</p>
+</blockquote>
+<p>根据累积奖赏的定义，我们可以引入T步累积奖赏与r折扣累积奖赏：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwYjHI.png" alt="iwYjHI.png"><br><img src="https://s1.ax1x.com/2018/10/18/iwYXDA.png" alt="iwYXDA.png"></p>
+<p>由于MDP具有马尔可夫性，即现在决定未来，将来和过去无关，我们很容易找到值函数的递归关系：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwtS4f.png" alt="iwtS4f.png"></p>
+<p>类似地，对于r折扣累积奖赏可以得到：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwYxEt.png" alt="iwYxEt.png"></p>
+<p>易知：<strong>当模型已知时，策略的评估问题转化为一种动态规划问题</strong>，即以填表格的形式自底向上，先求解每个状态的单步累积奖赏，再求解每个状态的两步累积奖赏，一直迭代逐步求解出每个状态的T步累积奖赏。算法流程如下所示：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwt9C8.png" alt="iwt9C8.png"></p>
+<p>对于状态-动作值函数，只需通过简单的转化便可得到：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwt3r9.png" alt="iwt3r9.png"></p>
+<p>###<strong>16.3.2 策略改进</strong></p>
+<p>理想的策略应能使得每个状态的累积奖赏之和最大，简单来理解就是：不管处于什么状态，只要通过该策略执行动作，总能得到较好的结果。因此对于给定的某个策略，我们需要对其进行改进，从而得到<strong>最优的值函数</strong>。</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwtm5V.png" alt="iwtm5V.png"><br><img src="https://s1.ax1x.com/2018/10/18/iwtZEq.png" alt="iwtZEq.png"></p>
+<p>最优Bellman等式改进策略的方式为：<strong>将策略选择的动作改为当前最优的动作</strong>，而不是像之前那样对每种可能的动作进行求和。易知：选择当前最优动作相当于将所有的概率都赋给累积奖赏值最大的动作，因此每次改进都会使得值函数单调递增。</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwtEbn.png" alt="iwtEbn.png"></p>
+<p>将策略评估与策略改进结合起来，我们便得到了生成最优策略的方法：先给定一个随机策略，现对该策略进行评估，然后再改进，接着再评估&#x2F;改进一直到策略收敛、不再发生改变。这便是策略迭代算法，算法流程如下所示：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwteU0.png" alt="iwteU0.png"></p>
+<p>可以看出：策略迭代法在每次改进策略后都要对策略进行重新评估，因此比较耗时。若从最优化值函数的角度出发，即先迭代得到最优的值函数，再来计算如何改变策略，这便是值迭代算法，算法流程如下所示：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwtuCT.png" alt="iwtuCT.png"></p>
+<p>##<strong>16.4 蒙特卡罗强化学习</strong></p>
+<p>在现实的强化学习任务中，<strong>环境的转移函数与奖赏函数往往很难得知</strong>，因此我们需要考虑在不依赖于环境参数的条件下建立强化学习模型，这便是<strong>免模型学习</strong>。蒙特卡罗强化学习便是其中的一种经典方法。</p>
+<p>由于模型参数未知，状态值函数不能像之前那样进行全概率展开，从而运用动态规划法求解。一种直接的方法便是通过采样来对策略进行评估&#x2F;估算其值函数，<strong>蒙特卡罗强化学习正是基于采样来估计状态-动作值函数</strong>：对采样轨迹中的每一对状态-动作，记录其后的奖赏值之和，作为该状态-动作的一次累积奖赏，通过多次采样后，使用累积奖赏的平均作为状态-动作值的估计，并<strong>引入ε-贪心策略保证采样的多样性</strong>。</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwt1KJ.png" alt="iwt1KJ.png"></p>
+<p>在上面的算法流程中，被评估和被改进的都是同一个策略，因此称为<strong>同策略蒙特卡罗强化学习算法</strong>。引入ε-贪心仅是为了便于采样评估，而在使用策略时并不需要ε-贪心，那能否仅在评估时使用ε-贪心策略，而在改进时使用原始策略呢？这便是<strong>异策略蒙特卡罗强化学习算法</strong>。</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwtK8U.png" alt="iwtK8U.png"></p>
+<p>##<strong>16.5 AlphaGo原理浅析</strong></p>
+<p>本篇一开始便提到强化学习是AlphaGo的核心技术之一，刚好借着这个东风将AlphaGo的工作原理了解一番。正如人类下棋那般“<strong>手下一步棋，心想三步棋</strong>”，Alphago也正是这个思想，<strong>当处于一个状态时，机器会暗地里进行多次的尝试&#x2F;采样，并基于反馈回来的结果信息改进估值函数，从而最终通过增强版的估值函数来选择最优的落子动作。</strong></p>
+<p>其中便涉及到了三个主要的问题：<strong>（1）如何确定估值函数（2）如何进行采样（3）如何基于反馈信息改进估值函数</strong>，这正对应着AlphaGo的三大核心模块：<strong>深度学习</strong>、<strong>蒙特卡罗搜索树</strong>、<strong>强化学习</strong>。</p>
+<blockquote>
+<p><strong>1.深度学习（拟合估值函数）</strong></p>
+</blockquote>
+<p>由于围棋的状态空间巨大，像蒙特卡罗强化学习那样通过采样来确定值函数就行不通了。在围棋中，<strong>状态值函数可以看作为一种局面函数，状态-动作值函数可以看作一种策略函数</strong>，若我们能获得这两个估值函数，便可以根据这两个函数来完成：(1)衡量当前局面的价值；(2)选择当前最优的动作。那如何精确地估计这两个估值函数呢？<strong>这就用到了深度学习，通过大量的对弈数据自动学习出特征，从而拟合出估值函数。</strong></p>
+<blockquote>
+<p><strong>2.蒙特卡罗搜索树（采样）</strong></p>
+</blockquote>
+<p>蒙特卡罗树是一种经典的搜索框架，它通过反复地采样模拟对局来探索状态空间。具体表现在：从当前状态开始，利用策略函数尽可能选择当前最优的动作，同时也引入随机性来减小估值错误带来的负面影响，从而模拟棋局运行，使得棋盘达到终局或一定步数后停止。</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwtM2F.png" alt="iwtM2F.png"></p>
+<blockquote>
+<p><strong>3.强化学习（调整估值函数）</strong></p>
+</blockquote>
+<p>在使用蒙特卡罗搜索树进行多次采样后，每次采样都会反馈后续的局面信息（利用局面函数进行评价），根据反馈回来的结果信息自动调整两个估值函数的参数，这便是强化学习的核心思想，最后基于改进后的策略函数选择出当前最优的落子动作。</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwtQv4.png" alt="iwtQv4.png"></p>
+<p>在此，强化学习就介绍完毕。同时也意味着大口小口地啃完了这个西瓜，十分记得去年双11之后立下这个Flag，现在回想起来，大半年的时间里在嚼瓜上还是花费了不少功夫。有人说：当你阐述的能让别人看懂才算是真的理解，有人说：在写的过程中能发现那些只看书发现不了的东西，自己最初的想法十分简单：当健忘症发作的时候，如果能看到之前按照自己思路写下的文字，回忆便会汹涌澎湃一些~</p>
+<p>最后，感谢自己这大半年以来的坚持~Get busy living, or get busy dying!</p>
  
       <!-- reward -->
       
@@ -470,7 +636,7 @@ console.log('8. ' + str8.slice(0, 9));
 
     
     <article
-  id="post-前端学习笔记/【【【【【疑问解答】】】】】/JS/两道题/02-obj-hash"
+  id="post-MachineLearning/Machine-learning-learning-notes-master/周志华《Machine Learning》学习笔记(15)--半监督学习"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -479,116 +645,52 @@ console.log('8. ' + str8.slice(0, 9));
   <div class="article-inner">
      
     <div class="article-meta">
-      <a href="/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/02-obj-hash/" class="article-date">
-  <time datetime="2023-04-24T06:29:33.635Z" itemprop="datePublished">2023-04-24</time>
+      <a href="/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(15)--%E5%8D%8A%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/" class="article-date">
+  <time datetime="2023-06-21T07:42:41.511Z" itemprop="datePublished">2023-06-21</time>
 </a>    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  // 给定一个整数数组，除了一个数字之外，其余的数字均出现了两次。请找出这个只出现了一次的数。
-// const arr = [10, 2, 2 , 1, 0, 0, 10]
-// findSingle(arr) // 1
-
-// 思路，通过哈希表去实现（前端js没有对应的数据结构，但是我们一般可以通过Object的key-value的映射关系去实现）
-// 其中 key 代表 出现的数字,value 代表该次数出现的次数
-// 最终将对应的Object取出value为1的数字
-
-const findSingle = (list) => {
-    const hash = {}; // key为出现的数字，value为出现的次数
-    list.forEach((num) => {
-        const val = hash[num];
-        // 没有映射关系，说明该数字首次出现
-        if (!val) {
-            hash[num] = 1;
-        } else {
-            hash[num] = val +1; // 出现次数+1
-        }
-    })
-
-    // 遍历哈希表(hash),找出出现次数(value)为1的数字(key)
-    // 如果这个题目存在多个出现次数为1的数字，可以考虑将target初始化为空数组，每次找出对应的数字做push操作
-    let target;
-    for (const key in hash) {
-        // 找出出现次数为1的数据
-        if (hash[key] === 1) {
-            // target = key
-            target = Number(key)
-            // 这边有一个陷阱，key在存储时会被转成string类型，对应的数字的number类型，需要转化为Number
-        }
-    }
-        
-    return target
-}
-
-findSingle([10, 2, 2 , 1, 0, 0, 10]) 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
-    <article
-  id="post-前端学习笔记/【【【【【疑问解答】】】】】/JS/两道题/02-map-hash"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-     
-    <div class="article-meta">
-      <a href="/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/02-map-hash/" class="article-date">
-  <time datetime="2023-04-24T06:29:33.634Z" itemprop="datePublished">2023-04-24</time>
-</a>    
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  // 通过Map做映射关系
-// Map和Object的区别，Object的key需要为字符串，如果不是，会转化为字符串类型
-// Map的key可以为任意类型
-// Map使用set（写）和get（读） has(判断是否有映射关系)
-// https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map
-
-const findSingle = (list) => {
-  const hash = new Map(); // key为出现的数字，value为出现的次数
-  list.forEach((num) => {
-    const val = hash.get(num);
-    // 没有映射关系，说明该数字首次出现
-    if (!hash.has(num)) {
-      hash.set(num, 1); // 首次出现
-    } else {
-      hash.set(num, val + 1); // 出现次数+1
-    }
-  });
-
-  // hash是Map类型，是可迭代对象，可以直接使用forEach进行遍历
-  // 遍历哈希表(hash),找出出现次数(value)为1的数字(key)
-  // 如果这个题目存在多个出现次数为1的数字，可以考虑将target初始化为空数组，每次找出对应的数字做push操作
-  let target;
-  hash.forEach((value, key) => {
-    if (value === 1) {
-      target = key;
-    }
-  });
-
-  return target
-};
-
-findSingle([10, 2, 2, 1, 0, 0, 10]);
+  <p>上篇主要介绍了机器学习的理论基础，首先从独立同分布引入泛化误差与经验误差，接着介绍了PAC可学习的基本概念，即以较大的概率学习出与目标概念近似的假设（泛化误差满足预设上限），对于有限假设空间：（1）可分情形时，假设空间都是PAC可学习的，即当样本满足一定的数量之后，总是可以在与训练集一致的假设中找出目标概念的近似；（2）不可分情形时，假设空间都是不可知PAC可学习的，即以较大概率学习出与当前假设空间中泛化误差最小的假设的有效近似（Hoeffding不等式）。对于无限假设空间，通过增长函数与VC维来描述其复杂度，若学习算法满足经验风险最小化原则，则任何VC维有限的假设空间都是（不可知）PAC可学习的，同时也给出了泛化误差界与样本复杂度。稳定性则考察的是输入发生变化时输出的波动，稳定性通过损失函数与假设空间的可学习理论联系在了一起。本篇将讨论一种介于监督与非监督学习之间的学习算法–半监督学习。</p>
+<p>#<strong>14、半监督学习</strong></p>
+<p>前面我们一直围绕的都是监督学习与无监督学习，监督学习指的是训练样本包含标记信息的学习任务，例如：常见的分类与回归算法；无监督学习则是训练样本不包含标记信息的学习任务，例如：聚类算法。在实际生活中，常常会出现一部分样本有标记和较多样本无标记的情形，例如：做网页推荐时需要让用户标记出感兴趣的网页，但是少有用户愿意花时间来提供标记。若直接丢弃掉无标记样本集，使用传统的监督学习方法，常常会由于训练样本的不充足，使得其刻画总体分布的能力减弱，从而影响了学习器泛化性能。那如何利用未标记的样本数据呢？</p>
+<p>一种简单的做法是通过专家知识对这些未标记的样本进行打标，但随之而来的就是巨大的人力耗费。若我们先使用有标记的样本数据集训练出一个学习器，再基于该学习器对未标记的样本进行预测，从中<strong>挑选出不确定性高或分类置信度低的样本来咨询专家并进行打标</strong>，最后使用扩充后的训练集重新训练学习器，这样便能大幅度降低标记成本，这便是<strong>主动学习</strong>（active learning），其目标是<strong>使用尽量少的&#x2F;有价值的咨询来获得更好的性能</strong>。</p>
+<p>显然，<strong>主动学习需要与外界进行交互&#x2F;查询&#x2F;打标，其本质上仍然属于一种监督学习</strong>。事实上，无标记样本虽未包含标记信息，但它们与有标记样本一样都是从总体中独立同分布采样得到，因此<strong>它们所包含的数据分布信息对学习器的训练大有裨益</strong>。如何让学习过程不依赖外界的咨询交互，自动利用未标记样本所包含的分布信息的方法便是<strong>半监督学习</strong>（semi-supervised learning），<strong>即训练集同时包含有标记样本数据和未标记样本数据</strong>。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc856e39801d.png" alt="1.png"></p>
+<p>此外，半监督学习还可以进一步划分为<strong>纯半监督学习</strong>和<strong>直推学习</strong>，两者的区别在于：前者假定训练数据集中的未标记数据并非待预测数据，而后者假定学习过程中的未标记数据就是待预测数据。主动学习、纯半监督学习以及直推学习三者的概念如下图所示：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwJFJS.png" alt="iwJFJS.png"></p>
+<p>##<strong>14.1 生成式方法</strong></p>
+<p><strong>生成式方法</strong>（generative methods）是基于生成式模型的方法，即先对联合分布P（x,c）建模，从而进一步求解 P（c | x），<strong>此类方法假定样本数据服从一个潜在的分布，因此需要充分可靠的先验知识</strong>。例如：前面已经接触到的贝叶斯分类器与高斯混合聚类，都属于生成式模型。现假定总体是一个高斯混合分布，即由多个高斯分布组合形成，从而一个子高斯分布就代表一个类簇（类别）。高斯混合分布的概率密度函数如下所示：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc856e3b82dc.png" alt="3.png"></p>
+<p>不失一般性，假设类簇与真实的类别按照顺序一一对应，即第i个类簇对应第i个高斯混合成分。与高斯混合聚类类似地，这里的主要任务也是估计出各个高斯混合成分的参数以及混合系数，不同的是：对于有标记样本，不再是可能属于每一个类簇，而是只能属于真实类标对应的特定类簇。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc856e431d30.png" alt="4.png"></p>
+<p>直观上来看，<strong>基于半监督的高斯混合模型有机地整合了贝叶斯分类器与高斯混合聚类的核心思想</strong>，有效地利用了未标记样本数据隐含的分布信息，从而使得参数的估计更加准确。同样地，这里也要召唤出之前的EM大法进行求解，首先对各个高斯混合成分的参数及混合系数进行随机初始化，计算出各个PM（即γji，第i个样本属于j类，有标记样本则直接属于特定类），再最大化似然函数（即LL（D）分别对α、u和∑求偏导 ），对参数进行迭代更新。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc856e43ff08.png" alt="5.png"></p>
+<p>当参数迭代更新收敛后，对于待预测样本x，便可以像贝叶斯分类器那样计算出样本属于每个类簇的后验概率，接着找出概率最大的即可：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc856e3dfb1c.png" alt="6.png"></p>
+<p>可以看出：基于生成式模型的方法十分依赖于对潜在数据分布的假设，即假设的分布要能和真实分布相吻合，否则利用未标记的样本数据反倒会在错误的道路上渐行渐远，从而降低学习器的泛化性能。因此，<strong>此类方法要求极强的领域知识和掐指观天的本领</strong>。</p>
+<p>##<strong>14.2 半监督SVM</strong></p>
+<p>监督学习中的SVM试图找到一个划分超平面，使得两侧支持向量之间的间隔最大，即“<strong>最大划分间隔</strong>”思想。对于半监督学习，S3VM则考虑超平面需穿过数据低密度的区域。TSVM是半监督支持向量机中的最著名代表，其核心思想是：尝试为未标记样本找到合适的标记指派，使得超平面划分后的间隔最大化。TSVM采用局部搜索的策略来进行迭代求解，即首先使用有标记样本集训练出一个初始SVM，接着使用该学习器对未标记样本进行打标，这样所有样本都有了标记，并基于这些有标记的样本重新训练SVM，之后再寻找易出错样本不断调整。整个算法流程如下所示：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc856e427830.png" alt="7.png"></p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwJZss.png" alt="iwJZss.png"></p>
+<p>##<strong>14.3 基于分歧的方法</strong></p>
+<p>基于分歧的方法通过多个学习器之间的<strong>分歧（disagreement）&#x2F;多样性（diversity）</strong>来利用未标记样本数据，协同训练就是其中的一种经典方法。<strong>协同训练最初是针对于多视图（multi-view）数据而设计的，多视图数据指的是样本对象具有多个属性集，每个属性集则对应一个试图</strong>。例如：电影数据中就包含画面类属性和声音类属性，这样画面类属性的集合就对应着一个视图。首先引入两个关于视图的重要性质：</p>
+<blockquote>
+<p><strong>相容性</strong>：即使用单个视图数据训练出的学习器的输出空间是一致的。例如都是{好，坏}、{+1,-1}等。<br><strong>互补性</strong>：即不同视图所提供的信息是互补&#x2F;相辅相成的，实质上这里体现的就是集成学习的思想。</p>
+</blockquote>
+<p>协同训练正是很好地利用了多视图数据的“<strong>相容互补性</strong>”，其基本的思想是：首先基于有标记样本数据在每个视图上都训练一个初始分类器，然后让每个分类器去挑选分类置信度最高的样本并赋予标记，并将带有伪标记的样本数据传给另一个分类器去学习，从而<strong>你依我侬&#x2F;共同进步</strong>。</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwJVMj.png" alt="iwJVMj.png"><br><img src="https://s1.ax1x.com/2018/10/18/iwJeLn.png" alt="iwJeLn.png"></p>
+<p>##<strong>14.4 半监督聚类</strong></p>
+<p>前面提到的几种方法都是借助无标记样本数据来辅助监督学习的训练过程，从而使得学习更加充分&#x2F;泛化性能得到提升；半监督聚类则是借助已有的监督信息来辅助聚类的过程。一般而言，监督信息大致有两种类型：</p>
+<blockquote>
+<p><strong>必连与勿连约束</strong>：必连指的是两个样本必须在同一个类簇，勿连则是必不在同一个类簇。<br><strong>标记信息</strong>：少量的样本带有真实的标记。</p>
+</blockquote>
+<p>下面主要介绍两种基于半监督的K-Means聚类算法：第一种是数据集包含一些必连与勿连关系，另外一种则是包含少量带有标记的样本。两种算法的基本思想都十分的简单：对于带有约束关系的k-均值算法，在迭代过程中对每个样本划分类簇时，需要<strong>检测当前划分是否满足约束关系</strong>，若不满足则会将该样本划分到距离次小对应的类簇中，再继续检测是否满足约束关系，直到完成所有样本的划分。算法流程如下图所示：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwJAzQ.png" alt="iwJAzQ.png"></p>
+<p>对于带有少量标记样本的k-均值算法，则可以<strong>利用这些有标记样本进行类中心的指定，同时在对样本进行划分时，不需要改变这些有标记样本的簇隶属关系</strong>，直接将其划分到对应类簇即可。算法流程如下所示：</p>
+<p><img src="https://s1.ax1x.com/2018/10/18/iwJkRg.png" alt="iwJkRg.png"></p>
+<p>在此，半监督学习就介绍完毕。十分有趣的是：半监督学习将前面许多知识模块联系在了一起，足以体现了作者编排的用心。结合本篇的新知识再来回想之前自己做过的一些研究，发现还是蹚了一些浑水，也许越是觉得过去的自己傻，越就是好的兆头吧~</p>
  
       <!-- reward -->
       
@@ -609,7 +711,7 @@ findSingle([10, 2, 2, 1, 0, 0, 10]);
 
     
     <article
-  id="post-前端学习笔记/【【【【【疑问解答】】】】】/JS/两道题/01-sort"
+  id="post-MachineLearning/Machine-learning-learning-notes-master/周志华《Machine Learning》学习笔记(14)--计算学习理论"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -618,28 +720,72 @@ findSingle([10, 2, 2, 1, 0, 0, 10]);
   <div class="article-inner">
      
     <div class="article-meta">
-      <a href="/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/01-sort/" class="article-date">
-  <time datetime="2023-04-24T06:29:33.630Z" itemprop="datePublished">2023-04-24</time>
+      <a href="/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(14)--%E8%AE%A1%E7%AE%97%E5%AD%A6%E4%B9%A0%E7%90%86%E8%AE%BA/" class="article-date">
+  <time datetime="2023-06-21T07:42:41.506Z" itemprop="datePublished">2023-06-21</time>
 </a>    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  // 给定一个整数数组，任意选择两个数a和b，可以通过 Math.abs(a - b)求得其差值。
-// 请实现一个函数来求得这个数组的最大差值。
-
-// 解体思路其实就是最小值 - 最大值，再做绝对值的计算（因为差值是非0整数）
-// 解题思路，通过sort方法进行排序
-const largestDiff = (list) => {
-  const sortedList = list.sort((prev, next) => next - prev); // 按照从大到小排序
-  const maxNum = sortedList[0];
-  const minNum = sortedList[sortedList.length-1];
-  const diff = Math.abs(minNum - maxNum); // 最小值 - 最大值，进行绝对值的计算
-  return diff;
-};
-
-const diff = largestDiff([-1, 2, 3, 10, 9]);
-console.log("diff", diff);
+  <p>上篇主要介绍了常用的特征选择方法及稀疏学习。首先从相关&#x2F;无关特征出发引出了特征选择的基本概念，接着分别介绍了子集搜索与评价、过滤式、包裹式以及嵌入式四种类型的特征选择方法。子集搜索与评价使用的是一种优中生优的贪婪算法，即每次从候选特征子集中选出最优子集；过滤式方法计算一个相关统计量来评判特征的重要程度；包裹式方法将学习器作为特征选择的评价准则；嵌入式方法则是通过L1正则项将特征选择融入到学习器参数优化的过程中。最后介绍了稀疏表示与压缩感知的核心思想：稀疏表示利用稀疏矩阵的优良性质，试图通过某种方法找到原始稠密矩阵的合适稀疏表示；压缩感知则试图利用可稀疏表示的欠采样信息来恢复全部信息。本篇将讨论一种为机器学习提供理论保证的学习方法–计算学习理论。</p>
+<p>#<strong>13、计算学习理论</strong></p>
+<p>计算学习理论（computational learning theory）是通过“计算”来研究机器学习的理论，简而言之，其目的是分析学习任务的本质，例如：<strong>在什么条件下可进行有效的学习，需要多少训练样本能获得较好的精度等，从而为机器学习算法提供理论保证</strong>。</p>
+<p>首先我们回归初心，再来谈谈经验误差和泛化误差。假设给定训练集D，其中所有的训练样本都服从一个未知的分布T，且它们都是在总体分布T中独立采样得到，即<strong>独立同分布</strong>（independent and identically distributed，i.i.d.），在《贝叶斯分类器》中我们已经提到：独立同分布是很多统计学习算法的基础假设，例如最大似然法，贝叶斯分类器，高斯混合聚类等，简单来理解独立同分布：每个样本都是从总体分布中独立采样得到，而没有拖泥带水。例如现在要进行问卷调查，要从总体人群中随机采样，看到一个美女你高兴地走过去，结果她男票突然冒了出来，说道：you jump，i jump，于是你本来只想调查一个人结果被强行撒了一把狗粮得到两份问卷，这样这两份问卷就不能称为独立同分布了，因为它们的出现具有强相关性。</p>
+<p>回归正题，<strong>泛化误差指的是学习器在总体上的预测误差，经验误差则是学习器在某个特定数据集D上的预测误差</strong>。在实际问题中，往往我们并不能得到总体且数据集D是通过独立同分布采样得到的，因此我们常常使用经验误差作为泛化误差的近似。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc854f38d4fe.png" alt="1.png"></p>
+<p>##<strong>13.1 PAC学习</strong></p>
+<p>在高中课本中，我们将<strong>函数定义为：从自变量到因变量的一种映射；对于机器学习算法，学习器也正是为了寻找合适的映射规则</strong>，即如何从条件属性得到目标属性。从样本空间到标记空间存在着很多的映射，我们将每个映射称之为<strong>概念</strong>（concept），定义：</p>
+<blockquote>
+<p>若概念c对任何样本x满足c(x)&#x3D;y，则称c为<strong>目标概念</strong>，即最理想的映射，所有的目标概念构成的集合称为<strong>“概念类”</strong>；<br>给定学习算法，它所有可能映射&#x2F;概念的集合称为<strong>“假设空间”</strong>，其中单个的概念称为<strong>“假设”</strong>（hypothesis）；<br>若一个算法的假设空间包含目标概念，则称该数据集对该算法是<strong>可分</strong>（separable）的，亦称<strong>一致</strong>（consistent）的；<br>若一个算法的假设空间不包含目标概念，则称该数据集对该算法是<strong>不可分</strong>（non-separable）的，或称<strong>不一致</strong>（non-consistent）的。</p>
+</blockquote>
+<p>举个简单的例子：对于非线性分布的数据集，若使用一个线性分类器，则该线性分类器对应的假设空间就是空间中所有可能的超平面，显然假设空间不包含该数据集的目标概念，所以称数据集对该学习器是不可分的。给定一个数据集D，我们希望模型学得的假设h尽可能地与目标概念一致，这便是<strong>概率近似正确</strong> (Probably Approximately Correct，简称PAC)的来源，即以较大的概率学得模型满足误差的预设上限。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc854f446f97.png" alt="2.png"></p>
+<p><img src="https://i.loli.net/2018/10/18/5bc854f482d0b.png" alt="3.png"></p>
+<p><img src="https://i.loli.net/2018/10/18/5bc854f47d006.png" alt="4.png"></p>
+<p><img src="https://i.loli.net/2018/10/18/5bc854f46ad91.png" alt="5.png"></p>
+<p>上述关于PAC的几个定义层层相扣：定义12.1表达的是对于某种学习算法，如果能以一个置信度学得假设满足泛化误差的预设上限，则称该算法能PAC辨识概念类，即该算法的输出假设已经十分地逼近目标概念。定义12.2则将样本数量考虑进来，当样本超过一定数量时，学习算法总是能PAC辨识概念类，则称概念类为PAC可学习的。定义12.3将学习器运行时间也考虑进来，若运行时间为多项式时间，则称PAC学习算法。</p>
+<p>显然，PAC学习中的一个关键因素就是<strong>假设空间的复杂度</strong>，对于某个学习算法，<strong>若假设空间越大，则其中包含目标概念的可能性也越大，但同时找到某个具体概念的难度也越大</strong>，一般假设空间分为有限假设空间与无限假设空间。</p>
+<p>##<strong>13.2 有限假设空间</strong></p>
+<p>###<strong>13.2.1 可分情形</strong></p>
+<p>可分或一致的情形指的是：<strong>目标概念包含在算法的假设空间中</strong>。对于目标概念，在训练集D中的经验误差一定为0，因此首先我们可以想到的是：不断地剔除那些出现预测错误的假设，直到找到经验误差为0的假设即为目标概念。但<strong>由于样本集有限，可能会出现多个假设在D上的经验误差都为0，因此问题转化为：需要多大规模的数据集D才能让学习算法以置信度的概率从这些经验误差都为0的假设中找到目标概念的有效近似</strong>。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc854f484f30.png" alt="6.png"></p>
+<p>通过上式可以得知：<strong>对于可分情形的有限假设空间，目标概念都是PAC可学习的，即当样本数量满足上述条件之后，在与训练集一致的假设中总是可以在1-σ概率下找到目标概念的有效近似。</strong></p>
+<p>###<strong>13.2.2 不可分情形</strong></p>
+<p>不可分或不一致的情形指的是：<strong>目标概念不存在于假设空间中</strong>，这时我们就不能像可分情形时那样从假设空间中寻找目标概念的近似。但<strong>当假设空间给定时，必然存一个假设的泛化误差最小，若能找出此假设的有效近似也不失为一个好的目标，这便是不可知学习(agnostic learning)的来源。</strong></p>
+<p><img src="https://i.loli.net/2018/10/18/5bc854f485f2e.png" alt="7.png"></p>
+<p>这时候便要用到<strong>Hoeffding不等式</strong>：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc854f46970a.png" alt="8.png"></p>
+<p>对于假设空间中的所有假设，出现泛化误差与经验误差之差大于e的概率和为：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc854f4114fd.png" alt="9.png"></p>
+<p>因此，可令不等式的右边小于（等于）σ，便可以求出满足泛化误差与经验误差相差小于e所需的最少样本数，同时也可以求出泛化误差界。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc854f440a02.png" alt="10.png"></p>
+<p>##<strong>13.3 VC维</strong></p>
+<p>现实中的学习任务通常都是无限假设空间，例如d维实数域空间中所有的超平面等，因此要对此种情形进行可学习研究，需要度量<strong>假设空间的复杂度</strong>。这便是<strong>VC维</strong>（Vapnik-Chervonenkis dimension）的来源。在介绍VC维之前，需要引入两个概念：</p>
+<blockquote>
+<p><strong>增长函数</strong>：对于给定数据集D，假设空间中的每个假设都能对数据集的样本赋予标记，因此一个假设对应着一种打标结果，不同假设对D的打标结果可能是相同的，也可能是不同的。随着样本数量m的增大，假设空间对样本集D的打标结果也会增多，增长函数则表示假设空间对m个样本的数据集D打标的最大可能结果数，因此<strong>增长函数描述了假设空间的表示能力与复杂度。</strong></p>
+<p><img src="https://i.loli.net/2018/10/18/5bc855ba970cd.png" alt="11.png"></p>
+</blockquote>
+<blockquote>
+<p><strong>打散</strong>：例如对二分类问题来说，m个样本最多有2^m个可能结果，每种可能结果称为一种<strong>“对分”</strong>，若假设空间能实现数据集D的所有对分，则称数据集能被该假设空间打散。</p>
+</blockquote>
+<p><strong>因此尽管假设空间是无限的，但它对特定数据集打标的不同结果数是有限的，假设空间的VC维正是它能打散的最大数据集大小</strong>。通常这样来计算假设空间的VC维：若存在大小为d的数据集能被假设空间打散，但不存在任何大小为d+1的数据集能被假设空间打散，则其VC维为d。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc855bb20c1e.png" alt="12.png"></p>
+<p>同时书中给出了假设空间VC维与增长函数的两个关系：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc855ba83eb8.png" alt="13.png"></p>
+<p>直观来理解（1）式也十分容易： 首先假设空间的VC维是d，说明当m&lt;&#x3D;d时，增长函数与2^m相等，例如：当m&#x3D;d时，右边的组合数求和刚好等于2^d；而当m&#x3D;d+1时，右边等于2^(d+1)-1，十分符合VC维的定义，同时也可以使用数学归纳法证明；（2）式则是由（1）式直接推导得出。</p>
+<p>在有限假设空间中，根据Hoeffding不等式便可以推导得出学习算法的泛化误差界；但在无限假设空间中，由于假设空间的大小无法计算，只能通过增长函数来描述其复杂度，因此无限假设空间中的泛化误差界需要引入增长函数。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc855babc890.png" alt="14.png"></p>
+<p><img src="https://i.loli.net/2018/10/18/5bc855ba5b2c3.png" alt="15.png"></p>
+<p>上式给出了基于VC维的泛化误差界，同时也可以计算出满足条件需要的样本数（样本复杂度）。若学习算法满足<strong>经验风险最小化原则（ERM）</strong>，即学习算法的输出假设h在数据集D上的经验误差最小，可证明：<strong>任何VC维有限的假设空间都是（不可知）PAC可学习的，换而言之：若假设空间的最小泛化误差为0即目标概念包含在假设空间中，则是PAC可学习，若最小泛化误差不为0，则称为不可知PAC可学习。</strong></p>
+<p>##<strong>13.4 稳定性</strong></p>
+<p>稳定性考察的是当算法的输入发生变化时，输出是否会随之发生较大的变化，输入的数据集D有以下两种变化：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc855badc5a8.png" alt="16.png"></p>
+<p>若对数据集中的任何样本z，满足：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc855ba59b06.png" alt="17.png"></p>
+<p>即原学习器和剔除一个样本后生成的学习器对z的损失之差保持β稳定，称学习器关于损失函数满足<strong>β-均匀稳定性</strong>。同时若损失函数有上界，即原学习器对任何样本的损失函数不超过M，则有如下定理：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc855babe7c3.png" alt="18.png"></p>
+<p>事实上，<strong>若学习算法符合经验风险最小化原则（ERM）且满足β-均匀稳定性，则假设空间是可学习的</strong>。稳定性通过损失函数与假设空间的可学习联系在了一起，区别在于：假设空间关注的是经验误差与泛化误差，需要考虑到所有可能的假设；而稳定性只关注当前的输出假设。</p>
+<p>在此，计算学习理论就介绍完毕，一看这个名字就知道这一章比较偏底层理论了，最终还是咬着牙看完了它，这里引用一段小文字来梳理一下现在的心情：“孤岂欲卿治经为博士邪？但当涉猎，见往事耳”，就当扩充知识体系吧~</p>
  
       <!-- reward -->
       
@@ -660,7 +806,7 @@ console.log("diff", diff);
 
     
     <article
-  id="post-前端学习笔记/【【【【【疑问解答】】】】】/JS/两道题/01-math"
+  id="post-MachineLearning/Machine-learning-learning-notes-master/周志华《Machine Learning》学习笔记(13)--特征选择与稀疏学习"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -669,34 +815,65 @@ console.log("diff", diff);
   <div class="article-inner">
      
     <div class="article-meta">
-      <a href="/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/01-math/" class="article-date">
-  <time datetime="2023-04-24T06:29:33.627Z" itemprop="datePublished">2023-04-24</time>
+      <a href="/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(13)--%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E4%B8%8E%E7%A8%80%E7%96%8F%E5%AD%A6%E4%B9%A0/" class="article-date">
+  <time datetime="2023-06-21T07:42:41.506Z" itemprop="datePublished">2023-06-21</time>
 </a>    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  // 给定一个整数数组，任意选择两个数a和b，可以通过 Math.abs(a - b)求得其差值。
-// 请实现一个函数来求得这个数组的最大差值。
-
-
-// 解体思路其实就是最小值 - 最大值，再做绝对值的计算（因为差值是非0整数）
-const largestDiff = (list) => {
-    const maxNum = Math.max.apply(Math,list); // 数组通过apply调用Math的max方法，获取数组最大值
-    const minNum = Math.min.apply(Math,list) // 同上，获取数组最小值
-    const diff = Math.abs(minNum - maxNum) // 最小值 - 最大值，进行绝对值的计算
-
-    return diff
-}
-
-
-
-
-
-// largestDiff([-1, 2,3,10, 9])
-
-const diff = largestDiff([-1, 2,3,10, 9]);
-console.log("diff",diff) 
+  <p>上篇主要介绍了经典的降维方法与度量学习，首先从“维数灾难”导致的样本稀疏以及距离难计算两大难题出发，引出了降维的概念，即通过某种数学变换将原始高维空间转变到一个低维的子空间，接着分别介绍了kNN、MDS、PCA、KPCA以及两种经典的流形学习方法，k近邻算法的核心在于k值的选取以及距离的度量，MDS要求原始空间样本之间的距离在降维后的低维空间中得以保持，主成分分析试图找到一个低维超平面来表出原空间样本点，核化主成分分析先将样本点映射到高维空间，再在高维空间中使用线性降维的方法，从而解决了原空间样本非线性分布的情形，基于流形学习的降维则是一种“邻域保持”的思想，最后度量学习试图去学习出一个距离度量来等效降维的效果。本篇将讨论另一种常用方法–特征选择与稀疏学习。</p>
+<p>#<strong>12、特征选择与稀疏学习</strong></p>
+<p>最近在看论文的过程中，发现对于数据集行和列的叫法颇有不同，故在介绍本篇之前，决定先将最常用的术语罗列一二，以后再见到了不管它脚扑朔还是眼迷离就能一眼识破真身了~对于数据集中的一个对象及组成对象的零件元素：</p>
+<blockquote>
+<p>统计学家常称它们为<strong>观测</strong>（<strong>observation</strong>）和<strong>变量</strong>（<strong>variable</strong>）；<br>数据库分析师则称其为<strong>记录</strong>（<strong>record</strong>）和<strong>字段</strong>（<strong>field</strong>）；<br>数据挖掘&#x2F;机器学习学科的研究者则习惯把它们叫做<strong>样本</strong>&#x2F;<strong>示例</strong>（<strong>example</strong>&#x2F;<strong>instance</strong>）和<strong>属性</strong>&#x2F;<strong>特征</strong>（<strong>attribute</strong>&#x2F;<strong>feature</strong>）。</p>
+</blockquote>
+<p>回归正题，在机器学习中特征选择是一个重要的“<strong>数据预处理</strong>”（<strong>data</strong> <strong>preprocessing</strong>）过程，即试图从数据集的所有特征中挑选出与当前学习任务相关的特征子集，接着再利用数据子集来训练学习器；稀疏学习则是围绕着稀疏矩阵的优良性质，来完成相应的学习任务。</p>
+<p>##<strong>12.1 子集搜索与评价</strong></p>
+<p>一般地，我们可以用很多属性&#x2F;特征来描述一个示例，例如对于一个人可以用性别、身高、体重、年龄、学历、专业、是否吃货等属性来描述，那现在想要训练出一个学习器来预测人的收入。根据生活经验易知：并不是所有的特征都与学习任务相关，例如年龄&#x2F;学历&#x2F;专业可能很大程度上影响了收入，身高&#x2F;体重这些外貌属性也有较小的可能性影响收入，但像是否是一个地地道道的吃货这种属性就八杆子打不着了。因此我们只需要那些与学习任务紧密相关的特征，<strong>特征选择便是从给定的特征集合中选出相关特征子集的过程</strong>。</p>
+<p>与上篇中降维技术有着异曲同工之处的是，特征选择也可以有效地解决维数灾难的难题。具体而言：<strong>降维从一定程度起到了提炼优质低维属性和降噪的效果，特征选择则是直接剔除那些与学习任务无关的属性而选择出最佳特征子集</strong>。若直接遍历所有特征子集，显然当维数过多时遭遇指数爆炸就行不通了；若采取从候选特征子集中不断迭代生成更优候选子集的方法，则时间复杂度大大减小。这时就涉及到了两个关键环节：<strong>1.如何生成候选子集；2.如何评价候选子集的好坏</strong>，这便是早期特征选择的常用方法。书本上介绍了贪心算法，分为三种策略：</p>
+<blockquote>
+<p><strong>前向搜索</strong>：初始将每个特征当做一个候选特征子集，然后从当前所有的候选子集中选择出最佳的特征子集；接着在上一轮选出的特征子集中添加一个新的特征，同样地选出最佳特征子集；最后直至选不出比上一轮更好的特征子集。<br><strong>后向搜索</strong>：初始将所有特征作为一个候选特征子集；接着尝试去掉上一轮特征子集中的一个特征并选出当前最优的特征子集；最后直到选不出比上一轮更好的特征子集。<br><strong>双向搜索</strong>：将前向搜索与后向搜索结合起来，即在每一轮中既有添加操作也有剔除操作。</p>
+</blockquote>
+<p>对于特征子集的评价，书中给出了一些想法及基于信息熵的方法。假设数据集的属性皆为离散属性，这样给定一个特征子集，便可以通过这个特征子集的取值将数据集合划分为V个子集。例如：A1&#x3D;{男,女}，A2&#x3D;{本科,硕士}就可以将原数据集划分为2*2&#x3D;4个子集，其中每个子集的取值完全相同。这时我们就可以像决策树选择划分属性那样，通过计算信息增益来评价该属性子集的好坏。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc853eca1a43.png" alt="1.png"></p>
+<p>此时，信息增益越大表示该属性子集包含有助于分类的特征越多，使用上述这种<strong>子集搜索与子集评价相结合的机制，便可以得到特征选择方法</strong>。值得一提的是若将前向搜索策略与信息增益结合在一起，与前面我们讲到的ID3决策树十分地相似。事实上，决策树也可以用于特征选择，树节点划分属性组成的集合便是选择出的特征子集。</p>
+<p>##<strong>12.2 过滤式选择（Relief）</strong></p>
+<p>过滤式方法是一种将特征选择与学习器训练相分离的特征选择技术，即首先将相关特征挑选出来，再使用选择出的数据子集来训练学习器。Relief是其中著名的代表性算法，它使用一个“<strong>相关统计量</strong>”来度量特征的重要性，该统计量是一个向量，其中每个分量代表着相应特征的重要性，因此我们最终可以根据这个统计量各个分量的大小来选择出合适的特征子集。</p>
+<p>易知Relief算法的核心在于如何计算出该相关统计量。对于数据集中的每个样例xi，Relief首先找出与xi同类别的最近邻与不同类别的最近邻，分别称为<strong>猜中近邻（near-hit）</strong>与<strong>猜错近邻（near-miss）</strong>，接着便可以分别计算出相关统计量中的每个分量。对于j分量：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc853ec70c88.png" alt="2.png"></p>
+<p>直观上理解：对于猜中近邻，两者j属性的距离越小越好，对于猜错近邻，j属性距离越大越好。更一般地，若xi为离散属性，diff取海明距离，即相同取0，不同取1；若xi为连续属性，则diff为曼哈顿距离，即取差的绝对值。分别计算每个分量，最终取平均便得到了整个相关统计量。</p>
+<p>标准的Relief算法只用于二分类问题，后续产生的拓展变体Relief-F则解决了多分类问题。对于j分量，新的计算公式如下：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc853ec93042.png" alt="3.png"></p>
+<p>其中pl表示第l类样本在数据集中所占的比例，易知两者的不同之处在于：<strong>标准Relief 只有一个猜错近邻，而Relief-F有多个猜错近邻</strong>。</p>
+<p>##<strong>12.3 包裹式选择（LVW）</strong></p>
+<p>与过滤式选择不同的是，包裹式选择将后续的学习器也考虑进来作为特征选择的评价准则。因此包裹式选择可以看作是为某种学习器<strong>量身定做</strong>的特征选择方法，由于在每一轮迭代中，包裹式选择都需要训练学习器，因此在获得较好性能的同时也产生了较大的开销。下面主要介绍一种经典的包裹式特征选择方法 –LVW（Las Vegas Wrapper），它在拉斯维加斯框架下使用随机策略来进行特征子集的搜索。拉斯维加斯？怎么听起来那么耳熟，不是那个声名显赫的赌场吗？歪果仁真会玩。怀着好奇科普一下，结果又顺带了一个赌场：</p>
+<blockquote>
+<p><strong>蒙特卡罗算法</strong>：采样越多，越近似最优解，一定会给出解，但给出的解不一定是正确解；<br><strong>拉斯维加斯算法</strong>：采样越多，越有机会找到最优解，不一定会给出解，且给出的解一定是正确解。</p>
+</blockquote>
+<p>举个例子，假如筐里有100个苹果，让我每次闭眼拿1个，挑出最大的。于是我随机拿1个，再随机拿1个跟它比，留下大的，再随机拿1个……我每拿一次，留下的苹果都至少不比上次的小。拿的次数越多，挑出的苹果就越大，但我除非拿100次，否则无法肯定挑出了最大的。这个挑苹果的算法，就属于蒙特卡罗算法——尽量找较好的，但不保证是最好的。</p>
+<p>而拉斯维加斯算法，则是另一种情况。假如有一把锁，给我100把钥匙，只有1把是对的。于是我每次随机拿1把钥匙去试，打不开就再换1把。我试的次数越多，打开（正确解）的机会就越大，但在打开之前，那些错的钥匙都是没有用的。这个试钥匙的算法，就是拉斯维加斯的——尽量找最好的，但不保证能找到。</p>
+<p>LVW算法的具体流程如下所示，其中比较特别的是停止条件参数T的设置，即在每一轮寻找最优特征子集的过程中，若随机T次仍没找到，算法就会停止，从而保证了算法运行时间的可行性。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc853ed5e08e.png" alt="4.png"></p>
+<p>##<strong>12.4 嵌入式选择与正则化</strong></p>
+<p>前面提到了的两种特征选择方法：<strong>过滤式中特征选择与后续学习器完全分离，包裹式则是使用学习器作为特征选择的评价准则；嵌入式是一种将特征选择与学习器训练完全融合的特征选择方法，即将特征选择融入学习器的优化过程中</strong>。在之前《经验风险与结构风险》中已经提到：经验风险指的是模型与训练数据的契合度，结构风险则是模型的复杂程度，机器学习的核心任务就是：<strong>在模型简单的基础上保证模型的契合度</strong>。例如：岭回归就是加上了L2范数的最小二乘法，有效地解决了奇异矩阵、过拟合等诸多问题，下面的嵌入式特征选择则是在损失函数后加上了L1范数。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc853ec8b203.png" alt="5.png"></p>
+<p>L1范数美名又约<strong>Lasso Regularization</strong>，指的是向量中每个元素的绝对值之和，这样在优化目标函数的过程中，就会使得w尽可能地小，在一定程度上起到了防止过拟合的作用，同时与L2范数（Ridge Regularization ）不同的是，L1范数会使得部分w变为0， 从而达到了特征选择的效果。</p>
+<p>总的来说：<strong>L1范数会趋向产生少量的特征，其他特征的权值都是0；L2会选择更多的特征，这些特征的权值都会接近于0</strong>。这样L1范数在特征选择上就十分有用，而L2范数则具备较强的控制过拟合能力。可以从下面两个方面来理解：</p>
+<p>（1）<strong>下降速度</strong>：L1范数按照绝对值函数来下降，L2范数按照二次函数来下降。因此在0附近，L1范数的下降速度大于L2范数，故L1范数能很快地下降到0，而L2范数在0附近的下降速度非常慢，因此较大可能收敛在0的附近。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc853ed0aaf5.png" alt="6.png"></p>
+<p>（2）<strong>空间限制</strong>：L1范数与L2范数都试图在最小化损失函数的同时，让权值W也尽可能地小。我们可以将原优化问题看做为下面的问题，即让后面的规则则都小于某个阈值。这样从图中可以看出：L1范数相比L2范数更容易得到稀疏解。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc853ecc223e.png" alt="7.png"></p>
+<p><img src="https://i.loli.net/2018/10/18/5bc853ed51aa1.png" alt="8.png"></p>
+<p>##<strong>12.5 稀疏表示与字典学习</strong></p>
+<p>当样本数据是一个稀疏矩阵时，对学习任务来说会有不少的好处，例如很多问题变得线性可分，储存更为高效等。这便是稀疏表示与字典学习的基本出发点。稀疏矩阵即矩阵的每一行&#x2F;列中都包含了大量的零元素，且这些零元素没有出现在同一行&#x2F;列，对于一个给定的稠密矩阵，若我们能<strong>通过某种方法找到其合适的稀疏表示</strong>，则可以使得学习任务更加简单高效，我们称之为<strong>稀疏编码（sparse coding）</strong>或<strong>字典学习（dictionary learning）</strong>。</p>
+<p>给定一个数据集，字典学习&#x2F;稀疏编码指的便是通过一个字典将原数据转化为稀疏表示，因此最终的目标就是求得字典矩阵B及稀疏表示α，书中使用变量交替优化的策略能较好地求得解，深感陷进去短时间无法自拔，故先不进行深入…</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc853ed0ca43.png" alt="9.png"></p>
+<p>##<strong>12.6 压缩感知</strong></p>
+<p>压缩感知在前些年也是风风火火，与特征选择、稀疏表示不同的是：它关注的是通过欠采样信息来恢复全部信息。在实际问题中，为了方便传输和存储，我们一般将数字信息进行压缩，这样就有可能损失部分信息，如何根据已有的信息来重构出全部信号，这便是压缩感知的来历，压缩感知的前提是已知的信息具有稀疏表示。下面是关于压缩感知的一些背景：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc853ed431c6.png" alt="10.png"></p>
+<p>在此，特征选择与稀疏学习就介绍完毕。在很多实际情形中，选了好的特征比选了好的模型更为重要，这也是为什么厉害的大牛能够很快地得出一些结论的原因，谓：吾昨晚夜观天象，星象云是否吃货乃无用也~</p>
+ 
       <!-- reward -->
       
     </div>
@@ -716,7 +893,7 @@ console.log("diff",diff)
 
     
     <article
-  id="post-前端学习笔记/【【【【【疑问解答】】】】】/JS/两道题/01-custom-sort"
+  id="post-MachineLearning/Machine-learning-learning-notes-master/周志华《Machine Learning》学习笔记(12)--降维与度量学习"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -725,84 +902,220 @@ console.log("diff",diff)
   <div class="article-inner">
      
     <div class="article-meta">
-      <a href="/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/01-custom-sort/" class="article-date">
-  <time datetime="2023-04-24T06:29:33.616Z" itemprop="datePublished">2023-04-24</time>
+      <a href="/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(12)--%E9%99%8D%E7%BB%B4%E4%B8%8E%E5%BA%A6%E9%87%8F%E5%AD%A6%E4%B9%A0/" class="article-date">
+  <time datetime="2023-06-21T07:42:41.505Z" itemprop="datePublished">2023-06-21</time>
 </a>    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  // 给定一个整数数组，任意选择两个数a和b，可以通过 Math.abs(a - b)求得其差值。
-// 请实现一个函数来求得这个数组的最大差值。
+  <p>上篇主要介绍了几种常用的聚类算法，首先从距离度量与性能评估出发，列举了常见的距离计算公式与聚类评价指标，接着分别讨论了K-Means、LVQ、高斯混合聚类、密度聚类以及层次聚类算法。K-Means与LVQ都试图以类簇中心作为原型指导聚类，其中K-Means通过EM算法不断迭代直至收敛，LVQ使用真实类标辅助聚类；高斯混合聚类采用高斯分布来描述类簇原型；密度聚类则是将一个核心对象所有密度可达的样本形成类簇，直到所有核心对象都遍历完；最后层次聚类是一种自底向上的树形聚类方法，不断合并最相近的两个小类簇。本篇将讨论机器学习常用的方法–降维与度量学习。</p>
+<p>#<strong>11、降维与度量学习</strong></p>
+<p>样本的特征数称为<strong>维数</strong>（dimensionality），当维数非常大时，也就是现在所说的“<strong>维数灾难</strong>”，具体表现在：在高维情形下，<strong>数据样本将变得十分稀疏</strong>，因为此时要满足训练样本为“<strong>密采样</strong>”的总体样本数目是一个触不可及的天文数字，谓可远观而不可亵玩焉…<strong>训练样本的稀疏使得其代表总体分布的能力大大减弱，从而消减了学习器的泛化能力</strong>；同时当维数很高时，<strong>计算距离也变得十分复杂</strong>，甚至连计算内积都不再容易，这也是为什么支持向量机（SVM）使用核函数<strong>“低维计算，高维表现”</strong>的原因。</p>
+<p>缓解维数灾难的一个重要途径就是<strong>降维，即通过某种数学变换将原始高维空间转变到一个低维的子空间</strong>。在这个子空间中，样本的密度将大幅提高，同时距离计算也变得容易。这时也许会有疑问，这样降维之后不是会丢失原始数据的一部分信息吗？这是因为在很多实际的问题中，虽然训练数据是高维的，但是与学习任务相关也许仅仅是其中的一个低维子空间，也称为一个<strong>低维嵌入</strong>，例如：数据属性中存在噪声属性、相似属性或冗余属性等，<strong>对高维数据进行降维能在一定程度上达到提炼低维优质属性或降噪的效果</strong>。</p>
+<p>##<strong>11.1 K近邻学习</strong></p>
+<p>k近邻算法简称<strong>kNN（k-Nearest Neighbor）</strong>，是一种经典的监督学习方法，同时也实力担当入选数据挖掘十大算法。其工作机制十分简单粗暴：给定某个测试样本，kNN基于某种<strong>距离度量</strong>在训练集中找出与其距离最近的k个带有真实标记的训练样本，然后给基于这k个邻居的真实标记来进行预测，类似于前面集成学习中所讲到的基学习器结合策略：分类任务采用投票法，回归任务则采用平均法。接下来本篇主要就kNN分类进行讨论。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc851a43873a.png" alt="1.png"></p>
+<p>从上图【来自Wiki】中我们可以看到，图中有两种类型的样本，一类是蓝色正方形，另一类是红色三角形。而那个绿色圆形是我们待分类的样本。基于kNN算法的思路，我们很容易得到以下结论：</p>
+<blockquote>
+<p>如果K&#x3D;3，那么离绿色点最近的有2个红色三角形和1个蓝色的正方形，这3个点投票，于是绿色的这个待分类点属于红色的三角形。<br>如果K&#x3D;5，那么离绿色点最近的有2个红色三角形和3个蓝色的正方形，这5个点投票，于是绿色的这个待分类点属于蓝色的正方形。</p>
+</blockquote>
+<p>可以发现：<strong>kNN虽然是一种监督学习方法，但是它却没有显式的训练过程</strong>，而是当有新样本需要预测时，才来计算出最近的k个邻居，因此<strong>kNN是一种典型的懒惰学习方法</strong>，再来回想一下朴素贝叶斯的流程，训练的过程就是参数估计，因此朴素贝叶斯也可以懒惰式学习，此类技术在<strong>训练阶段开销为零</strong>，待收到测试样本后再进行计算。相应地我们称那些一有训练数据立马开工的算法为“<strong>急切学习</strong>”，可见前面我们学习的大部分算法都归属于急切学习。</p>
+<p>很容易看出：<strong>kNN算法的核心在于k值的选取以及距离的度量</strong>。k值选取太小，模型很容易受到噪声数据的干扰，例如：极端地取k&#x3D;1，若待分类样本正好与一个噪声数据距离最近，就导致了分类错误；若k值太大， 则在更大的邻域内进行投票，此时模型的预测能力大大减弱，例如：极端取k&#x3D;训练样本数，就相当于模型根本没有学习，所有测试样本的预测结果都是一样的。<strong>一般地我们都通过交叉验证法来选取一个适当的k值</strong>。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc851a47db9a.png" alt="2.png"></p>
+<p>对于距离度量，<strong>不同的度量方法得到的k个近邻不尽相同，从而对最终的投票结果产生了影响</strong>，因此选择一个合适的距离度量方法也十分重要。在上一篇聚类算法中，在度量样本相似性时介绍了常用的几种距离计算方法，包括<strong>闵可夫斯基距离，曼哈顿距离，VDM</strong>等。在实际应用中，<strong>kNN的距离度量函数一般根据样本的特性来选择合适的距离度量，同时应对数据进行去量纲&#x2F;归一化处理来消除大量纲属性的强权政治影响</strong>。</p>
+<p>##<strong>11.2 MDS算法</strong></p>
+<p>不管是使用核函数升维还是对数据降维，我们都希望<strong>原始空间样本点之间的距离在新空间中基本保持不变</strong>，这样才不会使得原始空间样本之间的关系及总体分布发生较大的改变。<strong>“多维缩放”（MDS）</strong>正是基于这样的思想，<strong>MDS要求原始空间样本之间的距离在降维后的低维空间中得以保持</strong>。</p>
+<p>假定m个样本在原始空间中任意两两样本之间的距离矩阵为D∈R(m*m)，我们的目标便是获得样本在低维空间中的表示Z∈R(d’*m , d’&lt; d)，且任意两个样本在低维空间中的欧式距离等于原始空间中的距离，即||zi-zj||&#x3D;Dist(ij)。因此接下来我们要做的就是根据已有的距离矩阵D来求解出降维后的坐标矩阵Z。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc851a4b664e.png" alt="3.png"></p>
+<p>令降维后的样本坐标矩阵Z被中心化，<strong>中心化是指将每个样本向量减去整个样本集的均值向量，故所有样本向量求和得到一个零向量</strong>。这样易知：矩阵B的每一列以及每一列求和均为0，因为提取公因子后都有一项为所有样本向量的和向量。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc851a4a4ee2.png" alt="4.png"></p>
+<p>根据上面矩阵B的特征，我们很容易得到等式（2）、（3）以及（4）：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc851a4a777b.png" alt="5.png"></p>
+<p>这时根据(1)–(4)式我们便可以计算出bij，即*<em>bij&#x3D;(1)-(2)</em>(1&#x2F;m)-(3)<em>(1&#x2F;m)+(4)</em>(1&#x2F;(m^2))**，再逐一地计算每个b(ij)，就得到了降维后低维空间中的内积矩阵B(B&#x3D;Z’*Z)，只需对B进行特征值分解便可以得到Z。MDS的算法流程如下图所示：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc851a5340dd.png" alt="6.png"></p>
+<p>##<strong>11.3 主成分分析（PCA）</strong></p>
+<p>不同于MDS采用距离保持的方法，<strong>主成分分析（PCA）直接通过一个线性变换，将原始空间中的样本投影到新的低维空间中</strong>。简单来理解这一过程便是：<strong>PCA采用一组新的基来表示样本点，其中每一个基向量都是原来基向量的线性组合，通过使用尽可能少的新基向量来表出样本，从而达到降维的目的。</strong></p>
+<p>假设使用d’个新基向量来表示原来样本，实质上是将样本投影到一个由d’个基向量确定的一个<strong>超平面</strong>上（<strong>即舍弃了一些维度</strong>），要用一个超平面对空间中所有高维样本进行恰当的表达，最理想的情形是：<strong>若这些样本点都能在超平面上表出且这些表出在超平面上都能够很好地分散开来</strong>。但是一般使用较原空间低一些维度的超平面来做到这两点十分不容易，因此我们退一步海阔天空，要求这个超平面应具有如下两个性质：</p>
+<blockquote>
+<p><strong>最近重构性</strong>：样本点到超平面的距离足够近，即尽可能在超平面附近；<br><strong>最大可分性</strong>：样本点在超平面上的投影尽可能地分散开来，即投影后的坐标具有区分性。</p>
+</blockquote>
+<p>这里十分神奇的是：<strong>最近重构性与最大可分性虽然从不同的出发点来定义优化问题中的目标函数，但最终这两种特性得到了完全相同的优化问题</strong>：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc851a5213c1.png" alt="7.png"></p>
+<p>接着使用拉格朗日乘子法求解上面的优化问题，得到：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc851a4a102a.png" alt="8.png"></p>
+<p>因此只需对协方差矩阵进行特征值分解即可求解出W，PCA算法的整个流程如下图所示：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc851a540eb3.png" alt="9.png"></p>
+<p>另一篇博客给出更通俗更详细的理解：<a target="_blank" rel="noopener" href="http://blog.csdn.net/u011826404/article/details/57472730">主成分分析解析（基于最大方差理论）</a></p>
+<p>##<strong>11.4 核化线性降维</strong></p>
+<p>说起机器学习你中有我&#x2F;我中有你&#x2F;水乳相融…在这里能够得到很好的体现。正如SVM在处理非线性可分时，通过引入核函数将样本投影到高维特征空间，接着在高维空间再对样本点使用超平面划分。这里也是相同的问题：若我们的样本数据点本身就不是线性分布，那还如何使用一个超平面去近似表出呢？因此也就引入了核函数，<strong>即先将样本映射到高维空间，再在高维空间中使用线性降维的方法</strong>。下面主要介绍<strong>核化主成分分析（KPCA）</strong>的思想。</p>
+<p>若核函数的形式已知，即我们知道如何将低维的坐标变换为高维坐标，这时我们只需先将数据映射到高维特征空间，再在高维空间中运用PCA即可。但是一般情况下，我们并不知道核函数具体的映射规则，例如：Sigmoid、高斯核等，我们只知道如何计算高维空间中的样本内积，这时就引出了KPCA的一个重要创新之处：<strong>即空间中的任一向量，都可以由该空间中的所有样本线性表示</strong>。证明过程也十分简单：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc851a51bd2a.png" alt="10.png"></p>
+<p>这样我们便可以将高维特征空间中的投影向量wi使用所有高维样本点线性表出，接着代入PCA的求解问题，得到：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc851b74b083.png" alt="11.png"></p>
+<p>化简到最后一步，发现结果十分的美妙，只需对核矩阵K进行特征分解，便可以得出投影向量wi对应的系数向量α，因此选取特征值前d’大对应的特征向量便是d’个系数向量。这时对于需要降维的样本点，只需按照以下步骤便可以求出其降维后的坐标。可以看出：KPCA在计算降维后的坐标表示时，需要与所有样本点计算核函数值并求和，因此该算法的计算开销十分大。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc851b735754.png" alt="12.png"></p>
+<p>##<strong>11.5 流形学习</strong></p>
+<p><strong>流形学习（manifold learning）是一种借助拓扑流形概念的降维方法</strong>，<strong>流形是指在局部与欧式空间同胚的空间</strong>，即在局部与欧式空间具有相同的性质，能用欧氏距离计算样本之间的距离。这样即使高维空间的分布十分复杂，但是在局部上依然满足欧式空间的性质，基于流形学习的降维正是这种<strong>“邻域保持”</strong>的思想。其中<strong>等度量映射（Isomap）试图在降维前后保持邻域内样本之间的距离，而局部线性嵌入（LLE）则是保持邻域内样本之间的线性关系</strong>，下面将分别对这两种著名的流行学习方法进行介绍。</p>
+<p>###<strong>11.5.1 等度量映射（Isomap）</strong></p>
+<p>等度量映射的基本出发点是：高维空间中的直线距离具有误导性，因为有时高维空间中的直线距离在低维空间中是不可达的。<strong>因此利用流形在局部上与欧式空间同胚的性质，可以使用近邻距离来逼近测地线距离</strong>，即对于一个样本点，它与近邻内的样本点之间是可达的，且距离使用欧式距离计算，这样整个样本空间就形成了一张近邻图，高维空间中两个样本之间的距离就转为最短路径问题。可采用著名的<strong>Dijkstra算法</strong>或<strong>Floyd算法</strong>计算最短距离，得到高维空间中任意两点之间的距离后便可以使用MDS算法来其计算低维空间中的坐标。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc851b731a1e.png" alt="13.png"></p>
+<p>从MDS算法的描述中我们可以知道：MDS先求出了低维空间的内积矩阵B，接着使用特征值分解计算出了样本在低维空间中的坐标，但是并没有给出通用的投影向量w，因此对于需要降维的新样本无从下手，书中给出的权宜之计是利用已知高&#x2F;低维坐标的样本作为训练集学习出一个“投影器”，便可以用高维坐标预测出低维坐标。Isomap算法流程如下图：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc851b6c7e37.png" alt="14.png"></p>
+<p>对于近邻图的构建，常用的有两种方法：<strong>一种是指定近邻点个数</strong>，像kNN一样选取k个最近的邻居；<strong>另一种是指定邻域半径</strong>，距离小于该阈值的被认为是它的近邻点。但两种方法均会出现下面的问题：</p>
+<blockquote>
+<p>若<strong>邻域范围指定过大，则会造成“短路问题”</strong>，即本身距离很远却成了近邻，将距离近的那些样本扼杀在摇篮。<br>若<strong>邻域范围指定过小，则会造成“断路问题”</strong>，即有些样本点无法可达了，整个世界村被划分为互不可达的小部落。</p>
+</blockquote>
+<p>###<strong>11.5.2 局部线性嵌入(LLE)</strong></p>
+<p>不同于Isomap算法去保持邻域距离，LLE算法试图去保持邻域内的线性关系，假定样本xi的坐标可以通过它的邻域样本线性表出：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc851b64236f.png" alt="15.png"></p>
+<p><img src="https://i.loli.net/2018/10/18/5bc851b6a7b9a.png" alt="16.png"></p>
+<p>LLE算法分为两步走，<strong>首先第一步根据近邻关系计算出所有样本的邻域重构系数w</strong>：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc851b662815.png" alt="17.png"></p>
+<p><strong>接着根据邻域重构系数不变，去求解低维坐标</strong>：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc851b648b98.png" alt="18.png"></p>
+<p>这样利用矩阵M，优化问题可以重写为：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc851b6948d7.png" alt="19.png"></p>
+<p>M特征值分解后最小的d’个特征值对应的特征向量组成Z，LLE算法的具体流程如下图所示：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc851b757d8c.png" alt="20.png"></p>
+<p>##<strong>11.6 度量学习</strong></p>
+<p>本篇一开始就提到维数灾难，即在高维空间进行机器学习任务遇到样本稀疏、距离难计算等诸多的问题，因此前面讨论的降维方法都试图将原空间投影到一个合适的低维空间中，接着在低维空间进行学习任务从而产生较好的性能。事实上，不管高维空间还是低维空间都潜在对应着一个距离度量，那可不可以直接学习出一个距离度量来等效降维呢？例如：<strong>咋们就按照降维后的方式来进行距离的计算，这便是度量学习的初衷</strong>。</p>
+<p><strong>首先要学习出距离度量必须先定义一个合适的距离度量形式</strong>。对两个样本xi与xj，它们之间的平方欧式距离为：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc851d3ca3d5.png" alt="21.png"></p>
+<p>若各个属性重要程度不一样即都有一个权重，则得到加权的平方欧式距离：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc851d3d82c5.png" alt="22.png"></p>
+<p>此时各个属性之间都是相互独立无关的，但现实中往往会存在属性之间有关联的情形，例如：身高和体重，一般人越高，体重也会重一些，他们之间存在较大的相关性。这样计算距离就不能分属性单独计算，于是就引入经典的<strong>马氏距离(Mahalanobis distance)</strong>:</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc851d3dc303.png" alt="23.png"></p>
+<p><strong>标准的马氏距离中M是协方差矩阵的逆，马氏距离是一种考虑属性之间相关性且尺度无关（即无须去量纲）的距离度量</strong>。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc851d3e17c0.png" alt="24.png"></p>
+<p><strong>矩阵M也称为“度量矩阵”，为保证距离度量的非负性与对称性，M必须为(半)正定对称矩阵</strong>，这样就为度量学习定义好了距离度量的形式，换句话说：<strong>度量学习便是对度量矩阵进行学习</strong>。现在来回想一下前面我们接触的机器学习不难发现：<strong>机器学习算法几乎都是在优化目标函数，从而求解目标函数中的参数</strong>。同样对于度量学习，也需要设置一个优化目标，书中简要介绍了错误率和相似性两种优化目标，此处限于篇幅不进行展开。</p>
+<p>在此，降维和度量学习就介绍完毕。<strong>降维是将原高维空间嵌入到一个合适的低维子空间中，接着在低维空间中进行学习任务；度量学习则是试图去学习出一个距离度量来等效降维的效果</strong>，两者都是为了解决维数灾难带来的诸多问题。也许大家最后心存疑惑，那kNN呢，为什么一开头就说了kNN算法，但是好像和后面没有半毛钱关系？正是因为在降维算法中，低维子空间的维数d’通常都由人为指定，因此我们需要使用一些低开销的学习器来选取合适的d’，<strong>kNN这家伙懒到家了根本无心学习，在训练阶段开销为零，测试阶段也只是遍历计算了距离，因此拿kNN来进行交叉验证就十分有优势了~同时降维后样本密度增大同时距离计算变易，更为kNN来展示它独特的十八般手艺提供了用武之地。</strong></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
 
-// 解体思路其实就是最小值 - 最大值，再做绝对值的计算（因为差值是非0整数）
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
 
-// 如果不会使用sort方法进行排序，我们也可以自己实现一个sort方法
+    
+ 
+    
+</article>
 
-// 默认的type为"max",找出最大值,反之为"max"，找出最小值
-const findNum = (list, type = "max") => {
-  let target;
-  if (type === "max") {
-    list.forEach((item, index) => {
-      if (index === 0) {
-        // 开始循环，将首个数字作为基准，进行比较
-        target = item;
-      } else {
-        if (item > target) {
-          // 替换target的值
-          target = item;
-        }
-      }
-    });
-  } else {
-    list.forEach((item, index) => {
-      if (index === 0) {
-        target = item;
-      } else {
-        if (item < target) {
-          target = item;
-        }
-      }
-    });
-  }
-  return target;
-};
-
-// 上述的代码可以优化一下语句，因为整体思路是一致的
-// 进行index === 0 赋值
-// 通过 type 判断是什么条件下，更新target的值
-const simplifyFindNum = (list, type = "max") => {
-  let target;
-  // 优化一下，type不为max或者min，不处理数据了。
-  // 避免进入forEach语句浪费性能
-  if (type !== "min" && type !== "max") return target;
-
-  list.forEach((item, index) => {
-    if (index === 0) {
-      // 开始循环，将首个数字作为基准，进行比较
-      target = item;
-    } else {
-      // 替换target的值
-      if (type === "max" && item > target) {
-        target = item;
-      }
-      if (type === "min" && item < target) {
-        target = item;
-      }
-    }
-  });
-  return target;
-};
-
-const largestDiff = (list) => {
-    const maxNum = simplifyFindNum(list); // 获取数组最大值
-    const minNum = simplifyFindNum(list,"min") // 获取数组最小值
-    const diff = Math.abs(minNum - maxNum) // 最小值 - 最大值，进行绝对值的计算
-
-    return diff
-}
-
-const diff = largestDiff([-1, 2,3,10, 9]); 
+    
+    <article
+  id="post-MachineLearning/Machine-learning-learning-notes-master/周志华《Machine Learning》学习笔记(11)--聚类"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+     
+    <div class="article-meta">
+      <a href="/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(11)--%E8%81%9A%E7%B1%BB/" class="article-date">
+  <time datetime="2023-06-21T07:42:41.499Z" itemprop="datePublished">2023-06-21</time>
+</a>    
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>上篇主要介绍了一种机器学习的通用框架–集成学习方法，首先从准确性和差异性两个重要概念引出集成学习“<strong>好而不同</strong>”的四字真言，接着介绍了现阶段主流的三种集成学习方法：AdaBoost、Bagging及Random Forest，AdaBoost采用最小化指数损失函数迭代式更新样本分布权重和计算基学习器权重，Bagging通过自助采样引入样本扰动增加了基学习器之间的差异性，随机森林则进一步引入了属性扰动，最后简单概述了集成模型中的三类结合策略：平均法、投票法及学习法，其中Stacking是学习法的典型代表。本篇将讨论无监督学习中应用最为广泛的学习算法–聚类。</p>
+<p>#<strong>10、聚类算法</strong></p>
+<p>聚类是一种经典的<strong>无监督学习</strong>方法，<strong>无监督学习的目标是通过对无标记训练样本的学习，发掘和揭示数据集本身潜在的结构与规律</strong>，即不依赖于训练数据集的类标记信息。聚类则是试图将数据集的样本划分为若干个互不相交的类簇，从而每个簇对应一个潜在的类别。</p>
+<p>聚类直观上来说是将相似的样本聚在一起，从而形成一个<strong>类簇（cluster）</strong>。那首先的问题是如何来<strong>度量相似性</strong>（similarity measure）呢？这便是<strong>距离度量</strong>，在生活中我们说差别小则相似，对应到多维样本，每个样本可以对应于高维空间中的一个数据点，若它们的距离相近，我们便可以称它们相似。那接着如何来评价聚类结果的好坏呢？这便是<strong>性能度量</strong>，性能度量为评价聚类结果的好坏提供了一系列有效性指标。</p>
+<p>##<strong>10.1 距离度量</strong></p>
+<p>谈及距离度量，最熟悉的莫过于欧式距离了，从年头一直用到年尾的距离计算公式：即对应属性之间相减的平方和再开根号。度量距离还有其它的很多经典方法，通常它们需要满足一些基本性质：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84ed4c0390.png" alt="1.png"></p>
+<p>最常用的距离度量方法是**“闵可夫斯基距离”（Minkowski distance)**：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84ed49e31f.png" alt="2.png"></p>
+<p>当p&#x3D;1时，闵可夫斯基距离即<strong>曼哈顿距离（Manhattan distance）</strong>：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84ed49c31f.png" alt="3.png"></p>
+<p>当p&#x3D;2时，闵可夫斯基距离即<strong>欧氏距离（Euclidean distance）</strong>：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84ed497613.png" alt="4.png"></p>
+<p>我们知道属性分为两种：<strong>连续属性</strong>和<strong>离散属性</strong>（有限个取值）。对于连续值的属性，一般都可以被学习器所用，有时会根据具体的情形作相应的预处理，例如：归一化等；而对于离散值的属性，需要作下面进一步的处理：</p>
+<blockquote>
+<p>若属性值之间<strong>存在序关系</strong>，则可以将其转化为连续值，例如：身高属性“高”“中等”“矮”，可转化为{1, 0.5, 0}。<br>若属性值之间<strong>不存在序关系</strong>，则通常将其转化为向量的形式，例如：性别属性“男”“女”，可转化为{（1,0），（0,1）}。</p>
+</blockquote>
+<p>在进行距离度量时，易知<strong>连续属性和存在序关系的离散属性都可以直接参与计算</strong>，因为它们都可以反映一种程度，我们称其为“<strong>有序属性</strong>”；而对于不存在序关系的离散属性，我们称其为：“<strong>无序属性</strong>”，显然无序属性再使用闵可夫斯基距离就行不通了。</p>
+<p><strong>对于无序属性，我们一般采用VDM进行距离的计算</strong>，例如：对于离散属性的两个取值a和b，定义：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84ed4e9560.png" alt="5.png"></p>
+<p>于是，在计算两个样本之间的距离时，我们可以将闵可夫斯基距离和VDM混合在一起进行计算：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84ed507bc7.png" alt="6.png"></p>
+<p>若我们定义的距离计算方法是用来度量相似性，例如下面将要讨论的聚类问题，即距离越小，相似性越大，反之距离越大，相似性越小。这时距离的度量方法并不一定需要满足前面所说的四个基本性质，这样的方法称为：<strong>非度量距离（non-metric distance）</strong>。</p>
+<p>##<strong>10.2 性能度量</strong></p>
+<p>由于聚类算法不依赖于样本的真实类标，就不能像监督学习的分类那般，通过计算分对分错（即精确度或错误率）来评价学习器的好坏或作为学习过程中的优化目标。一般聚类有两类性能度量指标：<strong>外部指标</strong>和<strong>内部指标</strong>。</p>
+<p>###<strong>10.2.1 外部指标</strong></p>
+<p>即将聚类结果与某个参考模型的结果进行比较，<strong>以参考模型的输出作为标准，来评价聚类好坏</strong>。假设聚类给出的结果为λ，参考模型给出的结果是λ*，则我们将样本进行两两配对，定义：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84ed59160e.png" alt="7.png"></p>
+<p>显然a和b代表着聚类结果好坏的正能量，b和c则表示参考结果和聚类结果相矛盾，基于这四个值可以导出以下常用的外部评价指标：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84ed587438.png" alt="8.png"></p>
+<p>###<strong>10.2.2 内部指标</strong></p>
+<p>内部指标即不依赖任何外部模型，直接对聚类的结果进行评估，聚类的目的是想将那些相似的样本尽可能聚在一起，不相似的样本尽可能分开，直观来说：<strong>簇内高内聚紧紧抱团，簇间低耦合老死不相往来</strong>。定义：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84ed581852.png" alt="9.png"></p>
+<p>基于上面的四个距离，可以导出下面这些常用的内部评价指标：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84ed582854.png" alt="10.png"></p>
+<p>##<strong>10.3 原型聚类</strong></p>
+<p>原型聚类即“<strong>基于原型的聚类</strong>”（prototype-based clustering），原型表示模板的意思，就是通过参考一个模板向量或模板分布的方式来完成聚类的过程，常见的K-Means便是基于簇中心来实现聚类，混合高斯聚类则是基于簇分布来实现聚类。</p>
+<p>###<strong>10.3.1 K-Means</strong></p>
+<p>K-Means的思想十分简单，<strong>首先随机指定类中心，根据样本与类中心的远近划分类簇，接着重新计算类中心，迭代直至收敛</strong>。但是其中迭代的过程并不是主观地想象得出，事实上，若将样本的类别看做为“隐变量”（latent variable），类中心看作样本的分布参数，这一过程正是通过<strong>EM算法</strong>的两步走策略而计算出，其根本的目的是为了最小化平方误差函数E：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84fb82b5d3.png" alt="11.png"></p>
+<p>K-Means的算法流程如下所示：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84fb9c0817.png" alt="12.png"></p>
+<p>###<strong>10.3.2 学习向量量化（LVQ）</strong></p>
+<p>LVQ也是基于原型的聚类算法，与K-Means不同的是，<strong>LVQ使用样本真实类标记辅助聚类</strong>，首先LVQ根据样本的类标记，从各类中分别随机选出一个样本作为该类簇的原型，从而组成了一个<strong>原型特征向量组</strong>，接着从样本集中随机挑选一个样本，计算其与原型向量组中每个向量的距离，并选取距离最小的原型向量所在的类簇作为它的划分结果，再与真实类标比较。</p>
+<blockquote>
+<p><strong>若划分结果正确，则对应原型向量向这个样本靠近一些</strong><br><strong>若划分结果不正确，则对应原型向量向这个样本远离一些</strong></p>
+</blockquote>
+<p>LVQ算法的流程如下所示：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84fb9d59f2.png" alt="13.png"></p>
+<p>###<strong>10.3.3 高斯混合聚类</strong></p>
+<p>现在可以看出K-Means与LVQ都试图以类中心作为原型指导聚类，高斯混合聚类则采用高斯分布来描述原型。现假设<strong>每个类簇中的样本都服从一个多维高斯分布，那么空间中的样本可以看作由k个多维高斯分布混合而成</strong>。</p>
+<p>对于多维高斯分布，其概率密度函数如下所示：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84fb870d98.png" alt="14.png"></p>
+<p>其中u表示均值向量，∑表示协方差矩阵，可以看出一个多维高斯分布完全由这两个参数所确定。接着定义高斯混合分布为：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84fb876794.png" alt="15.png"></p>
+<p>α称为混合系数，这样空间中样本的采集过程则可以抽象为：<strong>（1）先选择一个类簇（高斯分布），（2）再根据对应高斯分布的密度函数进行采样</strong>，这时候贝叶斯公式又能大展身手了：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84fb9191d9.png" alt="16.png"></p>
+<p>此时只需要选择PM最大时的类簇并将该样本划分到其中，看到这里很容易发现：这和那个传说中的贝叶斯分类不是神似吗，都是通过贝叶斯公式展开，然后计算类先验概率和类条件概率。但遗憾的是：<strong>这里没有真实类标信息，对于类条件概率，并不能像贝叶斯分类那样通过最大似然法美好地计算出来</strong>，因为这里的样本可能属于所有的类簇，这里的似然函数变为：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84fb871d4a.png" alt="17.png"></p>
+<p>可以看出：简单的最大似然法根本无法求出所有的参数，这样PM也就没法计算。<strong>这里就要召唤出之前的EM大法，首先对高斯分布的参数及混合系数进行随机初始化，计算出各个PM（即γji，第i个样本属于j类），再最大化似然函数（即LL（D）分别对α、u和∑求偏导 ），对参数进行迭代更新</strong>。</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84fb8a6f32.png" alt="18.png"></p>
+<p>高斯混合聚类的算法流程如下图所示：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84fb9c4fa4.png" alt="19.png"></p>
+<p>##<strong>10.4 密度聚类</strong></p>
+<p>密度聚类则是基于密度的聚类，它从样本分布的角度来考察样本之间的可连接性，并基于可连接性（密度可达）不断拓展疆域（类簇）。其中最著名的便是<strong>DBSCAN</strong>算法，首先定义以下概念：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc84fb9bd69c.png" alt="20.png"></p>
+<p><img src="https://i.loli.net/2018/10/18/5bc8509f8d619.png" alt="21.png"></p>
+<p>简单来理解DBSCAN便是：<strong>找出一个核心对象所有密度可达的样本集合形成簇</strong>。首先从数据集中任选一个核心对象A，找出所有A密度可达的样本集合，将这些样本形成一个密度相连的类簇，直到所有的核心对象都遍历完。DBSCAN算法的流程如下图所示：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc8509feb587.png" alt="22.png"></p>
+<p>##<strong>10.5 层次聚类</strong></p>
+<p>层次聚类是一种基于树形结构的聚类方法，常用的是<strong>自底向上</strong>的结合策略（<strong>AGNES算法</strong>）。假设有N个待聚类的样本，其基本步骤是：</p>
+<blockquote>
+<p>1.初始化–&gt;把每个样本归为一类，计算每两个类之间的距离，也就是样本与样本之间的相似度；<br>2.寻找各个类之间最近的两个类，把他们归为一类（这样类的总数就少了一个）；<br>3.重新计算新生成的这个<strong>类与各个旧类之间的相似度</strong>；<br>4.重复2和3直到所有样本点都归为一类，结束。</p>
+</blockquote>
+<p>可以看出其中最关键的一步就是<strong>计算两个类簇的相似度</strong>，这里有多种度量方法：</p>
+<pre><code>* 单链接（single-linkage）:取类间最小距离。
+</code></pre>
+<p><img src="https://i.loli.net/2018/10/18/5bc8509ebb022.png" alt="23.png"></p>
+<pre><code>* 全链接（complete-linkage）:取类间最大距离
+</code></pre>
+<p><img src="https://i.loli.net/2018/10/18/5bc8509eb2b30.png" alt="24.png"></p>
+<pre><code>* 均链接（average-linkage）:取类间两两的平均距离
+</code></pre>
+<p><img src="https://i.loli.net/2018/10/18/5bc8509f089a7.png" alt="25.png"></p>
+<p>很容易看出：<strong>单链接的包容性极强，稍微有点暧昧就当做是自己人了，全链接则是坚持到底，只要存在缺点就坚决不合并，均连接则是从全局出发顾全大局</strong>。层次聚类法的算法流程如下所示：</p>
+<p><img src="https://i.loli.net/2018/10/18/5bc8509f9d4a0.png" alt="26.png"></p>
+<blockquote>
+<p>在此聚类算法就介绍完毕，分类&#x2F;聚类都是机器学习中最常见的任务，我实验室的大Boss也是靠着聚类起家，从此走上人生事业钱途…之巅峰，在书最后的阅读材料还看见Boss的名字，所以这章也是必读不可了…</p>
+</blockquote>
+ 
       <!-- reward -->
       
     </div>
@@ -827,7 +1140,7 @@ const diff = largestDiff([-1, 2,3,10, 9]);
   
   <nav class="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
   </nav>
   
 </section>

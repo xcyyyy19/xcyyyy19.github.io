@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-05-01T09:39:03.583Z</updated>
+  <updated>2021-07-09T11:19:02.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,386 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(8)--%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%99%A8/"/>
+    <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(8)--%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%99%A8/</id>
+    <published>2023-06-21T07:42:41.529Z</published>
+    <updated>2021-07-09T11:19:02.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;上篇主要介绍和讨论了支持向量机。从最初的分类函数，通过最大化分类间隔，max(1&amp;#x2F;||w||)，min(1&amp;#x2F;2||w||^2)，凸二次规划，朗格朗日函数，对偶问题，一直到最后的SMO算法求解，都为寻找一个最优解。接着引入核函数将低维空间映射到高维特征空间</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(9)--EM%E7%AE%97%E6%B3%95/"/>
+    <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(9)--EM%E7%AE%97%E6%B3%95/</id>
+    <published>2023-06-21T07:42:41.529Z</published>
+    <updated>2021-07-09T11:19:02.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;上篇主要介绍了贝叶斯分类器，从贝叶斯公式到贝叶斯决策论，再到通过极大似然法估计类条件概率，贝叶斯分类器的训练就是参数估计的过程。朴素贝叶斯则是“属性条件独立性假设”下的特例，它避免了假设属性联合分布过于经验性和训练集不足引起参数估计较大偏差两个大问题，最后介绍的拉普拉斯修正</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(6)--%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
+    <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(6)--%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</id>
+    <published>2023-06-21T07:42:41.526Z</published>
+    <updated>2021-07-09T11:19:02.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;上篇主要讨论了决策树算法。首先从决策树的基本概念出发，引出决策树基于树形结构进行决策，进一步介绍了构造决策树的递归流程以及其递归终止条件，在递归的过程中，划分属性的选择起到了关键作用，因此紧接着讨论了三种评估属性划分效果的经典算法，介绍了剪枝策略来解决原生决策树容易产生的过</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(16)--%E6%A6%82%E7%8E%87%E5%9B%BE%E6%A8%A1%E5%9E%8B/"/>
+    <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(16)--%E6%A6%82%E7%8E%87%E5%9B%BE%E6%A8%A1%E5%9E%8B/</id>
+    <published>2023-06-21T07:42:41.513Z</published>
+    <updated>2021-07-09T11:19:02.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;上篇主要介绍了半监督学习，首先从如何利用未标记样本所蕴含的分布信息出发，引入了半监督学习的基本概念，即训练数据同时包含有标记样本和未标记样本的学习方法；接着分别介绍了几种常见的半监督学习方法：生成式方法基于对数据分布的假设，利用未标记样本隐含的分布信息，使得对模型参数的估计</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(17)--%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(17)--%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/</id>
+    <published>2023-06-21T07:42:41.513Z</published>
+    <updated>2021-07-09T11:19:02.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;上篇主要介绍了概率图模型，首先从生成式模型与判别式模型的定义出发，引出了概率图模型的基本概念，即利用图结构来表达变量之间的依赖关系；接着分别介绍了隐马尔可夫模型、马尔可夫随机场、条件随机场、精确推断方法以及LDA话题模型：HMM主要围绕着评估&amp;#x2F;解码&amp;#x2F;学习</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(15)--%E5%8D%8A%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(15)--%E5%8D%8A%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/</id>
+    <published>2023-06-21T07:42:41.511Z</published>
+    <updated>2021-07-09T11:19:02.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;上篇主要介绍了机器学习的理论基础，首先从独立同分布引入泛化误差与经验误差，接着介绍了PAC可学习的基本概念，即以较大的概率学习出与目标概念近似的假设（泛化误差满足预设上限），对于有限假设空间：（1）可分情形时，假设空间都是PAC可学习的，即当样本满足一定的数量之后，总是可以</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(14)--%E8%AE%A1%E7%AE%97%E5%AD%A6%E4%B9%A0%E7%90%86%E8%AE%BA/"/>
+    <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(14)--%E8%AE%A1%E7%AE%97%E5%AD%A6%E4%B9%A0%E7%90%86%E8%AE%BA/</id>
+    <published>2023-06-21T07:42:41.506Z</published>
+    <updated>2021-07-09T11:19:02.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;上篇主要介绍了常用的特征选择方法及稀疏学习。首先从相关&amp;#x2F;无关特征出发引出了特征选择的基本概念，接着分别介绍了子集搜索与评价、过滤式、包裹式以及嵌入式四种类型的特征选择方法。子集搜索与评价使用的是一种优中生优的贪婪算法，即每次从候选特征子集中选出最优子集；过滤式方法</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(13)--%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E4%B8%8E%E7%A8%80%E7%96%8F%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(13)--%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E4%B8%8E%E7%A8%80%E7%96%8F%E5%AD%A6%E4%B9%A0/</id>
+    <published>2023-06-21T07:42:41.506Z</published>
+    <updated>2021-07-09T11:19:02.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;上篇主要介绍了经典的降维方法与度量学习，首先从“维数灾难”导致的样本稀疏以及距离难计算两大难题出发，引出了降维的概念，即通过某种数学变换将原始高维空间转变到一个低维的子空间，接着分别介绍了kNN、MDS、PCA、KPCA以及两种经典的流形学习方法，k近邻算法的核心在于k值的</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(12)--%E9%99%8D%E7%BB%B4%E4%B8%8E%E5%BA%A6%E9%87%8F%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(12)--%E9%99%8D%E7%BB%B4%E4%B8%8E%E5%BA%A6%E9%87%8F%E5%AD%A6%E4%B9%A0/</id>
+    <published>2023-06-21T07:42:41.505Z</published>
+    <updated>2021-07-09T11:19:02.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;上篇主要介绍了几种常用的聚类算法，首先从距离度量与性能评估出发，列举了常见的距离计算公式与聚类评价指标，接着分别讨论了K-Means、LVQ、高斯混合聚类、密度聚类以及层次聚类算法。K-Means与LVQ都试图以类簇中心作为原型指导聚类，其中K-Means通过EM算法不断迭</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(11)--%E8%81%9A%E7%B1%BB/"/>
+    <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(11)--%E8%81%9A%E7%B1%BB/</id>
+    <published>2023-06-21T07:42:41.499Z</published>
+    <updated>2021-07-09T11:19:02.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;上篇主要介绍了一种机器学习的通用框架–集成学习方法，首先从准确性和差异性两个重要概念引出集成学习“&lt;strong&gt;好而不同&lt;/strong&gt;”的四字真言，接着介绍了现阶段主流的三种集成学习方法：AdaBoost、Bagging及Random</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(10)--%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(10)--%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/</id>
+    <published>2023-06-21T07:42:41.499Z</published>
+    <updated>2021-07-09T11:19:02.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;上篇主要介绍了鼎鼎大名的EM算法，从算法思想到数学公式推导（边际似然引入隐变量，Jensen不等式简化求导），EM算法实际上可以理解为一种坐标下降法，首先固定一个变量，接着求另外变量的最优解，通过其优美的“两步走”策略能较好地估计隐变量的值。本篇将继续讨论下一类经典算法–集</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/README/"/>
+    <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/README/</id>
+    <published>2023-06-21T07:42:41.482Z</published>
+    <updated>2021-07-09T11:19:02.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本文为周志华《机器学习》的学习笔记，记录了本人在学习这本书的过程中的理解思路以及一些有助于消化书内容的拓展知识，笔记中参考了许多网上的大牛经典博客以及李航《统计学习》的内容，向前辈们和知识致敬！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;啃西瓜学习交流QQ群:</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>西瓜书</title>
+    <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(1)--%E7%BB%AA%E8%AE%BA/"/>
+    <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(1)--%E7%BB%AA%E8%AE%BA/</id>
+    <published>2023-06-21T03:43:25.000Z</published>
+    <updated>2023-06-21T07:46:15.975Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;机器学习是目前信息技术中最激动人心的方向之一，其应用已经深入到生活的各个层面且与普通人的日常生活密切相关。本文为清华大学最新出版的《机器学习》教材的Learning</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="http://example.com/categories/note/"/>
+    
+    
+    <category term="ML" scheme="http://example.com/tags/ML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>西瓜书</title>
+    <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(2)--%E6%80%A7%E8%83%BD%E5%BA%A6%E9%87%8F/"/>
+    <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(2)--%E6%80%A7%E8%83%BD%E5%BA%A6%E9%87%8F/</id>
+    <published>2023-06-21T03:43:25.000Z</published>
+    <updated>2023-06-21T07:46:35.138Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本篇主要是对第二章剩余知识的理解，包括：性能度量、比较检验和偏差与方差。在上一篇中，我们解决了评估学习器泛化性能的方法，即用测试集的“测试误差”作为“泛化误差”的近似，当我们划分好训练&amp;#x2F;测试集后，那如何计算“测试误差”呢？这就是性能度量，例如：均方差，错误率等，即</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="http://example.com/categories/note/"/>
+    
+    
+    <category term="ML" scheme="http://example.com/tags/ML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>西瓜书</title>
+    <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(3)--%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C&amp;%E6%96%B9%E5%B7%AE&amp;%E5%81%8F%E5%B7%AE/"/>
+    <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(3)--%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C&amp;%E6%96%B9%E5%B7%AE&amp;%E5%81%8F%E5%B7%AE/</id>
+    <published>2023-06-21T03:43:25.000Z</published>
+    <updated>2023-06-21T07:46:46.510Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在上两篇中，我们介绍了多种常见的评估方法和性能度量标准，这样我们就可以根据数据集以及模型任务的特征，选择出最合适的评估和性能度量方法来计算出学习器的“测试误差“。但由于“测试误差”受到很多因素的影响，例如：算法随机性(例如常见的K-Means)或测试集本身的选择，使得同一模</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="http://example.com/categories/note/"/>
+    
+    
+    <category term="ML" scheme="http://example.com/tags/ML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>西瓜书</title>
+    <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(5)--%E5%86%B3%E7%AD%96%E6%A0%91/"/>
+    <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(5)--%E5%86%B3%E7%AD%96%E6%A0%91/</id>
+    <published>2023-06-21T03:43:25.000Z</published>
+    <updated>2023-06-21T07:47:13.347Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;上篇主要介绍和讨论了线性模型。首先从最简单的最小二乘法开始，讨论输入属性有一个和多个的情形，接着通过广义线性模型延伸开来，将预测连续值的回归问题转化为分类问题，从而引入了对数几率回归，最后线性判别分析LDA将样本点进行投影，多分类问题实质上通过划分的方法转化为多个二分类问题</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="http://example.com/categories/note/"/>
+    
+    
+    <category term="ML" scheme="http://example.com/tags/ML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>西瓜书</title>
+    <link href="http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(4)--%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/"/>
+    <id>http://example.com/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(4)--%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/</id>
+    <published>2023-06-21T03:43:25.000Z</published>
+    <updated>2023-06-21T07:46:55.657Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;笔记的前一部分主要是对机器学习预备知识的概括，包括机器学习的定义&amp;#x2F;术语、学习器性能的评估&amp;#x2F;度量以及比较，本篇之后将主要对具体的学习算法进行理解总结，本篇则主要是第3章的内容–线性模型。&lt;/p&gt;
+&lt;p&gt;#&lt;strong&gt;3、线性模型&lt;/strong&gt;&lt;/p</summary>
+        
+      
+    
+    
+    
+    <category term="note" scheme="http://example.com/categories/note/"/>
+    
+    
+    <category term="ML" scheme="http://example.com/tags/ML/"/>
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -72,7 +452,7 @@
     <link href="http://example.com/2023/05/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E7%BB%83%E4%B9%A0/girigiri_love/"/>
     <id>http://example.com/2023/05/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2%E7%BB%83%E4%B9%A0/girigiri_love/</id>
     <published>2023-05-01T03:34:47.000Z</published>
-    <updated>2023-05-05T15:36:52.333Z</updated>
+    <updated>2023-05-05T16:09:57.655Z</updated>
     
     
       
@@ -93,451 +473,6 @@
     <category term="HTML" scheme="http://example.com/tags/HTML/"/>
     
     <category term="CSS" scheme="http://example.com/tags/CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2023/04/30/github%E4%BD%BF%E7%94%A8/"/>
-    <id>http://example.com/2023/04/30/github%E4%BD%BF%E7%94%A8/</id>
-    <published>2023-04-30T05:32:21.097Z</published>
-    <updated>2023-04-30T07:19:10.759Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;tailwind.css（公司在用）        </summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2023/04/25/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/String%E7%BB%83%E4%B9%A0/"/>
-    <id>http://example.com/2023/04/25/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/String%E7%BB%83%E4%B9%A0/</id>
-    <published>2023-04-25T05:41:32.060Z</published>
-    <updated>2023-04-25T15:07:09.075Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">let str = &#39;Hello World&#39;;
-
-//1.访问单个字符：charAt访问法||方括号访问法
-console.log(&#39;1.访问单个字符：charAt访问法||方括号访问法&#39;);
-console.log(&#39;charAt访问法 &#39; +</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/02-obj-hash/"/>
-    <id>http://example.com/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/02-obj-hash/</id>
-    <published>2023-04-24T06:29:33.635Z</published>
-    <updated>2023-04-24T06:13:28.147Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">// 给定一个整数数组，除了一个数字之外，其余的数字均出现了两次。请找出这个只出现了一次的数。
-// const arr = [10, 2, 2 , 1, 0, 0, 10]
-// findSingle(arr) // 1
-
-//</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/02-map-hash/"/>
-    <id>http://example.com/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/02-map-hash/</id>
-    <published>2023-04-24T06:29:33.634Z</published>
-    <updated>2023-04-24T06:21:15.861Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">// 通过Map做映射关系
-// Map和Object的区别，Object的key需要为字符串，如果不是，会转化为字符串类型
-// Map的key可以为任意类型
-// Map使用set（写）和get（读） has(判断是否有映射关系)
-//</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/01-sort/"/>
-    <id>http://example.com/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/01-sort/</id>
-    <published>2023-04-24T06:29:33.630Z</published>
-    <updated>2023-04-24T05:44:21.340Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">// 给定一个整数数组，任意选择两个数a和b，可以通过 Math.abs(a - b)求得其差值。
-// 请实现一个函数来求得这个数组的最大差值。
-
-// 解体思路其实就是最小值 - 最大值，再做绝对值的计算（因为差值是非0整数）
-//</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/01-math/"/>
-    <id>http://example.com/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/01-math/</id>
-    <published>2023-04-24T06:29:33.627Z</published>
-    <updated>2023-04-24T05:41:01.626Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">// 给定一个整数数组，任意选择两个数a和b，可以通过 Math.abs(a - b)求得其差值。
-// 请实现一个函数来求得这个数组的最大差值。
-
-
-// 解体思路其实就是最小值 - 最大值，再做绝对值的计算（因为差值是非0整数）
-const largestDiff =</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/01-custom-sort/"/>
-    <id>http://example.com/2023/04/24/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/%E4%B8%A4%E9%81%93%E9%A2%98/01-custom-sort/</id>
-    <published>2023-04-24T06:29:33.616Z</published>
-    <updated>2023-04-24T05:59:59.833Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">// 给定一个整数数组，任意选择两个数a和b，可以通过 Math.abs(a - b)求得其差值。
-// 请实现一个函数来求得这个数组的最大差值。
-
-// 解体思路其实就是最小值 - 最大值，再做绝对值的计算（因为差值是非0整数）
-
-//</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/main/"/>
-    <id>http://example.com/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E3%80%90%E7%96%91%E9%97%AE%E8%A7%A3%E7%AD%94%E3%80%91%E3%80%91%E3%80%91%E3%80%91%E3%80%91/JS/main/</id>
-    <published>2023-04-22T15:07:38.126Z</published>
-    <updated>2023-04-22T07:05:55.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">// // // 一个数据里面去匹配 
-// // // 字符的匹配
-// // const text = &#39;hello world&#39;
-// // const reg = /helli/
-
-// // const result = text.match(reg)
-
-// //</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/test/"/>
-    <id>http://example.com/2023/04/22/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/test/</id>
-    <published>2023-04-22T06:27:47.841Z</published>
-    <updated>2023-04-22T07:05:48.524Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">let arr = [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;A&#39;, &#39;B&#39;, &#39;A&#39;];
-let findA = (arr) =&gt; {
-  const result = [];
-  for (value of arr) {
-    if (value === &#39;A&#39;) {
-     </summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2023/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/%E5%AF%B9%E8%B1%A1%E5%B5%8C%E5%A5%97/"/>
-    <id>http://example.com/2023/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/%E5%AF%B9%E8%B1%A1%E5%B5%8C%E5%A5%97/</id>
-    <published>2023-04-15T07:58:03.700Z</published>
-    <updated>2023-04-15T08:13:56.289Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;zh-CN&quot;&gt;
-  &lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot; /&gt;
-    &lt;title&gt;&lt;/title&gt;
-  &lt;/head&gt;
- </summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>JS学习笔记-4.9衍生知识（base gpt/答疑）</title>
-    <link href="http://example.com/2023/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-9%E8%A1%8D%E7%94%9F%E7%9F%A5%E8%AF%86%EF%BC%88es6%E3%80%81%E8%BF%87%E6%BB%A4%E6%80%9D%E8%B7%AF%E3%80%81%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%8E%9F%E7%90%86%E3%80%81debug%E3%80%81%E5%87%BD%E6%95%B0%E5%A4%8D%E7%94%A8%EF%BC%89/"/>
-    <id>http://example.com/2023/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-9%E8%A1%8D%E7%94%9F%E7%9F%A5%E8%AF%86%EF%BC%88es6%E3%80%81%E8%BF%87%E6%BB%A4%E6%80%9D%E8%B7%AF%E3%80%81%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%8E%9F%E7%90%86%E3%80%81debug%E3%80%81%E5%87%BD%E6%95%B0%E5%A4%8D%E7%94%A8%EF%BC%89/</id>
-    <published>2023-04-15T03:34:47.000Z</published>
-    <updated>2023-04-23T09:45:19.596Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="JS" scheme="http://example.com/tags/JS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS学习笔记-4.10两道题（base gpt/答疑/BFE网站）</title>
-    <link href="http://example.com/2023/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-10%E4%B8%A4%E9%81%93%E9%A2%98%EF%BC%88BFE.dev%EF%BC%89/"/>
-    <id>http://example.com/2023/04/15/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-10%E4%B8%A4%E9%81%93%E9%A2%98%EF%BC%88BFE.dev%EF%BC%89/</id>
-    <published>2023-04-15T03:34:47.000Z</published>
-    <updated>2023-04-24T14:04:03.255Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;107-找到最大的差&quot;&gt;&lt;a href=&quot;#107-找到最大的差&quot; class=&quot;headerlink&quot; title=&quot;107.找到最大的差&quot;&gt;&lt;/a&gt;107.找到最大的差&lt;/h2&gt;&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="JS" scheme="http://example.com/tags/JS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2023/04/14/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/%E8%AE%BF%E9%97%AE%E5%87%BD%E6%95%B0%E5%86%85%E5%B5%8C%E5%A5%97%E7%9A%84%E5%AF%B9%E8%B1%A1/"/>
-    <id>http://example.com/2023/04/14/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/VSCode%E4%BB%A3%E7%A0%81/%E8%AE%BF%E9%97%AE%E5%87%BD%E6%95%B0%E5%86%85%E5%B5%8C%E5%A5%97%E7%9A%84%E5%AF%B9%E8%B1%A1/</id>
-    <published>2023-04-14T08:18:34.213Z</published>
-    <updated>2023-04-15T07:56:42.778Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot; /&gt;
-    &lt;title&gt;1.访问函数内嵌套的对象&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;script&gt;
-    </summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>JS学习笔记-4.8面向对象（base  gpt/答疑 ）</title>
-    <link href="http://example.com/2023/04/14/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-8%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    <id>http://example.com/2023/04/14/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-8%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
-    <published>2023-04-14T03:34:47.000Z</published>
-    <updated>2023-04-23T09:43:26.870Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;4-8面向对象&quot;&gt;&lt;a href=&quot;#4-8面向对象&quot; class=&quot;headerlink&quot; title=&quot;4.8面向对象&quot;&gt;&lt;/a&gt;4.8面向对象&lt;/h1&gt;&lt;h2 id=&quot;4-8-1浅薄的了解&quot;&gt;&lt;a href=&quot;#4-8-1浅薄的了解&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="JS" scheme="http://example.com/tags/JS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS学习笔记-4.7过滤（base  gpt ）</title>
-    <link href="http://example.com/2023/04/13/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-7%E8%BF%87%E6%BB%A4/"/>
-    <id>http://example.com/2023/04/13/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-7%E8%BF%87%E6%BB%A4/</id>
-    <published>2023-04-13T03:34:47.000Z</published>
-    <updated>2023-04-23T09:43:22.277Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;4-7-1数组过滤&quot;&gt;&lt;a href=&quot;#4-7-1数组过滤&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="JS" scheme="http://example.com/tags/JS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS学习笔记-4.6标准库（base阮一峰/claude/MDN ）</title>
-    <link href="http://example.com/2023/04/12/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-6%E6%A0%87%E5%87%86%E5%BA%93/"/>
-    <id>http://example.com/2023/04/12/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-6%E6%A0%87%E5%87%86%E5%BA%93/</id>
-    <published>2023-04-12T03:34:47.000Z</published>
-    <updated>2023-04-28T13:29:20.574Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;4-6标准库&quot;&gt;&lt;a href=&quot;#4-6标准库&quot; class=&quot;headerlink&quot; title=&quot;4.6标准库&quot;&gt;&lt;/a&gt;4.6标准库&lt;/h1&gt;&lt;h2 id=&quot;4-6-0基础知识&quot;&gt;&lt;a href=&quot;#4-6-0基础知识&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="JS" scheme="http://example.com/tags/JS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS学习笔记-4.5语法基础（base阮一峰/gpt ）</title>
-    <link href="http://example.com/2023/04/11/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/"/>
-    <id>http://example.com/2023/04/11/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JS/Q4-JS-5%E8%AF%AD%E6%B3%95%E5%9F%BA%E7%A1%80/</id>
-    <published>2023-04-11T03:34:47.000Z</published>
-    <updated>2023-04-23T09:43:12.190Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;4-5语法基础&quot;&gt;&lt;a href=&quot;#4-5语法基础&quot; class=&quot;headerlink&quot; title=&quot;4.5语法基础&quot;&gt;&lt;/a&gt;4.5语法基础&lt;/h1&gt;&lt;h2 id=&quot;4-5-1数据类型转换&quot;&gt;&lt;a href=&quot;#4-5-1数据类型转换&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="JS" scheme="http://example.com/tags/JS/"/>
     
   </entry>
   
