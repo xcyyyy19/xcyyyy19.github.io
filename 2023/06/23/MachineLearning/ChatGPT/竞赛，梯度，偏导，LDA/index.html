@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>西瓜书3  梯度/偏导/LDA（base GPT） |  Pravite Home</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="Pravite Home" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-MachineLearning/ChatGPT/竞赛，梯度，偏导，LDA"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  西瓜书3  梯度/偏导/LDA（base GPT）
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/06/23/MachineLearning/ChatGPT/%E7%AB%9E%E8%B5%9B%EF%BC%8C%E6%A2%AF%E5%BA%A6%EF%BC%8C%E5%81%8F%E5%AF%BC%EF%BC%8CLDA/" class="article-date">
+  <time datetime="2023-06-23T03:43:25.000Z" itemprop="datePublished">2023-06-23</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/AI/">AI</a> / <a class="article-category-link" href="/categories/AI/note/">note</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">7.2k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">24 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="来自你的消息"><a href="#来自你的消息" class="headerlink" title="来自你的消息:"></a>来自你的消息:</h2><p>假设你是一个AI和数学方面的专家，请解答我的问题，并在解释所有问题时，把解释中的所有专有名词都加上注释，或者用括号法解释</p>
+<h2 id="来自ChatAI的消息"><a href="#来自ChatAI的消息" class="headerlink" title="来自ChatAI的消息:"></a>来自ChatAI的消息:</h2><p>当然，我会尽我所能地解答您的数学问题。请问有什么需要我帮助的吗？</p>
+<h2 id="来自你的消息-1"><a href="#来自你的消息-1" class="headerlink" title="来自你的消息:"></a>来自你的消息:</h2><p>什么是梯度</p>
+<h2 id="来自ChatAI的消息-1"><a href="#来自ChatAI的消息-1" class="headerlink" title="来自ChatAI的消息:"></a>来自ChatAI的消息:</h2><p>在数学中，梯度是一个向量，它告诉我们函数最快增长的方向，即最陡峭的方向。在多元函数的情况下，梯度是一个向量，包含每个自变量的偏导数，用于衡量自变量的微小变化对函数值的影响。梯度可以被视为向量空间中的一个向量，指向使函数增加最快的方向，其大小是这个变化率的大小。因此，梯度在机器学习中被广泛使用，例如用于优化算法中的参数优化过程，如梯度下降算法。</p>
+<h2 id="来自你的消息-2"><a href="#来自你的消息-2" class="headerlink" title="来自你的消息:"></a>来自你的消息:</h2><p>什么是损失函数？怎么求？为什么这么求？</p>
+<h2 id="来自ChatAI的消息-2"><a href="#来自ChatAI的消息-2" class="headerlink" title="来自ChatAI的消息:"></a>来自ChatAI的消息:</h2><p>在机器学习中，损失函数表示模型预测的输出与实际结果之间的差距，即模型的误差大小。损失函数的值越小，说明模型的预测结果与实际结果越接近。因此，我们利用损失函数来衡量模型的预测质量，并利用此来推动模型的训练过程。</p>
+<p>常见的损失函数有平方损失函数，交叉熵损失函数等。平方损失函数用于回归任务，交叉熵损失函数用于分类任务。</p>
+<p>在训练过程中，我们通过梯度下降等算法来最小化损失函数，找到使损失函数达到最小值的模型参数。</p>
+<p>求解损失函数通常涉及到对数据进行前向传播计算和反向传播计算。在前向传播计算中，模型根据输入数据进行预测，并将预测结果与实际结果进行比较，计算出损失函数的值。在反向传播计算中，利用链式法则来计算损失函数对模型参数的梯度，在模型参数更新时使用梯度来指导模型更新的方向。</p>
+<p>因此，损失函数是机器学习中非常重要的一个概念，对于训练好的模型的准确性和性能具有重要影响。</p>
+<h2 id="来自你的消息-3"><a href="#来自你的消息-3" class="headerlink" title="来自你的消息:"></a>来自你的消息:</h2><p>损失函数对每个参数的偏导数代表了什么？为什么能代表这些？</p>
+<h2 id="来自ChatAI的消息-3"><a href="#来自ChatAI的消息-3" class="headerlink" title="来自ChatAI的消息:"></a>来自ChatAI的消息:</h2><p>损失函数对每个参数的偏导数表示了在当前参数值下，将该参数增加一个微小量所导致的损失函数变化量。这个微小量通常用符号$\epsilon$表示，通常趋向于0，因为我们只关心微小的变化。</p>
+<p>这些偏导数被用来衡量模型在各个参数上的敏感度，即在改变每个参数的值时，损失函数的变化量。这些偏导数可以用于梯度下降等算法中，来进一步优化模型参数，以使损失函数最小化。</p>
+<p>梯度代表着函数的导数，也就是在当前点处函数在每个自变量上的变化率。因此，损失函数对每个参数的偏导数可以理解为函数在每个自变量上的变化率，而这种变化率提供了有关参数对模型预测的影响的信息。在机器学习中，通过调整参数使得损失函数最小化可以将模型的预测结果接近于真实标签值。因此，损失函数对每个参数的偏导数提供了关于如何调整参数来优化模型的指导。</p>
+<h2 id="来自你的消息-4"><a href="#来自你的消息-4" class="headerlink" title="来自你的消息:"></a>来自你的消息:</h2><p>这些参数就是不同的特征吗？一一对应关系？</p>
+<h2 id="来自ChatAI的消息-4"><a href="#来自ChatAI的消息-4" class="headerlink" title="来自ChatAI的消息:"></a>来自ChatAI的消息:</h2><p>在机器学习中，参数通常是模型中的可训练的权重和偏置项，而特征则是与输入数据有关的属性或变量。一般来说，模型的特征和参数是不同的概念。</p>
+<p>在监督学习中，特征是输入数据的某些属性或变量，并用于描述和表示输入数据的特征空间。例如，在图像识别任务中，每个像素值可以被视为一个特征，因此图像可以看做是由大量特征组成的。在自然语言处理任务中，可以将每个单词作为一个特征，从而实现文本的表示。特征通常是非常具体和具体的，每个特征与模型参数的一对一对应关系并不总是存在。</p>
+<p>参数则是机器学习模型的内部变量，通过对输入数据的组合和处理来生成预测结果。例如，在一个线性回归模型中，参数就是代表每个特征的权重，用于计算预测结果。每个参数通常与模型输入中一个特定的特征相对应，并通过训练通过损失函数和梯度下降等方法进行调整，以使模型最小化损失函数。</p>
+<p>总之，特征和参数在机器学习中是指两个不同的概念，它们一般不是一一对应关系。</p>
+<h2 id="来自你的消息-5"><a href="#来自你的消息-5" class="headerlink" title="来自你的消息:"></a>来自你的消息:</h2><p>损失函数计算出来的就是衡量误差用的数据。损失函数里必然含有参数字母（比如线性回归中，使用均方误差时，误差函数中的y‘必然含有权重w）。所以可以对参数进行偏导计算。</p>
+<h2 id="来自ChatAI的消息-5"><a href="#来自ChatAI的消息-5" class="headerlink" title="来自ChatAI的消息:"></a>来自ChatAI的消息:</h2><p>是的，通常损失函数是关于模型参数的函数，参数在损失函数中的出现是因为模型的预测结果是由输入数据和模型参数组合计算而来的。损失函数通过衡量模型的预测结果与实际结果之间的差异来确定模型预测质量的好坏。而对损失函数求参数的偏导数，则可以得到函数在每个参数处的变化率，提供了一种优化目标函数的方法。</p>
+<p>以线性回归为例，均方误差作为损失函数，其中误差函数就包含模型的预测结果和实际标签值，而模型的预测结果又是由输入数据和模型权重计算得来的。因此，在求解导数时，需要对输出值对权重的偏导数进行求解，即$\frac{\partial Loss}{\partial w}$，这样可以得到损失函数关于权重的斜率，从而帮助我们来优化模型。</p>
+<p>在深度学习中，损失函数中可能还会包含其他参数，比如神经网络模型的偏置项等，对这些参数求导也可以帮助我们找到使损失函数最小化的最优参数组合。</p>
+<h2 id="来自你的消息-6"><a href="#来自你的消息-6" class="headerlink" title="来自你的消息:"></a>来自你的消息:</h2><p>假如对w进行偏导计算，就相当于求出了w所在维度的偏导函数，这个函数能够代表误差函数上升下降的趋势对吗</p>
+<h2 id="来自ChatAI的消息-6"><a href="#来自ChatAI的消息-6" class="headerlink" title="来自ChatAI的消息:"></a>来自ChatAI的消息:</h2><p>是的，对损失函数关于某个参数（比如权重w）求偏导数，可以得到在当前参数取值下，该损失函数关于该参数的变化率 or 上升或下降的趋势，也就是损失函数的斜率。这个斜率可以告诉我们，如果沿着该参数的梯度方向更新，会导致误差的增加或减少。若斜率为正，则表示损失函数会随着参数增加而增加；若斜率为负，则表示损失函数会随着参数增加而减少。</p>
+<p>以线性回归模型为例，偏导数有助于衡量权重对模型复杂度的影响，一个重要要求是降低模型的复杂度，以防止出现过拟合的情况，即模型过分学习数据的噪声而造成泛化能力不足。在求$w$的偏导时，可以得到在当前$w$的取值下，损失函数所在维度的上升或下降趋势，这个趋势可以用来指示我们在模型训练中是否应该加或减重要的特征以获得更好的泛化能力。</p>
+<p>总而言之，偏导数代表了损失函数在某个参数维度的变化率，可以告诉我们沿着梯度方向更新特定参数的方向和速度，进而指导我们进行模型优化和参数调整。</p>
+<h2 id="来自你的消息-7"><a href="#来自你的消息-7" class="headerlink" title="来自你的消息:"></a>来自你的消息:</h2><p>所以我就能用这个偏导函数来找到偏导最小的点（误差下降最快的点）</p>
+<h2 id="来自ChatAI的消息-7"><a href="#来自ChatAI的消息-7" class="headerlink" title="来自ChatAI的消息:"></a>来自ChatAI的消息:</h2><p>不完全正确。偏导数为0时，代表着函数在该方向上的变化率为0，也就是函数当前变化趋势最缓慢的地方。但是，仅仅因为函数在该点处的偏导数取得了0并不意味着达到了全局最小值。在高维函数中，这个点可能只是局部极小值或鞍点（Saddle Point），但并不是全局最小值。</p>
+<p>因此，通常需要在多个维度上使用梯度下降等优化方法来搜索损失函数的最小值。在梯度下降中，我们首先计算损失函数关于参数的偏导数，然后沿着每个参数的偏导数的相反方向移动一定步长，以达到最小化损失函数的目标。</p>
+<p>梯度下降的过程是迭代的，每次迭代需要重新计算偏差函数关于参数的导数并更新参数值，以此来逐渐逼近损失函数的最小值。这样做虽然比直接计算偏导数并寻找一个严格的最小值要更加复杂，但是它是可行的并已被证明在许多机器学习模型上是有效的。</p>
+<h2 id="来自你的消息-8"><a href="#来自你的消息-8" class="headerlink" title="来自你的消息:"></a>来自你的消息:</h2><p>所以对于一元回归来说，我说的是对的。多元就要多维度考虑对吧。那么怎么多维度考虑？应该用什么算法？</p>
+<h2 id="来自ChatAI的消息-8"><a href="#来自ChatAI的消息-8" class="headerlink" title="来自ChatAI的消息:"></a>来自ChatAI的消息:</h2><p>是的，对于一元回归，可以通过求导数来找到损失函数的最小值。而对于多元回归，则需要同时考虑多个参数的变化趋势，因此需要在多个维度上进行求导计算。</p>
+<p>对于多维情况，可以使用梯度下降法或其变种算法来迭代更新参数以最小化损失函数。梯度下降法的本质思想是寻找一个迭代序列以更新模型参数，每次迭代步骤中需要根据损失函数在当前模型参数位置的负梯度方向，更新参数向目标方向移动，实现损失函数的最小化过程。</p>
+<p>多维情况下，梯度下降法可以像一元回归一样对每个参数进行偏导计算，也可以采用矩阵运算，将所有参数的偏导数组成雅克比矩阵，从而能够同时计算所有参数的偏导数，一次性进行参数更新，加快了模型的训练速度。</p>
+<p>此外，为了避免局部最小值和鞍点等问题，在梯度下降的基础上，可以使用优化算法来改进损失函数的优化过程。常用的算法包括随机梯度下降，动量梯度下降，Adagrad，RMSProp和Adam等。这些算法通过改变梯度的计算方式，更新梯度的方向和速度等方法，加速了参数更新的速度，提高了模型的训练效果。</p>
+<h2 id="来自你的消息-9"><a href="#来自你的消息-9" class="headerlink" title="来自你的消息:"></a>来自你的消息:</h2><p>线性判别分析是把点映射到几维上？</p>
+<h2 id="来自ChatAI的消息-9"><a href="#来自ChatAI的消息-9" class="headerlink" title="来自ChatAI的消息:"></a>来自ChatAI的消息:</h2><p>线性判别分析（Linear Discriminant Analysis, LDA）是一种经典的监督学习算法，主要用于分类问题。它的主要思想是对高维数据进行降维，将数据投影到低维空间中进行分类。因此，LDA将数据点通过一个线性变换映射到一维或多维上。</p>
+<p>LDA的基本思想是利用数据中的类别信息来提取能够最好区分不同类别的特征维度。在LDA中，优化目标是使得不同类别之间的距离尽可能大，同时同一类别内部的距离尽可能小。在数学上，LDA将原始n维数据投影到k维（k&lt;n）空间上，其中k是经过优化后的维数。这个投影向量的提取，可以通过计算类间离散度和类内距离计算而来。因此通过LDA，我们能够优化并减少数据维度，同时提高判别准确率。</p>
+<p>以二分类任务为例，对于每个样本$x_i$，我们需要将其投影到一个一维线性子空间上，即$LDA(x_i)&#x3D;w^Tx_i$，其中$w$是一个列向量，代表了投影子空间的方向。通过LDA，我们可以找到一个最优的投影方向w，使得不同类别之间的距离尽可能大，同时同一类别内部的距离尽可能小。这个方向w可以通过求解LDA目标函数获得。</p>
+<p>总之，LDA通过优化一个最优化问题来选择最好的投影子空间，将高维数据映射到一个低维子空间上，从而实现优化和降维的目的。</p>
+<h2 id="来自你的消息-10"><a href="#来自你的消息-10" class="headerlink" title="来自你的消息:"></a>来自你的消息:</h2><p>什么样的数据适合LDA降维？这样的数据还适合什么算法？请用最易懂的话介绍一下LDA是如何降维的？</p>
+<h2 id="来自ChatAI的消息-10"><a href="#来自ChatAI的消息-10" class="headerlink" title="来自ChatAI的消息:"></a>来自ChatAI的消息:</h2><p>LDA适用于具有明确类别标签或类别信息的数据。因此，适合使用LDA降维的数据通常是分类问题，特别是在训练样本数量充足的情况下，才能保证LDA的有效性。</p>
+<p>相比于其它降维方法如PCA和T-SNE等，LDA更适合于处理线性可分的数据，即不同类别之间的数据点距离较远，同一类别内的数据点距离较近的数据。在LDA中，数据点与投影向量的距离越远，则对于分类的贡献越大，因此数据在投影后得到了更好的分类结果。如果数据在投影后难以区分，LDA可能不会比其它降维方法表现得更好。</p>
+<p>当数据量比较大，或者数据的不同类别之间没有强特征时，LDA降维可能非常耗时或效果不佳。相反，当数据量较小，或类别之间的数据存在非常明显的特征时，LDA降维可以得到非常好的效果，因为它能够更好地保留不同类别之间的差异。</p>
+<p>LDA的降维过程可以简单地归纳为以下三个步骤：</p>
+<ol>
+<li>计算类内距离和类间距离</li>
+</ol>
+<p>首先，我们需要计算数据的类内距离和类间距离，其中类内距离指的是同类样本之间的距离，类间距离指的是不同类样本之间的距离。这些距离可以通过计算数据的协方差矩阵和均值向量来计算。</p>
+<ol start="2">
+<li>计算投影向量</li>
+</ol>
+<p>通过计算类内距离和类间距离，我们可以得到一个目标函数。我们需要找到一个投影向量，使得目标函数最大化。这个投影向量同时也可以被用于降维操作。我们可以通过求解广义特征值问题，得到投影向量。</p>
+<ol start="3">
+<li>投影数据</li>
+</ol>
+<p>最后，我们可以使用投影向量来将数据映射到降维后的空间中，从而得到一个降维后的结果。在具体实现中，我们也可以通过SVD等方法来实现LDA的降维。</p>
+<h2 id="来自你的消息-11"><a href="#来自你的消息-11" class="headerlink" title="来自你的消息:"></a>来自你的消息:</h2><p>请关联并总结一下目前我所提出的所有问题、对应的解答。并推荐给我相关的知识点。</p>
+<h2 id="来自ChatAI的消息-11"><a href="#来自ChatAI的消息-11" class="headerlink" title="来自ChatAI的消息:"></a>来自ChatAI的消息:</h2><ol>
+<li><p>偏导数和梯度的概念及其在机器学习中的应用：偏导数指的是函数在一个变量上的变化率，而梯度则是一个向量，其每个分量都是函数在对应变量上的偏导数。在机器学习中，梯度是优化损失函数的一个重要指标，可以使用梯度下降等算法来最小化损失函数。相关知识点：微积分、优化算法、机器学习基础知识。</p>
+</li>
+<li><p>偏导数为零时代表什么，是否一定代表函数达到了全局最小值：偏导数为0时代表函数在对应变量上变化趋势最缓慢的地方，但并不一定表示达到了全局最小值，因为在高维函数中可能存在局部最小值和鞍点等情况。因此，在优化损失函数时需要使用梯度下降等算法来在多个维度上搜索最小值，以保证找到全局最优解。相关知识点：优化算法、机器学习基础知识。</p>
+</li>
+<li><p>线性判别分析（LDA）的数据适用范围和降维过程：LDA适用于具有明确类别标签或类别信息的数据，主要用于分类问题，并对高维数据进行降维。在LDA中，数据通过协方差矩阵和均值向量的计算，提取出能够最好区分不同类别的特征维度，然后将数据投影到一维或多维上，实现优化和降维的目的。相关知识点：监督学习、降维算法、LDA。</p>
+</li>
+</ol>
+<p>以上问题和解答都涉及到了机器学习中的基础概念和算法，其中包括微积分、优化算法、监督学习和降维算法等。如果你想更深入学习这些知识点，可以通过阅读相关的教材和学习资源，例如《深度学习》、《西瓜书》、《机器学习实战》等。同时，在学习的过程中，建议多进行编程实践，加深理解并掌握实现相关算法的能力。</p>
+<h2 id="来自你的消息-12"><a href="#来自你的消息-12" class="headerlink" title="来自你的消息:"></a>来自你的消息:</h2><p>有没有推荐的实战项目</p>
+<h2 id="来自ChatAI的消息-12"><a href="#来自ChatAI的消息-12" class="headerlink" title="来自ChatAI的消息:"></a>来自ChatAI的消息:</h2><p>当然有！以下是几个机器学习实战项目的推荐：</p>
+<ol>
+<li>房价预测</li>
+</ol>
+<p>房价预测是一个非常典型的机器学习应用，通常使用回归模型进行预测，并可以使用常见的回归算法来实现，例如线性回归、决策树、随机森林等。你可以使用公开数据集如kaggle等，或者使用Web API获取房价数据。然后使用机器学习算法构建模型，预测不同属性房子的价格，并评估模型的性能。</p>
+<ol start="2">
+<li>图像分类</li>
+</ol>
+<p>图像分类是一个比较有挑战的机器学习应用，涉及处理大量的图像数据以及更复杂的深度学习网络。你可以使用公共的图像数据集如MNIST、CIFAR等，利用深度学习框架如TensorFlow、PyTorch等来搭建CNN网络，训练模型并对图像进行分类。</p>
+<ol start="3">
+<li>情感分析</li>
+</ol>
+<p>情感分析是一个非常常见的自然语言处理任务，旨在确定文本中的情感极性，通常分为正向、负向和中性。你可以使用公开数据集，如IMDB评论数据集等，或者从社交媒体、新闻等获取数据。使用机器学习算法构建模型，对文本进行情感分析，评估模型的准确率。</p>
+<p>总之，机器学习的应用场景非常广泛，只要有数据，几乎每个领域都可以应用到机器学习。以上推荐的实战项目只是其中的一小部分。如果你有特定的领域或问题感兴趣，也可以找到相关数据，应用相应的机器学习算法进行探索和分析。</p>
+<h2 id="来自你的消息-13"><a href="#来自你的消息-13" class="headerlink" title="来自你的消息:"></a>来自你的消息:</h2><p>有没有开源数据？</p>
+<h2 id="来自ChatAI的消息-13"><a href="#来自ChatAI的消息-13" class="headerlink" title="来自ChatAI的消息:"></a>来自ChatAI的消息:</h2><p>有的，以下是一些公开的数据资源和数据集：</p>
+<ol>
+<li>UCI Machine Learning Repository</li>
+</ol>
+<p>UCI机器学习数据仓库是一个公开的数据集资源库，包括许多不同的数据集，范围涵盖了多个应用领域。这些数据集可以用于机器学习研究，评估算法性能等。你可以在它的官方网站上找到多个应用场景的数据仓库，例如：<a target="_blank" rel="noopener" href="https://archive.ics.uci.edu/ml/index.php">https://archive.ics.uci.edu/ml/index.php</a></p>
+<ol start="2">
+<li>Kaggle</li>
+</ol>
+<p>Kaggle是目前机器学习最大的开放式社区之一，提供了众多的数据集。这些数据集涵盖了多个领域，包含数百个数据集，例如房价预测、图像分类、情感分析等。可以在<a target="_blank" rel="noopener" href="https://www.kaggle.com/datasets">https://www.kaggle.com/datasets</a> 网站上进行查看和下载。</p>
+<ol start="3">
+<li>OpenAI Gym</li>
+</ol>
+<p>OpenAI Gym是一个开源项目，提供了大量应用于强化学习的数据集。包含了各种强化学习环境和数据集，例如视频游戏、机器人控制、自然语言处理等。可以在 <a target="_blank" rel="noopener" href="https://gym.openai.com/">https://gym.openai.com/</a> 上进行查看和下载。</p>
+<p>总之，这仅仅是一小部分公开数据集资源，你可以查阅相关的开源数据仓库，例如GitHub、Kaggle，或者从公开的数据门户网站中获得数据集。</p>
+<h2 id="来自你的消息-14"><a href="#来自你的消息-14" class="headerlink" title="来自你的消息:"></a>来自你的消息:</h2><p>有没有中国大陆能直接看的</p>
+<h2 id="来自ChatAI的消息-14"><a href="#来自ChatAI的消息-14" class="headerlink" title="来自ChatAI的消息:"></a>来自ChatAI的消息:</h2><p>当然有，以下是一些适用于中国大陆用户的公开数据资源和数据集：</p>
+<ol>
+<li>阿里云开放数据集</li>
+</ol>
+<p>阿里云提供了开放数据集服务，其中包含大量的公共数据集，并可免费使用。其中的数据集涉及金融、医疗、交通、教育等多个领域。你可以在<a target="_blank" rel="noopener" href="https://data.aliyun.com/dataSets">https://data.aliyun.com/dataSets</a> 网站上获取。</p>
+<ol start="2">
+<li>国家数据</li>
+</ol>
+<p>中国国家统计局提供了一系列的数据资源，其中包括人口统计、经济统计、交通运输、农业等多个领域的数据。网址是<a target="_blank" rel="noopener" href="http://data.stats.gov.cn/index.htm">http://data.stats.gov.cn/index.htm</a></p>
+<ol start="3">
+<li>K-Lab数据开放平台</li>
+</ol>
+<p>K-Lab是一个数据科学共享平台，该平台收集了各类数据集，包括文本分析、图像识别、生物信息学等。平台通过云端技术为用户提供多种算法模型，支持开发者快速开发、管理与部署算法模型。你可以在<a target="_blank" rel="noopener" href="https://www.kesci.com/home/dataset">https://www.kesci.com/home/dataset</a> 网站上获取。</p>
+<p>总之，这仅仅是一小部分公开数据集资源，你可以在国内的公共数据门户网站中寻找，例如：国家统计局、科技部、全国人大等。</p>
+<h2 id="来自你的消息-15"><a href="#来自你的消息-15" class="headerlink" title="来自你的消息:"></a>来自你的消息:</h2><p>最著名的数据网站是哪个</p>
+<h2 id="来自ChatAI的消息-15"><a href="#来自ChatAI的消息-15" class="headerlink" title="来自ChatAI的消息:"></a>来自ChatAI的消息:</h2><p>最著名的数据网站可能是 Kaggle，该网站是面向机器学习和数据科学社区的一个在线平台，可供用户进行比赛和数据科学项目的开发。Kaggle 上有大量的数据集，并提供丰富的机器学习工具和算法，以及来自世界各地数据科学家的竞赛和项目。</p>
+<p>Kaggle是业界最著名的数据科学社区之一，它不仅仅是一个公开数据集平台，而且还是机器学习、数据挖掘和人工智能爱好者的重要交流平台。在 Kaggle 上可以找到大量挑战性的数据科学竞赛，并且有来自全球各地的开发者参与其中。Kaggle 的社区还提供了很多优秀的教程和资源，可帮助初学者入门机器学习和数据科学。</p>
+<h2 id="来自你的消息-16"><a href="#来自你的消息-16" class="headerlink" title="来自你的消息:"></a>来自你的消息:</h2><p>中国最著名的呢？</p>
+<h2 id="来自ChatAI的消息-16"><a href="#来自ChatAI的消息-16" class="headerlink" title="来自ChatAI的消息:"></a>来自ChatAI的消息:</h2><p>中国最著名的数据网站之一是国家数据，由中国国家统计局提供，网站地址是<a target="_blank" rel="noopener" href="http://data.stats.gov.cn/index.htm%E3%80%82%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E4%B8%AD%E5%A4%AE%E6%94%BF%E5%BA%9C%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE%E7%9A%84%E7%BD%91%E7%AB%99%EF%BC%8C%E6%8F%90%E4%BE%9B%E4%BA%86%E4%B8%B0%E5%AF%8C%E7%9A%84%E4%B8%AD%E5%9B%BD%E5%90%84%E9%A2%86%E5%9F%9F%E7%9A%84%E6%95%B0%E6%8D%AE%E9%9B%86%EF%BC%8C%E5%8C%85%E6%8B%AC%E4%BA%BA%E5%8F%A3%E3%80%81%E7%BB%8F%E6%B5%8E%E3%80%81%E7%8E%AF%E5%A2%83%E5%92%8C%E7%A4%BE%E4%BC%9A%E8%BF%9B%E5%B1%95%E7%AD%89%E6%96%B9%E9%9D%A2%E7%9A%84%E6%95%B0%E6%8D%AE%E3%80%82%E8%BF%99%E4%BA%9B%E6%95%B0%E6%8D%AE%E5%8F%AF%E4%BB%A5%E4%B8%8B%E8%BD%BD%E5%92%8C%E4%BD%BF%E7%94%A8%EF%BC%8C%E6%98%AF%E6%94%BF%E5%BA%9C%E3%80%81%E4%BC%81%E4%B8%9A%E5%92%8C%E5%AD%A6%E6%9C%AF%E7%95%8C%E7%9A%84%E9%87%8D%E8%A6%81%E5%8F%82%E8%80%83%E6%9D%A5%E6%BA%90%E3%80%82">http://data.stats.gov.cn/index.htm。这是一个中央政府开放数据的网站，提供了丰富的中国各领域的数据集，包括人口、经济、环境和社会进展等方面的数据。这些数据可以下载和使用，是政府、企业和学术界的重要参考来源。</a></p>
+<p>另一个著名的数据网站是中国大数据研究院，其网站地址为<a target="_blank" rel="noopener" href="http://www.bigdata-research.cn/%E3%80%82%E8%BF%99%E4%B8%AA%E7%BD%91%E7%AB%99%E6%8F%90%E4%BE%9B%E4%BA%86%E5%A4%A7%E6%95%B0%E6%8D%AE%E9%A2%86%E5%9F%9F%E7%9A%84%E7%9B%B8%E5%85%B3%E6%95%99%E8%82%B2%E8%B5%84%E6%BA%90%E3%80%81%E6%8A%80%E6%9C%AF%E6%8A%80%E8%83%BD%E5%9F%B9%E8%AE%AD%E3%80%81%E6%94%BF%E7%AD%96%E6%B3%95%E8%A7%84%E5%92%8C%E4%B8%93%E5%AE%B6%E6%84%8F%E8%A7%81%E7%AD%89%EF%BC%8C%E6%97%A8%E5%9C%A8%E4%BF%83%E8%BF%9B%E5%A4%A7%E6%95%B0%E6%8D%AE%E9%A2%86%E5%9F%9F%E7%9A%84%E5%8F%91%E5%B1%95%E5%92%8C%E5%88%9B%E6%96%B0%E3%80%82">http://www.bigdata-research.cn/。这个网站提供了大数据领域的相关教育资源、技术技能培训、政策法规和专家意见等，旨在促进大数据领域的发展和创新。</a></p>
+<p>此外，中国还有一些互联网公司提供的公共数据资源，例如腾讯开放平台、阿里云开放数据集等。它们提供了大量的数据集和应用程序接口（API），为开发者提供了数据和开发工具，帮助提高数据分析和应用的效率。</p>
+<p>总之，这些数据网站是中国最著名的数据资源之一，它们为政府、企业、学术界和开发者提供丰富的数据和辅助工具，促进了中国数据行业的发展和创新。</p>
+<h2 id="来自你的消息-17"><a href="#来自你的消息-17" class="headerlink" title="来自你的消息:"></a>来自你的消息:</h2><p>中国竞赛的人最常用的是哪个</p>
+<h2 id="来自ChatAI的消息-17"><a href="#来自ChatAI的消息-17" class="headerlink" title="来自ChatAI的消息:"></a>来自ChatAI的消息:</h2><p>中国竞赛的人最常用的竞赛平台可能是天池（<a target="_blank" rel="noopener" href="https://tianchi.aliyun.com/%EF%BC%89%E3%80%82%E5%A4%A9%E6%B1%A0%E6%98%AF%E9%98%BF%E9%87%8C%E4%BA%91%E6%8F%90%E4%BE%9B%E7%9A%84%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%92%8C%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%AB%9E%E8%B5%9B%E5%B9%B3%E5%8F%B0%EF%BC%8C%E7%94%A8%E6%88%B7%E5%8F%AF%E4%BB%A5%E5%9C%A8%E8%BF%99%E9%87%8C%E5%8F%82%E5%8A%A0%E5%90%84%E7%A7%8D%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E3%80%81%E6%95%B0%E6%8D%AE%E5%BB%BA%E6%A8%A1%E7%AD%89%E6%B4%BB%E5%8A%A8%EF%BC%8C%E4%BA%89%E5%A4%BA%E5%A5%96%E9%87%91%E5%92%8C%E8%8D%A3%E8%AA%89%E3%80%82%E5%A4%A9%E6%B1%A0%E6%8F%90%E4%BE%9B%E4%BA%86%E5%A4%9A%E4%B8%AA%E7%AB%9E%E8%B5%9B%E8%B5%9B%E9%A2%98%E5%92%8C%E6%95%B0%E6%8D%AE%E9%9B%86%EF%BC%8C%E6%B6%89%E5%8F%8A%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%E3%80%81%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%E3%80%81%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AD%89%E5%A4%9A%E4%B8%AA%E9%A2%86%E5%9F%9F%E3%80%82">https://tianchi.aliyun.com/）。天池是阿里云提供的数据科学和人工智能竞赛平台，用户可以在这里参加各种算法竞赛、数据建模等活动，争夺奖金和荣誉。天池提供了多个竞赛赛题和数据集，涉及图像识别、自然语言处理、深度学习等多个领域。</a></p>
+<p>同时，天池还提供了基于云的大规模计算和存储服务，为数据科学家和机器学习从业者提供了便利。另外，天池和阿里云提供了一系列的培训和认证计划，帮助用户掌握前沿的数据科学技能和实战开发经验。</p>
+<p>除了天池，还有其他一些竞赛平台，例如 Data Castle（<a target="_blank" rel="noopener" href="https://www.dcjingsai.com/%EF%BC%89%E3%80%81K-Lab%EF%BC%88https://www.kesci.com/%EF%BC%89%E7%AD%89%E3%80%82%E5%AE%83%E4%BB%AC%E6%8F%90%E4%BE%9B%E4%BA%86%E7%B1%BB%E4%BC%BC%E7%9A%84%E7%AB%9E%E8%B5%9B%E8%B5%9B%E9%A2%98%E5%92%8C%E6%95%B0%E6%8D%AE%E9%9B%86%EF%BC%8C%E5%90%B8%E5%BC%95%E4%BA%86%E5%A4%A7%E9%87%8F%E5%AD%A6%E6%9C%AF%E5%92%8C%E5%95%86%E4%B8%9A%E6%9C%BA%E6%9E%84%E7%9A%84%E5%8F%82%E4%B8%8E%E3%80%82">https://www.dcjingsai.com/）、K-Lab（https://www.kesci.com/）等。它们提供了类似的竞赛赛题和数据集，吸引了大量学术和商业机构的参与。</a></p>
+<h2 id="来自你的消息-18"><a href="#来自你的消息-18" class="headerlink" title="来自你的消息:"></a>来自你的消息:</h2><p>入门的有哪些？</p>
+<h2 id="来自ChatAI的消息-18"><a href="#来自ChatAI的消息-18" class="headerlink" title="来自ChatAI的消息:"></a>来自ChatAI的消息:</h2><p>一些机器学习比赛赛题通常相对容易入门，例如手写数字识别、图像分类、文本分类等。这些竞赛赛题可以在 Kaggle、天池等平台上找到。此外，在 Kaggle 和其他平台上，还有一些开放数据集比赛，这些竞赛通常不需要对数据进行清洗和预处理，从而使得入门门槛相对较低。</p>
+<h2 id="来自你的消息-19"><a href="#来自你的消息-19" class="headerlink" title="来自你的消息:"></a>来自你的消息:</h2><p>推荐一个开放数据及比赛</p>
+<h2 id="来自ChatAI的消息-19"><a href="#来自ChatAI的消息-19" class="headerlink" title="来自ChatAI的消息:"></a>来自ChatAI的消息:</h2><p>推荐一个开放数据及比赛：Kaggle上的“房屋价格预测”竞赛。</p>
+<p>该竞赛提供了一个开放的房屋销售数据集（包括房屋特征和价格），要求参赛选手开发算法，预测新房屋的销售价格。该竞赛对于想要学习机器学习和数据科学的初学者来说，是一个很好的入门竞赛、数据集和学习资源，同时，对于高级用户来说，该竞赛也可以为他们提供挑战。</p>
+<p>在 Kaggle 上参加该竞赛，参赛选手可以获得丰厚的奖金和 Kaggle 点数。同时，在该竞赛的论坛中，参赛选手可以与其他选手交流想法、分享经验，并从中学习到更多关于数据科学和机器学习的技能。</p>
+<p>此外，Kaggle 还提供了一系列其他竞赛和公开数据集，包括图像识别、自然语言处理、时间序列分析等多个应用场景。这些赛题和数据集不仅提供了全球最优秀的数据科学家们的解决方案，同时还为初学者提供了学习数据科学和机器学习的绝佳机会。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2023/06/23/MachineLearning/ChatGPT/%E7%AB%9E%E8%B5%9B%EF%BC%8C%E6%A2%AF%E5%BA%A6%EF%BC%8C%E5%81%8F%E5%AF%BC%EF%BC%8CLDA/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ML/" rel="tag">ML</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2023/06/23/MachineLearning/ChatGPT/%E6%A8%A1%E5%9E%8B%E5%88%9D%E6%AD%A5%E5%88%86%E7%B1%BB%E5%92%8C%E9%80%89%E6%8B%A9/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            西瓜书3  基础模型分类与选择（base GPT）
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2023/06/21/MachineLearning/Machine-learning-learning-notes-master/%E5%91%A8%E5%BF%97%E5%8D%8E%E3%80%8AMachine%20Learning%E3%80%8B%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(16)--%E6%A6%82%E7%8E%87%E5%9B%BE%E6%A8%A1%E5%9E%8B/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title"></div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "",
+    app_key: "",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2023
+        <i class="ri-heart-fill heart_icon"></i> LIXiaohan
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+      <li>
+          <img src="/images/beian.png"></img>
+          <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=01234567890123" target="_black" rel="nofollow">黑公网安备0123456789号</a>
+      </li>
+        
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src=''></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Pravite Home"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+ 
+<script src="/js/clickBoom2.js"></script>
+ 
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=22707008&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+    
+<script>
+  const password = "11";
+  const lock_password = window.sessionStorage.getItem("lock_password");
+  console.log(password, lock_password);
+  if (lock_password !== password) {
+    Swal.fire({
+      title: "请输入访问密码",
+      input: "text",
+      inputAttributes: {
+        autocapitalize: "off",
+      },
+      showCancelButton: false,
+      showLoaderOnConfirm: true,
+      allowOutsideClick: false,
+      confirmButtonText: "确定",
+    }).then((result) => {
+      console.log(result);
+      if (result.isConfirmed) {
+        console.log(password);
+        if (result.value === password) {
+          window.sessionStorage.setItem("lock_password", result.value);
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "密码错误，请重试",
+            confirmButtonText: "确定",
+            allowOutsideClick: false,
+          }).then(() => {
+            window.location.reload();
+          });
+        }
+      }
+    });
+  }
+</script>
+
+
+  </div>
+</body>
+
+</html>

@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-09T11:19:02.000Z</updated>
+  <updated>2023-06-24T05:19:54.491Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,61 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>西瓜书3  基础模型分类与选择（base GPT）</title>
+    <link href="http://example.com/2023/06/23/MachineLearning/ChatGPT/%E6%A8%A1%E5%9E%8B%E5%88%9D%E6%AD%A5%E5%88%86%E7%B1%BB%E5%92%8C%E9%80%89%E6%8B%A9/"/>
+    <id>http://example.com/2023/06/23/MachineLearning/ChatGPT/%E6%A8%A1%E5%9E%8B%E5%88%9D%E6%AD%A5%E5%88%86%E7%B1%BB%E5%92%8C%E9%80%89%E6%8B%A9/</id>
+    <published>2023-06-23T03:43:25.000Z</published>
+    <updated>2023-06-24T05:19:54.491Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;来自你的消息&quot;&gt;&lt;a href=&quot;#来自你的消息&quot; class=&quot;headerlink&quot; title=&quot;来自你的消息:&quot;&gt;&lt;/a&gt;来自你的消息:&lt;/h2&gt;&lt;p&gt;逻辑回归适用于什么样的数据&lt;/p&gt;
+&lt;h2 id=&quot;来自ChatAI的消息&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="AI" scheme="http://example.com/categories/AI/"/>
+    
+    <category term="note" scheme="http://example.com/categories/AI/note/"/>
+    
+    
+    <category term="ML" scheme="http://example.com/tags/ML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>西瓜书3  梯度/偏导/LDA（base GPT）</title>
+    <link href="http://example.com/2023/06/23/MachineLearning/ChatGPT/%E7%AB%9E%E8%B5%9B%EF%BC%8C%E6%A2%AF%E5%BA%A6%EF%BC%8C%E5%81%8F%E5%AF%BC%EF%BC%8CLDA/"/>
+    <id>http://example.com/2023/06/23/MachineLearning/ChatGPT/%E7%AB%9E%E8%B5%9B%EF%BC%8C%E6%A2%AF%E5%BA%A6%EF%BC%8C%E5%81%8F%E5%AF%BC%EF%BC%8CLDA/</id>
+    <published>2023-06-23T03:43:25.000Z</published>
+    <updated>2023-06-24T05:14:51.221Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;来自你的消息&quot;&gt;&lt;a href=&quot;#来自你的消息&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="AI" scheme="http://example.com/categories/AI/"/>
+    
+    <category term="note" scheme="http://example.com/categories/AI/note/"/>
+    
+    
+    <category term="ML" scheme="http://example.com/tags/ML/"/>
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -448,57 +503,6 @@
     
     
     <category term="ML" scheme="http://example.com/tags/ML/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2023/05/01/giligili/"/>
-    <id>http://example.com/2023/05/01/giligili/</id>
-    <published>2023-05-01T08:02:09.851Z</published>
-    <updated>2023-05-01T09:39:03.583Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/./markdown-img/giligili.assets/image-20230501160218413.png&quot; alt=&quot;image-20230501160218413&quot;&gt;&lt;/p&gt;
-&lt;p&gt;为什么直接使用display</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>静态页面-1girigiri_love</title>
-    <link href="http://example.com/2023/05/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/Q0-intrest/"/>
-    <id>http://example.com/2023/05/01/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%85%B6%E5%AE%83/Q0-intrest/</id>
-    <published>2023-05-01T03:34:47.000Z</published>
-    <updated>2023-05-05T14:55:20.620Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;1-视差滚动&quot;&gt;&lt;a href=&quot;#1-视差滚动&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="code" scheme="http://example.com/categories/code/"/>
-    
-    <category term="note" scheme="http://example.com/categories/code/note/"/>
-    
-    
-    <category term="HTML" scheme="http://example.com/tags/HTML/"/>
-    
-    <category term="CSS" scheme="http://example.com/tags/CSS/"/>
     
   </entry>
   
